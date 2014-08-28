@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>使用JSDoc3生成javascript项目的API文档-LocalAd周培公</title>
+    <meta name="description" content="化尽情缘修古寺，扫遍佛塔入天山。
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://www.peigong.net/articles/lessons/build-api-document-by-jsdoc3.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">LocalAd周培公</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">使用JSDoc3生成javascript项目的API文档</h1>
+    <p class="post-meta">Oct 24, 2013</p>
+  </header>
+
+  <article class="post-content">
+    
+<h2 id="jsdoc">JSDoc样式的注释</h2>
+
+<blockquote>
+  <p>选用JSDoc3作为注释规范，文档生成工具使用grunt-jsdoc，本文不再介绍选型过程和原因。对JSDoc3的深入学习使用，可以参考<a href="http://usejsdoc.org/index.html">入门教程http://usejsdoc.org/index.html</a>。</p>
+</blockquote>
+
+<p>JSDoc注释的样式如下例，与单行注释 <code>//</code> 和多行注释 <code>/**/</code> 不同，而是类似于JAVA的JDoc和PHP的PHPDoc。</p>
+
+<pre><code>/**
+* JSDoc注释。
+*/
+</code></pre>
+
+<h2 id="jsdoc-1">JSDoc的常用标签</h2>
+
+<h3 id="section">函数注释示例</h3>
+
+<pre><code>/**
+* 函数注释的示例。
+* @param {Integer} augend 被加数。
+* @param {Integer} addend 加数。
+* @return {Integer} 两数之和。
+* @example
+* add(1, 2) =&gt; 3
+*/
+function add(augend, addend){
+	return augend + addend;
+}
+</code></pre>
+
+<h3 id="section-1">参数注释</h3>
+
+<p><code>@param</code> 用于对函数、类的方法的参数进行注释，是JSDoc中最常用的注释标签。</p>
+
+<p><code>@param</code> 注释必须指定一个参数名，也可以有一个用大括号括起来的参数类型，以及参数的描述信息。参数类型可以是javascript内置的数据类型，如Array、Boolean、Date、Function、Number Object 、String 等，还可以是其他JSDoc所支持的（英文没看太懂，以后用到再认真学习）。</p>
+
+<blockquote>
+  <p>The parameter type can be a built-in JavaScript type, such as string or Object, or a JSDoc namepath to another symbol in your code. If you have written documentation for the symbol at that namepath, JSDoc will automatically link to the documentation for that symbol. You can also use a type expression to indicate, for example, that a parameter is not nullable or can accept any type; see the @type documentation for details.</p>
+</blockquote>
+
+<p>下面直接使用<a href="http://usejsdoc.org/tags-param.html">http://usejsdoc.org/tags-param.html</a>文档中的例子，说明 <code>@param</code> 标签中如何使用参数名、参数类型和参数描述信息。</p>
+
+<p>只有参数名的注释：</p>
+
+<pre><code>/**
+ * @param somebody
+ */
+function sayHello(somebody) {
+    alert('Hello ' + somebody);
+}
+</code></pre>
+
+<p>包括参数名和参数类型的注释：</p>
+
+<pre><code>/**
+ * @param {string} somebody
+ */
+function sayHello(somebody) {
+    alert('Hello ' + somebody);
+}
+</code></pre>
+
+<p>包括参数名、参数类型和参数描述的注释：</p>
+
+<pre><code>/**
+ * @param {string} somebody Somebody's name.
+ */
+function sayHello(somebody) {
+    alert('Hello ' + somebody);
+}
+</code></pre>
+
+<h3 id="section-2">返回值注释</h3>
+
+<p><code>@return</code> 说明函数的返回值。例如：</p>
+
+<ul>
+  <li><code>@return {Number}</code></li>
+  <li><code>@return {Number} Sum of a and b</code></li>
+  <li><code>@return {Number|Array} Sum of a and b or an array that contains a, b and the sum of a and b.</code></li>
+</ul>
+
+<blockquote>
+  <p>参见：<a href="http://usejsdoc.org/tags-returns.html">http://usejsdoc.org/tags-returns.html</a></p>
+</blockquote>
+
+<h3 id="section-3">模块注释</h3>
+
+<p><code>@module</code>标签用于标记当前代码文件属于哪个模块。</p>
+
+<p>在 <code>@link</code> 或 <code>@see</code> 标签中，使用 <code>module:moduleName</code> 可以链接到一个模块。例如，使用 <code>{@link module:foo/bar}</code>，可以链接到由 <code>"@module foo/bar</code> 定义的模块。</p>
+
+<p>如果没有提供模块名，将使用模块文件所在路径及文件名作模块名。</p>
+
+<h3 id="section-4">参考引用注释</h3>
+
+<p><code> @see</code> 标签可以指向一个相关的引用。示例如下：</p>
+
+<pre><code>/**
+ * Both of these will link to the bar function.
+ * @see {@link bar}
+ * @see bar
+ */
+function foo() {}
+
+// Use the inline {@link} tag to include a link within a free-form description.
+/**
+ * @see {@link foo} for further information.
+ * @see {@link http://github.com|GitHub}
+ */
+function bar() {}
+</code></pre>
+
+<h3 id="section-5">类的注释</h3>
+
+<ul>
+  <li><code>@name</code> ：类名称</li>
+  <li><code>@class</code> ：类描述</li>
+  <li><code>@constructor</code> ：表明这是一个构造函数，非常重要。</li>
+  <li><code>@extends</code>	:类继承的父类。</li>
+  <li><code>@type</code>	：数据的类型，主要用来注释属性。</li>
+  <li><code>@default</code>	：默认值，主要用来注释属性。</li>
+  <li><code>@abstract</code> 标明一个成员是抽象的，需要子类去实现。</li>
+  <li><code>@public</code>、<code>@protected</code>、<code>@private</code>：类、方法或属性的访问权限</li>
+</ul>
+
+<h3 id="section-6">类的注释示例</h3>
+
+<p>要把JSDoc3的注释生成API类库文档，<code>@lends</code> 是个很要紧的标签。</p>
+
+<p>例如，<code>@lends Sample.prototype</code> 表示下面的对象归属于Sample。</p>
+
+<p>较详尽的使用说明参见<a href="http://usejsdoc.org/tags-lends.html">http://usejsdoc.org/tags-lends.html</a>。</p>
+
+<p>有关类的定义和注释示例，如下：</p>
+
+<pre><code>/**
+* @name Sample
+* @class 示例类
+* @public
+* @constructor
+*/
+function Sample(){
+	this.something = [];
+}
+
+Sample.prototype = 
+/** @lends Sample.prototype*/
+{
+	/**
+	* 属性示例。
+	* @private
+	* @type {Array}
+	* @default []
+	*/
+	something : [],
+
+	/**
+	* 方法示例。
+	* @public
+	* @param {String} arg 跟踪方法插件。
+	*/
+	doSomething: function(arg){
+	}
+};
+</code></pre>
+
+<h3 id="section-7">其他常用注释</h3>
+
+<ul>
+  <li><code>@example</code>	: 示例代码。</li>
+  <li>
+    <p><code>@enum [&lt;type&gt;]</code>	: 一组同样类型的静态属性集合。<code>switch</code> 语句中的分支应该只使用枚举。</p>
+  </li>
+  <li><code>@overview	</code>	：对当前代码文件的描述。</li>
+  <li><code>@copyright</code>	：代码的版权信息。</li>
+  <li><code>@author &lt;name&gt; [&lt;emailAddress&gt;]</code>	：代码的作者信息。</li>
+  <li><code>@version</code>		：当前代码的版本。</li>
+</ul>
+
+<h4 id="readmemd-">README.md 是很好的</h4>
+
+<p>如果你有为项目写说明文档的好习惯，碰巧又使用的是MarkDown格式，碰巧文件名又是README.md，那就很好了。</p>
+
+<p>把README.md文件放在代码清单里边，JSDoc工具是自动为你生成API文档的首页，什么系统概况、设计需求、设计方案及版本更新记录等等的内容都可以放进来。</p>
+
+<h2 id="grunt">Grunt自动构建的配置</h2>
+
+<p>Grunt的安装使用，请参考教程<a href="http://clientlab.github.io/lessons/2013/10/15/installation-and-use-of-grunt/">《Grunt的安装和使用》</a>。</p>
+
+<p><strong>提示：</strong>JSDoc某些配置有git依赖， 需要在命令行中可以执行git命令。最好先安装一个msysgit(http://msysgit.github.io/)，然后在环境变量中增加git的bin目录。</p>
+
+<p>使用JSDoc3插件，在package.json中的NPM依赖配置参考，如下：</p>
+
+<pre><code>"devDependencies": {
+	... ...
+	"grunt-jsdoc": "~0.5.4",
+	"ink-docstrap": "~0.3.0",
+	... ...
+}
+</code></pre>
+
+<p>使用JSDoc3插件，在Gruntfile中的配置参考，如下：</p>
+
+<pre><code>jsdoc: {
+  dist : {
+      src: ['README.md', 'src/sample.js'], 
+      options: {
+        destination: 'api',
+        template: "libs/jsdoc3/docstrap/template",
+        configure: "libs/jsdoc3/docstrap/template/jsdoc.conf.json"            
+      }
+  }
+}
+</code></pre>
+
+<p>详细使用方法和参数，参考：<a href="https://github.com/krampstudio/grunt-jsdoc-plugin">https://github.com/krampstudio/grunt-jsdoc-plugin</a>。</p>
+
+<h2 id="section-8">参考资料</h2>
+
+<ul>
+  <li><a href="http://usejsdoc.org/index.html">JSDoc 主页</a> - <a href="https://github.com/jsdoc3/jsdoc">GitHub</a></li>
+  <li>grunt-jsdoc-plugin Grunt任务插件 <a href="https://npmjs.org/package/grunt-jsdoc">NPM</a> - <a href="https://github.com/krampstudio/grunt-jsdoc-plugin">GitHub</a></li>
+  <li><a href="https://github.com/terryweiss/docstrap">JSDoc模板docstrap</a></li>
+  <li><a href="http://www.36ria.com/5101">使用jsdoc生成组件API文档—jsdoc实战</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">LocalAd周培公</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>LocalAd周培公</li>
+          <li><a href="mailto:peigong@foxmail.com">peigong@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">化尽情缘修古寺，扫遍佛塔入天山。
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

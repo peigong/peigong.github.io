@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>GitLab和TortoiseGit、msysGit的配合使用-LocalAd周培公</title>
+    <meta name="description" content="化尽情缘修古寺，扫遍佛塔入天山。
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://www.peigong.net/articles/lessons/TortoiseGit-andl-msysGit-for-gitlab.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">LocalAd周培公</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">GitLab和TortoiseGit、msysGit的配合使用</h1>
+    <p class="post-meta">Feb 22, 2014</p>
+  </header>
+
+  <article class="post-content">
+    
+<h2 id="section">软件安装</h2>
+
+<p>下载和安装windows下Git环境：</p>
+
+<ol>
+  <li><a href="https://code.google.com/p/tortoisegit/">TortoiseGit(https://code.google.com/p/tortoisegit/)</a>，是TortoiseSVN的Git变种，主要用于图形化显示。</li>
+  <li><a href="https://code.google.com/p/msysgit/">msysGit(https://code.google.com/p/msysgit/)</a>，windows下的Git版本，是TortoiseGit所必须依赖的。</li>
+</ol>
+
+<p>下载完两个软件之后，首先安装TortoiseGit，安装完TortoiseGit之后先别急着用，接着安装msysGit，安装过程中的一些选项都可以默认！</p>
+
+<h2 id="sshgit-bash">SSH密钥和Git Bash</h2>
+
+<p>本节介绍在Git命令行（Git Bash）中SSH密钥的生成，以及在Gitlab上的使用。</p>
+
+<p>使用命令行进行Git操作，显得高端、大气、上档次。如果你不慕虚名，只想生活简单而美好，就像使用SVN小乌龟（TortoiseSVN）那样工作，可以直接跳过本节。</p>
+
+<h3 id="ssh">生成SSH密钥</h3>
+
+<ol>
+  <li>检查当前用户目录中有没有.ssh目录。如果没有的话，在命令行中使用<code>mkdir .ssh</code>创建。</li>
+  <li>安装Git后，进入某个目录，使用右键菜单打开 “Git Bash”。</li>
+  <li>键入命令：<code>ssh-keygen -t rsa -C "your email"</code>。邮件地址可以不写，默认是<code>本机用户名@本机机器名</code>。最好是填写一些标识自己的记号。</li>
+  <li>提醒你输入key的名称，输入“id_rsa”。<strong>注意：</strong>id_rsa名字是固定的，因为GitLab只认识这个。</li>
+  <li>提醒你输入key的密码，空白即可。</li>
+  <li>在当前目录下产生两个密钥文件：id_rsa和id_rsa.pub</li>
+  <li>把生成的密钥文件复制到当前用户的.ssh目录下。</li>
+</ol>
+
+<h3 id="gitlab">在Gitlab上添加公钥</h3>
+
+<p>用记事本打开、复制id_rsa.pub文件的内容，在Gitlab网站My Porfile页面右下角，点击“Add Public Key”，粘贴刚才复制的内容到Key的大文本框，提交即可。</p>
+
+<p><strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。</p>
+
+<h3 id="git">在命令行中进行Git操作</h3>
+
+<p>从程序目录打开 “Git Bash”（或使用右键菜单），在命令行中<code>git clone</code>一个项目。</p>
+
+<p>提示是否把项目Git库的域名设置为可信任的已知域名，直接回答<code>yes</code>就可以了。</p>
+
+<p>其他命令，一样的用法。不清楚的话，可以查阅《<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a>》。</p>
+
+<h2 id="tortoisegit">TortoiseGit中的密钥</h2>
+
+<p>本节介绍在Git小乌龟（TortoiseGit）中生成密钥，以及在Gitlab上的使用。</p>
+
+<h3 id="section-1">生成密钥</h3>
+
+<ol>
+  <li>在开始菜单-&gt;TortoiseGit-&gt;Puttygen。这是一个用于TortoiseGit的Putty密钥生成器。</li>
+  <li>点击“generate”按钮。让鼠标在“generate”按钮以上、进度条以下的空白区域随机晃动，直到密钥生成完毕。</li>
+  <li>复制粘贴空白区域生成的SSH密钥文本（ssh-rsa。。。），在Gitlab网站My Porfile页面右下角，点击“Add Public Key”，粘贴刚才复制的内容到Key的大文本框，提交即可。<strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。Title文本框随便写一些内容就可以，主要是区别不同的Key，没有特别的用途。</li>
+  <li>点击“save private key”按钮，把文件生成在当前用户目录下的.ssh目录中（生成的文件后缀是<code>.ppk</code>）。</li>
+</ol>
+
+<h3 id="section-2">使用右键菜单</h3>
+
+<ol>
+  <li>在打算<code>git clone</code>项目的目录中，右键选择<code>Git克隆</code>。</li>
+  <li>勾选“加载putty密钥”，并选择上面生成的后缀是<code>.ppk</code>的私钥文件。</li>
+  <li>后续的操作，及除<code>git clone</code>以外的工作，就不需赘述了。</li>
+</ol>
+
+<h2 id="section-3">参考资料</h2>
+
+<ul>
+  <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a></li>
+  <li><a href="http://git-scm.com/book/zh">The entire Pro Git book</a></li>
+  <li><a href="http://feiyang.me/2013/03/work-with-gitlab/">用Gitlab来工作</a></li>
+  <li><a href="http://www.docin.com/p-596784591.html">GitLab使用介绍</a></li>
+  <li><a href="http://blog.csdn.net/bluesky8640/article/details/8171104">GitLab在windows用户端的使用教程</a></li>
+  <li><a href="http://www.cnblogs.com/lenolix/archive/2013/02/06/2906466.html">gitlab搭建之旅</a></li>
+  <li><a href="http://www.linuxidc.com/Linux/2013-05/85184.htm">在CentOS里安装GitLab</a></li>
+  <li><a href="http://herry2013git.blog.163.com/blog/static/219568011201341111240751/">gitlab多人协同工作</a></li>
+  <li><a href="https://aur.archlinux.org/packages/gitlab/?setlang=zh_CN">软件包详情: gitlab 6.4.0-1</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">LocalAd周培公</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>LocalAd周培公</li>
+          <li><a href="mailto:peigong@foxmail.com">peigong@foxmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">化尽情缘修古寺，扫遍佛塔入天山。
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
