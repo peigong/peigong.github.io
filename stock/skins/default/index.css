@@ -1,0 +1,14 @@
+﻿#body{padding:5px;}
+div.stocks {width:48%;}
+div.stocks ul li{width:150px;float:left;line-height:150%;}
+a.download{
+    font-size:12px;
+    padding:2px;
+    color:#0078B6;
+    line-height:150%;
+    text-decoration:none;
+}
+a.download:hover{
+    color:#cc0000;
+}
+
