@@ -108,7 +108,7 @@ javascript编程中，经常用到回调函数，所以异步测试也是经常�
 
 ## 与Grunt构建工具的集成 ##
 
-Grunt构建工具的安装和使用，可以参考教程[《Grunt的安装和使用》](http://clientlab.github.io/lessons/2013/10/15/installation-and-use-of-grunt/)
+Grunt构建工具的安装和使用，可以参考教程[《Grunt的安装和使用》](http://www.peigong.net/lessons/2013/10/15/installation-and-use-of-grunt/)
 
 ### QUnit的Grunt任务 ###
 

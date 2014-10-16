@@ -84,4 +84,4 @@ $ sudo chown -R git:git sample.git
 
 ### 参考资料 ###
 
-- [GitLab和TortoiseGit、msysGit的配合使用](http://clientlab.github.io/lessons/2014/02/22/TortoiseGit-andl-msysGit-for-gitlab/)
+- [GitLab和TortoiseGit、msysGit的配合使用](http://www.peigong.net/lessons/2014/02/22/TortoiseGit-andl-msysGit-for-gitlab/)

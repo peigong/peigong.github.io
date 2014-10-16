@@ -22,17 +22,17 @@ grunt - the build tool ( 用來執行一些網站的自動化工作，例如單�
 
 请选择正確的 Windows 安裝包，注意 CPU 架構有区分 32-bit 与 64-bit 两种：
 
-![node安装包](http://clientlab.github.io/images/articles/lessons/install-yeoman/node.png)
+![node安装包](http://www.peigong.net/images/articles/lessons/install-yeoman/node.png)
 
 安裝时要确保 Add to PATH 項目有被安装进去：
 
-![node安装](http://clientlab.github.io/images/articles/lessons/install-yeoman/node2.png)
+![node安装](http://www.peigong.net/images/articles/lessons/install-yeoman/node2.png)
 
 #### 安裝 Git for Windows 工具 ####
 
 安裝到 Adjusting your PATH environment 步骤時，选择 Run Git from the Windows Command Prompt 的相容性比较高，问题也会少很多：
 
-![git安装](http://clientlab.github.io/images/articles/lessons/install-yeoman/git.png)
+![git安装](http://www.peigong.net/images/articles/lessons/install-yeoman/git.png)
 
 其他保留预设值即可。
 
@@ -41,7 +41,7 @@ grunt - the build tool ( 用來執行一些網站的自動化工作，例如單�
 
 安裝 Compass 工具会需要先安裝 Ruby 才能安装与使用。建议通过 RubyInstaller (Windows) 提供的 MSI 安装包进行安裝，但安裝的过程中有一個步驟非常重要，你必須在 Installation Destination and Optional Tasks 步驟時，勾选 Add Ruby executables to your PATH 选项才行，如下图示：
 
-![ruby安装](http://clientlab.github.io/images/articles/lessons/install-yeoman/ruby.png)
+![ruby安装](http://www.peigong.net/images/articles/lessons/install-yeoman/ruby.png)
 
 安裝好这些工具之后，就可以开始准备安裝 Yeoman 相关工具了：
 
@@ -52,7 +52,7 @@ grunt - the build tool ( 用來執行一些網站的自動化工作，例如單�
 
 	其中 -g 代表要把 yo , grunt-cli , bower 這三个套件安裝到全域 (global)
 
-	![yo安装](http://clientlab.github.io/images/articles/lessons/install-yeoman/yo.png)
+	![yo安装](http://www.peigong.net/images/articles/lessons/install-yeoman/yo.png)
 
 3. 安裝 yo 相关的 程序码产生器 (generator) 套件
    
@@ -79,9 +79,9 @@ grunt - the build tool ( 用來執行一些網站的自動化工作，例如單�
 
 	这是一個交互的过程，yo安装哪些模块：
 	
-	![创建网站](http://clientlab.github.io/images/articles/lessons/install-yeoman/create.png)
+	![创建网站](http://www.peigong.net/images/articles/lessons/install-yeoman/create.png)
 	安装完成后可能会遇到一些问题，如：
-	![创建网站](http://clientlab.github.io/images/articles/lessons/install-yeoman/create2.png)
+	![创建网站](http://www.peigong.net/images/articles/lessons/install-yeoman/create2.png)
 	表示依赖的模块需要手动bower install & npm install安装。
 
 

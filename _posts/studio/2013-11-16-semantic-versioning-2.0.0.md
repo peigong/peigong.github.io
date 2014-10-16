@@ -57,7 +57,7 @@ tags : [开发规范]
 
 如果这一切听起来还不错，你需要做的所有事情，就是开始声明你正在使用语义化版本控制，并遵循其规则。欢迎你在README文档中链接这个网站(译者注3)，让更多的人知道这个规则，并从中受益。
 
-> 译者注3：原文中提到的网站是指[http://semver.org](http://semver.org)。如果你愿意，也欢迎你加上本文的链接地址[http://clientlab.github.io/studio/2013/11/16/semantic-versioning-2.0.0/](http://clientlab.github.io/studio/2013/11/16/semantic-versioning-2.0.0/)，让更多使用中文的人知道这些规则，并从中受益。
+> 译者注3：原文中提到的网站是指[http://semver.org](http://semver.org)。如果你愿意，也欢迎你加上本文的链接地址[http://www.peigong.net/studio/2013/11/16/semantic-versioning-2.0.0/](http://www.peigong.net/studio/2013/11/16/semantic-versioning-2.0.0/)，让更多使用中文的人知道这些规则，并从中受益。
 
 ## 常见问题 ##
 
