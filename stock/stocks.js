@@ -14,10 +14,11 @@
     "sh601818" : { "symbol" : "sh601818", "name" : "光大银行", "floor" : 2.56, "quantity" : 2000,"cost" : 2.653 },
     "sh601169" : { "symbol" : "sh601169", "name" : "北京银行", "floor" : 6.42, "quantity" : 840,"cost" : 6.429 },
     "sh600019" : { "symbol" : "sh600019", "name" : "宝钢股份", "floor" : 4.1, "quantity" : 1000, "cost" : 6.08 },
-    "sh600028" : { "symbol" : "sh600028", "name" : "中国石化", "floor" : 5.94, "quantity" : 700,"cost" : 4.77 },
+    "sh600028" : { "symbol" : "sh600028", "name" : "中国石化", "floor" : 5.94, "quantity" : 700,"cost" : 4.774 },
     "sh601857" : { "symbol" : "sh601857", "name" : "中国石油", "floor" : 8.47, "quantity" : 600,"cost" : 8.77 },
     "sh600060" : { "symbol" : "sh600060", "name" : "海信电器", "floor" : 5.41, "quantity" : 550,"cost" : 8.884 },
     "sz000651" : { "symbol" : "sz000651", "name" : "格力电器", "floor" : 14.18, "quantity" : 200,"cost" : 23.064 },
+    "sz002074" : { "symbol" : "sz002074", "name" : "东源电器", "floor" : 14.18, "quantity" : 200,"cost" : 17.365 },
     "sh600489" : { "symbol" : "sh600489", "name" : "中金黄金", "floor" : 14.08, "quantity" : 400,"cost" : 14.040 },
     "sh600547" : { "symbol" : "sh600547", "name" : "山东黄金", "floor" : 28.39, "quantity" : 200,"cost" : 29.441 },
     "sz002041" : { "symbol" : "sz002041", "name" : "登海种业", "floor" : 9.71, "quantity" : 100,"cost" : 23.16 },
@@ -26,11 +27,13 @@
     "sh600031" : { "symbol" : "sh600031", "name" : "三一重工", "floor" : 8.15, "quantity" : 500,"cost" : 10.42 },
     "sz000157" : { "symbol" : "sz000157", "name" : "中联重科", "floor" : 8.15, "quantity" : 700,"cost" : 4.32 },
     "sz000402" : { "symbol" : "sz000402", "name" : "金 融 街", "floor" : 6.41, "quantity" : 300,"cost" : 5.555 },
+    "sh600585" : { "symbol" : "sh600585", "name" : "海螺水泥", "floor" : 2.86, "quantity" : 200,"cost" : 16.934 },
     "sh600743" : { "symbol" : "sh600743", "name" : "华远地产", "floor" : 2.86, "quantity" : 1500,"cost" : 2.53 },
     "sh601668" : { "symbol" : "sh601668", "name" : "中国建筑", "floor" : 2.91, "quantity" : 1700,"cost" : 3.373 },
     "sh601390" : { "symbol" : "sh601390", "name" : "中国中铁", "floor" : 2.45, "quantity" : 1800,"cost" : 2.74 },
     "sh601186" : { "symbol" : "sh601186", "name" : "中国铁建", "floor" : 2.45, "quantity" : 1000,"cost" : 4.139 },
     "sh601800" : { "symbol" : "sh601800", "name" : "中国交建", "floor" : 2.45, "quantity" : 1000,"cost" : 3.494 },
+    "sh601088" : { "symbol" : "sh601088", "name" : "中国神华", "floor" : 6.26, "quantity" : 200,"cost" : 15.031 },
     "sh600900" : { "symbol" : "sh600900", "name" : "长江电力", "floor" : 6.26, "quantity" : 700,"cost" : 6.51 },
     "sh600795" : { "symbol" : "sh600795", "name" : "国电电力", "floor" : 6.26, "quantity" : 1100,"cost" : 2.3 },
     "sh600011" : { "symbol" : "sh600011", "name" : "华能国际", "floor" : 6.26, "quantity" : 500,"cost" : 5.81 },
@@ -43,5 +46,5 @@
     "sz000858" : { "symbol" : "sz000858", "name" : "五粮液", "floor" : 4.94, "quantity" : 200,"cost" : 17.371 },
     "sz000568" : { "symbol" : "sz000568", "name" : "泸州老窖", "floor" : 4.94, "quantity" : 200,"cost" : 16.383 },
     "sz000596" : { "symbol" : "sz000596", "name" : "古井贡酒", "floor" : 4.94, "quantity" : 200,"cost" : 16.902 },
-    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 35797.13 }
+    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 30931.2 }
 }
