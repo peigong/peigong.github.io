@@ -1,64 +1,12 @@
-# This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-# permalink: articles/:year/:month/:title.html
 permalink: articles/:categories/:title.html
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [""]
 auto: true
 pygments: true
 
 # Site settings
-title: LocalAd周培公
-email: peigong@foxmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  化尽情缘修古寺，扫遍佛塔入天山。
-author :
-  name : 周培公
-  email : peigong@foxmail.com
-  github : peigong
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.peigong.net" # the base hostname & protocol for your site
-
-custom:
-    category:
-        analects: 论语
-        huangdi: 黄帝内经
-        notes: 学习笔记
-        b-2004: 村野荒废人
-        a-2004: 天凉好个秋
-        a-2010: 五更明月
-        buddha: 佛前侍立
-        three-kingdoms: 都付笑谈中
-        swordsman: 笑傲江湖
-        shi-ji: 史家绝唱
-        read: 六经注我
-    categories:
-      - name: analects
-        title: 论语
-      - name: huangdi
-        title: 黄帝内经
-      - name: notes
-        title: 学习笔记
-      - name: b-2004
-        title: 村野荒废人
-        description: 收录2004年以前，在老家时的作品。
-      - name: a-2004
-        title: 天凉好个秋
-        description: 收录2004（含）年以后，2010年以前的作品。
-      - name: a-2010
-        title: 五更明月
-        description: 收录2010（含）年以后的作品。
-      - name: buddha
-        title: 佛前侍立
-        description: 收录与佛祖、与禅宗有关的作品。
-      - name: three-kingdoms
-        title: 都付笑谈中
-      - name: swordsman
-        title: 笑傲江湖
-      - name: shi-ji
-        title: 史家绝唱
-      - name: read
-        title: 六经注我
-
 # Build settings
 markdown: kramdown

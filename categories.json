@@ -1,0 +1,91 @@
+[
+	{
+		"name": "poet",
+		"title": "诗",
+		"categories": [
+			{
+				"name": "buddha",
+				"title": "佛",
+				"description": "收录与佛与禅有关的作品。"
+			},
+			{
+				"name": "three-kingdoms",
+				"title": "三国",
+				"description": "收录与三国演义人物有关的作品。"
+			},
+			{
+				"name": "swordsman",
+				"title": "侠",
+				"description": "收录与金庸武侠小说人物有关的作品。"
+			},
+			{
+				"name": "shi-ji",
+				"title": "史",
+				"description": "收录与史记等历史人物有关的作品。"
+			},
+			{
+				"name": "read",
+				"title": "读",
+				"description": "收录读书有感的作品。"
+			},
+			{
+				"name": "a-2010",
+				"title": "2010后",
+				"description": "收录2010（含）年以后，2014（含）年以前的作品。"
+			},
+			{
+				"name": "a-2004",
+				"title": "2004后",
+				"description": "收录2004（含）年以后，2010年以前的作品。"
+			},
+			{
+				"name": "b-2004",
+				"title": "2004前",
+				"description": "收录2004年以前，在老家时的作品。"
+			}
+		]
+	},
+	{
+		"name": "tcm",
+		"title": "医",
+		"categories": [
+			{
+				"name": "records",
+				"title": "中医备忘录",
+				"description": ""
+			},
+			{
+				"name": "huangdi",
+				"title": "黄帝内经",
+				"description": ""
+			}
+		]
+	},
+	{
+		"name": "classic",
+		"title": "经",
+		"categories": [
+			{
+				"name": "analects",
+				"title": "论语",
+				"description": ""
+			}
+		]
+	},
+	{
+		"name": "it",
+		"title": "IT",
+		"categories": [
+			{
+				"name": "studio",
+				"title": "学习研究笔记",
+				"description": "收录与佛与禅有关的作品。"
+			},
+			{
+				"name": "lessons",
+				"title": "培训教程",
+				"description": ""
+			}
+		]
+	}
+]
