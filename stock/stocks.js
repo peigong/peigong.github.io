@@ -38,6 +38,7 @@
     "sh600011" : { "symbol" : "sh600011", "name" : "华能国际", "floor" : 6.26, "quantity" : 500,"cost" : 5.812 },
     "sh600050" : { "symbol" : "sh600050", "name" : "中国联通", "floor" : 6.26, "quantity" : 800,"cost" : 3.508 },
     "sh600085" : { "symbol" : "sh600085", "name" : "同仁堂", "floor" : 6.26, "quantity" : 200,"cost" : 19.039 },
+    "sh600887" : { "symbol" : "sh600887", "name" : "伊利股份", "floor" : 6.26, "quantity" : 100,"cost" : 25.051 },
     "sh600104" : { "symbol" : "sh600104", "name" : "上汽集团", "floor" : 4.94, "quantity" : 300,"cost" : 9.424 },
     "sh601111" : { "symbol" : "sh601111", "name" : "中国国航", "floor" : 4.94, "quantity" : 600,"cost" : 2.383 },
     "sh600115" : { "symbol" : "sh600115", "name" : "东方航空", "floor" : 4.94, "quantity" : 900,"cost" : 1.295 },
@@ -45,5 +46,5 @@
     "sz000858" : { "symbol" : "sz000858", "name" : "五粮液", "floor" : 4.94, "quantity" : 200,"cost" : 17.371 },
     "sz000568" : { "symbol" : "sz000568", "name" : "泸州老窖", "floor" : 4.94, "quantity" : 200,"cost" : 15.195 },
     "sz000596" : { "symbol" : "sz000596", "name" : "古井贡酒", "floor" : 4.94, "quantity" : 200,"cost" : 16.902 },
-    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 34174.79 }
+    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 31668.68 }
 }
