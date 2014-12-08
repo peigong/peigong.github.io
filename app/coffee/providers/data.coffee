@@ -1,10 +1,18 @@
-define 'providers/data', [], () ->
+define [], () ->
     categories = []
-    $.getJSON './categories.json', (data) ->
-        console.log data
-        categories  = data
 
     exports = 
         getCategories: () ->
-            return categories
+            defer = $.Deferred()
+            if categories and categories.length
+                defer.resolve(categories)
+            else
+                $.getJSON './categories.json'
+                .then (data) ->
+                    categories  = data
+                    defer.resolve(categories)
+                .fail (err) ->
+                    defer.reject(err)
+            return defer.promise()
+    
     return exports

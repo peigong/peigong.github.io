@@ -5,8 +5,10 @@ html
         title='周培公的博客-般若经舍'
         style(type='text/css')
             include .tmp/styles/main.css
-    body(ms-controller='blogController')
-        .top-banner 般若波罗密多
+    body
+        .top-banner 不再为爱伤心落泪哭，不再为功名利禄受辛苦。
         
+        script(id='tmpl-nav' type='text/x-dot-template')
+            include templates/nav.tmpl.html
         script(type='text/javascript')
             include .tmp/main.js

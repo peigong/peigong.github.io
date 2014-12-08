@@ -1,2 +1,2 @@
-define 'controllers/nav', [], () ->
+define [], () ->
     return 

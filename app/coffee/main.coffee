@@ -5,4 +5,8 @@ requirejs.config
             exports: '$'
 
 require ['providers/data', 'controllers/blog'], (provider, blog) ->
-    blog.categories = provider.getCategories()
+    provider.getCategories()
+    .then (data) ->
+        console.log(data)
+    .fail () ->
+        throw new Error 'err:fetch categories fail.'

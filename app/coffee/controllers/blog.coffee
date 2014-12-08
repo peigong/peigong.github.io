@@ -1,2 +1,2 @@
-define 'controllers/blog', [], () ->
+define [], () ->
     return
