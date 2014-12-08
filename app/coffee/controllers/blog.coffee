@@ -1,0 +1,2 @@
+define 'controllers/blog', [], () ->
+    return

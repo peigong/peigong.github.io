@@ -3,14 +3,10 @@ html
     head
         meta(charset='utf8')
         title='周培公的博客-般若经舍'
-        link(rel='stylesheet' type='text/css' href='less/main.less?__inline')
-    body
-        #top-banner 般若波罗密多
+        style(type='text/css')
+            include .tmp/styles/main.css
+    body(ms-controller='blogController')
+        .top-banner 般若波罗密多
         
-        script(type='text/javascript' src='bower_components/almond/almond.js?__inline')
-        script(type='text/javascript' src='bower_components/zeptojs/src/zepto.js?__inline')
-        script(type='text/javascript' src='bower_components/zeptojs/src/event.js?__inline')
-        script(type='text/javascript' src='bower_components/zeptojs/src/ajax.js?__inline')
-        script(type='text/javascript' src='bower_components/director/build/director.js?__inline')
-        script(type='text/javascript' src='bower_components/avalon/avalon.modern.js?__inline')
-        script(type='text/javascript' src='coffee/main.coffee?__inline')
+        script(type='text/javascript')
+            include .tmp/main.js

@@ -1,0 +1,2 @@
+define 'controllers/nav', [], () ->
+    return 
