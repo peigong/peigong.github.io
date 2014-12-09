@@ -59,9 +59,23 @@ module.exports = function (grunt) {
                     out: '.tmp/main.js',
                     optimize: 'none',
                     paths: {
-                        'jquery': '.tmp/lib/jquery.js',
-                        'director': 'bower_components/director/build/director'
+                        'jquery': '../../.tmp/lib/jquery',
+                        'doT': '../../bower_components/doT/doT',
+                        'director': '../../bower_components/director/build/director'
                     },
+                    shim: {
+                      jquery: {
+                        exports: 'Zepto'
+                      },
+                      doT: {
+                        exports: 'doT'
+                      },
+                      director: {
+                        exports: 'Router'
+                      }
+                    },
+                    wrapShim: true,
+
                     // TODO: Figure out how to make sourcemaps work with grunt-usemin
                     // https://github.com/yeoman/grunt-usemin/issues/30
                     //generateSourceMaps: true,
@@ -72,8 +86,11 @@ module.exports = function (grunt) {
                     //wrap: true,
                     wrap: {
                       startFile: [
-                        '.tmp/lib/jquery.js',
-                        'bower_components/almond/almond.js'
+                        //'.tmp/lib/jquery.js',
+                        //'bower_components/doT/doT.js'
+                        //'bower_components/director/build/director.js',
+                        'bower_components/almond/almond.js',
+                        '.tmp/scripts/config.js'
                       ]
                     }
                     //uglify2: {} // https://github.com/mishoo/UglifyJS2
