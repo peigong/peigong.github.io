@@ -13,7 +13,7 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
         
         load: (posts) -> 
             @posts[@key] = posts
-            console.log posts
+            #console.log posts
 
         setCurrentList: (channel, category) ->
             console.log ['posts', channel, category].join('=>')
