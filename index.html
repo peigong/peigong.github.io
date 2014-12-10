@@ -2,9 +2,27 @@
   font-size: 14px;
   font-family: 微软雅黑, 宋体;
 }
-</style></head><body><div class="top-banner">不再为爱伤心落泪哭，不再为功名利禄受辛苦。</div><div id="nav-container"></div><script id="tmpl-nav" type="text/x-dot-template">{{~ it:item:idx }}
-{{= item.name }} - {{= item.title }} <br />
-{{~}}</script><script type="text/javascript">/**
+</style></head><body><div class="top-banner">不再为爱伤心落泪哭，不再为功名利禄受辛苦。</div><div id="nav-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
+    <ul class="nav">
+        <li>[</li>
+        {{~ it:item:idx }}
+        {{? idx }}
+        <li>,</li>
+        {{?}}
+        <li><a href="#/{{= item.name }}" data-id="{{= item.name }}">{ {{= item.title }} }</a></li>
+        {{~}}
+        <li>]</li>
+    </ul>
+</div>
+<div class="slave-container">
+    {{~ it:item:idx }}
+    <ul class="nav" data-master="{{= item.name }}">
+        {{~ item.categories:ele:i }}
+        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">{{= ele.title }}</a></li>
+        {{~}}
+    </ul>
+    {{~}}
+</div></script><script type="text/javascript">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/almond for details

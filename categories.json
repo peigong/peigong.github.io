@@ -5,42 +5,42 @@
 		"categories": [
 			{
 				"name": "buddha",
-				"title": "佛",
+				"title": "佛前侍立",
 				"description": "收录与佛与禅有关的作品。"
 			},
 			{
 				"name": "three-kingdoms",
-				"title": "三国",
+				"title": "惯看秋月春风",
 				"description": "收录与三国演义人物有关的作品。"
 			},
 			{
 				"name": "swordsman",
-				"title": "侠",
+				"title": "笑傲江湖",
 				"description": "收录与金庸武侠小说人物有关的作品。"
 			},
 			{
 				"name": "shi-ji",
-				"title": "史",
-				"description": "收录与史记等历史人物有关的作品。"
+				"title": "治学先治史",
+				"description": "收录与历史人物有关的作品。"
 			},
 			{
 				"name": "read",
-				"title": "读",
+				"title": "六经注我",
 				"description": "收录读书有感的作品。"
 			},
 			{
 				"name": "a-2010",
-				"title": "2010后",
+				"title": "五更明月",
 				"description": "收录2010（含）年以后，2014（含）年以前的作品。"
 			},
 			{
 				"name": "a-2004",
-				"title": "2004后",
+				"title": "天凉好个秋",
 				"description": "收录2004（含）年以后，2010年以前的作品。"
 			},
 			{
 				"name": "b-2004",
-				"title": "2004前",
+				"title": "村野荒废人",
 				"description": "收录2004年以前，在老家时的作品。"
 			}
 		]
@@ -67,7 +67,7 @@
 		"categories": [
 			{
 				"name": "analects",
-				"title": "论语",
+				"title": "论语笔记",
 				"description": ""
 			}
 		]
@@ -78,7 +78,7 @@
 		"categories": [
 			{
 				"name": "studio",
-				"title": "学习研究笔记",
+				"title": "学习笔记",
 				"description": "收录与佛与禅有关的作品。"
 			},
 			{

@@ -1,3 +1,21 @@
-{{~ it:item:idx }}
-{{= item.name }} - {{= item.title }} <br />
-{{~}}
+<div class="master-container">
+    <ul class="nav">
+        <li>[</li>
+        {{~ it:item:idx }}
+        {{? idx }}
+        <li>,</li>
+        {{?}}
+        <li><a href="#/{{= item.name }}" data-id="{{= item.name }}">{ {{= item.title }} }</a></li>
+        {{~}}
+        <li>]</li>
+    </ul>
+</div>
+<div class="slave-container">
+    {{~ it:item:idx }}
+    <ul class="nav" data-master="{{= item.name }}">
+        {{~ item.categories:ele:i }}
+        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">{{= ele.title }}</a></li>
+        {{~}}
+    </ul>
+    {{~}}
+</div>
