@@ -1,7 +1,7 @@
 define ['jquery', 'providers/data', 'providers/template'], ($, data, template) ->
     class Navigation
         constructor: () ->
-            @navContainer = $ '#nav-container'
+            @el = $ '#nav-container'
             if not @categories
                 that = @
                 data.getCategories()
@@ -12,9 +12,9 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
         load: (categories) -> 
             @categories = categories
             @navHTML = template.render 'tmpl-nav', @categories
-            @navContainer.html @navHTML
+            @el.html @navHTML
 
         setCurrentNav: (channel, category) ->
-            return
+            console.log ['nav', channel, category].join('=>')
 
     return new Navigation

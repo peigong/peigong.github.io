@@ -1,5 +1,6 @@
 define ['jquery'], ($) ->
     categories = []
+    posts = []
 
     exports = 
         getCategories: () ->
@@ -14,5 +15,18 @@ define ['jquery'], ($) ->
                 .fail (err) ->
                     defer.reject(err)
             return defer.promise()
-    
+
+        getPosts: () ->
+            defer = $.Deferred()
+            if posts and posts.length
+                defer.resolve(posts)
+            else
+                $.getJSON './posts.json'
+                .then (data) ->
+                    posts  = data
+                    defer.resolve(posts)
+                .fail (err) ->
+                    defer.reject(err)
+            return defer.promise()
+
     return exports

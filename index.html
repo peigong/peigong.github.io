@@ -2,7 +2,7 @@
   font-size: 14px;
   font-family: 微软雅黑, 宋体;
 }
-</style></head><body><div class="top-banner">不再为爱伤心落泪哭，不再为功名利禄受辛苦。</div><div id="nav-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
+</style></head><body><div class="top-banner">不再为爱伤心落泪哭，不再为功名利禄受辛苦。</div><div id="nav-container"></div><div id="post-container"></div><div id="posts-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
     <ul class="nav">
         <li>[</li>
         {{~ it:item:idx }}
@@ -2973,8 +2973,9 @@ return root.Zepto = Zepto;
 
 (function() {
   define('providers/data',['jquery'], function($) {
-    var categories, exports;
+    var categories, exports, posts;
     categories = [];
+    posts = [];
     exports = {
       getCategories: function() {
         var defer;
@@ -2985,6 +2986,21 @@ return root.Zepto = Zepto;
           $.getJSON('./categories.json').then(function(data) {
             categories = data;
             return defer.resolve(categories);
+          }).fail(function(err) {
+            return defer.reject(err);
+          });
+        }
+        return defer.promise();
+      },
+      getPosts: function() {
+        var defer;
+        defer = $.Deferred();
+        if (posts && posts.length) {
+          defer.resolve(posts);
+        } else {
+          $.getJSON('./posts.json').then(function(data) {
+            posts = data;
+            return defer.resolve(posts);
           }).fail(function(err) {
             return defer.reject(err);
           });
@@ -3166,7 +3182,7 @@ return root.Zepto = Zepto;
     Navigation = (function() {
       function Navigation() {
         var that;
-        this.navContainer = $('#nav-container');
+        this.el = $('#nav-container');
         if (!this.categories) {
           that = this;
           data.getCategories().then(this.load.bind(this)).fail(function(err) {
@@ -3178,10 +3194,12 @@ return root.Zepto = Zepto;
       Navigation.prototype.load = function(categories) {
         this.categories = categories;
         this.navHTML = template.render('tmpl-nav', this.categories);
-        return this.navContainer.html(this.navHTML);
+        return this.el.html(this.navHTML);
       };
 
-      Navigation.prototype.setCurrentNav = function(channel, category) {};
+      Navigation.prototype.setCurrentNav = function(channel, category) {
+        return console.log(['nav', channel, category].join('=>'));
+      };
 
       return Navigation;
 
@@ -3192,30 +3210,74 @@ return root.Zepto = Zepto;
 }).call(this);
 
 (function() {
-  define('controllers/blog',['controllers/nav'], function(nav) {
-    var exports;
-    exports = {
-      routePoet: function(category) {
+  define('controllers/posts',['jquery', 'providers/data', 'providers/template'], function($, data, template) {
+    var Posts;
+    Posts = (function() {
+      function Posts() {
+        var that;
+        this.el = $('#posts-container');
+        this.posts = {};
+        this.key = '__all__';
+        if (!this.posts.hasOwnProperty(this.key)) {
+          that = this;
+          data.getPosts().then(this.load.bind(this)).fail(function(err) {
+            throw err;
+          });
+        }
+      }
+
+      Posts.prototype.load = function(posts) {
+        this.posts[this.key] = posts;
+        return console.log(posts);
+      };
+
+      Posts.prototype.setCurrentList = function(channel, category) {
+        return console.log(['posts', channel, category].join('=>'));
+      };
+
+      return Posts;
+
+    })();
+    return new Posts;
+  });
+
+}).call(this);
+
+(function() {
+  define('controllers/blog',['controllers/nav', 'controllers/posts'], function(nav, posts) {
+    var Blog;
+    Blog = (function() {
+      function Blog() {}
+
+      Blog.prototype.routePoet = function(category) {
         var channel;
         channel = 'poet';
         if (!category) {
           category = 'default';
         }
-        nav.setCurrentNav(channel, category);
-        return console.log([channel, category].join('=>'));
-      },
-      routeChannel: function(channel, category) {
+        return this.route(channel, category);
+      };
+
+      Blog.prototype.routeChannel = function(channel, category) {
         if (!channel) {
           channel = 'poet';
         }
         if (!category) {
           category = 'default';
         }
+        return this.route(channel, category);
+      };
+
+      Blog.prototype.route = function(channel, category) {
         nav.setCurrentNav(channel, category);
-        return console.log([channel, category].join('=>'));
-      }
-    };
-    return exports;
+        posts.setCurrentList(channel, category);
+        return console.log(['blog', channel, category].join('=>'));
+      };
+
+      return Blog;
+
+    })();
+    return new Blog;
   });
 
 }).call(this);
