@@ -3227,8 +3227,7 @@ return root.Zepto = Zepto;
       }
 
       Posts.prototype.load = function(posts) {
-        this.posts[this.key] = posts;
-        return console.log(posts);
+        return this.posts[this.key] = posts;
       };
 
       Posts.prototype.setCurrentList = function(channel, category) {
@@ -3249,13 +3248,17 @@ return root.Zepto = Zepto;
     Blog = (function() {
       function Blog() {}
 
+      Blog.prototype.setPage = function(channel, category) {
+        return console.log(['blog', channel, category].join('=>'));
+      };
+
       Blog.prototype.routePoet = function(category) {
         var channel;
         channel = 'poet';
         if (!category) {
           category = 'default';
         }
-        return this.route(channel, category);
+        return this.setPage(channel, category);
       };
 
       Blog.prototype.routeChannel = function(channel, category) {
@@ -3265,13 +3268,7 @@ return root.Zepto = Zepto;
         if (!category) {
           category = 'default';
         }
-        return this.route(channel, category);
-      };
-
-      Blog.prototype.route = function(channel, category) {
-        nav.setCurrentNav(channel, category);
-        posts.setCurrentList(channel, category);
-        return console.log(['blog', channel, category].join('=>'));
+        return this.setPage(channel, category);
       };
 
       return Blog;
