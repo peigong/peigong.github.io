@@ -5,7 +5,7 @@
     "sh601288" : { "symbol" : "sh601288", "name" : "农业银行", "floor" : 2.41, "quantity" : 3000,"cost" : 2.332 },
     "sh601328" : { "symbol" : "sh601328", "name" : "交通银行", "floor" : 4.12, "quantity" : 1000,"cost" : 4.162 },
     "sh600036" : { "symbol" : "sh600036", "name" : "招商银行", "floor" : 9.75, "quantity" : 652,"cost" : 8.877 },
-    "sh600000" : { "symbol" : "sh600000", "name" : "浦发银行", "floor" : 7.21, "quantity" : 900,"cost" : 9.939 },
+    "sh600000" : { "symbol" : "sh600000", "name" : "浦发银行", "floor" : 7.21, "quantity" : 800,"cost" : 8.871 },
     "sh600016" : { "symbol" : "sh600016", "name" : "民生银行", "floor" : 4.01, "quantity" : 1000,"cost" : 5.568 },
     "sh601166" : { "symbol" : "sh601166", "name" : "兴业银行", "floor" : 11.74, "quantity" : 800,"cost" : 7.94 },
     "sh600015" : { "symbol" : "sh600015", "name" : "华夏银行", "floor" : 7.29, "quantity" : 690,"cost" : 7.666 },
@@ -28,7 +28,7 @@
     "sz000402" : { "symbol" : "sz000402", "name" : "金 融 街", "floor" : 6.41, "quantity" : 300,"cost" : 5.555 },
     "sh600585" : { "symbol" : "sh600585", "name" : "海螺水泥", "floor" : 2.86, "quantity" : 200,"cost" : 16.934 },
     "sh600743" : { "symbol" : "sh600743", "name" : "华远地产", "floor" : 2.86, "quantity" : 1500,"cost" : 2.525 },
-    "sh601668" : { "symbol" : "sh601668", "name" : "中国建筑", "floor" : 2.91, "quantity" : 1700,"cost" : 3.373 },
+    "sh601668" : { "symbol" : "sh601668", "name" : "中国建筑", "floor" : 2.91, "quantity" : 1500,"cost" : 3.014 },
     "sh601390" : { "symbol" : "sh601390", "name" : "中国中铁", "floor" : 2.45, "quantity" : 1500,"cost" : 2.431 },
     "sh601186" : { "symbol" : "sh601186", "name" : "中国铁建", "floor" : 2.45, "quantity" : 1000,"cost" : 4.139 },
     "sh601800" : { "symbol" : "sh601800", "name" : "中国交建", "floor" : 2.45, "quantity" : 1000,"cost" : 3.494 },
@@ -46,5 +46,5 @@
     "sz000858" : { "symbol" : "sz000858", "name" : "五粮液", "floor" : 4.94, "quantity" : 200,"cost" : 17.371 },
     "sz000568" : { "symbol" : "sz000568", "name" : "泸州老窖", "floor" : 4.94, "quantity" : 200,"cost" : 15.195 },
     "sz000596" : { "symbol" : "sz000596", "name" : "古井贡酒", "floor" : 4.94, "quantity" : 200,"cost" : 16.902 },
-    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 5254.96 }
+    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 7812.21 }
 }
