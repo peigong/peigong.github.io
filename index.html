@@ -2,7 +2,7 @@
   font-size: 14px;
   font-family: 微软雅黑, 宋体;
 }
-</style></head><body><div class="top-banner">不再为爱伤心落泪哭，不再为功名利禄受辛苦。</div><div id="nav-container"></div><div id="post-container"></div><div id="posts-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
+</style></head><body><div class="top-banner">以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。</div><div id="nav-container"></div><div id="post-container"></div><div id="posts-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
     <ul class="nav">
         <li>[</li>
         {{~ it:item:idx }}
@@ -22,7 +22,15 @@
         {{~}}
     </ul>
     {{~}}
-</div></script><script type="text/javascript">/**
+</div></script><script id="tmpl-posts" type="text/x-dot-template"><ul class="nav">
+    {{~ it.posts:item:idx }}
+    <li>
+        <span>[{{= item.pubDate.year }}年{{= item.pubDate.month }}月{{= item.pubDate.day }}日]</span>
+        <a href="#/{{= it.channel }}/{{= item.categories }}{{= item.link }}" data-id="{{= item.id }}">{{= item.title }}</a>
+    </li>
+    {{~}}
+</ul>
+</script><script type="text/javascript">/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/almond for details
@@ -3210,28 +3218,87 @@ return root.Zepto = Zepto;
 }).call(this);
 
 (function() {
+  var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
   define('controllers/posts',['jquery', 'providers/data', 'providers/template'], function($, data, template) {
     var Posts;
     Posts = (function() {
       function Posts() {
         var that;
+        that = this;
         this.el = $('#posts-container');
+        this.categories = {};
         this.posts = {};
         this.key = '__all__';
-        if (!this.posts.hasOwnProperty(this.key)) {
-          that = this;
-          data.getPosts().then(this.load.bind(this)).fail(function(err) {
-            throw err;
-          });
-        }
+        data.getCategories().then(this.loadCategories.bind(this)).fail(function(err) {
+          throw err;
+        });
+        data.getPosts().then(this.loadPosts.bind(this)).fail(function(err) {
+          throw err;
+        });
       }
 
-      Posts.prototype.load = function(posts) {
+      Posts.prototype.loadCategories = function(categories) {
+        var cate, category, _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = categories.length; _i < _len; _i++) {
+          category = categories[_i];
+          this.categories[category.name] = [];
+          _results.push((function() {
+            var _j, _len1, _ref, _results1;
+            _ref = category.categories;
+            _results1 = [];
+            for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+              cate = _ref[_j];
+              _results1.push(this.categories[category.name].push(cate.name));
+            }
+            return _results1;
+          }).call(this));
+        }
+        return _results;
+      };
+
+      Posts.prototype.loadPosts = function(posts) {
         return this.posts[this.key] = posts;
       };
 
+      Posts.prototype.getPosts = function(channel, category) {
+        var check, key, post, that, _i, _len, _ref;
+        that = this;
+        key = ['posts', channel, category].join('-');
+        if (!this.posts.hasOwnProperty(key)) {
+          this.posts[key] = [];
+          if (category === 'default') {
+            check = function(cate) {
+              return __indexOf.call(that.categories[channel], cate) >= 0;
+            };
+          } else if (category) {
+            check = function(cate) {
+              return cate === category;
+            };
+          }
+          if (this.posts.hasOwnProperty(this.key)) {
+            _ref = this.posts[this.key];
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              post = _ref[_i];
+              if (check(post.categories)) {
+                this.posts[key].push(post);
+              }
+            }
+          }
+        }
+        return this.posts[key];
+      };
+
       Posts.prototype.setCurrentList = function(channel, category) {
-        return console.log(['posts', channel, category].join('=>'));
+        var it, posts, postsHTML;
+        posts = this.getPosts(channel, category);
+        it = {
+          channel: channel,
+          posts: posts
+        };
+        postsHTML = template.render('tmpl-posts', it);
+        return this.el.html(postsHTML);
       };
 
       return Posts;
@@ -3249,7 +3316,8 @@ return root.Zepto = Zepto;
       function Blog() {}
 
       Blog.prototype.setPage = function(channel, category) {
-        return console.log(['blog', channel, category].join('=>'));
+        nav.setCurrentNav(channel, category);
+        return posts.setCurrentList(channel, category);
       };
 
       Blog.prototype.routePoet = function(category) {
@@ -3261,14 +3329,38 @@ return root.Zepto = Zepto;
         return this.setPage(channel, category);
       };
 
-      Blog.prototype.routeChannel = function(channel, category) {
-        if (!channel) {
+      Blog.prototype.routePoetPost = function(category, link) {
+        var channel;
+        if (category) {
           channel = 'poet';
+          this.setPage(channel, category);
+          return console.log(link);
+        } else {
+          throw new Error('category is empty.');
         }
-        if (!category) {
-          category = 'default';
+      };
+
+      Blog.prototype.routeChannel = function(channel, category) {
+        if (channel) {
+          if (!category) {
+            category = 'default';
+          }
+          return this.setPage(channel, category);
+        } else {
+          throw new Error('channel is empty.');
         }
-        return this.setPage(channel, category);
+      };
+
+      Blog.prototype.routeChannelPost = function(channel, category, link) {
+        if (channel && category) {
+          if (!category) {
+            category = 'default';
+          }
+          this.setPage(channel, category);
+          return console.log(link);
+        } else {
+          throw new Error('channel or category is empty.');
+        }
       };
 
       return Blog;
@@ -3283,11 +3375,13 @@ return root.Zepto = Zepto;
   define('routes',['controllers/blog'], function(blog) {
     var exports;
     exports = {
-      '/': blog.routePoet,
-      '/poet': blog.routePoet,
-      '/poet/:category': blog.routePoet,
-      '/:channel': blog.routeChannel,
-      '/:channel/:category': blog.routeChannel
+      '/': blog.routePoet.bind(blog),
+      '/poet': blog.routePoet.bind(blog),
+      '/poet/:category': blog.routePoet.bind(blog),
+      '/poet/:category/(\\*)': blog.routePoetPost.bind(blog),
+      '/:channel': blog.routeChannel.bind(blog),
+      '/:channel/:category': blog.routeChannel.bind(blog),
+      '/:channel/:category/(\\*)': blog.routeChannelPost.bind(blog)
     };
     return exports;
   });

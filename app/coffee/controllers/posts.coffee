@@ -1,21 +1,53 @@
 define ['jquery', 'providers/data', 'providers/template'], ($, data, template) ->
     class Posts
         constructor: () ->
+            that = @
             @el = $ '#posts-container'
+            @categories = {};
             @posts = {}
             @key = '__all__'
-            if not @posts.hasOwnProperty @key
-                that = @
-                data.getPosts()
-                .then @load.bind @
-                .fail (err) ->
-                    throw err
-        
-        load: (posts) -> 
+
+            data.getCategories()
+            .then @loadCategories.bind @
+            .fail (err) ->
+                throw err
+
+            data.getPosts()
+            .then @loadPosts.bind @
+            .fail (err) ->
+                throw err
+
+        loadCategories: (categories) ->
+            for category in categories
+                @categories[category.name] = []
+                @categories[category.name].push cate.name for cate in category.categories
+
+        loadPosts: (posts) -> 
             @posts[@key] = posts
-            #console.log posts
+
+        getPosts: (channel, category) ->
+            that = @
+            key = ['posts', channel, category].join '-'
+            unless @posts.hasOwnProperty key
+                @posts[key] = []
+                if category is 'default'
+                    check = (cate) ->
+                        return cate in that.categories[channel]
+                else if category
+                    check = (cate) ->
+                        return cate is category
+                if @posts.hasOwnProperty @key
+                    for post in @posts[@key]
+                        if check post.categories
+                            @posts[key].push(post)
+            return @posts[key]
 
         setCurrentList: (channel, category) ->
-            console.log ['posts', channel, category].join('=>')
+            posts = @getPosts channel, category
+            it = 
+                channel: channel
+                posts: posts
+            postsHTML = template.render 'tmpl-posts', it
+            @el.html postsHTML
 
     return new Posts
