@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         clean: {
             dist: ['.tmp']
         },
+
         concat: {
             dist: {
                 src: [
@@ -22,6 +23,7 @@ module.exports = function (grunt) {
                 dest: '.tmp/lib/jquery.js'
             }
         },
+
         less: {
             options: {
                 compress: true
@@ -36,6 +38,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
         coffee: {
             dist: {
                 files: [{
@@ -49,6 +52,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
         requirejs: {
             dist: {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
@@ -57,7 +61,7 @@ module.exports = function (grunt) {
                     baseUrl: '.tmp/scripts',
                     name: 'main',
                     out: '.tmp/main.js',
-                    //optimize: 'none',
+                    optimize: 'none',
                     paths: {
                         'jquery': '../../.tmp/lib/jquery',
                         'doT': '../../bower_components/doT/doT',
@@ -94,9 +98,11 @@ module.exports = function (grunt) {
                 }
             }
         },
+
         jade: {
-            '.tmp/index.html': './index.jade'
+            '../index.html': './index.jade'
         },
+
         htmlmin: {
             dist: {
                 options: {
@@ -114,15 +120,67 @@ module.exports = function (grunt) {
                   { expand: true, cwd: '.tmp', src: ['*.html'], dest: '../' }
                 ]
             }
+        },
+
+        exec: {
+            dist: {
+                cwd: '../',
+                command: 'jekyll build',
+                callback: function(){
+                    grunt.log.write('jekyll build done.')
+                }
+            }
+        },
+
+        // Watches files for changes and runs tasks based on the changed files
+        watch: {
+            less: {
+                files: ['./less/{,*/}*.less'],
+                tasks: ['less', 'build'],
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
+            },
+            coffee: {
+                files: ['./coffee/{,*/}*.coffee'],
+                tasks: ['coffee2js', 'build'],
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
+            },
+            jade: {
+                files: ['./{,*/}*.jade', './templates/{,*/}*.tmpl.html'],
+                tasks: ['build'],
+                options: {
+                    livereload: '<%= connect.options.livereload %>'
+                }
+            }
+        },
+
+        // The actual grunt server settings
+        connect: {
+            options: {
+                port: 9000,
+                // Change this to '0.0.0.0' to access the server from outside.
+                hostname: 'localhost',
+                livereload: 35729
+            },
+            dist: {
+                options: {
+                    open: true,
+                    base: '../_site'
+                }
+            }
         }
     });
-
+    grunt.registerTask('serve', ['connect', 'watch']);
+    grunt.registerTask('coffee2js', ['coffee', 'requirejs']);
+    grunt.registerTask('build', ['jade', 'exec']);
     grunt.registerTask('default', [
         'clean',
         'concat',
         'less',
-        'coffee',
-        'requirejs',
-        'jade'
+        'coffee2js',
+        'build'
     ]);
 }
