@@ -22,6 +22,20 @@ module.exports = function (grunt) {
                 dest: '.tmp/lib/jquery.js'
             }
         },
+        less: {
+            options: {
+                compress: true
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: './less',
+                    src: '{,*/}*.less',
+                    dest: '.tmp/styles',
+                    ext: '.css'
+                }]
+            }
+        },
         coffee: {
             dist: {
                 files: [{
@@ -35,20 +49,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        less: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: './less',
-                    src: '{,*/}*.less',
-                    dest: '.tmp/styles',
-                    ext: '.css'
-                }]
-            }
-        },
-        jade: {
-            '../index.html': './index.jade'
-        },
         requirejs: {
             dist: {
                 // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                     baseUrl: '.tmp/scripts',
                     name: 'main',
                     out: '.tmp/main.js',
-                    optimize: 'none',
+                    //optimize: 'none',
                     paths: {
                         'jquery': '../../.tmp/lib/jquery',
                         'doT': '../../bower_components/doT/doT',
@@ -86,9 +86,6 @@ module.exports = function (grunt) {
                     //wrap: true,
                     wrap: {
                       startFile: [
-                        //'.tmp/lib/jquery.js',
-                        //'bower_components/doT/doT.js'
-                        //'bower_components/director/build/director.js',
                         'bower_components/almond/almond.js',
                         '.tmp/scripts/config.js'
                       ]
@@ -96,14 +93,35 @@ module.exports = function (grunt) {
                     //uglify2: {} // https://github.com/mishoo/UglifyJS2
                 }
             }
+        },
+        jade: {
+            '.tmp/index.html': './index.jade'
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeCommentsFromCDATA: true,
+                    // https://github.com/yeoman/grunt-usemin/issues/44
+                    collapseWhitespace: true,
+                    collapseBooleanAttributes: true,
+                    removeAttributeQuotes: true,
+                    removeRedundantAttributes: true,
+                    //useShortDoctype: true,
+                    removeEmptyAttributes: true
+                    //removeOptionalTags: true
+                },
+                files: [ 
+                  { expand: true, cwd: '.tmp', src: ['*.html'], dest: '../' }
+                ]
+            }
         }
     });
 
     grunt.registerTask('default', [
         'clean',
         'concat',
-        'coffee',
         'less',
+        'coffee',
         'requirejs',
         'jade'
     ]);

@@ -1,11 +1,8 @@
 define ['controllers/blog'], (blog) ->
     exports = 
-        '/': blog.routePoet.bind blog
-        '/poet': blog.routePoet.bind blog
-        '/poet/:category': blog.routePoet.bind blog
-        '/poet/:category/(\\*)': blog.routePoetPost.bind blog
-        '/:channel': blog.routeChannel.bind blog
-        '/:channel/:category': blog.routeChannel.bind blog
-        '/:channel/:category/(\\*)': blog.routeChannelPost.bind blog
+        '/:channel/:category/(.*\.html)': blog.route.bind blog
+        '/:channel/:category': blog.route.bind blog
+        '/:channel': blog.route.bind blog
+        '/': blog.route.bind blog
         
     return exports

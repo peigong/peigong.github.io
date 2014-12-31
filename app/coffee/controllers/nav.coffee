@@ -15,6 +15,6 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             @el.html @navHTML
 
         setCurrentNav: (channel, category) ->
-            console.log ['nav', channel, category].join('=>')
+            #console.log ['nav', channel, category].join('=>')
 
     return new Navigation

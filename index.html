@@ -1,8 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf8"><title>周培公的博客-般若经舍</title><style type="text/css">body {
-  font-size: 14px;
-  font-family: 微软雅黑, 宋体;
-}
-</style></head><body><div class="top-banner">以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。</div><div id="nav-container"></div><div id="post-container"></div><div id="posts-container"></div><script id="tmpl-nav" type="text/x-dot-template"><div class="master-container">
+<!DOCTYPE html><html><head><meta charset=utf8><title>周培公的博客-般若经舍</title><style type=text/css>body{font-size:14px;font-family:微软雅黑, 宋体}</style></head><body><div class=top-banner>以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。</div><div id=nav-container></div><div id=post-container></div><div id=posts-container></div><script id=tmpl-nav type=text/x-dot-template><div class="master-container">
     <ul class="nav">
         <li>[</li>
         {{~ it:item:idx }}
@@ -22,15 +18,14 @@
         {{~}}
     </ul>
     {{~}}
-</div></script><script id="tmpl-posts" type="text/x-dot-template"><ul class="nav">
+</div></script><script id=tmpl-posts type=text/x-dot-template><ul class="nav">
     {{~ it.posts:item:idx }}
     <li>
         <span>[{{= item.pubDate.year }}年{{= item.pubDate.month }}月{{= item.pubDate.day }}日]</span>
         <a href="#/{{= it.channel }}/{{= item.categories }}{{= item.link }}" data-id="{{= item.id }}">{{= item.title }}</a>
     </li>
     {{~}}
-</ul>
-</script><script type="text/javascript">/**
+</ul></script><script type=text/javascript>/**
  * @license almond 0.3.0 Copyright (c) 2011-2014, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
  * see: http://github.com/jrburke/almond for details
@@ -3205,9 +3200,7 @@ return root.Zepto = Zepto;
         return this.el.html(this.navHTML);
       };
 
-      Navigation.prototype.setCurrentNav = function(channel, category) {
-        return console.log(['nav', channel, category].join('=>'));
-      };
+      Navigation.prototype.setCurrentNav = function(channel, category) {};
 
       return Navigation;
 
@@ -3315,52 +3308,19 @@ return root.Zepto = Zepto;
     Blog = (function() {
       function Blog() {}
 
-      Blog.prototype.setPage = function(channel, category) {
-        nav.setCurrentNav(channel, category);
-        return posts.setCurrentList(channel, category);
-      };
-
-      Blog.prototype.routePoet = function(category) {
-        var channel;
-        channel = 'poet';
+      Blog.prototype.route = function(channel, category, link) {
+        if (!channel) {
+          channel = 'poet';
+        }
         if (!category) {
           category = 'default';
         }
-        return this.setPage(channel, category);
-      };
-
-      Blog.prototype.routePoetPost = function(category, link) {
-        var channel;
-        if (category) {
-          channel = 'poet';
-          this.setPage(channel, category);
-          return console.log(link);
-        } else {
-          throw new Error('category is empty.');
+        if (!link) {
+          link = '';
         }
-      };
-
-      Blog.prototype.routeChannel = function(channel, category) {
-        if (channel) {
-          if (!category) {
-            category = 'default';
-          }
-          return this.setPage(channel, category);
-        } else {
-          throw new Error('channel is empty.');
-        }
-      };
-
-      Blog.prototype.routeChannelPost = function(channel, category, link) {
-        if (channel && category) {
-          if (!category) {
-            category = 'default';
-          }
-          this.setPage(channel, category);
-          return console.log(link);
-        } else {
-          throw new Error('channel or category is empty.');
-        }
+        nav.setCurrentNav(channel, category);
+        posts.setCurrentList(channel, category);
+        return false;
       };
 
       return Blog;
@@ -3375,13 +3335,10 @@ return root.Zepto = Zepto;
   define('routes',['controllers/blog'], function(blog) {
     var exports;
     exports = {
-      '/': blog.routePoet.bind(blog),
-      '/poet': blog.routePoet.bind(blog),
-      '/poet/:category': blog.routePoet.bind(blog),
-      '/poet/:category/(\\*)': blog.routePoetPost.bind(blog),
-      '/:channel': blog.routeChannel.bind(blog),
-      '/:channel/:category': blog.routeChannel.bind(blog),
-      '/:channel/:category/(\\*)': blog.routeChannelPost.bind(blog)
+      '/:channel/:category/(.*\.html)': blog.route.bind(blog),
+      '/:channel/:category': blog.route.bind(blog),
+      '/:channel': blog.route.bind(blog),
+      '/': blog.route.bind(blog)
     };
     return exports;
   });
@@ -3392,11 +3349,12 @@ return root.Zepto = Zepto;
   require(['director', 'routes'], function(director, routes) {
     var router;
     router = director(routes);
-    return router.init();
+    router.configure({
+      recurse: 'forward'
+    });
+    return router.init('/');
   });
 
 }).call(this);
 
-define("main", function(){});
-
-</script></body></html>
+define("main", function(){});</script></body></html>
