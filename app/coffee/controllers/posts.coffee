@@ -5,6 +5,7 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             @el = $ '#posts-container'
             @categories = {};
             @posts = {}
+            @currentList = []
             @key = '__all__'
 
             data.getCategories()
@@ -43,11 +44,19 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             return @posts[key]
 
         setCurrentList: (channel, category) ->
-            posts = @getPosts channel, category
+            @currentList = @getPosts channel, category
             it = 
                 channel: channel
-                posts: posts
+                posts: @currentList
             postsHTML = template.render 'tmpl-posts', it
             @el.html postsHTML
+
+        getCurrentPost: (link) ->
+            if link
+                return link
+            else if  @currentList.length
+                return @currentList[0]
+            else
+                return ''
 
     return new Posts

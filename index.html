@@ -2984,9 +2984,10 @@ return root.Zepto = Zepto;
 
 (function() {
   define('providers/data',['jquery'], function($) {
-    var categories, exports, posts;
+    var categories, dict, exports, posts;
     categories = [];
     posts = [];
+    dict = {};
     exports = {
       getCategories: function() {
         var defer;
@@ -3015,6 +3016,24 @@ return root.Zepto = Zepto;
           }).fail(function(err) {
             return defer.reject(err);
           });
+        }
+        return defer.promise();
+      },
+      getPost: function(link) {
+        var defer, err;
+        defer = $.Deferred();
+        if (dict.hasOwnProperty(link)) {
+          defer.resolve(dict[link]);
+        } else if (link) {
+          $.get(link).then(function(text) {
+            dict[link] = text;
+            return defer.resolve(text);
+          }).fail(function(err) {
+            return defer.reject(err);
+          });
+        } else {
+          err = new Error('link is empty.');
+          defer.reject(err);
         }
         return defer.promise();
       }
@@ -3230,6 +3249,7 @@ return root.Zepto = Zepto;
         this.el = $('#posts-container');
         this.categories = {};
         this.posts = {};
+        this.currentList = [];
         this.key = '__all__';
         data.getCategories().then(this.loadCategories.bind(this)).fail(function(err) {
           throw err;
@@ -3292,14 +3312,24 @@ return root.Zepto = Zepto;
       };
 
       Posts.prototype.setCurrentList = function(channel, category) {
-        var it, posts, postsHTML;
-        posts = this.getPosts(channel, category);
+        var it, postsHTML;
+        this.currentList = this.getPosts(channel, category);
         it = {
           channel: channel,
-          posts: posts
+          posts: this.currentList
         };
         postsHTML = template.render('tmpl-posts', it);
         return this.el.html(postsHTML);
+      };
+
+      Posts.prototype.getCurrentPost = function(link) {
+        if (link) {
+          return link;
+        } else if (this.currentList.length) {
+          return this.currentList[0];
+        } else {
+          return '';
+        }
       };
 
       return Posts;
@@ -3311,7 +3341,33 @@ return root.Zepto = Zepto;
 }).call(this);
 
 (function() {
-  define('controllers/blog',['controllers/nav', 'controllers/posts'], function(nav, posts) {
+  define('controllers/post',['jquery', 'providers/data', 'providers/template'], function($, data, template) {
+    var Post;
+    Post = (function() {
+      function Post() {
+        this.el = $('#post-container');
+      }
+
+      Post.prototype.setLink = function(link) {
+        var that;
+        that = this;
+        return data.getPost(link).then(function(text) {
+          return that.el.html(text);
+        }).fail(function(err) {
+          throw err;
+        });
+      };
+
+      return Post;
+
+    })();
+    return new Post;
+  });
+
+}).call(this);
+
+(function() {
+  define('controllers/blog',['controllers/nav', 'controllers/posts', 'controllers/post'], function(nav, posts, post) {
     var Blog;
     Blog = (function() {
       function Blog() {}
@@ -3323,11 +3379,10 @@ return root.Zepto = Zepto;
         if (!category) {
           category = 'default';
         }
-        if (!link) {
-          link = '';
-        }
         nav.setCurrentNav(channel, category);
         posts.setCurrentList(channel, category);
+        link = posts.getCurrentPost(link);
+        post.setLink(link);
         return false;
       };
 

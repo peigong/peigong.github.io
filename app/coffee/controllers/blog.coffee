@@ -1,14 +1,17 @@
-define ['controllers/nav', 'controllers/posts'], (nav, posts) ->
+define ['controllers/nav', 'controllers/posts', 'controllers/post'], (nav, posts, post) ->
     class Blog 
         constructor: () ->
 
         route: (channel, category, link) ->
             channel = 'poet' unless channel
             category = 'default' unless category
-            link = '' unless link
 
             nav.setCurrentNav channel, category
             posts.setCurrentList channel, category
+            link = posts.getCurrentPost link
+
+            post.setLink(link)
+            
             return false
 
     return new Blog
