@@ -149,7 +149,7 @@ module.exports = function (grunt) {
                 }
             },
             jade: {
-                files: ['./{,*/}*.jade', './templates/{,*/}*.tmpl.html'],
+                files: ['./{,*/}*.jade', './templates/{,*/}*.tmpl.html', './css/{,*/}*.css'],
                 tasks: ['build'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'

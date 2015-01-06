@@ -11,7 +11,7 @@ define ['jquery'], ($) ->
             else
                 $.getJSON './categories.json'
                 .then (data) ->
-                    categories  = data
+                    categories = data
                     defer.resolve categories
                 .fail (err) ->
                     defer.reject err
@@ -24,7 +24,11 @@ define ['jquery'], ($) ->
             else
                 $.getJSON './posts.json'
                 .then (data) ->
-                    posts  = data
+                    push = (item) ->
+                        arr = item.link.split '/'
+                        item.filename = arr.pop()
+                        posts.push item
+                    push post for post in data when post.link.length
                     defer.resolve posts
                 .fail (err) ->
                     defer.reject err
@@ -43,7 +47,7 @@ define ['jquery'], ($) ->
                     defer.reject err
             else
                 err = new Error 'link is empty.'
-                defer.reject err
+                #defer.reject err
             return defer.promise()
 
     return exports

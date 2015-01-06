@@ -51,11 +51,11 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             postsHTML = template.render 'tmpl-posts', it
             @el.html postsHTML
 
-        getCurrentPost: (link) ->
-            if link
-                return link
+        getCurrentPost: (category, link) ->
+            if category and link
+                return ['articles', category, link].join '/'
             else if  @currentList.length
-                return @currentList[0]
+                return @currentList[0].link
             else
                 return ''
 

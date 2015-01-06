@@ -8,7 +8,7 @@ define ['controllers/nav', 'controllers/posts', 'controllers/post'], (nav, posts
 
             nav.setCurrentNav channel, category
             posts.setCurrentList channel, category
-            link = posts.getCurrentPost link
+            link = posts.getCurrentPost category, link
 
             post.setLink(link)
             

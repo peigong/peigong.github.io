@@ -4,12 +4,19 @@ html
         meta(charset='utf8')
         title='周培公的博客-般若经舍'
         style(type='text/css')
+            include css/pygment_trac.css
+            include css/styles.css
             include .tmp/styles/main.css
     body
-        .top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。
-        #nav-container
-        #post-container
-        #posts-container
+        .wrapper
+            .top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。
+            header
+                .brand 般若经舍
+                #nav-container
+            section
+                #post-container
+                #posts-container
+            footer &copy; 周培公 2015
         script(id='tmpl-nav' type='text/x-dot-template')
             include templates/nav.tmpl.html
         script(id='tmpl-posts' type='text/x-dot-template')
