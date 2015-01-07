@@ -9,14 +9,13 @@ html
             include .tmp/styles/main.css
     body
         .wrapper
-            .top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。
-            header
-                .brand 般若经舍
+            p.top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。
+            header.main
+                h1.brand 般若经舍
                 #nav-container
-            section
-                #post-container
-                #posts-container
-            footer &copy; 周培公 2015
+            section#posts-container
+            section#post-container
+            footer.main &copy; 周培公 2015
         script(id='tmpl-nav' type='text/x-dot-template')
             include templates/nav.tmpl.html
         script(id='tmpl-posts' type='text/x-dot-template')
