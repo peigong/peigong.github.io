@@ -9,16 +9,21 @@ html
             include .tmp/styles/main.css
     body
         .wrapper
-            p.top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。
+            p.top-banner 以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄，真实不虚。
             header.main
                 h1.brand 般若经舍
-                #nav-container
-            section#posts-container
-            section#post-container
-            footer.main &copy; 周培公 2015
+                #nav
+            section#list
+            section#post
+            footer.main 
+                p &copy; 周培公 2015
         script(id='tmpl-nav' type='text/x-dot-template')
             include templates/nav.tmpl.html
-        script(id='tmpl-posts' type='text/x-dot-template')
-            include templates/posts.tmpl.html
+        script(id='tmpl-it-list' type='text/x-dot-template')
+            include templates/it_list.tmpl.html
+        script(id='tmpl-poet-list' type='text/x-dot-template')
+            include templates/poet_list.tmpl.html
+        script(id='tmpl-common-list' type='text/x-dot-template')
+            include templates/common_list.tmpl.html
         script(type='text/javascript')
             include .tmp/main.js

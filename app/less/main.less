@@ -1,7 +1,8 @@
 body {
     color: #333333;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 微软雅黑, 宋体;
+    line-height: 200%;
     
     a {
         color:#39c;
@@ -20,26 +21,29 @@ body {
     }
 
     .wrapper {
-        width:1200px;
+        width:1260px;
         margin:0 auto;
         header.main {
-            width:250px;
+            width:300px;
             float:left;
             position:fixed;
             .brand {
-                font-size:28px;
+                font-size:32px;
             }
             ul.master {
                 padding:0;
                 li {
                     list-style:none;
                     display: inline-block;
-                    font-size: 16px;
+                    font-size: 20px;
                     font-weight: bold;
                 }
             }
             ul.slave {
-                padding-left: 30px;
+                padding-left: 10px;
+                li {
+                    list-style:none;
+                }
             }
         }
 
@@ -48,11 +52,14 @@ body {
             float:right;
             padding-bottom:50px;
         }
-        section#post-container {
-            width: 650px;
+        section#post {
+            width: 660px;
         }
-        section#posts-container {
+        section#list {
             width: 300px;
+            ul {
+                padding-left: 50px;
+            }
         }
         footer.main {
             width:200px;

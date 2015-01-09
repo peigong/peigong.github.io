@@ -2,7 +2,7 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
     class Posts
         constructor: () ->
             that = @
-            @el = $ '#posts-container'
+            @el = $ '#list'
             @categories = {};
             @posts = {}
             @currentList = []
@@ -48,8 +48,8 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             it = 
                 channel: channel
                 posts: @currentList
-            postsHTML = template.render 'tmpl-posts', it
-            @el.html postsHTML
+            listHTML = template.render it, "tmpl-#{ channel }-list",  'tmpl-common-list'
+            @el.html listHTML
 
         getCurrentPost: (category, link) ->
             if category and link

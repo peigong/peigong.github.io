@@ -14,7 +14,7 @@
     {{~ it:item:idx }}
     <ul class="slave" data-master="{{= item.name }}">
         {{~ item.categories:ele:i }}
-        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">{{= ele.title }}</a></li>
+        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">( {{= ele.title }} )</a></li>
         {{~}}
     </ul>
     {{~}}

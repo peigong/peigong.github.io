@@ -1,7 +1,7 @@
 define ['jquery', 'providers/data', 'providers/template'], ($, data, template) ->
     class Navigation
         constructor: () ->
-            @el = $ '#nav-container'
+            @el = $ '#nav'
             if not @categories
                 that = @
                 data.getCategories()
@@ -11,7 +11,7 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
         
         load: (categories) -> 
             @categories = categories
-            @navHTML = template.render 'tmpl-nav', @categories
+            @navHTML = template.render @categories, 'tmpl-nav'
             @el.html @navHTML
 
         setCurrentNav: (channel, category) ->

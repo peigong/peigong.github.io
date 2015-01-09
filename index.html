@@ -81,7 +81,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:26px;
 }
 
 h2 {
@@ -231,7 +231,7 @@ hr {
     color:#444;
   }
 }
-body{color:#333333;font-size:14px;font-family:微软雅黑, 宋体}body a{color:#39c;text-decoration:none}body a:hover{color:#ff7200}body a small{font-size:11px;color:#777;margin-top:-0.6em;display:block}body .wrapper{width:1200px;margin:0 auto}body .wrapper header.main{width:250px;float:left;position:fixed}body .wrapper header.main .brand{font-size:28px}body .wrapper header.main ul.master{padding:0}body .wrapper header.main ul.master li{list-style:none;display:inline-block;font-size:16px;font-weight:bold}body .wrapper header.main ul.slave{padding-left:30px}body .wrapper section{padding-top:20px;float:right;padding-bottom:50px}body .wrapper section#post-container{width:650px}body .wrapper section#posts-container{width:300px}body .wrapper footer.main{width:200px;float:left;position:fixed;bottom:50px}</style></head><body><div class="wrapper"><p class="top-banner">以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄。</p><header class="main"><h1 class="brand">般若经舍</h1><div id="nav-container"></div></header><section id="posts-container"></section><section id="post-container"></section><footer class="main">&copy; 周培公 2015</footer></div><script id="tmpl-nav" type="text/x-dot-template"><div>
+body{color:#333333;font-size:16px;font-family:微软雅黑, 宋体;line-height:200%}body a{color:#39c;text-decoration:none}body a:hover{color:#ff7200}body a small{font-size:11px;color:#777;margin-top:-0.6em;display:block}body .wrapper{width:1260px;margin:0 auto}body .wrapper header.main{width:300px;float:left;position:fixed}body .wrapper header.main .brand{font-size:32px}body .wrapper header.main ul.master{padding:0}body .wrapper header.main ul.master li{list-style:none;display:inline-block;font-size:20px;font-weight:bold}body .wrapper header.main ul.slave{padding-left:10px}body .wrapper header.main ul.slave li{list-style:none}body .wrapper section{padding-top:20px;float:right;padding-bottom:50px}body .wrapper section#post{width:660px}body .wrapper section#list{width:300px}body .wrapper section#list ul{padding-left:50px}body .wrapper footer.main{width:200px;float:left;position:fixed;bottom:50px}</style></head><body><div class="wrapper"><p class="top-banner">以无所得故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，渡一切苦厄，真实不虚。</p><header class="main"><h1 class="brand">般若经舍</h1><div id="nav"></div></header><section id="list"></section><section id="post"></section><footer class="main"> <p>&copy; 周培公 2015</p></footer></div><script id="tmpl-nav" type="text/x-dot-template"><div>
     <ul class="master">
         <li>[</li>
         {{~ it:item:idx }}
@@ -247,13 +247,27 @@ body{color:#333333;font-size:14px;font-family:微软雅黑, 宋体}body a{color:
     {{~ it:item:idx }}
     <ul class="slave" data-master="{{= item.name }}">
         {{~ item.categories:ele:i }}
-        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">{{= ele.title }}</a></li>
+        <li><a href="#/{{= item.name }}/{{= ele.name }}" title="{{= ele.description }}">( {{= ele.title }} )</a></li>
         {{~}}
     </ul>
     {{~}}
-</div></script><script id="tmpl-posts" type="text/x-dot-template"><ul>
+</div></script><script id="tmpl-it-list" type="text/x-dot-template"><ul>
+    {{~ it.posts:item:idx }}
+    <li>
+        <a href="#/{{= it.channel }}/{{= item.categories }}/{{= item.filename }}" data-id="{{= item.id }}">[{{= item.pubDate.year }}年{{= item.pubDate.month }}月{{= item.pubDate.day }}日] {{= item.title }}</a>
+    </li>
+    {{~}}
+</ul>
+</script><script id="tmpl-poet-list" type="text/x-dot-template"><ul>
     {{~ it.posts:item:idx }}
     <li><a href="#/{{= it.channel }}/{{= item.categories }}/{{= item.filename }}" data-id="{{= item.id }}">{{= item.title }}</a></li>
+    {{~}}
+</ul>
+</script><script id="tmpl-common-list" type="text/x-dot-template"><ul>
+    {{~ it.posts:item:idx }}
+    <li>
+        <a href="#/{{= it.channel }}/{{= item.categories }}/{{= item.filename }}" data-id="{{= item.id }}">{{= item.title }}</a>
+    </li>
     {{~}}
 </ul>
 </script><script type="text/javascript">/**
@@ -3426,11 +3440,18 @@ return root.Zepto = Zepto;
     var exports, handlers;
     handlers = {};
     exports = {
-      render: function(tmpl, data) {
-        var text;
+      render: function(data, tmpl, def) {
+        var ele, text;
         if (!handlers.hasOwnProperty(tmpl)) {
-          text = $('#' + tmpl).text();
-          text = $.trim(text);
+          ele = $("#" + tmpl);
+          if (ele.size() === 0) {
+            ele = $("#" + def);
+          }
+          text = '';
+          if (ele.size() > 0) {
+            text = ele.text();
+            text = $.trim(text);
+          }
           if (text) {
             handlers[tmpl] = doT.template(text);
           } else {
@@ -3453,7 +3474,7 @@ return root.Zepto = Zepto;
     Navigation = (function() {
       function Navigation() {
         var that;
-        this.el = $('#nav-container');
+        this.el = $('#nav');
         if (!this.categories) {
           that = this;
           data.getCategories().then(this.load.bind(this)).fail(function(err) {
@@ -3464,7 +3485,7 @@ return root.Zepto = Zepto;
 
       Navigation.prototype.load = function(categories) {
         this.categories = categories;
-        this.navHTML = template.render('tmpl-nav', this.categories);
+        this.navHTML = template.render(this.categories, 'tmpl-nav');
         return this.el.html(this.navHTML);
       };
 
@@ -3487,7 +3508,7 @@ return root.Zepto = Zepto;
       function Posts() {
         var that;
         that = this;
-        this.el = $('#posts-container');
+        this.el = $('#list');
         this.categories = {};
         this.posts = {};
         this.currentList = [];
@@ -3553,14 +3574,14 @@ return root.Zepto = Zepto;
       };
 
       Posts.prototype.setCurrentList = function(channel, category) {
-        var it, postsHTML;
+        var it, listHTML;
         this.currentList = this.getPosts(channel, category);
         it = {
           channel: channel,
           posts: this.currentList
         };
-        postsHTML = template.render('tmpl-posts', it);
-        return this.el.html(postsHTML);
+        listHTML = template.render(it, "tmpl-" + channel + "-list", 'tmpl-common-list');
+        return this.el.html(listHTML);
       };
 
       Posts.prototype.getCurrentPost = function(category, link) {
@@ -3586,7 +3607,7 @@ return root.Zepto = Zepto;
     var Post;
     Post = (function() {
       function Post() {
-        this.el = $('#post-container');
+        this.el = $('#post');
       }
 
       Post.prototype.setLink = function(link) {

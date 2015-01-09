@@ -1,7 +1,7 @@
 define ['jquery', 'providers/data', 'providers/template'], ($, data, template) ->
     class Post
         constructor: () ->
-            @el = $ '#post-container'
+            @el = $ '#post'
         setLink: (link) ->
             that = @
             data.getPost(link)
