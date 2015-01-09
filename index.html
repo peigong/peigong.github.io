@@ -3486,7 +3486,16 @@ return root.Zepto = Zepto;
       Navigation.prototype.load = function(categories) {
         this.categories = categories;
         this.navHTML = template.render(this.categories, 'tmpl-nav');
-        return this.el.html(this.navHTML);
+        this.el.html(this.navHTML);
+        return $('#nav ul.master a').click(this.show);
+      };
+
+      Navigation.prototype.show = function(ele) {
+        var id;
+        ele = $(this);
+        id = ele.attr('data-id');
+        $('#nav ul.slave').hide();
+        return $("#nav ul.slave[data-master=" + id + "]").show();
       };
 
       Navigation.prototype.setCurrentNav = function(channel, category) {};
