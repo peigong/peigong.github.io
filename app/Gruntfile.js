@@ -61,13 +61,18 @@ module.exports = function (grunt) {
                     baseUrl: '.tmp/scripts',
                     name: 'main',
                     out: '.tmp/main.js',
-                    optimize: 'none',
+                    //optimize: 'none',
                     paths: {
+                        'async': '../../bower_components/async/lib/async',
                         'jquery': '../../.tmp/lib/jquery',
                         'doT': '../../bower_components/doT/doT',
-                        'director': '../../bower_components/director/build/director'
+                        'director': '../../bower_components/director/build/director',
+                        'EventEmitter': '../../bower_components/EventEmitter/EventEmitter'
                     },
                     shim: {
+                      async: {
+                        exports: 'async'
+                      },
                       jquery: {
                         exports: 'Zepto'
                       },
@@ -76,6 +81,9 @@ module.exports = function (grunt) {
                       },
                       director: {
                         exports: 'Router'
+                      },
+                      EventEmitter: {
+                        exports: 'EventEmitter'
                       }
                     },
                     wrapShim: true,
@@ -90,8 +98,7 @@ module.exports = function (grunt) {
                     //wrap: true,
                     wrap: {
                       startFile: [
-                        'bower_components/almond/almond.js',
-                        '.tmp/scripts/config.js'
+                        'bower_components/almond/almond.js'
                       ]
                     }
                     //uglify2: {} // https://github.com/mishoo/UglifyJS2
