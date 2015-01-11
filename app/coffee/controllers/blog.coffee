@@ -8,9 +8,9 @@ define ['controllers/nav', 'controllers/posts', 'controllers/post'], (nav, posts
 
             nav.setCurrentNav channel, category
             posts.setCurrentList channel, category
-            posts.getCurrentPost category, link
+            posts.getCurrentPostLink category, link
             .then (link) ->
-                post.setLink(link)
+                post.setLink(link, channel)
             return false
 
     return new Blog

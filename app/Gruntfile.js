@@ -24,6 +24,18 @@ module.exports = function (grunt) {
             }
         },
 
+        cssmin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: './css',
+                    src: '{,*/}*.css',
+                    dest: '.tmp/styles',
+                    ext: '.css'
+                }]
+            }
+        },
+
         less: {
             options: {
                 compress: true
@@ -141,26 +153,24 @@ module.exports = function (grunt) {
 
         // Watches files for changes and runs tasks based on the changed files
         watch: {
+            options: {
+                livereload: '<%= connect.options.livereload %>'
+            },
+            cssmin: {
+                files: ['./css/{,*/}*.css'],
+                tasks: ['cssmin', 'build']
+            },
             less: {
                 files: ['./less/{,*/}*.less'],
-                tasks: ['less', 'build'],
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                }
+                tasks: ['less', 'build']
             },
             coffee: {
                 files: ['./coffee/{,*/}*.coffee'],
-                tasks: ['coffee2js', 'build'],
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                }
+                tasks: ['coffee2js', 'build']
             },
             jade: {
-                files: ['./{,*/}*.jade', './templates/{,*/}*.tmpl.html', './css/{,*/}*.css'],
-                tasks: ['build'],
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                }
+                files: ['./{,*/}*.jade', './templates/{,*/}*.tmpl.html'],
+                tasks: ['build']
             }
         },
 
@@ -187,6 +197,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'clean',
         'concat',
+        'cssmin',
         'less',
         'coffee2js',
         'build'

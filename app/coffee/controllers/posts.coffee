@@ -76,7 +76,7 @@ define [
             else
                 emitter.on 'loaded', set
 
-        getCurrentPost: (category, link) ->
+        getCurrentPostLink: (category, link) ->
             that = @
             defer = $.Deferred()
             get = () ->
