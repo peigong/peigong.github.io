@@ -45,8 +45,13 @@
 		"title": "医",
 		"categories": [
 			{
-				"name": "records",
-				"title": "中医备忘录",
+				"name": "records-a",
+				"title": "长期病案A",
+				"description": ""
+			},
+			{
+				"name": "records-b",
+				"title": "长期病案B",
 				"description": ""
 			},
 			{
@@ -73,7 +78,7 @@
 		"categories": [
 			{
 				"name": "manual",
-				"title": "手头常用",
+				"title": "常用文档",
 				"description": ""
 			},
 			{
