@@ -10,7 +10,7 @@
 			},
 			{
 				"name": "three-kingdoms",
-				"title": "惯看秋月春风",
+				"title": "白发渔樵",
 				"description": "收录与三国演义人物有关的作品。"
 			},
 			{
@@ -19,13 +19,8 @@
 				"description": "收录与金庸武侠小说人物有关的作品。"
 			},
 			{
-				"name": "shi-ji",
-				"title": "史家绝唱",
-				"description": "收录与历史人物有关的作品。"
-			},
-			{
 				"name": "read",
-				"title": "六经注我",
+				"title": "读各种书",
 				"description": "收录读书有感的作品。"
 			},
 			{
