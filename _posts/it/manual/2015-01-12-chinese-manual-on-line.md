@@ -1,9 +1,7 @@
 ---
 layout: post
 category: manual
-title: 常用的中文在线手册
-tagline: 常用的中文在线手册
-tags : [手册]
+title: 中文在线手册
 ---
 
 - [CoffeeScript 中文](http://coffee-script.org/)
@@ -12,3 +10,4 @@ tags : [手册]
 - [Jade - Template Engine](http://jade-lang.com/)
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [Node.js API 中文版](http://nodeapi.ucdok.com/#/api/)
+- [迷你MVVM框架 avalonjs 入门教程](http://www.cnblogs.com/rubylouvre/p/3181291.html)
