@@ -1,7 +1,7 @@
 ---
 layout: post
 category: manual
-title:常用的在线技术手册
+title: 常用的在线技术手册
 ---
 
 ## 中文手册 ##
