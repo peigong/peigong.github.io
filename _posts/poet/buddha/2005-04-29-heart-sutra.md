@@ -1,6 +1,6 @@
 ---
 layout: post
-category: a-2004
+category: buddha
 title: 少读心经
 ---
 

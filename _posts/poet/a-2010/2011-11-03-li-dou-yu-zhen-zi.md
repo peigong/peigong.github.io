@@ -1,6 +1,6 @@
 ---
 layout: post
-category: 2011-11-03
+category: a-2010
 title: 碧血剑
 ---
 

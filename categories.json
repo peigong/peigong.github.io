@@ -77,9 +77,14 @@
 		"title": "IT",
 		"categories": [
 			{
+				"name": "manual",
+				"title": "常用手册",
+				"description": ""
+			},
+			{
 				"name": "studio",
 				"title": "学习笔记",
-				"description": "收录与佛与禅有关的作品。"
+				"description": ""
 			},
 			{
 				"name": "lessons",
