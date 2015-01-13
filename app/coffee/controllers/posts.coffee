@@ -71,6 +71,7 @@ define [
                 that.el.html listHTML
                 emitter.emit 'current-list-ready'
             
+            that.el.html ''
             if @loaded
                 set()
             else

@@ -4,6 +4,7 @@ define ['jquery', 'providers/data', 'providers/template'], ($, data, template) -
             @el = $ '#post'
         setLink: (link, clazz) ->
             that = @
+            that.el.html ''
             data.getPost(link)
             .then (text) ->
                 that.el.html "<section class=\"#{ clazz }\">#{ text }</section>"
