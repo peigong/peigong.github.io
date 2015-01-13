@@ -2,7 +2,6 @@
 layout: post
 category: studio
 title: 《JOEL说软件 JOEL ON SOFTWARE》笔记 
-tags : [笔记]
 ---
 
 ## 评定开发团队的Joel测试  ##
