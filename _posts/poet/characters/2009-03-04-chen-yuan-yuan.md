@@ -1,7 +1,7 @@
 ---
 layout: post
-category: swordsman
-title: 圆圆曲
+category: characters
+title: 陈圆圆
 ---
 
 ## 鹿鼎记之陈圆圆 ##

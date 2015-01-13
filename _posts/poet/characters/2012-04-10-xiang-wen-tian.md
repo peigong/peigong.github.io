@@ -1,6 +1,6 @@
 ---
 layout: post
-category: swordsman
+category: characters
 title: 向问天
 ---
 

@@ -1,8 +1,10 @@
 ---
 layout: post
-category: swordsman
-title: 少林疗伤
+category: characters
+title: 令狐冲
 ---
+
+## 少林疗伤 ##
 
 > 2012-04-10
 

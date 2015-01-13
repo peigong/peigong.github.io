@@ -1,8 +1,10 @@
 ---
 layout: post
-category: swordsman
-title: 力斗玉真子
+category: characters
+title: 袁承志
 ---
+
+## 力斗玉真子 ##
 
 > 2011-11-03
 

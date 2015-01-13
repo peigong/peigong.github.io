@@ -1,7 +1,7 @@
 ---
 layout: post
-category: swordsman
-title: 悍匪曲灵风
+category: characters
+title: 曲灵风
 ---
 
 > 2011-07-20

@@ -1,8 +1,10 @@
 ---
 layout: post
-category: swordsman
-title: 绿竹巷
+category: characters
+title: 任盈盈
 ---
+
+## 绿竹巷 ##
 
 > 2012-03-27
 

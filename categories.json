@@ -9,14 +9,9 @@
 				"description": "收录与佛与禅有关的作品。"
 			},
 			{
-				"name": "three-kingdoms",
-				"title": "白发渔樵",
-				"description": "收录与三国演义人物有关的作品。"
-			},
-			{
-				"name": "swordsman",
-				"title": "笑傲江湖",
-				"description": "收录与金庸武侠小说人物有关的作品。"
+				"name": "characters",
+				"title": "亦真亦幻花名谱",
+				"description": "收录与历史人物、小说人物有关的作品。"
 			},
 			{
 				"name": "read",
