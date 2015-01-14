@@ -1,6 +1,6 @@
 ---
 layout: post
-category: read
+category: a-2010
 title: 天龙八部
 ---
 
