@@ -1,10 +1,8 @@
 ---
 layout: post
 category: a-2010
-title: 天龙八部
+title: 逍遥派
 ---
-
-## 逍遥派 ##
 
 > 2012-04-13
 

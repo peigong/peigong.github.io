@@ -1,7 +1,7 @@
 ---
 layout: post
 category: buddha
-title: 少读心经
+title: 心经
 ---
 
 > 2005年4月29日收录

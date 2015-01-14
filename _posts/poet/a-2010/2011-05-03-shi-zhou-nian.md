@@ -1,7 +1,7 @@
 ---
 layout: post
 category: a-2010
-title: 结婚十周年
+title: 十周年
 ---
 
 > 2011-05-03
