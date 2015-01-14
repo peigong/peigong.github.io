@@ -48,7 +48,7 @@ define [
                 @posts[key] = []
                 if category is 'default'
                     check = (cate, counter) ->
-                        return (cate in that.categories[channel]) and (counter < 15)
+                        return (cate in that.categories[channel]) and (counter < 30)
                 else if category
                     check = (cate) ->
                         return cate is category
