@@ -5,28 +5,28 @@
 		"categories": [
 			{
 				"name": "buddha",
-				"title": "佛前侍立心通彻",
-				"description": "收录与佛与禅有关的作品。"
+				"title": "佛前侍立",
+				"description": ""
 			},
 			{
 				"name": "characters",
-				"title": "亦真亦幻花名谱",
-				"description": "收录与历史人物、小说人物有关的作品。"
+				"title": "亦真亦幻",
+				"description": ""
 			},
 			{
 				"name": "a-2010",
-				"title": "五更明月五更梦",
-				"description": "收录2010（含）年以后，2014（含）年以前的作品。"
+				"title": "曾见昨夜风雨骤",
+				"description": "收录2010（含）年以后，2014（含）年以前的作品"
 			},
 			{
 				"name": "a-2004",
-				"title": "四更明月照孤灯",
-				"description": "收录2004（含）年以后，2010年以前的作品。"
+				"title": "天凉好个秋",
+				"description": "收录2004（含）年以后，2010年以前的作品"
 			},
 			{
 				"name": "b-2004",
-				"title": "三更读书无睡意",
-				"description": "收录2004年以前，在老家时的作品。"
+				"title": "村野荒废人",
+				"description": "收录2004年以前，在老家时的作品"
 			}
 		]
 	},
