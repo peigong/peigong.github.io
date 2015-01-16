@@ -1,6 +1,6 @@
 ---
 layout: post
-category: buddha
+category: a-2004
 title: 心经
 ---
 

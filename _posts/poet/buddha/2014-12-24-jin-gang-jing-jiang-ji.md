@@ -1,8 +1,10 @@
 ---
 layout: post
 category: buddha
-title: 听金刚经讲记
+title: 金刚经讲记
 ---
+
+## 听净空法师金刚经讲记 ##
 
 > 2014-12-24
 
