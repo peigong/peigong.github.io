@@ -7,6 +7,8 @@ title: 常用的在线技术手册
 ## 中文手册 ##
 
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
+- [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
+- [Moment.js 中文网](http://momentjs.cn/)
 - [CoffeeScript 中文](http://coffee-script.org/)
 - [Less.js 中文文档](http://less.bootcss.com/)
 - [Jekyll &bull; 简单的静态博客网站](http://jekyllcn.com/)
