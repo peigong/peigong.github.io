@@ -21,3 +21,4 @@ title: 常用的在线技术手册
 - [Jade - Template Engine](http://jade-lang.com/)
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [npm Documentation](https://docs.npmjs.com/)
+- [Moment.js | Docs](http://momentjs.com/docs/)
