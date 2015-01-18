@@ -1,7 +1,7 @@
 ---
 layout: post
 category: manual
-title: 服务器的环境依赖的安装
+title: 安装服务器的环境
 ---
 
 ## Git ##
