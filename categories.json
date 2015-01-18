@@ -40,6 +40,11 @@
 		"title": "医",
 		"categories": [
 			{
+				"name": "wei",
+				"title": "痿论笔记",
+				"description": ""
+			},
+			{
 				"name": "records-a",
 				"title": "病案A",
 				"description": ""
