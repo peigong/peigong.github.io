@@ -1,7 +1,9 @@
+@import './themes/light-green.less';
+
 body {
-    border-top: 2px solid #0286a0;
+    border-top: 2px solid @brand-primary;
     margin: 0px;
-    color: #333333;
+    color: @text-color;
     font-size: 14px;
     font-family: 微软雅黑, 宋体;
     line-height: 200%;
@@ -11,24 +13,17 @@ body {
     }
     
     a {
-        color:#0286a0;
+        color:@link-color;
         font-weight: normal;
         text-decoration:none;
     }
 
     a:hover {
-        color: #ff7200;
-    }
-
-    a small {
-        font-size:12px;
-        color:#777;
-        margin-top:-0.6em;
-        display:block;
+        color: @link-hover-color;
     }
 
     .top-banner {
-        background: #e2f3f8;
+        background: @brand-bg-primary;
     }
     .wrapper {
         width:1260px;
