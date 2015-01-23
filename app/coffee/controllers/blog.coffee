@@ -3,7 +3,7 @@ define ['controllers/nav', 'controllers/posts', 'controllers/post'], (nav, posts
         constructor: () ->
 
         route: (channel, category, link) ->
-            channel = 'poet' unless channel
+            channel = 'classic' unless channel
             category = 'default' unless category
 
             nav.setCurrentNav channel, category
