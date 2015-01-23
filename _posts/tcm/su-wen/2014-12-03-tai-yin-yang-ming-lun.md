@@ -1,6 +1,6 @@
 ---
 layout: post
-category: wei
+category: su-wen
 title: 黄帝内经太阴阳明论篇第二十九
 ---
 黄帝问曰：太阴阳明为表里，脾胃脉也，生病而异者何也？
