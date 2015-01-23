@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 五藏生成篇第十
-tagline: 五藏生成篇第十
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 心之和，脉也。其荣，色也。其主，肾也。
 

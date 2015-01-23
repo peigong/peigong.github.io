@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 金匮真言论篇第四
-tagline: 金匮真言论篇第四
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 黄帝曰：天有八风，经有五风，何谓？
 

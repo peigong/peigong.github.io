@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 灵兰秘典论篇第八
-tagline: 灵兰秘典论篇第八
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 黄帝问曰：愿闻十二脏之相使，贵贱何如？
 

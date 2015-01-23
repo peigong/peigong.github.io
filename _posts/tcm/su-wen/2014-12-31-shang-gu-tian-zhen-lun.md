@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 上古天真论篇第一
-tagline: 上古天真论篇第一
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而登天。
 

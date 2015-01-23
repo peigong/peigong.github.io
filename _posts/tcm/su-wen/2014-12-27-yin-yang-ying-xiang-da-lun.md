@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 阴阳应象大论篇第五
-tagline: 阴阳应象大论篇第五
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 黄帝曰：阴阳者，天地之道也，万物之纲纪，变化之父母，生杀之本始，神明之府也，治病必求于本。
 

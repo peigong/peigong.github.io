@@ -1,12 +1,8 @@
 ---
 layout: post
-category: huangdi
+category: su-wen
 title: 阴阳别论篇第七
-tagline: 阴阳别论篇第七
-tags : [内经, 黄帝内经, 经典, 中医]
 ---
-
-
 
 黄帝问曰：人有四经，十二从，何谓？
 
