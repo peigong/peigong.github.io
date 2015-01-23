@@ -66,6 +66,11 @@
 		"title": "经",
 		"categories": [
 			{
+				"name": "sutra",
+				"title": "佛经",
+				"description": ""
+			},
+			{
 				"name": "analects",
 				"title": "论语笔记",
 				"description": ""
