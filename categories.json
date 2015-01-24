@@ -56,6 +56,11 @@
 		"title": "医",
 		"categories": [
 			{
+				"name": "tcm-note",
+				"title": "医学笔记",
+				"description": ""
+			},
+			{
 				"name": "wei",
 				"title": "痿论笔记",
 				"description": ""
