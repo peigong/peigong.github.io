@@ -7,6 +7,7 @@ title: 有用的网址链接
 ## javascript开发 ##
 
 - [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
+- [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
 - [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
 - [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
 
