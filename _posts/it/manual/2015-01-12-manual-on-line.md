@@ -6,7 +6,6 @@ title: 在线技术手册
 
 ## 中文手册 ##
 
-- [PhoneGap中国](http://www.phonegapcn.com/)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
 - [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
 - [Moment.js 中文网](http://momentjs.cn/)
@@ -19,7 +18,6 @@ title: 在线技术手册
 
 ## 英文手册 ##
 
-- [PhoneGap](http://phonegap.com/)
 - [Jade - Template Engine](http://jade-lang.com/)
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [npm Documentation](https://docs.npmjs.com/)
