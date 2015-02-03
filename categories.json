@@ -76,6 +76,11 @@
 				"description": ""
 			},
 			{
+				"name": "records",
+				"title": "病案备忘",
+				"description": ""
+			},
+			{
 				"name": "su-wen",
 				"title": "黄帝内经素问",
 				"description": ""
