@@ -1,5 +1,41 @@
 [
 	{
+		"name": "tcm",
+		"title": "医",
+		"categories": [
+			{
+				"name": "tcm-note",
+				"title": "医学笔记",
+				"description": ""
+			},
+			{
+				"name": "wei",
+				"title": "痿论笔记",
+				"description": ""
+			},
+			{
+				"name": "records-a",
+				"title": "病案A",
+				"description": ""
+			},
+			{
+				"name": "records-b",
+				"title": "病案B",
+				"description": ""
+			},
+			{
+				"name": "records",
+				"title": "病案备忘",
+				"description": ""
+			},
+			{
+				"name": "su-wen",
+				"title": "黄帝内经素问",
+				"description": ""
+			}
+		]
+	},
+	{
 		"name": "classic",
 		"title": "经",
 		"categories": [
@@ -48,42 +84,6 @@
 				"name": "b-2004",
 				"title": "村野荒废人",
 				"description": "收录2004年以前，在老家时的作品"
-			}
-		]
-	},
-	{
-		"name": "tcm",
-		"title": "医",
-		"categories": [
-			{
-				"name": "tcm-note",
-				"title": "医学笔记",
-				"description": ""
-			},
-			{
-				"name": "wei",
-				"title": "痿论笔记",
-				"description": ""
-			},
-			{
-				"name": "records-a",
-				"title": "病案A",
-				"description": ""
-			},
-			{
-				"name": "records-b",
-				"title": "病案B",
-				"description": ""
-			},
-			{
-				"name": "records",
-				"title": "病案备忘",
-				"description": ""
-			},
-			{
-				"name": "su-wen",
-				"title": "黄帝内经素问",
-				"description": ""
 			}
 		]
 	},
