@@ -6,7 +6,7 @@
     "sh601328" : { "symbol" : "sh601328", "name" : "交通银行", "floor" : 4.12, "quantity" : 1000,"cost" : 4.162 },
     "sh600036" : { "symbol" : "sh600036", "name" : "招商银行", "floor" : 9.75, "quantity" : 652,"cost" : 8.877 },
     "sh600000" : { "symbol" : "sh600000", "name" : "浦发银行", "floor" : 7.21, "quantity" : 800,"cost" : 8.871 },
-    "sh600016" : { "symbol" : "sh600016", "name" : "民生银行", "floor" : 4.01, "quantity" : 1000,"cost" : 5.568 },
+    "sh600016" : { "symbol" : "sh600016", "name" : "民生银行", "floor" : 4.01, "quantity" : 1000,"cost" : 5.497 },
     "sh601166" : { "symbol" : "sh601166", "name" : "兴业银行", "floor" : 11.74, "quantity" : 800,"cost" : 7.94 },
     "sh600015" : { "symbol" : "sh600015", "name" : "华夏银行", "floor" : 7.29, "quantity" : 690,"cost" : 7.666 },
     "sz000001" : { "symbol" : "sz000001", "name" : "平安银行", "floor" : 8.37, "quantity" : 300,"cost" : 9.691 },
@@ -46,5 +46,6 @@
     "sz000858" : { "symbol" : "sz000858", "name" : "五粮液", "floor" : 4.94, "quantity" : 200,"cost" : 17.371 },
     "sz000568" : { "symbol" : "sz000568", "name" : "泸州老窖", "floor" : 4.94, "quantity" : 200,"cost" : 15.195 },
     "sz000596" : { "symbol" : "sz000596", "name" : "古井贡酒", "floor" : 4.94, "quantity" : 200,"cost" : 16.902 },
-    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 1408.94 }
+    "sh600548" : { "symbol" : "sh600548", "name" : "深高速", "floor" : 4.94, "quantity" : 400,"cost" : 7.916 },
+    "xj000001" : { "symbol" : "xj000001", "name" : "现金", "floor" : 0, "quantity" : 0,"cost" : 8242.38 }
 }

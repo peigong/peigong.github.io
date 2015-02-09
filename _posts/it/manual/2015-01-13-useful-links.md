@@ -16,10 +16,14 @@ title: 有用的网址链接
 - [第三篇：yield 异步篇](http://www.html-js.com/article/In-depth-understanding-of-Yield-third-yield-asynchronous-discourse)
 - [学习ES6生成器（Generator）](http://www.toobug.net/article/learning_es6_generator.html)
 - [ES6新特性概览](http://www.cnblogs.com/Wayou/p/es6_new_features.html)
-- [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
 - [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
 - [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
 - [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
+
+## 选型参考 ##
+
+- [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
+- [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
 
 ## Linux服务器 ##
 
