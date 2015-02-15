@@ -18,6 +18,7 @@ title: 有用的网址链接
 - [ES6新特性概览](http://www.cnblogs.com/Wayou/p/es6_new_features.html)
 - [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
 - [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
+- [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
 - [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
 - [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
 
