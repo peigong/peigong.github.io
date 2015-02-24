@@ -1,7 +1,7 @@
 ---
 layout: post
 category: records-b
-title: 羌活胜湿汤加味二
+title: 羌活胜湿汤加味三
 ---
 
 羌活（15克） 独活（15克） 防风（10克）
