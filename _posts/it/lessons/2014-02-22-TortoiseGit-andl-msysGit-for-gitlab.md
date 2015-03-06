@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: GitLab和TortoiseGit、msysGit的配合使用
-tagline: GitLab和TortoiseGit、msysGit的配合使用
-tags : [开发工具]
 ---
-
 
 ## 软件安装 ##
 

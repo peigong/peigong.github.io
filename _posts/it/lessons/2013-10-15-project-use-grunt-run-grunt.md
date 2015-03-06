@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: 使用grunt-run-grunt插件组织团队的开发
-tagline: 使用grunt-run-grunt插件组织团队的开发
-tags : [Grunt插件, 项目组织]
 ---
-
 
 ## 项目构建的需求 ##
 
@@ -49,7 +46,6 @@ tags : [Grunt插件, 项目组织]
 	});
 
 参见Grunt文档的《常见问题-"动态"别名任务》([中文](http://www.gruntjs.org/article/frequently_asked_questions.html)/[英文](http://gruntjs.com/frequently-asked-questions))。
-
 
 ### Grunt配置编程处理在不同的文件中 ###
 

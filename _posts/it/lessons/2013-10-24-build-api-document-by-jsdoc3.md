@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: 使用JSDoc3生成javascript项目的API文档
-tagline: 使用JSDoc3生成javascript项目的API文档
-tags : [开发工具]
 ---
-
 
 ## JSDoc样式的注释 ##
 

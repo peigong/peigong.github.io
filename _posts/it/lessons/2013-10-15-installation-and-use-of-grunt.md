@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: Grunt的安装和使用
-tagline: Grunt的安装和使用
-tags : [开发工具, Grunt, 自动构建]
 ---
-
 
 ## 安装Grunt前的准备 ##
 

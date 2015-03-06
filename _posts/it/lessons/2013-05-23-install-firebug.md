@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: Firebug插件安装教程
-tagline: Firebug插件安装教程
-tags : [代码调试, 入门教程]
 ---
-
 
 一、点选Firefox浏览器的“附加组件”菜单项。
 

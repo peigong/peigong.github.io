@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: JSHint 使用说明（转）
-tagline: JSHint 使用说明（转）
-tags : [开发工具]
 ---
-
 
 > 本文全文转自[JSHint 使用说明(http://zhang.zipeng.info/vimwiki/Entries/Reference/Tools/jshint.html)](http://zhang.zipeng.info/vimwiki/Entries/Reference/Tools/jshint.html)。
 

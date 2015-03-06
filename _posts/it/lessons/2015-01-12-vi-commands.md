@@ -1,6 +1,6 @@
 ---
 layout: post
-category: manual
+category: lessons
 title: VI的常用操作
 ---
 

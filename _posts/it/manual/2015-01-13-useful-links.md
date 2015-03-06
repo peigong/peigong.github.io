@@ -27,6 +27,7 @@ title: 有用的网址链接
 
 - [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
 - [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
+- [Hybrid App开发 四大主流移动平台分析](http://dev.yesky.com/238/34657738.shtml)
 
 ## Linux服务器 ##
 

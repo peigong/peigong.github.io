@@ -2,10 +2,7 @@
 layout: post
 category: lessons
 title: CentOS下安装git和配置git服务器
-tagline: CentOS下安装git和配置git服务器
-tags : [开发工具]
 ---
-
 
 在远程仓库一节中，我们讲了远程仓库实际上和本地仓库没啥不同，纯粹为了7x24小时开机并交换大家的修改。
 
@@ -60,6 +57,7 @@ $ sudo chown -R git:git sample.git
 	git:x:1001:1001:,,,:/home/git:/bin/bash
 	改为：
 	git:x:1001:1001:,,,:/home/git:/usr/local/git/bin/git-shell
+
 这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。
 
 ### 第六步，在/srv/sample.git目录下，假设有一个test目录： ###
@@ -75,9 +73,11 @@ $ sudo chown -R git:git sample.git
 
 	Cloning into 'sample'...
 	warning: You appear to have cloned an empty repository.
+
 剩下的推送就简单了。
 
 管理公钥
+
 如果团队很小，把每个人的公钥收集起来放到服务器的/home/git/.ssh/authorized_keys文件里就是可行的。如果团队有几百号人，就没法这么玩了，这时，可以用Gitosis来管理公钥。
 
 这里我们不介绍怎么玩Gitosis了，几百号人的团队基本都在500强了，相信找个高水平的Linux管理员问题不大。
