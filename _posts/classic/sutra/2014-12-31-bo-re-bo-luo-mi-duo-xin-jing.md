@@ -27,3 +27,7 @@ title: 般若波罗蜜多心经
 揭（gā）谛（dì）揭（gā）谛（dì）， 波（bā）罗（lā）揭（gā）谛（dì）， 波（bā）罗（lā）僧（sāng）揭（gā）谛（dì），菩（bō）提（dì）萨（sī）婆（wa）诃hǎ。
 
 > 咒语梵文读音：Gaté Gaté Paragaté Parasamgaté Bodhi Svaha!
+
+## 参考文献 ##
+
+- [般若波罗蜜多心经诠注 周止庵 著](http://www.folou.com/thread-91310-1-1.html)
