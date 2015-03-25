@@ -35,3 +35,4 @@ title: 有用的网址链接
 	- 在跳板机宿主目录下的`.bashrc`文件底部加入 eval \`/usr/local/bin/ssh-attach\`
 	- 尝试`SSH`登陆任意一台机器，输入正确的口令
 	- 退出后，重新登陆跳板机，再次输入口令，即可ssh 任意机器（或者`source .bashrc`）
+- [Linux下的五个查找命令：grep、find、locate、whereis、which](http://www.cnblogs.com/wanqieddy/archive/2011/07/15/2107071.html)

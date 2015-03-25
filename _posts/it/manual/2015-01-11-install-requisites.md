@@ -68,7 +68,7 @@ title: 安装服务器的环境
 
 	cd /usr/local/src/node
 	wget -c https://github.com/joyent/node/archive/v0.10.30.tar.gz
-	tar xvf node-0.10.30.tar.gz
+	tar xvf v0.10.30
 
 可以使用`git clone`最新的版本分支：
 
