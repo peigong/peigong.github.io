@@ -11,12 +11,9 @@ title: 有用的网址链接
 
 ## javascript开发 ##
 
+- [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
+- [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
 - [解决回调金字塔! Harmony Generator, yield, ES6, co框架学习](http://www.html-js.com/article/Nodejs-commonly-used-modules-detailed-address-correction-in-Pyramid-Harmony-Generator-yield-ES6-CO-framework-of-learning)
-- [yield 原理篇](http://www.html-js.com/article/Understanding-the-Yield-principle)
-- [yield 迭代篇](http://www.html-js.com/article/Understanding-the-Yield-yield-iterative-article)
-- [第三篇：yield 异步篇](http://www.html-js.com/article/In-depth-understanding-of-Yield-third-yield-asynchronous-discourse)
-- [学习ES6生成器（Generator）](http://www.toobug.net/article/learning_es6_generator.html)
-- [ES6新特性概览](http://www.cnblogs.com/Wayou/p/es6_new_features.html)
 - [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
 - [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
 - [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
