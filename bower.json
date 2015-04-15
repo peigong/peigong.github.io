@@ -1,0 +1,20 @@
+{
+  "name": "peigong.github.io",
+  "version": "0.1.0",
+  "homepage": "https://github.com/peigong/peigong.github.io",
+  "authors": [
+    "周培公 <peigong@foxmail.com>"
+  ],
+  "description": "peigong's blog.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jekyll-blog-app": "https://github.com/peigong/jekyll-blog-app.git"
+  }
+}
