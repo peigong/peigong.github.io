@@ -9,22 +9,28 @@ title: 有用的网址链接
 - [前端乱炖 最专业的前端技术内容社区](http://www.html-js.com/)
 - [人人都是产品经理 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)
 
-## javascript开发 ##
+## 移动端Web开发 ##
 
 - [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
 - [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
-- [解决回调金字塔! Harmony Generator, yield, ES6, co框架学习](http://www.html-js.com/article/Nodejs-commonly-used-modules-detailed-address-correction-in-Pyramid-Harmony-Generator-yield-ES6-CO-framework-of-learning)
-- [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
-- [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
-- [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
-- [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
-- [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
+- [移动端Web开发调试之Chrome远程调试(Remote Debugging)](http://blog.csdn.net/freshlover/article/details/42528643)
+- [移动端Web开发调试之Weinre调试教程](http://blog.csdn.net/freshlover/article/details/42640253)
 
 ## 选型参考 ##
 
 - [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
 - [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
 - [Hybrid App开发 四大主流移动平台分析](http://dev.yesky.com/238/34657738.shtml)
+- [25款最佳响应式前端开发框架](http://code.csdn.net/news/2819417)
+
+## javascript开发 ##
+
+- [解决回调金字塔! Harmony Generator, yield, ES6, co框架学习](http://www.html-js.com/article/Nodejs-commonly-used-modules-detailed-address-correction-in-Pyramid-Harmony-Generator-yield-ES6-CO-framework-of-learning)
+- [Two-Way Data Binding](http://n12v.com/2-way-data-binding/)
+- [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
+- [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
+- [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
+- [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
 
 ## Linux服务器 ##
 
