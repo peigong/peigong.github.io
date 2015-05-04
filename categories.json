@@ -107,5 +107,21 @@
 				"description": ""
 			}
 		]
+	},
+	{
+		"name": "other",
+		"title": "杂",
+		"categories": [
+			{
+				"name": "invest",
+				"title": "投资笔记",
+				"description": ""
+			},
+			{
+				"name": "note",
+				"title": "随笔",
+				"description": ""
+			}
+		]
 	}
 ]
