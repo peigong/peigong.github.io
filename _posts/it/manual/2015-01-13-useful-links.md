@@ -31,6 +31,7 @@ title: 有用的网址链接
 - [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
 - [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
 - [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
+- [r.js 配置文件 example.build.js 不完整注释](http://www.cnblogs.com/haoliang/p/3656475.html)
 
 ## Linux服务器 ##
 
