@@ -1,5 +1,21 @@
 [
 	{
+		"name": "classic",
+		"title": "经",
+		"categories": [
+			{
+				"name": "sutra",
+				"title": "佛经",
+				"description": ""
+			},
+			{
+				"name": "analects",
+				"title": "论语笔记",
+				"description": ""
+			}
+		]
+	},
+	{
 		"name": "tcm",
 		"title": "医",
 		"categories": [
@@ -31,22 +47,6 @@
 			{
 				"name": "su-wen",
 				"title": "黄帝内经素问",
-				"description": ""
-			}
-		]
-	},
-	{
-		"name": "classic",
-		"title": "经",
-		"categories": [
-			{
-				"name": "sutra",
-				"title": "佛经",
-				"description": ""
-			},
-			{
-				"name": "analects",
-				"title": "论语笔记",
 				"description": ""
 			}
 		]
