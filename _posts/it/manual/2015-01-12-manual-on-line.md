@@ -6,6 +6,7 @@ title: 在线技术手册
 
 ## 中文手册 ##
 
+- [Zeptojs.cn 中文站](http://www.zeptojs.cn/)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
 - [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
 - [Moment.js 中文网](http://momentjs.cn/)
