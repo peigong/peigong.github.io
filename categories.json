@@ -2,6 +2,7 @@
 	{
 		"name": "classic",
 		"title": "经",
+		"tmpl": "list_no_date",
 		"categories": [
 			{
 				"name": "sutra",
@@ -18,6 +19,7 @@
 	{
 		"name": "tcm",
 		"title": "医",
+		"tmpl": "list_no_date",
 		"categories": [
 			{
 				"name": "tcm-note",
