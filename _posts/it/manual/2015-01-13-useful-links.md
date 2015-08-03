@@ -22,6 +22,9 @@ title: 有用的网址链接
 - [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
 - [Hybrid App开发 四大主流移动平台分析](http://dev.yesky.com/238/34657738.shtml)
 - [25款最佳响应式前端开发框架](http://code.csdn.net/news/2819417)
+- [13个JavaScript图表（JS图表）图形绘制插件](http://blog.jobbole.com/13671/)
+- [给开发者提供的 35 款 JavaScript 图形图表库](http://www.oschina.net/news/49138/javascript-chart-and-graph-libraries)
+- [HTML5移动端数据图表组件调研](http://www.xuanfengge.com/html5-mobile-data-charting-components-research.html)
 
 ## javascript开发 ##
 
