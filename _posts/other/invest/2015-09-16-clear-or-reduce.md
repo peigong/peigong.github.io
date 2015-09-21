@@ -1,6 +1,6 @@
 ---
 layout: post
-category: note
+category: invest
 title: 清仓，还是减持？
 ---
 

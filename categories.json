@@ -115,6 +115,11 @@
 		"title": "杂",
 		"categories": [
 			{
+				"name": "stocks",
+				"title": "个股分析",
+				"description": ""
+			},
+			{
 				"name": "invest",
 				"title": "投资笔记",
 				"description": ""
