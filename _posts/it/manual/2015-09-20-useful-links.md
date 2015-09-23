@@ -4,6 +4,11 @@ category: manual
 title: 有用的网址链接
 ---
 
+## 网站 ##
+
+- [前端乱炖 最专业的前端技术内容社区](http://www.html-js.com/)
+- [人人都是产品经理 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)
+
 ## 中文手册 ##
 
 - [迷你易用的MVVM框架](http://avalonjs.github.io/)
@@ -21,11 +26,6 @@ title: 有用的网址链接
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [npm Documentation](https://docs.npmjs.com/)
 - [Moment.js Docs](http://momentjs.com/docs/)
-
-## 网站 ##
-
-- [前端乱炖 最专业的前端技术内容社区](http://www.html-js.com/)
-- [人人都是产品经理 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)
 
 ## 移动端Web开发 ##
 
