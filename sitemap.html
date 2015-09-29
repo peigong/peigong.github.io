@@ -10,7 +10,7 @@
     <h1>Sitemap 网站地图</h1>
     <ul>
         {% for post in site.posts %}
-        <li>[{{ post.date }}]<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} - {{ post.categories | join: ', ' }}</a></li>
+        <li>[{{ post.date | date: "%Y-%m-%d" }}]<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </body>
