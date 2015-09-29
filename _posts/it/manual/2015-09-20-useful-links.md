@@ -4,11 +4,6 @@ category: manual
 title: 有用的网址链接
 ---
 
-## 网站 ##
-
-- [前端乱炖 最专业的前端技术内容社区](http://www.html-js.com/)
-- [人人都是产品经理 产品经理、产品爱好者学习交流平台](http://www.woshipm.com/)
-
 ## 中文手册 ##
 
 - [迷你易用的MVVM框架](http://avalonjs.github.io/)
@@ -27,22 +22,32 @@ title: 有用的网址链接
 - [npm Documentation](https://docs.npmjs.com/)
 - [Moment.js Docs](http://momentjs.com/docs/)
 
-## 移动端Web开发 ##
+## 前端框架和模板 ##
 
-- [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
-- [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
-- [移动端Web开发调试之Chrome远程调试(Remote Debugging)](http://blog.csdn.net/freshlover/article/details/42528643)
-- [移动端Web开发调试之Weinre调试教程](http://blog.csdn.net/freshlover/article/details/42640253)
+- [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
+- [15款帮助我们创建响应式布局的优秀前端框架](http://www.cnblogs.com/lhb25/p/grid-tools-for-responsive-web-designs-one.html)
+- [25款最佳响应式前端开发框架](http://code.csdn.net/news/2819417)
+- [14个支持响应式设计的流行前端开发框架](http://www.cnblogs.com/lhb25/p/responsive-front-end-frameworks.html)
+- [10套精美的免费网站后台管理系统模板](http://www.cnblogs.com/lhb25/archive/2012/10/19/10-free-html-admin-templates.html)
+- [34个漂亮的应用程序后台管理界面（系列一）](http://www.cnblogs.com/lhb25/archive/2011/08/24/outstanding-admin-panels-part-one.html)
+- [34个漂亮的应用程序后台管理系统界面（系列二）](http://www.cnblogs.com/lhb25/archive/2011/09/02/outstanding-admin-panels-part-two.html)
+- [34个漂亮的应用程序后台管理界面设计（系列三）](http://www.cnblogs.com/lhb25/archive/2011/09/20/outstanding-admin-panels-part-three.html)
 
 ## 选型参考 ##
 
 - [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
 - [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
 - [Hybrid App开发 四大主流移动平台分析](http://dev.yesky.com/238/34657738.shtml)
-- [25款最佳响应式前端开发框架](http://code.csdn.net/news/2819417)
 - [13个JavaScript图表（JS图表）图形绘制插件](http://blog.jobbole.com/13671/)
 - [给开发者提供的 35 款 JavaScript 图形图表库](http://www.oschina.net/news/49138/javascript-chart-and-graph-libraries)
 - [HTML5移动端数据图表组件调研](http://www.xuanfengge.com/html5-mobile-data-charting-components-research.html)
+
+## 移动端Web开发 ##
+
+- [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
+- [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
+- [移动端Web开发调试之Chrome远程调试(Remote Debugging)](http://blog.csdn.net/freshlover/article/details/42528643)
+- [移动端Web开发调试之Weinre调试教程](http://blog.csdn.net/freshlover/article/details/42640253)
 
 ## javascript开发 ##
 
