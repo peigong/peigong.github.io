@@ -1,6 +1,6 @@
 ---
 layout: post
-category: manual
+category: studio
 title: 前端框架Webplate的技术栈
 ---
 
