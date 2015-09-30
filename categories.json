@@ -1,54 +1,21 @@
 [
 	{
-		"name": "classic",
-		"title": "经",
-		"tmpl": "list_no_date",
+		"name": "it",
+		"title": "IT",
 		"categories": [
 			{
-				"name": "sutra",
-				"title": "佛经",
+				"name": "manual",
+				"title": "常用文档",
 				"description": ""
 			},
 			{
-				"name": "analects",
-				"title": "论语笔记",
-				"description": ""
-			}
-		]
-	},
-	{
-		"name": "tcm",
-		"title": "医",
-		"tmpl": "list_no_date",
-		"categories": [
-			{
-				"name": "tcm-note",
-				"title": "医学笔记",
+				"name": "studio",
+				"title": "学习笔记",
 				"description": ""
 			},
 			{
-				"name": "wei",
-				"title": "痿论笔记",
-				"description": ""
-			},
-			{
-				"name": "records-a",
-				"title": "病案A",
-				"description": ""
-			},
-			{
-				"name": "records-b",
-				"title": "病案B",
-				"description": ""
-			},
-			{
-				"name": "records",
-				"title": "病案备忘",
-				"description": ""
-			},
-			{
-				"name": "su-wen",
-				"title": "黄帝内经素问",
+				"name": "lessons",
+				"title": "培训教程",
 				"description": ""
 			}
 		]
@@ -90,22 +57,55 @@
 		]
 	},
 	{
-		"name": "it",
-		"title": "IT",
+		"name": "tcm",
+		"title": "医",
+		"tmpl": "list_no_date",
 		"categories": [
 			{
-				"name": "manual",
-				"title": "常用文档",
+				"name": "tcm-note",
+				"title": "医学笔记",
 				"description": ""
 			},
 			{
-				"name": "studio",
-				"title": "学习笔记",
+				"name": "wei",
+				"title": "痿论笔记",
 				"description": ""
 			},
 			{
-				"name": "lessons",
-				"title": "培训教程",
+				"name": "records-a",
+				"title": "病案A",
+				"description": ""
+			},
+			{
+				"name": "records-b",
+				"title": "病案B",
+				"description": ""
+			},
+			{
+				"name": "records",
+				"title": "病案备忘",
+				"description": ""
+			},
+			{
+				"name": "su-wen",
+				"title": "黄帝内经素问",
+				"description": ""
+			}
+		]
+	},
+	{
+		"name": "classic",
+		"title": "经",
+		"tmpl": "list_no_date",
+		"categories": [
+			{
+				"name": "sutra",
+				"title": "佛经",
+				"description": ""
+			},
+			{
+				"name": "analects",
+				"title": "论语笔记",
 				"description": ""
 			}
 		]
