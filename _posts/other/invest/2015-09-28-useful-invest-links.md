@@ -12,6 +12,7 @@ title: 有用的投资类链接
 
 ## 工具型网页 ##
 
+- [东方财富网 - 数据中心 - 选股器](http://data.eastmoney.com/xuangu/)
 - [深交所成交回报](http://www.szse.cn/main/disclosure/news/xxlb/)
 - [上交所成交回报](http://www.sse.com.cn/disclosure/diclosure/public/)
 - [沪深合计融资融券交易明细](http://data.eastmoney.com/rzrq/total.html)

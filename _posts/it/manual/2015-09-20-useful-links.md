@@ -4,24 +4,6 @@ category: manual
 title: 有用的网址链接
 ---
 
-## 中文手册 ##
-
-- [迷你易用的MVVM框架](http://avalonjs.github.io/)
-- [迷你MVVM框架 avalonjs 入门教程](http://www.cnblogs.com/rubylouvre/p/3181291.html)
-- [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
-- [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
-- [Moment.js 中文网](http://momentjs.cn/)
-- [Less.js 中文文档](http://less.bootcss.com/)
-- [Jekyll &bull; 简单的静态博客网站](http://jekyllcn.com/)
-- [Underscore.js 中文文档 (1.7.0)](http://learningcn.com/underscore/)
-
-## 英文手册 ##
-
-- [Jade - Template Engine](http://jade-lang.com/)
-- [EJS - JavaScript Templates](http://www.embeddedjs.com/)
-- [npm Documentation](https://docs.npmjs.com/)
-- [Moment.js Docs](http://momentjs.com/docs/)
-
 ## 前端框架和模板 ##
 
 - [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
