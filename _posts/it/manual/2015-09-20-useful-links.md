@@ -28,6 +28,7 @@ title: 有用的网址链接
 
 - [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
 - [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
+- [Fiddler 教程](http://kb.cnblogs.com/page/130367/)
 - [移动端Web开发调试之Chrome远程调试(Remote Debugging)](http://blog.csdn.net/freshlover/article/details/42528643)
 - [移动端Web开发调试之Weinre调试教程](http://blog.csdn.net/freshlover/article/details/42640253)
 
