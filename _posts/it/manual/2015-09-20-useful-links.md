@@ -26,6 +26,10 @@ title: 有用的网址链接
 
 ## 移动端Web开发 ##
 
+- [移动端布局-各种布局方式(一)](http://codeliker.com/mobile-layout-a/)
+- [移动端布局-自适应布局详解(二)](http://codeliker.com/mobile-layout-b/)
+- [移动端布局-数值计算(三)](http://codeliker.com/numerical-calculation-of-mobile-location-c/)
+- [用gulp替代fekit构建前端项目](http://segmentfault.com/a/1190000003060016)
 - [移动前端开发之viewport的深入理解](http://www.cnblogs.com/2050/p/3877280.html)
 - [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
 - [Fiddler 教程](http://kb.cnblogs.com/page/130367/)
