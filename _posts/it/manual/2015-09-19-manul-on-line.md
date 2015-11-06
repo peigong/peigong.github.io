@@ -6,6 +6,7 @@ title: 常用在线手册
 
 ## 中文手册 ##
 
+- [ECMAScript 6入门](http://es6.ruanyifeng.com/)
 - [迷你易用的MVVM框架](http://avalonjs.github.io/)
 - [迷你MVVM框架 avalonjs 入门教程](http://www.cnblogs.com/rubylouvre/p/3181291.html)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)

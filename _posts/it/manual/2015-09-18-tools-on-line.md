@@ -3,6 +3,12 @@ layout: post
 category: manual
 title: 常用在线工具
 ---
+## JSON ##
+
+- [jdorn/json-editor:JSON Schema Based Editor](https://github.com/jdorn/json-editor)
+- [JSONSchema.net:JSON Schema Generator](http://jsonschema.net/)
+
+## 其他 ##
 
 - [UTF-8 Icons - Your no.1 source for UTF-8 character icons](http://www.utf8icons.com/)
 - [草料二维码生成器](http://cli.im/) - [Chrome浏览器插件](http://cli.im/news/6527)
