@@ -4,6 +4,10 @@ category: manual
 title: 前端框架造型参考
 ---
 
+## 工程实践 ##
+
+- [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)
+
 ## 选型参考 ##
 
 - [Web移动,手机应用iOS,Android开发框架](http://www.open-open.com/ajax/Mobile_Framework.htm)
