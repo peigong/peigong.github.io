@@ -14,6 +14,7 @@ title: 前端框架造型参考
 - [NodeJS无所不能：细数10个令人惊讶的NodeJS开源项目](http://www.csdn.net/article/2013-12-17/2817827)
 - [Hybrid App开发 四大主流移动平台分析](http://dev.yesky.com/238/34657738.shtml)
 - [13个JavaScript图表（JS图表）图形绘制插件](http://blog.jobbole.com/13671/)
+- [Web工程师必备的43款可视化工具](http://www.csdn.net/article/2013-01-15/2813666-Web-Tools)
 - [给开发者提供的 35 款 JavaScript 图形图表库](http://www.oschina.net/news/49138/javascript-chart-and-graph-libraries)
 - [HTML5移动端数据图表组件调研](http://www.xuanfengge.com/html5-mobile-data-charting-components-research.html)
 

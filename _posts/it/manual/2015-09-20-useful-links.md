@@ -4,11 +4,25 @@ category: manual
 title: 有用的网址链接
 ---
 
-## 前端开发参考 ##
+## 开发参考 ##
 
 - [Guacamole — HTML5 Clientless Remote Desktop](http://guac-dev.org/)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [用gulp替代fekit构建前端项目](http://segmentfault.com/a/1190000003060016)
+- [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
+- [r.js 配置文件 example.build.js 不完整注释](http://www.cnblogs.com/didi/p/4146656.html)
+
+## 架构设计 ##
+
+- [插件系统框架分析](http://www.uml.org.cn/j2ee/20114121.asp)
+- [Dissect Eclipse Plugin Framework](http://www.mengyan.org/blog/archives/2005/09/16/75.html)
+- [WordPress插件机制实现原理](http://blog.csdn.net/sxty0220/article/details/7975831)
+
+## Node开发 ##
+
+- [Node层模拟实现multipart表单的文件上传](http://www.baidufe.com/item/eedfddf4887df25d111b.html)
+- [nodejs 实现模拟form表单上传文件](http://www.jb51.net/article/52118.htm)
+- [node+express实现文件上传功能](http://www.open-open.com/lib/view/open1438700267473.html)
 
 ## 移动端Web开发 ##
 
@@ -28,8 +42,6 @@ title: 有用的网址链接
 - [js实践篇：例外处理Try{}catch(e){}](http://www.cnblogs.com/luluping/archive/2011/02/14/1954092.html)
 - [实时监听输入框值变化的完美方案：oninput & onpropertychange](http://www.cnblogs.com/lhb25/archive/2012/11/30/oninput-and-onpropertychange-event-for-input.html)
 - [使用onbeforeunload属性后的副作用](http://www.cnblogs.com/birdshome/archive/2005/09/30/OnBeforeUnload.html)
-- [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
-- [r.js 配置文件 example.build.js 不完整注释](http://www.cnblogs.com/didi/p/4146656.html)
 
 ## Linux服务器 ##
 
