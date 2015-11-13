@@ -7,6 +7,13 @@ title: 前端框架造型参考
 ## 工程实践 ##
 
 - [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)
+- [使用Vagrant在Windows下部署开发环境](http://blog.smdcn.net/article/1308.html)
+
+## 架构设计 ##
+
+- [插件系统框架分析](http://www.uml.org.cn/j2ee/20114121.asp)
+- [Dissect Eclipse Plugin Framework](http://www.mengyan.org/blog/archives/2005/09/16/75.html)
+- [WordPress插件机制实现原理](http://blog.csdn.net/sxty0220/article/details/7975831)
 
 ## 选型参考 ##
 

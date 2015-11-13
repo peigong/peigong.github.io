@@ -12,12 +12,6 @@ title: 有用的网址链接
 - [package.json字段全解](http://blog.csdn.net/woxueliuyun/article/details/39294375)
 - [r.js 配置文件 example.build.js 不完整注释](http://www.cnblogs.com/didi/p/4146656.html)
 
-## 架构设计 ##
-
-- [插件系统框架分析](http://www.uml.org.cn/j2ee/20114121.asp)
-- [Dissect Eclipse Plugin Framework](http://www.mengyan.org/blog/archives/2005/09/16/75.html)
-- [WordPress插件机制实现原理](http://blog.csdn.net/sxty0220/article/details/7975831)
-
 ## Node开发 ##
 
 - [Node层模拟实现multipart表单的文件上传](http://www.baidufe.com/item/eedfddf4887df25d111b.html)
