@@ -13,6 +13,7 @@ title: 前端框架造型参考
 
 - [插件系统框架分析](http://www.uml.org.cn/j2ee/20114121.asp)
 - [Dissect Eclipse Plugin Framework](http://www.mengyan.org/blog/archives/2005/09/16/75.html)
+- [Dissect WordPress Plugin](http://www.mengyan.org/blog/archives/2005/07/14/32.html)
 - [WordPress插件机制实现原理](http://blog.csdn.net/sxty0220/article/details/7975831)
 
 ## 选型参考 ##
