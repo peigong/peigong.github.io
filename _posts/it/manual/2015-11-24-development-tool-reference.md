@@ -24,4 +24,5 @@ title: 开发工具参考
 - [使用UltraISO制作U盘启动盘的方法(图文教程)](http://www.jb51.net/softjc/61771.html)
 - [CentOS全系列下载](http://www.centoscn.com/CentosSoft/iso/)
 - [Ubuntu 14.04 LTS 发布 （附新特性介绍及下载镜像站列表）](http://segmentfault.com/a/1190000000473648)
+- [ubuntu12.04安装五笔输入法](http://blog.csdn.net/hankaibo/article/details/8176671)
 
