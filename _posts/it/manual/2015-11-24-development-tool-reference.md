@@ -7,6 +7,7 @@ title: 开发工具参考
 ## Vim ##
 
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively)
+- [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
 
 ## 工程实践 ##
 
