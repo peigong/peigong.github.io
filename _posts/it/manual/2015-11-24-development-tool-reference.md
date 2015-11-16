@@ -9,6 +9,11 @@ title: 开发工具参考
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively)
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
 
+## 文档工具 ##
+
+- [书籍制作工具GITBOOK的安装](http://blog.liyibo.org/books-installation-authoring-tool-gitbook/)
+- [gitbook:Library and cmd utility to generate GitBooks](https://www.npmjs.com/package/gitbook) - [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
+
 ## 工程实践 ##
 
 - [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)

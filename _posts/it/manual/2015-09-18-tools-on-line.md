@@ -5,7 +5,6 @@ title: 常用在线工具
 ---
 ## 系统接口规范工具 ##
 
-- [gitbook:Library and cmd utility to generate GitBooks](https://www.npmjs.com/package/gitbook) - [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
 - [jdorn/json-editor:JSON Schema Based Editor](https://github.com/jdorn/json-editor)
 - [JSONSchema.net:JSON Schema Generator](http://jsonschema.net/)
 - [NW.js lets you call all Node.js modules directly from DOM and enables a new way of writing applications with all Web technologies. ](http://nwjs.io/) - [GitHub](https://github.com/nwjs)
