@@ -1,4 +1,8 @@
-
+---
+layout: post
+category: studio
+title: Ubuntu使用笔记 
+---
 
 ## 输入法的安装
 

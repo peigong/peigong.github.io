@@ -8,6 +8,8 @@ title: 开发工具参考
 
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively)
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
+- [vim配置及插件安装管理（超级详细） ](http://blog.csdn.net/namecyf/article/details/7787479)
+- [Vim十大必备插件](http://www.open-open.com/lib/view/open1414227253419.html) 
 
 ## 文档工具 ##
 
@@ -25,4 +27,4 @@ title: 开发工具参考
 - [CentOS全系列下载](http://www.centoscn.com/CentosSoft/iso/)
 - [Ubuntu 14.04 LTS 发布 （附新特性介绍及下载镜像站列表）](http://segmentfault.com/a/1190000000473648)
 - [ubuntu12.04安装五笔输入法](http://blog.csdn.net/hankaibo/article/details/8176671)
-
+- [IBus输入法安装和设置](http://wiki.ubuntu.org.cn/IBus)
