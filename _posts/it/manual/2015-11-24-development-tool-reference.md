@@ -10,6 +10,8 @@ title: 开发工具参考
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
 - [vim配置及插件安装管理（超级详细） ](http://blog.csdn.net/namecyf/article/details/7787479)
 - [Vim十大必备插件](http://www.open-open.com/lib/view/open1414227253419.html) 
+- [如何高效使用Vim](http://segmentfault.com/q/1010000000166577)
+- [如何优雅地使用 Vim？](http://www.zhihu.com/question/20833248)
 
 ## 文档工具 ##
 
