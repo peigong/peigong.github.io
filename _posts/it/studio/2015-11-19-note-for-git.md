@@ -35,6 +35,8 @@ title: Git使用笔记
 
 ## 基本命令
 
+> 假定开发需要的分支为branch_dev
+
 ### 把改动提交到本地版本库
 
     git commit -am "我是提交注释"     
@@ -44,22 +46,21 @@ title: Git使用笔记
 
 ### 把改动推送到服务器
 
-在推送之前，需要先执行`git pull`把别人的改动拉下来合并，等同于 git fetch; git merge o/branch_dev
+在推送之前，需要先执行`git pull`把别人的改动拉下来合并，等同于 git fetch; git merge origin/branch_dev
 
 然后使用`git push`推送到服务器。
 
-这是 git push o branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是o/branch_dev，同名，所以可以全省略。
+这是 git push origin branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是origin/branch_dev，同名，所以可以全省略。
 
 ### 创建服务器端分支
 
 - `git fetch`:如果刚同步过，此处就不必再次同步
-- `git commit -b branch_dev o/master`:基于o/master创建本地分支branch_dev，并检出。是 git branch branch_dev o/master; git commit branch_dev 的简写。现在branch_dev的upstream为o/master。
-- `git push o HEAD -u`:相当于 git push o branch_dev -u，是 git push o branch_dev:branch_dev -u 的简写。-u 的作用是把本地branch_dev的upstream由原先的o/master改为o/branch_dev。
+- `git commit -b branch_dev origin/master`:基于origin/master创建本地分支branch_dev，并检出。是 git branch branch_dev origin/master; git commit branch_dev 的简写。现在branch_dev的upstream为origin/master。
+- `git push origin HEAD -u`:相当于 git push origin branch_dev -u，是 git push origin branch_dev:branch_dev -u 的简写。-u 的作用是把本地branch_dev的upstream由原先的origin/master改为origin/branch_dev。
 
 ### 把主线上的最新改动合并过来
 
-- `git pull`:等同于 git fetch 更新所有的远程分支，然后再 git merge o/branch_dev
-- `git merge o/master`
-- `git push`:是 git push o branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是o/branch_dev，同名，所以可以全省略。
-
+- `git pull`:等同于 git fetch 更新所有的远程分支，然后再 git merge origin/branch_dev
+- `git merge origin/master`
+- `git push`:是 git push origin branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是origin/branch_dev，同名，所以可以全省略。
 
