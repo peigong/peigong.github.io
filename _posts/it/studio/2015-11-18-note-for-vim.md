@@ -23,6 +23,8 @@ title: VIM使用笔记
 
 ### 插件管理 vim-pathogen
 
+[tpope/vim-pathogen:manage your runtimepath](https://github.com/tpope/vim-pathogen)
+
 安装插件`~/.vim/autoload/pathogen.vim`：
  
     mkdir -p ~/.vim/autoload ~/.vim/bundle
@@ -39,6 +41,8 @@ title: VIM使用笔记
 
 ### 目录树插件 nerdtree
 
+[scrooloose/nerdtree:A tree explorer plugin for vim](https://github.com/scrooloose/nerdtree)
+
 使用`pathogen.vim`安装：
 
     cd ~/.vim/bundle
@@ -48,4 +52,24 @@ title: VIM使用笔记
 
     apt-vim install -y https://github.com/scrooloose/nerdtree.git
 
- 
+### 代码补全插件 neocomplete
+
+[Shougo/neocomplete.vim:Next generation completion framework after neocomplcache](https://github.com/Shougo/neocomplete.vim)
+
+Debian (or Ubuntu)系统下的依赖：
+
+－vim-nox
+－vim-gtk
+－vim-gnome
+－vim-athena
+
+使用`pathogen.vim`安装：
+
+    cd ~/.vim/bundle
+    git clone https://github.com/Shougo/neocomplete.vim.git
+
+在`~/.vimrc`中添加：
+
+    let g:neocomplete#enable_at_startup = 1
+
+
