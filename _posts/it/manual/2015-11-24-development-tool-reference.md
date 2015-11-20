@@ -6,7 +6,7 @@ title: 开发工具参考
 
 ## Vim ##
 
-- [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively)
+- [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively) - [简明 Vim 练级攻略](http://coolshell.cn/articles/5426.html) 
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
 - [vim配置及插件安装管理（超级详细） ](http://blog.csdn.net/namecyf/article/details/7787479)
 - [Vim十大必备插件](http://www.open-open.com/lib/view/open1414227253419.html) 
