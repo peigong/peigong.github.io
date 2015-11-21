@@ -4,7 +4,7 @@ category: manual
 title: 开发工具参考
 ---
 
-## Vim ##
+## VIM ##
 
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively) - [简明 Vim 练级攻略](http://coolshell.cn/articles/5426.html) 
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
@@ -18,6 +18,9 @@ title: 开发工具参考
 
 - [书籍制作工具GITBOOK的安装](http://blog.liyibo.org/books-installation-authoring-tool-gitbook/)
 - [gitbook:Library and cmd utility to generate GitBooks](https://www.npmjs.com/package/gitbook) - [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
+- [Mirror index of https://bitbucket.org/ariya/phantomjs/downloads/](http://npm.taobao.org/dist/phantomjs/)
+- [phantomjs小试牛刀](http://www.ohroot.com/2014/11/11/phantomjs%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/)
+- [phantomjs安装使用](http://www.tuicool.com/articles/zEn2iuu)
 
 ## 工程实践 ##
 
@@ -29,4 +32,3 @@ title: 开发工具参考
 - [使用UltraISO制作U盘启动盘](http://jingyan.baidu.com/article/a378c960630e61b329283045.html)
 - [CentOS全系列下载](http://www.centoscn.com/CentosSoft/iso/)
 - [Ubuntu 14.04 LTS 发布 （附新特性介绍及下载镜像站列表）](http://segmentfault.com/a/1190000000473648)
-- [IBus输入法安装和设置](http://wiki.ubuntu.org.cn/IBus)
