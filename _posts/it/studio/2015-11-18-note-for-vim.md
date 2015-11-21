@@ -61,13 +61,13 @@ title: VIM使用笔记
 
     cd /usr/local/src
     sudo wget http://nchc.dl.sourceforge.net/sourceforge/vimcdoc/vimcdoc-1.5.0.tar.gz
-    tar xvf vimcdoc-1.5.0.tar.gz
+    sudo tar xvf vimcdoc-1.5.0.tar.gz
     cd vimcdoc-1.5.0
     sudo ./vimcdoc.sh -i 
 
 ### 插件管理 vim-pathogen
 
-[tpope/vim-pathogen:manage your runtimepath](https://github.com/tpope/vim-pathogen)
+GitHub:[tpope/vim-pathogen:manage your runtimepath](https://github.com/tpope/vim-pathogen)
 
 安装插件`~/.vim/autoload/pathogen.vim`：
  
@@ -85,7 +85,7 @@ title: VIM使用笔记
 
 ### 目录树插件 nerdtree
 
-[scrooloose/nerdtree:A tree explorer plugin for vim](https://github.com/scrooloose/nerdtree)
+GitHub:[scrooloose/nerdtree:A tree explorer plugin for vim](https://github.com/scrooloose/nerdtree)
 
 使用`pathogen.vim`安装：
 
@@ -98,7 +98,7 @@ title: VIM使用笔记
 
 ### 代码补全插件 neocomplete
 
-[Shougo/neocomplete.vim:Next generation completion framework after neocomplcache](https://github.com/Shougo/neocomplete.vim)
+GitHub:[Shougo/neocomplete.vim:Next generation completion framework after neocomplcache](https://github.com/Shougo/neocomplete.vim)
 
 Debian (or Ubuntu)系统下的依赖：
 
