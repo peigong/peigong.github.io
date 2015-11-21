@@ -8,6 +8,7 @@ title: VIM使用笔记
 
 - 在Ubuntu中使用`sudo apt-get install vim`安装。
 - 在`~/.vimrc`中加入一行`:set number`设置行号。
+- vimtutor:sudo apt-get install vimtutor
 
 ## 常用命令
 
@@ -116,4 +117,7 @@ Debian (or Ubuntu)系统下的依赖：
 
     let g:neocomplete#enable_at_startup = 1
 
+### 配色方案 solarized
+
+GitHub:[altercation/solarized:precision color scheme for multiple applications (terminal, vim, etc.) with both dark/light modes](http://ethanschoonover.com/solarized) - [GitHub](https://github.com/altercation/solarized)
 

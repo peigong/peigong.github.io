@@ -12,6 +12,7 @@ title: 开发工具参考
 - [Vim十大必备插件](http://www.open-open.com/lib/view/open1414227253419.html) 
 - [如何高效使用Vim](http://segmentfault.com/q/1010000000166577)
 - [如何优雅地使用 Vim？](http://www.zhihu.com/question/20833248)
+- [跟我一起学习VIM - The Life Changing Editor](http://ju.outofmemory.cn/entry/79671)
 
 ## 文档工具 ##
 
