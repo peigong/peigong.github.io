@@ -56,6 +56,12 @@ title: VIM使用笔记
 - :vsplit 竖直方向切割一个窗口
 - 用Ctrl-w+方向键 在各个切割窗口之间切换。
 
+## 配置 ##
+
+- [amix/vimrc:The ultimate Vim configuration: vimrc](https://github.com/amix/vimrc)
+- [humiaozuzu/dot-vimrc:Maple's vim config files](https://github.com/humiaozuzu/dot-vimrc)
+- [spf13/spf13-vim:The ultimate vim distribution](https://github.com/spf13/spf13-vim)
+
 ## 插件
 
 ### 中文帮助 vimcdoc 
