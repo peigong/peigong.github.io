@@ -58,9 +58,34 @@ title: VIM使用笔记
 
 ## 配置 ##
 
+### 参考配置 ###
+
 - [amix/vimrc:The ultimate Vim configuration: vimrc](https://github.com/amix/vimrc)
 - [humiaozuzu/dot-vimrc:Maple's vim config files](https://github.com/humiaozuzu/dot-vimrc)
 - [spf13/spf13-vim:The ultimate vim distribution](https://github.com/spf13/spf13-vim)
+
+### 自用配置 ###
+
+	" 显示行号
+	set number
+	" 设置当文件被改动时自动载入
+	set autoread
+	" 自动保存
+	set autowrite
+	" 自动缩进
+	set autoindent
+	set cindent
+	" Tab键的宽度
+	set tabstop=4
+	" 统一缩进为4
+	set softtabstop=4
+	set shiftwidth=4
+	" 搜索逐字符高亮
+	set hlsearch
+	set incsearch
+
+	execute pathogen#infect()
+	let g:neocomplete#enable_at_startup = 1
 
 ## 插件
 
