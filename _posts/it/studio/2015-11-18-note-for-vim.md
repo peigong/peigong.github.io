@@ -148,7 +148,8 @@ Debian (or Ubuntu)系统下的依赖：
 
     let g:neocomplete#enable_at_startup = 1
 
-### 配色方案 solarized
+### 其他插件 
 
-GitHub:[altercation/solarized:precision color scheme for multiple applications (terminal, vim, etc.) with both dark/light modes](http://ethanschoonover.com/solarized) - [GitHub](https://github.com/altercation/solarized)
+- [kchmck/vim-coffee-script:CoffeeScript support for vim](https://github.com/kchmck/vim-coffee-script)
+
 
