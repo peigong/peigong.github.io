@@ -7,14 +7,15 @@ title: 常用在线手册
 ## 中文手册 ##
 
 - [ECMAScript 6入门](http://es6.ruanyifeng.com/)
-- [迷你易用的MVVM框架](http://avalonjs.github.io/)
-- [迷你MVVM框架 avalonjs 入门教程](http://www.cnblogs.com/rubylouvre/p/3181291.html)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
 - [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
+- [Bootstrap分页插件--Bootstrap Paginator](http://my.oschina.net/shunshun/blog/204587)
 - [Moment.js 中文网](http://momentjs.cn/)
 - [Less.js 中文文档](http://less.bootcss.com/)
 - [Jekyll &bull; 简单的静态博客网站](http://jekyllcn.com/)
 - [Underscore.js 中文文档 (1.7.0)](http://learningcn.com/underscore/)
+- [CoffeeScript](http://coffeescript.org/) - [GitHub](https://github.com/jashkenas/coffeescript) - [中文](http://coffee-script.org/)
+- [joyent/node:evented I/O for v8 javascript](http://nodejs.org/) - [GitHub](https://github.com/joyent/node) - [Node.js API 中文版](http://nodeapi.ucdok.com/)
 
 ## 英文手册 ##
 
