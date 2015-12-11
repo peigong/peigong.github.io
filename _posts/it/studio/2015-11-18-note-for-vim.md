@@ -4,57 +4,18 @@ category: studio
 title: VIM使用笔记 
 ---
 
+## 安装 ##
+
+	cd /usr/local/src/vim/vim-7.4.942
+	sudo ./configure --prefix=/usr/local/vim --with-features=huge --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-multibyte --enable-sniff --enable-fontset
+	sudo make
+	sudo make install
+
 ## 环境配置
 
 - 在Ubuntu中使用`sudo apt-get install vim`安装。
 - 在`~/.vimrc`中加入一行`:set number`设置行号。
 - vimtutor:sudo apt-get install vimtutor
-
-## 常用命令
-
-### 快速的定位光标
-
-- ^ 跳到行首 (类似功能键Home)
-- $ 跳到行尾(类似功能键End)
-- :n 跳到第n行
-- :$ 跳到最后一行
-
-### 快速的编辑
-
-在普通模式下:
-
-- dd 删除一行
-- yy 复制一行
-- p 粘贴
-- r 单个字符替换
-
-更精细的粘贴复制:
-
-- m,nd - 快速删除第m到第n行 (delete)
-- m,ny - 复制第m到第n行 (yank)
-- m,nmt - 第m行到第n行剪切到第t行(move)
-- m,ncot -第m行到第n行复制到第t行(copy to)
-
-### 搜索
-
-- 普通模式下按下 / 向下搜索, 按下?向上搜索
-
-### 对齐
-
-- gg=G 快速对齐整个文件
-
-### 标签操作
-
-- :tabnew mytab 新建一个标签mytab
-- :tabn 跳到下一个标签
-- :tabp 跳到上一个标签
-- 用gt或gT在普通模式下跳转到下一个和上一个标签
-
-### 切割窗口操作
-
-- :split 水平方向切割一个窗口
-- :vsplit 竖直方向切割一个窗口
-- 用Ctrl-w+方向键 在各个切割窗口之间切换。
 
 ## 配置 ##
 
@@ -66,26 +27,45 @@ title: VIM使用笔记
 
 ### 自用配置 ###
 
-	" 显示行号
-	set number
+	" 显示行号  
+	set number  
 	" 设置当文件被改动时自动载入
 	set autoread
-	" 自动保存
+	" 自动保存  
 	set autowrite
-	" 自动缩进
+	" 自动缩进  
 	set autoindent
-	set cindent
+	set cindent 
 	" Tab键的宽度
 	set tabstop=4
 	" 统一缩进为4
 	set softtabstop=4
 	set shiftwidth=4
 	" 搜索逐字符高亮
-	set hlsearch
+	set hlsearch                                                                                                                                     
 	set incsearch
-
+	               
+	syntax on   
+	filetype plugin indent on
+	runtime macros/matchit.vim
+	               
+	" Use Vim settings, rather then Vi settings. This setting must be as early as
+	" possible, as it has side effects.
+	set nocompatible
+	               
+	" Highlight current line
+	au WinLeave * set nocursorline nocursorcolumn
+	au WinEnter * set cursorline cursorcolumn
+	set cursorline cursorcolumn
+	               
+	set ruler         " show the cursor position all the time
+	set showcmd       " display incomplete commands
+	set laststatus=2  " Always display the status line
+	set fileencodings=utf-8,gb18030,gbk,big5
+	               
 	execute pathogen#infect()
-	let g:neocomplete#enable_at_startup = 1
+	let g:NERDTreeDirArrowExpandable = '+' 
+	let g:NERDTreeDirArrowCollapsible = '+' 
 
 ## 插件
 
