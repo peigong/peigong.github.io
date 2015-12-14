@@ -38,6 +38,7 @@ title: VIM使用笔记
 	set cindent 
 	" Tab键的宽度
 	set tabstop=4
+	set expandtab
 	" 统一缩进为4
 	set softtabstop=4
 	set shiftwidth=4
