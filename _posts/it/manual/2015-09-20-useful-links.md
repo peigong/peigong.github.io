@@ -20,6 +20,8 @@ title: 有用的网址链接
 
 ## 移动端Web开发 ##
 
+- [LESS media query mixins](http://simbo.github.io/2014/03/less-media-query-mixins.html)
+- [Less Pixel To REM Mixin](http://kblnsk.com/2014/05/12/less-pixel-to-rem-mixin/)
 - [Fiddler 教程](http://kb.cnblogs.com/page/130367/)
 - [webkit webApp 开发技术要点总结](http://www.cnblogs.com/pifoo/archive/2011/05/28/webkit-webapp.html)
 - [移动端布局-各种布局方式(一)](http://codeliker.com/mobile-layout-a/)
