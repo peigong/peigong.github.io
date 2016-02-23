@@ -6,6 +6,7 @@ title: 有用的网址链接
 
 ## 开发参考 ##
 
+- [VisuAlgo - visualising data structures and algorithms through animation](http://zh.visualgo.net/)
 - [Guacamole — HTML5 Clientless Remote Desktop](http://guac-dev.org/)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [用gulp替代fekit构建前端项目](http://segmentfault.com/a/1190000003060016)

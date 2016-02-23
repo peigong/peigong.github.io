@@ -8,6 +8,7 @@ title: 常用在线手册
 
 - [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
 - [阮一峰:ECMAScript 6入门](http://es6.ruanyifeng.com/)
+- [JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
 - [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
 - [Bootstrap分页插件--Bootstrap Paginator](http://my.oschina.net/shunshun/blog/204587)
