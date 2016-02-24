@@ -24,6 +24,7 @@ title: 开发工具参考
 
 ## 工程实践 ##
 
+- [六款不容错过的开源持续集成工具](http://cloud.51cto.com/art/201508/487605.htm)
 - [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)
 - [使用 Vagrant在Windows下部署开发环境](http://blog.smdcn.net/article/1308.html)
 
