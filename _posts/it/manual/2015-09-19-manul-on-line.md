@@ -6,6 +6,7 @@ title: 常用在线手册
 
 ## 中文手册 ##
 
+- [C语言标准函数库](http://c.biancheng.net/cpp/u/hanshu/)
 - [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
 - [阮一峰:ECMAScript 6入门](http://es6.ruanyifeng.com/)
 - [JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
