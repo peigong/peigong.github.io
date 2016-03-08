@@ -4,10 +4,17 @@ category: manual
 title: 常用在线手册
 ---
 
+## React 文档 ##
+
+- [React 入门教程](http://wiki.jikexueyuan.com/project/react-tutorial/)
+- [React-Native入门指南](http://wiki.jikexueyuan.com/project/react-native-lesson/)
+- [React Native 中文版(含新增 Android 章节)](http://wiki.jikexueyuan.com/project/react-native/)
+- [React 中文版](http://wiki.jikexueyuan.com/project/react/)
+- [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
+
 ## 中文手册 ##
 
 - [C语言标准函数库](http://c.biancheng.net/cpp/u/hanshu/)
-- [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
 - [阮一峰:ECMAScript 6入门](http://es6.ruanyifeng.com/)
 - [JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
