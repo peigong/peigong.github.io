@@ -6,11 +6,13 @@ title: 常用在线手册
 
 ## React 文档 ##
 
+- [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
 - [React 入门教程](http://wiki.jikexueyuan.com/project/react-tutorial/)
 - [React-Native入门指南](http://wiki.jikexueyuan.com/project/react-native-lesson/)
 - [React Native 中文版(含新增 Android 章节)](http://wiki.jikexueyuan.com/project/react-native/)
 - [React 中文版](http://wiki.jikexueyuan.com/project/react/)
-- [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
+- [Airbnb React编码规范](http://zhuanlan.zhihu.com/FrontendMagazine/20616464) - [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+- [Mobile, desktop and website Apps with the same code](https://github.com/benoitvallon/react-native-nw-react-calculator)
 
 ## 中文手册 ##
 
