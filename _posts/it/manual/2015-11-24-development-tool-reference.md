@@ -24,6 +24,10 @@ title: 开发工具参考
 
 ## 工程实践 ##
 
+- [Homebrew:OS X 不可或缺的套件管理器](http://brew.sh/index_zh-cn.html)
+- [Flow:A STATIC TYPE CHECKER FOR JAVASCRIPT](http://flowtype.org/) - [文档](http://flowtype.org/docs/getting-started.html#_)
+- [EditorConfig是一套用于统一代码工具的解决方案](http://ju.outofmemory.cn/entry/104488) - [原文](http://editorconfig.org/)
+- [Watches files and records, or triggers actions, when they change.](https://facebook.github.io/watchman/) - [GitHub](https://github.com/facebook/watchman) - [文档](https://facebook.github.io/watchman/docs/install.html)
 - [tmt-workflow 是一个基于 Gulp(v4.0)、跨平台(Mac & Win)、高效、可定制的前端工作流程](https://github.com/weixin/tmt-workflow)
 - [六款不容错过的开源持续集成工具](http://cloud.51cto.com/art/201508/487605.htm)
 - [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)
