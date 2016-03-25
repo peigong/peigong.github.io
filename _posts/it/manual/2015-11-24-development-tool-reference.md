@@ -32,6 +32,10 @@ title: 开发工具参考
 - [六款不容错过的开源持续集成工具](http://cloud.51cto.com/art/201508/487605.htm)
 - [使用 Vagrant 打造跨平台开发环境](http://segmentfault.com/a/1190000000264347)
 - [使用 Vagrant在Windows下部署开发环境](http://blog.smdcn.net/article/1308.html)
+- [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#Using-Gulp)
+- [Martin Fowler的持续集成](http://www.cnblogs.com/CloudTeng/archive/2012/02/25/2367565.html) - [原文](http://www.martinfowler.com/articles/continuousIntegration.html)
+- [在Node下通过TravisCI部署由Gulp启动服务的应用到云平台Heroku](http://benweizhu.github.io/blog/2015/11/06/node-gulp-travisci-heroku/)
+- 
 
 ## 操作系统 ##
 

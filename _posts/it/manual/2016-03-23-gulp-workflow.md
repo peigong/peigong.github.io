@@ -8,6 +8,7 @@ title: Gulp 系统构建工作流
 
 - [gulp.js:the streaming build system](http://gulpjs.com/) - [GitHub](https://github.com/gulpjs/gulp)- [中文](http://www.gulpjs.com.cn/)
 - [gulp.js plugin registry](http://gulpjs.com/plugins/)
+- [harmonize:Enables node's --harmony flag programmatically.](https://www.npmjs.com/package/harmonize) - [GitHub](https://github.com/dcodeIO/node-harmonize)
 - [gulp-load-plugins:Automatically load any gulp plugins in your package.json](https://www.npmjs.com/package/gulp-load-plugins) - [GitHub](https://https://github.com/jackfranklin/gulp-load-plugins)
 - [requireDir:Node.js helper to require() directories.](https://github.com/aseemk/requireDir)
 - [vinyl-source-stream:Use conventional text streams at the start of your gulp or vinyl pipelines](https://www.npmjs.com/package/vinyl-source-stream) - [GitHub](https://github.com/hughsk/vinyl-source-stream)
@@ -15,10 +16,13 @@ title: Gulp 系统构建工作流
 
 ## Javascript 构建 ##
 
-- [Babel · The compiler for writing next generation JavaScript](https://babeljs.io/) - [GitHub](https://github.com/babel/babel)
 - [browserify:](https://www.npmjs.com/package/browserify) - [GitHub](https://github.com/substack/node-browserify)
+- [watchify:watch mode for browserify builds](https://www.npmjs.com/package/watchify) - [GitHub](https://github.com/substack/watchify)
 - [preprocessify:Browserify preprocess transform](https://www.npmjs.com/package/preprocessify) - [GitHub](https://github.com/bibliolabs/preprocessify)
+- [babelify:Babel browserify transform](https://www.npmjs.com/package/babelify) - [GitHub](https://github.com/babel/babelify) - [Learn ES2015](https://babeljs.io/docs/learn-es2015/)
+- [reactify:Browserify transform for JSX (a superset of JS used by React.js)](https://www.npmjs.com/package/reactify) - [GitHub](https://github.com/andreypopp/reactify)
 - [gulp-uglify:Minify files with UglifyJS.](https://www.npmjs.com/package/gulp-uglify/) - [GitHub](https://github.com/terinjokes/gulp-uglify)
+- [gulp-jest:Gulp plugin for running your Jest tests](https://www.npmjs.com/package/gulp-jest) - [GitHub](https://github.com/Dakuan/gulp-jest) - [Jest](http://facebook.github.io/jest/)
 
 ## CSS 构建插件 ##
 
@@ -40,6 +44,7 @@ title: Gulp 系统构建工作流
 ## 任务控制插件 ##
 
 - [browser-sync:Keep multiple browsers & devices in sync when building websites.](http://browsersync.io) - [GitHub](https://github.com/BrowserSync/browser-sync) - [中文](http://www.browsersync.cn/)
+- [gulp-sync:sync for dependency tasks of gulp.task method](https://www.npmjs.com/package/gulp-sync) - [GitHub](https://github.com/kaminaly/gulp-sync)
 - [run-sequence:Run a series of dependent gulp tasks in order](https://github.com/OverZealous/run-sequence)
 - [gulp-if:Conditionally run a task](https://www.npmjs.com/package/gulp-if) - [GitHub](https://github.com/robrich/gulp-if)
 
@@ -52,3 +57,4 @@ title: Gulp 系统构建工作流
 - [gulp-filter:Filter files in a vinyl stream](https://www.npmjs.com/package/gulp-filter) - [GitHub](https://github.com/sindresorhus/gulp-filter)
 - [gulp-size:Display the size of your project](https://npmjs.org/package/gulp-size/) - [GitHub](https://github.com/sindresorhus/gulp-size)
 - [gulp-tap:Easiest way to tap into a pipeline](https://www.npmjs.com/package/gulp-tap) - [GitHub](https://github.com/geejs/gulp-tap)
+- [gulp-flatten：remove or replace relative path for files](https://www.npmjs.com/package/gulp-flatten) - [GitHub](https://github.com/armed/gulp-flatten)
