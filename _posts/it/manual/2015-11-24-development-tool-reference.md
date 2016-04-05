@@ -24,6 +24,7 @@ title: 开发工具参考
 
 ## 工程实践 ##
 
+- [typicode/hotel](https://github.com/typicode/hotel)
 - [Homebrew:OS X 不可或缺的套件管理器](http://brew.sh/index_zh-cn.html)
 - [Flow:A STATIC TYPE CHECKER FOR JAVASCRIPT](http://flowtype.org/) - [文档](http://flowtype.org/docs/getting-started.html#_)
 - [EditorConfig是一套用于统一代码工具的解决方案](http://ju.outofmemory.cn/entry/104488) - [原文](http://editorconfig.org/)
