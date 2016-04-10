@@ -15,6 +15,7 @@ title: 常用在线工具
 
 ## 其他 ##
 
+- [O'Reilly Generator](http://oreilly-generator.com/)
 - [UTF-8 Icons - Your no.1 source for UTF-8 character icons](http://www.utf8icons.com/)
 - [草料二维码生成器](http://cli.im/) - [Chrome浏览器插件](http://cli.im/news/6527)
 - [JS/HTML格式化工具_懒人工具箱](http://tool.lanrentuku.com/jsformat/)

@@ -6,6 +6,7 @@ title: 常用在线手册
 
 ## React 文档 ##
 
+- [React:A JavaScript library for building user interfaces](http://facebook.github.io/react/) - [GitHub](https://github.com/facebook/react)
 - [TooBug:webpack指南](http://webpack.toobug.net/zh-cn/index.html)
 - [React 入门教程](http://wiki.jikexueyuan.com/project/react-tutorial/)
 - [React-Native入门指南](http://wiki.jikexueyuan.com/project/react-native-lesson/)
