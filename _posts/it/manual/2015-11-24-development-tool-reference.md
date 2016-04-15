@@ -22,6 +22,14 @@ title: 开发工具参考
 - [phantomjs小试牛刀](http://www.ohroot.com/2014/11/11/phantomjs%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/)
 - [phantomjs安装使用](http://www.tuicool.com/articles/zEn2iuu)
 
+## 单元测试 ##
+
+- [jasmine/jasmine:DOM-less simple JavaScript testing framework](http://jasmine.github.io/) - [GitHub](https://github.com/jasmine/jasmine)
+- [mocha - simple, flexible, fun javascript test framework for node.js & the browser. (BDD, TDD, QUnit styles via interfaces)](http://mochajs.org) - [GitHub](https://github.com/mochajs/mocha)
+- [Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.](http://chaijs.com/) - [GitHub](https://github.com/chaijs/chai)
+- [Test spies, stubs and mocks for JavaScript.](http://sinonjs.org/) - [GitHub](https://github.com/sinonjs/sinon)
+- [mfncooper/mockery：https://github.com/mfncooper/mockery](https://github.com/mfncooper/mockery)
+
 ## 工程实践 ##
 
 - [typicode/hotel](https://github.com/typicode/hotel)
@@ -36,7 +44,6 @@ title: 开发工具参考
 - [Building a Node.js project](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#Using-Gulp)
 - [Martin Fowler的持续集成](http://www.cnblogs.com/CloudTeng/archive/2012/02/25/2367565.html) - [原文](http://www.martinfowler.com/articles/continuousIntegration.html)
 - [在Node下通过TravisCI部署由Gulp启动服务的应用到云平台Heroku](http://benweizhu.github.io/blog/2015/11/06/node-gulp-travisci-heroku/)
-- 
 
 ## 操作系统 ##
 
