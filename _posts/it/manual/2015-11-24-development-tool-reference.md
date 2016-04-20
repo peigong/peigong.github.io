@@ -27,7 +27,7 @@ title: 开发工具参考
 - [jasmine/jasmine:DOM-less simple JavaScript testing framework](http://jasmine.github.io/) - [GitHub](https://github.com/jasmine/jasmine)
 - [mocha - simple, flexible, fun javascript test framework for node.js & the browser. (BDD, TDD, QUnit styles via interfaces)](http://mochajs.org) - [GitHub](https://github.com/mochajs/mocha)
 - [Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.](http://chaijs.com/) - [GitHub](https://github.com/chaijs/chai)
-- [Test spies, stubs and mocks for JavaScript.](http://sinonjs.org/) - [GitHub](https://github.com/sinonjs/sinon)
+- [sinon:JavaScript test spies, stubs and mocks](http://sinonjs.org/) - [GitHub](https://github.com/sinonjs/sinon)
 - [mfncooper/mockery：https://github.com/mfncooper/mockery](https://github.com/mfncooper/mockery)
 
 ## 工程实践 ##
