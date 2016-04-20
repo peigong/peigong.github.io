@@ -21,8 +21,12 @@ title: Gulp 系统构建工作流
 - [preprocessify:Browserify preprocess transform](https://www.npmjs.com/package/preprocessify) - [GitHub](https://github.com/bibliolabs/preprocessify)
 - [babelify:Babel browserify transform](https://www.npmjs.com/package/babelify) - [GitHub](https://github.com/babel/babelify) - [Learn ES2015](https://babeljs.io/docs/learn-es2015/)
 - [reactify:Browserify transform for JSX (a superset of JS used by React.js)](https://www.npmjs.com/package/reactify) - [GitHub](https://github.com/andreypopp/reactify)
+- [gulp-jshint:JSHint plugin for gulp](https://www.npmjs.com/package/gulp-jshint) - [GitHub](https://github.com/spalger/gulp-jshint)
 - [gulp-uglify:Minify files with UglifyJS.](https://www.npmjs.com/package/gulp-uglify/) - [GitHub](https://github.com/terinjokes/gulp-uglify)
+- [gulp-mocha:Run Mocha tests](https://www.npmjs.com/package/gulp-mocha) - [GitHub](https://github.com/sindresorhus/gulp-mocha)
 - [gulp-jest:Gulp plugin for running your Jest tests](https://www.npmjs.com/package/gulp-jest) - [GitHub](https://github.com/Dakuan/gulp-jest) - [Jest](http://facebook.github.io/jest/)
+- [gulp-coveralls:Gulp plugin to submit code coverage to Coveralls](https://www.npmjs.com/package/gulp-coveralls) - [GitHub](https://github.com/markdalgleish/gulp-coveralls)
+- [SBoudrias/gulp-istanbul:Istanbul unit test coverage plugin for gulp.](https://www.npmjs.com/package/gulp-istanbul) - [GitHub](https://github.com/SBoudrias/gulp-istanbul)
 
 ## CSS 构建插件 ##
 
@@ -58,3 +62,4 @@ title: Gulp 系统构建工作流
 - [gulp-size:Display the size of your project](https://npmjs.org/package/gulp-size/) - [GitHub](https://github.com/sindresorhus/gulp-size)
 - [gulp-tap:Easiest way to tap into a pipeline](https://www.npmjs.com/package/gulp-tap) - [GitHub](https://github.com/geejs/gulp-tap)
 - [gulp-flatten：remove or replace relative path for files](https://www.npmjs.com/package/gulp-flatten) - [GitHub](https://github.com/armed/gulp-flatten)
+- [gulp-exclude-gitignore:Gulp plugin to exclude file contained in .gitignore from the stream](https://www.npmjs.com/package/gulp-exclude-gitignore) - [GitHub](https://github.com/sboudrias/gulp-exclude-gitignore)
