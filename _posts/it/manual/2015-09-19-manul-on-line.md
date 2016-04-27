@@ -32,6 +32,8 @@ title: 常用在线手册
 
 ## 英文手册 ##
 
+- [JavaScript reference - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [JavaScript 参考](https://msdn.microsoft.com/zh-cn/library/yek4tbz0(v=vs.94).aspx)
 - [Jade - Template Engine](http://jade-lang.com/)
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [npm Documentation](https://docs.npmjs.com/)
