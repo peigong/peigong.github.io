@@ -22,14 +22,6 @@ title: 开发工具参考
 - [phantomjs小试牛刀](http://www.ohroot.com/2014/11/11/phantomjs%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/)
 - [phantomjs安装使用](http://www.tuicool.com/articles/zEn2iuu)
 
-## 单元测试 ##
-
-- [jasmine/jasmine:DOM-less simple JavaScript testing framework](http://jasmine.github.io/) - [GitHub](https://github.com/jasmine/jasmine)
-- [mocha - simple, flexible, fun javascript test framework for node.js & the browser. (BDD, TDD, QUnit styles via interfaces)](http://mochajs.org) - [GitHub](https://github.com/mochajs/mocha)
-- [Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.](http://chaijs.com/) - [GitHub](https://github.com/chaijs/chai)
-- [sinon:JavaScript test spies, stubs and mocks](http://sinonjs.org/) - [GitHub](https://github.com/sinonjs/sinon)
-- [mfncooper/mockery：https://github.com/mfncooper/mockery](https://github.com/mfncooper/mockery)
-
 ## 工程实践 ##
 
 - [typicode/hotel:Local domains for everyone and more!](https://github.com/typicode/hotel)
