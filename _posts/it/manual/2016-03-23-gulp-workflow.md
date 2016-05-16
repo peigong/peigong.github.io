@@ -41,8 +41,10 @@ title: Gulp 系统构建工作流
 - [gulp-rename:Rename files](https://www.npmjs.com/package/gulp-rename) - [GitHub](https://github.com/hparra/gulp-rename)
 - [gulp-imagemin:Minify PNG, JPEG, GIF and SVG images](https://www.npmjs.com/package/gulp-imagemin) - [GitHub](https://github.com/sindresorhus/gulp-imagemin)
 - [gulp-useref:Parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets.](https://www.npmjs.com/package/gulp-useref) - [GitHub](https://github.com/jonkemp/gulp-useref)
+- [gulp-replace:A string replace plugin for gulp](https://www.npmjs.com/package/gulp-replace) - [GitHub](https://github.com/lazd/gulp-replace)
 - [gulp-preprocess:Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration](https://www.npmjs.com/package/gulp-preprocess) - [GitHub](https://github.com/jas/gulp-preprocess)
 - [gulp-htmlmin:gulp plugin to minify HTML](https://www.npmjs.com/package/gulp-htmlmin) - [GitHub](https://github.com/jonschlinkert/gulp-htmlmin)
+- [gulp-rev:Static asset revisioning by appending content hash to filenames: unicorn.css → unicorn-d41d8cd98f.css](https://www.npmjs.com/package/gulp-rev) - [GitHub](https://github.com/sindresorhus/gulp-rev)
 - [gulp-rev-all:Static asset revisioning with dependency considerations, appends content hash to each filename](https://www.npmjs.com/package/gulp-rev-all) - [GitHub](https://github.com/smysnk/gulp-rev-all)
 
 ## 任务控制插件 ##
