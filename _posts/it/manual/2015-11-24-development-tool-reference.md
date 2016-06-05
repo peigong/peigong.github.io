@@ -8,7 +8,7 @@ title: 开发工具参考
 
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/) - [Vim学习指南](http://www.oschina.net/translate/learn-vim-progressively) - [简明 Vim 练级攻略](http://coolshell.cn/articles/5426.html) 
 - [vim复制](http://www.cnblogs.com/hustcat/articles/1791371.html)
-- [vim配置及插件安装管理（超级详细） ](http://blog.csdn.net/namecyf/article/details/7787479)
+- [vim配置及插件安装管理（超级详细）](http://blog.csdn.net/namecyf/article/details/7787479)
 - [Vim十大必备插件](http://www.open-open.com/lib/view/open1414227253419.html) 
 - [如何高效使用Vim](http://segmentfault.com/q/1010000000166577)
 - [如何优雅地使用 Vim？](http://www.zhihu.com/question/20833248)
@@ -17,6 +17,9 @@ title: 开发工具参考
 ## 文档工具 ##
 
 - [书籍制作工具GITBOOK的安装](http://blog.liyibo.org/books-installation-authoring-tool-gitbook/)
+- [GitBook Help Center](http://help.gitbook.com/)
+- [GitBook Toolchain Documentation](http://toolchain.gitbook.com/)
+- [GitBook Plugins](https://plugins.gitbook.com/)
 - [gitbook:Library and cmd utility to generate GitBooks](https://www.npmjs.com/package/gitbook) - [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
 - [Mirror index of https://bitbucket.org/ariya/phantomjs/downloads/](http://npm.taobao.org/dist/phantomjs/)
 - [phantomjs小试牛刀](http://www.ohroot.com/2014/11/11/phantomjs%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/)
