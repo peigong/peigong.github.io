@@ -22,6 +22,7 @@ title: 开发工具参考
 - [GitBook Plugins](https://plugins.gitbook.com/)
 - [gitbook:Library and cmd utility to generate GitBooks](https://www.npmjs.com/package/gitbook) - [GitbookIO/gitbook](https://github.com/GitbookIO/gitbook)
 - [Ebook Conversion](http://manual.calibre-ebook.com/conversion.html)
+- [calibre User Manual](http://manual.calibre-ebook.com/)
 - [Mirror index of https://bitbucket.org/ariya/phantomjs/downloads/](http://npm.taobao.org/dist/phantomjs/)
 - [phantomjs小试牛刀](http://www.ohroot.com/2014/11/11/phantomjs%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/)
 - [phantomjs安装使用](http://www.tuicool.com/articles/zEn2iuu)
