@@ -11,7 +11,7 @@ title: VIM使用笔记
 	sudo make
 	sudo make install
 
-## 环境配置
+## 环境配置 ##
 
 - 在Ubuntu中使用`sudo apt-get install vim`安装。
 - 在`~/.vimrc`中加入一行`:set number`设置行号。
@@ -65,12 +65,21 @@ title: VIM使用笔记
 	set fileencodings=utf-8,gb18030,gbk,big5
 	               
 	execute pathogen#infect()
+	" 不支持箭头的系统可以设置为加号
 	let g:NERDTreeDirArrowExpandable = '+' 
 	let g:NERDTreeDirArrowCollapsible = '+' 
 
-## 插件
+	let g:neocomplete#enable_at_startup = 1
+                            
+	" 配色 需要放在pathogen#infect()后面
+	se t_Co=16                    
+	let g:solarized_termcolors=256
+	set background=dark           
+	colorscheme solarized  
 
-### 中文帮助 vimcdoc 
+## 插件 ##
+
+### 中文帮助 vimcdoc ### 
 
     cd /usr/local/src
     sudo wget http://nchc.dl.sourceforge.net/sourceforge/vimcdoc/vimcdoc-1.5.0.tar.gz
@@ -78,7 +87,7 @@ title: VIM使用笔记
     cd vimcdoc-1.5.0
     sudo ./vimcdoc.sh -i 
 
-### 插件管理 vim-pathogen
+### 插件管理 vim-pathogen ###
 
 GitHub:[tpope/vim-pathogen:manage your runtimepath](https://github.com/tpope/vim-pathogen)
 
@@ -96,7 +105,7 @@ GitHub:[tpope/vim-pathogen:manage your runtimepath](https://github.com/tpope/vim
     cd ~/.vim/bundle
     git clone git://github.com/tpope/vim-sensible.git
 
-### 目录树插件 nerdtree
+### 目录树插件 nerdtree ###
 
 GitHub:[scrooloose/nerdtree:A tree explorer plugin for vim](https://github.com/scrooloose/nerdtree)
 
@@ -109,7 +118,7 @@ GitHub:[scrooloose/nerdtree:A tree explorer plugin for vim](https://github.com/s
 
     apt-vim install -y https://github.com/scrooloose/nerdtree.git
 
-### 代码补全插件 neocomplete
+### 代码补全插件 neocomplete ###
 
 GitHub:[Shougo/neocomplete.vim:Next generation completion framework after neocomplcache](https://github.com/Shougo/neocomplete.vim)
 
@@ -129,7 +138,26 @@ Debian (or Ubuntu)系统下的依赖：
 
     let g:neocomplete#enable_at_startup = 1
 
-### 其他插件 
+### 配色插件 ###
+
+> PS:最牛逼的配色，不能推荐更多
+
+[GitHub](https://github.com/altercation/vim-colors-solarized):precision colorscheme for the vim text editor [http://ethanschoonover.com/solarized](http://ethanschoonover.com/solarized)
+
+使用`pathogen.vim`安装：
+
+	cd ~/.vim/bundle
+	git clone git://github.com/altercation/vim-colors-solarized.git
+
+在`~/.vimrc`中添加：
+                           
+	" 配色 需要放在pathogen#infect()后面
+	se t_Co=16                    
+	let g:solarized_termcolors=256
+	set background=dark           
+	colorscheme solarized  
+
+### 其他插件 ###
 
 - [kchmck/vim-coffee-script:CoffeeScript support for vim](https://github.com/kchmck/vim-coffee-script)
 
