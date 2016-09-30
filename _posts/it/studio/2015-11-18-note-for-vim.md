@@ -28,14 +28,21 @@ title: VIM使用笔记
 ### 自用配置 ###
 
 	" 显示行号  
-	set number  
+	set number
+	" 显示标尺
+	set ruler
 	" 设置当文件被改动时自动载入
 	set autoread
 	" 自动保存  
 	set autowrite
 	" 自动缩进  
 	set autoindent
+	" 智能缩进  
+	set smartindent
 	set cindent 
+	" 制表符
+	set noexpandtab
+	set smarttab
 	" Tab键的宽度
 	set tabstop=4
 	set expandtab
@@ -45,13 +52,17 @@ title: VIM使用笔记
 	" 搜索逐字符高亮
 	set hlsearch                                                                                                                                     
 	set incsearch
+	set smartcase
+	" 不自动添加空行
+	set noendofline binary
+	" 自动切换当前目录
+	set autochdir
 	               
 	syntax on   
 	filetype plugin indent on
 	runtime macros/matchit.vim
 	               
-	" Use Vim settings, rather then Vi settings. This setting must be as early as
-	" possible, as it has side effects.
+	" 关闭 vi 兼容模式
 	set nocompatible
 	               
 	" Highlight current line
@@ -59,7 +70,6 @@ title: VIM使用笔记
 	au WinEnter * set cursorline cursorcolumn
 	set cursorline cursorcolumn
 	               
-	set ruler         " show the cursor position all the time
 	set showcmd       " display incomplete commands
 	set laststatus=2  " Always display the status line
 	set fileencodings=utf-8,gb18030,gbk,big5
