@@ -13,8 +13,8 @@ title: Tmux使用笔记
 - **tmux：**运行 tmux -2 以256终端运行
 - **C-b d：**返回主 shell ， tmux 依旧在后台运行，里面的命令也保持运行状态
 - **tmux ls：**显示已有tmux会话（C-b s）
-- **tmux attach-session -t session-name：**选择tmux
-- **tmux new-session -s session-name：**
+- **tmux a -t session-name：**选择tmux
+- **tmux new -s session-name：**
 - **tmux kill-session -t session-name：**
 
 ## 快捷键 ##
@@ -32,7 +32,7 @@ title: Tmux使用笔记
 - **d：**断开当前的会话
 
 ### 管理窗口 ###
-- **
+
 - **c：**创建一个新窗口
 - **,：**重命名当前窗口
 - **w：**列出所有窗口
@@ -49,14 +49,12 @@ title: Tmux使用笔记
 - **q：**显示窗格的编号
 - **o：**在窗格间切换
 
-h 将光标移入左侧的窗格*
-j 将光标移入下方的窗格*
-l 将光标移入右侧的窗格*
-k 将光标移入上方的窗格*
-} 与下一个窗格交换位置
-{ 与上一个窗格交换位置
-! 在新窗口中显示当前窗格
-x 关闭当前窗格> 要使用带“*”的快捷键需要提前配置，配置方法可以参考上文的“在窗格间移动光标”一节。——译
+## 配置  `~/.tmux.conf` ##
 
-## 配置 ##
+	# bind a reload key
+	bind R source-file ~/.tmux.conf ; display-message "Config reloaded.."
 
+## 教程 ##
+
+- [Tmux 入门介绍](http://blog.jobbole.com/87278/)
+- [Tmux 速成教程：技巧和调整](http://blog.jobbole.com/87584/)
