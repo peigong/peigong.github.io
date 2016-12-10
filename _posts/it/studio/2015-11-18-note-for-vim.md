@@ -148,6 +148,33 @@ Debian (or Ubuntu)系统下的依赖：
 
     let g:neocomplete#enable_at_startup = 1
 
+### JSX 语法插件 ###
+
+> [mxw/vim-jsx:React JSX syntax highlighting and indenting for vim.](https://github.com/mxw/vim-jsx)
+
+使用`pathogen.vim`安装：
+
+The recommended installation method is via Pathogen.  Then simply execute
+
+    cd ~/.vim/bundle
+    git clone https://github.com/mxw/vim-jsx.git
+
+(You can install vim-javascript in an analogous manner.)
+
+在`~/.vimrc`中添加：
+
+    let g:jsx_ext_required = 0
+    let g:jsx_pragma_required = 1
+
+### ES6语法插件 ###
+
+> [isRuslan/vim-es6:List of JavaScript ES6 snippets and syntax highlighting for vim. ](http://www.vim.org/scripts/script.php?script_id=5230) - [GitHub](https://github.com/isRuslan/vim-es6)
+
+使用`pathogen.vim`安装：
+
+    cd ~/.vim/bundle
+    git clone https://github.com/isRuslan/vim-es6.git
+
 ### 配色插件 ###
 
 > PS:最牛逼的配色，不能推荐更多
