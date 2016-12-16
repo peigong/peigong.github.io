@@ -4,7 +4,7 @@ category: studio
 title: Airen（大漠）的博客 
 ---
 
-> http://www.w3cplus.com/blogs/airen?page=5
+> http://www.w3cplus.com/blogs/airen?page=9
 
 ## 专题 ##
 
@@ -13,6 +13,7 @@ title: Airen（大漠）的博客
 
 ## 动画 ##
 
+- [关于动画，你需要知道的](https://www.h5jun.com/post/animations-you-should-know.html)
 - [运动曲线提升CSS动画效果](http://www.zcfy.cc/article/1162)
 - [使用 FLIP 来提高 Web 动画的性能](http://bubkoo.com/2016/03/31/high-performance-animations/)
 - [JavaScript基于时间的动画算法](https://github.com/livoras/blog/issues/8)
@@ -23,7 +24,8 @@ title: Airen（大漠）的博客
 - [Web动画 2016-08-18](http://www.w3cplus.com/animation/animations.html)
 - [WAAPI入门 2016-08-16](http://www.w3cplus.com/animation/waapi-basic-intro.html)
 - [WAAPI属性 2016-08-17](http://www.w3cplus.com/animation/waapi-properties-intro.html)
-- [CSS的motion-path属性](http://www.w3cplus.com/css3/motion-path.html)
+- [CSS的motion-path属性 2016-07-31](http://www.w3cplus.com/css3/motion-path.html)
+- [给用户界面添加缓和效果(Easing Curves) 2016-06-02](http://www.w3cplus.com/animation/crafting-easing-curves-for-user-interfaces.html)
 
 ## 2016 ##
 
