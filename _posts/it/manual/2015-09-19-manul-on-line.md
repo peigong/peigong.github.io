@@ -7,7 +7,6 @@ title: 常用在线手册
 ## 中文手册 ##
 
 - [C语言标准函数库](http://c.biancheng.net/cpp/u/hanshu/)
-- [阮一峰:ECMAScript 6入门](http://es6.ruanyifeng.com/)
 - [JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
 - [Bootstrap 中文文档](http://v3.bootcss.com/getting-started/)
 - [Bootstrap日期时间选择器](http://www.bootcss.com/p/bootstrap-datetimepicker/)
@@ -21,9 +20,6 @@ title: 常用在线手册
 
 ## 英文手册 ##
 
-- [JavaScript reference - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [JavaScript 参考](https://msdn.microsoft.com/zh-cn/library/yek4tbz0(v=vs.94).aspx)
-- [Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API)
 - [Jade - Template Engine](http://jade-lang.com/)
 - [EJS - JavaScript Templates](http://www.embeddedjs.com/)
 - [npm Documentation](https://docs.npmjs.com/)

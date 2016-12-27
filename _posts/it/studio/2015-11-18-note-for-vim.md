@@ -24,6 +24,7 @@ title: VIM使用笔记
 - [amix/vimrc:The ultimate Vim configuration: vimrc](https://github.com/amix/vimrc)
 - [humiaozuzu/dot-vimrc:Maple's vim config files](https://github.com/humiaozuzu/dot-vimrc)
 - [spf13/spf13-vim:The ultimate vim distribution](https://github.com/spf13/spf13-vim)
+- [Win7下安装配置gVim](http://www.cnblogs.com/zhcncn/p/4151701.html)
 
 ### 自用配置 ###
 
@@ -54,9 +55,7 @@ title: VIM使用笔记
 	set incsearch
 	set smartcase
 	" 不自动添加空行
-	set noendofline binary
-	" 自动切换当前目录
-	set autochdir
+	set noendofline
 	               
 	syntax on   
 	filetype plugin indent on
