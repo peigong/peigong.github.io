@@ -6,10 +6,10 @@ title: ES6 技术栈
 
 ## 文档 ##
 
-- [JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+- [JavaScript MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 - [阮一峰:ECMAScript 6入门](http://es6.ruanyifeng.com/)
-- [JavaScript reference - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- [Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API)
+- [JavaScript reference JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- [Web APIs MDN](https://developer.mozilla.org/en-US/docs/Web/API)
 
 ## ES5 to ES6 ##
 
