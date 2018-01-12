@@ -1,6 +1,6 @@
 ---
 layout: post
-category: studio
+category: env
 title: Git使用笔记 
 ---
 

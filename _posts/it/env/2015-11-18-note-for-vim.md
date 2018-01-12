@@ -1,6 +1,6 @@
 ---
 layout: post
-category: studio
+category: env
 title: VIM使用笔记 
 ---
 

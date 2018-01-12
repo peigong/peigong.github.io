@@ -4,6 +4,11 @@
 		"title": "IT",
 		"categories": [
 			{
+				"name": "env",
+				"title": "开发环境",
+				"description": ""
+			},
+			{
 				"name": "manual",
 				"title": "常用文档",
 				"description": ""

@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lessons
+category: env
 title: GitLab和TortoiseGit、msysGit的配合使用
 ---
 

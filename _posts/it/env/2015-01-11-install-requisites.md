@@ -1,6 +1,6 @@
 ---
 layout: post
-category: manual
+category: env
 title: 安装服务器的环境
 ---
 

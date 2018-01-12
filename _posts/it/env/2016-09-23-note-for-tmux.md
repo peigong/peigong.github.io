@@ -1,6 +1,6 @@
 ---
 layout: post
-category: studio
+category: env
 title: Tmux使用笔记 
 ---
 
