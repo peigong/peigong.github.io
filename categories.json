@@ -21,42 +21,6 @@
 		]
 	},
 	{
-		"name": "poet",
-		"title": "诗",
-		"categories": [
-			{
-				"name": "a-2015",
-				"title": "持戒",
-				"description": "收录2015（含）年以后的作品"
-			},
-			{
-				"name": "buddha",
-				"title": "佛前侍立",
-				"description": ""
-			},
-			{
-				"name": "characters",
-				"title": "白描人物",
-				"description": ""
-			},
-			{
-				"name": "a-2010",
-				"title": "依稀景物依稀梦",
-				"description": "收录2010（含）年以后，2014（含）年以前的作品"
-			},
-			{
-				"name": "a-2004",
-				"title": "天凉好个秋",
-				"description": "收录2004（含）年以后，2010年以前的作品"
-			},
-			{
-				"name": "b-2004",
-				"title": "村野荒废人",
-				"description": "收录2004年以前，在老家时的作品"
-			}
-		]
-	},
-	{
 		"name": "tcm",
 		"title": "医",
 		"tmpl": "list_no_date",
