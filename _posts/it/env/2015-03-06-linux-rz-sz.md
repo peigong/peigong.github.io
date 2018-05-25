@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lessons
+category: env
 title: Linux下的上传下载工具rz和sz
 ---
 

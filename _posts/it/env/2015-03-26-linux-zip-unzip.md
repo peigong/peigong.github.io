@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lessons
+category: env
 title: Linux下的压缩解压缩命令
 ---
 
