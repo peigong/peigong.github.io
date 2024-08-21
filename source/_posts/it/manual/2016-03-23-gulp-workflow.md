@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: Gulp 系统构建工作流
+categories:
+  - - it
+  - - manual
 ---
 
 ## Gulp 构建平台 ##

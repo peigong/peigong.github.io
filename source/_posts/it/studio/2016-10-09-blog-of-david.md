@@ -1,7 +1,10 @@
 ---
 layout: post
 category: studio
-title: Airen（大漠）的博客 
+title: Airen（大漠）的博客
+categories:
+  - - it
+  - - studio
 ---
 
 > http://www.w3cplus.com/blogs/airen?page=9

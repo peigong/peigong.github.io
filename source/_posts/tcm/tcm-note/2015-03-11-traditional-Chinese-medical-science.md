@@ -2,6 +2,9 @@
 layout: post
 category: tcm-note
 title: 中医思考笔记
+categories:
+  - - tcm
+  - - tcm-note
 ---
 
 ## 什么是中医？ ##

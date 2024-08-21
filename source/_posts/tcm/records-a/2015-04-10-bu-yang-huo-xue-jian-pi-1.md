@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 补阳气活血通络健脾胃一
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

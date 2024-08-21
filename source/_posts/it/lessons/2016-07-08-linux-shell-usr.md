@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: Linux下的用户命令
+categories:
+  - - it
+  - - lessons
 ---
 
 ## chown命令 ##

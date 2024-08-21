@@ -1,7 +1,10 @@
 ---
 layout: post
 category: studio
-title: Ubuntu使用笔记 
+title: Ubuntu使用笔记
+categories:
+  - - it
+  - - studio
 ---
 
 ## 输入法的安装

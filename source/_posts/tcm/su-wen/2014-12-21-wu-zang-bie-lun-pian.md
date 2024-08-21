@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 五藏别论篇第十一
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝问曰：余闻方土，或以脑髓为脏，或以肠胃为脏，或以为腑。敢问更相反，皆自谓是。不知其道，愿闻其说。

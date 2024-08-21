@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 六节藏象论篇第九
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝问曰：余闻天以六六之节，以成一岁。人以九九制会，计人亦有三百六十五节，以为天地。久矣，不知其所谓也？

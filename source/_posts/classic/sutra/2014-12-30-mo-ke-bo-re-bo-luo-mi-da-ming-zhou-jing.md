@@ -2,6 +2,9 @@
 layout: post
 category: sutra
 title: 摩诃般若波罗蜜大明咒经
+categories:
+  - - classic
+  - - sutra
 ---
 
 > 后秦三藏法师鸠摩罗什译

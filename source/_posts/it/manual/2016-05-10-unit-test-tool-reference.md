@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 单元测试工具参考
+categories:
+  - - it
+  - - manual
 ---
 
 ## 单元测试 ##

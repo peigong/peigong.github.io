@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 健脾祛湿补益肝肾二
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

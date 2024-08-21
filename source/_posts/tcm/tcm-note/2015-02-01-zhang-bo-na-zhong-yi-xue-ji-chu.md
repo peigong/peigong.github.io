@@ -2,6 +2,9 @@
 layout: post
 category: tcm-note
 title: 《张伯讷中医学基础讲稿》笔记
+categories:
+  - - tcm
+  - - tcm-note
 ---
 
 ## P122 问诊 ##

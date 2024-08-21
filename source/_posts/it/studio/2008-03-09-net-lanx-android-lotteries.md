@@ -1,7 +1,10 @@
 ---
 layout: post
 category: studio
-title: 手机彩票软件的需求（google android系统） 
+title: 手机彩票软件的需求（google android系统）
+categories:
+  - - it
+  - - studio
 ---
 
 > [http://user.qzone.qq.com/377650913/blog/1205016065](http://user.qzone.qq.com/377650913/blog/1205016065)

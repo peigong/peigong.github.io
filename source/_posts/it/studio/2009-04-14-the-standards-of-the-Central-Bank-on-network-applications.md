@@ -2,6 +2,9 @@
 layout: post
 category: studio
 title: 网络应用的中央银行标准
+categories:
+  - - it
+  - - studio
 ---
 
 ## the standards of the Central Bank on network applications ##

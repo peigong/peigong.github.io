@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 温里活血健脾四
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

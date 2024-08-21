@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 阴阳应象大论篇第五
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝曰：阴阳者，天地之道也，万物之纲纪，变化之父母，生杀之本始，神明之府也，治病必求于本。

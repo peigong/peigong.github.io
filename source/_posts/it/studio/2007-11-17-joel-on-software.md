@@ -1,7 +1,10 @@
 ---
 layout: post
 category: studio
-title: 《JOEL说软件 JOEL ON SOFTWARE》笔记 
+title: 《JOEL说软件 JOEL ON SOFTWARE》笔记
+categories:
+  - - it
+  - - studio
 ---
 
 ## 评定开发团队的Joel测试  ##

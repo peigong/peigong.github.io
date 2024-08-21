@@ -3,7 +3,12 @@ layout: post
 category: analects
 title: 乡党第十
 tagline: 乡党第十
-tags : [论语, 经典]
+tags:
+  - 论语
+  - 经典
+categories:
+  - - classic
+  - - analects
 ---
 
 

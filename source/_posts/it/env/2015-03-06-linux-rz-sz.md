@@ -2,6 +2,9 @@
 layout: post
 category: env
 title: Linux下的上传下载工具rz和sz
+categories:
+  - - it
+  - - env
 ---
 
 > Linux下的上传下载工具rz和sz一般在 SecureCRT ssh中使用。

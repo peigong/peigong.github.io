@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 常用在线手册
+categories:
+  - - it
+  - - manual
 ---
 
 ## 中文手册 ##

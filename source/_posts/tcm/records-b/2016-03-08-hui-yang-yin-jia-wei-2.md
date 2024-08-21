@@ -2,6 +2,9 @@
 layout: post
 category: records-b
 title: 回阳饮加味二
+categories:
+  - - tcm
+  - - records-b
 ---
 
 当归（10克） 党参（10克） 炙黄芪（10克）

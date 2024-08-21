@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: CentOS下安装git和配置git服务器
+categories:
+  - - it
+  - - lessons
 ---
 
 在远程仓库一节中，我们讲了远程仓库实际上和本地仓库没啥不同，纯粹为了7x24小时开机并交换大家的修改。

@@ -2,6 +2,9 @@
 layout: post
 category: records-b
 title: 回阳饮加味
+categories:
+  - - tcm
+  - - records-b
 ---
 
 肉桂（10克） 干姜（10克） 炙甘草（10克） 

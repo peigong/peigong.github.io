@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 前端框架选型参考
+categories:
+  - - it
+  - - manual
 ---
 
 ## 选型参考 ##

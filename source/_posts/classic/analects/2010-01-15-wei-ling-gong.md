@@ -3,7 +3,12 @@ layout: post
 category: analects
 title: 卫灵公第十五
 tagline: 卫灵公第十五
-tags : [论语, 经典]
+tags:
+  - 论语
+  - 经典
+categories:
+  - - classic
+  - - analects
 ---
 
 

@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 活血通络补肝肾健脾胃二
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

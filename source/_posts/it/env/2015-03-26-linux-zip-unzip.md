@@ -2,6 +2,9 @@
 layout: post
 category: env
 title: Linux下的压缩解压缩命令
+categories:
+  - - it
+  - - env
 ---
 
 ## 压缩 ##

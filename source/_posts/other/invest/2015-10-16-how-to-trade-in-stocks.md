@@ -2,6 +2,9 @@
 layout: post
 category: invest
 title: 《股票大作手操盘术》笔记
+categories:
+  - - other
+  - - invest
 ---
 
 > 股票大作手操盘术，融合时间和价格的利弗莫尔准则，【美】杰西-利弗莫尔（Jesse Livermore）著，丁圣元译

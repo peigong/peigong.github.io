@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 阴阳离合论篇第六
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝问曰：余闻天为阳，地为阴，日为阳，月为阴，大小月三百六十日成一岁，人亦应之。今三阴三阳，不应阴阳，其故何也？

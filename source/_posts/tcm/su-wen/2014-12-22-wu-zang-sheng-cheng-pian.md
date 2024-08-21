@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 五藏生成篇第十
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 心之和，脉也。其荣，色也。其主，肾也。

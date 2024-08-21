@@ -2,6 +2,9 @@
 layout: post
 category: wei
 title: 《凌耀星内经讲稿》笔记
+categories:
+  - - tcm
+  - - wei
 ---
 
 ## P8-P9 ##

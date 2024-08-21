@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 架构设计参考
+categories:
+  - - it
+  - - manual
 ---
 
 ## 插件系统框架 ##

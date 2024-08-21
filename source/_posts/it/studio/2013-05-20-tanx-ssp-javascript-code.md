@@ -2,6 +2,9 @@
 layout: post
 category: studio
 title: 学习TANX SSP的javascript代码
+categories:
+  - - it
+  - - studio
 ---
 
 ## 系统概览 ##

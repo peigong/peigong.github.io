@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 紫金中医方
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

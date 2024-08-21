@@ -1,7 +1,9 @@
 ---
 layout: post
-category: wei
 title: 《王庆其内经讲稿》治痿笔记
+categories:
+  - - tcm
+  - - wei
 ---
 
 ## P127 ##

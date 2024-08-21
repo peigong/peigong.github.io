@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: 使用grunt-run-grunt插件组织团队的开发
+categories:
+  - - it
+  - - lessons
 ---
 
 ## 项目构建的需求 ##

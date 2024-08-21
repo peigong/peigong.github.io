@@ -2,6 +2,9 @@
 layout: post
 category: tcm-note
 title: 活血化瘀药
+categories:
+  - - tcm
+  - - tcm-note
 ---
 
 要根据气行则血行，气滞则血凝的道理，多配伍行气药同用，以增强活血化瘀药的作用。并须根据不同病因，适当配伍其他药应用。

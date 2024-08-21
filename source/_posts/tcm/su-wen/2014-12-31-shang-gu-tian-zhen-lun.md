@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 上古天真论篇第一
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 昔在黄帝，生而神灵，弱而能言，幼而徇齐，长而敦敏，成而登天。

@@ -2,6 +2,9 @@
 layout: post
 category: wei
 title: 《王洪图内经讲稿》笔记
+categories:
+  - - tcm
+  - - wei
 ---
 
 ## P146 ##

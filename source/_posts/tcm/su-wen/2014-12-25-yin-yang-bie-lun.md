@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 阴阳别论篇第七
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝问曰：人有四经，十二从，何谓？

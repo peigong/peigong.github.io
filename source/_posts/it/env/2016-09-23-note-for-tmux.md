@@ -1,7 +1,10 @@
 ---
 layout: post
 category: env
-title: Tmux使用笔记 
+title: Tmux使用笔记
+categories:
+  - - it
+  - - env
 ---
 
 ## 安装 ##

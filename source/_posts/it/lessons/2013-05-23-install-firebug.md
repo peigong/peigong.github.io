@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: Firebug插件安装教程
+categories:
+  - - it
+  - - lessons
 ---
 
 一、点选Firefox浏览器的“附加组件”菜单项。

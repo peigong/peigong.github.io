@@ -2,6 +2,9 @@
 layout: post
 category: records-a
 title: 温里益肝肾
+categories:
+  - - tcm
+  - - records-a
 ---
 
 ## 配伍 ##

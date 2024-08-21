@@ -2,6 +2,9 @@
 layout: post
 category: studio
 title: 解读GOOGLE ANALYTICS（分析）客户端JAVASCRIPT代码
+categories:
+  - - it
+  - - studio
 ---
 
 	/**

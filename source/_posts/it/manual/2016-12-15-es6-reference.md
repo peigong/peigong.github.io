@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: ES6 技术栈
+categories:
+  - - it
+  - - manual
 ---
 
 ## 文档 ##

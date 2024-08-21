@@ -3,7 +3,12 @@ layout: post
 category: analects
 title: 公冶长第五
 tagline: 公冶长第五
-tags : [论语, 经典]
+tags:
+  - 论语
+  - 经典
+categories:
+  - - classic
+  - - analects
 ---
 
 

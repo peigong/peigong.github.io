@@ -2,6 +2,9 @@
 layout: post
 category: tcm-note
 title: 董洪涛《选择中医》笔记
+categories:
+  - - tcm
+  - - tcm-note
 ---
 
 ## P28 回阳饮 ##

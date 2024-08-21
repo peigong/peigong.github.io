@@ -14,8 +14,9 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
+#permalink: articles/:title.html
 #permalink: :year/:month/:day/:title/
-permalink: articles/:categories/:title.html
+permalink: articles/:category/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -68,8 +69,6 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  'it env': 'it/env'
-
 tag_map:
 
 # Metadata elements
@@ -82,6 +81,7 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
+
 ## updated_option supports 'mtime', 'date', 'empty'
 updated_option: 'mtime'
 
@@ -113,4 +113,4 @@ deploy:
 auto_category:
  enable: true
  multiple: true
- depth: 
+ depth: 10

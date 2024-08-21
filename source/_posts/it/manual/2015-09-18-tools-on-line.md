@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 常用在线工具
+categories:
+  - - it
+  - - manual
 ---
 ## 系统接口规范工具 ##
 

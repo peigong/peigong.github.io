@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: Yeoman的安装和使用
+categories:
+  - - it
+  - - lessons
 ---
 
 ## 安装步骤 ##

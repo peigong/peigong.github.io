@@ -2,6 +2,9 @@
 layout: post
 category: env
 title: 安装服务器的环境
+categories:
+  - - it
+  - - env
 ---
 
 ## Git ##

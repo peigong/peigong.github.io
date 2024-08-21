@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: VI的常用操作
+categories:
+  - - it
+  - - lessons
 ---
 
 ## 进入vi的命令 ##

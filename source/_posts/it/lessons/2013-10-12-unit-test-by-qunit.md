@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: 在javascript项目中使用QUint进行单元测试
+categories:
+  - - it
+  - - lessons
 ---
 
 ## QUnit的简介 ##

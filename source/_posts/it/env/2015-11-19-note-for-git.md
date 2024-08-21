@@ -1,7 +1,10 @@
 ---
 layout: post
 category: env
-title: Git使用笔记 
+title: Git使用笔记
+categories:
+  - - it
+  - - env
 ---
 
 ## 基本配置

@@ -2,6 +2,9 @@
 layout: post
 category: sutra
 title: 佛说圣佛母般若波罗蜜多经
+categories:
+  - - classic
+  - - sutra
 ---
 
 > 西天译经三藏朝奉大夫试光禄卿传法大师赐紫臣施护奉诏译

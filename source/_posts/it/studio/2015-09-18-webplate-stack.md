@@ -2,6 +2,9 @@
 layout: post
 category: studio
 title: 前端框架Webplate的技术栈
+categories:
+  - - it
+  - - studio
 ---
 
 ## 前端框架Webplate ##

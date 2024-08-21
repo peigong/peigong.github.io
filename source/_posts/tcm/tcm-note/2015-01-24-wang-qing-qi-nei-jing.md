@@ -2,6 +2,9 @@
 layout: post
 category: tcm-note
 title: 《王庆其内经讲稿》笔记
+categories:
+  - - tcm
+  - - tcm-note
 ---
 
 ## P117 小儿骨病 ##

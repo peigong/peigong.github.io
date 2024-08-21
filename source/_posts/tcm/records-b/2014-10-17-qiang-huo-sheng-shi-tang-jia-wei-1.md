@@ -2,6 +2,9 @@
 layout: post
 category: records-b
 title: 羌活胜湿汤加味一
+categories:
+  - - tcm
+  - - records-b
 ---
 
 羌活（15克） 独活（15克） 防风（10克）

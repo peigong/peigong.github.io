@@ -2,6 +2,9 @@
 layout: post
 category: invest
 title: 有用的投资类链接
+categories:
+  - - other
+  - - invest
 ---
 
 ## 编程有关链接 ##

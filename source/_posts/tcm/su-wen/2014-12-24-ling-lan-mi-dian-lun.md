@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 灵兰秘典论篇第八
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝问曰：愿闻十二脏之相使，贵贱何如？

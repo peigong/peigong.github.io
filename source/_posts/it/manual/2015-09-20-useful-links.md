@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 有用的网址链接
+categories:
+  - - it
+  - - manual
 ---
 
 ## 开发参考 ##

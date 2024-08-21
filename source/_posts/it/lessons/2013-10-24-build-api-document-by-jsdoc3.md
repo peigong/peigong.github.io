@@ -2,6 +2,9 @@
 layout: post
 category: lessons
 title: 使用JSDoc3生成javascript项目的API文档
+categories:
+  - - it
+  - - lessons
 ---
 
 ## JSDoc样式的注释 ##

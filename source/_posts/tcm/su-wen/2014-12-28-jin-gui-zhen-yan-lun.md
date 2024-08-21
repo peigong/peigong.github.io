@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 金匮真言论篇第四
+categories:
+  - - tcm
+  - - su-wen
 ---
 
 黄帝曰：天有八风，经有五风，何谓？

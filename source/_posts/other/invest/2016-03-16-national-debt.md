@@ -2,6 +2,9 @@
 layout: post
 category: invest
 title: 国债分析
+categories:
+  - - other
+  - - invest
 ---
 
 ## 21国债(7) sh010107 ##

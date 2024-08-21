@@ -2,6 +2,9 @@
 layout: post
 category: manual
 title: 开发工具参考
+categories:
+  - - it
+  - - manual
 ---
 
 ## VIM ##

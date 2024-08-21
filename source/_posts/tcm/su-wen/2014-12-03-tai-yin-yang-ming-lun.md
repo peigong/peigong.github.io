@@ -2,6 +2,9 @@
 layout: post
 category: su-wen
 title: 太阴阳明论篇第二十九
+categories:
+  - - tcm
+  - - su-wen
 ---
 黄帝问曰：太阴阳明为表里，脾胃脉也，生病而异者何也？
 

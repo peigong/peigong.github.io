@@ -1,7 +1,10 @@
 ---
 layout: post
 category: studio
-title: 阮一峰的网络日志  
+title: 阮一峰的网络日志
+categories:
+  - - it
+  - - studio
 ---
 
 ## 2016 ##

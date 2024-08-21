@@ -2,6 +2,9 @@
 layout: post
 category: invest
 title: 投资组合、估值、买入和卖出的交易模型
+categories:
+  - - other
+  - - invest
 ---
 
 ## 投资组合 ##

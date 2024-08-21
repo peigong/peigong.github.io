@@ -2,6 +2,9 @@
 layout: post
 category: sutra
 title: 般若波罗蜜多心经
+categories:
+  - - classic
+  - - sutra
 ---
 
 > 唐三藏法师玄奘奉诏译

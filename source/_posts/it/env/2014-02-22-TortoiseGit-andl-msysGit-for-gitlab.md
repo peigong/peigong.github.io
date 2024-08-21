@@ -2,6 +2,9 @@
 layout: post
 category: env
 title: GitLab和TortoiseGit、msysGit的配合使用
+categories:
+  - - it
+  - - env
 ---
 
 ## 软件安装 ##
