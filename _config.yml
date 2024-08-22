@@ -3,20 +3,21 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 'VET. 周培公'
+# Subtitle of page top
+subtitle: '写 JS 代码的周培公是一个兽医'
+description: 'VET. 周培公的个人网站'
 keywords:
-author: John Doe
-language: zh-CN
+author: 'VET. 周培公'
+language: 'zh-CN'
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://pg.js.cn
 #permalink: articles/:title.html
 #permalink: :year/:month/:day/:title/
-permalink: articles/:category/:title.html
+permalink: articles/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -33,7 +34,8 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+#new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md 
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -69,6 +71,8 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  - it: IT
+  - env: ENV
 tag_map:
 
 # Metadata elements
@@ -112,5 +116,5 @@ deploy:
 # multiple: multiple category hierarchies
 auto_category:
  enable: true
- multiple: true
+ multiple: false
  depth: 10
