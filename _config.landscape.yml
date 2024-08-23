@@ -6,7 +6,7 @@ menu:
   Home: /
   Archives: /archives
 # RSS link
-rss: /atom.xml
+# rss: /atom.xml
 # Path of title banner image of page top
 banner: "images/banner.jpg"
 # Header links with icon, specified links will appear at the top right corner of the page
@@ -21,7 +21,7 @@ links:
 # Content
 # ===============
 # "Read More" link at the bottom of excerpted articles. `false` to hide the link.
-excerpt_link: Read More
+excerpt_link: '更多 >>>'
 # Enable fancybox
 fancybox: true
 
@@ -42,9 +42,17 @@ copyright:
 sidebar: left
 # Widgets displaying in sidebar
 widgets:
-- recent_posts
+# - recent_posts
 - category
-- archive
+# - tag
+# - tagcloud
+# - archive
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+- category
+# - tagcloud
+# - archive
 
 # ===============
 # Widget behavior
