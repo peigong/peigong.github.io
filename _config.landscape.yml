@@ -3,19 +3,23 @@
 # ===============
 # Navigation menu
 menu:
-  Home: /
-  Archives: /archives
+  '首页': /
+  '预告': /proposals
 # RSS link
 # rss: /atom.xml
+
 # Path of title banner image of page top
 banner: "images/banner.jpg"
 # Header links with icon, specified links will appear at the top right corner of the page
 # Each name must correspond to the icon name of Fork Awesome
 # https://forkaweso.me/Fork-Awesome/icons/
 links:
-#  github: https://github.com/your_github_account
-#  twitter: https://twitter.com/your_twitter_account
-#  telegram: https://t.me/your_telegram_account
+  github: https://github.com/peigong
+  git: https://gitee.com/pg0xff
+  qq: https://user.qzone.qq.com/377650913
+  weixin: http://pg.js.cn
+  weibo: https://weibo.com/u/1766654653
+  home: http://pg.js.cn
 
 # ===============
 # Content
