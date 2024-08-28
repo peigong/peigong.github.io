@@ -70,8 +70,6 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  - it: IT
-  - env: ENV
 tag_map:
 
 # Metadata elements
