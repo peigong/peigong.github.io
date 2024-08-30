@@ -1,1 +1,22 @@
-{}
+{
+    "it": {
+        "name": "it",
+        "alias": "IT",
+        "weight": 1
+    },
+    "env": {
+        "name": "env",
+        "alias": "开发环境",
+        "weight": 101
+    },
+    "classic": {
+        "name": "classic",
+        "alias": "经典",
+        "weight": 2
+    },
+    "sutra": {
+        "name": "sutra",
+        "alias": "佛经",
+        "weight": 201
+    }
+}
