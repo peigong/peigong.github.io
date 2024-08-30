@@ -1,11 +1,10 @@
 ---
-layout: post
 title: 佛说圣佛母般若波罗蜜多经
 categories:
   - classic
   - sutra
 date: 2014-12-29 00:00:00
-updated: 2014-12-29 00:00:00
+updated: 2024-08-30 00:00:00
 ---
 
 > 西天译经三藏朝奉大夫试光禄卿传法大师赐紫臣施护奉诏译

@@ -46,6 +46,7 @@ copyright:
 sidebar: left
 # Widgets displaying in sidebar
 widgets:
+- self_media
 # - recent_posts
 - category
 # - tag
