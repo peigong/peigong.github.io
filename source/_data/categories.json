@@ -1,27 +1,58 @@
 {
-    "it": {
-        "name": "it",
-        "title": "IT",
+    "essay": {
+        "name": "essay",
+        "title": "札记随笔",
         "weight": 10000
     },
-    "env": {
-        "name": "env",
-        "title": "开发环境",
+    "arts": {
+        "name": "arts",
+        "title": "文艺随笔",
         "weight": 10000
     },
-    "manual": {
-        "name": "manual",
-        "title": "常用文档",
+    "thinking": {
+        "name": "thinking",
+        "title": "思考札记",
         "weight": 10000
     },
-    "studio": {
-        "name": "studio",
-        "title": "学习笔记",
+    "invest": {
+        "name": "invest",
+        "title": "投资笔记",
         "weight": 10000
     },
-    "lessons": {
-        "name": "lessons",
-        "title": "培训教程",
+
+    "poem": {
+        "name": "poem",
+        "title": "培公诗抄",
+        "weight": 10000
+    },
+    "a-2015": {
+        "name": "a-2015",
+        "title": "2015 ~ 2024",
+        "weight": 10000
+    },
+    "a-2010": {
+        "name": "a-2010",
+        "title": "2010 ~ 2014",
+        "weight": 10000
+    },
+    "a-2004": {
+        "name": "a-2004",
+        "title": "2004 ~ 2009",
+        "weight": 10000
+    },
+    "b-2004": {
+        "name": "b-2004",
+        "title": "~ 2004 年",
+        "weight": 10000
+    },
+    "buddha": {
+        "name": "buddha",
+        "title": "禅宗心得",
+        "weight": 10000
+    },
+    "characters": {
+        "name": "characters",
+        "title": "人物",
         "weight": 10000
     },
 
@@ -46,19 +77,45 @@
         "weight": 10000
     },
 
-    "essay": {
-        "name": "essay",
-        "title": "札记随笔",
+    "catalog": {
+        "name": "catalog",
+        "title": "藏书目录",
         "weight": 10000
     },
-    "invest": {
-        "name": "invest",
-        "title": "投资笔记",
+    "bookcase": {
+        "name": "bookcase",
+        "title": "在架图书",
         "weight": 10000
     },
-    "thinking": {
-        "name": "thinking",
-        "title": "日常思考",
+    "table": {
+        "name": "table",
+        "title": "封存图书",
+        "weight": 10000
+    },
+
+    "it": {
+        "name": "it",
+        "title": "IT",
+        "weight": 10000
+    },
+    "env": {
+        "name": "env",
+        "title": "开发环境",
+        "weight": 10000
+    },
+    "manual": {
+        "name": "manual",
+        "title": "常用文档",
+        "weight": 10000
+    },
+    "studio": {
+        "name": "studio",
+        "title": "学习笔记",
+        "weight": 10000
+    },
+    "lessons": {
+        "name": "lessons",
+        "title": "培训教程",
         "weight": 10000
     }
 }
