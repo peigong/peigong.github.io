@@ -69,6 +69,14 @@ updated: 2024-08-30 00:00:00
 - `git merge origin/master`
 - `git push`:是 git push origin branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是origin/branch_dev，同名，所以可以全省略。
 
+### 同步远程参数 ###
+
+- `git remote add <name> <url>`：创建了一个与远端仓库的关联关系
+- `git config branch.branch_dev.remote <name>`：指定当前分支使用的远程仓库
+- `git push <name> HEAD -u`：相当于 `git push <name> branch_dev -u`，是 `git push <name> branch_dev:branch_dev -u` 的简写。`-u` 的作用是把本地 branch_dev 的 upstream 由原先的 <name>/master 改为 <name>/branch_dev。
+- `git push <name>`:是 `git push <name> branch_dev:branch_dev` 的简写。因为要 push 的是本地当前分支 branch_dev，且其 upstream 分支名是 <name>/branch_dev，同名，所以可以全省略。
+- `git config branch.branch_dev.remote origin`：当前分支使用的远程仓库恢复为默认仓库
+
 ### 常用命令 ###
 
 - `git init`:初始化一个Git仓库
