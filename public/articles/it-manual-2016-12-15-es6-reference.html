@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ES6 技术栈 | VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="文档 阮一峰:ECMAScript 6入门 Mozilla 开发者网络 MDN：Web 技术文档 MDN：Web 技术参考 -&gt; Web API 参考 MDN：HTML（超文本标记语言） MDN：CSS MDN：JavaScript MDN：JavaScript 参考文档 MDN:HTTP  ES5 to ES6 babel&#x2F;babel:Babel is a compiler fo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 技术栈">
+<meta property="og:url" content="http://pg.js.cn/articles/it-manual-2016-12-15-es6-reference.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="文档 阮一峰:ECMAScript 6入门 Mozilla 开发者网络 MDN：Web 技术文档 MDN：Web 技术参考 -&gt; Web API 参考 MDN：HTML（超文本标记语言） MDN：CSS MDN：JavaScript MDN：JavaScript 参考文档 MDN:HTTP  ES5 to ES6 babel&#x2F;babel:Babel is a compiler fo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-12-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-29T16:00:00.000Z">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">预告</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-weixin"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-it-manual-2016-12-15-es6-reference" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-manual-2016-12-15-es6-reference.html" class="article-date">
+  <time class="dt-published" datetime="2016-12-14T16:00:00.000Z" itemprop="datePublished">2016-12-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/manual/">常用文档</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ES6 技术栈
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/">阮一峰:ECMAScript 6入门</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">Mozilla 开发者网络</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web">MDN：Web 技术文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Reference/API">MDN：Web 技术参考 -&gt; Web API 参考</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">MDN：HTML（超文本标记语言）</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">MDN：CSS</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN：JavaScript</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">MDN：JavaScript 参考文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP">MDN:HTTP</a></li>
+</ul>
+<h2 id="ES5-to-ES6"><a href="#ES5-to-ES6" class="headerlink" title="ES5 to ES6"></a>ES5 to ES6</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://babeljs.io/">babel&#x2F;babel:Babel is a compiler for writing next generation JavaScript.</a></li>
+<li><a target="_blank" rel="noopener" href="https://gitlab.com/Rich-Harris/buble">Rich-Harris&#x2F;buble:The blazing fast, batteries-included ES2015 compiler</a></li>
+</ul>
+<h2 id="构建工具-Gulp"><a href="#构建工具-Gulp" class="headerlink" title="构建工具 Gulp"></a>构建工具 Gulp</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://gulpjs.com/">gulpjs&#x2F;gulp 4.0:The streaming build system</a> - <a target="_blank" rel="noopener" href="https://github.com/gulpjs/gulp/tree/4.0">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/del">sindresorhus&#x2F;del:Delete files and folders</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/del">GitHub</a></li>
+</ul>
+<h2 id="构建工具-Rollup"><a href="#构建工具-Rollup" class="headerlink" title="构建工具 Rollup"></a>构建工具 Rollup</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://rollupjs.org/">rollup&#x2F;rollup:Next-generation ES6 module bundler</a> - <a target="_blank" rel="noopener" href="https://github.com/rollup/rollup">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.lengstorf.com/learn-rollup-js/">Rollup.js Tutorial, Part 1: How to Set Up Smaller, More Efficient JavaScript Bundling Using Rollup</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-node-resolve">rollup&#x2F;rollup-plugin-node-resolve:Bundle third-party dependencies in node_modules</a> - <a target="_blank" rel="noopener" href="https://github.com/rollup/rollup-plugin-node-resolve">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-commonjs">rollup&#x2F;rollup-plugin-commonjs:Convert CommonJS modules to ES6, so they can be included in a Rollup bundle</a> - <a target="_blank" rel="noopener" href="https://github.com/rollup/rollup-plugin-commonjs">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-node-globals">calvinmetcalf&#x2F;rollup-plugin-node-globals:insert the same globals browserify does</a> - <a target="_blank" rel="noopener" href="https://github.com/calvinmetcalf/rollup-plugin-node-globals">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-eslint">TrySound&#x2F;rollup-plugin-eslint:Verify entry point and all imported files with ESLint</a> - <a target="_blank" rel="noopener" href="https://github.com/TrySound/rollup-plugin-eslint">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-replace">rollup&#x2F;rollup-plugin-replace:Replace strings in files while bundling them.</a> - <a target="_blank" rel="noopener" href="https://github.com/rollup/rollup-plugin-replace">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-buble">Rich-Harris&#x2F;rollup-plugin-buble:Compile ES2015 with Rollup and Bublé</a> - <a target="_blank" rel="noopener" href="https://gitlab.com/Rich-Harris/rollup-plugin-buble">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rollup-plugin-uglify">TrySound&#x2F;rollup-plugin-uglify:Rollup plugin to minify generated bundle</a> - <a target="_blank" rel="noopener" href="https://github.com/TrySound/rollup-plugin-uglify">GitHub</a></li>
+</ul>
+<h2 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://eslint.org/">eslint&#x2F;eslint:A fully pluggable tool for identifying and reporting on patterns in JavaScript.</a> - <a target="_blank" rel="noopener" href="https://github.com/eslint/eslint">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/eslint-plugin-react">yannickcr&#x2F;eslint-plugin-react:React specific linting rules for ESLint</a> - <a target="_blank" rel="noopener" href="https://github.com/yannickcr/eslint-plugin-react">GitHub</a></li>
+</ul>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://facebook.github.io/react/">facebook&#x2F;react:A declarative, efficient, and flexible JavaScript library for building user interfaces.</a> - <a target="_blank" rel="noopener" href="https://github.com/facebook/react">GitHub</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/articles/it-studio-2016-10-09-blog-of-ruanyifeng.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">阮一峰的网络日志</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">经典</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/invest/">投资笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">日常思考</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">预告</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

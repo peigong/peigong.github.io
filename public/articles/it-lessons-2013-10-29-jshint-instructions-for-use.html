@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>JSHint 使用说明（转） | VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文全文转自JSHint 使用说明(http:&#x2F;&#x2F;zhang.zipeng.info&#x2F;vimwiki&#x2F;Entries&#x2F;Reference&#x2F;Tools&#x2F;jshint.html)。  JSHint介绍翻译自：www.jshint.com JSHint(注意不是jslint：）)是一个由javascript社区驱动开发的用于检查javascript代码错误和问题的工具，有了他，可以使你保持一个良好的编">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSHint 使用说明（转）">
+<meta property="og:url" content="http://pg.js.cn/articles/it-lessons-2013-10-29-jshint-instructions-for-use.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="本文全文转自JSHint 使用说明(http:&#x2F;&#x2F;zhang.zipeng.info&#x2F;vimwiki&#x2F;Entries&#x2F;Reference&#x2F;Tools&#x2F;jshint.html)。  JSHint介绍翻译自：www.jshint.com JSHint(注意不是jslint：）)是一个由javascript社区驱动开发的用于检查javascript代码错误和问题的工具，有了他，可以使你保持一个良好的编">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-10-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-29T16:00:00.000Z">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">预告</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-weixin"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-it-lessons-2013-10-29-jshint-instructions-for-use" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-lessons-2013-10-29-jshint-instructions-for-use.html" class="article-date">
+  <time class="dt-published" datetime="2013-10-28T16:00:00.000Z" itemprop="datePublished">2013-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/lessons/">培训教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      JSHint 使用说明（转）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文全文转自<a target="_blank" rel="noopener" href="http://zhang.zipeng.info/vimwiki/Entries/Reference/Tools/jshint.html">JSHint 使用说明(http://zhang.zipeng.info/vimwiki/Entries/Reference/Tools/jshint.html)</a>。</p>
+</blockquote>
+<h2 id="JSHint介绍"><a href="#JSHint介绍" class="headerlink" title="JSHint介绍"></a>JSHint介绍</h2><p>翻译自：<a target="_blank" rel="noopener" href="http://www.jshint.com/">www.jshint.com</a></p>
+<p>JSHint(注意不是jslint：）)是一个由javascript社区驱动开发的用于检查javascript代码错误和问题的工具，有了他，可以使你保持一个良好的编码风格。你可以很简单的配置它以适应你目前的一个编码风格。目前JSHint的源码可以在github上面找到。</p>
+<h2 id="JSHint文档"><a href="#JSHint文档" class="headerlink" title="JSHint文档"></a>JSHint文档</h2><h3 id="如何使用JSHint"><a href="#如何使用JSHint" class="headerlink" title="如何使用JSHint"></a>如何使用JSHint</h3><p>JSHint是一个全局的函数，他接受两个参数，JSHint(source,options); 一个是代码source，另一个是options（选项） 第一个参数可以是一个字符串或者是一个字符串数组。如果是字符串，则他会被\n和\r分割，如果传入的参数是数组，就要保证数组的每一项是一行代码。 因此源码参数可以是javascript代码或者是一个json形式。如果所有的检测都ok，JSHint会返回true，否则就返回false。 当返回false的时候，你可以用JSHint.errors来获取错误信息或者用JSHint.data()来获取lint的信息。 如果要了解更多，参见源代码。 使用JSHint，你可以在js文件的开始设定选项，例如</p>
+<pre><code>/*jshint evil:true, boss:true */
+</code></pre>
+<p>而设定global参数可以告诉JSHint，全局的变量配置。 例如</p>
+<pre><code>/*global DISQUS: true, jQuery: false */
+</code></pre>
+<p>以上的这个例子是告诉JSHint,DISQUS是你自己声明的全局变量，而jQuery是你引入的全局变量</p>
+<h3 id="JSHint和JSLint有什么区别？"><a href="#JSHint和JSLint有什么区别？" class="headerlink" title="JSHint和JSLint有什么区别？"></a>JSHint和JSLint有什么区别？</h3><p>JSHint是JSLint的一个分支（fork），他比JSLint更加的便捷。用来约束你的代码质量和编码风格。 每个人都有不一样的编码习惯和风格，JSHint通过配置可以适应于各种情况。 JSHint的适用环境</p>
+<ul>
+<li>浏览器环境（browsers）</li>
+<li>Node.js</li>
+<li>jQuery</li>
+<li>ES5</li>
+<li>CouchDB</li>
+<li>Prototype.js</li>
+<li>Mootools.js</li>
+</ul>
+<h3 id="JSHint的选项配置"><a href="#JSHint的选项配置" class="headerlink" title="JSHint的选项配置"></a>JSHint的选项配置</h3><h4 id="asi"><a href="#asi" class="headerlink" title="asi"></a>asi</h4><p>如果是真，JSHint会无视没有加分号的行尾。自动补全分号一直是Javascript很有争议的一个语法特性。默认，JSHint会要求你在每个语句后面加上分号，但是如果你认为自己理解了asi(automatic semicolon insertion)，你可以抛弃JSHint对分号的检查。</p>
+<h4 id="bitwise"><a href="#bitwise" class="headerlink" title="bitwise"></a>bitwise</h4><p>如果为真，JSHint会禁用位运算符。Javascript允许位运算，但是他却没有整型，位运算符要把参与运算的数字从浮点数变为整数，并在运算后再转换回来。这样他们的效率就不如在别的语言中那么高。</p>
+<h4 id="boss"><a href="#boss" class="headerlink" title="boss"></a>boss</h4><p>很霸气的选项，如果为真，那么JSHint会允许在if，for，while里面编写赋值语句。一般来说，我们会在循环、判断等语句中加入值的比较来做语句的运行条件，有时候会把&#x3D;&#x3D;错写成赋值的&#x3D;，通常，JSHint会把这个认定为一个错误，但是开启这个选项的话，JSHint就不会检查判断条件中的赋值 ，你是boss，你说的算:)。</p>
+<h4 id="curly"><a href="#curly" class="headerlink" title="curly"></a>curly</h4><p>如果为真，JSHint会要求你在使用if和while等结构语句时加上{}来明确代码块。 Javascript允许在if等结构语句体只有一句的情况下不加括号。不过这样做可能会让你的代码读起来有些晦涩。</p>
+<h4 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h4><p>如果为真，JSHint会允许代码中出现debugger的语句。不过建议你最好在检测代码前去掉debug的语句。</p>
+<h4 id="eqeqeq"><a href="#eqeqeq" class="headerlink" title="eqeqeq"></a>eqeqeq</h4><p>如果为真，JSHint会看你在代码中是否都用了&#x3D;&#x3D;&#x3D;或者是!&#x3D;&#x3D;，而不是使用&#x3D;&#x3D;和!&#x3D;。 我们建议你在比较0，’’(空字符)，undefined，null，false和true的时候使用&#x3D;&#x3D;&#x3D;和!&#x3D;&#x3D;&#x3D;。</p>
+<h4 id="eqnull"><a href="#eqnull" class="headerlink" title="eqnull"></a>eqnull</h4><p>如果为真，JSHint会允许使用”&#x3D;&#x3D; null”作比较。&#x3D;&#x3D; null 通常用来判断一个变量是undefined或者是null（当时用&#x3D;&#x3D;，null和undefined都会转化为false）。</p>
+<h4 id="evil"><a href="#evil" class="headerlink" title="evil"></a>evil</h4><p>如果为真，JSHint会允许使用eval。eval提供了访问Javascript编译器的途径，这有时很有用，但是同时也对你的代码形成了注入攻击的危险，并且会对debug造成一些困难。 记住，Function构造函数也是另一个‘eval’，另外，当传入的参数是字符串的时候，setTimeout和setInterval也会类似于eval。</p>
+<h4 id="forin"><a href="#forin" class="headerlink" title="forin"></a>forin</h4><p>如果为真，那么，JSHint允许在for in 循环里面不出现hasOwnProperty。for in循环一般用来遍历一个对象的属性，这其中也包括他继承自原型链的属性，而hasOwnProperty可以来判断一个属性是否是对象本身的属性而不是继承得来的。</p>
+<h4 id="immed"><a href="#immed" class="headerlink" title="immed"></a>immed</h4><p>如果为真，JSHint要求匿名函数的调用如下：</p>
+<pre><code>(function()&#123; // &#125;());
+</code></pre>
+<p>而不是</p>
+<pre><code>(function()&#123; //bla bla &#125;)();
+</code></pre>
+<h4 id="laxbreak"><a href="#laxbreak" class="headerlink" title="laxbreak"></a>laxbreak</h4><p>如果为真，JSHint则不会检查换行。Javascript会通过自动补充分号来修正一些错误，因此这个选项可以检查一些潜在的问题。</p>
+<h4 id="maxerr"><a href="#maxerr" class="headerlink" title="maxerr"></a>maxerr</h4><p>设定错误的阈值，超过这个阈值jshint不再向下检查，提示错误太多。</p>
+<h4 id="newcap"><a href="#newcap" class="headerlink" title="newcap"></a>newcap</h4><p>如果为真，JSHint会要求每一个构造函数名都要大写字母开头。构造器是一种使用new运算符来创建对象的一种函数，new操作符会创建新的对象，并建立这个对象自己的this，一个构造函数如果不用new运算符来运行，那么他的this会指向全局对象而导致一些问题的发生。</p>
+<h4 id="noarg"><a href="#noarg" class="headerlink" title="noarg"></a>noarg</h4><p>如果为真，JSHint会禁止arguments.caller和arguments.callee的使用 arguments对象是一个类数组的对象，它具有一个索引值。arguments.callee指向当前执行的函数（这个在ES5的严格模式中被禁用了），而arguments.caller指向调用当前函数的函数（如果有的话），并且，他并不是在所有的Javascript实现里面都有。</p>
+<h4 id="noempty"><a href="#noempty" class="headerlink" title="noempty"></a>noempty</h4><p>如果为真，JSHint会禁止出现空的代码块（没有语句的代码块）。 如果为真，JSHint会禁用构造器，以避免一些问题。 在JSLint中会主动禁用构造器的方式以避免一些潜在问题，但其实很多构造器的使用并非有害，例如如下的调用</p>
+<pre><code>new JsUIWindow(); //注意这个调用是没有把构造器的结果赋值给变量的
+</code></pre>
+<p>因此，我们需要使用构造器的时候可以禁用这个选项。</p>
+<h4 id="nomen"><a href="#nomen" class="headerlink" title="nomen"></a>nomen</h4><p>如果为真，JSHint会禁用下划线的变量名。 很多人使用_name的方式来命名他们的变量，以说明这是一个私有变量，但实际上，并不是，下划线只是做了一个标识。 如果要使用私有变量，可以使用闭包来实现。</p>
+<h4 id="onevar"><a href="#onevar" class="headerlink" title="onevar"></a>onevar</h4><p>如果为真，JSHint期望函数只被var的形式声明一遍。</p>
+<h4 id="passfail"><a href="#passfail" class="headerlink" title="passfail"></a>passfail</h4><p>如果为真，JSHint会在发现首个错误后停止检查。</p>
+<h4 id="plusplus"><a href="#plusplus" class="headerlink" title="plusplus"></a>plusplus</h4><p>如果为真，JSHint会禁用自增运算和自减运算 ++和–可能会带来一些代码的阅读上的困惑。</p>
+<h4 id="regexp"><a href="#regexp" class="headerlink" title="regexp"></a>regexp</h4><p>如果为真，JSHint会不允许使用.和[^…]的正则， 因为这样的正则往往会匹配到你不期望的内容，并可能会应用造成一些危害。</p>
+<h4 id="sub"><a href="#sub" class="headerlink" title="sub"></a>sub</h4><p>如果为真，JSHint会允许各种形式的下标来访问对象。 通常，JSHint希望你只是用点运算符来读取对象的属性（除非这个属性名是一个保留字），如果你不希望这样可以关闭这个选项。</p>
+<h4 id="strict"><a href="#strict" class="headerlink" title="strict"></a>strict</h4><p>如果为真，JSHint会要求你使用use strict;语法。 Strict 模式是ES5里面的一个新特性，他允许你把一个程序或者函数放在一个“严格”的作用域中。可见Resig写的一篇关于严格模式的blog 严格模式做了几件事情:</p>
+<ol>
+<li>他可以捕获一些错误和异常</li>
+<li>当我们进行一下“不安全”的操作时，他会抛异常，例如访问全局变量。</li>
+<li>他会禁止你使用一些奇淫技巧，或者不良的代码编写。</li>
+</ol>
+<h4 id="undef"><a href="#undef" class="headerlink" title="undef"></a>undef</h4><p>如果为真，JSHint会要求所有的非全局变量，在使用前都被声明。 如果你不在一个本地作用域内使用var的方式来声明变量，Javascript会把它放到全局作用域下面。这样会很容易引起错误。</p>
+<h4 id="white"><a href="#white" class="headerlink" title="white"></a>white</h4><p>如果为true，JSHint会依据严格的空白规范检查你的代码。</p>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/it-studio-2013-11-16-semantic-versioning-2-0-0.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          语义化版本控制 2.0.0
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/it-lessons-2013-10-24-build-api-document-by-jsdoc3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">使用JSDoc3生成javascript项目的API文档</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">经典</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/invest/">投资笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">日常思考</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">预告</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

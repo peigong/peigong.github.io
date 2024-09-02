@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Gulp 系统构建工作流 | VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Gulp 构建平台 gulp.js:the streaming build system - GitHub- 中文 gulp.js plugin registry harmonize:Enables node’s –harmony flag programmatically. - GitHub gulp-load-plugins:Automatically load any gulp plugin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gulp 系统构建工作流">
+<meta property="og:url" content="http://pg.js.cn/articles/it-manual-2016-03-23-gulp-workflow.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="Gulp 构建平台 gulp.js:the streaming build system - GitHub- 中文 gulp.js plugin registry harmonize:Enables node’s –harmony flag programmatically. - GitHub gulp-load-plugins:Automatically load any gulp plugin">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-29T16:00:00.000Z">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">预告</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-weixin"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="http://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-it-manual-2016-03-23-gulp-workflow" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-manual-2016-03-23-gulp-workflow.html" class="article-date">
+  <time class="dt-published" datetime="2016-03-22T16:00:00.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/manual/">常用文档</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Gulp 系统构建工作流
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Gulp-构建平台"><a href="#Gulp-构建平台" class="headerlink" title="Gulp 构建平台"></a>Gulp 构建平台</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://gulpjs.com/">gulp.js:the streaming build system</a> - <a target="_blank" rel="noopener" href="https://github.com/gulpjs/gulp">GitHub</a>- <a target="_blank" rel="noopener" href="http://www.gulpjs.com.cn/">中文</a></li>
+<li><a target="_blank" rel="noopener" href="http://gulpjs.com/plugins/">gulp.js plugin registry</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/harmonize">harmonize:Enables node’s –harmony flag programmatically.</a> - <a target="_blank" rel="noopener" href="https://github.com/dcodeIO/node-harmonize">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-load-plugins">gulp-load-plugins:Automatically load any gulp plugins in your package.json</a> - <a target="_blank" rel="noopener" href="https://https//github.com/jackfranklin/gulp-load-plugins">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/aseemk/requireDir">requireDir:Node.js helper to require() directories.</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/vinyl-source-stream">vinyl-source-stream:Use conventional text streams at the start of your gulp or vinyl pipelines</a> - <a target="_blank" rel="noopener" href="https://github.com/hughsk/vinyl-source-stream">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/grncdr/merge-stream">merge-stream:Merge multiple streams into one interleaved stream</a></li>
+</ul>
+<h2 id="Javascript-构建"><a href="#Javascript-构建" class="headerlink" title="Javascript 构建"></a>Javascript 构建</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/browserify">browserify:</a> - <a target="_blank" rel="noopener" href="https://github.com/substack/node-browserify">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/watchify">watchify:watch mode for browserify builds</a> - <a target="_blank" rel="noopener" href="https://github.com/substack/watchify">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/preprocessify">preprocessify:Browserify preprocess transform</a> - <a target="_blank" rel="noopener" href="https://github.com/bibliolabs/preprocessify">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/babelify">babelify:Babel browserify transform</a> - <a target="_blank" rel="noopener" href="https://github.com/babel/babelify">GitHub</a> - <a target="_blank" rel="noopener" href="https://babeljs.io/docs/learn-es2015/">Learn ES2015</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/reactify">reactify:Browserify transform for JSX (a superset of JS used by React.js)</a> - <a target="_blank" rel="noopener" href="https://github.com/andreypopp/reactify">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-jshint">gulp-jshint:JSHint plugin for gulp</a> - <a target="_blank" rel="noopener" href="https://github.com/spalger/gulp-jshint">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-uglify/">gulp-uglify:Minify files with UglifyJS.</a> - <a target="_blank" rel="noopener" href="https://github.com/terinjokes/gulp-uglify">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-mocha">gulp-mocha:Run Mocha tests</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-mocha">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-jest">gulp-jest:Gulp plugin for running your Jest tests</a> - <a target="_blank" rel="noopener" href="https://github.com/Dakuan/gulp-jest">GitHub</a> - <a target="_blank" rel="noopener" href="http://facebook.github.io/jest/">Jest</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-coveralls">gulp-coveralls:Gulp plugin to submit code coverage to Coveralls</a> - <a target="_blank" rel="noopener" href="https://github.com/markdalgleish/gulp-coveralls">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-istanbul">SBoudrias&#x2F;gulp-istanbul:Istanbul unit test coverage plugin for gulp.</a> - <a target="_blank" rel="noopener" href="https://github.com/SBoudrias/gulp-istanbul">GitHub</a></li>
+</ul>
+<h2 id="CSS-构建插件"><a href="#CSS-构建插件" class="headerlink" title="CSS 构建插件"></a>CSS 构建插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-less/">gulp-less:Less for Gulp</a> - <a target="_blank" rel="noopener" href="https://github.com/plus3network/gulp-less">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-autoprefixer">gulp-autoprefixer:Prefix CSS with Autoprefixer</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-autoprefixer">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-minify-css/">gulp-minify-css:Minify css with clean-css.</a> - <a target="_blank" rel="noopener" href="https://github.com/murphydanger/gulp-minify-css">GitHub</a></li>
+</ul>
+<h2 id="常见任务插件"><a href="#常见任务插件" class="headerlink" title="常见任务插件"></a>常见任务插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/del">del:Delete files&#x2F;folders using globs</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/del">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-concat/">gulp-concat:Streaming concat middleware for gulp</a> - <a target="_blank" rel="noopener" href="https://github.com/wearefractal/gulp-concat">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-rename">gulp-rename:Rename files</a> - <a target="_blank" rel="noopener" href="https://github.com/hparra/gulp-rename">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-imagemin">gulp-imagemin:Minify PNG, JPEG, GIF and SVG images</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-imagemin">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-useref">gulp-useref:Parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets.</a> - <a target="_blank" rel="noopener" href="https://github.com/jonkemp/gulp-useref">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-replace">gulp-replace:A string replace plugin for gulp</a> - <a target="_blank" rel="noopener" href="https://github.com/lazd/gulp-replace">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-preprocess">gulp-preprocess:Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration</a> - <a target="_blank" rel="noopener" href="https://github.com/jas/gulp-preprocess">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-htmlmin">gulp-htmlmin:gulp plugin to minify HTML</a> - <a target="_blank" rel="noopener" href="https://github.com/jonschlinkert/gulp-htmlmin">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-rev">gulp-rev:Static asset revisioning by appending content hash to filenames: unicorn.css → unicorn-d41d8cd98f.css</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-rev">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-rev-all">gulp-rev-all:Static asset revisioning with dependency considerations, appends content hash to each filename</a> - <a target="_blank" rel="noopener" href="https://github.com/smysnk/gulp-rev-all">GitHub</a></li>
+</ul>
+<h2 id="任务控制插件"><a href="#任务控制插件" class="headerlink" title="任务控制插件"></a>任务控制插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://browsersync.io/">browser-sync:Keep multiple browsers &amp; devices in sync when building websites.</a> - <a target="_blank" rel="noopener" href="https://github.com/BrowserSync/browser-sync">GitHub</a> - <a target="_blank" rel="noopener" href="http://www.browsersync.cn/">中文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-sync">gulp-sync:sync for dependency tasks of gulp.task method</a> - <a target="_blank" rel="noopener" href="https://github.com/kaminaly/gulp-sync">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/OverZealous/run-sequence">run-sequence:Run a series of dependent gulp tasks in order</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-if">gulp-if:Conditionally run a task</a> - <a target="_blank" rel="noopener" href="https://github.com/robrich/gulp-if">GitHub</a></li>
+</ul>
+<h2 id="辅助插件"><a href="#辅助插件" class="headerlink" title="辅助插件"></a>辅助插件</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-plumber/">gulp-plumber:Prevent pipe breaking caused by errors from gulp plugins</a> - <a target="_blank" rel="noopener" href="https://github.com/floatdrop/gulp-plumber">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-sourcemaps">gulp-sourcemaps:</a> - <a target="_blank" rel="noopener" href="https://github.com/floridoo/gulp-sourcemaps">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-changed/">gulp-changed:Only pass through changed files</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-changed">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-cached">gulp-cached:A simple in-memory file cache for gulp</a> - <a target="_blank" rel="noopener" href="https://github.com/contra/gulp-cached">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-filter">gulp-filter:Filter files in a vinyl stream</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-filter">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://npmjs.org/package/gulp-size/">gulp-size:Display the size of your project</a> - <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/gulp-size">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-tap">gulp-tap:Easiest way to tap into a pipeline</a> - <a target="_blank" rel="noopener" href="https://github.com/geejs/gulp-tap">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-flatten">gulp-flatten：remove or replace relative path for files</a> - <a target="_blank" rel="noopener" href="https://github.com/armed/gulp-flatten">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-exclude-gitignore">gulp-exclude-gitignore:Gulp plugin to exclude file contained in .gitignore from the stream</a> - <a target="_blank" rel="noopener" href="https://github.com/sboudrias/gulp-exclude-gitignore">GitHub</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/it-manual-2016-05-10-unit-test-tool-reference.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          单元测试工具参考
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/it-manual-2015-11-24-development-tool-reference.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">开发工具参考</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">经典</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/invest/">投资笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">日常思考</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">预告</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

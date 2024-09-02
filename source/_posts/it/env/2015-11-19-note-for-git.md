@@ -14,15 +14,15 @@ updated: 2024-08-30 00:00:00
 
 ## 设置SSH
 
-如果已经生成过ssh key pair，这里不必再次生成，复用即可。
+如果已经生成过 ssh key pair，这里不必再次生成，复用即可。
 
     ssh-keygen -t rsa -C "your email"
 
 邮件地址可以不写，默认是本机用户名@本机机器名。最好是填写一些标识自己的记号。
 
-然后一路回车，不要输入任何密码之类，生成ssh key pair。
+然后一路回车，不要输入任何密码之类，生成 ssh key pair。
 
-如果在Linux上，需要把其中的私钥告诉本地系统：
+如果在 Linux 上，需要把其中的私钥告诉本地系统：
 
     ssh-add ~/.ssh/id_rsa
 
