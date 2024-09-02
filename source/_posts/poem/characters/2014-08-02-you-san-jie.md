@@ -1,7 +1,10 @@
 ---
 title: 尤三姐
-date: 2014-08-02
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2014-08-02 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 红楼梦 - 尤三姐 ##

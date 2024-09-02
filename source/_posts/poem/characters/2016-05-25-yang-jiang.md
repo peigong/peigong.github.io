@@ -1,7 +1,10 @@
 ---
 title: 杨绛
-date: 2016-05-25
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2016-05-25 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 杨绛先生去世了 ##

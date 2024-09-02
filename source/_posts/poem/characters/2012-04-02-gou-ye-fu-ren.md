@@ -1,7 +1,10 @@
 ---
 title: 钩弋夫人
-date: 2012-04-02
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2012-04-02 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 > 2012-04-02

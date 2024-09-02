@@ -1,7 +1,10 @@
 ---
 title: 梦中的你我
-date: 
-updated: 2024-09-02
+categories:
+  - poem
+  - a-2004
+updated: 2024-09-02 00:00:00
+date:
 ---
 
 > 2009-05-23

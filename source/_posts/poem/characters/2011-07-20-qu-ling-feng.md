@@ -1,7 +1,10 @@
 ---
 title: 曲灵风
-date: 2011-07-20
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2011-07-20 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 > 2011-07-20

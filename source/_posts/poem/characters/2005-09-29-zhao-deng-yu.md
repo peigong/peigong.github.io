@@ -1,7 +1,10 @@
 ---
 title: 赵登禹
-date: 2005-09-29
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2005-09-29 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 携妻女拜谒赵登禹将军墓 ##

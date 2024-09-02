@@ -1,7 +1,10 @@
 ---
 title: 陈圆圆
-date: 2008-12-22
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2008-12-22 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 鹿鼎记之陈圆圆 ##

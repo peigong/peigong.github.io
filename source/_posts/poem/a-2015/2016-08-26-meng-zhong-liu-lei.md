@@ -1,7 +1,10 @@
 ---
 title: 梦中流泪
-date: 
-updated: 2024-09-02
+categories:
+  - poem
+  - a-2015
+updated: 2024-09-02 00:00:00
+date:
 ---
 
 我在梦中常流泪，

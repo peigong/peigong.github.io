@@ -1,7 +1,10 @@
 ---
 title: 周培公
-date: 2006-04-29
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2006-04-29 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 > 2006-04-29

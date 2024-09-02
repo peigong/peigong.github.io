@@ -1,7 +1,10 @@
 ---
 title: 奥林匹克公园
-date: 
-updated: 2024-09-02
+categories:
+  - poem
+  - a-2010
+updated: 2024-09-02 00:00:00
+date:
 ---
 
 ## 奥林匹克国家森林公园之一 ##

@@ -1,7 +1,10 @@
 ---
 title: 黄忠
-date: 2014-10-01
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2014-10-01 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 三国演义·汉升 ##

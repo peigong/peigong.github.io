@@ -1,7 +1,10 @@
 ---
 title: 向问天
-date: 2012-04-10
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2012-04-10 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 > 2012-04-10

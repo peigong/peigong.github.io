@@ -1,7 +1,10 @@
 ---
 title: 姜子牙
-date: 2014-06-28
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2014-06-28 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 > 2014-6-28

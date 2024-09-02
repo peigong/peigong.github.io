@@ -1,7 +1,10 @@
 ---
 title: 袁承志
-date: 2011-11-03
-updated: 2024-09-02
+categories:
+  - poem
+  - characters
+date: 2011-11-03 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 力斗玉真子 ##

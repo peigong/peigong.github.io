@@ -1,7 +1,10 @@
 ---
-title:  "新时代的教育"
-date: 2018-08-09
-updated: 2024-09-02
+title: 新时代的教育
+categories:
+  - essay
+  - thinking
+date: 2018-08-09 00:00:00
+updated: 2024-09-02 00:00:00
 ---
 
 ## 作为投资的教育 ##

@@ -1,7 +1,10 @@
 ---
 title: 任公墓
-date: 
-updated: 2024-09-02
+categories:
+  - poem
+  - a-2015
+updated: 2024-09-02 00:00:00
+date:
 ---
 
 梁家松柏荫后世，

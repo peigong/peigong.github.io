@@ -1,7 +1,10 @@
 ---
 title: 清华柳
-date: 
-updated: 2024-09-02
+categories:
+  - poem
+  - a-2010
+updated: 2024-09-02 00:00:00
+date:
 ---
 
 楚楚河边柳，
