@@ -9,10 +9,15 @@
         "title": "文艺随笔",
         "weight": 101
     },
+    "travel": {
+        "name": "travel",
+        "title": "老周游记",
+        "weight": 102
+    },
     "thinking": {
         "name": "thinking",
         "title": "思考札记",
-        "weight": 102
+        "weight": 103
     },
 
     "poem": {
