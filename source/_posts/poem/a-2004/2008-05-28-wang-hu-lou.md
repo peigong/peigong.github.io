@@ -4,7 +4,7 @@ categories:
   - poem
   - a-2004
 updated: 2024-09-02 00:00:00
-date:
+date: 2008-05-28
 ---
 
 > 2008-05-28

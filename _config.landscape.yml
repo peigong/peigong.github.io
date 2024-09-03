@@ -4,7 +4,8 @@
 # Navigation menu
 menu:
   '首页': /
-  '预告': /proposals
+  '写作计划': /proposals
+  '藏书目录': /books
 # RSS link
 # rss: /atom.xml
 
@@ -17,9 +18,9 @@ links:
   github: https://github.com/peigong
   git: https://gitee.com/pg0xff
   qq: https://user.qzone.qq.com/377650913
-  weixin: http://pg.js.cn
+#  weixin: http://pg.js.cn
   weibo: https://weibo.com/u/1766654653
-  home: http://pg.js.cn
+#  home: http://pg.js.cn
 
 # ===============
 # Content

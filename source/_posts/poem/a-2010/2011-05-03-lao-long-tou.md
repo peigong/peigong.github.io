@@ -4,7 +4,7 @@ categories:
   - poem
   - a-2010
 updated: 2024-09-02 00:00:00
-date:
+date: 2011-05-03
 ---
 
 漠漠黄沙连天际，

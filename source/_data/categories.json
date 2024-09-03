@@ -2,120 +2,115 @@
     "essay": {
         "name": "essay",
         "title": "札记随笔",
-        "weight": 10000
+        "weight": 1
     },
     "arts": {
         "name": "arts",
         "title": "文艺随笔",
-        "weight": 10000
+        "weight": 101
     },
     "thinking": {
         "name": "thinking",
         "title": "思考札记",
-        "weight": 10000
-    },
-    "invest": {
-        "name": "invest",
-        "title": "投资笔记",
-        "weight": 10000
+        "weight": 102
     },
 
     "poem": {
         "name": "poem",
         "title": "培公诗抄",
-        "weight": 10000
+        "weight": 2
     },
     "a-2015": {
         "name": "a-2015",
         "title": "2015 ~ 2024",
-        "weight": 10000
+        "weight": 244
     },
     "a-2010": {
         "name": "a-2010",
         "title": "2010 ~ 2014",
-        "weight": 10000
+        "weight": 245
     },
     "a-2004": {
         "name": "a-2004",
         "title": "2004 ~ 2009",
-        "weight": 10000
+        "weight": 246
     },
     "b-2004": {
         "name": "b-2004",
         "title": "~ 2004 年",
-        "weight": 10000
+        "weight": 247
     },
     "buddha": {
         "name": "buddha",
         "title": "禅宗心得",
-        "weight": 10000
+        "weight": 248
     },
     "characters": {
         "name": "characters",
         "title": "人物",
-        "weight": 10000
+        "weight": 249
     },
 
     "classic": {
         "name": "classic",
         "title": "经典",
-        "weight": 2
+        "weight": 3
     },
     "sutra": {
         "name": "sutra",
         "title": "佛经",
-        "weight": 10000
+        "weight": 301
     },
     "analects": {
         "name": "analects",
         "title": "论语",
-        "weight": 10000
+        "weight": 302
     },
     "su-wen": {
         "name": "su-wen",
         "title": "黄帝内经素问",
-        "weight": 10000
+        "weight": 303
     },
 
     "catalog": {
         "name": "catalog",
         "title": "藏书目录",
-        "weight": 10000
+        "weight": 4
     },
     "bookcase": {
         "name": "bookcase",
         "title": "在架图书",
-        "weight": 10000
+        "weight": 401
     },
     "table": {
         "name": "table",
         "title": "封存图书",
-        "weight": 10000
+        "weight": 402
     },
 
     "it": {
         "name": "it",
         "title": "IT",
-        "weight": 10000
+        "weight": 5
     },
     "env": {
         "name": "env",
         "title": "开发环境",
-        "weight": 10000
+        "weight": 501
     },
     "manual": {
         "name": "manual",
         "title": "常用文档",
-        "weight": 10000
+        "weight": 502
     },
     "studio": {
         "name": "studio",
         "title": "学习笔记",
-        "weight": 10000
+        "weight": 503
     },
     "lessons": {
         "name": "lessons",
         "title": "培训教程",
-        "weight": 10000
+        "weight": 504
     }
 }
