@@ -107,6 +107,9 @@ theme: landscape
 deploy:
   type: 'git'
   repo: 'git@github.com:peigong/peigong.github.io.git'
+  branch: 'gh-pages'
+  name: 'peigong'
+  email: 'peigong@foxmail.com'
 
 # Generate categories from directory-tree
 # Dependencies: https://github.com/xu-song/hexo-auto-category
