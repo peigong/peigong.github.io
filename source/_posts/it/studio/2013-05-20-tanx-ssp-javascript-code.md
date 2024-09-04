@@ -11,7 +11,7 @@ updated: 2024-08-30 00:00:00
 
 ### 总体的逻辑架构 ###
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/logical-framework.png)
+![逻辑架构](/images/projects/tanx-ssp/logical-framework.png)
 
 ## 广告投放系统 ##
 
@@ -19,11 +19,11 @@ updated: 2024-08-30 00:00:00
 
 #### 逻辑架构 ####
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/ali-ad-system.png)
+![逻辑架构](/images/projects/tanx-ssp/ali-ad-system.png)
 
 #### 时序略图 ####
 
-![时序略图](http://www.peigong.net/images/projects/tanx-ssp/ali-ad-system-sequence.png)
+![时序略图](/images/projects/tanx-ssp/ali-ad-system-sequence.png)
 
 ### TANX SSP的系统入口 ###
 
@@ -278,11 +278,11 @@ jsonp_callback_5021是在模块的入口点（tanxssp/main.js）脚本中定义�
 
 #### 逻辑架构 ####
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/taobao-show.png)
+![逻辑架构](/images/projects/tanx-ssp/taobao-show.png)
 
 #### 时序略图 ####
 
-![时序略图](http://www.peigong.net/images/projects/tanx-ssp/taobao-show-sequence.png)
+![时序略图](/images/projects/tanx-ssp/taobao-show-sequence.png)
 
 ### 舞女页面 ###
 
@@ -446,7 +446,7 @@ jsonp_callback_5021是在模块的入口点（tanxssp/main.js）脚本中定义�
 
 ### 逻辑架构 ###
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/ad-click-stat.png)
+![逻辑架构](/images/projects/tanx-ssp/ad-click-stat.png)
 
 ### 广告点击分析前端系统 ###
 
@@ -518,11 +518,11 @@ jsonp_callback_5021是在模块的入口点（tanxssp/main.js）脚本中定义�
 
 #### 逻辑架构 ####
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/ali-cookie-beacon.png)
+![逻辑架构](/images/projects/tanx-ssp/ali-cookie-beacon.png)
 
 #### 时序略图 ####
 
-![时序略图](http://www.peigong.net/images/projects/tanx-ssp/ali-cookie-beacon-sequence.png)
+![时序略图](/images/projects/tanx-ssp/ali-cookie-beacon-sequence.png)
 
 ### 阿里系的灯塔入口 ###
 
@@ -684,7 +684,7 @@ TANX Cookie服务会写下如下的cookie标识：
 
 ### 逻辑架构 ###
 
-![逻辑架构](http://www.peigong.net/images/projects/tanx-ssp/static-server.png)
+![逻辑架构](/images/projects/tanx-ssp/static-server.png)
 
 ### 设计意图分析 ###
 

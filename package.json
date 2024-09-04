@@ -10,7 +10,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "hexo clean & hexo generate & hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
@@ -19,6 +19,7 @@
   "dependencies": {
     "hexo": "^7.3.0",
     "hexo-auto-category": "^0.2.2",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
