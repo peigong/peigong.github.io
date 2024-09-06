@@ -2,7 +2,7 @@
 title: 投资组合、估值、买入和卖出的交易模型
 categories:
   - essay
-  - thinking
+  - read
 date: 2015-09-28 00:00:00
 updated: 2024-08-30 00:00:00
 ---
