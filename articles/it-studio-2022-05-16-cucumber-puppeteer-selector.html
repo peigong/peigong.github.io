@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>UI自动化测试中选择页面元素 | VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="这里讨论的问题，主要是基于 HTML 的 Cucumber + Puppeteer 技术栈的UI自动化测试（以下简称UI自动化）中遇到的问题。  UI自动化的一线困境UI自动化测试在前端的开发测试中，是一件政治正确的事情。 作为一名前端工程师（FE），很少有人敢于说出自己的心声，UI自动化没有什么用处。但大家的身体都很诚实，或者心照不宣的在实际开发中不考虑UI自动化，或者DEMO一下点到为止，或">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UI自动化测试中选择页面元素">
+<meta property="og:url" content="http://pg.js.cn/articles/it-studio-2022-05-16-cucumber-puppeteer-selector.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="这里讨论的问题，主要是基于 HTML 的 Cucumber + Puppeteer 技术栈的UI自动化测试（以下简称UI自动化）中遇到的问题。  UI自动化的一线困境UI自动化测试在前端的开发测试中，是一件政治正确的事情。 作为一名前端工程师（FE），很少有人敢于说出自己的心声，UI自动化没有什么用处。但大家的身体都很诚实，或者心照不宣的在实际开发中不考虑UI自动化，或者DEMO一下点到为止，或">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-f12.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-html.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-list.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/f12-1.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/f12-2.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/f12-3.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/f12-3.1.png">
+<meta property="og:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/f12-4.png">
+<meta property="article:published_time" content="2022-05-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-04T16:00:00.000Z">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pg.js.cn/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic.png">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">写作计划</a>
+        
+          <a class="main-nav-link" href="/books">藏书目录</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="https://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-it-studio-2022-05-16-cucumber-puppeteer-selector" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2022-05-16-cucumber-puppeteer-selector.html" class="article-date">
+  <time class="dt-published" datetime="2022-05-15T16:00:00.000Z" itemprop="datePublished">2022-05-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      UI自动化测试中选择页面元素
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>这里讨论的问题，主要是基于 <code>HTML</code> 的 <code>Cucumber + Puppeteer</code> 技术栈的UI自动化测试（以下简称UI自动化）中遇到的问题。</p>
+</blockquote>
+<h2 id="UI自动化的一线困境"><a href="#UI自动化的一线困境" class="headerlink" title="UI自动化的一线困境"></a>UI自动化的一线困境</h2><p>UI自动化测试在前端的开发测试中，是一件政治正确的事情。</p>
+<p>作为一名前端工程师（FE），很少有人敢于说出自己的心声，UI自动化没有什么用处。但大家的身体都很诚实，或者心照不宣的在实际开发中不考虑UI自动化，或者DEMO一下点到为止，或者轰轰烈烈地搞一场虎头蛇尾的UI自动化运动。</p>
+<p>实践出真知，一线开发者的真实体验都是用真金白银换来的，需要得到尊重。不过，尊重常识也很重要。高速机枪的杀伤效率一定高于拉栓的步枪，自动化生产线的生产效率一定高于手工作坊。为什么UI自动化测试会比人工的UI测试效率低呢？</p>
+<p>政治正确也没毛病，我们需要确立一个基本信念，自动化的效率一定高于人工，而且是数量级压制的差异。</p>
+<p>在一线实践中，发现UI自动化效率不能尽如人意的时候，千万不要轻言放弃。要认真研究一下，我们的使用方法是不是科学，成本结构的瓶颈在什么地方？</p>
+<p>总结UI自动化实践的制约因素，会发现不管是在用法上，还是在成本结构上，选择页面元素都是一处很重要的瓶颈。</p>
+<span id="more"></span>
+
+<h2 id="选择页面元素的问题"><a href="#选择页面元素的问题" class="headerlink" title="选择页面元素的问题"></a>选择页面元素的问题</h2><p>从UI自动化最小DEMO演示（打开 1 个页面，选择 1 个按钮，点击 1 下），到全流程、全要素UI自动化回归测试，选择 <code>HTML</code> 页面上的元素都是基础中的基础。剧本（<code>Feature</code>）和场景（<code>scenario</code>）从简单到复杂，选择元素的重要性呈线性增长。如果选择的效率低，场景剧本在开发调试上耗时长、成本高，日常维护的返工概率高、频率高、幅度大。在规模较大的复杂UI自动化中，选择元素的效率有一点微小变化，都会给总体成本带来巨大影响，甚至成为制约UI自动化规模的天花板。</p>
+<p>在传统前端的 <code>jQuery</code> 时代，使用 <code>$</code> 函数选择页面元素，基本上是其他代码运行的前提。在 <code>VUE</code> 、 <code>React</code> 等现代前端实践中，代码与 <code>HTML</code> 页面产生了隔离，通过引用对象或回调函数等手段与页面元素交互，不再需要使用 <code>CSS</code> 选择器、 <code>XPath</code>等手段选择元素。从最终的 <code>HTML</code> 页面上看，没有什么可以捕获元素的把柄，弱化了UI自动化选择元素的能力。</p>
+<p><code>HTML</code> 页面直接贴近最终用户，是系统中变动频率比较高的部分。用户交互类的产品需求，又基本上都会带来页面变化，很容易导致日常维护中的UI自动化用例失败。</p>
+<p>在页面不断变化的背景下，识别和提炼具有稳定性质的选择器（Selector），是UI自动化成功的关键因素之一。</p>
+<h2 id="选择器（Selector）的稳定性质"><a href="#选择器（Selector）的稳定性质" class="headerlink" title="选择器（Selector）的稳定性质"></a>选择器（Selector）的稳定性质</h2><p>选择器（Selector）的稳定性质，是相对的、动态的，不总是那么显而易见，需要认真的观察和思考，需要精心的提炼。</p>
+<p><code>HTML</code> 页面上有很多标签（tag）。一般来说，使用标签（tag）做选择器（Selector）很不稳定，不过也有例外。例如，一个管理系统的列表页，上面是查询表单，下面是数据列表，可能整个页面只有一个查询按钮。或者，虽然有多个按钮，但只有一个提交查询请求的 <code>submit</code> 按钮。那就可以把 <code>button</code> 或者 <code>button[type=&quot;submit&quot;]</code> 作为稳定的选择器（Selector）使用。</p>
+<p>有的文档结构片断，也具有稳定的性质。例如，一个用户端的页面，分为 <code>Header</code> 、 <code>Body</code> 、 <code>Footer</code> 三个部分，在 <code>Header</code> 中有一个搜索条件文本框和一个按钮用来提交搜索请求。那么 <code>header form.search input</code> 用来选择文本框，选择搜索按钮使用 <code>header form.search button</code> ，可能就是一个稳定的选择器（Selector）。</p>
+<p>通过认真的观察，我们可以从杂乱无章的页面中，从易变的文档结构中，识别和提炼出具有稳定性质的部分，用来选择元素。找到这种稳定性质后，我们就获得了想要抒发的诗意。但要想写出优美的诗歌，光有诗意可不行，还需要丰富的词汇和对词汇的灵活运用。从另一方面来说，词汇掌握的好，也可以更容易的获得诗意，更容易的识别和提炼页面中具有稳定性质的选择器（Selector）。</p>
+<h2 id="选择页面元素的词汇"><a href="#选择页面元素的词汇" class="headerlink" title="选择页面元素的词汇"></a>选择页面元素的词汇</h2><p>从UI自动化的角度，我们可以把选择页面元素的词汇不严谨的归纳为 4 类：标识类、属性类、文档结构类和组合应用类。</p>
+<h3 id="标识类"><a href="#标识类" class="headerlink" title="标识类"></a>标识类</h3><p>有 <code>id</code> 的元素，是UI自动化测试最喜欢的，因为 <code>id</code> 属性在设计上就是用来标识唯一元素的。</p>
+<p>样式类（class）在设计上，本来是用来定义外观的，不应该用于选择页面元素。但是，如果某种外观本身具有稳定的性质，那就可以作为稳定的选择器（Selector）使用。例如，在一篇文章的页面，<code>.title</code> 样式类（class）可能就具有用于选择标题元素的稳定性。</p>
+<p>说句题外话，虽然 <code>id</code> 和 <code>class</code> 基本上就可以选择到元素了，但加上元素标签（tag）可以增加可读性。例如，<code>input#driverId</code> 表示填写司机ID的文本框，<code>h1.title</code> 表示文章的标题，是一种好的编码习惯。</p>
+<p>页面元素的 <code>data-testid</code> 属性，从语义上看就是为测试服务的标识。不管是前端单元测试的遗产，还是专门为UI自动化提供的标识，<code>data-testid</code> 一般都具有稳定性质。当然，关于是否应该使用 <code>data-testid</code> 属性的争论，则是另外一个故事。</p>
+<h3 id="属性类"><a href="#属性类" class="headerlink" title="属性类"></a>属性类</h3><p>其实 <code>id</code>、 <code>class</code>、 <code>data-testid</code> 都是属性类的特殊形式，也可以用属性类的词汇来表达。</p>
+<p>在前端框架、组件库中，或者优雅的业务代码中，前端工程师（FE）经常会语义化的使用一些属性。例如，<a target="_blank" rel="noopener" href="https://ant.design/"><code>antd</code></a> 的 Select 选择器有一个 <code>role=&quot;listbox&quot;</code> 的属性，就具有稳定性质。</p>
+<p>之所以作为一类单列出来，是因为属性选择器拥有类似正则表达式一样的强大语法，在UI自动化中可以很有效的选择页面元素。</p>
+<p><code>li[item]</code> 可以选择带有 <code>item</code> 属性的一组元素。在属性选择器前加上元素标签（tag），也是为了增加代码的可读性。</p>
+<p><code>a[href=&quot;https://ant.design/&quot;]</code> 可以选择跳转到 <code>antd</code> 的超链接。</p>
+<p>其他诸如元素的属性中包含某字符串、以某字符串开头、以某字符串结尾等属性选择器用法，就不再一一列举。</p>
+<h3 id="文档结构类"><a href="#文档结构类" class="headerlink" title="文档结构类"></a>文档结构类</h3><p>相比于标识类和属性类的页面元素选择器（Selector），具有稳定性质的文档结构就不总是那么一目了然，需要更多的观察、识别和提炼。</p>
+<p>类似 <code>button</code>，直接使用页面元素的标签（tag），那就是选择所有的 <code>&lt;button /&gt;</code>元素了。</p>
+<p><code>button.ant-btn</code> 的样式类（class）前加一个元素标签（tag），并不见得是为了追求代码的可读性，也有可能是为了和 <code>a.ant-btn</code> 做出区分，要选择 <code>&lt;button /&gt;</code> 而不是选择 <code>&lt;a /&gt;</code>。</p>
+<p><code>div p</code> 表示选择 <code>&lt;div&gt;</code> 元素内的所有 <code>&lt;p&gt;</code> 元素。只要是在 <code>&lt;div&gt;</code> 的肚子里，元素 <code>&lt;p&gt;</code> 不分层级全部都会被选中。</p>
+<p><code>div &gt; p</code> 选择父元素是 <code>&lt;div&gt;</code> 的所有 <code>&lt;p&gt;</code> 元素。 <code>&lt;p&gt;</code> 元素不但要在 <code>&lt;div&gt;</code> 的肚子里，而且还要是直接子元素，层级更深一些的 <code>&lt;p&gt;</code> 就不会被选中了。</p>
+<p><code>h2 + p</code> 表示 <code>&lt;p&gt;</code> 元素是紧跟在 <code>&lt;h2&gt;</code> 元素后的第一个兄弟元素。注意：紧跟着的那一个 <code>&lt;p&gt;</code> 元素。</p>
+<p><code>h2 ~ p</code> 是选择 <code>&lt;h2&gt;</code> 元素后面的每一个 <code>&lt;p&gt;</code> 元素。</p>
+<p>伪选择器也可以用于对文档结构的选择。例如，<code>:nth-child(n)</code> 是指某父元素下的第 n 个子元素。</p>
+<p>伪选择器有很多，这里不一一列举。</p>
+<h3 id="组合应用类"><a href="#组合应用类" class="headerlink" title="组合应用类"></a>组合应用类</h3><p>五色令人目盲，五音令人耳聋。上述选择页面元素的 3 类词汇，独立使用者有之，但更多的是组合应用。</p>
+<p>通过用心的观察，识别和提炼出具有稳定性质的选择器（Selector），用简洁的词汇组合表达出来，就可以真的为之四顾，为之踌躇满志了。</p>
+<p>我们以 <a target="_blank" rel="noopener" href="https://codesandbox.io/s/glcd60"><code>antd</code> Select选择器的基本使用</a> 为例，演示一下页面元素选择词汇的组合表达。</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic.png" alt="Select选择器的基本使用"></p>
+<p>如上图所示，UI自动化一个常见的场景就是点击 <code>antd</code> Select选择器（#1），从下拉列表中选择一个选项（#2，yiminghe），点击选中。</p>
+<p>我们右键点击 <code>#1</code>（1），从右键菜单中选择 <code>检查</code>（2），如下图所示：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-f12.png" alt="Select选择器的基本使用"></p>
+<p>在 <code>Chrome</code> 开发者工具（F12，开发者工具 &gt; Elements）中观察 <code>#1</code> 对应的HTML代码结构。如下图所示：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-html.png" alt="#1 的HTML代码结构"></p>
+<p>UI自动化中点击 <code>#1</code>，实质上是选择 <code>input[aria-owns=&quot;rc_select_0_list&quot;]</code> 后点击， <code>antd</code> Select选择器（#1）的选项下拉列表就会展示出来。</p>
+<p>与 <code>HTML</code> 原生的 <code>select</code> 不同，选中 <code>yiminghe</code>（#2）选项并不是那么容易。</p>
+<p>还是老套路，在 <code>yiminghe</code>（#2）选项上右键点击，从右键菜单中选择 <code>检查</code>。在 <code>Chrome</code> 开发者工具（F12，开发者工具 &gt; Elements）中观察 <code>yiminghe</code>（#2）选项对应的HTML代码结构。如下图所示：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/antd-select-basic-list.png" alt="#2 的HTML代码结构"></p>
+<p>选项（#2，yiminghe）的顶层容器很容易识别，就是 <code>div.rc-virtual-list</code>（b）。非常遗憾，每一个 <code>antd</code> Select选择器都会渲染出一个自己的 <code>div.rc-virtual-list</code>（b）。</p>
+<p>再仔细观察，就会发现 <code>div.rc-virtual-list</code>（b）总是紧跟在各自 <code>antd</code> Select选择器的 <code>div#rc_select_0_list</code>（a） 之后。在当前这个场景里， <code>id</code> 和文档结构片断是具有稳定性质的。</p>
+<p>进一步观察，可以知道 <code>div.ant-select-item</code> 或 <code>div.ant-select-item-option</code> 可以定位下拉列表中的选项。但是，如果想选中 <code>yiminghe</code>（#2）选项，需要使用属性选择器 <code>div[title=&quot;yiminghe&quot;]</code> 。</p>
+<p>综上所述，点击 <code>#1</code>（ <code>input[aria-owns=&quot;rc_select_0_list&quot;]</code>），再选中 <code>#2</code>（<code>div#rc_select_0_list + div.rc-virtual-list div[title=&quot;yiminghe&quot;]</code>），就完成了最初设定的UI自动化目标。</p>
+<p>无论是哪一类选择页面元素的方法，选择的本身并不重要，最重要的是识别、提炼与页面元素相关的稳定性质。页面元素选择的词汇，只不过是表达这种稳定性质的一个手段。</p>
+<h2 id="开发者给选择元素带来的影响"><a href="#开发者给选择元素带来的影响" class="headerlink" title="开发者给选择元素带来的影响"></a>开发者给选择元素带来的影响</h2><p>以上讨论的选择页面元素的方法，基本上都强调了UI自动化没有代码侵入性的涵义。假定和开发者之间井水不犯河水，更适用于测试工程师（QA）做UI自动化的黑盒测试。</p>
+<p>正如计算机超过 256k 内存，程序员们就不再精心设计内存的使用。自从前端框架和组件库广泛使用以来，尤其是以虚拟 <code>DOM</code> 树为基础的现代前端普及后，前端工程的开发效率有了质的提升。与此同时，大家对 <code>HTML</code> 标签（tag）的语义化使用，却不如早前那般重视。</p>
+<p>除了编写优雅的 <code>jsx</code> 代码，作为优雅的前端工程师（FE），还应该特别关心 <code>HTML</code> 标签（tag）、属性和文档结构的语义化表达。按钮要用 <code>&lt;button class=&quot;ant-btn&quot; /&gt;</code>，而不是 <code>&lt;a class=&quot;ant-btn&quot; /&gt;</code>。无序列表要用 <code>&lt;ul /&gt;</code>，有序列表用 <code>&lt;ol /&gt;</code>，段落就用 <code>&lt;p /&gt;</code>。如果需要对自己的主题做个解释，就使用 <code>&lt;div title=&quot;主题&quot; /&gt;</code>。页面元素的层次结构也如是，是父子关系的内容就用标签（tag）的父子结构表达，是兄弟关系就用标签（tag）的兄弟关系表达语义。</p>
+<p>如果开发者（前端工程师，FE）积极参与进来，设计出优雅的前端代码，具有良好的可测性，UI自动化就会吹进一股亚平宁半岛的风。</p>
+<p>与测试驱动开发（<code>Test-Driven Development，TDD</code>）先写单元测试用例再写代码实现类似，行为驱动开发（<code>Behavior-Driven Development，BDD</code>）也应该是先写UI自动化的场景剧本，再进行前端代码的开发。既然是先有剧本（<code>Feature</code>）和场景（<code>scenario</code>），就会反向驱动前端工程师（FE）精心设计具有良好可测性的选择器（Selector），就会实现良好的语义化文档结构和必要的 <code>data-testid</code> 等可测性属性。</p>
+<p>前端组件单元测试中，也需要准确选择元素才能断言，所以良好的单元测试也会为UI自动化选择页面元素提供良好的支持。</p>
+<p>开发者还可以提供页面元素选择的框架级增强。例如，可以根据需要增加 <code>XPath</code> 选择 <code>HTML</code> 页面元素的能力，可以引入 <a target="_blank" rel="noopener" href="https://testing-library.com/"><code>Testing Library</code></a> 等工具库，强化UI自动化选择页面元素的能力。</p>
+<h2 id="Chrome-开发者工具（F12）的辅助作用"><a href="#Chrome-开发者工具（F12）的辅助作用" class="headerlink" title="Chrome 开发者工具（F12）的辅助作用"></a><code>Chrome</code> 开发者工具（F12）的辅助作用</h2><p>充分利用 <code>Chrome</code> 开发者工具（F12）提供的辅助能力，可以提高选择页面元素的效率。</p>
+<h3 id="选择器（Selector）辅助分析"><a href="#选择器（Selector）辅助分析" class="headerlink" title="选择器（Selector）辅助分析"></a>选择器（Selector）辅助分析</h3><p>如下图，在需要分析的页面元素（1）上点击右键，从右键菜单中选择 <code>检查</code>（2），即可用来分析页面元素。</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/f12-1.png" alt="F12 选择器（Selector）辅助分析"></p>
+<p>利用 <code>Chrome</code> 开发者工具（F12），复制出页面元素的选择器（Selector），如下图：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/f12-2.png" alt="F12 选择器（Selector）辅助分析"></p>
+<p>在页面元素（1）对应的 <code>Elements</code> 标签（2）中的元素结构（3）上，右键菜单选择 <code>Copy</code> （4），选择 <code>Copy selector</code> （5），就可以复制出页面元素（1）的选择器（Selector）。</p>
+<p>这个方法获复制出的选择器（Selector），缺少UI自动化所需要的稳定性质，很难直接使用。但是，有很重要的参考价值，能从中识别和提炼出具有稳定性质的选择器（Selector）。</p>
+<h3 id="选择器（Selector）的验证"><a href="#选择器（Selector）的验证" class="headerlink" title="选择器（Selector）的验证"></a>选择器（Selector）的验证</h3><p>对于比较复杂的页面元素选择器（Selector），我们需要验证一下，才能用于UI自动化。毕竟，如果捕获不到指定的元素，选择器（Selector）长得再好看也没有用。</p>
+<p><code>Puppeteer</code> 技术栈选择元素是由 <code>document.querySelector</code> 、 <code>document.querySelectorAll</code> 实现的，可以在 <code>Chrome</code> 开发者工具（F12）中使用同样的方法来验证选择器（Selector）是否有效。如果开发者对选择元素提供了框架级增强，也可以由其提供更多的验证方法。</p>
+<p>在这里，我们且只考虑CSS选择器的验证，以 <code>document.querySelector</code> 为例，如下图：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/f12-3.png" alt="F12 选择器（Selector）验证"></p>
+<p>如果选择器（3）正确，对应的页面元素（1）会有反选效果。 回车确认后， <code>Console</code> 控制台可以回显页面元素的HTML代码（2），鼠标移动到（2）后，选中的页面元素（1）也会有反选效果。</p>
+<p>除了上述方法验证外，还可以在 <code>Chrome</code> 开发者工具（F12，开发者工具 &gt; Elements）中使用 <code>Ctrl + F</code> 调出查询文本框（1），把选择器（Selector） <code>Copy</code> 进去验证。如下图：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/f12-3.1.png" alt="F12 选择器（Selector）验证"></p>
+<p>以上的 2 个方法，可以验证页面上的静态元素。有些元素是交互中才会动态出现的，就不太方便验证。</p>
+<p>这种情况下，可以为动态元素指定一些比较夸张的验证样式来验证。如下图：</p>
+<p><img src="/images/articles/studio/cucumber-puppeteer-selector/f12-4.png" alt="F12 选择器（Selector）验证"></p>
+<p>在 <code>Chrome</code> 开发者工具（F12，开发者工具 &gt; Elements）的 <code>Styles</code> 视图（1）右侧点加号（2），选中 <code>inspector-stylesheet</code>（3），在视图中添加 <code>CSS</code> 选择器（Selector）（4）。在这个样式中，可以写比较夸张的样式，例如很大的字（font-size: 50px）。当观察到页面元素产生了预期的夸张变化后，说明你写的选择器（Selector）是对的。</p>
+<p>这个验证方式，也有不适用的场景。例如，<code>CSS</code> 选择器优先级的权重不够高，即使是正确的选择器（Selector），元素样式也不会出现预期的夸张变化。</p>
+<p>在UI自动化测试中，选择页面元素是一件充满诗意的工作，探索和研究不可能一劳永逸。</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><h3 id="重要参考"><a href="#重要参考" class="headerlink" title="重要参考"></a>重要参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://pptr.dev/guides/query-selectors">【重要】Puppeteer CSS 和 <code>text/</code>、<code>xpath/</code>、<code>aria/</code>、<code>pierce/</code> 选择器</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/css_selectors.asp">【重要】CSS 选择器可用写法参考</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5822c9dde95f">【重要】CSS选择器优先级</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/xpath/index.asp">【重要】内置的 XPath 选择器可用写法参考 (xpath&#x2F;)</a></li>
+<li><a target="_blank" rel="noopener" href="https://api.jquery.com/category/selectors/">【重要】扩展的 jQuery 选择器可用写法参考 (jQuery&#x2F;)</a></li>
+</ul>
+<h3 id="延伸参考"><a href="#延伸参考" class="headerlink" title="延伸参考"></a>延伸参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors">CSS 选择器</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/TR/selectors-api/">W3C Selectors API Level 1</a></li>
+<li><a target="_blank" rel="noopener" href="https://ant.design/components/select-cn/">antd Select选择器</a></li>
+<li><a target="_blank" rel="noopener" href="https://codesandbox.io/s/glcd60">antd Select选择器基本使用代码示例</a></li>
+<li><a target="_blank" rel="noopener" href="https://testing-library.com/docs/queries/about">Testing Library 选择页面元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://testing-library.com/docs/pptr-testing-library/intro">Puppeteer Testing Library</a></li>
+<li><a target="_blank" rel="noopener" href="https://pptr.dev/#?product=Puppeteer&show=api-pageselector">Puppeteer 的页面元素选择</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">使用选择器定位DOM元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector">document.querySelector()</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll">Document.querySelectorAll</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/essay-arts-2024-08-21-qi-tian-da-sheng.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          聊斋志异之齐天大圣
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/catalog-bookcase-anne.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">安妮的世界</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul class="self-media-list">
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://channels.weixin.qq.com/platform">视频号助手</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://qqzz.qq.com/index">QQ 短视频</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.douyin.com/creator-micro/home">抖音创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://cp.kuaishou.com/profile">快手创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://member.bilibili.com/platform/home">bilibli 创作中心</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://studio.ximalaya.com/">喜玛拉雅</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.xiaohongshu.com/creator/home">小红书创作</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/a1722005e938">简书</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">写作计划</a>
+  
+    <a href="/books" class="mobile-nav-link">藏书目录</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

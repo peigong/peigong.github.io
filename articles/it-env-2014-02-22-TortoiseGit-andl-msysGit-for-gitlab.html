@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>GitLab和TortoiseGit、msysGit的配合使用 | VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="软件安装下载和安装windows下Git环境：  TortoiseGit(https:&#x2F;&#x2F;tortoisegit.org&#x2F;)，是 TortoiseSVN 的 Git 变种，主要用于图形化显示。 msysGit(https:&#x2F;&#x2F;gitforwindows.org&#x2F;)，windows 下的Git 版本，是 TortoiseGit 所必须依赖的。  下载完两个软件之后，首先安装 TortoiseGit，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitLab和TortoiseGit、msysGit的配合使用">
+<meta property="og:url" content="http://pg.js.cn/articles/it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="软件安装下载和安装windows下Git环境：  TortoiseGit(https:&#x2F;&#x2F;tortoisegit.org&#x2F;)，是 TortoiseSVN 的 Git 变种，主要用于图形化显示。 msysGit(https:&#x2F;&#x2F;gitforwindows.org&#x2F;)，windows 下的Git 版本，是 TortoiseGit 所必须依赖的。  下载完两个软件之后，首先安装 TortoiseGit，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-02-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-29T16:00:00.000Z">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">写作计划</a>
+        
+          <a class="main-nav-link" href="/books">藏书目录</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="https://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab.html" class="article-date">
+  <time class="dt-published" datetime="2014-02-21T16:00:00.000Z" itemprop="datePublished">2014-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      GitLab和TortoiseGit、msysGit的配合使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>下载和安装windows下Git环境：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://tortoisegit.org/download/">TortoiseGit(https://tortoisegit.org/)</a>，是 TortoiseSVN 的 Git 变种，主要用于图形化显示。</li>
+<li><a target="_blank" rel="noopener" href="https://gitforwindows.org/">msysGit(https://gitforwindows.org/)</a>，windows 下的Git 版本，是 TortoiseGit 所必须依赖的。</li>
+</ol>
+<p>下载完两个软件之后，首先安装 TortoiseGit，安装完 TortoiseGit 之后先别急着用，接着安装 msysGit，安装过程中的一些选项都可以默认！</p>
+<h2 id="SSH密钥和Git-Bash"><a href="#SSH密钥和Git-Bash" class="headerlink" title="SSH密钥和Git Bash"></a>SSH密钥和Git Bash</h2><p>本节介绍在 Git 命令行（Git Bash）中 SSH 密钥的生成，以及在 Gitlab 上的使用。</p>
+<p>使用命令行进行 Git 操作，显得高端、大气、上档次。如果你不慕虚名，只想生活简单而美好，就像使用 SVN 小乌龟（TortoiseSVN）那样工作，可以直接跳过本节。</p>
+<h3 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h3><ol>
+<li>检查当前用户目录中有没有 .ssh 目录。如果没有的话，在命令行中使用 <code>mkdir .ssh</code> 创建。</li>
+<li>安装 Git 后，进入某个目录，使用右键菜单打开 “Git Bash”。</li>
+<li>键入命令：<code>ssh-keygen -t rsa -C &quot;your email&quot;</code>。邮件地址可以不写，默认是 <code>本机用户名@本机机器名</code> 。最好是填写一些标识自己的记号。</li>
+<li>提醒你输入 key 的名称，输入 id_rsa。<strong>注意：</strong> id_rsa 名字是固定的，因为 GitLab 只认识这个。</li>
+<li>提醒你输入 key 的密码，空白即可。</li>
+<li>在当前目录下产生两个密钥文件：id_rsa 和 id_rsa.pub</li>
+<li>把生成的密钥文件复制到当前用户的 .ssh 目录下。</li>
+</ol>
+<h3 id="在-Gitlab-上添加公钥"><a href="#在-Gitlab-上添加公钥" class="headerlink" title="在 Gitlab 上添加公钥"></a>在 Gitlab 上添加公钥</h3><p>用记事本打开、复制 id_rsa.pub 文件的内容，在 Gitlab 网站 My Porfile 页面右下角，点击 Add Public Key ，粘贴刚才复制的内容到 Key 的大文本框，提交即可。</p>
+<p><strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。</p>
+<h3 id="在命令行中进行Git操作"><a href="#在命令行中进行Git操作" class="headerlink" title="在命令行中进行Git操作"></a>在命令行中进行Git操作</h3><p>从程序目录打开 “Git Bash”（或使用右键菜单），在命令行中<code>git clone</code>一个项目。</p>
+<p>提示是否把项目Git库的域名设置为可信任的已知域名，直接回答<code>yes</code>就可以了。</p>
+<p>其他命令，一样的用法。不清楚的话，可以查阅《<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a>》。</p>
+<h2 id="TortoiseGit中的密钥"><a href="#TortoiseGit中的密钥" class="headerlink" title="TortoiseGit中的密钥"></a>TortoiseGit中的密钥</h2><p>本节介绍在Git小乌龟（TortoiseGit）中生成密钥，以及在Gitlab上的使用。</p>
+<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><ol>
+<li>在开始菜单-&gt;TortoiseGit-&gt;Puttygen。这是一个用于TortoiseGit的Putty密钥生成器。</li>
+<li>点击 generate 按钮。让鼠标在 generate 按钮以上、进度条以下的空白区域随机晃动，直到密钥生成完毕。</li>
+<li>复制粘贴空白区域生成的SSH密钥文本（ssh-rsa。。。），在Gitlab网站My Porfile页面右下角，点击 Add Public Key ，粘贴刚才复制的内容到Key的大文本框，提交即可。<strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。Title文本框随便写一些内容就可以，主要是区别不同的Key，没有特别的用途。</li>
+<li>点击 save private key 按钮，把文件生成在当前用户目录下的.ssh目录中（生成的文件后缀是<code>.ppk</code>）。</li>
+</ol>
+<h3 id="使用右键菜单"><a href="#使用右键菜单" class="headerlink" title="使用右键菜单"></a>使用右键菜单</h3><ol>
+<li>在打算<code>git clone</code>项目的目录中，右键选择<code>Git克隆</code>。</li>
+<li>勾选 加载putty密钥 ，并选择上面生成的后缀是<code>.ppk</code>的私钥文件。</li>
+<li>后续的操作，及除<code>git clone</code>以外的工作，就不需赘述了。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/book/zh">The entire Pro Git book</a></li>
+<li><a target="_blank" rel="noopener" href="http://feiyang.me/2013/03/work-with-gitlab/">用Gitlab来工作</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.docin.com/p-596784591.html">GitLab使用介绍</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/bluesky8640/article/details/8171104">GitLab在windows用户端的使用教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/lenolix/archive/2013/02/06/2906466.html">gitlab搭建之旅</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.linuxidc.com/Linux/2013-05/85184.htm">在CentOS里安装GitLab</a></li>
+<li><a target="_blank" rel="noopener" href="http://herry2013git.blog.163.com/blog/static/219568011201341111240751/">gitlab多人协同工作</a></li>
+<li><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gitlab/?setlang=zh_CN">软件包详情: gitlab 6.4.0-1</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/articles/it-studio-2014-04-16-openx.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          学习OpenX广告管理与跟踪系统
+        
+      </div>
+    </a>
+  
+  
+    <a href="/articles/it-lessons-2014-01-23-installation-and-use-of-yeoman.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Yeoman的安装和使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul class="self-media-list">
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://channels.weixin.qq.com/platform">视频号助手</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://qqzz.qq.com/index">QQ 短视频</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.douyin.com/creator-micro/home">抖音创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://cp.kuaishou.com/profile">快手创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://member.bilibili.com/platform/home">bilibli 创作中心</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://studio.ximalaya.com/">喜玛拉雅</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.xiaohongshu.com/creator/home">小红书创作</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/a1722005e938">简书</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">写作计划</a>
+  
+    <a href="/books" class="mobile-nav-link">藏书目录</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

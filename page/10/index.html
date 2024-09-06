@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>VET. 周培公</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="VET. 周培公的个人网站">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VET. 周培公">
+<meta property="og:url" content="http://pg.js.cn/page/10/index.html">
+<meta property="og:site_name" content="VET. 周培公">
+<meta property="og:description" content="VET. 周培公的个人网站">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="VET. 周培公">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">VET. 周培公</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">写 JS 代码的周培公是一个兽医</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/proposals">写作计划</a>
+        
+          <a class="main-nav-link" href="/books">藏书目录</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/peigong"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://gitee.com/pg0xff"><span class="fa fa-git"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://user.qzone.qq.com/377650913"><span class="fa fa-qq"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://weibo.com/u/1766654653"><span class="fa fa-weibo"></span></a>
+          
+            <a class="nav-icon" href="https://pg.js.cn"><span class="fa fa-home"></span></a>
+          
+        
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-it-studio-2015-09-18-webplate-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2015-09-18-webplate-stack.html" class="article-date">
+  <time class="dt-published" datetime="2015-09-17T16:00:00.000Z" itemprop="datePublished">2015-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-studio-2015-09-18-webplate-stack.html">前端框架Webplate的技术栈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前端框架Webplate"><a href="#前端框架Webplate" class="headerlink" title="前端框架Webplate"></a>前端框架Webplate</h2><p><a target="_blank" rel="noopener" href="http://getwebplate.com/">Webplate</a>是一款优秀的前端框架，可使开发者专注于站点或应用的开发，它提供了稳健的布局引擎、全局按钮元素和可定制性的表格，同时还包括了jQuery插件和大量工具。 &#x3D; <a target="_blank" rel="noopener" href="https://github.com/chrishumboldt/webplate">GitHub</a></p>
+<p>Webplate is an awesome front-end framework that lets you stay focused on building your site or app all the while remaining really easy to use.</p>
+<h2 id="Yepnope-js"><a href="#Yepnope-js" class="headerlink" title="Yepnope.js"></a>Yepnope.js</h2><p>Yepnope.js是一个能够根据输入条件来选择性异步加载资源文件的js脚本，可以在页面上仅加载用户需要的js&#x2F;css。</p>
+<p>The first thing executed by the stack is yepnope.js to asynchronously load the necessary Javascript and CSS files. In essence the stack.js file is a custom configured deployment and will load up essential libraries before checking for project files. Even though this library has been deprecated it is still valuable in its execution and is the core of how Webplate runs. There are plans to build a custom loader but for now this works great.</p>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>Next up is jQuery and is one of the most important libraries used by Webplate. All of the Javascript tools, custom plugins and wrappers are written using jQuery and as such cannot be removed. Also the version 2 build of jQuery is being used and as such Webplate is not compatible with any IE version below 9. This is a conscious decision to stay ahead of the curve in terms of front-end development.</p>
+<h2 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h2><p>Modernizr是一个开源的JS库，它使得那些基于访客浏览器的不同（指对新标准支持性的差异）而开发不同级别体验的设计师的工作变得更为简单。它使得设计师可以在支持HTML5和CSS3的浏览器中充分利用HTML5和CSS3的特性进行开发，同时又不会牺牲其他不支持这些新技术的浏览器的控制。</p>
+<p>Another critical library, Modernizr is a feature detection script used to determine what the browser is capable of doing, ranging from CSS animations to touch enabled events. It does so by assigning a class to the HTML element which can then be used by your Javascript or CSS.</p>
+<h2 id="Hammer-js"><a href="#Hammer-js" class="headerlink" title="Hammer.js"></a>Hammer.js</h2><p>Hammer.js是一个轻量级的JavaScript库（仅有2kb），能让你的网站轻松实现触控事件。它依赖于jQuery，用来控制触摸设备上的多点触控特性。</p>
+<p>All touch based gestures are handled through Hammer.js with the jQuery plugin included as part of the stack. This really is a great library and replaces the original inclusion of jQuery.Finger. To find out more visit the Hammer.js site.</p>
+<h2 id="Velocity-js"><a href="#Velocity-js" class="headerlink" title="Velocity.js"></a>Velocity.js</h2><p>Velocity.js 是velocity模板语法的javascript实现。Velocity 是基于Java的模板引擎，广泛应用在阿里集 体各个子公司。Velocity模板适用于大量模板使用的场景，支持复杂的逻辑运算，包含 基本数据类型、变量赋值和函数等功能。Velocity.js 支持 Node.js 和浏览器环境。</p>
+<p>Animations are an important part of the front-end experience but managing the right kind of animation for the particular device is a challenge. Velocity.js is the best out there for this job and will give you smooth Javascript animations across the board.</p>
+<h2 id="Fastclick"><a href="#Fastclick" class="headerlink" title="Fastclick"></a>Fastclick</h2><p>FastClick 是一个简单，易于使用的JS库用于消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟。</p>
+<p>Most mobile devices come with an irritating delay on touch click events for links and buttons. Fastclick removes this delay resulting in a more app like feel to the whole project. Note that this library will only be loaded if Webplate detects touch capabilities and is executed automatically.</p>
+<h2 id="Normalize-css"><a href="#Normalize-css" class="headerlink" title="Normalize.css"></a>Normalize.css</h2><p>Normalize.css 是一个可定制的 CSS 文件，使浏览器呈现的所有元素，更一致和符合现代标准。它正是针对只需要统一的元素样式。该项目依赖于研究浏览器默认元素风格之间的差异，精确定位需要重置的样式。这是一个现代的，HTML5-ready 的 CSS 重置样式集。</p>
+<p>A collection of HTML element and attribute style-normalizations to help clear any strange style nuances. Normalize.css helps maintain consistency across all your projects in all the browsers.</p>
+<h2 id="Typeplate"><a href="#Typeplate" class="headerlink" title="Typeplate"></a>Typeplate</h2><p>Typeplate 是一个“排版入门套件”。我们不需要美学设计,但定义适当的标记与可扩展样式为常见的排版模式。一个精简Sass 库关注适当的技术实现的设计模式。</p>
+<p>Typelate is a “typographic starter kit” used to define proper markup for common typographic patterns. It will handle all your type from heading tags, to paragraphs and lists.</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-characters-2015-07-31-xiang-fei" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-characters-2015-07-31-xiang-fei.html" class="article-date">
+  <time class="dt-published" datetime="2015-07-30T16:00:00.000Z" itemprop="datePublished">2015-07-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/characters/">人物</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-characters-2015-07-31-xiang-fei.html">湘妃</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="雨"><a href="#雨" class="headerlink" title="雨"></a>雨</h2><blockquote>
+<p>2015-07-31</p>
+</blockquote>
+<p>湘妃或从南方来，</p>
+<p>一抹乌云暑气收。</p>
+<p>点点珠泪随风洒，</p>
+<p>不着欢喜不着愁。</p>
+<h2 id="巫山"><a href="#巫山" class="headerlink" title="巫山"></a>巫山</h2><blockquote>
+<p>2012-04-28</p>
+</blockquote>
+<p>斑斑哀怨斑竹泪，</p>
+<p>楚楚娇柔楚云飞。</p>
+<p>巫山朝暮云雨后，</p>
+<p>不知先王曾是谁。</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-characters-2015-06-16-gao-su" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-characters-2015-06-16-gao-su.html" class="article-date">
+  <time class="dt-published" datetime="2015-06-15T16:00:00.000Z" itemprop="datePublished">2015-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/characters/">人物</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-characters-2015-06-16-gao-su.html">高孝瓘</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="我为你脱下这件衣裳"><a href="#我为你脱下这件衣裳" class="headerlink" title="我为你脱下这件衣裳"></a>我为你脱下这件衣裳</h2><blockquote>
+<p>2015-06-16</p>
+</blockquote>
+<p>那一年在晋阳，</p>
+<p>青梅打着竹马，</p>
+<p>与你追逐。</p>
+<p>那一天，</p>
+<p>衣甲未解谒君门。</p>
+<p>你倚窗问我，</p>
+<p>客从何处来，</p>
+<p>奴不曾认得。</p>
+<p>我轻轻走过去，</p>
+<p>附耳低言，</p>
+<p>卿既不相识，</p>
+<p>我为你脱下这件衣裳，</p>
+<p>看看可曾认得。</p>
+<p>满脸的桃花，</p>
+<p>如日落中的红霞。</p>
+<ul>
+<li></li>
+</ul>
+<p>那一年在邙山，</p>
+<p>金墉城外九重鹿角，</p>
+<p>十面连营。</p>
+<p>那一天，</p>
+<p>五百将士酾酒而出。</p>
+<p>你高声问我，</p>
+<p>乱军中何人，</p>
+<p>仆不曾认得。</p>
+<p>我仰望高高的敌楼，</p>
+<p>君既不相识，</p>
+<p>我为你脱下这件衣裳，</p>
+<p>看看可曾认得。</p>
+<p>漫天的羽箭，</p>
+<p>如狂风中的暴雨。</p>
+<ul>
+<li></li>
+</ul>
+<p>那一年在临漳，</p>
+<p>你对我说，</p>
+<p>阿兄慷慨，</p>
+<p>孤不曾认得。</p>
+<p>那一天，</p>
+<p>你送来一壶热酒。</p>
+<p>青青的汾水，</p>
+<p>如当年晋阳的竹叶。</p>
+<p>酒气化作一只小鸟，</p>
+<p>袅袅盘旋。</p>
+<p>我在竹笺上写下表文，</p>
+<p>上既不相识，</p>
+<p>我为你脱下这件衣裳，</p>
+<p>看看可曾认得。</p>
+<p>看着你整理我的遗容，</p>
+<p>我已在波涛彼岸的东瀛。</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-characters-2015-06-10-guan-yu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-characters-2015-06-10-guan-yu.html" class="article-date">
+  <time class="dt-published" datetime="2015-06-09T16:00:00.000Z" itemprop="datePublished">2015-06-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/characters/">人物</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-characters-2015-06-10-guan-yu.html">关羽</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="关公"><a href="#关公" class="headerlink" title="关公"></a>关公</h2><blockquote>
+<p>2015-06-10</p>
+</blockquote>
+<p>关公大意荆州破，</p>
+<p>柴桑刀起人头落。</p>
+<p>陆口铸成紫金首，</p>
+<p>香木为躯葬宛洛。</p>
+<ul>
+<li></li>
+</ul>
+<p>森森蜀地衣冠冢，</p>
+<p>兄弟哀恸难苟活。</p>
+<p>能显亡灵斩吴将，</p>
+<p>难度此心到解脱。</p>
+<ul>
+<li></li>
+</ul>
+<p>声声索命到汜水，</p>
+<p>汜水关里见头陀。</p>
+<p>云长此来为索命，</p>
+<p>当年六将向谁索？</p>
+<ul>
+<li></li>
+</ul>
+<p>和尚慈悲多开释，</p>
+<p>昧于法相昧因果。</p>
+<p>神魂散去归来处，</p>
+<p>人无挂碍心无着。</p>
+<h2 id="三国演义·云长"><a href="#三国演义·云长" class="headerlink" title="三国演义·云长"></a>三国演义·云长</h2><blockquote>
+<p>2014-10-2</p>
+</blockquote>
+<p>当年也曾笑关公，</p>
+<p>匹夫一怒荆州轻。</p>
+<p>能斩羌卒何足道，</p>
+<p>宛洛有失王业空。</p>
+<p>少年义气江湖事，</p>
+<p>天涯浪迹侠客行。</p>
+<p>涿郡不从皇叔去，</p>
+<p>解良刀法可闻名。</p>
+<h2 id="三国演义之关公一怒"><a href="#三国演义之关公一怒" class="headerlink" title="三国演义之关公一怒"></a>三国演义之关公一怒</h2><blockquote>
+<p>2010-11-02</p>
+</blockquote>
+<p>名马美女君子剑，</p>
+<p>俨茶烈酒性情人。</p>
+<p>红颜一怒徐州破，</p>
+<p>千里单骑露重深。</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-06-04-meng-xing-lai" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-06-04-meng-xing-lai.html" class="article-date">
+  <time class="dt-published" datetime="2015-06-03T16:00:00.000Z" itemprop="datePublished">2015-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-06-04-meng-xing-lai.html">梦醒来</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>睡下后，</p>
+<p>我走进梦中。</p>
+<ul>
+<li></li>
+</ul>
+<p>这个世界，</p>
+<p>都是杀戮和追逐。</p>
+<p>阵阵心悸，</p>
+<p>我走进另一个梦。</p>
+<p>悚然庆幸，</p>
+<p>刚刚只是一场梦。</p>
+<ul>
+<li></li>
+</ul>
+<p>这个世界，</p>
+<p>一直都在争执。</p>
+<p>被无明怒火灼痛后，</p>
+<p>我走进另一个梦。</p>
+<p>释然庆幸，</p>
+<p>刚刚只是一场梦。</p>
+<ul>
+<li></li>
+</ul>
+<p>这个世界，</p>
+<p>都是美色和情欲的诱惑。</p>
+<p>未得时贪痴，</p>
+<p>既得后惶恐。</p>
+<p>在患得患失中醒来，</p>
+<p>怅然庆幸，</p>
+<p>刚刚只是一场梦。</p>
+<ul>
+<li></li>
+</ul>
+<p>这个世界，</p>
+<p>七宝墁地，</p>
+<p>金绳界道，</p>
+<p>我身如琉璃。<br>‌‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-06-04-zai-chen-shi-jian" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html" class="article-date">
+  <time class="dt-published" datetime="2015-06-03T16:00:00.000Z" itemprop="datePublished">2015-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html">尘世</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="在尘世间"><a href="#在尘世间" class="headerlink" title="在尘世间"></a>在尘世间</h2><p>在观众里，</p>
+<p>我看这尘世间的戏。</p>
+<p>王侯将相，</p>
+<p>才子佳人，</p>
+<p>你方唱罢我登场，</p>
+<p>都是聚散离合，</p>
+<p>都是悲欢苦乐。</p>
+<ul>
+<li></li>
+</ul>
+<p>在演员中，</p>
+<p>我看这尘世间的观众。</p>
+<p>男女老少，</p>
+<p>士农工商，</p>
+<p>散去一场又来一场，</p>
+<p>忽而哭的流涕，</p>
+<p>忽而笑的俯仰。</p>
+<ul>
+<li></li>
+</ul>
+<p>在尘世间，</p>
+<p>我当着观众当演员。</p>
+<p>酒色财气，</p>
+<p>名闻利养，</p>
+<p>放不下来舍不去，</p>
+<p>为功名利禄受辛苦，</p>
+<p>为爱伤心落泪哭。</p>
+<p>‌‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-05-27-lan-hua" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-05-27-lan-hua.html" class="article-date">
+  <time class="dt-published" datetime="2015-05-26T16:00:00.000Z" itemprop="datePublished">2015-05-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-05-27-lan-hua.html">兰花</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="她窗前的兰花开了"><a href="#她窗前的兰花开了" class="headerlink" title="她窗前的兰花开了"></a>她窗前的兰花开了</h2><p>她窗前的兰花开了</p>
+<p>纤瘦的身姿</p>
+<p>娇柔照水</p>
+<p>在微风中摇曳</p>
+<p>一如弱柳扶行</p>
+<ul>
+<li></li>
+</ul>
+<p>她窗前的兰花开了</p>
+<p>依旧似灵河岸边</p>
+<p>潺潺的流水</p>
+<p>恍恍惚惚</p>
+<p>仍有三生石的依恋</p>
+<ul>
+<li></li>
+</ul>
+<p>她窗前的兰花开了</p>
+<p>如中秋月下</p>
+<p>寒塘中的鹤影</p>
+<p>冰清玉洁</p>
+<p>如葬过的花魂</p>
+<ul>
+<li></li>
+</ul>
+<p>她窗前的兰花开了</p>
+<p>不胜羞怯</p>
+<p>是天外的绛草</p>
+<p>于无情中</p>
+<p>乘愿又来</p>
+<p>‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-essay-thinking-2015-04-20-pei-yang-hai-zi-du-li-si-kao-de-jing-shen" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/essay-thinking-2015-04-20-pei-yang-hai-zi-du-li-si-kao-de-jing-shen.html" class="article-date">
+  <time class="dt-published" datetime="2015-04-19T16:00:00.000Z" itemprop="datePublished">2015-04-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/thinking/">思考札记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/essay-thinking-2015-04-20-pei-yang-hai-zi-du-li-si-kao-de-jing-shen.html">培养孩子独立思考的精神</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在家庭教育上，谈不上什么经验和心得，因为我本人做的并不好，孩子教育的也不是太成功。但是，我觉得我所认可和崇尚的理念应该是没有大问题的，那就是一定要培养孩子独立思考的精神。<br>我们的成长过程中，很多人都被教育得人云亦云。或独立思考的能力薄弱，或不敢独立思考，或不敢表达自己的思考。在工作中，对某件事情的独立思考，才是真正被大家所尊重的，而并不是渊博的专业知识，也不是拼命上进的刻苦精神，不是熟练的工作技能，虽然这些毋庸置疑的重要。</p>
+<p>孩子从来就不乏独立思考的精神，而且思考的深度也常常令人震撼。有一年夏天，女儿只有几岁大，我在家喝冰镇啤酒，酒杯外有很多冷凝的水珠。我把她叫过来说，“哎呀，你看水杯是不是漏了，怎么外面有好多水呀？”。她很认真的检查了一下水杯，发现水杯并没有漏。我就很诧异的问，“这水是从哪里来的呢？”她思考良久，突然很兴奋的告诉我们，“酒杯外面的水是暖瓶里面的水”。这个结论让我们都很费解，“为什么呢？”。女儿走过去，打开暖瓶盖，冒出了一些热气，“每次打开暖瓶，都会跑出来一些水，然后就跑到酒杯外面去了”。这个事情让我很震撼，不单是孩子独立思考的精神，思考达到的深度也是不可思议的。</p>
+<p>其实作为家长，我们需要做的，就是尊重孩子的思考。女儿小的时候，喜欢看82版的西游记。有一回下班后，我爱人问我“唐僧总说四大皆空，四大是什么？”。我就说是地、水、火、风，并做了一些简单解释。但是我很奇怪，怎么想起来问这么个奇怪的问题？爱人说这是女儿看西游记的疑问。我很紧张，“你是怎么回答的？”，爱人就说“当时我就说不知道”。对，我们不知道的，就一定要说不懂、不知道，千万不要指责孩子问的有问题。</p>
+<p>有时候，孩子思考中有疑问，我们也无法解答。往往就变的很不耐烦，指责孩子胡思乱想。其实，我们需要做的，除了自我的约束和克制，更重要的是加强思考和学习。有一次，女儿很认真的问我“唐僧为什么要去取经啊？”。这一下子把我问住了。是啊，我们确实一直在看唐僧取经的故事，但是从来没有想过唐僧为什么要去取经。当时我还没有读过原著，就拿电视剧里观音菩萨对唐太宗说的话解答，“能消无妄之灾，能度死人升天。”我们一家人讨论了一阵子，总觉得观音菩萨的理由不是太充分，不足以成为历经81难西天取经的理由。后来我阅读原著，一直带着这个疑问。最后发现，学习了很多东西，收获非常大。</p>
+<p>我们的孩子们，都是问题宝宝。作为家长，我们需要做的，可能就是鼓励孩子的好奇和思考。遇到我们不知道的问题，就直接说不懂、不知道，让他继续思考。孩子们思考的问题太广泛、太深入了，我们不可能对每个问题都给出圆满的解答。独立思考的精神，不就是能让下一代超越我们的种子吗？</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-04-05-san-geng-meng" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-04-05-san-geng-meng.html" class="article-date">
+  <time class="dt-published" datetime="2015-04-04T16:00:00.000Z" itemprop="datePublished">2015-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-04-05-san-geng-meng.html">三更梦</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>疾风骤雨不发怒，</p>
+<p>和风丽日不生喜。</p>
+<p>人生泡影三更梦，</p>
+<p>都是心中沉渣起。‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-03-31-meng-huan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-03-31-meng-huan.html" class="article-date">
+  <time class="dt-published" datetime="2015-03-30T16:00:00.000Z" itemprop="datePublished">2015-03-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-03-31-meng-huan.html">梦幻</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>无明樵楼鼓三更，</p>
+<p>六道凡夫一夜梦。</p>
+<p>无始劫来无量情，</p>
+<p>纷纷不断万相生。</p>
+<p>心中幻想多挂碍，</p>
+<p>梦里人物难自醒。</p>
+<p>持戒修福生实信，</p>
+<p>皈依觉正皈依净。</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">
+      <img src="/images/weixin.png" alt="weixin" width="100%" />
+    </h3>
+    <div class="widget">
+      <ul class="self-media-list">
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://weread.qq.com/">微信读书</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/cgi-bin/home">微信公众号</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://channels.weixin.qq.com/platform">视频号助手</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://qqzz.qq.com/index">QQ 短视频</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.douyin.com/creator-micro/home">抖音创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://cp.kuaishou.com/profile">快手创作者</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://member.bilibili.com/platform/home">bilibli 创作中心</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://studio.ximalaya.com/">喜玛拉雅</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://creator.xiaohongshu.com/creator/home">小红书创作</a>
+          </li>
+        
+          <li>
+            <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/a1722005e938">简书</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 VET. 周培公<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/proposals" class="mobile-nav-link">写作计划</a>
+  
+    <a href="/books" class="mobile-nav-link">藏书目录</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
