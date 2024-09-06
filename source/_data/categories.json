@@ -14,12 +14,17 @@
         "title": "老周游记",
         "weight": 102
     },
+    "read": {
+        "name": "read",
+        "title": "读书笔记",
+        "weight": 103
+    },
     "thinking": {
         "name": "thinking",
         "title": "思考札记",
-        "weight": 103
+        "weight": 104
     },
-
+    
     "poem": {
         "name": "poem",
         "title": "培公诗抄",
