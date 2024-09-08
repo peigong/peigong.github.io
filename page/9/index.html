@@ -83,6 +83,190 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-env-2015-11-18-note-for-vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-11-18-note-for-vim.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-17T16:00:00.000Z" itemprop="datePublished">2015-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-11-18-note-for-vim.html">VIM使用笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>cd /usr/local/src/vim/vim-7.4.942
+sudo ./configure --prefix=/usr/local/vim --with-features=huge --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-multibyte --enable-sniff --enable-fontset
+sudo make
+sudo make install
+</code></pre>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li>在Ubuntu中使用<code>sudo apt-get install vim</code>安装。</li>
+<li>在<code>~/.vimrc</code>中加入一行<code>:set number</code>设置行号。</li>
+<li>vimtutor:sudo apt-get install vimtutor</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="参考配置"><a href="#参考配置" class="headerlink" title="参考配置"></a>参考配置</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/amix/vimrc">amix&#x2F;vimrc:The ultimate Vim configuration: vimrc</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/humiaozuzu/dot-vimrc">humiaozuzu&#x2F;dot-vimrc:Maple’s vim config files</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/spf13/spf13-vim">spf13&#x2F;spf13-vim:The ultimate vim distribution</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhcncn/p/4151701.html">Win7下安装配置gVim</a></li>
+</ul>
+<h3 id="自用配置"><a href="#自用配置" class="headerlink" title="自用配置"></a>自用配置</h3><pre><code>&quot; 显示行号  
+set number
+&quot; 显示标尺
+set ruler
+&quot; 设置当文件被改动时自动载入
+set autoread
+&quot; 自动保存  
+set autowrite
+&quot; 自动缩进  
+set autoindent
+&quot; 智能缩进  
+set smartindent
+set cindent 
+&quot; 制表符
+set noexpandtab
+set smarttab
+&quot; Tab键的宽度
+set tabstop=4
+set expandtab
+&quot; 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+&quot; 搜索逐字符高亮
+set hlsearch                                                                                                                                     
+set incsearch
+set smartcase
+&quot; 不自动添加空行
+set noendofline
+               
+syntax on   
+filetype plugin indent on
+runtime macros/matchit.vim
+               
+&quot; 关闭 vi 兼容模式
+set nocompatible
+               
+&quot; Highlight current line
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+               
+set showcmd       &quot; display incomplete commands
+set laststatus=2  &quot; Always display the status line
+set fileencodings=utf-8,gb18030,gbk,big5
+               
+execute pathogen#infect()
+&quot; 不支持箭头的系统可以设置为加号
+let g:NERDTreeDirArrowExpandable = &#39;+&#39; 
+let g:NERDTreeDirArrowCollapsible = &#39;+&#39; 
+
+let g:neocomplete#enable_at_startup = 1
+                        
+&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="中文帮助-vimcdoc"><a href="#中文帮助-vimcdoc" class="headerlink" title="中文帮助 vimcdoc"></a>中文帮助 vimcdoc</h3><pre><code>cd /usr/local/src
+sudo wget http://nchc.dl.sourceforge.net/sourceforge/vimcdoc/vimcdoc-1.5.0.tar.gz
+sudo tar xvf vimcdoc-1.5.0.tar.gz
+cd vimcdoc-1.5.0
+sudo ./vimcdoc.sh -i 
+</code></pre>
+<h3 id="插件管理-vim-pathogen"><a href="#插件管理-vim-pathogen" class="headerlink" title="插件管理 vim-pathogen"></a>插件管理 vim-pathogen</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/tpope/vim-pathogen">tpope&#x2F;vim-pathogen:manage your runtimepath</a></p>
+<p>安装插件<code>~/.vim/autoload/pathogen.vim</code>：</p>
+<pre><code>mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>execute pathogen#infect()
+</code></pre>
+<p>安装其他插件的方法：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/tpope/vim-sensible.git
+</code></pre>
+<h3 id="目录树插件-nerdtree"><a href="#目录树插件-nerdtree" class="headerlink" title="目录树插件 nerdtree"></a>目录树插件 nerdtree</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/scrooloose/nerdtree">scrooloose&#x2F;nerdtree:A tree explorer plugin for vim</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<p>使用<code>apt-vim</code>安装：</p>
+<pre><code>apt-vim install -y https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<h3 id="代码补全插件-neocomplete"><a href="#代码补全插件-neocomplete" class="headerlink" title="代码补全插件 neocomplete"></a>代码补全插件 neocomplete</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/Shougo/neocomplete.vim">Shougo&#x2F;neocomplete.vim:Next generation completion framework after neocomplcache</a></p>
+<p>Debian (or Ubuntu)系统下的依赖：</p>
+<p>－vim-nox<br>－vim-gtk<br>－vim-gnome<br>－vim-athena</p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/Shougo/neocomplete.vim.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:neocomplete#enable_at_startup = 1
+</code></pre>
+<h3 id="JSX-语法插件"><a href="#JSX-语法插件" class="headerlink" title="JSX 语法插件"></a>JSX 语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mxw/vim-jsx">mxw&#x2F;vim-jsx:React JSX syntax highlighting and indenting for vim.</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<p>The recommended installation method is via Pathogen.  Then simply execute</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/mxw/vim-jsx.git
+</code></pre>
+<p>(You can install vim-javascript in an analogous manner.)</p>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
+</code></pre>
+<h3 id="ES6语法插件"><a href="#ES6语法插件" class="headerlink" title="ES6语法插件"></a>ES6语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.vim.org/scripts/script.php?script_id=5230">isRuslan&#x2F;vim-es6:List of JavaScript ES6 snippets and syntax highlighting for vim. </a> - <a target="_blank" rel="noopener" href="https://github.com/isRuslan/vim-es6">GitHub</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/isRuslan/vim-es6.git
+</code></pre>
+<h3 id="配色插件"><a href="#配色插件" class="headerlink" title="配色插件"></a>配色插件</h3><blockquote>
+<p>PS:最牛逼的配色，不能推荐更多</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/altercation/vim-colors-solarized">GitHub</a>:precision colorscheme for the vim text editor <a target="_blank" rel="noopener" href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h3 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/kchmck/vim-coffee-script">kchmck&#x2F;vim-coffee-script:CoffeeScript support for vim</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-studio-2015-11-17-note-for-ubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-studio-2015-11-17-note-for-ubuntu.html" class="article-date">
@@ -319,7 +503,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/thinking/">思考札记</a>
+    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/read/">读书笔记</a>
   </div>
 
   </div>
@@ -490,7 +674,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/thinking/">思考札记</a>
+    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/read/">读书笔记</a>
   </div>
 
   </div>
@@ -573,63 +757,6 @@
 
 
   
-    <article id="post-poem-a-2015-2015-09-23-yu-guo-tian-qing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html">雨过天晴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>雨过，天晴。</p>
-<p>或许不留一点点尘埃，</p>
-<p>或许有一段彩虹挂在天外。</p>
-<ul>
-<li></li>
-</ul>
-<p>雨已过，天已晴。</p>
-<p>或许蓝天白云终一世，</p>
-<p>或许也有风雨在未来。</p>
-<ul>
-<li></li>
-</ul>
-<p>天睛，雨过。</p>
-<p>不想看白色的云狗，</p>
-<p>可以闭上自己的双眼。</p>
-<ul>
-<li></li>
-</ul>
-<p>天已晴，雨已过。</p>
-<p>撑着曾经的伞，</p>
-<p>也回不到淋漓的过去。<br>‌‌</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -698,7 +825,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/read/">读书笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
     </div>
   </div>
 
