@@ -2,7 +2,7 @@
 title: 《股票大作手操盘术》笔记
 categories:
   - essay
-  - thinking
+  - read
 date: 2015-10-16 00:00:00
 updated: 2024-08-30 00:00:00
 ---

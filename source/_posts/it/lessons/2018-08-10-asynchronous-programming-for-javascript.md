@@ -1,8 +1,8 @@
 ---
 title: 前端异步编程的来龙去脉
 categories:
-  - essay
-  - thinking
+  - it
+  - lessons
 date: 2018-08-10 00:00:00
 updated: 2024-09-02 00:00:00
 ---
