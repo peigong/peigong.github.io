@@ -66,6 +66,11 @@
         "title": "典籍学习",
         "weight": 3
     },
+    "qing-shi": {
+        "name": "qing-shi",
+        "title": "清史稿",
+        "weight": 300
+    },
     "sutra": {
         "name": "sutra",
         "title": "佛经",

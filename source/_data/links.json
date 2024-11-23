@@ -10,33 +10,5 @@
     {
         "title": "视频号助手",
         "url": "https://channels.weixin.qq.com/platform"
-    },
-    {
-        "title": "QQ 短视频",
-        "url": "https://qqzz.qq.com/index"
-    },
-    {
-        "title": "抖音创作者",
-        "url": "https://creator.douyin.com/creator-micro/home"
-    },
-    {
-        "title": "快手创作者",
-        "url": "https://cp.kuaishou.com/profile"
-    },
-    {
-        "title": "bilibli 创作中心",
-        "url": "https://member.bilibili.com/platform/home"
-    },
-    {
-        "title": "喜玛拉雅",
-        "url": "https://studio.ximalaya.com/"
-    },
-    {
-        "title": "小红书创作",
-        "url": "https://creator.xiaohongshu.com/creator/home"
-    },
-    {
-        "title": "简书",
-        "url": "https://www.jianshu.com/u/a1722005e938"
     }
 ]
