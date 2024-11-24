@@ -24,67 +24,72 @@
         "title": "思考札记",
         "weight": 104
     },
-    
-    "poem": {
-        "name": "poem",
-        "title": "培公诗抄",
-        "weight": 2
-    },
-    "a-2015": {
-        "name": "a-2015",
-        "title": "2015 ~ 2024",
-        "weight": 244
-    },
-    "a-2010": {
-        "name": "a-2010",
-        "title": "2010 ~ 2014",
-        "weight": 245
-    },
-    "a-2004": {
-        "name": "a-2004",
-        "title": "2004 ~ 2009",
-        "weight": 246
-    },
-    "b-2004": {
-        "name": "b-2004",
-        "title": "~ 2004 年",
-        "weight": 247
-    },
-    "buddha": {
-        "name": "buddha",
-        "title": "禅宗心得",
-        "weight": 248
-    },
-    "characters": {
-        "name": "characters",
-        "title": "人物",
-        "weight": 249
-    },
 
     "classic": {
         "name": "classic",
         "title": "典籍学习",
-        "weight": 3
+        "weight": 2
+    },
+    "ming-shi": {
+        "name": "ming-shi",
+        "title": "明史",
+        "weight": 200
     },
     "qing-shi": {
         "name": "qing-shi",
         "title": "清史稿",
-        "weight": 300
+        "weight": 201
     },
     "sutra": {
         "name": "sutra",
         "title": "佛经",
-        "weight": 301
+        "weight": 202
     },
     "analects": {
         "name": "analects",
         "title": "论语",
-        "weight": 302
+        "weight": 203
     },
     "su-wen": {
         "name": "su-wen",
         "title": "黄帝内经素问",
+        "weight": 204
+    },
+    
+    "poem": {
+        "name": "poem",
+        "title": "培公诗抄",
+        "weight": 3
+    },
+    "a-2015": {
+        "name": "a-2015",
+        "title": "2015 ~ 2024",
+        "weight": 301
+    },
+    "a-2010": {
+        "name": "a-2010",
+        "title": "2010 ~ 2014",
+        "weight": 302
+    },
+    "a-2004": {
+        "name": "a-2004",
+        "title": "2004 ~ 2009",
         "weight": 303
+    },
+    "b-2004": {
+        "name": "b-2004",
+        "title": "~ 2004 年",
+        "weight": 304
+    },
+    "buddha": {
+        "name": "buddha",
+        "title": "禅宗心得",
+        "weight": 305
+    },
+    "characters": {
+        "name": "characters",
+        "title": "人物",
+        "weight": 306
     },
 
     "catalog": {
