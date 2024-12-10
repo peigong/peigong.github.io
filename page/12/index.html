@@ -83,6 +83,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-env-2015-03-26-linux-zip-unzip" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-03-26-linux-zip-unzip.html" class="article-date">
+  <time class="dt-published" datetime="2015-03-25T16:00:00.000Z" itemprop="datePublished">2015-03-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-03-26-linux-zip-unzip.html">Linux下的压缩解压缩命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><pre><code>zip -r peigong.zip ./peigong
+</code></pre>
+<p>将当前目录下的所有文件和文件夹全部压缩成<code>peigong.zip</code>文件，<code>－r</code>表示递归压缩子目录下所有文件。</p>
+<h2 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h2><pre><code>unzip -o -d /home/peigong peigong.zip
+</code></pre>
+<p>把<code>peigong.zip</code>文件解压到<code>/home/peigong/</code></p>
+<ol>
+<li>**-o:**不提示的情况下覆盖文件。</li>
+<li><strong>-d:</strong><code>-d /home/peigong</code>指明将文件解压缩到<code>/home/peigong</code>目录下。</li>
+</ol>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code>zip -d peigong.zip smart.txt
+</code></pre>
+<p>删除压缩文件中<code>smart.txt</code>文件</p>
+<pre><code>zip -m peigong.zip ./rpm_info.txt
+</code></pre>
+<p>向压缩文件中<code>peigong.zip</code>中添加<code>rpm_info.txt</code>文件</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-env-2015-03-06-linux-rz-sz" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-env-2015-03-06-linux-rz-sz.html" class="article-date">
@@ -906,56 +958,6 @@ ln -s /usr/local/python/bin/python ./python
 <p>逆春气，则少阳不生，肝气内变。逆夏气，则太阳不长，心气内洞。逆秋气，则太阴不收，肺气焦满。逆冬气，则少阴不藏，肾气独沉。</p>
 <p>夫四时阴阳者，万物之根本也，所以圣人春夏养阳，秋冬养阴，以从其根。故与万物沉浮于生长之门。逆其根，则伐其本，坏其真矣。故阴阳四时者，万物之终始也，死生之本也。逆之则灾害生，从之则苛疾不起，是谓得道。道者，圣人行之，愚者佩之。</p>
 <p>从阴阳则生，逆之则死。从之则治，逆之则乱。反顺为逆，是谓内格。是故圣人不治已病治未病，不治已乱治未乱，此之谓也。夫病已成而后药之，乱已成而后治之，譬犹渴而穿井，斗而铸锥，不亦晚乎！</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-classic-sutra-2014-12-30-mo-ke-bo-re-bo-luo-mi-da-ming-zhou-jing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/classic-sutra-2014-12-30-mo-ke-bo-re-bo-luo-mi-da-ming-zhou-jing.html" class="article-date">
-  <time class="dt-published" datetime="2014-12-29T16:00:00.000Z" itemprop="datePublished">2014-12-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/classic/">典籍学习</a>►<a class="article-category-link" href="/categories/classic/sutra/">佛经</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/classic-sutra-2014-12-30-mo-ke-bo-re-bo-luo-mi-da-ming-zhou-jing.html">摩诃般若波罗蜜大明咒经</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>后秦三藏法师鸠摩罗什译</p>
-</blockquote>
-<p>观世音菩萨，行深般若波罗蜜时，照见五阴空，度一切苦厄。</p>
-<p>舍利弗，色空故，无恼坏相；受空故，无受相；想空故，无知相；行空故，无作相；识空故，无觉相。</p>
-<p>何以故？</p>
-<p>舍利弗，非色异空，非空异色，色即是空，空即是色，受想行识亦如是。</p>
-<p>舍利弗，是诸法空相，不生不灭，不垢不净，不增不减。是空法，非过去，非未来，非现在。</p>
-<p>是故空中，无色，无受想行识，无眼耳鼻舌身意，无色声香味触法，无眼界乃至无意识界，无无明亦无无明尽，乃至无老死，无老死尽，无苦集灭道，无智亦无得，以无所得故。</p>
-<p>菩萨依般若波罗蜜故，心无挂碍；无挂碍故，无有恐怖，离一切颠倒梦想苦恼，究竟涅槃。</p>
-<p>三世诸佛依般若波罗蜜故，得阿耨多罗三藐三菩提。</p>
-<p>故知般若波罗蜜是大明咒、无上明咒、无等等明咒，能除一切苦，真实不虚。</p>
-<p>故说般若波罗蜜咒，即说咒曰：</p>
-<p>竭帝竭帝　波罗竭帝　波罗僧竭帝　菩提僧莎呵</p>
 
       
     </div>
