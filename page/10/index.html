@@ -124,6 +124,50 @@
 
 
   
+    <article id="post-poem-a-2015-2015-11-17-jin-qiu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-11-17-jin-qiu.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-16T16:00:00.000Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-11-17-jin-qiu.html">金秋</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>风送金秋来，</p>
+<p>雨打黄叶去。</p>
+<p>世上沧桑转，</p>
+<p>天下寒暑易。</p>
+<p>离离草有性，</p>
+<p>萋萋人无相。</p>
+<p>三劫春秋短，</p>
+<p>四季日月长。 </p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-poem-a-2015-2015-11-10-yinyuan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/poem-a-2015-2015-11-10-yinyuan.html" class="article-date">
@@ -586,64 +630,11 @@
 
 
   
-    <article id="post-it-studio-2015-09-18-webplate-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/it-studio-2015-09-18-webplate-stack.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-17T16:00:00.000Z" itemprop="datePublished">2015-09-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/it-studio-2015-09-18-webplate-stack.html">前端框架Webplate的技术栈</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前端框架Webplate"><a href="#前端框架Webplate" class="headerlink" title="前端框架Webplate"></a>前端框架Webplate</h2><p><a target="_blank" rel="noopener" href="http://getwebplate.com/">Webplate</a>是一款优秀的前端框架，可使开发者专注于站点或应用的开发，它提供了稳健的布局引擎、全局按钮元素和可定制性的表格，同时还包括了jQuery插件和大量工具。 &#x3D; <a target="_blank" rel="noopener" href="https://github.com/chrishumboldt/webplate">GitHub</a></p>
-<p>Webplate is an awesome front-end framework that lets you stay focused on building your site or app all the while remaining really easy to use.</p>
-<h2 id="Yepnope-js"><a href="#Yepnope-js" class="headerlink" title="Yepnope.js"></a>Yepnope.js</h2><p>Yepnope.js是一个能够根据输入条件来选择性异步加载资源文件的js脚本，可以在页面上仅加载用户需要的js&#x2F;css。</p>
-<p>The first thing executed by the stack is yepnope.js to asynchronously load the necessary Javascript and CSS files. In essence the stack.js file is a custom configured deployment and will load up essential libraries before checking for project files. Even though this library has been deprecated it is still valuable in its execution and is the core of how Webplate runs. There are plans to build a custom loader but for now this works great.</p>
-<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>Next up is jQuery and is one of the most important libraries used by Webplate. All of the Javascript tools, custom plugins and wrappers are written using jQuery and as such cannot be removed. Also the version 2 build of jQuery is being used and as such Webplate is not compatible with any IE version below 9. This is a conscious decision to stay ahead of the curve in terms of front-end development.</p>
-<h2 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h2><p>Modernizr是一个开源的JS库，它使得那些基于访客浏览器的不同（指对新标准支持性的差异）而开发不同级别体验的设计师的工作变得更为简单。它使得设计师可以在支持HTML5和CSS3的浏览器中充分利用HTML5和CSS3的特性进行开发，同时又不会牺牲其他不支持这些新技术的浏览器的控制。</p>
-<p>Another critical library, Modernizr is a feature detection script used to determine what the browser is capable of doing, ranging from CSS animations to touch enabled events. It does so by assigning a class to the HTML element which can then be used by your Javascript or CSS.</p>
-<h2 id="Hammer-js"><a href="#Hammer-js" class="headerlink" title="Hammer.js"></a>Hammer.js</h2><p>Hammer.js是一个轻量级的JavaScript库（仅有2kb），能让你的网站轻松实现触控事件。它依赖于jQuery，用来控制触摸设备上的多点触控特性。</p>
-<p>All touch based gestures are handled through Hammer.js with the jQuery plugin included as part of the stack. This really is a great library and replaces the original inclusion of jQuery.Finger. To find out more visit the Hammer.js site.</p>
-<h2 id="Velocity-js"><a href="#Velocity-js" class="headerlink" title="Velocity.js"></a>Velocity.js</h2><p>Velocity.js 是velocity模板语法的javascript实现。Velocity 是基于Java的模板引擎，广泛应用在阿里集 体各个子公司。Velocity模板适用于大量模板使用的场景，支持复杂的逻辑运算，包含 基本数据类型、变量赋值和函数等功能。Velocity.js 支持 Node.js 和浏览器环境。</p>
-<p>Animations are an important part of the front-end experience but managing the right kind of animation for the particular device is a challenge. Velocity.js is the best out there for this job and will give you smooth Javascript animations across the board.</p>
-<h2 id="Fastclick"><a href="#Fastclick" class="headerlink" title="Fastclick"></a>Fastclick</h2><p>FastClick 是一个简单，易于使用的JS库用于消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟。</p>
-<p>Most mobile devices come with an irritating delay on touch click events for links and buttons. Fastclick removes this delay resulting in a more app like feel to the whole project. Note that this library will only be loaded if Webplate detects touch capabilities and is executed automatically.</p>
-<h2 id="Normalize-css"><a href="#Normalize-css" class="headerlink" title="Normalize.css"></a>Normalize.css</h2><p>Normalize.css 是一个可定制的 CSS 文件，使浏览器呈现的所有元素，更一致和符合现代标准。它正是针对只需要统一的元素样式。该项目依赖于研究浏览器默认元素风格之间的差异，精确定位需要重置的样式。这是一个现代的，HTML5-ready 的 CSS 重置样式集。</p>
-<p>A collection of HTML element and attribute style-normalizations to help clear any strange style nuances. Normalize.css helps maintain consistency across all your projects in all the browsers.</p>
-<h2 id="Typeplate"><a href="#Typeplate" class="headerlink" title="Typeplate"></a>Typeplate</h2><p>Typeplate 是一个“排版入门套件”。我们不需要美学设计,但定义适当的标记与可扩展样式为常见的排版模式。一个精简Sass 库关注适当的技术实现的设计模式。</p>
-<p>Typelate is a “typographic starter kit” used to define proper markup for common typographic patterns. It will handle all your type from heading tags, to paragraphs and lists.</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/9/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/11/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -679,7 +670,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/read/">读书笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/qing-shi/">清史稿</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/">札记随笔</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/essay/arts/">文艺随笔</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/travel/">老周游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/read/">读书笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/essay/thinking/">思考札记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/">典籍学习</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/classic/hou-han-shu/">后汉书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/qing-shi/">清史稿</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/sutra/">佛经</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/analects/">论语</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/classic/su-wen/">黄帝内经素问</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">培公诗抄</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2015/">2015 ~ 2024</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2010/">2010 ~ 2014</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/a-2004/">2004 ~ 2009</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/b-2004/">~ 2004 年</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/buddha/">禅宗心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/characters/">人物</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/">藏书目录</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/bookcase/">在架图书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/catalog/table/">封存图书</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/it/env/">开发环境</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/manual/">常用文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/studio/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/it/lessons/">培训教程</a></li></ul></li></ul>
     </div>
   </div>
 
