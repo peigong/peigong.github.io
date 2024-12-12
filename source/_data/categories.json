@@ -30,30 +30,35 @@
         "title": "典籍学习",
         "weight": 2
     },
+    "hou-han-shu": {
+        "name": "hou-han-shu",
+        "title": "后汉书",
+        "weight": 200
+    },
     "ming-shi": {
         "name": "ming-shi",
         "title": "明史",
-        "weight": 200
+        "weight": 201
     },
     "qing-shi": {
         "name": "qing-shi",
         "title": "清史稿",
-        "weight": 201
+        "weight": 202
     },
     "sutra": {
         "name": "sutra",
         "title": "佛经",
-        "weight": 202
+        "weight": 210
     },
     "analects": {
         "name": "analects",
         "title": "论语",
-        "weight": 203
+        "weight": 211
     },
     "su-wen": {
         "name": "su-wen",
         "title": "黄帝内经素问",
-        "weight": 204
+        "weight": 212
     },
     
     "poem": {
