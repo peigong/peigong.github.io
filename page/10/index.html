@@ -83,6 +83,292 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-env-2015-11-19-note-for-git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-11-19-note-for-git.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-18T16:00:00.000Z" itemprop="datePublished">2015-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-11-19-note-for-git.html">Git 使用笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><pre><code>git config user.email &quot;my_name@email.com&quot;
+git config user.name &quot;my name&quot;
+</code></pre>
+<h2 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h2><p>如果已经生成过 ssh key pair，这里不必再次生成，复用即可。</p>
+<pre><code>ssh-keygen -t rsa -C &quot;your email&quot;
+</code></pre>
+<p>邮件地址可以不写，默认是本机用户名@本机机器名。最好是填写一些标识自己的记号。</p>
+<p>然后一路回车，不要输入任何密码之类，生成 ssh key pair。</p>
+<p>如果在 Linux 上，需要把其中的私钥告诉本地系统：</p>
+<pre><code>ssh-add ~/.ssh/id_rsa
+</code></pre>
+<p>再把其中公钥的内容复制到GitLab上。具体方法是：</p>
+<p>显示ssh公钥的内容：</p>
+<pre><code>cat ~/.ssh/id_rsa.pub
+</code></pre>
+<p>在Gitlab网站My Porfile页面右下角，点击“Add Public Key”，粘贴刚才复制的内容到Key的大文本框，提交即可。</p>
+<p>注意：在复制内容的时候，文本的两端都不要有空格和换行。</p>
+<h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><blockquote>
+<p>假定开发需要的分支为branch_dev</p>
+</blockquote>
+<h3 id="把改动提交到本地版本库"><a href="#把改动提交到本地版本库" class="headerlink" title="把改动提交到本地版本库"></a>把改动提交到本地版本库</h3><ul>
+<li><p><code>git add &lt;file&gt;</code>:添加文件到Git仓库，可反复多次使用，添加多个文件。</p>
+<p>  git commit -am “我是提交注释”     </p>
+</li>
+<li><p>-m 是加提交注释用；</p>
+</li>
+<li><p>-a 是告诉Git，当前所有的修改，都纳入本次提交。</p>
+</li>
+</ul>
+<h3 id="把改动推送到服务器"><a href="#把改动推送到服务器" class="headerlink" title="把改动推送到服务器"></a>把改动推送到服务器</h3><p>在推送之前，需要先执行<code>git pull</code>把别人的改动拉下来合并，等同于 git fetch; git merge origin&#x2F;branch_dev</p>
+<p>然后使用<code>git push</code>推送到服务器。</p>
+<p>这是 git push origin branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是origin&#x2F;branch_dev，同名，所以可以全省略。</p>
+<h3 id="创建服务器端分支"><a href="#创建服务器端分支" class="headerlink" title="创建服务器端分支"></a>创建服务器端分支</h3><ul>
+<li><code>git fetch</code>:如果刚同步过，此处就不必再次同步</li>
+<li><code>git checkout -b branch_dev origin/master</code>:基于origin&#x2F;master创建本地分支branch_dev，并检出。是<code>git branch branch_dev origin/master</code>和<code>git checkout branch_dev</code> 的简写。现在branch_dev的upstream为origin&#x2F;master。<code>-b</code>参数表示创建并切换</li>
+<li><code>git push origin HEAD -u</code>:相当于<code>git push origin branch_dev -u</code>，是<code>git push origin branch_dev:branch_dev -u</code>的简写。<code>-u</code> 的作用是把本地branch_dev的upstream由原先的origin&#x2F;master改为origin&#x2F;branch_dev。</li>
+</ul>
+<h3 id="把主线上的最新改动合并过来"><a href="#把主线上的最新改动合并过来" class="headerlink" title="把主线上的最新改动合并过来"></a>把主线上的最新改动合并过来</h3><ul>
+<li><code>git pull</code>:等同于 git fetch 更新所有的远程分支，然后再 git merge origin&#x2F;branch_dev</li>
+<li><code>git merge origin/master</code></li>
+<li><code>git push</code>:是 git push origin branch_dev:branch_dev 的简写。因为要push的是本地当前分支branch_dev，且其upstream分支名是origin&#x2F;branch_dev，同名，所以可以全省略。</li>
+</ul>
+<h3 id="同步远程参数"><a href="#同步远程参数" class="headerlink" title="同步远程参数"></a>同步远程参数</h3><ul>
+<li><code>git remote add &lt;name&gt; &lt;url&gt;</code>：创建了一个与远端仓库的关联关系</li>
+<li><code>git config branch.branch_dev.remote &lt;name&gt;</code>：指定当前分支使用的远程仓库</li>
+<li><code>git push &lt;name&gt; HEAD -u</code>：相当于 <code>git push &lt;name&gt; branch_dev -u</code>，是 <code>git push &lt;name&gt; branch_dev:branch_dev -u</code> 的简写。<code>-u</code> 的作用是把本地 branch_dev 的 upstream 由原先的 <name>&#x2F;master 改为 <name>&#x2F;branch_dev。</li>
+<li><code>git push &lt;name&gt;</code>:是 <code>git push &lt;name&gt; branch_dev:branch_dev</code> 的简写。因为要 push 的是本地当前分支 branch_dev，且其 upstream 分支名是 <name>&#x2F;branch_dev，同名，所以可以全省略。</li>
+<li><code>git config branch.branch_dev.remote origin</code>：当前分支使用的远程仓库恢复为默认仓库</li>
+</ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li><code>git init</code>:初始化一个Git仓库</li>
+<li><code>git status</code>:查看工作区的状态</li>
+<li><code>git clone</code>:克隆远程版本库</li>
+<li><code>git branch</code>:命令会列出所有分支，当前分支前面会标一个*号。</li>
+<li><code>git branch &lt;name&gt;</code>:创建分支</li>
+<li><code>git checkout &lt;name&gt;</code>:切换分支</li>
+<li><code>git checkout -b &lt;name&gt;</code>:创建+切换分支</li>
+<li><code>git merge &lt;name&gt;</code>:合并某分支到当前分支</li>
+<li><code>git branch -d &lt;name&gt;</code>:删除分支</li>
+<li><code>git log --graph</code>:查看分支合并图</li>
+<li><code>git rm</code>:用于删除一个文件</li>
+<li><code>git diff</code>:查看修改内容</li>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset –hard commit_id。</li>
+<li><code>git log</code>:查看提交历史。</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-it-env-2015-11-18-note-for-vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-11-18-note-for-vim.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-17T16:00:00.000Z" itemprop="datePublished">2015-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-11-18-note-for-vim.html">VIM使用笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>cd /usr/local/src/vim/vim-7.4.942
+sudo ./configure --prefix=/usr/local/vim --with-features=huge --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-multibyte --enable-sniff --enable-fontset
+sudo make
+sudo make install
+</code></pre>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li>在Ubuntu中使用<code>sudo apt-get install vim</code>安装。</li>
+<li>在<code>~/.vimrc</code>中加入一行<code>:set number</code>设置行号。</li>
+<li>vimtutor:sudo apt-get install vimtutor</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="参考配置"><a href="#参考配置" class="headerlink" title="参考配置"></a>参考配置</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/amix/vimrc">amix&#x2F;vimrc:The ultimate Vim configuration: vimrc</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/humiaozuzu/dot-vimrc">humiaozuzu&#x2F;dot-vimrc:Maple’s vim config files</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/spf13/spf13-vim">spf13&#x2F;spf13-vim:The ultimate vim distribution</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhcncn/p/4151701.html">Win7下安装配置gVim</a></li>
+</ul>
+<h3 id="自用配置"><a href="#自用配置" class="headerlink" title="自用配置"></a>自用配置</h3><pre><code>&quot; 显示行号  
+set number
+&quot; 显示标尺
+set ruler
+&quot; 设置当文件被改动时自动载入
+set autoread
+&quot; 自动保存  
+set autowrite
+&quot; 自动缩进  
+set autoindent
+&quot; 智能缩进  
+set smartindent
+set cindent 
+&quot; 制表符
+set noexpandtab
+set smarttab
+&quot; Tab键的宽度
+set tabstop=4
+set expandtab
+&quot; 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+&quot; 搜索逐字符高亮
+set hlsearch                                                                                                                                     
+set incsearch
+set smartcase
+&quot; 不自动添加空行
+set noendofline
+               
+syntax on   
+filetype plugin indent on
+runtime macros/matchit.vim
+               
+&quot; 关闭 vi 兼容模式
+set nocompatible
+               
+&quot; Highlight current line
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+               
+set showcmd       &quot; display incomplete commands
+set laststatus=2  &quot; Always display the status line
+set fileencodings=utf-8,gb18030,gbk,big5
+               
+execute pathogen#infect()
+&quot; 不支持箭头的系统可以设置为加号
+let g:NERDTreeDirArrowExpandable = &#39;+&#39; 
+let g:NERDTreeDirArrowCollapsible = &#39;+&#39; 
+
+let g:neocomplete#enable_at_startup = 1
+                        
+&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="中文帮助-vimcdoc"><a href="#中文帮助-vimcdoc" class="headerlink" title="中文帮助 vimcdoc"></a>中文帮助 vimcdoc</h3><pre><code>cd /usr/local/src
+sudo wget http://nchc.dl.sourceforge.net/sourceforge/vimcdoc/vimcdoc-1.5.0.tar.gz
+sudo tar xvf vimcdoc-1.5.0.tar.gz
+cd vimcdoc-1.5.0
+sudo ./vimcdoc.sh -i 
+</code></pre>
+<h3 id="插件管理-vim-pathogen"><a href="#插件管理-vim-pathogen" class="headerlink" title="插件管理 vim-pathogen"></a>插件管理 vim-pathogen</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/tpope/vim-pathogen">tpope&#x2F;vim-pathogen:manage your runtimepath</a></p>
+<p>安装插件<code>~/.vim/autoload/pathogen.vim</code>：</p>
+<pre><code>mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>execute pathogen#infect()
+</code></pre>
+<p>安装其他插件的方法：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/tpope/vim-sensible.git
+</code></pre>
+<h3 id="目录树插件-nerdtree"><a href="#目录树插件-nerdtree" class="headerlink" title="目录树插件 nerdtree"></a>目录树插件 nerdtree</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/scrooloose/nerdtree">scrooloose&#x2F;nerdtree:A tree explorer plugin for vim</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<p>使用<code>apt-vim</code>安装：</p>
+<pre><code>apt-vim install -y https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<h3 id="代码补全插件-neocomplete"><a href="#代码补全插件-neocomplete" class="headerlink" title="代码补全插件 neocomplete"></a>代码补全插件 neocomplete</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/Shougo/neocomplete.vim">Shougo&#x2F;neocomplete.vim:Next generation completion framework after neocomplcache</a></p>
+<p>Debian (or Ubuntu)系统下的依赖：</p>
+<p>－vim-nox<br>－vim-gtk<br>－vim-gnome<br>－vim-athena</p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/Shougo/neocomplete.vim.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:neocomplete#enable_at_startup = 1
+</code></pre>
+<h3 id="JSX-语法插件"><a href="#JSX-语法插件" class="headerlink" title="JSX 语法插件"></a>JSX 语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mxw/vim-jsx">mxw&#x2F;vim-jsx:React JSX syntax highlighting and indenting for vim.</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<p>The recommended installation method is via Pathogen.  Then simply execute</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/mxw/vim-jsx.git
+</code></pre>
+<p>(You can install vim-javascript in an analogous manner.)</p>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
+</code></pre>
+<h3 id="ES6语法插件"><a href="#ES6语法插件" class="headerlink" title="ES6语法插件"></a>ES6语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.vim.org/scripts/script.php?script_id=5230">isRuslan&#x2F;vim-es6:List of JavaScript ES6 snippets and syntax highlighting for vim. </a> - <a target="_blank" rel="noopener" href="https://github.com/isRuslan/vim-es6">GitHub</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/isRuslan/vim-es6.git
+</code></pre>
+<h3 id="配色插件"><a href="#配色插件" class="headerlink" title="配色插件"></a>配色插件</h3><blockquote>
+<p>PS:最牛逼的配色，不能推荐更多</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/altercation/vim-colors-solarized">GitHub</a>:precision colorscheme for the vim text editor <a target="_blank" rel="noopener" href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h3 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/kchmck/vim-coffee-script">kchmck&#x2F;vim-coffee-script:CoffeeScript support for vim</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-studio-2015-11-17-note-for-ubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-studio-2015-11-17-note-for-ubuntu.html" class="article-date">
@@ -473,153 +759,6 @@
 <p>Webplate is an awesome front-end framework that lets you stay focused on building your site or app all the while remaining really easy to use</p>
 <h2 id="Cardinal"><a href="#Cardinal" class="headerlink" title="Cardinal"></a>Cardinal</h2><p><a target="_blank" rel="noopener" href="http://cardinalcss.com/">官网</a> - <a target="_blank" rel="noopener" href="https://github.com/cbracco/cardinal">GitHub</a></p>
 <p>Cardinal 是一个小型的移动优先的 CSS 框架，提供很多有用的默认样式、可缩放排版、可重用模块和一个简单的响应式表格系统。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-essay-read-2015-09-28-stock-trading-model" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/essay-read-2015-09-28-stock-trading-model.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-27T16:00:00.000Z" itemprop="datePublished">2015-09-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/essay/">札记随笔</a>►<a class="article-category-link" href="/categories/essay/read/">读书笔记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/essay-read-2015-09-28-stock-trading-model.html">投资组合、估值、买入和卖出的交易模型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="投资组合"><a href="#投资组合" class="headerlink" title="投资组合"></a>投资组合</h2><h3 id="格雷厄姆投资组合"><a href="#格雷厄姆投资组合" class="headerlink" title="格雷厄姆投资组合"></a>格雷厄姆投资组合</h3><p>投资者投资于股票的资金，决不能少于其资金总额的25%，且不得高于75%；与此相应，其债券投资的比例则应在75%和25%之间。这里的含义是，两种主要投资手段之间的标准分配比例，应该是各占一半。根据传统，增加普通股比重的合理理由是，持续的熊市导致了“低廉交易价格”的出现。反之，当投资者认为市场价格已经上升到危险高度时，则应将股票投资的比例减至50%以下。</p>
-<p>如果失去了债券这一参照物，我们就无法设定一个可靠的规则，以确定何时应将股票投资份额降至25%这一最小比例，并在以后将其提升到75%的最高比例。</p>
-<p>根据这一规则，投资者应在其实际操作中，保持对债券和股票的均等投资。比方说，如果股价水平使股票投资的比例提高到55%，我们就应准备卖出十分之一的股票，并将该笔资金投入债券，以恢复两者之间的均衡。反之，如果其持股比例仅为资金总额的45%，他就应当考虑拿出十分之一的债券，将其转为股票投资。</p>
-<h2 id="估值方法"><a href="#估值方法" class="headerlink" title="估值方法"></a>估值方法</h2><h3 id="林奇的市盈率收益增长率模型"><a href="#林奇的市盈率收益增长率模型" class="headerlink" title="林奇的市盈率收益增长率模型"></a>林奇的市盈率收益增长率模型</h3><p>任何一家公司股票如果定价合理的话，市盈率就会与收益增长率相等。</p>
-<p>如果一家公司股票的市盈率是15倍，那么应该预期这家公司每年收益增长率约为15%。</p>
-<p>在其他条件完全相同的情况下，收益增长率较高的股票更值得买入。</p>
-<h3 id="威廉姆森的股利贴现模型"><a href="#威廉姆森的股利贴现模型" class="headerlink" title="威廉姆森的股利贴现模型"></a>威廉姆森的股利贴现模型</h3><p>稳定增长型，甚至缓慢增长型的股价应该小于20倍股息，因为如果股息率不能超过5%的利率，则不如购买国债、货币基金等固定收益的理财产品。</p>
-<h2 id="买入时机"><a href="#买入时机" class="headerlink" title="买入时机"></a>买入时机</h2><h3 id="定时定额投资法"><a href="#定时定额投资法" class="headerlink" title="定时定额投资法"></a>定时定额投资法</h3><p>投资者每个月投入同样数额的资金买进一只或多只股票。它是所谓的美元成本平均法（定时定额投资法）这种“程式化投资法”的一种特例。</p>
-<h3 id="利弗莫尔操作规则"><a href="#利弗莫尔操作规则" class="headerlink" title="利弗莫尔操作规则"></a>利弗莫尔操作规则</h3><p>根据利弗莫尔操作规则，观察到收盘价越过前期自然回升关键点3%以后，判断进入上升趋势，可以首仓介入。</p>
-<p>收盘价越过首仓价3%以后，买入第二批。收盘价跌破首仓价6%以后，则认错止损。第三批、第四批以此类推。</p>
-<p><strong>6%止损警戒区计算：</strong></p>
-<ul>
-<li>首仓价为100。94止损后，则亏6%[-6&#x2F;100]。</li>
-<li>第二批103，浮盈1.5%[3 &#x2F; 200]。97止损后，则亏4.5%[(-3-6) &#x2F; 200]。</li>
-<li>第三批106，浮盈3%[(6+3) &#x2F; 300]。100止损后，则亏3%[(0-3-6) &#x2F; 300]。</li>
-<li>第四批109，浮盈4.5%[(9+6+3) &#x2F; 400]。103止损后，则亏1.5%[(3+0-3-6) &#x2F; 400]。</li>
-<li>第五批112，浮盈6%[(12+9+6+3) &#x2F; 500]。106止损后，则持平[(6+3+0-3-6) &#x2F; 500]。</li>
-</ul>
-<p>也就是说，越过首仓价15%，则基本视为越过止损警戒区，持仓大致安全。</p>
-<h2 id="卖出时机"><a href="#卖出时机" class="headerlink" title="卖出时机"></a>卖出时机</h2><p>当股价上涨到一个满意的价格，是应该选择清仓后空仓观望，还是应该减持后轻仓观望，这是一个问题。</p>
-<p>当然，只有卖多少的问题，没有卖不卖的问题。基本上的原则，就是准备长期持有的轻仓，价格畸高或不准备长期持有的轻仓。</p>
-<h3 id="轻仓的目标成本价计算"><a href="#轻仓的目标成本价计算" class="headerlink" title="轻仓的目标成本价计算"></a>轻仓的目标成本价计算</h3><p><strong>公式符号：</strong></p>
-<ul>
-<li><strong>X：</strong>需要卖出量</li>
-<li><strong>Q：</strong>当前持仓总量</li>
-<li><strong>P：</strong>当前市场价</li>
-<li><strong>C：</strong>当前成本价</li>
-<li><strong>C0：</strong>目标成本价</li>
-</ul>
-<p><strong>公式推导：</strong></p>
-<ul>
-<li>目标成本价 &#x3D; (卖出后持仓成本 - 卖出盈利) &#x2F; 卖出后持仓量</li>
-<li>目标成本价 x 卖出后持仓量 &#x3D; 卖出后持仓成本 - 卖出盈利</li>
-<li>C0(Q-X) &#x3D; C(Q-X) - (P-C)X</li>
-<li>C0Q - C0X &#x3D; CQ - CX - PX + CX</li>
-<li>PX - C0X &#x3D; CQ - C0Q</li>
-<li>(P - C0)X &#x3D; (C - C0)Q</li>
-<li>X &#x3D; (C - C0)Q &#x2F; (P - C0)</li>
-<li>卖出量 &#x3D; (成本价 - 目标成本价) x 总量 &#x2F; (市场价 - 目标成本价)</li>
-</ul>
-<p>假定X股成本价为5元，持仓总量2000股，当前市场价为10元。我们评估以当前市场价卖出，并在股价跌回5块时再买入的2个不同方案。</p>
-<ul>
-<li>A方案：以当前市价10元清仓，获得现金20000元。空仓观望，股价跌到5元时买入4000股。</li>
-<li>B方案：假定目标成本价为2元，以当前市价10元减持750股【(5 - 2) x 2000 &#x2F; (10 - 2)】，获取现金7500元，剩余1250股。轻仓观望，股价跌到5元时可以买入1500股，总持股2750股。</li>
-<li>C方案：假定目标成本价为0元，即撤出成本，留下利润。以当前市价10元减持1000股【(5 - 0) x 2000 &#x2F; (10 - 0)】，获取现金10000元，剩余1000股。轻仓观望，股价跌到5元时可以买入2000股，总持股3000股。</li>
-</ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>格雷厄姆投资组合：《聪明的投资者》，【美】本杰明.格雷厄姆著，王中华、黄一义译，第58~60页</li>
-<li>定时定额投资法：《聪明的投资者》，【美】本杰明.格雷厄姆著，王中华、黄一义译，第77页</li>
-<li>林奇的市盈率收益增长率模型：《彼得.林奇的成功投资》，【美】彼得.林奇、约翰.罗瑟查尔德著，刘建位、徐晓杰译，第198页、第222页</li>
-<li>股利贴现模型：《金融的解释》，王福重著，第159页</li>
-<li>利弗莫尔操盘规则：《股票大作手操盘术》，【美】杰西.利弗莫尔著，丁圣元译，第87页</li>
-<li>盈利3%以上的股票可以视作资金：《千炼成妖》，花荣著，第5页</li>
-</ul>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-a-2015-2015-09-23-yu-guo-tian-qing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html">雨过天晴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>雨过，天晴。</p>
-<p>或许不留一点点尘埃，</p>
-<p>或许有一段彩虹挂在天外。</p>
-<ul>
-<li></li>
-</ul>
-<p>雨已过，天已晴。</p>
-<p>或许蓝天白云终一世，</p>
-<p>或许也有风雨在未来。</p>
-<ul>
-<li></li>
-</ul>
-<p>天睛，雨过。</p>
-<p>不想看白色的云狗，</p>
-<p>可以闭上自己的双眼。</p>
-<ul>
-<li></li>
-</ul>
-<p>天已晴，雨已过。</p>
-<p>撑着曾经的伞，</p>
-<p>也回不到淋漓的过去。<br>‌‌</p>
 
       
     </div>
