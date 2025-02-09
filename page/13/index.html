@@ -83,6 +83,145 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-lessons-2015-01-12-vi-commands" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-lessons-2015-01-12-vi-commands.html" class="article-date">
+  <time class="dt-published" datetime="2015-01-11T16:00:00.000Z" itemprop="datePublished">2015-01-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/lessons/">培训教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-lessons-2015-01-12-vi-commands.html">VI的常用操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="进入vi的命令"><a href="#进入vi的命令" class="headerlink" title="进入vi的命令"></a>进入vi的命令</h2><ul>
+<li><strong>vi filename</strong>：打开或新建文件，并将光标置于第一行首</li>
+<li><strong>vi +n filename</strong>：打开文件，并将光标置于第n行首</li>
+<li><strong>vi + filename</strong>：打开文件，并将光标置于最后一行首</li>
+<li><strong>vi +&#x2F;pattern filename</strong>：打开文件，并将光标置于第一个与pattern匹配的串处</li>
+<li><strong>vi -r filename</strong>：在上次正用vi编辑时发生系统崩溃，恢复filename</li>
+<li><strong>vi filename….filename</strong>：打开多个文件，依次进行编辑</li>
+</ul>
+<h2 id="最后行方式命令"><a href="#最后行方式命令" class="headerlink" title="最后行方式命令"></a>最后行方式命令</h2><ul>
+<li><strong>：x</strong>：保存当前文件并退出</li>
+<li><strong>：q</strong>：退出vi</li>
+<li>**：q!**：不保存文件并退出vi</li>
+<li><strong>：w</strong>：保存当前文件</li>
+<li><strong>：e filename</strong>：打开文件filename进行编辑</li>
+<li><strong>：n1,n2 co n3</strong>：将n1行到n2行之间的内容拷贝到第n3行下</li>
+<li><strong>：n1,n2 m n3</strong>：将n1行到n2行之间的内容移至到第n3行下</li>
+<li><strong>：n1,n2 d</strong>：将n1行到n2行之间的内容删除</li>
+<li><strong>：!command</strong>：执行shell命令command</li>
+<li><strong>：n1,n2 w!command</strong>：将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入</li>
+<li><strong>：r!command</strong>：将命令command的输出结果放到当前行</li>
+</ul>
+<h2 id="移动光标类命令"><a href="#移动光标类命令" class="headerlink" title="移动光标类命令"></a>移动光标类命令</h2><ul>
+<li><strong>h</strong>：光标左移一个字符</li>
+<li><strong>l</strong>：光标右移一个字符</li>
+<li><strong>space</strong>：光标右移一个字符</li>
+<li><strong>Backspace</strong>：光标左移一个字符</li>
+<li><strong>k或Ctrl+p</strong>：光标上移一行</li>
+<li><strong>j或Ctrl+n</strong>：光标下移一行</li>
+<li><strong>Enter</strong>：光标下移一行</li>
+<li><strong>w或W</strong>：光标右移一个字至字首</li>
+<li><strong>b或B</strong>：光标左移一个字至字首</li>
+<li><strong>e或E</strong>：光标右移一个字至字尾</li>
+<li>**)**：光标移至句尾</li>
+<li>**(**：光标移至句首</li>
+<li>**}**：光标移至段落开头</li>
+<li>**{**：光标移至段落结尾</li>
+<li><strong>nG</strong>：光标移至第n行首</li>
+<li>**n+**：光标下移n行</li>
+<li>**n-**：光标上移n行</li>
+<li>**n$**：光标移至第n行尾</li>
+<li><strong>H</strong>：光标移至屏幕顶行</li>
+<li><strong>M</strong>：光标移至屏幕中间行</li>
+<li><strong>L</strong>：光标移至屏幕最后行</li>
+<li><strong>0</strong>：（注意是数字零）光标移至当前行首</li>
+<li>**$**：光标移至当前行尾</li>
+</ul>
+<h2 id="屏幕翻滚类命令"><a href="#屏幕翻滚类命令" class="headerlink" title="屏幕翻滚类命令"></a>屏幕翻滚类命令</h2><ul>
+<li><strong>Ctrl+u</strong>：向文件首翻半屏</li>
+<li><strong>Ctrl+d</strong>：向文件尾翻半屏</li>
+<li><strong>Ctrl+f</strong>：向文件尾翻一屏</li>
+<li><strong>Ctrl＋b</strong>；向文件首翻一屏</li>
+<li><strong>nz</strong>：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。</li>
+</ul>
+<h2 id="插入文本类命令"><a href="#插入文本类命令" class="headerlink" title="插入文本类命令"></a>插入文本类命令</h2><ul>
+<li><strong>i</strong>：在光标前</li>
+<li><strong>I</strong>：在当前行首</li>
+<li><strong>a</strong>：光标后</li>
+<li><strong>A</strong>：在当前行尾</li>
+<li><strong>o</strong>：在当前行之下新开一行</li>
+<li><strong>O</strong>：在当前行之上新开一行</li>
+<li><strong>r</strong>：替换当前字符</li>
+<li><strong>R</strong>：替换当前字符及其后的字符，直至按ESC键</li>
+<li><strong>s</strong>：从当前光标位置处开始，以输入的文本替代指定数目的字符</li>
+<li><strong>S</strong>：删除指定数目的行，并以所输入文本代替之</li>
+<li><strong>ncw或nCW</strong>：修改指定数目的字<br>-** nCC**：修改指定数目的行</li>
+</ul>
+<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2><ul>
+<li><strong>ndw或ndW</strong>：删除光标处开始及其后的n-1个字</li>
+<li><strong>do</strong>：删至行首</li>
+<li>**d$**：删至行尾</li>
+<li><strong>ndd</strong>：删除当前行及其后n-1行</li>
+<li><strong>x或X</strong>：删除一个字符，x删除光标后的，而X删除光标前的</li>
+<li><strong>Ctrl+u</strong>：删除输入方式下所输入的文本</li>
+</ul>
+<h2 id="搜索及替换命令"><a href="#搜索及替换命令" class="headerlink" title="搜索及替换命令"></a>搜索及替换命令</h2><ul>
+<li><strong>&#x2F;pattern</strong>：从光标开始处向文件尾搜索pattern</li>
+<li><strong>?pattern</strong>：从光标开始处向文件首搜索pattern</li>
+<li><strong>n</strong>：在同一方向重复上一次搜索命令</li>
+<li><strong>N</strong>：在反方向上重复上一次搜索命令</li>
+<li><strong>：s&#x2F;p1&#x2F;p2&#x2F;g</strong>：将当前行中所有p1均用p2替代</li>
+<li><strong>：n1,n2s&#x2F;p1&#x2F;p2&#x2F;g</strong>：将第n1至n2行中所有p1均用p2替代</li>
+<li><strong>：g&#x2F;p1&#x2F;s&#x2F;&#x2F;p2&#x2F;g</strong>：将文件中所有p1均用p2替换</li>
+</ul>
+<h2 id="选项设置"><a href="#选项设置" class="headerlink" title="选项设置"></a>选项设置</h2><ul>
+<li><strong>all</strong>：列出所有选项设置情况</li>
+<li><strong>term</strong>：设置终端类型</li>
+<li><strong>ignorance</strong>：在搜索中忽略大小写</li>
+<li><strong>list</strong>：显示制表位(Ctrl+I)和行尾标志（$)</li>
+<li><strong>number</strong>：显示行号</li>
+<li><strong>report</strong>：显示由面向行的命令修改过的数目</li>
+<li><strong>terse</strong>：显示简短的警告信息</li>
+<li><strong>warn</strong>：在转到别的文件时若没保存当前文件则显示NO write信息</li>
+<li><strong>nomagic</strong>：允许在搜索模式中，使用前面不带“\”的特殊字符</li>
+<li><strong>nowrapscan</strong>：禁止vi在搜索到达文件两端时，又从另一端开始</li>
+<li><strong>mesg</strong>：允许vi显示其他用户用write写到自己终端上的信息</li>
+</ul>
+<h2 id="寄存器操作"><a href="#寄存器操作" class="headerlink" title="寄存器操作"></a>寄存器操作</h2><ul>
+<li><strong>?nyy</strong>：将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字</li>
+<li><strong>?nyw</strong>：将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字</li>
+<li><strong>?nyl</strong>：将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字</li>
+<li><strong>?p</strong>：取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字</li>
+<li><strong>ndd</strong>：将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-env-2015-01-11-install-requisites" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-env-2015-01-11-install-requisites.html" class="article-date">
@@ -728,46 +867,6 @@ ln -s /usr/local/python/bin/python ./python
 <p>怛[寧*也]他 唵誐帝誐帝 播啰誐帝 播啰僧誐帝 冒提莎贺</p>
 <p>舍利子。诸菩萨摩诃萨。若能诵是般若波罗蜜多明句。是即修学甚深般若波罗蜜多尔时世尊。从三摩地安详而起。赞观自在菩萨摩诃萨言。善哉善哉。善男子。如汝所说。如是如是。般若波罗蜜多。当如是学。是即真实最上究竟。一切如来亦皆随喜。</p>
 <p>佛说此经已。观自在菩萨摩诃萨。并诸苾刍。乃至世间天人阿修罗乾闼婆等。一切大众。闻佛所说皆大欢喜。信受奉行。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-buddha-2014-12-29-bai-di" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-buddha-2014-12-29-bai-di.html" class="article-date">
-  <time class="dt-published" datetime="2014-12-28T16:00:00.000Z" itemprop="datePublished">2014-12-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/buddha/">禅宗心得</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-buddha-2014-12-29-bai-di.html">白帝</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>且辞白帝过巫山，</p>
-<p>万里江陵一夜还。</p>
-<p>梦里纵有千般事，</p>
-<p>觉后空空无大千。</p>
 
       
     </div>
