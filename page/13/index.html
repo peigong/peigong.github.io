@@ -83,6 +83,145 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-studio-2015-01-15-fis" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2015-01-15-fis.html" class="article-date">
+  <time class="dt-published" datetime="2015-01-14T16:00:00.000Z" itemprop="datePublished">2015-01-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-studio-2015-01-15-fis.html">学习F.I.S前端工具框架</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="NPM清单"><a href="#NPM清单" class="headerlink" title="NPM清单"></a>NPM清单</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis">fex-team&#x2F;fis</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fouber/fis-postpackager-modjs">fis-postpackager-modjs</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fouber/fis-parser-less">fouber&#x2F;fis-parser-less</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fouber/fis-parser-utc">fouber&#x2F;fis-parser-utc</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/clippit/fis-parser-dot">clippit&#x2F;fis-parser-dot</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-postprocessor-jswrapper">fex-team&#x2F;fis-postprocessor-jswrapper</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-spriter-csssprites">fex-team&#x2F;fis-spriter-csssprites</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-packager-depscombine">fex-team&#x2F;fis-packager-depscombine</a></li>
+</ul>
+<h2 id="fex-team-fis"><a href="#fex-team-fis" class="headerlink" title="fex-team&#x2F;fis"></a>fex-team&#x2F;fis</h2><p>FIS是专为解决前端开发中自动化工具、性能优化、模块化框架、开发规范、代码部署、开发流程等问题的工具框架。</p>
+<ul>
+<li>检查安装：<code>npm view fis version</code></li>
+<li>工具安装：<code>npm install -g fis</code></li>
+</ul>
+<h2 id="fouber-fis-postpackager-modjs"><a href="#fouber-fis-postpackager-modjs" class="headerlink" title="fouber&#x2F;fis-postpackager-modjs"></a>fouber&#x2F;fis-postpackager-modjs</h2><p>a postpackager plugin for fis to process map.json and create map.js for modjs</p>
+<ul>
+<li>检查安装：<code>npm view fis-postpackager-modjs version</code></li>
+<li>工具安装：<code>npm install -g fis-postpackager-modjs</code></li>
+</ul>
+<h3 id="fis-conf-js配置"><a href="#fis-conf-js配置" class="headerlink" title="fis-conf.js配置"></a>fis-conf.js配置</h3><pre><code>//file : fis-conf.js
+fis.config.set(&#39;modules.postpackager&#39;, &#39;modjs&#39;);
+//settings
+fis.config.set(&#39;settings.postpackager.modjs.subpath&#39;, &#39;pack/map.js&#39;);
+</code></pre>
+<h2 id="fouber-fis-parser-less"><a href="#fouber-fis-parser-less" class="headerlink" title="fouber&#x2F;fis-parser-less"></a>fouber&#x2F;fis-parser-less</h2><p>A parser for fis to compile less file.</p>
+<ul>
+<li>检查安装：<code>npm view fis-parser-less version</code></li>
+<li>工具安装：<code>npm install -g fis-parser-less</code></li>
+</ul>
+<h2 id="clippit-fis-parser-dot"><a href="#clippit-fis-parser-dot" class="headerlink" title="clippit&#x2F;fis-parser-dot"></a>clippit&#x2F;fis-parser-dot</h2><p>FIS Parser for doT.js template engine</p>
+<ul>
+<li>检查安装：<code>npm view fis-parser-dot version</code></li>
+<li>工具安装：<code>npm install -g fis-parser-dot</code></li>
+</ul>
+<h2 id="fex-team-fis-postprocessor-jswrapper"><a href="#fex-team-fis-postprocessor-jswrapper" class="headerlink" title="fex-team&#x2F;fis-postprocessor-jswrapper"></a>fex-team&#x2F;fis-postprocessor-jswrapper</h2><p>A postprocessor plugin for fis to wrap javascript with closure or amd define.</p>
+<h3 id="fis-conf-js配置-1"><a href="#fis-conf-js配置-1" class="headerlink" title="fis-conf.js配置"></a>fis-conf.js配置</h3><pre><code>fis.config.merge(&#123;
+    settings : &#123;
+        postprocessor : &#123;
+            jswrapper : &#123;
+                //wrap type. if omitted, it will wrap js file with &#39;(function()&#123;...&#125;)();&#39;.
+                type : &#39;amd&#39;,
+                //you can use template also, $&#123;content&#125; means the file content
+                //template : &#39;!function()&#123;$&#123;content&#125;&#125;();&#39;,
+                //wrap all js file, default is false, wrap modular js file only.
+                wrapAll : true
+            &#125;
+        &#125;
+    &#125;
+&#125;);
+</code></pre>
+<p>或者通过 roadmap.path 局部配置</p>
+<pre><code>fis.config.set(&#39;roadmap.path&#39;, [
+    &#123;
+        reg: &#39;/page/**.js&#39;,
+        jswrapper: &#123;
+            //wrap type. if omitted, it will wrap js file with &#39;(function()&#123;...&#125;)();&#39;.
+            type : &#39;amd&#39;,
+
+            //you can use template also, $&#123;content&#125; means the file content
+            //template : &#39;!function()&#123;$&#123;content&#125;&#125;();&#39;
+        &#125;
+    &#125;
+]);
+</code></pre>
+<h2 id="fex-team-fis-spriter-csssprites"><a href="#fex-team-fis-spriter-csssprites" class="headerlink" title="fex-team&#x2F;fis-spriter-csssprites"></a>fex-team&#x2F;fis-spriter-csssprites</h2><p>基于FIS的csssprites，对css文件,以及html文件css片段进行csssprites处理。支持repeat-x, repeat-y, background-position 和 background-size</p>
+<p>依赖native插件node-images(<a target="_blank" rel="noopener" href="https://github.com/xiangshouding/node-images">xiangshouding&#x2F;node-images</a>)</p>
+<ul>
+<li>检查安装：<code>npm view fis-spriter-csssprites version</code></li>
+<li>工具安装：<code>npm install -g fis-spriter-csssprites</code></li>
+</ul>
+<h2 id="fex-team-fis-packager-depscombine"><a href="#fex-team-fis-packager-depscombine" class="headerlink" title="fex-team&#x2F;fis-packager-depscombine"></a>fex-team&#x2F;fis-packager-depscombine</h2><p>当设置 pack 的时候，同步依赖也会自动被打包进来。</p>
+<ul>
+<li>检查安装：<code>npm view fis-packager-depscombine version</code></li>
+<li>工具安装：<code>npm install -g fis-packager-depscombine</code></li>
+</ul>
+<h3 id="fis-conf-js配置-2"><a href="#fis-conf-js配置-2" class="headerlink" title="fis-conf.js配置"></a>fis-conf.js配置</h3><pre><code>fis.config.set(&#39;modules.packager&#39;, &#39;depscombine&#39;);
+</code></pre>
+<h2 id="hefangshi-fis-postpackager-simple"><a href="#hefangshi-fis-postpackager-simple" class="headerlink" title="hefangshi&#x2F;fis-postpackager-simple"></a>hefangshi&#x2F;fis-postpackager-simple</h2><p>用于自动打包页面零散资源和应用打包资源的FIS插件</p>
+<ul>
+<li>自动将页面中声明的资源引用替换为pack中设置的资源</li>
+<li>自动将未打包的零散资源按照引用顺序打包，默认关闭</li>
+</ul>
+<h2 id="fouber-fis-parser-utc"><a href="#fouber-fis-parser-utc" class="headerlink" title="fouber&#x2F;fis-parser-utc"></a>fouber&#x2F;fis-parser-utc</h2><p>A parser for fis to compile underscore template.</p>
+<ul>
+<li>检查安装：<code>npm view fis-parser-utc version</code></li>
+<li>工具安装：<code>npm install -g fis-parser-utc</code></li>
+</ul>
+<h2 id="F-I-S打包的特点"><a href="#F-I-S打包的特点" class="headerlink" title="F.I.S打包的特点"></a>F.I.S打包的特点</h2><ul>
+<li>一个资源不能被打包到多个包里面</li>
+<li>fis的打包实际上是在建立一个资源表，并将其描述并产出为一份map.json文件，用户应该围绕着这份描述文件来设计前后端运行框架，从而实现运行时判断打包输出策略的架构。</li>
+<li>如果只要简单实现<code>all-in-one</code>打包，直接使用<code>hefangshi/fis-postpackager-simple</code>，会把<code>pack</code>设置之外的零碎文件打成一个。不设置<code>pack</code>，所有的零碎文件都打包成了一个。</li>
+</ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://fis.baidu.com/index.html">F.I.S -前端工具框架</a></li>
+<li><a target="_blank" rel="noopener" href="http://fex.baidu.com/">FEX 做最专业的前端</a></li>
+<li><a target="_blank" rel="noopener" href="http://fis.baidu.com/docs/more/extension-point.html">插件扩展点列表</a></li>
+<li><a target="_blank" rel="noopener" href="http://fis.baidu.com/docs/api/fis-conf.html#pack">配置要打包合并的文件</a></li>
+<li><a target="_blank" rel="noopener" href="http://fis.baidu.com/docs/more/mapjson.html">基于map.json的前后端架构设计指导</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/issues/36">FIS为何默认不支持文件重复打包</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/issues/220">关于amd模块依赖打包合并</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/issues/151">fis怎样设置重复打包</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-lessons-2015-01-12-vi-commands" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-lessons-2015-01-12-vi-commands.html" class="article-date">
@@ -812,61 +951,6 @@ ln -s /usr/local/python/bin/python ./python
 <p>凡阴阳之要，阳密乃固，两者不和，若春无秋，若冬无夏，因而和之，是谓圣度。故阳强不能密，阴气乃绝，阴平阳秘，精神乃治，阴阳离决，精气乃绝。</p>
 <p>因于露风，乃生寒热。是以春伤于风，邪气留连，乃为洞泄。夏伤于暑，秋为痎疟。秋伤于湿，上逆而咳，发为痿厥。冬伤于寒，春必温病。四时之气，更伤五脏。</p>
 <p>阴之所生，本在五味，阴之五宫，伤在五味。是故味过于酸，肝气以津，脾气乃绝。味过于咸，大骨气劳，短肌，心气抑。味过于甘，心气喘满，色黑，肾气不衡。味过于苦，脾气不濡，胃气乃厚。味过于辛，筋脉沮驰，精神乃央。是故谨和五味，骨正筋柔，气血以流，腠理以密。如是则骨气以精。谨道如法，长有天命。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-classic-sutra-2014-12-29-fo-shuo-sheng-fo-mo-bo-re-bo-luo-mi-duo-jing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/classic-sutra-2014-12-29-fo-shuo-sheng-fo-mo-bo-re-bo-luo-mi-duo-jing.html" class="article-date">
-  <time class="dt-published" datetime="2014-12-28T16:00:00.000Z" itemprop="datePublished">2014-12-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/classic/">典籍学习</a>►<a class="article-category-link" href="/categories/classic/sutra/">佛经</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/classic-sutra-2014-12-29-fo-shuo-sheng-fo-mo-bo-re-bo-luo-mi-duo-jing.html">佛说圣佛母般若波罗蜜多经</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>西天译经三藏朝奉大夫试光禄卿传法大师赐紫臣施护奉诏译</p>
-</blockquote>
-<p>如是我闻。一时世尊。在王舍城鹫峰山中。与大苾刍众千二百五十人俱。并诸菩萨摩诃萨众。而共围绕。</p>
-<p>尔时世尊。即入甚深光明宣说正法三摩地。时观自在菩萨摩诃萨在佛会中。而此菩萨摩诃萨。已能修行甚深般若波罗蜜多。观见五蕴自性皆空。</p>
-<p>尔时尊者舍利子。承佛威神。前白观自在菩萨摩诃萨言。若善男子善女人。于此甚深般若波罗蜜多法门。乐欲修学者。当云何学。</p>
-<p>时观自在菩萨摩诃萨。告尊者舍利子言。汝今谛听。为汝宣说。</p>
-<p>若善男子善女人。乐欲修学此甚深般若波罗蜜多法门者。当观五蕴自性皆空。</p>
-<p>何名五蕴自性空耶。</p>
-<p>所谓即色是空即空是色。色无异于空。空无异于色。受想行识亦复如是。</p>
-<p>舍利子。此一切法如是空相。无所生。无所灭。无垢染。无清净。无增长。无损减。</p>
-<p>舍利子。是故空中无色。无受想行识。无眼耳鼻舌身意。无色声香味触法。无眼界。无眼识界。乃至无意界。无意识界。无无明。无无明尽。乃至无老死。亦无老死尽。无苦集灭道。无智。无所得。亦无无得。</p>
-<p>舍利子。由是无得故。菩萨摩诃萨。依般若波罗蜜多相应行故。心无所著。亦无挂碍。以无著无碍故。无有恐怖。远离一切颠倒妄想。究竟圆寂。</p>
-<p>所有三世诸佛。依此般若波罗蜜多故。得阿耨多罗三藐三菩提。</p>
-<p>是故应知。般若波罗蜜多。是广大明。是无上明。是无等等明。而能息除一切苦恼。是即真实无虚妄法。诸修学者。当如是学。</p>
-<p>我今宣说般若波罗蜜多大明曰：</p>
-<p>怛[寧*也]他 唵誐帝誐帝 播啰誐帝 播啰僧誐帝 冒提莎贺</p>
-<p>舍利子。诸菩萨摩诃萨。若能诵是般若波罗蜜多明句。是即修学甚深般若波罗蜜多尔时世尊。从三摩地安详而起。赞观自在菩萨摩诃萨言。善哉善哉。善男子。如汝所说。如是如是。般若波罗蜜多。当如是学。是即真实最上究竟。一切如来亦皆随喜。</p>
-<p>佛说此经已。观自在菩萨摩诃萨。并诸苾刍。乃至世间天人阿修罗乾闼婆等。一切大众。闻佛所说皆大欢喜。信受奉行。</p>
 
       
     </div>
