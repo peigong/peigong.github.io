@@ -83,6 +83,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-env-2015-03-06-linux-rz-sz" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-03-06-linux-rz-sz.html" class="article-date">
+  <time class="dt-published" datetime="2015-03-05T16:00:00.000Z" itemprop="datePublished">2015-03-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-03-06-linux-rz-sz.html">Linux下的上传下载工具rz和sz</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Linux下的上传下载工具rz和sz一般在 SecureCRT ssh中使用。</p>
+</blockquote>
+<h2 id="检查安装"><a href="#检查安装" class="headerlink" title="检查安装"></a>检查安装</h2><p><strong>验证方法：</strong>运行命令<code>rz</code>,如果弹出SecureCRT上传窗口，表示已经安装。</p>
+<p>如果还没有安装，可以直接用<code>yum</code>安装：</p>
+<pre><code>yum install lrzsz -y
+</code></pre>
+<p>安装后，使用上述验证方法，验证安装是否成功。</p>
+<h2 id="命令使用"><a href="#命令使用" class="headerlink" title="命令使用"></a>命令使用</h2><ol>
+<li>下载：<code>sz filename</code></li>
+<li>覆盖下载：<code>sz -y filename</code></li>
+<li>上传：<code>rz</code></li>
+<li>覆盖上传：<code>rz -y</code></li>
+</ol>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>上传下载目录默认是SecureCRT安装目录下的<code>upload/download</code>目录，也可以在SecureCRT的“选项-会话选项-终端-X&#x2F;Y&#x2F;Zmodem”自行设置修改。</li>
+<li>在弹出SecureCRT上传窗口选中文件后，需要点击添加按钮，添加到发送的文件列表，然后再点击确定才能上传。</li>
+<li>如果上传失败，可能是没有权限，尝试一下<code>sudo rz</code></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-studio-2015-01-15-fis" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-studio-2015-01-15-fis.html" class="article-date">
@@ -901,56 +956,6 @@ ln -s /usr/local/python/bin/python ./python
 <p>故知般若波罗蜜是大明咒、无上明咒、无等等明咒，能除一切苦，真实不虚。</p>
 <p>故说般若波罗蜜咒，即说咒曰：</p>
 <p>竭帝竭帝　波罗竭帝　波罗僧竭帝　菩提僧莎呵</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-classic-su-wen-2014-12-29-sheng-qi-tong-tian-lun" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/classic-su-wen-2014-12-29-sheng-qi-tong-tian-lun.html" class="article-date">
-  <time class="dt-published" datetime="2014-12-28T16:00:00.000Z" itemprop="datePublished">2014-12-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/classic/">典籍学习</a>►<a class="article-category-link" href="/categories/classic/su-wen/">黄帝内经素问</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/classic-su-wen-2014-12-29-sheng-qi-tong-tian-lun.html">生气通天论篇第三</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>黄帝曰：夫自古通天者，生之本，本于阴阳，天地之间，六合之内，其气九州、九窍、五脏、十二节，皆通乎天气。其生五，其气三，数犯此者，则邪气伤人，此寿命之本也。</p>
-<p>苍天之气清净，则志意治，顺之则阳气固，虽有贼邪，弗能害也，此因时之序。故圣人抟精神，服天气，而通神明。失之则内闭九窍，外壅肌肉，卫气散解，此谓自伤，气之削也。</p>
-<p>阳气者，若天与日，失其所，则折寿而不彰。故天运当以日光明，是故阳因而上，卫外者也。</p>
-<p>因于寒，欲如运枢，起居如惊，神气乃浮。因于暑，汗,烦则喘喝，静则多言，体若燔炭，汗出而散。<strong>因于湿，首如裹。湿热不攘，大筋緛短，小筋弛长。緛短为拘，弛长为痿。</strong>因于气，为肿。四维相代，阳气乃竭。</p>
-<p>阳气者，烦劳则张，精绝，辟积于夏，使人煎厥。目盲不可以视，耳闭不可以听，溃溃乎若坏都，汩汩乎不可止。</p>
-<p>阳气者，大怒则形气绝，而血菀于上，使人薄厥。有伤于筋，纵，其若不容。汗出偏沮，使人偏枯，汗出见湿，乃坐痤痱。高梁之变，足生大丁，受如持虚。劳汗当风，寒薄为皴，郁乃痤。</p>
-<p>阳气者，精则养神，柔则养筋。开阖不得，寒气从之，乃生大偻。陷脉为瘘，留连肉腠。俞气化薄，传为善畏，及为惊骇。营气不从，逆于肉理，乃生痈肿。魄汗未尽，形弱而气烁，穴俞以闭，发为风疟。</p>
-<p>故风者，百病之始也，清静则肉腠闭拒，虽有大风苛毒，弗之能害，此因时之序也。</p>
-<p>故病久则传化，上下不并，良医弗为。故阳畜积病死，而阳气当隔，隔者当写，不亟正治，粗乃败之。故阳气者，一日而主外，平旦人气生，日中而阳气隆，日西而阳气已虚，气门乃闭。是故暮而收拒，无扰筋骨，无见雾露。反此三时，形乃困薄。</p>
-<p>岐伯曰：阴者，藏精而起亟也；阳者，卫外而为固也。阴不胜其阳，则脉流薄疾，并乃狂；阳不胜其阴，则五脏气争，九窍不通。是以圣人陈阴阳，筋脉和同，骨髓坚固，气血皆从。如是则内外调和，邪不能害，耳目聪明，气立如故。</p>
-<p>风客淫气，精乃亡，邪伤肝也。因而饱食，筋脉横解，肠澼为痔。因而大饮，则气逆。因而强力，肾气乃伤，高骨乃坏。</p>
-<p>凡阴阳之要，阳密乃固，两者不和，若春无秋，若冬无夏，因而和之，是谓圣度。故阳强不能密，阴气乃绝，阴平阳秘，精神乃治，阴阳离决，精气乃绝。</p>
-<p>因于露风，乃生寒热。是以春伤于风，邪气留连，乃为洞泄。夏伤于暑，秋为痎疟。秋伤于湿，上逆而咳，发为痿厥。冬伤于寒，春必温病。四时之气，更伤五脏。</p>
-<p>阴之所生，本在五味，阴之五宫，伤在五味。是故味过于酸，肝气以津，脾气乃绝。味过于咸，大骨气劳，短肌，心气抑。味过于甘，心气喘满，色黑，肾气不衡。味过于苦，脾气不濡，胃气乃厚。味过于辛，筋脉沮驰，精神乃央。是故谨和五味，骨正筋柔，气血以流，腠理以密。如是则骨气以精。谨道如法，长有天命。</p>
 
       
     </div>
