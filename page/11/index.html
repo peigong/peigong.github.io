@@ -83,6 +83,275 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-env-2015-11-18-note-for-vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2015-11-18-note-for-vim.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-17T16:00:00.000Z" itemprop="datePublished">2015-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2015-11-18-note-for-vim.html">VIM使用笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>cd /usr/local/src/vim/vim-7.4.942
+sudo ./configure --prefix=/usr/local/vim --with-features=huge --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-multibyte --enable-sniff --enable-fontset
+sudo make
+sudo make install
+</code></pre>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li>在Ubuntu中使用<code>sudo apt-get install vim</code>安装。</li>
+<li>在<code>~/.vimrc</code>中加入一行<code>:set number</code>设置行号。</li>
+<li>vimtutor:sudo apt-get install vimtutor</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="参考配置"><a href="#参考配置" class="headerlink" title="参考配置"></a>参考配置</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/amix/vimrc">amix&#x2F;vimrc:The ultimate Vim configuration: vimrc</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/humiaozuzu/dot-vimrc">humiaozuzu&#x2F;dot-vimrc:Maple’s vim config files</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/spf13/spf13-vim">spf13&#x2F;spf13-vim:The ultimate vim distribution</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/zhcncn/p/4151701.html">Win7下安装配置gVim</a></li>
+</ul>
+<h3 id="自用配置"><a href="#自用配置" class="headerlink" title="自用配置"></a>自用配置</h3><pre><code>&quot; 显示行号  
+set number
+&quot; 显示标尺
+set ruler
+&quot; 设置当文件被改动时自动载入
+set autoread
+&quot; 自动保存  
+set autowrite
+&quot; 自动缩进  
+set autoindent
+&quot; 智能缩进  
+set smartindent
+set cindent 
+&quot; 制表符
+set noexpandtab
+set smarttab
+&quot; Tab键的宽度
+set tabstop=4
+set expandtab
+&quot; 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+&quot; 搜索逐字符高亮
+set hlsearch                                                                                                                                     
+set incsearch
+set smartcase
+&quot; 不自动添加空行
+set noendofline
+               
+syntax on   
+filetype plugin indent on
+runtime macros/matchit.vim
+               
+&quot; 关闭 vi 兼容模式
+set nocompatible
+               
+&quot; Highlight current line
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+               
+set showcmd       &quot; display incomplete commands
+set laststatus=2  &quot; Always display the status line
+set fileencodings=utf-8,gb18030,gbk,big5
+               
+execute pathogen#infect()
+&quot; 不支持箭头的系统可以设置为加号
+let g:NERDTreeDirArrowExpandable = &#39;+&#39; 
+let g:NERDTreeDirArrowCollapsible = &#39;+&#39; 
+
+let g:neocomplete#enable_at_startup = 1
+                        
+&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="中文帮助-vimcdoc"><a href="#中文帮助-vimcdoc" class="headerlink" title="中文帮助 vimcdoc"></a>中文帮助 vimcdoc</h3><pre><code>cd /usr/local/src
+sudo wget http://nchc.dl.sourceforge.net/sourceforge/vimcdoc/vimcdoc-1.5.0.tar.gz
+sudo tar xvf vimcdoc-1.5.0.tar.gz
+cd vimcdoc-1.5.0
+sudo ./vimcdoc.sh -i 
+</code></pre>
+<h3 id="插件管理-vim-pathogen"><a href="#插件管理-vim-pathogen" class="headerlink" title="插件管理 vim-pathogen"></a>插件管理 vim-pathogen</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/tpope/vim-pathogen">tpope&#x2F;vim-pathogen:manage your runtimepath</a></p>
+<p>安装插件<code>~/.vim/autoload/pathogen.vim</code>：</p>
+<pre><code>mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>execute pathogen#infect()
+</code></pre>
+<p>安装其他插件的方法：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/tpope/vim-sensible.git
+</code></pre>
+<h3 id="目录树插件-nerdtree"><a href="#目录树插件-nerdtree" class="headerlink" title="目录树插件 nerdtree"></a>目录树插件 nerdtree</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/scrooloose/nerdtree">scrooloose&#x2F;nerdtree:A tree explorer plugin for vim</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<p>使用<code>apt-vim</code>安装：</p>
+<pre><code>apt-vim install -y https://github.com/scrooloose/nerdtree.git
+</code></pre>
+<h3 id="代码补全插件-neocomplete"><a href="#代码补全插件-neocomplete" class="headerlink" title="代码补全插件 neocomplete"></a>代码补全插件 neocomplete</h3><p>GitHub:<a target="_blank" rel="noopener" href="https://github.com/Shougo/neocomplete.vim">Shougo&#x2F;neocomplete.vim:Next generation completion framework after neocomplcache</a></p>
+<p>Debian (or Ubuntu)系统下的依赖：</p>
+<p>－vim-nox<br>－vim-gtk<br>－vim-gnome<br>－vim-athena</p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/Shougo/neocomplete.vim.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:neocomplete#enable_at_startup = 1
+</code></pre>
+<h3 id="JSX-语法插件"><a href="#JSX-语法插件" class="headerlink" title="JSX 语法插件"></a>JSX 语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/mxw/vim-jsx">mxw&#x2F;vim-jsx:React JSX syntax highlighting and indenting for vim.</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<p>The recommended installation method is via Pathogen.  Then simply execute</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/mxw/vim-jsx.git
+</code></pre>
+<p>(You can install vim-javascript in an analogous manner.)</p>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>let g:jsx_ext_required = 0
+let g:jsx_pragma_required = 1
+</code></pre>
+<h3 id="ES6语法插件"><a href="#ES6语法插件" class="headerlink" title="ES6语法插件"></a>ES6语法插件</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.vim.org/scripts/script.php?script_id=5230">isRuslan&#x2F;vim-es6:List of JavaScript ES6 snippets and syntax highlighting for vim. </a> - <a target="_blank" rel="noopener" href="https://github.com/isRuslan/vim-es6">GitHub</a></p>
+</blockquote>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone https://github.com/isRuslan/vim-es6.git
+</code></pre>
+<h3 id="配色插件"><a href="#配色插件" class="headerlink" title="配色插件"></a>配色插件</h3><blockquote>
+<p>PS:最牛逼的配色，不能推荐更多</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/altercation/vim-colors-solarized">GitHub</a>:precision colorscheme for the vim text editor <a target="_blank" rel="noopener" href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
+<p>使用<code>pathogen.vim</code>安装：</p>
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+</code></pre>
+<p>在<code>~/.vimrc</code>中添加：</p>
+<pre><code>&quot; 配色 需要放在pathogen#infect()后面
+se t_Co=16                    
+let g:solarized_termcolors=256
+set background=dark           
+colorscheme solarized  
+</code></pre>
+<h3 id="其他插件"><a href="#其他插件" class="headerlink" title="其他插件"></a>其他插件</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/kchmck/vim-coffee-script">kchmck&#x2F;vim-coffee-script:CoffeeScript support for vim</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-it-studio-2015-11-17-note-for-ubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2015-11-17-note-for-ubuntu.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-16T16:00:00.000Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-studio-2015-11-17-note-for-ubuntu.html">Ubuntu 使用笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="输入法的安装"><a href="#输入法的安装" class="headerlink" title="输入法的安装"></a>输入法的安装</h2><p>除根据教程安装ibus输入法以外，还需要作一些设置：</p>
+<ul>
+<li>在系统设置 -&gt; 语言支持设置中，键盘输入方式选择IBus。</li>
+<li>在系统设置 -&gt; 文本输入设置中，添加使用的输入源。</li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-11-17-jin-qiu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-11-17-jin-qiu.html" class="article-date">
+  <time class="dt-published" datetime="2015-11-16T16:00:00.000Z" itemprop="datePublished">2015-11-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-11-17-jin-qiu.html">金秋</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>风送金秋来，</p>
+<p>雨打黄叶去。</p>
+<p>世上沧桑转，</p>
+<p>天下寒暑易。</p>
+<p>离离草有性，</p>
+<p>萋萋人无相。</p>
+<p>三劫春秋短，</p>
+<p>四季日月长。 </p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-poem-a-2015-2015-11-10-yinyuan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/poem-a-2015-2015-11-10-yinyuan.html" class="article-date">
@@ -488,171 +757,11 @@
 
 
   
-    <article id="post-poem-a-2015-2015-09-23-yu-guo-tian-qing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html">雨过天晴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>雨过，天晴。</p>
-<p>或许不留一点点尘埃，</p>
-<p>或许有一段彩虹挂在天外。</p>
-<ul>
-<li></li>
-</ul>
-<p>雨已过，天已晴。</p>
-<p>或许蓝天白云终一世，</p>
-<p>或许也有风雨在未来。</p>
-<ul>
-<li></li>
-</ul>
-<p>天睛，雨过。</p>
-<p>不想看白色的云狗，</p>
-<p>可以闭上自己的双眼。</p>
-<ul>
-<li></li>
-</ul>
-<p>天已晴，雨已过。</p>
-<p>撑着曾经的伞，</p>
-<p>也回不到淋漓的过去。<br>‌‌</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-it-studio-2015-09-18-webplate-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/it-studio-2015-09-18-webplate-stack.html" class="article-date">
-  <time class="dt-published" datetime="2015-09-17T16:00:00.000Z" itemprop="datePublished">2015-09-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/it-studio-2015-09-18-webplate-stack.html">前端框架Webplate的技术栈</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前端框架Webplate"><a href="#前端框架Webplate" class="headerlink" title="前端框架Webplate"></a>前端框架Webplate</h2><p><a target="_blank" rel="noopener" href="http://getwebplate.com/">Webplate</a>是一款优秀的前端框架，可使开发者专注于站点或应用的开发，它提供了稳健的布局引擎、全局按钮元素和可定制性的表格，同时还包括了jQuery插件和大量工具。 &#x3D; <a target="_blank" rel="noopener" href="https://github.com/chrishumboldt/webplate">GitHub</a></p>
-<p>Webplate is an awesome front-end framework that lets you stay focused on building your site or app all the while remaining really easy to use.</p>
-<h2 id="Yepnope-js"><a href="#Yepnope-js" class="headerlink" title="Yepnope.js"></a>Yepnope.js</h2><p>Yepnope.js是一个能够根据输入条件来选择性异步加载资源文件的js脚本，可以在页面上仅加载用户需要的js&#x2F;css。</p>
-<p>The first thing executed by the stack is yepnope.js to asynchronously load the necessary Javascript and CSS files. In essence the stack.js file is a custom configured deployment and will load up essential libraries before checking for project files. Even though this library has been deprecated it is still valuable in its execution and is the core of how Webplate runs. There are plans to build a custom loader but for now this works great.</p>
-<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>Next up is jQuery and is one of the most important libraries used by Webplate. All of the Javascript tools, custom plugins and wrappers are written using jQuery and as such cannot be removed. Also the version 2 build of jQuery is being used and as such Webplate is not compatible with any IE version below 9. This is a conscious decision to stay ahead of the curve in terms of front-end development.</p>
-<h2 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h2><p>Modernizr是一个开源的JS库，它使得那些基于访客浏览器的不同（指对新标准支持性的差异）而开发不同级别体验的设计师的工作变得更为简单。它使得设计师可以在支持HTML5和CSS3的浏览器中充分利用HTML5和CSS3的特性进行开发，同时又不会牺牲其他不支持这些新技术的浏览器的控制。</p>
-<p>Another critical library, Modernizr is a feature detection script used to determine what the browser is capable of doing, ranging from CSS animations to touch enabled events. It does so by assigning a class to the HTML element which can then be used by your Javascript or CSS.</p>
-<h2 id="Hammer-js"><a href="#Hammer-js" class="headerlink" title="Hammer.js"></a>Hammer.js</h2><p>Hammer.js是一个轻量级的JavaScript库（仅有2kb），能让你的网站轻松实现触控事件。它依赖于jQuery，用来控制触摸设备上的多点触控特性。</p>
-<p>All touch based gestures are handled through Hammer.js with the jQuery plugin included as part of the stack. This really is a great library and replaces the original inclusion of jQuery.Finger. To find out more visit the Hammer.js site.</p>
-<h2 id="Velocity-js"><a href="#Velocity-js" class="headerlink" title="Velocity.js"></a>Velocity.js</h2><p>Velocity.js 是velocity模板语法的javascript实现。Velocity 是基于Java的模板引擎，广泛应用在阿里集 体各个子公司。Velocity模板适用于大量模板使用的场景，支持复杂的逻辑运算，包含 基本数据类型、变量赋值和函数等功能。Velocity.js 支持 Node.js 和浏览器环境。</p>
-<p>Animations are an important part of the front-end experience but managing the right kind of animation for the particular device is a challenge. Velocity.js is the best out there for this job and will give you smooth Javascript animations across the board.</p>
-<h2 id="Fastclick"><a href="#Fastclick" class="headerlink" title="Fastclick"></a>Fastclick</h2><p>FastClick 是一个简单，易于使用的JS库用于消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟。</p>
-<p>Most mobile devices come with an irritating delay on touch click events for links and buttons. Fastclick removes this delay resulting in a more app like feel to the whole project. Note that this library will only be loaded if Webplate detects touch capabilities and is executed automatically.</p>
-<h2 id="Normalize-css"><a href="#Normalize-css" class="headerlink" title="Normalize.css"></a>Normalize.css</h2><p>Normalize.css 是一个可定制的 CSS 文件，使浏览器呈现的所有元素，更一致和符合现代标准。它正是针对只需要统一的元素样式。该项目依赖于研究浏览器默认元素风格之间的差异，精确定位需要重置的样式。这是一个现代的，HTML5-ready 的 CSS 重置样式集。</p>
-<p>A collection of HTML element and attribute style-normalizations to help clear any strange style nuances. Normalize.css helps maintain consistency across all your projects in all the browsers.</p>
-<h2 id="Typeplate"><a href="#Typeplate" class="headerlink" title="Typeplate"></a>Typeplate</h2><p>Typeplate 是一个“排版入门套件”。我们不需要美学设计,但定义适当的标记与可扩展样式为常见的排版模式。一个精简Sass 库关注适当的技术实现的设计模式。</p>
-<p>Typelate is a “typographic starter kit” used to define proper markup for common typographic patterns. It will handle all your type from heading tags, to paragraphs and lists.</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-characters-2015-07-31-xiang-fei" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-characters-2015-07-31-xiang-fei.html" class="article-date">
-  <time class="dt-published" datetime="2015-07-30T16:00:00.000Z" itemprop="datePublished">2015-07-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/characters/">人物</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-characters-2015-07-31-xiang-fei.html">湘妃</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="雨"><a href="#雨" class="headerlink" title="雨"></a>雨</h2><blockquote>
-<p>2015-07-31</p>
-</blockquote>
-<p>湘妃或从南方来，</p>
-<p>一抹乌云暑气收。</p>
-<p>点点珠泪随风洒，</p>
-<p>不着欢喜不着愁。</p>
-<h2 id="巫山"><a href="#巫山" class="headerlink" title="巫山"></a>巫山</h2><blockquote>
-<p>2012-04-28</p>
-</blockquote>
-<p>斑斑哀怨斑竹泪，</p>
-<p>楚楚娇柔楚云飞。</p>
-<p>巫山朝暮云雨后，</p>
-<p>不知先王曾是谁。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/10/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/12/">下一页 &raquo;</a>
   </nav>
 
 </section>
