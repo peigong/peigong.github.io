@@ -8,9 +8,9 @@
   "description": "peigong's blog.",
   "license": "MIT",
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo clean & hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo clean & hexo generate & hexo deploy",
+    "deploy": "hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
