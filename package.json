@@ -10,7 +10,7 @@
   "scripts": {
     "build": "hexo clean & hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "npm run build & lerna run build & hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
@@ -29,5 +29,8 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "https://github.com/peigong/hexo-theme-landscape.git"
+  },
+  "devDependencies": {
+    "lerna": "^8.2.2"
   }
 }

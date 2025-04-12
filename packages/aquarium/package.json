@@ -1,0 +1,12 @@
+{
+  "name": "aquarium",
+  "version": "1.0.0",
+  "description": "北京海洋馆",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook build"
+  }
+}

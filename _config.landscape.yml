@@ -5,6 +5,7 @@
 menu:
   '首页': /
   '写作计划': /proposals
+  '导游笔记': /guide
   '藏书目录': /books
 # RSS link
 # rss: /atom.xml
