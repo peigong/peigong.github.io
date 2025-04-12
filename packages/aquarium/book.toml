@@ -1,14 +1,15 @@
 [book]
-authors = ["VET.周培公"]
+authors = ["VET. 周培公"]
 language = "en"
 multilingual = false
 src = "src"
-title = "北京海洋馆"
+title = "北京海洋馆 - https://pg.js.cn"
 
 [build]
 build-dir = "../../public/guide/aquarium"
 
 [output.html]
+default-theme = "rust"
 git-repository-url = "https://github.com/peigong/peigong.github.io"
 edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
 site-url = "/guide/aquarium/"
