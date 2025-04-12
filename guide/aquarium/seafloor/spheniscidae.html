@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>企鹅 - 北京海洋馆 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/seafloor/spheniscidae.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="企鹅"><a class="header" href="#企鹅">企鹅</a></h1>
+<p>企鹅（学名：Spheniscidae）是企鹅科，有6个属。企鹅是一类不会飞行的鸟类，有十八种。企鹅的外表有很多差异，这有助于科学家识别二十种左右的物种。例如，帝企鹅的头部、下巴和喉咙是黑色的，耳罩是黄色的，而巴布亚企鹅的头部是黑色的，眼睑是白色的，每只眼睛上方都有三角形的白色斑块。</p>
+<p>企鹅在南半球的水生环境中生活。它们常见于南极洲，有些也生活在加拉帕戈斯群岛、澳大利亚、智利等其他各个地方。企鹅经常会回到它们出生的地方交配和繁殖。它们在大群落中繁殖，这使得企鹅具有很强的社会性。大多数企鹅平均在自己的巢穴（巢）中产下两个蛋，而帝企鹅或帝企鹅等物种可能只产一个蛋。所有企鹅都有蹼足和翅膀，用作鳍状肢，轻松在水中航行。企鹅能够在严寒的气候中生活、繁殖。在陆地上，它活像身穿燕尾服的西方绅士，走起路来一摇一摆， 虽然企鹅摇摇晃晃，在陆地上以接近 2.5 英里/小时左右的速度奔跑，可是在水里，企鹅那短小的翅膀成了一双强有力的“划桨”，游速可达每小时25-30千米。一天可游160千米。这有助于捕捉食物和避开捕食者，例如海狮（Otaria flavescens）。企鹅的平均寿命在十五到二十年之间。主要以磷虾、乌贼，小鱼为食。</p>
+<p>因为企鹅在国内没有自然分布，因此企鹅在中国不是保护动物。企鹅是世界级保护动物，不同种类的企鹅分别被列入《世界自然保护联盟濒危物种红色名录》(IUCN)2016年 ver3.1：濒危（EN）5种；易危（VU）4种；近危（NT）3种；无危（LC）6种。</p>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<h3 id="进化史"><a class="header" href="#进化史">进化史</a></h3>
+<p>科学家认为企鹅是从飞鸟进化而来的，并且是包括海燕、信天翁、潜鸟和军舰鸟在内的亲戚。随着企鹅适应水生栖息地并发展出潜水和游泳的能力，它们失去了飞行能力。来自新西兰的Waimanu manneringi是已知最早的企鹅物种，存在于6000-6500万年前的白垩纪时期。它代表了从飞行到潜水的进化转变后不久的巨型企鹅的独立起源。</p>
+<p>一些研究人员推测，企鹅与海鹦科的成员有关，因为它们类似于海鹦、鸬鹚和剃刀嘴等其他海洋鸟类。但这更像是趋同进化，即物种群体独立但相似地进化。</p>
+<p>大约在6500万年前，白垩纪生物大灭绝事件后不久，企鹅的祖先在古西兰地区出现了。当时的古西兰已孤悬于大陆之外，南半球各个大陆分布也已接近今天的位置，只有南极大陆仍然通过陆桥与南美大陆相连。古企鹅正是从古西兰地区开始向古陆桥附近扩散。</p>
+<p>4000万年前，连接南极和南美两块大陆之间的陆桥断开，陆桥残存的部分成为了今天的南极半岛。从此，南极洲完全处在海洋的包围之中，随着海峡的逐渐打开，环绕南极的洋流开始形成，南极大陆的气候变得更加寒冷。</p>
+<p>3400万年前，南极冰盖形成。在相当长的历史时期，企鹅主要分布在古西兰、南极半岛和南美洲南部海岸及其附近海域。这个时期出现了不少巨型企鹅物种，如约2米高的卡氏古冠企鹅是迄今为止所知的最大型企鹅。</p>
+<p>直到约1400万年前，现代企鹅的共同祖先出现在了古南美洲。它们向南极洲扩散并首先在南极半岛和南极大陆分化形成了王企鹅属，之后，其他现代企鹅分支也先后出现。</p>
+<p>现生企鹅的共同祖先出现在大约1400万年前，之后气候环境的变化推动了企鹅物种的快速分化，在分化过程中还伴随着复杂的基因流动，这些对现生企鹅的形态多样性的塑造造成了巨大的影响。</p>
+<p>到了距今大约260万年前的时候，地球的气候又发生了剧烈的变化，第四纪冰期到来，企鹅家族也随之发生了快速演化事件，在较短的时间内分化出了大部分的现生物种。它们的分布范围大为扩展，覆盖了南极洲和南半球其它各主要大陆的南部海岸，基本奠定了今天的物种格局，成为了南冰洋最主要的海鸟。在这个过程中，逐渐增强的南极绕极流很可能为企鹅的传播提供了重要的助力。</p>
+<h3 id="发现与命名"><a class="header" href="#发现与命名">发现与命名</a></h3>
+<p>1488年葡萄牙的水手们在靠近非洲南部的好望角第一次发现了企鹅。但是最早记载企鹅的却是历史学家皮加菲塔。他在1520年乘坐麦哲伦船队在巴塔哥尼亚海岸遇到大群企鹅，当时他们称之为不认识的鹅。人们早期描述的企鹅种类，多数是生活在南温带的种类。到了18世纪末期，科学家才定出了6种企鹅的名字，而发现真正生活在南极冰原的种类是19世纪和20世纪的事情。例如，1844年才给王企鹅定名，斯岛黄眉企鹅1953年才被命名。企鹅身体肥胖，它的原名是肥胖的鸟。但是因为它们经常在岸边伸立远眺，似人一样站立着，“企”本意就是人踞起脚远望，故叫企鹅了。</p>
+<p>企鹅的一般学名是 Spheniscidae。然而，“企鹅”这个词的确切词源还有待商榷。这个词最早出现在 1700 年代，作为大 auk 的同义词，这是一种现已灭绝的海鸟，颜色与企鹅相似，但没有血缘关系。一些人认为这个虚构的同义词源自法语单词“pingouin”，水手们用它来形容 auk 鸟。</p>
+<p>牛津英语词典、美国传统词典和 Merriam-Webster 将这个词归功于威尔士语。他们假设企鹅是“pen”（威尔士语中“头”的意思）和“gwyn”（威尔士语中白色的意思）的混搭，因为大企鹅最早出现在纽芬兰的白头岛。</p>
+<p>其他语言学家认为企鹅有拉丁语词根，将其与“pinguis”一词联系起来，意思是“脂肪”或“油”。他们将这一理论寄托在日耳曼语中对企鹅的称呼“fettgans”，翻译过来就是“肥鹅”，而荷兰语中的动物词“vetgans”也大致翻译为“肥鹅”。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>企鹅以其直立的姿势和坚硬的翅膀而著称，它的翅膀具有与飞行鸟类相同的一般骨骼结构，但骨骼更短更粗壮，可以用作鳍，无法折叠在身体上。企鹅是中型到大型鸟类（1-40公斤;40-115厘米），皮肤下有一层厚厚的脂肪。成年羽毛背部为蓝黑色或灰色，腹部为白色，有时头部有独特的颜色或羽毛。幼鸟要么完全是棕灰色的，要么是白色的。幼鸟有类似成年人的羽毛。性别是相似的。羽毛小而连续（无羽毛束）。喙长且常横向压缩，全鼻孔（整个鼻孔），不透水的鼻孔和裂颌腭。</p>
+<p>企鹅是不会飞的潜水员，骨骼气动不良，胸骨有两个侧切口，15个颈椎和基翼突缺失。翅膀被改造成鳍状肢（翅膀骨架扁平并部分融合），翅膀基部有血管（血管结构，其中较冷的血液返回身体吸收流向翅膀的血液中的热量），胸肌很大，但肱二头肌缺失（企鹅独有）。腿短，放在身体的后方，扁平的跗跖骨不完全融合。掌状足，有四个前尖脚趾。双叶油腺呈簇状。</p>
+<p>企鹅是一种最古老的游禽，它很可能穿上冰甲之前，就已经在南极安家落户。南极陆地多，海面宽，丰富的海洋浮游盐腺可以排泄多余的盐分。企鹅双眼由于有平坦的眼角膜，所以可在水底及水面看东西。双眼可以把影像传至脑部作望远集成使之产生望远作用。企鹅是一种鸟类，因此企鹅没有牙齿。企鹅的舌头以及上颚有倒刺，以适应吞食鱼虾等食物，但是这并不是他们的牙齿。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>企鹅通常住在赤道以南，人迹罕至的地方才能看见它们。有些企鹅住在寒冷地方，有些企鹅住在热带地方。但企鹅其实并不喜欢热天气，只有在寒冷的气候中，它们才会快活。所以，在遥远的南极洲沿岸冰冷的洋里，那儿住着最多的企鹅。企鹅的栖息地因种类和分布区域的不同而异：帝企鹅喜欢在冰架和海冰上栖息；阿德利企鹅和金图企鹅既可以在海冰上，又可以在无冰区的露岩上生活；在亚南极的企鹅，大都喜欢在无冰区的岩石上栖息，并常用石块筑巢。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>企鹅几乎只生活在南半球，除了生活在赤道附近的带状企鹅，有时会迁徙到北半球。安哥拉、南极洲、阿根廷、澳大利亚、智利、纳米比亚、新西兰、南非和福克兰群岛有大量种群。此外，圈养的企鹅生活在世界各地的动物园和动物保护区。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<h3 id="捕食"><a class="header" href="#捕食">捕食</a></h3>
+<p>企鹅以海洋浮游动物，主要是南极磷虾为食，有时也捕食一些腕足类、乌贼和小鱼。企鹅的胃口不错，每只企鹅每天平均能吃0.75公斤食物，主要是南极磷虾。因此，企鹅作为捕食者在南大洋食物链中起着重要作用。企鹅在南极捕食的磷虾约3317万吨，占南极鸟类总消耗量的90%，相当于鲸捕食磷虾的一半。</p>
+<h3 id="性情"><a class="header" href="#性情">性情</a></h3>
+<p>企鹅的性情憨厚、大方，十分逗人。尽管企鹅的外表气度不凡，显得有点高傲，甚至盛气凌人，但是，当人们靠近它们时，它们并不望人而逃，有时好像若无其事，有时好像羞羞答答，不知所措，有时又东张西望，交头接耳，叽叽喳喳。</p>
+<p>企鹅能在水中灵活而又轻松地游动，但是这种能力或许抵消了它们飞行的能力。</p>
+<h2 id="游泳"><a class="header" href="#游泳">游泳</a></h2>
+<p>企鹅是典型的海鸟，它虽然不会飞，但是游泳的本领在鸟类中是超级选手。许多水鸟游泳是靠长有蹼的双脚在水中划动而前进，企鹅的脚虽然也长有蹼，却只用来当做控制方向的舵，前进的力量全靠那双船桨般的翅膀，在水中振翅飞翔。</p>
+<p>企鹅游泳的速度非常快，皇帝企鹅一小时可游约十公里，白顶企鹅则有一小时游三十六公里的纪录，是所有鸟类中游得最快的。企鹅常常用海豚式游泳，也就是潜泳一段距离，露出水面换气后，再潜下去继续游。事实上，企鹅也是鸟类当中的潜水冠军，它曾有潜入水中18分钟，和潜入水下265米的纪录。</p>
+<p>通过观察与企鹅紧密相关的海鸟，科学家们确定，适合于飞行的翅膀并不适合潜水和游泳。长期以来都有几个理论解释为什么企鹅无法飞行。一个观点认为，一些物种是因为缺乏地面的捕食者而失去了飞行能力。另一个观点是一种生物力学假设：当鸟类飞行和潜水的时候，它必须使用翅膀进行两种不同的工作。从生物力学假设，无法打造出同时擅长这两种工作的翅膀。</p>
+<p>企鹅曾经面临一种进化选择，是选择在空中飞行还是选择在水下灵活游动。通常随着翅膀在企鹅潜水时变得越来越高效，它们的飞行能力就变得越来越弱。在某一时刻，飞行就变得非常费力，因此最好的选择就是放弃飞行，而且让翅膀缩小成为鳍状肢。</p>
+<h2 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h2>
+<h3 id="生长特性"><a class="header" href="#生长特性">生长特性</a></h3>
+<p>幼企鹅需要 10-52 周才能羽化。在某些企鹅物种中，幼年企鹅与成年企鹅在一起并定期喂食，直到羽化。在其他物种中，幼雏可以喂食到接近成年大小，然后禁食几个月，同时与其他雏鸟挤在一起取暖。不同物种的首次繁殖平均年龄各不相同，从两岁到五岁不等。企鹅一般只产一个幼崽，小企鹅是个例外，它一个季节可以养两到三只幼崽。</p>
+<h3 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h3>
+<p>企鹅被认为是一夫一妻制的，个体经常在同一个巢穴筑巢，与前一年的同一伴侣筑巢。在某些物种中，已经观察到 13 年的配对。求偶表演是多样而复杂的，可能包括大声喧哗的发声、“相互欣喜若狂的表演”（配偶识别行为）和拍打喙（或击剑表演）。</p>
+<p>帝企鹅是唯一在寒冷的南极冬季繁殖的企鹅，它们的幼鸟在出生后的几个月内依赖父母提供的乳汁来维持生命。当帝企鹅母亲失去一只幼雏时，它们有时会试图“偷走”另一只母亲的雏鸟，但通常不会成功，因为附近的其他雌性会帮助保护母亲保留她的幼雏。在某些物种中，例如帝企鹅和王企鹅，雏鸟会聚集在一起，称为托儿所。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<h3 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h3>
+<p>全部列入《世界自然保护联盟濒危物种红色名录》(IUCN)2016年 ver3.1：濒危（EN）5种；易危（VU）4种；近危（NT）3种；无危（LC）6种。</p>
+<h2 id="濒危原因"><a class="header" href="#濒危原因">濒危原因</a></h2>
+<h3 id="气候变化"><a class="header" href="#气候变化">气候变化</a></h3>
+<p>气候变化是导致企鹅濒危的一个重要因素。随着全球变暖，南极海冰面积减少，这对依赖海冰繁殖、换羽或觅食的企鹅种群产生了深远的影响。例如，帝企鹅的生命周期所有部分都依赖于海冰，如果海冰消失，小企鹅无法在寒冷的海水中生存，导致繁殖失败。</p>
+<h3 id="人类活动"><a class="header" href="#人类活动">人类活动</a></h3>
+<p>人类活动也对企鹅的生存环境造成了严重影响。例如，非洲企鹅的濒危与人类对其蛋的偷盗有关。在20世纪中期，企鹅蛋被认为是一种美味，许多人会去沿海的海滩上采集企鹅蛋，导致非洲企鹅的数量急剧下降。</p>
+<h3 id="栖息地破坏"><a class="header" href="#栖息地破坏">栖息地破坏</a></h3>
+<p>企鹅的栖息地受到破坏也是导致其濒危的原因之一。例如，非洲企鹅的栖息地受到人类活动的污染，以及陆地动物资源丰富，导致企鹅的天敌增多，这些都是非洲企鹅数量减少的因素。</p>
+<h3 id="疾病和病毒"><a class="header" href="#疾病和病毒">疾病和病毒</a></h3>
+<p>疾病和病毒传播也对企鹅的生存构成了威胁。例如，禽流感病毒在南极洲大规模传播，这对南极地区庞大的企鹅种群构成了威胁。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<h3 id="生态价值"><a class="header" href="#生态价值">生态价值</a></h3>
+<p>企鹅是南极生态系统的重要组成部分，它们的存在对维持生态平衡具有重要作用。企鹅的食谱主要包括鱼类和甲壳类动物，它们在捕食过程中的行为也对海洋生物多样性和生态系统的健康产生影响。</p>
+<h3 id="科研价值"><a class="header" href="#科研价值">科研价值</a></h3>
+<p>企鹅作为研究对象，对于科学家了解南极环境变化、生态系统结构和功能具有重要的科研价值。通过对企鹅的研究，科学家可以更好地理解全球气候变化对极地生态系统的影响。</p>
+<h3 id="教育价值"><a class="header" href="#教育价值">教育价值</a></h3>
+<p>企鹅因其独特的外貌和生活习性，常常被用作教育的象征，尤其是在科普教育和环境保护意识的提升方面。企鹅的形象和故事也被广泛应用于教育材料和活动中，激发人们对自然世界的兴趣和保护欲望。</p>
+<h3 id="经济价值"><a class="header" href="#经济价值">经济价值</a></h3>
+<p>企鹅也为旅游业带来了经济效益，特别是在南极旅游和动物园中，企鹅成为了吸引游客的重要因素。此外，企鹅相关的商品和纪念品也成为了商业市场的一部分。</p>
+<h3 id="文化价值"><a class="header" href="#文化价值">文化价值</a></h3>
+<p>企鹅在一些文化中具有特殊的意义，它们经常出现在艺术作品中，如绘画、雕塑和文学作品，反映了人类对这些奇妙生物的欣赏和敬畏。</p>
+<h2 id="世界纪录"><a class="header" href="#世界纪录">世界纪录</a></h2>
+<p>世界上最耐寒的鸟类：有“海洋之舟”美称的企鹅是一种最古老的游禽，它们很可能在地球穿上冰甲之前，就已经在南极安家落户，他们能在-40℃的严寒中生活、繁殖。（吉尼斯世界纪录）</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../seafloor/amphiprion-actiniaria.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../seafloor/anthozoa.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../seafloor/amphiprion-actiniaria.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../seafloor/anthozoa.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>珊瑚 - 北京海洋馆 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/seafloor/anthozoa.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="珊瑚"><a class="header" href="#珊瑚">珊瑚</a></h1>
+<p>珊瑚纲中多类生物的统称。身体呈圆筒状，有八个或八个以上的触手，触手中央有口。多群居，结合成一个群体，是一种海生圆筒状腔肠动物，食物从口进入，食物残渣从口排出，它以捕食海洋里细小的浮游生物为生。</p>
+<p>珊瑚虫在生长过程中能吸收海水中的钙和二氧化碳，然后分泌出石灰石，变为自己生存的外壳。而珊瑚是珊瑚虫的分泌物，构成珊瑚虫的支撑结构。</p>
+<h2 id="区分"><a class="header" href="#区分">区分</a></h2>
+<h3 id="珊瑚虫"><a class="header" href="#珊瑚虫">珊瑚虫</a></h3>
+<p>群体生活的珊瑚虫，它们的骨架联在一起，肠腔也通过小肠系统联在一起，所以这些群体珊瑚虫有许多“口”，却共用一个“胃”。能够建造珊瑚礁的珊瑚虫大约有500多种，这些造礁珊瑚虫生活在浅海水域，水深50米以内，适宜温度为22至32℃，如果温度低于18℃则不能生存。</p>
+<p>所以在高纬度海区人们见不到珊瑚礁。珊瑚虫的触手是对称地生长的，根据触手的数目，可将珊瑚虫分为6放珊瑚和8放珊瑚两个亚纲。它们大多出芽生殖，芽体离不开母体，最终形成相互连接的群体。</p>
+<h3 id="珊瑚-1"><a class="header" href="#珊瑚-1">珊瑚</a></h3>
+<p>珊瑚属腔肠动物门 ( Coelenterata) 珊瑚虫纲( Anthozoa) ，是腔肠动物门中最大的一个纲，有 7000多种，均为海产．珊瑚虫纲又分为八放珊瑚亚纲及六放珊瑚亚纲．根据骨骼质地和水螅体大小， 珊瑚一般分为大水螅体石珊瑚 ( large polyp scleractinian，LPS) 、 小水螅体石珊瑚 ( small polyp scleractinian，SPS) 、 软珊瑚以及海葵等几种类型．珊瑚礁生态系统也被称为水下“热带雨林” ， 具有保护海岸、 维护生物多样性、 维持渔业资源、 吸引旅游观光等重要功能．聚在一起成为群体的珊瑚，其骨架不断扩大，从而形成形状万千、生命力巨大、色彩斑斓的珊瑚礁。著名的大堡礁就是这样形成的。</p>
+<p>在海洋中有一种叫做珊瑚虫的低等动物，喜欢在水流快，温度高的暖海地区生活，我们见到的珊瑚就是无数珊瑚虫尸体腐烂以后，剩下的群体的“骨骼”。珊瑚虫的子孙们一代一代地在它们祖先的“骨骼”上面繁殖后代，就形成了各种各样的珊瑚。</p>
+<h2 id="外形"><a class="header" href="#外形">外形</a></h2>
+<p>珊瑚虫身微小，口周围长着许多小触手，用来捕获海洋中的微小生物。它们能够吸收海水中矿物质来建造外壳,以保护身体。</p>
+<p>珊瑚虫只有水螅型的个体，呈中空的圆柱形，下端附着在物体的表面上，顶端有口，围以一全圈或多圈触手。触手用以收集食物，可作一定程度的伸展，上有特化的细胞（刺细胞），刺细胞受刺激时翻出刺丝囊，以刺丝麻痹猎物。</p>
+<p>软珊瑚、角质珊瑚及蓝珊瑚为群体生活。群体中的每个水螅体各有8条触手，胃循环腔内有8个隔膜，其中6个隔膜的纤毛用以将水流引入胃循环腔，另两个隔膜的纤毛用以将水引出胃循环腔。骨骼为内骨骼。活珊瑚是最为罕见的，是生长在死珊瑚上的珊瑚虫。</p>
+<h2 id="生存"><a class="header" href="#生存">生存</a></h2>
+<p>珊瑚虫一般以群体生活，每个个体之间以一种叫共肉的结构彼此相连，共肉部分能分泌角质或石灰质的外骨骼。珊瑚虫的触手很小，都长在口边，海水经过消化腔时，其中的食物和钙质都被它吸收。</p>
+<p>珊瑚的群体骨骼式样繁多，颜色各异。红珊瑚像枝条劲发的小树；石芝珊瑚像拔地而起的蘑菇；石脑珊瑚如同人的大脑；鹿角珊瑚似枝丫茂盛的鹿角；筒状珊瑚像嵌在岩石上的喇叭，颜色有浅绿、橙黄、粉红、蓝、紫、褐、白。这些千姿百态、五彩缤纷的珊瑚骨骼在海底构成了巧夺天工的水下花园。</p>
+<p>珊瑚虫体内有藻类植物和它共同生活，这些藻类靠珊瑚虫排出的废物生活，同时给珊瑚虫提供氧气。藻类植物需要阳光和温暖的环境才能生存，珊瑚堆积的越高，越有利于藻类植物的生存。珊瑚一般生长在接近 28 ℃的环境里,而该温度对呼吸作用的影响比对光合作用的大 ,导致呼吸作用/光合作用比率的下降, 特别是暴露在高温的胁迫下, 净光合产物也降低。</p>
+<h2 id="繁殖"><a class="header" href="#繁殖">繁殖</a></h2>
+<p>在热带地区，珊瑚虫繁殖迅速，生长快，老的不断死去，新的不断成长，骨骼也随之增添扩大，积沙成塔，由小到大，年深月久，就成为硕大的珊瑚礁和珊瑚岛了。我国南海的东沙群岛和西沙群岛、印度洋的马尔代夫岛、南太平洋的斐济岛以及闻名世界的大堡礁，都是由小小的珊瑚虫建造的。</p>
+<p>卵和精子由隔膜上的生殖腺产生，经口排入海水中。受精通常发生于海水中，有时亦发生在胃循环腔内。通常受精仅发生于来自不同个体的卵和精子之间。受精卵发育为覆以纤毛的浮浪幼体，能游动。数日至数周后固着于固定表面上发育为水螅型体。也可以出芽的方式生殖。芽形成后不与原来的水螅体分离。新芽不断形成并生长，于是形成群体。新的水螅体生长发育时下的老水螅体死亡，但其骨骼仍留在群体上。</p>
+<h2 id="分类"><a class="header" href="#分类">分类</a></h2>
+<p>腔肠动物门珊瑚虫纲(A n t h o z o a ) 分六放珊瑚亚纲 ( He x a c o r a l l i a ) 石珊瑚目和角珊瑚目等, 八放珊瑚亚纲(O c t o c o r a l l i a ) 根枝珊瑚目、柳珊瑚目 、软珊瑚目和苍珊瑚目等 . 徐闻珊瑚礁中生长的珊瑚虫纲有石珊瑚目(S c l e r a c t i n i a ) 和其他珊瑚虫纲的目。</p>
+<h3 id="软珊瑚"><a class="header" href="#软珊瑚">软珊瑚</a></h3>
+<p>分布广泛，其骨骼由互相分离的含钙骨针组成。一些种类呈盘状，另一些有指状的突出物。</p>
+<h3 id="角质珊瑚"><a class="header" href="#角质珊瑚">角质珊瑚</a></h3>
+<p>在热带浅海中数量丰富，外形呈带状或分支状，长度可达3米，角质珊瑚包括所谓贵珊瑚（红珊瑚、玫瑰珊瑚），可用作首饰。其中常见的种类有地中海的赤珊瑚。</p>
+<h3 id="蓝珊瑚"><a class="header" href="#蓝珊瑚">蓝珊瑚</a></h3>
+<p>见于印度洋和太平洋中石珊瑚形成的珊瑚礁上，形成直径达2米的块状。</p>
+<h3 id="石珊瑚"><a class="header" href="#石珊瑚">石珊瑚</a></h3>
+<p>是最为人熟知、分布最广泛的种类，单体或群体生活。与黑珊瑚和刺珊瑚一样，隔膜数为6或6的倍数，触手简单而不呈羽状。石珊瑚、黑珊瑚和刺珊瑚与有亲缘关系的海葵的不同之处主要在于有外骨骼。石珊瑚见于所有海洋，从潮带到6000米深处。群体生活的种类，其水螅体直径1至3毫米。大多数现存石珊瑚为浅黄色，浅褐色或橄榄色，依生活于珊瑚上的藻类而定。但其骨骼为白色。最大的营单体生活的石珊瑚属石芝属，直径可达25厘米左右。石珊瑚的骨骼呈杯状，包住水螅体，其成分几乎纯为碳酸钙。其生长率取决于年龄、食物供应、水温以及种类的不同。环状珊瑚岛和珊瑚礁由石珊瑚的骨骼形成。其形成的速度平均每年约5毫米到28毫米。常见的石珊瑚类型包括脑珊瑚、蘑菇珊瑚、星珊瑚和鹿角珊瑚等，均以其形态命名。黑珊瑚和刺珊瑚呈鞭状、羽毛状、树木状或形如瓶刷，分布于地中海、西印度群岛或巴拿马沿岸海域。</p>
+<h2 id="种群分布"><a class="header" href="#种群分布">种群分布</a></h2>
+<p>生长在温度高于20℃的赤道及其附近的热带、亚热带地区</p>
+<h2 id="价值"><a class="header" href="#价值">价值</a></h2>
+<p>珊瑚岛能供人居住，它的遗骨坚硬，可以开采，当作砖石或烧制石灰。珊瑚的骨骼也可制作工艺品，有观赏价值。然而，它们同时也形成了许多海底暗礁，对航海的安全有一定的影响。由大量珊瑚形成的珊瑚礁和珊瑚岛，能够给鱼类创造良好的生存环境，加固海边堤岸，扩大陆地面积。因此，人们应当保护珊瑚，保护珊瑚虫！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../seafloor/spheniscidae.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../seafloor/medusozoa.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../seafloor/spheniscidae.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../seafloor/medusozoa.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
