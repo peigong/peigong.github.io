@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>绿海龟 - 北京海洋馆</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/seafloor/chelonia-mydas.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="绿海龟"><a class="header" href="#绿海龟">绿海龟</a></h1>
+<p>绿海龟（学名：Chelonia mydas）是龟鳖目、海龟科、海龟属的海洋动物，是各种海龟中体型较大的一种，其成龟背甲直线长度可达90-120厘米，体重可达100千克以上。因其体内脂富含主要食物，即海草中的叶绿素而得名。然而，它的腹甲为白色或黄白色，背甲则从赤棕含有亮丽的大花斑到墨色不等。背甲中央为五盾，左右列各为四盾，眼睛上方具鳞片一对。成龟的性别很容易辨认，尾巴的长短是性别的特征。一般而言，雄龟的尾巴要比雌龟长得很多。</p>
+<p>绿海龟和其他海龟一样，除了上岸产卵外，终其一生都在大洋中度过。该物种广泛分布于热带及亚热带海域，并产卵于温度达25℃以上的沙滩。为草食性动物，是海龟里唯一摄食较多海藻的种类。觅食区多为海草丰富的浅水区。幼龟偏肉食性，长大后变为杂食。一生中大多的时间都在海中生活。在繁殖季节离水上岸，每年4-7月份为其繁殖旺季，但产卵时期可以一直延续到12月份。雌龟将卵产在掘于沙滩的洞穴中。每次产卵90-160枚，卵白色，球形。</p>
+<p>列入《世界自然保护联盟濒危物种红色名录》(IUCN)濒危(EN)。</p>
+<p>列入《濒危野生动植物种国际贸易公约附录Ⅰ、附录Ⅱ和附录Ⅲ》(CITES)附录Ⅰ。</p>
+<p>列入中国《国家重点保护野生动物名录》一级。</p>
+<p>2024年3月3日，中国珍稀濒危物种数量实现稳中有升，绿海龟已人工繁育幼龟1万多只。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>绿海龟是体型最大的硬壳海龟之一。因其身上的脂肪为绿色而得名。它的身体庞大，体长80-150厘米，体重65-136千克。最大的背甲长可达153厘米，体重250千克。外被扁圆形的甲壳，只有头和四肢露在壳外，头部略呈三角形，前额长有鳞片，仅一对，为暗褐色；缩头时会被卡住，因此无法把头完全缩进壳里。两颊黄色，颈部深灰色。</p>
+<p>吻部短圆，上颚前端不呈钩曲，其角质的内表面有两条垂直的角嵴；下颚略向上钩曲，颚缘具强锯齿，咀嚼面有一由短的尖齿突连接而成的中嵴。头背具对称大鳞片，前额鳞1对。背甲呈心形，盾片平铺镶嵌排列；颈盾短而宽，与相邻缘盾并列；椎盾5枚，第一枚呈扇形，第二至第四枚呈六边形，第五枚呈梯形；肋盾4对，第一对肋盾不与颈盾相接；每侧有缘盾11枚。腹甲平坦，前、后缘圆弧形，前部有1枚三角形的间喉盾，其它各盾片均沿腹中线整齐对称紧密排列；腹盾缝&gt;肛盾缝&gt;胸盾缝&gt;肱盾缝&gt;喉间盾。每侧有4枚下缘盾；腋，胯部各具若干枚小盾片。四肢桨状，覆以大鳞；前肢长于后肢，内侧各具1爪，雄性前肢的爪强大而弯曲成钩状。尾短。</p>
+<p>头及四肢棕褐色。背腹扁平，茶褐色或暗绿色，上有黄斑，盾片镶嵌排列，具由中央向四周放射的斑纹，色泽调和而美丽。中央有椎盾5枚，左右各有棕黑色、略有斑驳花纹的盾板4片，周围每侧还有缘盾7枚。腹甲呈黄色。四肢特化成鳍状的桡足，可以像船桨一样在水中灵活地划水游泳。前肢浅褐色，边缘黄白色，后肢比前肢颜色略深。内侧指趾各有一爪，前肢的爪大而弯曲，呈钩状。雄性尾较长，相当于其体长的三分之一。雌性尾较短。尾部的脊骨经盐酸处理后，可以隐约看出生长年轮。</p>
+<p>刚孵化的幼龟，背甲棕黑色，具3棱，脊棱明显，其色较浅，侧棱较弱。腹甲黄白色，两腹侧各具一条明显的纵棱；脐孔位于腹盾和股盾间缝的中央部。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>绿海龟终生栖息水中。而海龟在海中的分布与水深有密切关系，大多集中于0-50米深的水域。根据研究发现，海龟于海域中的分布主要是在靠近洋流边缘且接近岸边的水域，于洋流主轴中的并不多。另外海龟本身的摄食习性、产卵活动亦会影响海龟的分布。海水的温度及深度也是影响的环境因子，海龟会选择靠近岸侧，水温较高，水深较浅的大陆棚海域，且此处的食物亦较充足。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<h3 id="迁徙"><a class="header" href="#迁徙">迁徙</a></h3>
+<p>绿海龟为大型洄游性海龟，会在固定的区域觅食，并在另一处产卵。与大多数海龟一样，绿海龟具有高度的迁徙性，在其一生中会使用范围广泛的地点和栖息地。离开筑巢海滩后，幼龟便会进入海洋阶段，可能被动地漂浮在作为公海发育场所的主要洋流系统（环流）中。在海洋区域生活数年后，这些海龟会聚集到富含海草或海洋藻类的近海发育区，在那里觅食和生长直至成熟。达到性成熟后，绿海龟便开始在觅食地和筑巢区之间进行繁殖迁徙，每隔几年就会进行一次。迁徙由雄性和雌性共同进行，可能穿越海洋区域，通常跨越数千公里。在非繁殖期，成年个体栖息在沿海近海觅食区，这些区域有时与幼体发育栖息地重合。</p>
+<h3 id="行为"><a class="header" href="#行为">行为</a></h3>
+<p>绿海龟广泛分布在热带及亚热带海域中，即约南北纬度20℃等温线之间的海域，并在水温逾25℃的沙滩上产卵。由于它用肺呼吸，于海中的潜水深度极限约一两百米。绿海龟是用肺来进行呼吸的，但胸部不能活动，是一种吞气式的呼吸方式，每隔一段时间便要将头伸出海面来呼吸。但也可以比较长时间地在水下生活，因为它还有一种具特异呼吸功能的肛囊，即直肠两侧的一对薄囊，在肛囊袋的壁上密布着许多微血管。当绿海龟在海中栖息时，能有节奏地收缩着肛门周围的肌肉，使海水在肛门、直肠和肛囊间进出，此时微细血管内的红细胞即可从海水中摄取氧气，不必把头伸出水面进行呼吸了。夜晚绿海龟就躺浮在海面上睡觉，暂时停止肛囊的呼吸作用，而改用肺来呼吸。</p>
+<h3 id="运动"><a class="header" href="#运动">运动</a></h3>
+<p>绿海龟在其幼年阶段仅进食并被动地由水流运输，而成年就会在摄食和繁殖地点之间进行两次迁徙阶段。在这两次迁徙运动中，绿海龟呈现出不同的游泳模式，无论是长时间的潜水（自由记录的最长持续时间为215分钟；最深为135米），还是短暂的几米深的潜水，动物可能会在那里发现有效游泳的最佳条件，而无需消耗太多能量。通常在白天，动物更喜欢在水面附近游泳并频繁呼吸，而在晚上，它们更喜欢长时间潜水。平均速度估计为每小时1.5-2千米。</p>
+<h3 id="食性"><a class="header" href="#食性">食性</a></h3>
+<p>绿海龟是一种草食性海龟，主食为海中的海草与大型海藻，因此体内脂肪累积了许多绿色色素，呈现淡绿色，也因而得名。绿海龟在远洋阶段和成年底栖阶段之间表现出显著的饮食变化。幼龟处于远洋汇合区时，会以蠕虫、幼年甲壳类动物、水生昆虫、草和藻类为食。然而，成年后，它们是唯一严格食草（只吃植物材料）的海龟物种，尽管它们偶尔也会食用有限数量的动物物质。成年绿海龟的下颚呈细锯齿状，可以撕扯海草和藻类等植物。也是唯一会上岸晒太阳的种类。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<h3 id="世界"><a class="header" href="#世界">世界</a></h3>
+<p>繁殖地：几内亚和几内亚比绍；</p>
+<p>原产地：美属萨摩亚、安哥拉、安圭拉、安提瓜和巴布达、澳大利亚（昆士兰、北领地、珊瑚海群岛、西澳大利亚、阿什莫尔-卡蒂埃群岛）、巴林、孟加拉国、巴巴多斯、伯利兹、博内尔岛、圣尤斯特歇斯岛和萨巴岛（萨巴岛、博内尔岛、圣尤斯特歇斯岛）、巴西、英属印度洋领地、中国、圣诞岛、科科斯群岛（基林群岛）、哥伦比亚、科摩罗、库克群岛、哥斯达黎加、古巴、库拉索、塞浦路斯、多米尼加、厄瓜多尔（科隆群岛）、埃及、赤道几内亚（比奥科岛）、厄立特里亚、斐济、法属圭亚那、法属波利尼西亚、法属南部领地（莫桑比克海峡群岛）、格林纳达、关岛、圭亚那、海地、印度（古吉拉特邦、拉克代夫群岛、尼科巴群岛、安达曼群岛）、印度尼西亚（巴厘岛、巴布亚、马鲁古、苏门答腊、苏拉威西、加里曼丹、爪哇、小巽他群岛）、伊朗、牙买加、日本（南西诸岛、小笠原诸岛、本州）、肯尼亚、基里巴斯、科威特、马达加斯加、马来西亚（砂拉越、马来西亚半岛、沙巴）、马尔代夫、马绍尔群岛、马提尼克岛、毛里塔尼亚、毛里求斯（罗德里格斯）、马约特岛、墨西哥（米却肯州、金塔纳罗奥州、索诺拉州、塔毛利帕斯州、坎佩切州、韦拉克鲁斯州、锡那罗亚州、下加利福尼亚州、雷维拉吉赫多岛、塔巴斯科州、尤卡坦州）、密克罗尼西亚、莫桑比克、缅甸、新喀里多尼亚、新西兰（南群岛、克马德克群岛、北群岛）、尼加拉瓜、纽埃、北马里亚纳群岛、阿曼、巴基斯坦、帕劳、巴拿马、巴布亚新几内亚、秘鲁、菲律宾、波多黎各、圣赫勒拿岛、阿森松岛和特里斯坦-达库尼亚群岛（阿森松岛）、圣基茨和尼维斯、圣卢西亚、圣马丁岛（法属部分）、圣文森特和格林纳丁斯、圣多美和普林西比、沙特、塞内加尔、塞舌尔、塞拉利昂、荷属圣马丁（荷属部分）、所罗门群岛、索马里、斯里兰卡、苏里南、坦桑尼亚、泰国、东帝汶、托克劳、汤加、特立尼达和多巴哥、特克斯和凯科斯群岛、图瓦卢、土耳其、阿联酋、美国（佛罗里达、夏威夷群岛）、美国小岛屿（中途岛）、瓦努阿图、委内瑞拉（委内瑞拉安的列斯群岛，鸟岛）、越南、英属维尔京群岛、美国维尔京群岛、也门；</p>
+<p>疑似灭绝：以色列；</p>
+<p>已灭绝：开曼群岛、毛里求斯；</p>
+<p>重新引入：百慕大；</p>
+<p>存在不确定和游荡：纳米比亚、皮特凯恩、葡萄牙（亚速尔群岛、马德拉群岛）、新加坡、南非、西班牙（加那利群岛）、瓦利斯群岛和富图纳群岛；</p>
+<p>存在不确定且来源不确定：巴哈马、贝宁、佛得角、柬埔寨、喀麦隆、智利、刚果（金）、刚果（布）、科特迪瓦、吉布提、萨尔瓦多、加蓬、冈比亚、加纳、瓜德罗普岛、危地马拉、洪都拉斯、利比里亚、蒙特塞拉特、尼日利亚、卡塔尔、萨摩亚、苏丹、中国台湾省、多哥和西撒哈拉。</p>
+<h3 id="区域"><a class="header" href="#区域">区域</a></h3>
+<p>绿海龟的分布范围遍布全球的热带水域，亚热带水域分布较少（大西洋——中东部、东北部、西北部、东南部、西南部、中西部；印度洋——东部、西部；地中海；太平洋-中东部、西北部、西南部、中西部）。绿海龟的迁徙性很强，它们在地理上分散的栖息地进行复杂的移动和迁徙。全球有80多个国家有绿海龟筑巢地。它们在海洋环境中的移动情况尚不明确，但据信有140多个国家的沿海水域有绿海龟栖息。</p>
+<h3 id="中国"><a class="header" href="#中国">中国</a></h3>
+<p>分布于北起山东、南至北部湾的海域。在中国江苏、浙江、福建、台湾、广东等地的沿海地带都有分布，尤以南海为多。</p>
+<h3 id="产卵场"><a class="header" href="#产卵场">产卵场</a></h3>
+<p>分布于亚洲、大洋洲和美洲温暖海域的沙滩。中国的广东省惠东，香港特别行政区的南丫岛，台湾省的澎湖列岛、小琉球和兰屿，海南省的东沙群岛、西沙群岛、南沙群岛，都有绿海龟的产卵场。</p>
+<h2 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h2>
+<h3 id="时间"><a class="header" href="#时间">时间</a></h3>
+<p>在南海附近海域，绿海龟的交配期约为每年3、4月间，而产卵季则约为每年5-10月之间，以7-8月为产卵的高峰期。绿海龟由于生性胆怯，所以常产卵于人烟罕至的沙滩上，当海龟的栖息地受的破坏或开发做其他的用途时，它也会放弃这块栖息地，重新找寻新的居所。</p>
+<h3 id="交配"><a class="header" href="#交配">交配</a></h3>
+<p>成熟的绿海龟常年遨游于海洋之中，可是一到繁殖季节，即使远在千里之外，产卵季前，雄龟和雌龟会从其觅食栖地回游到出生的地点，在海岸、海岛的周围水域中或陆地上交配。此时雄性和雌性活动频繁，相互追逐，选择配偶。雄性用前肢爪钩住雌性的背甲，将其交接器插入雌性的泄殖腔中，交配的时间可达3-4个小时之久。常可见数头雄龟争相与一头雌龟交配，雌龟在交配后，会将各雄龟的精子储存起来，等到卵子成熟，再分批受精，因此雌龟在一个产卵季中，会有多次上岸产卵的行为。一旦交配期结束，雄龟即自行返回觅食海域。但并非每年都进行交配产卵，研究显示，平均约隔2到9年才会进行回游，交配，产卵间隔的长短会受到环境因素如气候、食物、温度等之影响，雌龟的生理状况也会影响到自身的生殖周期；因此，每年上岸产卵的雌龟数量变化很大，并无一定的周期性。</p>
+<h3 id="产卵"><a class="header" href="#产卵">产卵</a></h3>
+<p>成熟母绿海龟多半在人烟罕至的沙滩上产卵。它们对栖息地的忠诚度很高，在认定栖息地之后，无论离开多远，绝大部分绿海龟会回到原来的栖地进行繁衍。但是，如果产卵栖息地遭到严重破坏或改变时，如：多次尝试后仍然无法顺利掘洞、上岸屡次受到严重干扰或有阻碍物挡隔而无法上岸，都会使绿海龟被迫放弃原先的产卵沙滩，重新找寻更适合的繁殖地域。</p>
+<p>雌性多于夜晚在坡度小，沙质松散均匀，便于爬行和挖掘的海岸登陆，直至高潮线以上的灌木林边缘，用后肢挖掘一个坑口为20厘米×20厘米、深50厘米的洞穴产卵。产下的卵为数十个到百余个不等，卵的直径为41-43毫米，白色，形状很像乒乓球，卵壳坚韧而富有弹性，不易破损。随卵还排出粘液，形成保护层，对于防止水分蒸发，保证胚胎正常发育都有重要作用。绿海龟产卵的时期在各地区均有不同，每头雌龟一季会上岸产下1-9窝卵，平均约为4窝卵。</p>
+<h3 id="孵化"><a class="header" href="#孵化">孵化</a></h3>
+<p>在经过了50天左右的孵化期后，小绿海龟就会破壳而出。孵化中的稚龟包覆在柔软且具有韧性的蛋壳中，上面有许多不定型的蛋孔，是与外界交换气体和吸收孵化期间所需水分的重要结构，因此，稚龟孵化状况会受到卵窝位置与沙滩降雨量的影响。和多数其他爬虫类动物相似，绿海龟的性别取决于龟卵孵化期第3至5周（即孵化期的中段，称为性别决定期）的沙温。</p>
+<p>研究资料显示，绿海龟的中枢温度即卵窝产生50%雄性与50%雌性时的温度；虽因地区的不同而有所差异，但通常介于28-30℃之间，当性别决定期温度高于中枢温度时，孵化出的均为雌龟，当温度低于中枢温度时，孵化出的均为雄龟，而介于中枢温度间的沙温，则会孵化出性别比例接近的稚龟。</p>
+<h3 id="产温"><a class="header" href="#产温">产温</a></h3>
+<p>绿海龟在水温达25℃时，才会上岸产卵。因此，在中国台湾，每年的3-4月时绿海龟会洄游到产卵地附近进行交配，在端午节前後，也就是国历5-6月时，绿海龟开始上岸产卵，直到7-8月上岸产卵量达到高峰。绿海龟习性非常温和，既不攻击人、也无牙伤人，相反的，绿海龟都在在无人、无光时才上岸产卵。上岸的绿海龟会爬至草堆中挖个大洞，将身体隐入洞中，让天敌不易发。之后，绿海龟必须花上2小时，以后鳍挖出产卵洞，再花莫约15分钟产出百来个卵，此时产卵的雌龟会呈现半昏迷状态。产完卵后，会以后鳍播沙将产卵洞盖起，再继续以前鳍将播土覆盖整个大洞。根据台湾绿海龟的研究，平均每一只龟可以产出3到5窝卵。</p>
+<h3 id="稚龟"><a class="header" href="#稚龟">稚龟</a></h3>
+<p>沙中的卵大约过50天后会孵出小龟，小龟孵化前，上覆的沙土会产生洞状下陷，表示不久后绿海龟就会孵化。绿海龟都在清晨三四点时爬出，绿海龟的孵化率约为6成，孵出的稚龟成堆往向外跑，颇为壮观。刚孵出的绿海龟，背皮还未硬化，从沙滩到下海的6、7天内，会有许多动物吃它，全球只有一种鸟类以龟为食，在台湾并没有这种鸟。在台湾，幼龟的天敌主要是臭青公蛇、赤背松柏根蛇、沙蟹。下海后，小龟还要躲避肉食鱼类的掠食。绿海龟需要花25年以上才能发育成熟，成熟后的成龟会再回游至出生地附近产卵。然而，海龟的存活率很低，每孵化的1000只稚龟中，只有一只能成熟。</p>
+<p>刚孵出的稚龟，背甲直线长约4-5厘米之间，差不多是成人的掌心长度。背甲主要是黑色，腹部背甲边缘和鳍缘是白色。同一窝的小绿海龟多半会在同一时间内爬出卵窝（称为脱出），脱壳而出的稚龟，约需3到7天的时间才能爬出卵窝。避敌天性使然，稚龟通常会在夏天夜晚沙温较低时，才会爬出地面，向着较为明亮的大海匍匐前行。在到达海边时，便借着向浪性，顺着海浪的声音，冲进浪花里，奋力向外海游出。可以不停向外游上24小时，以减少被天敌捕食的机会。</p>
+<p>在稚龟回到大海再到长大成为二三十厘米的幼龟之间，因没有人在近海或海边看过它们，过往科技不够发达时，并不能真正找到它们生活地点，所以都用“迷失的岁月”来形容这段人类看不见的幼年期生活史。随着航海及海洋探测的技术大为进步，有证据显示，稚龟似乎在躲藏在大洋上漂流的马尾藻团之下，过着以浮游生物为食的浮游性生活。但仍无法确定稚龟是怎样到达马尾藻团；也许是顺着近岸洋流飘游抵达，至今仍无法有很确切地了解小龟成长经过。</p>
+<h3 id="亚成龟"><a class="header" href="#亚成龟">亚成龟</a></h3>
+<p>小绿海龟成长至背甲直线长二三十厘米之后，才结束其浮游性的生活，此时称为亚成龟，它们会在近岸的浅水区域，选择有海草或大型藻类丰盛的栖地定居，以海中植物为主食的底栖性生活。而这类的区域多与珊瑚礁重叠分布，因此在珊瑚礁区常可见到绿海龟的踪影。在成长过程中，可能固定居住在一个摄食栖地，也可能在不同的年龄中，迁移到不同的栖地去居住。无论是哪一种情形，都会在成熟之后，回到原来的出生地去繁衍下一代。绿海龟成熟的体长都在八九十厘米以上。</p>
+<h3 id="性别鉴定"><a class="header" href="#性别鉴定">性别鉴定</a></h3>
+<ol>
+<li>
+<p>组织形态学，绿海龟性腺切片分皮层和髓质两部分，卵巢的皮层较厚、基质中有大小不一的未成熟卵细胞，髓质中空腔较少；睾丸的皮层较薄，髓质中空腔较多，呈现出显著的被基质包围的髓质索。</p>
+</li>
+<li>
+<p>性激素测定，当雌二醇与睾酮含量之比E2∶时间小于1.5时，孵出的稚龟为雄性(♂)；当E2∶时间大于1.5时，为雌性(♀)。</p>
+</li>
+<li>
+<p>绿海龟性别决定的临界温度在29.4-29.5℃之间，此时孵出雌龟的性比约为1:1。</p>
+</li>
+</ol>
+<h2 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h2>
+<p>列入《世界自然保护联盟濒危物种红色名录》(IUCN)2004年4月30日——濒危(EN)。</p>
+<p>列入《濒危野生动植物种国际贸易公约附录Ⅰ、附录Ⅱ和附录Ⅲ》(CITES)2023年版附录Ⅰ。</p>
+<p>列入中国《国家重点保护野生动物名录》（2021年2月5日）一级。</p>
+<h3 id="主要威胁"><a class="header" href="#主要威胁">主要威胁</a></h3>
+<p>绿海龟和其他海龟物种一样，由于它们在从卵到成体的所有生命阶段都容易受到人类活动的影响，因此特别容易受到种群下降的影响。人类对绿海龟最有害的威胁可能是故意从筑巢海滩收获卵和成体以及从觅食地收获幼龟和成体。不幸的是，尽管亚种群数量大幅下降，但在几个国家收获仍然是合法的。此外，许多偶然威胁影响着世界各地的绿海龟。这些威胁影响陆地和海洋环境，包括海洋渔业中的兼捕、筑巢海滩和觅食区的栖息地退化以及疾病。与海洋渔业纠缠相关的死亡是主要的偶然威胁；负责任的捕鱼技术包括流网、虾拖网、炸药捕鱼和延绳钓。</p>
+<p>筑巢海滩栖息地和海洋栖息地的退化也是造成许多绿海龟种群数量下降的原因之一。筑巢栖息地的退化是由建筑物的建造、海滩防护和再养护以及/或沙子开采造成的。这些因素可能直接（通过海滩栖息地的丧失）或间接（通过改变热分布和增加侵蚀）导致雌性可用的筑巢区域的数量和质量下降，并可能导致成年海龟和幼龟的自然行为发生变化。</p>
+<p>筑巢海滩上或附近的灯光会改变筑巢成年海龟的行为，并且通常会对新生的幼龟造成致命影响，因为它们会被光源吸引并远离水面。海洋环境栖息地退化是由沿海开发、码头建设、船舶交通增加和近岸海藻资源开采带来的污水和污染增加造成的。这些影响综合起来，削弱了沿海海洋生态系统的健康，并可能反过来对绿海龟造成不利影响。</p>
+<p>对海龟影响最大的是渔捞活动，为拖网渔业。大型拖网业，在网底层加上铅条航行，除了人类爱吃的高经济价值渔种一网打尽之外，连栖息海底的虾蟹、海中洄游的海龟都无一幸免。渔业活动混获的情形，已经大量过度浪费海洋资源，许多生物死于非命，台湾的绿海龟同样也受此威胁。</p>
+<p>绿海龟的成龟因体型硕大、背及腹甲坚硬且游泳速度迅速，因此，除了人类之外，几乎没有什么主要的天敌。虽然曾经有成龟失去一只鳍状肢或是鳍肢的末端有被噬咬的伤痕，但这种类似被鲨鱼或其他凶猛的动物如鳄鱼等攻击的状况并不多见。但小绿海龟的天敌却是非常多，在陆地有各种沙滩上的动物，如：家畜、沙蟹、浣熊、红蚂蚁、蛇、猛禽等都会对小龟进行攻击，在海中则有各种肉食性的鱼类如：鲨鱼、旗鱼等。由于缺乏足够的防御的能力、小海龟的背壳还不够坚硬、跑（游）的又不够快，因此很容易成为这些天敌的美食，小绿海龟在第一年的死亡率很高，研究资料估计，小于千分之一的小绿海龟能够长大为成龟。</p>
+<p>在人为干扰方面，产卵栖地的破坏包括骚扰产卵雌龟、不当挖掘龟卵、捕捉小海龟及不当的建设开发、挖取沙滩沙石移作他用、岸上灯光设置。骚扰产卵母绿海龟包括刻意的捕抓与无意的探访干扰，尤其以不知情游客的沙滩活动居多，因此海龟生态教育与生态旅游对保育绿海龟非常重要。过多的干扰会使雌龟无法产卵，并可能永远放弃该产卵栖地；而不当挖掘龟卵、捕捉小绿海龟更是直接减少新生小龟数量，以上三因素都会使产卵栖地的绿海龟族群数量减少。</p>
+<p>不当的建设开发、挖取沙滩沙石移作他用会使得沙滩变成砾滩，甚至消失。如此一来，雌龟不但无处产卵，小海龟脱壳出后也会因爬不过砾石而晒死沙滩上。另外，岸上灯光设置，沙滩附近的路灯及或建筑物所发出的强光，会干扰凭借趋光性寻找海洋的稚龟，而找不到下海的路，过程中惨遭天敌的毒手或是曝尸道路上。</p>
+<p>另外海洋的污染也会使得海龟感染疾病，残留的钓鱼线也可能缠绕海龟四肢或头颈造成海龟的断肢甚至死亡。以上这些人为的破坏，都严重降低海龟族群的存活率。</p>
+<h3 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h3>
+<p>绿海龟已受到多项条约和法律的立法保护。其中更具全球意义的指定包括:</p>
+<p>《世界自然保护联盟》(IUCN)的濒危物种</p>
+<p>《卡塔赫纳公约》(SPAW)议定书附件二（关于特别保护区和野生动物的议定书）</p>
+<p>《濒危野生动植物种国际贸易公约》(CITES)附录一</p>
+<p>《迁徙物种公约》(CMS)附录一和附录二</p>
+<p>部分有利于绿海龟的国际文书包括:</p>
+<p>《美洲保护和养护海龟公约》</p>
+<p>《印度洋和东南亚海龟及其栖息地养护和管理谅解备忘录》（IOSEA）</p>
+<p>《东盟海龟养护和保护谅解备忘录》</p>
+<p>《海龟岛遗产保护区协议备忘录》（TIHPA）</p>
+<p>《关于非洲大西洋海岸海龟保护措施的谅解备忘录》</p>
+<p>由于这些指定和协议，许多针对海龟的蓄意影响已经减轻：通过筑巢海滩保护工作，几个筑巢区的龟蛋和成龟的收获速度已经减缓，越来越多的社区举措正在实施，以减缓觅食区海龟的捕获速度。关于误捕，实施海龟排除装置已被证明在某些地区是有益的，主要是在美国和南美洲和中美洲（国家研究委员会 1990年）。然而，尽管取得了这些进展，人类的影响仍在世界各地持续存在。由于缺乏对远洋和近海渔业作业的有效监测，仍然导致大量直接和间接死亡，而沿海和海洋栖息地的不受控制的发展有可能破坏长寿绿海龟的支持生态系统。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../seafloor/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../seafloor/asteroidea.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../seafloor/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../seafloor/asteroidea.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>缸#7 巨骨舌鱼、鳄雀鳝、淡水白鲳、红尾鲶 - 北京海洋馆</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/selva/9.jar.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="缸7-巨骨舌鱼鳄雀鳝淡水白鲳红尾鲶"><a class="header" href="#缸7-巨骨舌鱼鳄雀鳝淡水白鲳红尾鲶">缸#7 巨骨舌鱼、鳄雀鳝、淡水白鲳、红尾鲶</a></h1>
+<h2 id="巨骨舌鱼"><a class="header" href="#巨骨舌鱼">巨骨舌鱼</a></h2>
+<p>巨骨舌鱼（学名：Arapaima gigas）隶属于骨舌鱼科巨骨舌鱼属，亦称巨巴西骨舌鱼或海象鱼。其体长可达2~6米，体重可达100千克。巨骨舌鱼体形修长，头部稍侧扁；无下颌骨，但舌头上有坚固发达的牙齿；鳞片厚重可达6厘米。尾鳍呈圆形，体色灰绿色，背部颜色较深，腹部较淡，尾鳍及体后部为红色。巨骨舌鱼在5岁时达性成熟，繁殖季节通常在2～4月的旱季，雄性护幼2～3个月，直到幼仔能独立生活。</p>
+<p>巨巴西骨舌鱼（学名：Arapaima gigas）：是辐鳍鱼纲、骨舌鱼科、巨骨舌鱼属的物种，亦称海象鱼。成鱼体长可达2-6米，体重可达100千克。体形巨大，长形，稍侧扁。头部骨骼由游离的板状骨组成。口大，无须。无下颌骨，舌上有坚固发达的牙齿。鳔四周富有血管，内表呈蜂窝状，常有特殊的鳃上器。鳞片大且硬，呈嵌镶状。背鳍和臀鳍位于体的后部，互为相对。胸鳍位低。腹鳍位腹部之后。尾鳍圆形。体灰绿色，背部颜色深，腹部较淡，尾鳍及体后部红色。</p>
+<p>巨骨舌鱼是最大的淡水鱼之一，分布于南美洲的巴西、哥伦比亚、秘鲁、厄瓜多尔、圭亚那、苏里南和委内瑞拉等国家。它们喜欢中性到弱酸性的澄清水质，适宜生长水温为22～28℃，多栖息于含氧量较低、流速缓慢的热带河流中。依靠其巨大的气囊进行辅助呼吸，能在低氧环境中生存。巨骨舌鱼是掠食性鱼类，以鱼、虾、蛙类为食，有时也食用蛇、龟和昆虫。</p>
+<p>常栖息于淡水河里。天气酷热、水含氧量降低的情况下，巨巴西骨舌鱼需要不时地浮出水面吞咽空气来呼吸。旱季时，巨巴西骨舌鱼靠在泥沙里钻洞来自保，具有较大力量，可利用尾巴作为武器。以鱼、虾、蛙类为食。体型笨重，行动缓慢。生殖季节挖穴产卵，雄鱼护幼发育达2-3个月，等幼鱼能独立生活后才离开。肉可制成干品或盐制品，是产区大众食品。牙齿晒干后可用来代替锉具。活的鱼体颜色美丽，用于观赏。原产于南美洲亚马逊河流域。是世界上最大的淡水鱼之一。</p>
+<p>1996年，巨骨舌鱼被《世界自然保护联盟（IUCN）濒危物种红色名录》评估为资料缺乏（Data Deficient）。2019年11月，巨骨舌鱼被列入《濒危野生动植物种国际贸易公约（CITES）》附录Ⅱ。亚马逊河当地的居民把巨骨舌鱼作为重要的食用鱼，对巨骨舌鱼呼吸生态的研究，也可研究改善全球其他呼吸空气鱼类（例如肺鱼）的保护。</p>
+<h3 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h3>
+<p>巨巴西骨舌鱼属于残存的古生淡水鱼类，是世界上体型最庞大的淡水鱼之一，据推测最早出现于一亿年前，由于舌中有长出硬骨牙齿，此类的鱼被称为骨舌鱼。巨巴西骨舌鱼主要发生在亚马逊河流域的河滩，但其确切分布的年代，特别是在盆地的下部，不得而知。它最早被记录在圭亚那的埃塞奎博盆地（Essequibo basins），有化石证据表明其历史存在于哥伦比亚的里约热内卢马格达莱纳河（Magdelena）流域。其原生范围之外，巨巴西骨舌鱼已被引入到亚洲地区河流和渔业，也人工饲养于各水族馆用于观赏。因其舌头具有骨板而得名，又称巨龙。</p>
+<h4 id="进化史"><a class="header" href="#进化史">进化史</a></h4>
+<p>骨舌鱼（Osteoglossiformes），属于硬骨鱼纲（Osteichyes）、辐鳍鱼亚纲（Actinopterygii），是古老的淡水鱼，俗称“龙鱼”，被誉为“活化石”。其祖先可追溯至中生代三叠纪，距今约2.42亿—2.37亿年。骨舌鱼科现存2亚科4属11种鱼类中只有7种，巨骨舌鱼即是其中之一，据推测已存在1亿多年的历史，并在北美洲和欧洲均有化石发现。</p>
+<h4 id="发现与命名"><a class="header" href="#发现与命名">发现与命名</a></h4>
+<p>巨骨舌鱼（Arapaima gigas）属于残存的古生淡水鱼类，据推测最早出现在1亿年前，其学名Arapaima gigas，因尾巴变红也被称作pirarucu，这个词来源于两个土著术语，“pira”为鱼，“urucum”为胭脂树的红色调味品。</p>
+<h3 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h3>
+<p>巨巴西骨舌鱼体形巨大，成体长度可超过2.5米，最长达3米，重量最高达200千克。长形，稍侧扁。头部骨骼由游离的板状骨组成。口大，无须。无下颌骨，舌上有坚固发达的牙齿。鳔四周富有血管，内表呈蜂窝状，常有特殊的鳃上器。鳞片大且硬，呈嵌镶状。背鳍和臀鳍位于体的后部，互为相对。胸鳍位低。腹鳍位腹部之后。尾鳍圆形。体灰绿色，背部颜色深，腹部较淡，尾鳍及体后部红色。</p>
+<p>巨骨舌鱼体型巨大，体长2~6米，体重可达100千克。其头部稍侧扁，嘴大且无下颌骨，舌上有坚固的牙齿。鳔周围有许多血管, 内表如蜂窝，上有特殊的鳃上器。鳞片坚硬密集，可达6厘米长；背鳍和臀鳍位于身体后部，尾鳍圆形，体色灰绿色，背部较深，腹部较淡，尾鳍及体后部为红色。随着年龄增长，身体后半部的鳞片边缘从尾部开始变红。巨骨舌鱼鳃退化，鳃丝短而稀，有一喉口直通气室。气室与内脏有隔膜相隔，气室在脊椎两侧，内含肺叶状组织。胃庞大，与咽部相连，胃与肠结口处有两盲囊，胃内有皱褶。</p>
+<h3 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h3>
+<p>巨巴西骨舌鱼常栖息于淡水河里，在天然的澙湖和亚马逊河流水流缓慢的河段里，是南美大陆最大的淡水鱼。</p>
+<p>巨骨舌鱼主要栖息在亚马逊盆地的洪泛平原、河流和泻湖中，喜欢中性到弱酸性的澄清水质，最适生长水温为22～28℃。生活在含氧量较低、流速缓慢的热带河流中，靠巨大的气囊吞咽空气进行辅助呼吸，因此能在含氧量较低的水域中生存。夏季由于天气酷热，河水含氧量降低，巨骨舌鱼需不断浮上水面吞咽空气来呼吸。</p>
+<h3 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h3>
+<p>巨巴西骨舌鱼生活在世界上最原始的热带丛林水域中，主要以小鱼为食，但偶尔也捕食蛇、龟、青蛙和昆虫、甚至也会捕食小鳄鱼。由于天气酷热、水含氧量降低的情况下，巨巴西骨舌鱼需要不时地浮出水面吞咽空气来呼吸。旱季时，巨巴西骨舌鱼靠在泥沙里钻洞来自保。巨巴西骨舌鱼具有强大的蛮力，利用尾巴作为武器，可以轻易击倒成年的男性，并击碎骨骼造成大量内伤。</p>
+<h4 id="觅食"><a class="header" href="#觅食">觅食</a></h4>
+<p>巨骨舌鱼通过嘴的上半部和舌头的运动来捕食，是一种以动物为主的掠食性鱼类。在自然水域中，它以鱼、虾、蛙类等为食，有时也捕食蛇、鱼和昆虫，捕食时非常凶猛且主动攻击猎物，一旦发现食物它会立即跃出水面将其吞下。</p>
+<h4 id="活动"><a class="header" href="#活动">活动</a></h4>
+<p>在雨季，巨骨舌鱼随着水位上升迁移到较高的洪泛地区，在水位下降后回到湖泊中。平时游动缓慢、悠闲，但当外界有突发声响等刺激时，其应激反应非常强烈，一旦干扰消除后又会恢复平静。</p>
+<h4 id="呼吸"><a class="header" href="#呼吸">呼吸</a></h4>
+<p>巨骨舌鱼随着生长发育将鳃呼吸转变为用鳔呼吸空气，依靠巨大的气囊吞咽空气进行辅助呼吸。在夏季，由于天气炎热且河水流速缓慢，含氧量降低，巨骨舌鱼需要频繁浮上水面吞咽空气。在早春，它还能通过在泥沙中躲藏来进行自我保护。</p>
+<h3 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h3>
+<p>巨巴西骨舌鱼仅分布于南美的亚马逊河流域，主要在巴西、圭亚那和秘鲁。</p>
+<p>巨骨舌鱼自然分布于南美洲的巴西、哥伦比亚、秘鲁、厄瓜多尔、圭亚那、苏里南和委内瑞拉等国家。</p>
+<h3 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h3>
+<p>巨巴西骨舌鱼像鲑一样在浅滩产卵。在低水位的8月份，巨巴西骨舌鱼聚集在湖泊和河道。12月至3月本繁殖季结束。产卵期为1-5月，每次产约16万个卵，分数次产下。卵约3-5天就可孵化。此时雌性通常独自离开，而雄鱼留下保护幼鱼。雄鱼的尾部变成红色保护卵及照顾刚刚孵化的幼鱼是雄鱼。幼鱼的头是黑色的，雄鱼的头也是黑色的，所以幼鱼常围绕着雄鱼的头周围而不愿离去。雌鱼也在周围游以追赶可能的敌人。幼鱼在父亲照顾下大约三个月，多样化的饮食包括昆虫，鱼仔等小生物。随着洪水退去，成鱼和亚成年鱼才分开，后迁移到湖泊和河流。4-5岁性成熟，养殖的巨巴西骨舌鱼寿命15-20岁。</p>
+<h3 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h3>
+<h4 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h4>
+<p>列入《世界自然保护联盟濒危物种红色名录》（IUCN）1996年8月1日——数据缺乏(DD)。</p>
+<p>列入《濒危野生动植物种国际贸易公约附录Ⅰ、附录Ⅱ和附录Ⅲ》(CITES)2019年版附录Ⅱ。</p>
+<h4 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h4>
+<p>巨巴西骨舌鱼因过度捕捞等人为因素，族群数量不断下降，野外渔获量已大幅度下降，巴西和哥伦比亚的亚马逊河流域，这种鱼类驯养正逐步发展，以缓解这一点。</p>
+<p>巨巴西骨舌鱼是一个巨大的呼吸空气的鱼，在成体阶段，一些标本可以达到几百千克，有时长度超过4米。这种鱼肉可口，并且没鱼刺，所以自十八世纪初以来就成了密集捕捞的对象。一个世纪以前，每年仅在巴西的贝伦（Belém）港一个港口，巨巴西骨舌鱼渔获量就超过1200吨。在2006年，整个亚马逊河流域申报量仅达到380吨。据估计，现今野生的巨巴西骨舌鱼种群个体数量介于50,000和100,000之间。</p>
+<h3 id="人工养殖"><a class="header" href="#人工养殖">人工养殖</a></h3>
+<h4 id="饲养"><a class="header" href="#饲养">饲养</a></h4>
+<p>巨巴西骨舌鱼如果饲养在室内，水族箱需与水族馆的“展缸”一般大小，否则建议直接在院子里开水池。巨巴西骨舌鱼继承了所有原始鱼类的传统：一个可以呼吸空气的鳔。这就为水体的供氧大大减轻了负担。另外pH值微酸至中性，温度25-30℃它都可以接受。巨巴西骨舌鱼在幼体时只要体型差不多的观赏鱼都可以和它混养。亚成体以后，巨巴西骨舌鱼会将其他鱼类当成了猎物，因此需要分开养殖。</p>
+<p>巨巴西骨舌鱼属肉食性鱼类，从幼鱼到成鱼，都必须投喂动物性饵料，以投喂活动的小鱼最佳。动物内脏，易妨害消化系统，不可投喂。投喂的人工配合饲料多选用对虾饲料（浮性）。提醒一点的是：鱼和人一样需要各种养份，不可以投喂一种饵料，应制定出一份营养丰富的菜单，以确保它的营养均衡。</p>
+<p>巨巴西骨舌鱼适应的水温介于24-29℃均可，如果鱼只适应良好，甚至可以适应22~31℃的温度。不过巨巴西骨舌鱼和其他的观赏鱼一样，切忌水温急剧变化。</p>
+<p>随着年龄的增长，巨巴西骨舌鱼会由尾部向背部逐渐发色。先是出现红点，最后整个上半身都能变成紫红色。</p>
+<p>巨巴西骨舌鱼虽然身体粗大，弹跳能力很强，野外也会有跃出水面捕食的情况。所以在投饵时不要把鱼或肉块长时间拿在手中，否则巨巴西骨舌鱼会冲向饲养者的手臂，造成不必要的危险。</p>
+<h4 id="繁殖"><a class="header" href="#繁殖">繁殖</a></h4>
+<p>巨巴西骨舌鱼原产于南美洲亚马逊流域，4-5月间为它们的繁殖期。雌鱼会在在有沙砾的浅水中筑巢、产卵，而雄鱼则有护巢、护幼行为，以头部分泌的费洛蒙聚集幼鱼。东南亚的一些大鱼场已经开始着手人工繁殖巨巴西骨舌鱼。</p>
+<h5 id="生长特性"><a class="header" href="#生长特性">生长特性</a></h5>
+<p>圈养条件下，巨骨舌鱼的平均寿命为15至20年。幼鱼的头为黑色，因与雄鱼的头部颜色相近，所以幼鱼常围绕着雄鱼的头周围。这期间，幼仔以雄性头部“分泌器官”分泌的粘液为食。在雨季，当水位上升时，巨骨舌鱼迁移到洪泛区，雄性继续提供亲代照顾，为期2至3个月。孵化后约4周，幼鱼重约4克，鳃薄片清晰可见。随着生长，鳃薄片被上皮细胞逐渐覆盖，内部柱状细胞血液通道萎缩。幼鱼达到1千克时，鳃薄片消失，完成从鳃呼吸到空气呼吸的转变。</p>
+<h5 id="繁殖方式-1"><a class="header" href="#繁殖方式-1">繁殖方式</a></h5>
+<p>巨骨舌鱼5岁时达性成熟，繁殖季节通常在每年旱季(一般为2至4月) 。此时，成年雌雄鱼迁移到永久性湿地发育性腺、求偶、筑巢和繁殖。配偶形成后，雌鱼在沙质土壤中挖穴产卵，巢穴宽约50厘米、深15厘米，产卵量可达18万粒。鱼卵大约5天就可孵化，此时雄鱼的尾部就会变成红色，用于保护卵以及照顾刚刚孵化的幼鱼，雌鱼也在周围游动并且追赶可能的敌人。雄鱼一般会保护幼鱼至2~3个月大，幼鱼能独立生活后才会离开。</p>
+<h3 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h3>
+<h4 id="经济"><a class="header" href="#经济">经济</a></h4>
+<p>巨巴西骨舌鱼肉可制成干品或盐制品，是产区大众食品。其味道鲜美，作为食用鱼深受人们喜爱。在南美洲巨巴西骨舌鱼的舌头被用来磨成粉末，同瓜拿纳一起混水喝下去，据说能杀死蛔虫。</p>
+<p>巨巴西骨舌鱼具有庞大的经济价值。一条巨巴西骨舌鱼平均有70千克的鱼肉。在巴西，土著居民在当地政府的许可下，可以猎杀一定数量的巨巴西骨舌鱼作为食用，但数量和鱼的大小都有严格限制。鳞片还可以制成锋利的刀具。牙齿晒干后可用来代替锉具。</p>
+<h3 id="观赏"><a class="header" href="#观赏">观赏</a></h3>
+<p>巨巴西骨舌鱼全身镶嵌着如铁甲般的鳞片，鳞片边缘闪闪发亮，十分瑰丽美观，具有大而美丽的外观。常被当作观赏鱼。</p>
+<h2 id="巨骨舌鱼有多强"><a class="header" href="#巨骨舌鱼有多强">巨骨舌鱼有多强？</a></h2>
+<p>当我们提到鳄鱼和食人鱼时，脑海里浮现的就是凶狠、残暴的场面，一般鱼类只是它们眼中的美味。然而，在亚马逊河中的有一种鱼，能轻松捕杀幼年鳄鱼，把食人鱼当做“点心”。它就是我们今天的主角——巨骨舌鱼，又被称为象鱼、大头巨骨舌鱼、大傻鱼。它的每个名字都是有依据的。</p>
+<p>地球元老，存在时间超过一亿年</p>
+<p>巨骨舌鱼是一种古远的生物，据推测在地球上存在已经有一亿年以上，被称为是世界上最大的淡水鱼之一。成年的巨骨舌鱼身长一般在2-6米之间，体重可达到200多公斤。2015年2月27日，泰国四人合力捕获一条重达460斤的巨骨蛇鱼，是目前人类捕获最大的巨骨舌鱼，打破了世界纪录，至今无人超越。</p>
+<p>经过长时间的进化，巨骨舌鱼有很强的适应能力。在炎热的亚马逊流域，地势平坦河流流动速度慢，河水的含氧量一直不高，于是巨骨舌鱼就进化出可以进行呼吸的鳔，在缺氧的情况下可以起到辅助呼吸的作用。</p>
+<p>在旱季，河水面积缩小，它们可以像泥鳅一样钻进土里存活。据说它可以在脱离水体后存活30分钟左右，这些都归功于它的鱼鳔。</p>
+<p>那鱼鳔是怎样进化而来的呢？在遥远的志留纪和泥盆纪时期，包括巨骨舌鱼在内的大部分鱼类都不用担心氧气问题。那时的鱼类生活在近海，能轻松获得溶解在水里的氧气。但鱼的数量不断增多，食物和资源匮乏，近海鱼类被迫迁移到淡水之中。淡水里杂质较多，水体流动速度慢，氧气含量少，</p>
+<p>不能满足鱼类对氧气的需求。</p>
+<p>为了生存，鱼类时常会浮到水面进行呼吸。久而久之，它们体内就进化出一个能储藏空气的的囊，这就是鱼鳔最初产生的原因。目前两种鱼类可以直接用鱼鳔呼吸它们是来自非洲的肺鱼和矛尾鱼。进化的结果往往是残酷的，留下来的必定是强者，经过长时间的进化仍然保留的巨骨舌鱼，也成功称霸亚马逊河。</p>
+<p>鱼鳞堪比盔甲，防御值颇高</p>
+<p>庞大的体重并不能保证巨骨舌鱼能在亚马逊流域成为无敌的存在，更重要的是它有着厚厚的鱼鳞。它的鱼鳞与一般鱼鳞不同，我们日常见到的鱼鳞都呈圆形，而且很小，一般在1厘米左右。</p>
+<p>而巨骨舌鱼却不同，它的鱼鳞约有10厘米，而且硬度和陶瓷差不多，这些鳞甲内部有一层胶原蛋白纤维，能在它受到攻击时大大减少冲击力，从而减少外界攻击对巨骨舌鱼的伤害。它的防御能力超过了鳄鱼，鳄鱼的皮确实很坚韧，但巨骨舌鱼这种软硬兼施的办法更有利于自身的保护。</p>
+<p>它重达百斤的躯体，加上鱼鳞的保护使它在亚马逊河流中为所欲为，成为河流中的最强王者。在鱼鳞的保护下，食人鱼的牙齿很难对它造成伤害。巨骨舌鱼的鱼鳞用菜刀都砍不动，更别说小小的食人鱼能对它构成什么威胁了。一些土著居民甚至用它的鱼鳞打磨成爪刀，随身携带。</p>
+<p>除了有较高的防御能力，巨骨舌鱼的舌头还有较大的杀伤力。巨骨舌鱼的舌头上长着坚固的牙齿，这也是它名字的由来。这些牙齿成了它们捕猎的利器，也让它捕捉到的猎物更快地被撕碎吞食。它的牙齿被当地人用来做锉具，可见它的牙齿硬度相当高。</p>
+<p>它是食肉类鱼，食物以小鱼为主，但在食物匮乏时也会捕食蛇、青蛙等动物。食人鱼体型较小，自然也是它口中的美味佳肴了。在极度饥饿的情况下，巨骨舌鱼还会对幼年的鳄鱼下手。</p>
+<p>巨骨舌鱼的体重很大但在捕食过程中，它却极为敏捷。它的捕食方式和鲸鱼很像，发现猎物时它会慢慢靠近，然后猛地加速张开血盆大口向食物吞去。一般被它盯上的食物都难逃被它食用的命运。</p>
+<p>这样敏捷的身手也让巨骨舌鱼具有很大的战斗能力，它的弹跳能力很强，它的尾部可以对目标造成很大的打击，可以轻松击倒人类，还会造成骨折形成严重的内伤。</p>
+<p>致命弱点——好奇心</p>
+<p>巨骨舌鱼在亚马逊河有着绝对的统治力，这也让它对外界没有一点防备，所以在听到何种有响动时，它总会去凑热闹。对于它们来说，或许正是觅食的好时机。然而这个弱点，让人类有机可乘开始大肆捕杀巨骨舌鱼。</p>
+<p>它的肉质鲜美，没有鱼刺，而且营养丰富，在市场上很受欢迎，有巨大的的经济价值。而且它因为体型巨大，平均每条鱼的能产出70公斤的鱼肉，以目前每公斤5美元计算，捕捞到一条巨骨舌鱼就可以有350美元的收益。这样的经济利益吸引，当地的居民纷纷加入了捕捉巨骨舌鱼的队伍。</p>
+<p>人类捕捞巨骨舌鱼在十八世纪就开始了。一百年以前形成规模，就有人专门捕捞巨骨舌鱼。仅仅是巴西贝伦港的一个港口产量超过1200吨，这样的捕捞导致了巨骨舌鱼数量急剧减少，到2006年亚马逊流域的申报量仅有380吨，不到贝伦港一百年前产量的四分之一。</p>
+<p>有人会问，巨骨舌鱼在河中没有天敌，而且巨大的身躯力量肯定也很大，大港口捕获倒不难，那小渔民是怎样捕捞的呢？</p>
+<p>渔民常用的撒网和垂钓这两种通用的捕鱼方式都行不通。渔民撒网捕鱼通常都是捕捞小鱼，像巨骨舌鱼这种两米多长的鱼不会被渔民的小鱼网捕获到。垂钓虽然可以钓到巨骨舌鱼但上钩的巨骨舌鱼会挣扎逃命，很难凭一己之力把它捕捉上岸，至少要两个以上的人才能完成捕鱼过程。</p>
+<p>但是别忘了，这种鱼有一颗好奇心。它就像现在的八卦记者一样，哪里有热闹就往哪里凑。当地渔民也抓住它的这个特点，在水面上发出响动，吸引巨骨舌鱼过来一探究竟。</p>
+<p>它还会探出头观察外面的的情况，这时渔民就会像平时杀鱼摊的老板一样，用木棍向着鱼头砸去。鱼的头部没有鱼鳞保护，所以很容易就被砸晕了。就这样，一个称霸亚马逊河流的“巨无霸”就被渔民捕获了。</p>
+<p>有人说，再生猛的生物也不过是人类的一道菜。巨骨舌鱼像是一座移动堡垒，在亚马逊流域未尝败绩，但在人类面前仍然难逃被捕杀的命运。</p>
+<p>大量的捕捞导致巨骨舌鱼濒临灭绝，好在20世纪后期当地政府把它列为了濒危动物，对它的捕捞也做了严格的限制。</p>
+<p>目前，已经出现规模的养殖，巴西政府鼓励当地居民养殖巨骨舌鱼，创造经济效益的同时，也是对巨骨舌鱼的一种保护。目前野生的巨骨舌鱼大概在5万到10万之间，它们慢慢开始恢复正常。</p>
+<h2 id="鳄雀鳝"><a class="header" href="#鳄雀鳝">鳄雀鳝</a></h2>
+<h2 id="淡水白鲳"><a class="header" href="#淡水白鲳">淡水白鲳</a></h2>
+<h2 id="红尾鲶"><a class="header" href="#红尾鲶">红尾鲶</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../selva/8.jar.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../selva/10.jar.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../selva/8.jar.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../selva/10.jar.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

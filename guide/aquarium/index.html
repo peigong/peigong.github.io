@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>雨林奇观 - 北京海洋馆</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/selva/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="官雨林奇观"><a class="header" href="#官雨林奇观">【官】雨林奇观</a></h1>
+<p>主要展品：红尾护头鲿、锦鲤、巨骨舌鱼、黑鳍袋唇鱼、雀鳝、射水鱼、神仙鱼、食人鲳、嗅线鲈等。</p>
+<p>血鹦鹉、玻璃猫、红龙鱼、银龙鱼、胭脂鱼等。</p>
+<h2 id="亚马逊热带雨林"><a class="header" href="#亚马逊热带雨林">亚马逊热带雨林</a></h2>
+<p>亚马逊热带雨林（Amazon Rain Forest，又译亚马孙热带雨林）位于南美洲的亚马逊盆地，占地700万平方公里。雨林横越了8个国家：巴西（占森林60%面积）、哥伦比亚、秘鲁、委内瑞拉、厄瓜多尔、玻利维亚、圭亚那及苏里南，占据了世界雨林面积的一半，森林面积的20%，是全球最大及物种最多的热带雨林。亚马逊雨林被人们称为“地球之肺”。</p>
+<h3 id="雨林成因"><a class="header" href="#雨林成因">雨林成因</a></h3>
+<ol>
+<li>位于赤道附近，终年受赤道低气压带控制，多降雨。</li>
+<li>亚马孙平原面朝大西洋的东侧有缺口，且北部是圭亚那高原，南部是巴西高原，西部是安第斯山脉，有利于来自大西洋的湿润气流深入内陆。</li>
+<li>南赤道暖流增温增湿。</li>
+<li>东南信风和东北信风从大西洋带来水汽
+5.西侧受安第斯山脉的抬升，多地形雨。</li>
+</ol>
+<h3 id="亚马逊河"><a class="header" href="#亚马逊河">亚马逊河</a></h3>
+<p>亚马逊河位于南美洲，发源于安第斯山脉，虽然长度在世界上处于第二位，但其流量和流域面积是世界上最大的，居世界第一位。亚马逊河流域面积达到6915000平方公里，相当于南美洲总面积的40%，从北纬5度伸展到南纬20度，源头在安第斯山高原中，离太平洋只有很短的距离，经过秘鲁和巴西在赤道附近进入大西洋。</p>
+<p>亚马逊河向大西洋排放的水量达到了每秒18万4千立方米，相当于全世界所有河流向海洋排放的淡水总量的五分之一，从亚马逊河口直到肉眼看不到海岸的地方，海洋中的水都不咸，150公里以外海水的含盐量都相当低，被人们称为淡水海。</p>
+<p>亚马逊河主河道有1.5到12公里宽，从河口向内河有3700公里的航道，海船可以直接到达秘鲁的伊基托斯，小一点的船可以继续航行780公里到达阿库阿尔角，再小的船还可以继续上行。 流经秘鲁城市伊基托斯的亚马逊河的源头正式确定，是在秘鲁安第斯山区中一个海拔5597米叫奈瓦多·米斯米的山峰中的一条小溪。距离秘鲁首都利马大约有160公里，在利马南部偏西，1971年第一次认定，直到2001年才正式确定，溪水先流入劳里喀恰湖，再进入阿普里马克河，阿普里马克河是乌卡亚利河的支流，再与马腊尼翁河汇合成亚马逊河主干流。</p>
+<p>从马腊尼翁河的支流瓦利亚加河以下，河流就从安第斯山区进入冲积平原，从这里到秘鲁和巴西交界的雅瓦里河，大约有2400公里的距离，河岸低矮，两岸森林经常被水淹没，只是偶尔有几个小山包，亚马逊河已经进入了亚马孙热带雨林中了。</p>
+<h3 id="长江和亚马逊河的对比"><a class="header" href="#长江和亚马逊河的对比">长江和亚马逊河的对比</a></h3>
+<p>长江和亚马逊河都是世界上极具影响力的河流，以下是它们的对比：</p>
+<h4 id="基本概况"><a class="header" href="#基本概况">基本概况</a></h4>
+<ul>
+<li>长度：亚马逊河全长约6400公里，长江全长约6397公里，亚马逊河稍长。</li>
+<li>发源地与流向：亚马逊河发源于安第斯山脉中段的米斯米雪山，自西向东注入大西洋；长江发源于青海省西南部、青藏高原上的唐古拉山脉主峰各拉丹冬雪山，自西向东注入东海。</li>
+<li>流域面积：亚马逊河流域面积达705万平方公里，约占南美洲总面积的40%；长江流域面积达180万平方公里，约占中国总面积的1/5。</li>
+</ul>
+<h4 id="水量与流量"><a class="header" href="#水量与流量">水量与流量</a></h4>
+<ul>
+<li>年径流量：亚马逊河年径流量高达6.93万亿立方米，是长江的7.2倍。</li>
+<li>平均流量：亚马逊河平均流量约为每秒21.9万立方米，约占世界河流流量的20%；长江平均流量为每秒3.19万立方米，在世界河流中排名第三。</li>
+</ul>
+<h4 id="生态环境"><a class="header" href="#生态环境">生态环境</a></h4>
+<ul>
+<li>生物多样性：亚马逊河流域是世界上最大的热带雨林分布区，拥有超过4万种植物、250万种昆虫、2000多种鸟类和哺乳动物，河中还有食人鱼、电鳗等3000多种鱼类；长江流域拥有大熊猫、金丝猴、扬子鳄等珍稀特有物种，鱼类资源也丰富，但因人类活动影响，生物多样性面临较大压力。</li>
+<li>生态系统：亚马逊河的水生生态系统非常复杂，不同生物占据着不同的生态位；长江流域生态系统同样丰富多样，包括森林、河流、湖泊、湿地等多种生态系统。</li>
+</ul>
+<h4 id="经济与社会发展"><a class="header" href="#经济与社会发展">经济与社会发展</a></h4>
+<ul>
+<li>航运价值：长江干流素有中国“黄金水道”之称，通航里程达2800多千米，是中国重要的内河航道；亚马逊河虽然河道宽广，但流域内人口稀少，经济相对不发达，航运价值未充分开发。</li>
+<li>流域人口与经济：长江经济带涵盖了沿江11个省市，人口密集，经济发达，是中国重要的经济区域；亚马逊河流域人口较少，主要以热带雨林农业、热带种植园农业、渔业和林业为主。</li>
+</ul>
+<h3 id="生态资源"><a class="header" href="#生态资源">生态资源</a></h3>
+<p>亚马逊河流域为世界最大流域，其雨林由东面的大西洋沿岸(林宽320公里〔200哩〕)延伸到低地与安地斯山脉山麓丘陵相接处，形成一条林带，逐渐拓宽至1,900公里(1,200哩)。雨林异常宽广，而且连绵不断，反映出该地气候特点：多雨、潮湿及普遍高温。</p>
+<p>亚马孙热带雨林蕴藏着世界最丰富最多样的生物资源，昆虫、植物、鸟类及其他生物种类多达数百万种，其中许多科学上至今尚无记载。在繁茂的植物中有各类树种，包括香桃木、月桂类、棕榈、金合欢、黄檀木、巴西果及橡胶树。桃花心木与亚马逊雪松可作优质木材。主要野生动物有美洲虎、海牛、貘、红鹿、水豚和许多齧齿动物，亦有多种猴类，有“世界动植物王国”之称，也因为面积占全球雨林的一半，所以被称为“地球之肺”。</p>
+<p>这个雨林的生物多样化相当出色，聚集了250万种昆虫，上万种植物和大约2千种鸟类和哺乳动物，生活着全世界鸟类总数的五分之一。有的专家估计每平方公里内大约有超过75000种的树木，15万种高等植物，包括有9万吨的植物生物量。 科学家指出，单单在巴西已约有96,660至128,843种无脊椎动物。亚马孙雨林的植物品种是全球最多种性的，有专家估计，1平方千米可能含有超过75,000种树及150,000高级植物，1平方千米可含有90,790公吨存活的植物。亚马孙雨林是全世界最大的动物及植物生境。全世界五分之一的雀鸟都居住于亚马孙雨林。现时，大约有438,000种有经济及社会利益的植物发现于亚马孙雨林，还有更多的有待发现及分类。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="selva/0.serrasalminae.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="selva/0.serrasalminae.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
