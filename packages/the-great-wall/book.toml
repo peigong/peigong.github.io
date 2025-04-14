@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "长城 - https://pg.js.cn"
+
+[build]
+build-dir = "../../public/guide/the-great-wall"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/the-great-wall/"
+cname = "pg.js.cn"

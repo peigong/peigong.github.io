@@ -1,0 +1,12 @@
+{
+  "name": "yanqi-lake",
+  "version": "1.0.0",
+  "description": "雁栖湖",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook build"
+  }
+}

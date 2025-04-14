@@ -1,0 +1,12 @@
+{
+  "name": "kmgzj",
+  "version": "1.0.0",
+  "description": "孔庙和国子监博物馆",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook build"
+  }
+}

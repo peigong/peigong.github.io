@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "孔庙和国子监博物馆 - https://pg.js.cn"
+
+[build]
+build-dir = "../../public/guide/kmgzj"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/kmgzj/"
+cname = "pg.js.cn"

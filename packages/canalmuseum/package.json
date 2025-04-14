@@ -1,0 +1,12 @@
+{
+  "name": "canalmuseum",
+  "version": "1.0.0",
+  "description": "北京大运河博物馆",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook build"
+  }
+}

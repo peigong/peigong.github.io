@@ -1,0 +1,12 @@
+{
+  "name": "ciae",
+  "version": "1.0.0",
+  "description": "中国农业博物馆",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook build"
+  }
+}
