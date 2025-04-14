@@ -13,4 +13,9 @@ title: 导游笔记
 
 ## 中文讲解词（草稿） ##
 
+- [长城](./guide/the-great-wall)
+- [孔庙和国子监博物馆](./guide/kmgzj)
+- [北京大运河博物馆](./guide/canalmuseum)
+- [中国农业博物馆](./guide/ciae)
 - [北京海洋馆](./guide/aquarium)
+- [雁栖湖](./guide/YanqiLake)
