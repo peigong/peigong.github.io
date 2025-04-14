@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国农业博物馆 - https://pg.js.cn</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国农业博物馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国农业博物馆"><a class="header" href="#中国农业博物馆">中国农业博物馆</a></h1>
+<p>中国农业博物馆位于北京市朝阳区东三环北路，1983年7月筹建，1986年9月13日正式开放，占地面积43万平方米，建筑面积12.4万平方米，是农业农村系统唯一一家国家一级博物馆。</p>
+<p>中国农业博物馆已收藏农耕文物超14万件套，涵盖农业古籍、传统农具、土壤标本、农业票证、农业宣传画、农业蜡果、高密年画和古代彩陶等八大系列。牵头组织申报的“二十四节气——中国人通过观察太阳周年运动而形成的时间知识体系及其实践”项目，于2016年成功列入联合国教科文组织人类非物质文化遗产代表作名录。</p>
+<p>2012年，中国农业博物馆被评为国家一级博物馆。2022年，被命名为2021-2025年度第一批全国科普教育基地。2025年3月17日，入选国有公益性收藏单位名单（第一批）。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>中国农业博物馆和全国农业展览馆是两块牌子、一个机构，为中华人民共和国农业农村部直属事业单位。全国农业展览馆是1958年经国务院批准兴建的首都十大建筑之一，其地理位置、规模、布局和风格均由周恩来总理亲自审定，1959年9月正式落成并对外开放。中国农业博物馆是1983年7月经国务院批准，在全国农业展览馆基础上筹建的国家级专业博物馆，1986年9月正式对外开放。</p>
+<p>1987年9月，博物馆举办开馆一周年小型展览，向捐献文物、农具、书籍的各界人士颁发收藏证书，请知名书画家现场创作，正式确定中国农业博物馆馆徽。</p>
+<p>1991年“中国能源馆”开馆、“百草园”建成，博物馆展陈面积近万平方米。</p>
+<p>2006年起，国家先后投资近3亿元对博物馆的馆舍、园区和展陈进行改造。</p>
+<p>2009年9月，改造后的中国农业博物馆新馆陈列重新对外开放。</p>
+<p>2012年，中国农业博物馆获批成为“国家一级博物馆”。</p>
+<p>2013年9月24日，中国农业博物馆庆阳分馆在甘肃省庆阳市挂牌成立。</p>
+<p>2022年11月12日起，中国农业博物馆暂停对外开放，恢复开放时间另行通知。</p>
+<p>2023年1月8日起，中国农业博物馆恢复开放。</p>
+<h2 id="建筑布局"><a class="header" href="#建筑布局">建筑布局</a></h2>
+<p>中国农业博物馆由十座具有民族风格特色的单体展馆组成的建筑群以及综合楼、藏品库房、文化产品用房等配套设施组成。1号馆位于馆区正面主轴线上，2、3号馆分列北南两侧，一字排开；4号馆与5号馆、6号馆与7号馆两厢对称；8、9、10号馆在馆区南侧后方，成"品"字型排列。1、2、3号馆后面，三湖相连，水面面积达41000平方米。展馆之间由长廊、方亭或柱廊连接，长廊两侧栽植了各种花草树木。</p>
+<h2 id="展出内容"><a class="header" href="#展出内容">展出内容</a></h2>
+<h3 id="基本陈列"><a class="header" href="#基本陈列">基本陈列</a></h3>
+<h4 id="中华农业文明陈列"><a class="header" href="#中华农业文明陈列">中华农业文明陈列</a></h4>
+<p>中华农业文明陈列厅在2号馆和4号馆，陈列面积约4850平方米，展线900余米，文物展品1000多件套，该陈列主要内容包括贯穿古今万余年的中国农业历史，展示古代农业的“四大发明”、近代农业的特点和发展脉络、当代农业科技的进步。陈列由序厅和农业文明的演进、犁锄镰磨的发明与传承、水利工程与水的利用、养殖业的起源与发展、纺织技术的起源与传播、西学东渐与实验农学、前进中的共和国农业等八个专题组成。</p>
+<h4 id="中国传统农具陈列"><a class="header" href="#中国传统农具陈列">中国传统农具陈列</a></h4>
+<p>传统农具陈列馆的展品是农业博物馆研究人员在二十多年的田野调查、收集、整理、研究的基础上，从全国各地征集4000多件不同功用、类型、式样的传统农具精选出来的。为了清晰展示中国传统农具的成就，传统农具陈列按照农业生产的具体工序，分整地、播种、田间管理、灌溉、收获、运输、脱粒、加工、称量九个单元来展示。展示面积400平方米，主展线98延米，文物展品150多件套。</p>
+<h4 id="青少年科普陈列"><a class="header" href="#青少年科普陈列">青少年科普陈列</a></h4>
+<p>青少年农业科普馆是中国农业博物馆推出的一个适合青少年特点的展览，面积有650平方米，集声、光、电等一系列先进的展示手段于一身。科普馆在展示内容上分为农业与生产、农业与生活、农业与环境三个部分。整个展厅内部都以绿色为主，分割成大小不同样式各异的小空间。青少年农业科普馆以农业知识为内容，以科技为主线，以互动为手段，集科学性、知识性、趣味性和互动性于一体。</p>
+<h4 id="彩陶中的远古农业陈列"><a class="header" href="#彩陶中的远古农业陈列">彩陶中的远古农业陈列</a></h4>
+<p>彩陶馆陈列面积约300平方米，以“彩陶中的远古农业”为主题，收藏有甘肃、青海等地出土的彩陶二百余件，其中大部分是新石器时代马家窑文化艺术巅峰时期的作品。彩陶馆位于中国农业博物馆10号馆，整个展区呈圆环形，分为“社会与生活”、“农业与自然崇拜”、“渔猎与采集”、“农耕与编织”四部分内容。</p>
+<h4 id="中国土壤陈列"><a class="header" href="#中国土壤陈列">中国土壤陈列</a></h4>
+<p>中国农业博物馆土壤陈列馆陈列面积约400平方米，展示了数十种代表中国主要土壤类型的整段标本，以土壤标本为主要载体，辅助以典型特征的相关农作物，利用文字、图表、模型、绘画、音像和多媒体技术，以及一些互动项目，介绍土壤的相关知识，展示土壤与农业、土壤与人之间的相互关系，全方位增强观众对土壤的认知，培养观众对中国丰富的土壤资源的自豪感，唤醒观众对中国严重的土壤问题的危机感，逐步培养保护土壤、保护环境的意识。</p>
+<h4 id="室外农业文化展示区"><a class="header" href="#室外农业文化展示区">室外农业文化展示区</a></h4>
+<p>中国农业博物馆有近万平方米的室外农业文化展示区，也就是人们常说的“室外展园”，它将传统与现代两组雕塑群分立于南北园林之中，以农耕文化为主线，通过雕塑、园艺等艺术形式营造农耕场面，与博物馆园林规划和整体建筑风格统一和谐，营造了浓郁的农业文化环境，成为博物馆室内陈列的自然延伸。</p>
+<h3 id="流动陈列"><a class="header" href="#流动陈列">流动陈列</a></h3>
+<h4 id="台湾蝴蝶展览"><a class="header" href="#台湾蝴蝶展览">台湾蝴蝶展览</a></h4>
+<p>台湾蝴蝶展览从台湾木生昆虫博物馆引进，蝴蝶种类共计500余种2000多只，其中不乏一些珍稀品种；精心制作的17块展板，详细介绍了蝴蝶的一生、生活的环境等大量与蝴蝶有关的科普知识；用蝴蝶翅作的世界名画如：《拿破仑》、《拾麦穗》、《牧羊女》等。台湾木生昆虫博物馆建馆历史悠久，珍藏着许多世界著名昆虫标本，是中国两大以个人名字命名的昆虫博物馆之一。</p>
+<h4 id="五彩贝螺展"><a class="header" href="#五彩贝螺展">五彩贝螺展</a></h4>
+<p>五彩贝螺展览是中国农业博物馆与社会上私人收藏爱好者合作办展的首次尝试。它向广大观众展示了来自世界各地的500余件贝螺标本，其中有不少是世界名贵稀有贝螺品种，如鹦鹉螺、大法螺、黄金宝螺、翁戎螺、西太平洋左旋角螺等。展览还通过展板图文并茂地介绍了贝螺动物的轶闻趣事：会“飞”的贝、古老的鹦鹉螺、贝类之王、货贝、珍珠的诞生、会凿船的船蛆、会造“烟幕弹”的乌贼、大法螺的故事、贝壳收藏家。</p>
+<h4 id="爱我中华保护环境图片展"><a class="header" href="#爱我中华保护环境图片展">《爱我中华·保护环境》图片展</a></h4>
+<p>“爱我中华·保护环境”图片展览用大量的珍贵图片从“大好河山、美丽家园”、“环境污染、祸国殃民”、“保护环境、造福人民”、“碧水蓝天、任重道远”、“标本兼治、国泰民安”等五个方面阐述人与环境的关系，以及环境污染带来的危害，唤醒人们的环保意识。该展览介绍了中国环境保护的现状、世界和中国面临的十大环境问题、环境污染的种类及其危害、环境保护法律法规和环境保护取得的成就等方面的内容。此外，还介绍了许多环境保护方面的科普知识。</p>
+<h4 id="微缩中国传统农具展"><a class="header" href="#微缩中国传统农具展">微缩中国传统农具展</a></h4>
+<p>微缩传统农具展览按照1:4～10的比例将传统农具制作成模型，包括犁、耙、踏犁等耕作器具，桔槔、拔车、担桶等灌溉器具，牛车、推车等田间运输器具，稻桶、吊筛、石滚等收获器具，还有生活器具共140多件。配套有反映中国农具发展史的科普版面。</p>
+<h3 id="馆藏文物"><a class="header" href="#馆藏文物">馆藏文物</a></h3>
+<p>根据2016年1月该馆官网显示，中国农业博物馆保存有农业文物、标本、古籍和传统农具等各类藏品近5万件，其中文物2万余件，珍贵古籍图书3万余册。</p>
+<ul>
+<li>石器：收藏有新石器时期的石斧、石锛、石凿、石铲、石磨盘、石磨棒等文物约200余件。</li>
+<li>陶器：陶器有彩陶、素陶、元黑陶、彩绘陶、单色釉陶、复彩釉陶、唐三彩等几大类，其中除彩陶以外，其他类型以明器居多。</li>
+<li>青铜器：青铜器大约100余件，包括兵器、生活用具或礼器。</li>
+<li>铁制农具：铁制农具300余件，以出土的辽金时代中国北方铁器为主。</li>
+<li>农画：农业宣传画2000多幅，包括著名画家如金梅生、韩美林、戈湘岚、刘文西等的获奖作品和代表作。</li>
+<li>传统农具：传统农具5000余件，范围覆盖全国除台湾省以外的30个省区。</li>
+<li>自然标本：自然标本主要包括珍稀动物标本、珍贵植物标本和全国土壤标本三大类，其中珍贵自然标本3000余件。</li>
+<li>文献：馆藏文献近7万册，其中珍品特藏近3万册。</li>
+</ul>
+<h2 id="机构设置"><a class="header" href="#机构设置">机构设置</a></h2>
+<h3 id="中国农业博物馆学术委员会"><a class="header" href="#中国农业博物馆学术委员会">中国农业博物馆学术委员会</a></h3>
+<p>中国农业博物馆学术委员会是中国农业博物馆学术建设的管理机构，由馆内外与农业博物馆业务相关的专家组成；馆学术委员会的职责包括负责馆内课题的立项评审，监管立项课题的实施，负责馆外课题的协调，指导成立专门的研究团队，加强有关课题经费的管理和监督，组织结项课题的验收。</p>
+<h3 id="出版刊物"><a class="header" href="#出版刊物">出版刊物</a></h3>
+<p>中国农业博物馆先后协编或主编出版过《中国农业资源与区划要览》、《中国古代农业科技史图说》、《中国农业文明史话》、《中国农史论文目录索引》、《民以食为天——中华饮食文化》、《中国古代耕织图》、《中国近代农业科技史稿》、《旧中国苏南农家经济研究》、《汉代农业画像砖石》、《汉代陶器与古代文明》、《古玩保养与修复》、《馆藏中国传统农具》、《中国经济史上的天人关系》等书籍。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

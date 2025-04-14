@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>清尚公司多项作品荣获2020-2021“建筑应用创新大奖” - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Jixian/qsnews-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="清尚公司多项作品荣获2020-2021建筑应用创新大奖"><a class="header" href="#清尚公司多项作品荣获2020-2021建筑应用创新大奖">清尚公司多项作品荣获2020-2021“建筑应用创新大奖”</a></h1>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s/UM5PXjKeRbeu4-2jiTQRUQ">清尚公司多项作品荣获2020-2021“建筑应用创新大奖”</a></p>
+</blockquote>
+<p>12月21日，2020-2021年度“建筑应用创新大奖”终评会在中国建材大厦召开。本次终评会由庄惟敏院士主持，邀请国内17位建筑行业内知名专家进行评选，清尚公司董事长吴晞作为特邀专家参与了评审工作，清尚公司马怡西、洪麦恩以及清华大学美术学院林乐成与程向军四位老师的项目作品分别通过了专家终审，荣获了本次创新大奖。</p>
+<p>据了解，由国家建筑材料展贸中心和建筑应用创新大奖组委会主办的的终评工作，主要包括基于项目的创新测评、基于应用的综合评定和基于参评项目的创新应用三个环节。本次终评共入围综合创新类46项，单项创新类48项，其中又包含了建筑材料应用创新类13项、装配式建筑应用创新类11项、建筑部品部件应用创新类5项、设备设施应用创新类2项和其他应用创新类17项。本次评审工作，也是清尚公司的室内设计项目首次参与建筑应用创新评选，清华大学美术学院林乐成教授设计创作的延安宝塔山游客中心大型纤维艺术陈设《宝塔山•黄土魂》和清尚公司第九设计工程部洪麦恩团队设计施工的《北大红楼与中国共产党创建综合主题展》获得了其他应用创新类大奖。这种专业的融合，不仅代表了现代建筑装饰行业逐渐回归本源的设计内涵，同时也为装饰行业中种类繁多的设计业务提供了更加广阔的发展方向。</p>
+<h2 id="雁栖湖国际会议中心"><a class="header" href="#雁栖湖国际会议中心">雁栖湖国际会议中心</a></h2>
+<p>雁栖湖国际会议中心为大国外交做出了重要的实际贡献。由清尚公司马怡西团队设计的雁栖湖国际会议中心，古今结合，中洋结合，既庄重大气又不古、不今、不中、不洋，在新时代追求新气息，在新技术条件下追求新的国际高峰会议视听效果，很好地体现了大国风范，大国气派，时代特征，中国特色。</p>
+<p>马怡西设计团队在项目中使用的景泰蓝工艺创新，荣获了建筑材料应用创新类大奖。设计师在集贤厅的18根立柱上，史无前例的使用了18个2米见方、1.8米高的景泰蓝大斗拱。其上的装饰图案专门选取了北京常见的花卉植物，既满足工艺要求又符合空间文化特征，这种将传统的景泰蓝工艺创新地应用于建筑装饰中的创新做法，景泰蓝工艺等多种传统手工艺在空间中的创造性运用也极大的拓展了传统工艺的应用场景。</p>
+<p>外交部的意见招标要求集贤厅的设计一定要有中式风格，一，集贤厅代表国家形象和国家利益。二，要求是唐宋风格，表现出唐宋时期的盛世中华，不搞人民大会堂那种风格不明确的，一定要地道的唐宋风格。</p>
+<p>不积蛙步，不以至千里，马怡西设计团队国家礼仪空间集贤厅设计的流经岁月，他继承了环艺系老先生创立的传统，积累了一些专题经验，用心解惑了各种有关知识，他长期特别关注各国国际间的元首会谈，会见场所的国际礼仪文化，这些长久坚持获得了非常多的有专业价值的东西，对之后的项目设计逐渐增强了自己在专业文化方面定位的自信心。</p>
+<p>马怡西从首都机场专机楼室内设计对国家里文化设计有了更直接的实践机会，马怡西先后设计了中南海、玉泉山、高法和北京市许多国家级空公共空间，在2013年秋季马怡西工作组有机会参加了雁栖湖国际会议中心集贤厅的最后两轮的招标，他们十年磨一剑，从来没有放松过国家礼仪空间研究和实践并且充满信心，研读政治空间，研磨礼仪之邦，艺术设计与众多现代高科技设备融合，设计当代国家礼仪空间设计风格有很大的挑战性，首都是有着800年多年历史的帝都，体现文化自信，吸收唐宋文化盛世元素，传统非遗的运用提升了它的独立欣赏价值，没有一个先进的民族能够忽略文化自觉的命题。</p>
+<p>集贤厅设计的珠联璧合，大气磅礴，使2014年21国圆桌会议获得最好的会议政治气氛。</p>
+<h2 id="大型漆壁画长城颂"><a class="header" href="#大型漆壁画长城颂">大型漆壁画《长城颂》</a></h2>
+<p>中国共产党历史展览馆序厅的巨幅漆壁画《长城颂》塑造出长城在金秋曦照中蜿蜒而上、直入云海的恢弘气势。《长城颂》长40米，高15米，总面积600平方米，由100块漆板组成，寓意建党百年。由清华大学美术学院程向军老师设计创作的大型漆壁画《长城颂》同样获得建筑材料应用创新类大奖。据了解，中共中央宣传部、中国文联、中国美术家协会曾经向全国各地美术名家、美术院校和专业画院的艺术工作者广发“英雄帖”。这个项目两年来尝试过国画、油画、雕塑等多画种方案，很多名家都曾参加过这个项目的创作，经过反复征集、评选，清华大学美术学院程向军教授创作的漆画方案脱颖而出。</p>
+<p>此幅壁画作品由100块2m×3m an铝蜂窝复合板作为胎板构成的，同时选用玻璃幕墙干挂技术安装，较好的解决了传统漆板的缺憾。设计师运用有效的工艺处理，使漆材料肌理与哑光工艺处理达到了理想视觉效果，使观众可以无盲区的欣赏壁画。走进中国共产党历史展览馆序厅，一幅40米宽、15米高的《长城颂》漆壁画震撼亮相，这幅世界上最大的漆壁画已经成为这座红色新地标的艺术名片。展馆序厅的石材是温暖的浅米色，漆恰好比较适合于表达暖色。“作为中国人，我觉得当然要把我们传统里最好的手段运用到上面。”程向军在最初陈述创作思路时，程向军认为：“《长城颂》是新时代的艺术作品，它在一个新的历史节点上出现，并非偶然。近些年我们国家对非遗、对整个传统文化都非常重视，有很多重大的支持举措，我觉得正是这些因素促成了《长城颂》漆壁画登上国家级的殿堂，向世界展现中国艺术的风采。”《长城颂》采用中国绘画鸟瞰式构图，表现经历了两千五百多年岁月磨洗的长城，至今依然屹立在世界的东方，成为中华民族乃至人类文明的象征。壁画以抒情性、象征性手法表现，画面分为近景、中景、远景三个层次，近景以古松及明长城烽火台、山石造型构成，中远景以绵延不断的群山构成，表现长城如东方巨龙般起伏在崇山峻岭之巅的雄姿。山中溪水汇聚成河流，寓意中华民族生生不息、源远流长。《长城颂》其实是一个命题作文。”前年四月，清华美院接到了为中国共产党历史展览馆序厅设计壁画的任务，要求以漆壁画的形式表现长城主题。“壁画设计不同于其他画作，必须从一开始就考虑到它所处的建筑空间。”从作品的文化意义到安装的技术难度，甚至阳光直射画面的角度，程向军在设计时都一一考量，最终他的方案从反复评选中脱颖而出。《长城颂》也应该展现中国文化的包容性和大格局。”经过反复思考，程向军选择了中西合璧的表现手法，在保持中国画以线造型的传统上，加入了西洋绘画的虚实表现。考虑到壁画所在空间的限制及高度，《长城颂》的重点细节表现在画面的二分之一以下，远观画面结构清晰，近看有质感有细节。为了避免室内眩光干扰，壁画采用大量的材料肌理将光滑的漆面眩光分散，使其达到高贵、厚重、雅致的视觉效果。“红、白、黑、金是画面的主色调。大漆的红作为漆画代表性色彩具有独特的艺术魅力，也寓意着红色江山，铝箔粉上罩染透明漆后形成了暖金的效果，与室内建筑空间相协调。”作为漆画史上前所未有的超大体量作品，它在制作、安装方面的难度同样也是前所未有的。传统漆板由木胎制成，尺寸误差较大，易变形。为解决这一工艺问题，程向军大胆构想，通过国内专家技术论证，决定选用蜂窝铝板作为壁画胎板，这在国内尚属首创。“蜂窝铝板的优点及安全性远远超出传统手工漆板，板面组合误差小，经测算每块自重在70公斤左右，可以减轻墙体的负荷，解决室内不同高度温差而引起胎板变形等问题。”“由于序厅的墙面石材已经加工好，壁画要准确地嵌入其内，就要求每块漆板之间的缝隙要控制在两毫米以内。施工人员经过精密计算、反复测试，前后用了一个月的时间才完成安装。”强调风格的统一。《长城颂》采用传统漆画技法原理，通过在铝箔粉上刻线控制整个画面造型，运用多层罩染透明漆以达到最佳的视觉效果。从画素描稿到人工刷漆，从亚光处理到包装运输，每一道工序都关乎作品最后呈现的艺术质量。这是近50人团队集体劳动的结晶。</p>
+<h2 id="林乐成教授创作的大型纤维艺术陈设宝塔山黄土魂"><a class="header" href="#林乐成教授创作的大型纤维艺术陈设宝塔山黄土魂">林乐成教授创作的大型纤维艺术陈设《宝塔山•黄土魂》</a></h2>
+<p>延安宝塔是中国革命的精神标识，由清华大学美术学院林乐成教授设计创作的延安宝塔山游客中心大型纤维艺术陈设《宝塔山•黄土魂》与建筑和环境良好结合。清华大学建筑设计研究院院长庄惟敏院士主持设计了延安宝塔山游客中心，庄院士在设计中充分考虑梳理宝塔、山、河、城市界面与人五者的关系，建筑采用地景化的处理，作为山水缝合的媒介，完整的镶嵌于山水之间，而非仅仅是一个孤立的建筑。建筑主体消隐，与自然环境融为一体，屋顶空间成为景区环境的一部分，起伏连续的屋顶空间提供了大面积的绿化和广场，作为游客驻足、游览、交流、活动的重要场所，同时也提供了最具仪式感的参观路线，强化了游客的体验感.建筑风格延续地域文化特色，保留场地内的原有窑洞，与新的建筑融为一体。建筑材料采用当地黄砂岩，同时采用传统工法同色密缝砌筑。土黄色砂岩石块由当地工匠手工雕凿砌筑而成，在延安当地强烈阳光的照射下，呈现出丰富生动的光影、质感及色彩变化。林乐成教授的艺术创作：《宝塔山•黄土魂》与建筑环境相得益彰，浑然一体。宝塔山是延安的标志和象征，也是延安最重要的旅游景区。宝塔建于唐代，是重要的历史文化遗产。高度概括了宝塔山的崇高地位和精神实质，守护、传承和弘扬好这一中国革命的精神标识，是我们义不容辞的神圣职责。林乐成教授的此项纤维艺术作品《宝塔山•黄土魂》充分地体现了材料美、工艺美、形式美和装饰美的特点，很好地体现黄土高原气息，很好地烘托游客中心气氛，跟重要的是表达延安做为中国革命圣地的不朽地位。《宝塔山•黄土魂》同时也入选了第十三届全国美展并荣获2019年UIA第四届巴库国际建筑大奖——最佳实践三等奖。</p>
+<p>游客中心的建造过程不仅保护并提升了当地传统建筑工艺，实现了良好的社会效益。游客中心完善了景区的服务及管理功能，不仅为游客提供旅游咨询、展示、休息、书吧、咖啡厅等服务，建筑屋面与周边环境融为一体，大面积的广场空间也为市民提供公共活动的场所，成为深受游客及市民喜爱的城市公共空间。</p>
+<h2 id="光辉伟业红色序章主题展"><a class="header" href="#光辉伟业红色序章主题展">光辉伟业红色序章主题展</a></h2>
+<p>2021年6月29日，“光辉伟业 红色序章——北大红楼与中国共产党早期北京革命活动主题展”在北大红楼正式与公众见面。北京清尚建筑装饰工程有限公司和清华大学美术学院展示艺术研究所承担展区的设计布展工作,由展示艺术研究所所长洪麦恩负责此次红楼展览形式的总体设计。洪麦恩老师作为国内首屈一指的展陈设计专家有着丰富的设计经验，洪麦恩老师山上世纪八十年代进入中央工艺美术学院工作三十多年来，他曾经参与设计了上百项展陈工程项目任务，积累了丰富的实践经验，他的展陈项目也代表了我国当前展示陈列设计的水准。接受重大任务以来他夜以继日的努力工作，不负美术学院与清尚公司领导重托带领团队高质量地完成了本展区全部设计布展工作。北大红楼与中国共产党早期北京革命活动主题展开展后各届人士参观反映良好，广大观众通过参观展览深受鼓舞，十分振奋。本次展览展示了丰富的历史图片、文字视频、实物场景和沙盘模型等，带领人们全方位、多角度、深层次感受100年前传播传播马克思主义与建党的巨大历史意义。展览设计了主题展区，运用历史图片、文字视频、实物场景、沙盘模型、互动体验等多种手段和元素充分展示当年的革命风貌。</p>
+<p>北大红楼，一幢质朴、庄重的近代四层建筑，红砖砌筑，红瓦铺顶，建成于1918年，是当时北京大学校部、文科、图书馆所在地，现位于北京东城区五四大街29号，洪麦恩老师在北大红楼项目中非常注意展陈结构与建筑的共生关系，尽可能保持原有建筑的历史文脉和庄严简朴的风格。设计师们充分利用开放式空间，对68间主题展览室内的结构尽量不遮挡，让展览的结构要素与建筑室内空间融为一体。洪麦恩说：“让展览与建筑文物相融合，可以把历史展现得更透彻。”整个展览一室一专题，并采用全息影像、体验式投影、交互式触摸屏等新媒体技术的应用，延展了展览的深度和广度。北大红楼在建党初创过程中具有重要地位。陈列展示融入历史场景北大红楼本身就是真实历史发生地。作为全国重点文物保护单位，它完好地保存着历史的真实信息，人们走进这里，不由凝神屏息。67间展室中，历史场景复原与专题陈列展示结合，构成鸿篇巨制式的历史画卷，给观众以沉浸式的参观体验。走在大楼里实景复原处处可感受到厚重的历史：重新修缮的楼梯，皮质保护层只覆盖了易损部位，台阶外露部分的沧桑依旧清晰可见；精心设计的展板，巧妙地避开了门窗，阳光透过窗户，照亮展室。中共早期北京革命活动纪念馆常务副馆长杨家毅说：“在历经沧桑的建筑文物内做展览，是一种创新尝试。”</p>
+<p>“保护原有风貌、有效表达主题、方便群众参观，布展时考虑了方方面面的因素。”洪麦恩负责此次红楼展览形式的总体设计，他说：“我们还考虑了各个年龄段观众特点，以适应不同观众的观展需求。”“旧址保护传承利用是一个系统工程，既要做好文物修缮、建筑维护，也要做好日常管理和运营服务。”保护好革命文物，就是保护好历史的见证。在文物保护修缮方面，坚持修旧如旧，保持和恢复旧址原有风貌，做到‘有物可看、有史可寻’，通过‘看文物，学党史’等多种形式，把红色基因传承好。”</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/news-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../YanqiLake/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/news-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../YanqiLake/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

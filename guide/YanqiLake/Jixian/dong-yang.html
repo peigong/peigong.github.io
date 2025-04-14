@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国工艺美术大师陆光正 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Jixian/dong-yang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国工艺美术大师陆光正"><a class="header" href="#中国工艺美术大师陆光正">中国工艺美术大师陆光正</a></h1>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s/7F9IB8T6RVG1iTORQTDk_A">创建城市特色文化地标，赋能工艺美术当代发展</a></p>
+</blockquote>
+<p>陆光正大师是中国木雕的领军人物，东阳木雕的杰出贡献者。因其突出的艺术成就，他在国际、国内工艺美术界享有盛誉。创建陆光正木雕艺术馆，以木雕为载体，记录中国社会变迁与东阳木雕的审美流变，彰显传统工艺在新时代的文化生命力，以此推动工艺美术应用与创新，既是陆大师的艺术情怀，更是他的社会担当。建设陆光正木雕艺术馆，不仅是其个人艺术成就的展陈空间，更是传统工艺美术在当代社会实现活态传承、创新转化和公共传播的重要实践。艺术馆通过陆光正大师作品以及木雕历史性、当代性及独特性的纵横展示，达到“保护、创新、传播、应用”的闭环，从而赋能当代工艺美术行稳致远，向好发展。</p>
+<p>陆光正大师13岁从艺，迄今60余年，创作作品数千件。他用一件件精湛绝伦的作品绽放东阳木雕的魅力，用一个个浩大的木雕装饰工程诠释东阳木雕的鬼斧神工，他更以超凡的创造力突破传统局限，垒砌新时代的文化高峰。作品无不透露出他数十年如一日的工匠精神、深切的家国情怀以及励精图治的务实求新。他的作品类型丰富，具有独特的魅力，系统梳理陆光正大师60余年艺术生涯的创作脉络，集中展示陆大师的技艺精髓与时代创新，构建传承交流的文化空间，十分必要。他的作品大致可分为以下几个类型：</p>
+<p>（一）国家场馆、政治主题作品，气象正大，为人民代言，激情放歌。早在上世纪70年代，陆大师创作的木雕挂屏《松鹤同春》《百鸟朝凤》就陈列于北京人民大会堂浙江厅；1997年创作的落地屏风《航归》被浙江省人民政府选为香港回归礼品赠送给香港特区政府；2012年，组织、牵头创作“庆祝改革开放30周年东阳木雕大展，创作了10幅反映改革开放伟大成就的主题作品，成为东阳木雕行业集体创作的现代题材精品。2014年为北京雁栖湖国际会展中心APEC会议主会场集贤厅设计制作主背景木雕《锦绣中华》和《燕京八景》。2016年为G20杭州峰会主会场、贵宾厅等场所设计创作了主背景木雕和会场组雕《中华二十景》《望海潮》等，向世界展示了中华优秀传统文化和木雕艺术的魅力。2017年12月在中国国家博物馆举办“丝路华章”陆光正从艺60年东阳木雕大展，展陈了近百幅响应国家倡议的主题作品，大展开幕后好评如潮；2018年11月创作的大型木雕《锦绣中华》在首届中国国际进口博览会上亮相；2020年，创作大型组雕作品《百年伟业》，向中国共产党百年华诞献礼，作品在东阳、温州上海、杭州、嘉兴等地展出，受到热烈反响；2021年，大型木雕作品《同心共筑中国梦》捐赠给中国共产党历史展览馆，表达了一位艺术工作者赤忱的爱党爱国之情；2022年完成的《大美中华24景》安置在广州国际会议中心，作品共24幅，每幅高9.6米，宽1.6米，是东阳木雕组合作品面积之最。</p>
+<p>建成后的陆光正木雕艺术馆将展陈这一类型的多件作品。陈列在中国共产党历史展览馆的《同心共筑中国梦》、上海进博会主会场的《锦绣中华》等大型作品已经复制完毕，届时安置在艺术馆主要位置。“丝路华章”陆光正从艺60年东阳木雕大展中的大型作品如《郑和下西洋》《丝路传扬》《张骞出使西域》《茶马古道》等作品将陈列在艺术馆。</p>
+<p>（二）木雕建筑装饰是陆光正大师体量最大的“作品”，是东阳木雕的时代辉煌。由此可见陆大师的艺术创造极其震撼，令人叹为观止。东阳木雕源于建筑，陆大师从艺的数十年来，东阳木雕与建筑装饰在陆大师的手上须臾不离，尤其在木雕装饰与当代建筑互相融合方面进行了积极地探索，并取得丰硕成果。他在北京人民大会堂、中国国家博物馆、钓鱼台国宾馆、中国财税博物馆、浙江省政府、广东省政府、世界佛教论坛会址等地设计、制作的楼堂厅馆的建筑装饰，受到社会各界的高度评价。2007年领衔设计创作的无锡灵山梵宫木雕装饰工程，组织率领东阳40多家工艺美术企业创造了多个“东阳木雕之最”，是对东阳木雕装饰艺术的全新跨越；2010年，主持设计中国国家博物馆楠木厅，以木为本，突出木与人的亲近关系，并设计了全套坐具陈列在国家博物馆楠木厅；2013年主持中国孙子文化园兵圣宫的装饰设计，通过创作系列木雕作品，讲述孙子兵法故事，成就了中国传统文化园区的典范之作；2014年，完成了中国木雕博物馆的装饰设计，并组织东阳木雕集体创作，为木雕博物馆增加文化厚度，而他本人创作的大型木雕作品《歌山画水》，也成了木雕博物馆最佳打卡地；2015年，完成乐山凌云寺木雕装饰工程，该项目创造了古寺庙以旧修旧的样板，东阳木雕与古建筑融合完美，天衣无缝；2017年完成山东曲阜“尼山胜境”的木雕装饰，这是陆大师提出现代建筑空间与传统木雕装饰应用理论的重要实践作品，工程完毕对外开放，观者好评如潮；2019年完成的陕西汉文化博览园先祖堂室内木雕装饰，其中藻井直径为35米，总宽51米。高44.7米，是东阳木雕有史以来挑空最高、直径最大的藻井。如此等等，不一尽叙。</p>
+<p>陆大师的木雕建筑装饰深入传统，应用能力强劲，力图创新，满足社会需求；善于思考，理论体系丰富。这是陆大师给予社会的重要精神财富和物质财富。陆光正木雕艺术馆里彰显大师对木雕与现代建筑装饰结合的理念和做法，是梳理东阳木雕的发展路径，提升东阳木雕表现力的十分重要的环节。</p>
+<p>（三）让东阳木雕走向世界，是陆光正大师艺术人生中的宝贵经历，更是重要贡献。改革开放初的1980年他主持创作设计的新加坡“董宫酒家”大厅巨型木雕装饰，被时任新加坡总理李光耀先生誉为“新加坡至今最好的建筑雕刻”；随后他被聘任为中国东方装饰工程公司总设计师，赴法国、英国、德国、美国、日本、埃及、新加坡等 10多个国家考察访问、交流技艺、承接木雕装饰项目。这期间既开拓了视野，吸收了优秀的外来文化，锤炼了艺术家的创造力，同时在多个国家施艺，推广中国传统文化，增强民族自信。1986年，完成德国汉堡“中国城大酒楼”的设计装饰；1988年，在瑞典第二大城市哥德堡完成中国龙宫大酒店的设计装饰，为上海与哥德堡作为友好城市的外交做出了贡献；2009年木雕作品《海上王张保皋》陈列于韩国首尔张保皋纪念馆；《万里海天辉晨曲》陈列于韩国釜山大学。如此等等，陆大师以坚定的文化自信，为东阳木雕走出国门开疆拓土。</p>
+<p>2017年12月在中国国家博物馆举办的“丝路华章”陆光正从艺60年东阳木雕大展开幕式上，他曾深情致辞，希望东阳木雕站在新时代的起点上，能融入一带一路国家倡议，走出国门，发挥更广更大的价值。陆大师的国际视野、卓越的开拓思想以及这一类型作品的国际范是陆光正木雕艺术馆不可或缺的重要的展陈部分。</p>
+<p>（四）守正创新，继往开来，用丹青妙笔谱写时代华章。这是陆大师近20余年来耕耘最深，用功最勤，艺术成就最为突出的阶段。2000年创作的《云龙花瓶》获得2000杭州西湖博览会首届中日工艺美术大师作品暨工艺美术精品博览会金奖。作品造形设计吸收明清贡瓷样式，体态古雅雍容，造型峻拔，其高明处在于创新。将瓷器的神韵与龙的精神气质完美演绎，引领潮流，前所未有。2003年为杭州新建雷峰塔创作的8幅大型木雕壁画《白蛇传的故事》，创新多层叠雕技法，解决了东阳木雕不能制作大作品的困惑，为东阳木雕的创作开辟了新境，受到党和国家领导人的赞誉以及社会各界的好评。2005年创作大型木雕壁挂《锦绣西湖》，再次被北京人民大会堂浙江厅选用。山水类传统题材焕发新的生命力，以丰富的创新技艺展示历史文化的独特韵味；2006年为杭州楼外楼大厅创作组雕《东坡疏浚图》。全图由《访民问计》《甘苦与共》《万民拥戴》《东坡焖肉》和《惠泽千秋》五个连成一气的场景组成，共50多平方米。这是东阳木雕的展陈方式的创新手法，一个故事，多组画面，楼上楼下，顺势呈现。2018年陆大师为金华城市展馆创作的《八婺揽胜图》，作品宽20.36米，高7.24米，创下了东阳木雕单幅作品面积之最。2020年创作的组雕作品《百年伟业》具有四大创新：是传统木雕与现代雕塑结合的创新；传统题材走向宏大政治主题的创新；展陈方式舞台形式的创新，科技灯光运用的创新。2021年安置在王阳明纪念馆内的大型木雕作品《王阳明的故事》长度为33.54米，是木雕单体最长的作品，是东阳木雕与黄杨木雕的强强联合，两者相得益彰，各扬其长；2023年为广州国际会议中心创作的《大美中国24景》，则是东阳木雕与潮州木雕的结合，两种不同风格的木雕技艺融合，锦上添花，精妙无比。</p>
+<p>陆大师的创新，无不包含着“守正”的理解，他曾经写下八个字“尚艺为本，履新乃用”勉励后学。从中体会到陆大师的创新本质在于与时俱进，顺应时代，引领发展，成为时代的弄潮人。陆光正木雕艺术馆将着重展陈陆大师守正创新，绽放时代华彩的作品，并以大师创作的时间线，指向大师创新旅程，以启迪后来者。</p>
+<p>艺术馆建筑的独特亮点是塔厅。塔，具有古老的历史性和文化性，是古典建筑集大成者。在现代建筑群体中兀自建立一座高塔，巍峨屹立，吸睛亮眼。艺术馆的外形就是一件艺术品，新老建筑样式在冲突中协调统一，标新立异。陆大师说，东阳木雕具有历史性、传承性，要发展就需要与各门类艺术广泛交流，要承接这些功能，于是有了塔厅的概念。在塔里描绘东阳木雕乃至中国建筑历史、反映东阳木雕的传承与发展，并借以让同行们在此多多交流，是在巧妙不过的了。可谓纵横联合，各得其所。</p>
+<p>塔厅共有五层，建筑高度42.95米。首要功能是展示中国木雕及东阳木雕的历史，表现其不同时期的建筑特色，自上而下，分别承载汉、唐、宋、明、清五个朝代的建筑装饰样式。秦汉建筑的风格主色、古朴气质，唐代的飞天乐伎、雕梁画栋，宋代建筑造型典雅、温婉大方，明代建筑的斗拱大柱，端庄文气，清代建筑的牛腿枋梁，雕工繁复，将尽收眼底，值得细细品味。一层的四大名著题材的四幅木雕作品，将呈现题材厚实度，时代新风尚。</p>
+<p>塔厅二层为技艺传承厅，它是艺术馆的有机组成部分，通过展示陆大师师承、授徒情况，可让观众了解东阳木雕的发展历程、技艺传承与人才培养的状况。陆大师亲自带徒40余名，徒弟中大部分是省、市级工艺美术大师，业已成为东阳木雕传承的中坚力量。徒弟们从事的木雕传承方向不一，有木雕艺术创作、红木家具设计制作、古建营造、书画艺术创作、工艺美术理论研究、学校教育以及AI数控技术等等多个方面。徒弟来自浙江、江苏、福建、四川、台湾等全国各地，还有来自刚果（布）的6位学子。届时，陆大师的师父楼水明先生的半身像将安置在传承厅中央，众徒弟的精品力作也将展陈在此。通过"师徒传承展区"及互动体验空间，展现东阳木雕代际传承体系，为青年匠人提供研习范本，助力非遗人才梯队建设。</p>
+<p>塔厅三层是国家级大师交流厅。多年以来，陆大师收藏了来自全国工艺美术的各门类上百位国家级工艺美术大师的作品，涵盖木雕、根雕、金属雕刻、陶瓷、刺绣、织锦、紫砂器、景泰蓝、石雕、蜡染、编结等十几大类。汇成了工艺美术百花园，株株奇葩，植入在陆光正木雕艺术馆，蔚为大观。艺术馆内展陈众多国家级工艺美术大师作品，作为“中国木雕之都”的东阳，会产生向心力，形成艺术高地，受惠于行业。作为“世界木雕之都”的东阳，会成为亚太地区手工艺交流的重要节点，向世界展示中国工匠精神与东方美学智慧，助力文化走出去。</p>
+<p>此外，陆光正木雕艺术馆还将设立多功能展厅，用于承接各类艺术展览，不断增强艺术馆文化建设；设立非遗报告厅及研学工作室，用于培植文脉，提高木雕艺术受众面，构建中国工艺美术的学术研究体系，确立木雕艺术的美学高度与理论坐标。</p>
+<p>自开工建设起，艺术馆计划500天竣工。陆大师更加忙碌了。打造东阳文化地标，赋予东阳木雕新价值，更好地为行业发展服务，是大师心里的头等大事。为此他每天画稿、设计，埋头苦干，只争朝夕。艺术馆的每一件作品，抬头可见的每一处景，陆大师绝不轻易放过，他要用最生动的形象，最好的工艺，来表达心中最为坚守的初心。艺术馆塔厅建筑装饰4500㎡，由陆大师设计制作并全额承担费用。艺术馆建成后，陆大师向政府捐赠计1000余件作品，陈列在陆光正木雕艺术馆，包括大型国家主题性作品、传统木雕精品、创新性主题作品以及陆大师多年收藏的上百位中国工艺美术大师、艺术家的工艺精品、字画等。陆大师从艺以来设计的重要项目建筑图纸、线描手稿、出版物等珍贵资料也悉数捐赠、陈列在艺术馆。在东阳木雕的朝圣之路上，他动了真情，他竭尽全力地付出，为的是那一份期待——东阳木雕长远美好的未来。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/design-9.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Jixian/news-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/design-9.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Jixian/news-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

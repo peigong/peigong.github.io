@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北京雁栖湖国际会展中心 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/YanqiLake/BYCC.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京雁栖湖国际会展中心"><a class="header" href="#北京雁栖湖国际会展中心">北京雁栖湖国际会展中心</a></h1>
+<p>北京雁栖湖国际会展中心（BYCC, Beijing Yanqi Lake International Convention &amp; Exhibition Center），位于雁栖湖生态发展示范区内，是雁栖湖国际会都两大主体部分之一，建筑主体是圆形大楼，建筑造型外观似天坛无盖，寓意天圆地方，设计风格与雁栖岛上的雁栖湖国际会议中心相辅相成。会展中心主要功能是供大型公司产品发布、展览等等，2015年第五届北京国际电影节开闭幕式举办地。</p>
+<p>2014年APEC峰会的成功举行，让会议举办地雁栖湖生态发展示范区成为焦点。作为示范区内的特色建筑北京雁栖湖国际会展中心，独特的建筑外形宛若天坛祈年殿倒影，成为京北乃至全国会展场馆中的新星。</p>
+<p>北京雁栖湖国际会展中心拥有不同规格会议室70余间，配备顶级会议视听设备，大议会厅占地5500㎡，直径84m，高15m，最多可容纳4500人。</p>
+<h2 id="场馆信息"><a class="header" href="#场馆信息">场馆信息</a></h2>
+<p>北京雁栖湖国际会展中心由北京北控置业集团有限公司投资建设、运营，位于北京雁栖湖生态发展示范区内。建筑面积78000㎡，设有可分隔式无柱5500㎡大议会厅和2000㎡大宴会厅，2000㎡多功能厅，以及中小型会议室70余个；配有3000㎡厨房，可同时提供5000人高端餐饮；内设精品酒店。是集会议、展览、餐饮、酒店、综合配套服务于一体的综合型会展场馆。</p>
+<h2 id="设计理念"><a class="header" href="#设计理念">设计理念</a></h2>
+<p>雁栖岛国际会议中心主体建筑和岛外的国际会展中心相辅相成，遵循“汉唐升华、天地飞扬”的设计理念，宛若天坛祈年殿倒影，雄伟现代。建筑结构上采用钢骨混凝土框架-钢筋混凝土剪力墙结构，屋盖外部轮廓呈圆形，采用24榀放射状布置的鱼腹式空间钢桁架体系，大跨楼盖采用TMD消能减振系统。该工程荣获2014北京市建筑（结构）长城杯金奖，由北京市建筑设计研究院有限公司设计完成。</p>
+<p>在整个场馆建设期间秉承“低碳环保、科技创新”的理念，北控置业作为雁栖湖国际会展中心的承建方，通过北京环境交易所购买碳减排量，抵消会议场馆建设过程中产生的碳排放。</p>
+<h2 id="场馆功能"><a class="header" href="#场馆功能">场馆功能</a></h2>
+<h3 id="会议"><a class="header" href="#会议">会议</a></h3>
+<p>北京雁栖湖国际会展中心有大小不等的会议室70余间，配备了顶级的会议视听设备，能最大限度地满足从10人到5000人的不同规模会议、宴会、演出、新品发布、公司活动等多功能服务需求。其中最大的大议会厅为5500平方米，可容纳5000人；大宴会厅2000平方米，可单厅接待1000人的大型宴会。</p>
+<h3 id="展览"><a class="header" href="#展览">展览</a></h3>
+<p>北京雁栖湖国际会展中心内部序厅面积超过5000平方米，会展中心外部也有空间可满足各类中小型展览搭建面积超过10000平方米。</p>
+<h3 id="餐饮"><a class="header" href="#餐饮">餐饮</a></h3>
+<p>3000平米后厨系统，可同时为5000余人提供餐饮服务。会展中心菜品融合了各种中西文化和怀柔当地的特色美食。为满足各种规格、形式的需求，餐饮服务还特别推出：主题宴会、自助餐、宴会套餐、鸡尾酒会、茶歇、外卖、商务套装盒餐等。</p>
+<h3 id="酒店"><a class="header" href="#酒店">酒店</a></h3>
+<p>作为北京雁栖湖国际会展中心内部的配套酒店，开创国内会展中心内部自配酒店的先河，与会者无需乘车，步行即可到达各个会议室。</p>
+<p>酒店拥有66间客房。酒店客房分为高级间、套间。所有房间均提供宽带上网，有国际、国内几十个频道可供选择的电视节目，保险箱、洗衣等设施和服务一应俱全。每间房都有宽敞的落地观景窗，或远眺，或近观，怀柔雁栖湖美景尽收眼底。酒店的内部增设工程正在设计进行中，未来会有更多数量的自身配套酒店。</p>
+<h2 id="升级改造"><a class="header" href="#升级改造">升级改造</a></h2>
+<p>业内人士表示，雁栖湖APEC会址与海南博鳌会址一样，有广阔的发展休闲旅游的潜力。雁栖湖早在1987年就正式对外开放接待游客，是国家4A级旅游风景区。雁栖湖旅游开发总公司副总经理于荣田告诉记者，景经过升级改造，整个园区被划分为山体健身区、滨湖观景区、儿童活动区、游览休憩区、餐饮服务区、娱乐中心区等功能区。该景区正在对雁栖湖周边区域进行整体规划编制，未来核心岛将与雁栖湖景区合并成一个21平方公里的生态发展示范区，将建设成为世界级城市旅游目的地和生态文化休闲胜地，提升为5A级景区。</p>
+<p>怀柔还集中对辖区内26个景区的公共服务设施进行有史以来规模最大、投入最多、成效最为显著的旅游集中达标改造升级。例如，怀柔已经完成了对慕田峪长城旅游区改造。慕田峪长城景区将从8平方公里扩展到24平方公里，日接待能力也将由1万人提升到3万人左右；红螺寺景区也在针对指示牌、停车场、检票口、文化长廊、中英文标识牌及其他的服务设施进行升级改造。</p>
+<h2 id="周边配套"><a class="header" href="#周边配套">周边配套</a></h2>
+<h3 id="湖区的风情大道"><a class="header" href="#湖区的风情大道">湖区的风情大道</a></h3>
+<p>作为怀柔连接国际会都的主要干道，雁栖风情大道是怀柔为迎接APEC会议重点打造的一条商业配套服务街区，该大道链接了下庄特色精品商街、燕城水运长街、栖彩小镇、巴西风情园和河防口古村落，全长11.8公里。</p>
+<p>其中，燕城水运长街先后投入了5000多万元。改造后，古街铺上了石板路，两旁的建筑也呈现了各式风格。还特地修建了一条水道，水源为雁栖湖水，水道沿古街流淌1500米。古街两边的商铺，已引进全国各地60家特色小吃，其中包括北京卤煮、四川小吃等。古街的北巷，则将着力打造以咖啡、烧烤、啤酒为主题的街道。</p>
+<h3 id="附近的小镇"><a class="header" href="#附近的小镇">附近的小镇</a></h3>
+<p>顶秀美泉小镇距雁栖湖仅1公里，被纳入“国际会都高端商务配套服务区”的行列，用于辅助政府服务APEC会议，成为雁栖湖周边的重要商业配套项目。</p>
+<p>其中，欧洲风情商业街紧临雁栖湖畔，是高端特色精品商业街区。沿着这个长约1000米的街道，游客可游览102所独立商铺。首批入驻顶秀美泉小镇欧洲风情商业街的知名品牌定位中高端消费群体。</p>
+<h3 id="附近的农家院"><a class="header" href="#附近的农家院">附近的农家院</a></h3>
+<p>为了迎接贵宾，在雁栖湖周边的很多民俗村已经完成了升级改造，包括街道两侧环境卫生整治、广告牌匾全部规范化。同时，从不夜谷沟口到神堂峪景区的8.2公里修起了木栈道。很多农家院内部的电视、空调、洗衣机也都升级换代，农家小院摇身一变成了星级村乡酒店。</p>
+<h3 id="辐射带商业配套"><a class="header" href="#辐射带商业配套">辐射带商业配套</a></h3>
+<p>怀柔一直以来就是京郊游的主要目的地，良好的生态环境是怀柔发展休闲度假旅游的法宝。500多座山峰、60多条河流、17座水库、54%的森林覆盖率，让怀柔山环水绕，灵气十足。慕田峪长城、古刹红螺寺、雁栖湖、青龙峡让这里人文气息浓厚。
+合理开发利用会议会展资源仅是雁栖湖后期规划的第一步，想要在未来打造雁栖湖大旅游区，配套商业是必不可少的一环。
+北京雁栖湖国际会展中心有展览、会议和其它各种活动所需要的服务，如餐饮、租赁、搭建、商务中心、广告发布等。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<p>2024年4月18日，由国家电影局指导、中央广播电视总台和北京市人民政府主办的第十四届北京国际电影节在北京雁栖湖国际会展中心开幕。</p>
+<p>2024年11月23日至24日，为期两天的2024年北京街舞（霹雳舞）公开赛在位于北京雁栖湖国际会展中心举行。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../YanqiLake/ConferenceCenter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../YanqiLake/ConferenceCenter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

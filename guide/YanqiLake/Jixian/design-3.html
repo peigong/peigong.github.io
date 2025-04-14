@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>APEC二十一国元首圆桌会议集贤厅设计全记录 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Jixian/design-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="apec二十一国元首圆桌会议集贤厅设计全记录"><a class="header" href="#apec二十一国元首圆桌会议集贤厅设计全记录">APEC二十一国元首圆桌会议集贤厅设计全记录</a></h1>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s/uw94uUwKIqJjVkmK6XfB0A">清华大学教授打造经典新中式——APEC二十一国元首圆桌会议集贤厅设计全记</a></p>
+</blockquote>
+<p>设计招标过程是公正透明的，在我们之前已经有几十个方案筛选。过程中，组织者已经想明白，这里是北京，这里是首都，有着八百多年历史的帝都，在重提文化自觉和强调文化自信的今天，应该主张什么。</p>
+<p>几十个方案作了很好的铺垫，组织者也慢慢清晰起来，要中式，要斗拱，要一切反映优秀文化成就的东西，要让外国元首看看中国主导下的峰会与之前的有什么不同，要聚焦北京！</p>
+<p>有幸我们团队在倒数第二轮投标时挤进并获得好评。</p>
+<p>当时能够获得的信息极少，只知道斗拱和柱子是菜单上仅有的主菜。30米乘40米的面积里，加上12米尽高的内部六个面，究竟怎样才能满足峰会要求?</p>
+<p>凭借想象的现有条件，周围堆满了钢构玻璃加石材，大量的涂料一定是少不了的，何况还有八项规定在那儿卡着呢。在一个无窗户的房间里开会，大量的白色墙顶应该是不错的选项，亮一点开会有精神，媒体上的形象也透亮透亮的，人物形象一定会灿烂。</p>
+<p>恰好，刚看了德国GMP建筑设计展，冯.格康的圆柱和顶的关系，让我联想到斗拱也可以透亮透亮的，一改古建斗拱责任重大，为抗震，全藏在犄角旮旯里，灰头土脸，不能作为一盘像样的菜。</p>
+<p>投标结果不甚满意，外事部门反馈意见，近二十几年，国家的外事礼仪过于简化，你看人家大国小国的国礼，摩托马队不说，一个蕞尓小国卢森堡，迎接专机进入领空还要两架战机护航，那仪式最多几分钟，也得礼数到位呀！</p>
+<p>进入决赛阶段，便知个中滋味。礼仪之邦不可礼薄，既然摩托开道要恢复，文化自觉又自信，那就使劲招呼吧。</p>
+<p>古建知识的准备已有，有没有可能从唐宋元明清走来，直到现在？会是怎样一个脉动？有没有可能来一个集大成的作品？在限制中创造新形象？</p>
+<p>方案顺利通过，施工图也顺利完成，可工作量才完成百分之三十，落实各种一比一大样实物接点，各种工艺，创作图案，经常一卡车一卡车拉到工作室来组装，修改，甚至反复重做，直到满意才推广。</p>
+<p>特别是用龙为主体，不管别人怎么用，凭直觉，断然使不得，虽说我们是龙的传人，那也只是港人唱出来的，过去的老百姓连想都甭想，龙是皇权的专利，更别说西方人对龙的理解更是相反。</p>
+<p>吉祥如意，大吉大利的花卉卷草图案足够了。</p>
+<p>既然斗拱给了光，斗拱也失去抗震意义，索性把它当悬挂艺术抑或工艺品点缀空中，让光照打亮它，给人带来兴奋点。</p>
+<p>古代技术要用一千二百度勻火烧制蓝釉，1.8X1.8X2.2米的巨型斗拱，简直不可思议，现在双面粗线同时点釉，里面钢构连接，问题迎刃而解。</p>
+<p>图案的纠结，伤尽脑筋。二十多稿后，陈瑾的新艺术写生风格，珐琅厂李静工艺师深化，全红中求微变，总算远离景泰蓝瓶子三四十种颜色的习惯，远离了丰富多彩，有了建筑构建的意味，再次以全新的方式回到了斗拱原点。</p>
+<p>十八根大木柱凭经验设计好了，现场搭建了一比一大样，感觉差点什么，北京古建转悠下来，发现下大上小，再收分的都是实心柱子，空心柱多是上下一般粗，看来古人还是舍不得去粗就细，可惜了，来之不易啊。</p>
+<p>还好，事后检查，木柱的比例符合了营造法式的规制，这个可能和早期学过画，练就了素描眼睛的准确度有关。</p>
+<p>墙上不能再有半个圆柱了，否则要有寺庙的感觉，壁柱不能写实，方的就成，与墙面装修尽量靠近，七个小圆筒组合成方壁柱，套上景泰蓝管，对大斗拱也有个照应。</p>
+<p>圆桌会议的要求，只能有一个中心，垂直于圆桌之上必定是环形灯光，莲花宝灯之上设计仿玉的“珠联璧合”，二十一国元首聚会，应有好的愿望，既要易懂还得有说头。</p>
+<p>圆形的外面一定要和方形结合，作为过渡，八角型的直边是少不了的，这样才能和剩余大面积的方藻井取得联系，不至于让人觉得散垮垮的。</p>
+<p>八角形设计一周圆弧形蓝色景泰蓝斗拱，虽有九十公分高，离地太远，只用了三色蓝，区分简单的祥云图案。</p>
+<p>方形藻井的大小取自柱距，一改古建小而密实的小方块效果，每个方块设计成2.9*2.9米的模数，多亏马踏飞学过建筑，几拼几算，还正好，蓝色圆圈斗拱也刚好吻合。</p>
+<p>大方藻井权益之计，先找来唐式图案，后增加反光灯槽时，改为本厅室的新艺术图案。</p>
+<p>方藻井交叉十字接头部分，用铜腐蚀填色，比传统立粉彩绘贴金效果，来得硬朗清晰。反光灯槽浮雕由长期合作的吕劲作坊完成。</p>
+<p>地毯为灵活多变，外圈图案相对缩小，远离元首座位，不一一对位，圆桌内侧满饰新中式浅色图案，不知里面将来会有什么，先满了再说吧。</p>
+<p>地毯大面积浅驼色，饰以随意飘落的银杏叶，轻松敞亮。</p>
+<p>燕京八景木雕由国家非物质文化遗产东阳木雕大师陆光正创作完成。</p>
+<p>主屏风设计成简约中式风格，国画大师主笔燕郊长城图，因时间关系，找来一块木雕长城屏风，稍觉遗憾。</p>
+<p>本项目由浙江亚厦装饰股份公司施工，并推荐了十七家有长期合作关系的工厂和工艺作坊配合各细节再深化。</p>
+<p>整体装修內部结构为钢架，外包装配式工业化木制构件，锣丝紧固，安全可靠。</p>
+<p>特别值得一提的是用普通木材加工，启用擅长红木家具的不凡木业和金隅鑫工厂，也就是用古代小木作的方法，完成大木作的构架及构架木雕、木线的叠加效果。</p>
+<p>门套用蓝色景泰蓝，在人进出的地方，表现出景泰蓝最亮丽的色彩。</p>
+<p>门把手想用如意合掌式，由工艺美术老将刘作杰用铜雕刻如意外形，饰以锦地儿纹，嵌入黃玉浮雕。</p>
+<p>软包吸音墙面外围木线，四个角用三叠线条层层起高，有如古人字画的木框，用铜线含蓄收住布艺面料。</p>
+<p>八个条案上摆放当代景德镇大师的瓷器作品，没有用仿古瓷，应该算是相当幸运的了。</p>
+<p>接下来又设计两侧的元首临时休息区，等待各国老大到齐了一起进入圆桌会议集贤厅。</p>
+<p>开个会，桌面上的东西还真多，和往届峰会不同，首脑们的助手都不在现场，景泰蓝按钮两个，一个直通助手，另一个是通服务员。</p>
+<p>座牌有统一格式，并有北京峰会的会标。</p>
+<p>中央领导对集贤厅设计非常满意，在北京这个明清建筑成群的地方，有这样一种不同风格的会议场所，非常难得，非常震撼！指示为集贤厅专门出一个小册子，作为各国元首的会议纪念册。</p>
+<p>景泰蓝斗拱原本专为本次峰会专门设计的国礼，寓意会议属地纪念意义。可惜时间不赶趟，最后选送了景泰蓝瓶子。</p>
+<p>清华大学美术学院教授马怡西带领（清尚建筑设计研究院第一工作室马踏飞、王佳、王涛、吕春、罗璇、夏铭设计完成集贤厅设计）</p>
+<h2 id="扩展内容"><a class="header" href="#扩展内容">扩展内容</a></h2>
+<ul>
+<li><a href="">铜腐蚀填色</a></li>
+<li><a href="">传统沥粉彩绘贴金</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/design-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Jixian/design-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/design-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Jixian/design-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

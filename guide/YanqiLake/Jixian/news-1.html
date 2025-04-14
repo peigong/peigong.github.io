@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>大国服务可以精准到这种程度 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Jixian/news-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="探秘两届峰会各国领导人开会的集贤厅大国服务可以精准到这种程度"><a class="header" href="#探秘两届峰会各国领导人开会的集贤厅大国服务可以精准到这种程度">探秘两届峰会各国领导人开会的集贤厅，大国服务可以精准到这种程度</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1780030913100783414&amp;wfr=spider&amp;for=pc">探秘两届峰会各国领导人开会的集贤厅，大国服务可以精准到这种程度|“一带一路”背后的故事</a></p>
+</blockquote>
+<p>第三届“一带一路”国际合作高峰论坛于10月17日至18日在北京举行。共建“一带一路”倡议提出10周年之际，高峰论坛的举行备受瞩目。</p>
+<p>而在此前的“一带一路”国际合作高峰论坛背后，有这么一群人不停忙碌着，只为让八方来客记住中国温度！</p>
+<p>你知道两届各国领导人开会的集贤厅到底有哪些过人之处吗？你知道国家会议中心“无时差”的邮件如何收获了友谊的糖果吗？你知道大国服务可以精准到什么程度吗？</p>
+<h2 id="揭秘顶流集贤厅"><a class="header" href="#揭秘顶流集贤厅">揭秘“顶流”集贤厅</a></h2>
+<p>位于雁栖湖国际会议中心的集贤厅是两届“一带一路”国际合作高峰论坛圆桌会议的举办地。集贤厅由清华大学美术学院马怡西教授设计，整体设计风格理念是：明清雅致，唐宋气象。</p>
+<p>雁栖酒店礼宾部主管刘畅介绍说：“我们常常说到的圆桌峰会所用到的圆桌就在集贤厅内，它的直径有13.9米，高75公分，主人的座位也就是习主席的座位，剩下是按照首字母顺时针排序。”</p>
+<p>集贤厅大厅的正上方是一个藻井的设计，藻井的中心以蓝色的星空为背景，外围镶嵌了一块大玉璧，玉璧的四周是四方之神青龙、白虎、朱雀、玄武在把守，也代表四方友人欢聚北京的寓意。玉璧外层还有一圈玉珠，恰好是56颗，56颗玉珠代表56个民族，玉璧加上玉珠代表珠联璧合，友谊之邦。</p>
+<p>这些红色的建筑整体采用了景泰蓝的工艺，仿照过去榫卯的结构斗拱进行设计，它主要的作用就是突出中国的景泰蓝国粹的工艺。</p>
+<p>厅内还有一块一整张的地毯，没有拼接过的，一共有1200平米，而且它是纯手工编织而成，重达8吨。它也是世界上最大的一块地毯，已经破世界吉尼斯纪录。</p>
+<p>现在雁栖湖国际会议中心还有一个“雁栖岛之旅”的项目， 会带着游客参观岛内的雁栖湖国际会议中心和雁栖塔两个地方，结合讲解，全程45分钟，带您置身其中，感受园区的大气恢宏之美！</p>
+<h2 id="温度调控可以精准到1"><a class="header" href="#温度调控可以精准到1">温度调控可以精准到1℃</a></h2>
+<p>李松涛是雁栖岛工程部副总监，在第一届“一带一路”国际合作高峰论坛期间，他在现场负责保证现场的温度以及灯光等的调试。</p>
+<p>在工作期间，有次他和习主席的距离只有几米，如此近距离地看到国事迎宾的场景，也让李松涛感觉到国家非常强大，非常地自豪，对他而言，这也是终身难忘的故事。</p>
+<p>除了难忘的体验，工作期间，更多时候李松涛必须打起十二分精神，应对随时可能出现的问题。</p>
+<p>一次李松涛突然接到了组委会的通知，需要把会场的温度提高1℃，且会场要在1个小时后启用。“一般会保证现场温度是24~25℃之间，提高1℃度，且1个小时后就要启用会场，时间非常紧迫” 李松涛说，随后他与同事们组织了很多力量，首先是把供暖温度提高，其次是在现场增加其他加温方式，预备了一些电暖器等设备，实现了在短短的1个小时，把整体的温度提升了1度，也保证了会议的顺利召开。</p>
+<p>这样的突发事件，李松涛和同事们此前已经进行过预案和演练，这一次实际运用到了现场，也反馈出平时练兵的重要，保证了能够在问题出现的第一时间快速妥善解决！</p>
+<h2 id="一颗糖果的故事"><a class="header" href="#一颗糖果的故事">一颗糖果的故事</a></h2>
+<p>参与”一带一路”国际合作高峰论坛服务保障工作不仅是一种成就感、荣誉感，对国家会议中心协调部史红玉来说，也收获了难忘的人生体验。</p>
+<p>协调部主要负责沟通协调和联络的工作，需要对所有活动的整体需求进行把控，要提前站到客人的角度帮助客人，提前为他们出一个方案，再根据客人有针对性的需求进行调整。史红玉的工作有时也会涉及到国际组织，因为有时差的问题，所以史红玉和同事们通常都是以邮件的形式与客人沟通。</p>
+<p>“我记得有一次在与国际组织沟通时，也是通过邮件的方式，但是即使有时差，我们也可以确保第一时间回复，并且及时解决客人的需求和诉求……”，长期的邮件往来也建立了史红玉她们与客人之间的相互信任。</p>
+<p>客人在活动开始前半个月抵达北京，第一时间便与史红玉取得了联系，并要求与她们会面。令史红玉没想到的是，这位国际友人竟不远万里为她们带来了自己国家的糖果，并当面向史红玉和同事们表示感谢。</p>
+<p>直到现在，史红玉还会定期与那位客人邮件往来，互相问候，了解双方的生活、工作状态。</p>
+<h2 id="为四海宾客打造出家的感受"><a class="header" href="#为四海宾客打造出家的感受">为四海宾客打造出“家的感受”</a></h2>
+<p>同样因为“一带一路”国际合作高峰论坛广交各国好友的还有国家会议中心邓熙。</p>
+<p>当时作为企业媒体宣传负责人，邓熙频繁出入于新闻中心，“第一届'一带一路'国际合作高峰论坛，当时来的是注册记者是4400余人，第二届的时候是4100余人，其中的境外记者是1600余人”，邓熙对几年前的工作情况依然如数家珍，她说新闻中心是24小时不间断地服务，邓熙和同事们要给记者朋友们营造出家的感觉。</p>
+<p>本就从事宣传工作的邓熙更是明白新闻中心工作的重要性，她也会遇到需要帮助的记者朋友，有时甚至就是一个眼神，她就会明白，并立刻上前询问，提供需要的帮助。</p>
+<p>无论是场内还是场外，无论是台上还是幕后他们都用安全运行万无一失，服务接待滴水不漏的精神，呈现了最高标准的北京服务，也是大国的服务！</p>
+<p>以最好的服务、开阔的胸怀迎接高朋盛友，相信“一带一路”的好友圈将会进一步扩大，“一带一路”的硕果也将惠及全球！</p>
+<h2 id="扩展内容"><a class="header" href="#扩展内容">扩展内容</a></h2>
+<ul>
+<li><a href="">“雁栖岛之旅”的项目</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/dong-yang.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Jixian/news-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/dong-yang.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Jixian/news-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

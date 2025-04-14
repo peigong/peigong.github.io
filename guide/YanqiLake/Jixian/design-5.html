@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>将民族传统推向世界舞台，全面解读北京APEC集贤厅 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Jixian/design-5.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="将民族传统推向世界舞台全面解读北京apec集贤厅"><a class="header" href="#将民族传统推向世界舞台全面解读北京apec集贤厅">将民族传统推向世界舞台，全面解读北京APEC集贤厅</a></h1>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s/8g9_TSIUFhRKtgJQwx5rrw">将民族传统推向世界舞台，全面解读北京APEC集贤厅</a></p>
+</blockquote>
+<p>也许很多人都已忘记了那些传统的工艺，那些包含了太丰富的文化记忆和人文内涵的工艺；如花丝镶嵌、漆器工艺、绢人、织锦、漆线雕、烧蓝、金漆镶嵌等等，散发出璀璨耀眼的光芒，它们曾经是中华民族的骄傲。</p>
+<p>中国传统工艺不缺乏特色，更不缺乏美，每一个工艺细节都媲美现代流行的奢侈品，每一件都包含着中华民族的自信和骄傲。其中，APEC集贤厅的工艺设计，大放异彩，更是让全世界瞩目，叹为观止。</p>
+<p>下面，就让APEC集贤厅，为您全面解读传统工艺之大美。</p>
+<h2 id="集贤厅工艺设计之美"><a class="header" href="#集贤厅工艺设计之美">集贤厅，工艺设计之美</a></h2>
+<p>APEC的集贤厅，位于北京雁栖湖国际会议中心，面积1200平方米，宽30米，深40米，净高12米；是国家领导人与世界各国元首举行圆桌会议的重要场所，是举办中国最高规格政治活动的礼仪空间，它既要体现中华文明的源远流长，又需展现当代中国人的文化自信。</p>
+<p>集贤厅，18根圆木大柱设计，立体柱廊；柱顶大型景泰蓝斗拱，统一正红色标，跳出传统斗拱的原木或者七彩色设计，用色大胆创新，丰富了空间质感；其装饰以传统花卉虫鸟纹饰，和古代花鸟画为主题，增强了集贤厅的中国传统文化品味。</p>
+<p>大厅顶部的藻井与圆桌造型、尺度相呼应，珠联璧合造型；浮雕饰青龙、白虎、朱雀、玄武纹样，象征东、西、南、北四方神，有四方同庆之意；同时，藻井梁枋黄铜着色图案，镶嵌在深木色梁枋上，还设计了条带形云纹反光灯槽和平面的牡丹纹卷草浮雕彩绘，提高礼仪大厅的顶部亮度和照度，同时兼顾声学要求。</p>
+<p>集贤厅，采用大木作格局，小木作的细节处理。大厅两侧镶嵌“燕京八景”之木雕墙饰；四角摆设八个条案；浅驼色纯羊毛手工地毯；卷草纹木门，黄铜做旧、雕刻了卷草纹和锦地纹的门，如意黄玉把手；简约中式大屏风正对大门，宏伟壮观。同时，方形壁柱，套以红色景泰蓝圆筒点缀。</p>
+<p>大厅正中摆放圆桌，直径12.9米，桌面进深1.2米，面高0.76米，沉稳大气；皇宫圈椅搭配，简约中式造型，体现一种中国传统工艺之睿智和风骨。</p>
+<p>集贤厅，展现的不仅是中国传统工艺之华美，更弘扬了自强不息、勇于创新的工匠精神。这种设计理念，与戴为红木设计之理念不谋而合。</p>
+<h2 id="传统工艺设计之美"><a class="header" href="#传统工艺设计之美">传统工艺设计之美</a></h2>
+<p>在设计风格上，我们追求“融汇古今，博雅东西”，继承古法但不媚古，珍惜古法且不断创新，将中国传统人文情怀，注入到工艺设计当中。正如北京泓文博雅艺术文化产业基地戴为红木艺术馆的设计，圆木大柱设计，立体柱廊，使整体空间不显得空旷单调，同时又赋予了空间一种深邃、古典的韵味。</p>
+<p>而从家具摆场设计上看，如下图之六合同春梳化空间展示，大红酸枝材质木色的深紫，与酸枝色调的花格屏风，整体搭配和谐；白蓝相间之青花瓷元素，在灯光下，显得格外的清新靓丽，如同一股清泉沁人心脾；顶上盘旋而下四盏飞碟吊灯，一种传统皇室之金黄色调，更增添了整体家具空间之高贵典雅。</p>
+<p>在工艺细节设计上，我们注重用料、选材、拼板、雕花和刮磨等工艺，在精益求精的基础上，个性创新。如丝翎檀雕设计，结合红木材质之天然纹路纹理，将传统大漆之美，融合近现代传统国画工笔画之丝翎檀雕工艺，气韵生动，使红木家具焕发勃勃生机，更具有收藏性和观赏性，更是将丝翎檀雕工艺的运用再提升到一个新的发展高度。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/design-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Jixian/design-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/design-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Jixian/design-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

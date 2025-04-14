@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>雁栖湖 - 雁栖湖 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雁栖湖 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/YanqiLake/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="雁栖湖"><a class="header" href="#雁栖湖">雁栖湖</a></h1>
+<p>雁栖湖景区经过三十年的开发建设，充分利用自身得天独厚的自然旅游资源，将一座普通的中型水库建设成为市级风景名胜区、国家AAAA级旅游景区，使一个普通的水库管理事业单位发展成为集观光旅游、休闲度假于一体的旅游胜地，为树立怀柔良好的旅游形象做出了贡献。</p>
+<p>渌水浣明月，清风牧彩云。长城脚下的雁栖湖，正携山光水色，阔步向集食、住、行、游、购、娱为一体的AAAAA级旅游景区迈进。</p>
+<h2 id="水文特征"><a class="header" href="#水文特征">水文特征</a></h2>
+<p>雁栖湖由东、西两个湖区组成，水面开阔，湖容量3830立方米，湖岸线超过20千米，坝前最大水深25米。雁栖湖水质下降明显，由20世纪80、90年代的Ⅱ类逐步下降到目前Ⅲ~Ⅳ类，局部区域富营养化状况较重。流域水土流失面积约为32.2平方千米，其中轻度侵蚀约88.82%，中度侵蚀约11.18%，存在着水土流失问题。雁栖湖流域包括西栅子、八道河、交界河、莲花池、神堂峪、长园、柏崖厂7条小流域，总面积230平方千米，流域林草覆盖率达90%。</p>
+<h2 id="流域特征"><a class="header" href="#流域特征">流域特征</a></h2>
+<h3 id="气候"><a class="header" href="#气候">气候</a></h3>
+<p>雁栖湖流域以长城为界，以北气温低，多年平均气温9℃以下；以南气温相对较高，多年平均气温为11.9℃；多年平均降雨量为675毫米，降雨集中于6~8月份，占全年降雨量的80%；全年大风天数较多，风速较大，以北风为主。</p>
+<h3 id="地形地貌"><a class="header" href="#地形地貌">地形地貌</a></h3>
+<p>雁栖湖三面环山，北有军都山，海拔1200米；西有红螺山，海拔811米；东有金灯山，海拔186米，山上有枫树、松柏、火炬树及其乔灌木，面积达1.5平方千米。</p>
+<p>雁栖湖流域为南北狭长形，属典型的山区型小流域，处于低山丘陵区，地形复杂，流域面积达230平方千米。</p>
+<h3 id="植被"><a class="header" href="#植被">植被</a></h3>
+<p>雁栖湖植被以山杨和槲树的混交林以及鹅耳枥、白蜡、大叶椴等杂木混交林为主。</p>
+<h3 id="土壤"><a class="header" href="#土壤">土壤</a></h3>
+<p>雁栖湖土壤种类有棕壤、褐土性土、淋溶褐土等，土层厚度山坡及山梁小于30厘米，沟道大于50厘米。</p>
+<h2 id="自然资源"><a class="header" href="#自然资源">自然资源</a></h2>
+<p>雁栖湖湖内水质清纯，有鱼、虾、龟等水生动物几十种，并多次发现金边地龟和娃娃鱼等珍稀动物，对水质要求很高的大雁、仙鹤、白天鹅、淡水鸥等珍禽候鸟常在湖岸栖息繁衍。雁栖湖区内基岩种类主要有闪长岩、白云岩、石灰岩、花岗岩、片麻岩、土及粘性土。</p>
+<h2 id="旅游资源"><a class="header" href="#旅游资源">旅游资源</a></h2>
+<h3 id="雁栖湖生态发展示范区"><a class="header" href="#雁栖湖生态发展示范区">雁栖湖生态发展示范区</a></h3>
+<p>雁栖湖生态发展示范区地处雁栖湖流域下游，包括以雁栖湖为核心约21平方千米的国际会都和10平方千米的雁栖小镇建设模块。北京雁栖湖国际会都核心区约占雁栖湖流域面积的1/6，是山地和平原的过渡带，是潮白河生态廊道的重要部分。周边多为湿地和苇草，有大雁、淡水鸥、金边地龟和中华蟾蜍等多种珍禽候鸟栖息，构成了雁栖湖生态发展示范区独特的水域景观。</p>
+<p>雁栖湖生态发展示范区整体规划范围31平方公里，包括21平方公里的国际会都和10平方公里的雁栖小镇两大建设板块。APEC会议后以雁栖湖为核心，在21平方公里范围内，建设完善的导览导视体统，打造13公里环湖慢行系统和骑行系统，设置观光车和摆渡车、摆渡船，目前汽车充电桩有8个。便捷的交通体系和完善的服务体系，极大的方便在雁栖湖地区游览和开展健身活动。游客可乘船做环湖游、环岛游，亦可沿环湖路乘车游、骑行游或徒步游。</p>
+<h3 id="雁栖湖游乐园"><a class="header" href="#雁栖湖游乐园">雁栖湖游乐园</a></h3>
+<p>雁栖湖地势平坦、水域宽阔，非常适合开展各类水上陆地娱乐项目，是京郊著名的旅游风景区和水上乐园。雁栖湖现有龙舟、画舫、快艇、电瓶船、大黄鸭船等水上观光游览船只，另外还有激流勇进、水上飞降、娱乐跑车、碰碰车、动漫小火车、旋转木马等十多项陆地娱乐项目，能够满足不同群体的娱乐需求。</p>
+<p>雁栖湖游乐园内各种娱乐设施齐全，现有水上、陆地项目40余种，可供不同年龄的游客选择。其中水上飞伞、水上跑车、水上自架摩托、水上飞降、水幕电影、火箭式蹦极、空中飞人、激流勇进、攀岩、射箭、戏水池等健身娱乐项目。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="名称来历"><a class="header" href="#名称来历">名称来历</a></h3>
+<p>游览胜地“雁栖湖”怀柔城东北的雁栖湖，是近年新开发的京郊游览胜地。湖名“雁栖”，人们多认为，是由于此湖水域广阔，旅途经此的群雁，夜晚选此宿息，所以才赐此名。雁栖湖水域，是截拦停潴几条小河的水流形成的。其中最主要的一条，名叫“雁溪河”，从长城外发源，流经这里。“雁栖”之名，由此而起，它正是“雁溪”的谐音和雅化。</p>
+<p>“栖”，是废繁并简的单字，多音，多义。“栖栖不定”的“栖”读xi；“栖息”的“栖”，和从木从妻的繁体字一样，都读qi。“雁栖”立名，音义兼取其一，于是，就有了“栖”字的写法和qi的读音。严格说，“雁栖”一词并不科学。鸟落在树上停息叫“栖”，而大雁群从不在树上停留。苏东坡《卜算子》词句：“拣尽寒枝不肯栖，寂寞沙洲冷”。</p>
+<h3 id="相关诗文"><a class="header" href="#相关诗文">相关诗文</a></h3>
+<h4 id="咏雁栖湖叶晓山"><a class="header" href="#咏雁栖湖叶晓山">咏雁栖湖（叶晓山）</a></h4>
+<p>驱车直抵雁栖湖，燕蓟风光入彩图。</p>
+<p>曲曲红栏留众客，弯弯碧水送群凫。</p>
+<p>云摇松岭千枝动，月落波心一点珠。</p>
+<p>闲坐小亭乐忘返，真情实景画中无。</p>
+<h4 id="浣溪沙雁栖湖1993年7月"><a class="header" href="#浣溪沙雁栖湖1993年7月">浣溪沙雁栖湖（1993年7月）</a></h4>
+<p>山色青葱水碧涟，清新空气少人烟，堪称市外一桃源。</p>
+<p>远避嚣尘消俗虑，雁栖湖畔任流连，几天小住若神仙。</p>
+<h2 id="社会生活"><a class="header" href="#社会生活">社会生活</a></h2>
+<h3 id="湖区村落"><a class="header" href="#湖区村落">湖区村落</a></h3>
+<p>雁栖湖流域上游共有11个行政村，其中雁栖河干流有3个行政村（神堂略、官地和石片村），长园河支流有8个行政村（长元、莲花池、交界河、八道河、西栅子、头道梁、大地、北湾村），雁栖湖流域以虹鳟鱼养殖、民俗接待及休闲旅游业为主，雁栖不夜谷闻名遐迩，其前身是闻名京城的虹鳟鱼养殖一条沟。依托于雁栖河和长园河发展，雁栖不夜谷全长16.5千米，包括神堂峪村、官地村、石片村、莲花池村、长元村5个行政村。这5个村90%以上的人均从事民俗旅游接待，以林、果、民俗游为主导。雁栖不夜谷的乡村旅游发展以官地、莲花池最好，长元、神堂略、石片次之。</p>
+<h3 id="湖区开发"><a class="header" href="#湖区开发">湖区开发</a></h3>
+<p>雁栖湖流域依傍红螺山、云蒙山，植被覆盖率高（达85%），自然环境优美，形成天然独有的山水天地。雁栖湖空气质量位居北京第一，绿化率、降雨量都排首位，养生环境得天独厚，并因其独特的冷泉水资源，造就了远近闻名的雁栖湖。1985年经北京市政府批准，雁栖湖被列为“七五”期间北京市重点旅游开发项目。1986年以来，北京政府投资对公园进行了大规模的园林式绿化美化改造。大门区和北门区修建了具有江南风格的园林小品：在湖边开辟了10000平方米的花园式绿地，增植枫树、银杏、合欢、翠竹、法桐等名贵花木10万余株。1987年正式对外开放接待游客。2002年雁栖湖被评定为国家AAAA级旅游风景区；</p>
+<p>2014年亚太经合组织APEC领导人非正式会议在此召开，习近平主席曾引用白居易“风翻白浪花千片，雁点青天字一行”的诗句，赞美雁栖湖的秀美风光。2017年5月“一带一路”国际合作高峰论坛，在此共商合作大计，共建合作平台，共享合作成果，雁栖湖再次成为举世瞩目的焦点。</p>
+<h3 id="交通路线"><a class="header" href="#交通路线">交通路线</a></h3>
+<h4 id="乘车路线"><a class="header" href="#乘车路线">乘车路线</a></h4>
+<p>1、东直门交通枢纽大厅乘坐916路快车，在庙城东下车，换乘H58（庙城东-九谷口）公交车到雁栖湖站下。</p>
+<p>2、东直门交通枢纽大厅乘坐916路快车，在怀柔杨家园站下车，过马路换乘H64路到雁栖湖站下车；或杨家园下车沿红绿灯口向东，直行至于家园车站，换乘H18路（于家园—汤河口）、H29路（于家园—石洞子）公交车，在雁栖湖站下车。</p>
+<h4 id="自驾车路线"><a class="header" href="#自驾车路线">自驾车路线</a></h4>
+<p>1、沿京承高速行至14号怀柔出口，后直行上高架桥，在第二个红绿灯口（会展中心）右转直行约5千米进入雁栖湖停车场。</p>
+<p>2、沿京承高速至15号出口杨宋、丰宁出口直行，约11千米至丁字路口左转，于红绿灯右转沿京加路直行3.2千米到达雁栖湖。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Jixian/qsnews-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../YanqiLake/YanqiByland.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Jixian/qsnews-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../YanqiLake/YanqiByland.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
