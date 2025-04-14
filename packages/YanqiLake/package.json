@@ -7,6 +7,6 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "mdbook build"
+    "build": "mdbook clean & mdbook build"
   }
 }
