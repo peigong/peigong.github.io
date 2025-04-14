@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>王阳明 - 孔庙和国子监博物馆 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/celebrity-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="王阳明"><a class="header" href="#王阳明">王阳明</a></h1>
+<p>王阳明生于明朝中期，此时政治腐败、社会动荡、学术颓败，王阳明曾试图力挽狂澜，拯救人心，并“弘扬身心之学，倡良知之教，修万物一体之仁”。</p>
+<p>王阳明不仅是宋明心学的集大成者，一生事功也是赫赫有名，故称之为“真三不朽”（太上有立德，其次有立功，再次有立言，虽久不废，此之谓三不朽。《左传·襄公二十四年》）其学术思想在中国、日本、朝鲜半岛以及东南亚国家乃至全球都有重要而深远的影响，因此，王阳明（心学集大成者）和孔子（儒学创始人）、孟子（儒学集大成者）、朱熹（理学集大成者）并称为孔、孟、朱、王。</p>
+<p>明成化八年九月三十日（即公元1472年10月31日）太夫人郑氏娠十四月生文成公于余姚，嘉靖七年十一月廿九日（即公元1529年1月9日）辰时卒于南安，享年五十七岁。</p>
+<p>父王华，王华在明朝成化十七年辛丑（1481）中了状元，王守仁就随父移居北平（北京）。王华对儿子家教极严，王守仁少年时学文习武，十分刻苦，但非常喜欢下棋，往往为此耽误功课。其父虽屡次责备，总不稍改，一气之下，就把象棋投落河中。王守仁心受震动，顿时感悟，当即写了一首诗寄托自己的志向：</p>
+<p>象棋终日乐悠悠，苦被严亲一旦丢。</p>
+<p>兵卒坠河皆不救，将军溺水一齐休。</p>
+<p>马行千里随波去，象入三川逐浪游。</p>
+<p>炮响一声天地震，忽然惊起卧龙愁。</p>
+<p>王守仁自幼聪明，非常好学，但不只限于四书五经，而且也很喜欢其他书籍。思想也比较怪癖，很多私塾先生一直都不能理解他。有一首他做的打油诗很能说明他的这种思想：</p>
+<p>山近月远觉月小，便道此山大于月。</p>
+<p>若人有眼大如天，还见山小月更阔。</p>
+<p>据考证，作者王守仁，时年十二岁，这首诗叫《蔽月山房》，是王守仁第一首流传千古的诗作。据说他父亲王华看出了他的心思就带他去塞外，领略大漠的浩渺。</p>
+<h2 id="相关事件"><a class="header" href="#相关事件">相关事件</a></h2>
+<h3 id="童年生活"><a class="header" href="#童年生活">童年生活</a></h3>
+<p>王阳明于明宪宗成化八年（1472年）农历九月三十日亥时出生于一个书香门第、官宦世家，其远祖为东晋大书法家王羲之。其父王华，成化十七年（1481年）状元，后官至南京吏部尚书。据《年谱》记载，他出生前夕祖母梦见有人从云中送子来，梦醒时王阳明刚好出生，祖父便为他起名叫王云，乡中人亦称其降生处为瑞云楼。然而，他到了五岁还不会说话，一天一位高僧经过，抚摸他的头说“好个孩儿，可惜道破”，意指他的名字“云”道破了他出生的秘密。其祖父恍然醒悟，遂更其名为守仁，此后他便开口说话了。这个故事有点神话色彩，但从这个故事可以看出他幼年时并未显示出聪慧和才华。</p>
+<p>他十岁时，父亲高中状元，王阳明随父赴京，路过金山寺时，他父亲与朋友聚会，在酒宴上有人提议做诗咏金山寺，大家还在苦思冥想，王阳明已先一步完成：“金山一点大如拳，打破维扬水底天。醉倚妙高台上月，玉萧吹彻洞龙眠。”四座无不惊叹，又让他做一首赋蔽月山房诗，王阳明随口诵出：“山近月远觉月小，便道此山大于月。若人有眼大如天，还见山小月更阔。”这意思是看事物的角度不同，看出来的东西也不一样。</p>
+<p>十一、二岁在京师念书时，他问塾师“何谓第一等事？”老师说“只有读书获取科举名第”，他当时说：“第一等事恐怕不是读书登第，应该是读书学做圣贤”。尽管如此，他从年少时代起就从不循规蹈矩，所有记载都说他自少“豪迈不羁”。如13岁丧母后，继母待他不好，他竟买通巫婆捉弄其继母，使得她从此善待他。他学习并非十分用功，常常率同伴做军事游戏。年轻时他出游边关，练习骑马射箭，博览各种兵法秘笈，遇到宾客常用果核摆列阵法作为游戏。</p>
+<h3 id="龙场悟道"><a class="header" href="#龙场悟道">龙场悟道</a></h3>
+<p>王阳明于明武宗正德元年（1506年），因反对宦官刘瑾，被廷杖四十，谪贬至贵州龙场（贵阳府修文县治，现为贵州省修文县龙场镇）当驿丞。途中被刘瑾派人追杀，他机智的化险为夷。王守仁认为成人的内心中自然有辨别是非善恶的标准，这个标准就是良知（心即理），认识到“圣人之道，吾性自足，向之求理于事物者误也。”史称龙场悟道。在龙场这既安静又困难的环境里，王阳明结合历年来的遭遇，日夜反省。一天半夜里，他忽然有了顿悟，这就是著名的“龙场悟道”。</p>
+<p>他在这段时期写了“训龙场诸生”。其众多弟子对于他的“心外无理，心外无物”理论迷惑不解，向他请教说：南山里的花树自开自落，与我心有何关系？他回答说：“尔未看此花时，此花与尔心同归于寂。尔来看此花时，则此花颜色，一时明白起来。便知此花，不在尔的心外。”</p>
+<h3 id="平定江西"><a class="header" href="#平定江西">平定江西</a></h3>
+<p>正德十二年（1518年），江西南部以及江西、福建、广东交界的山区爆发民变。山民依靠山地据洞筑寨，自建军队，方圆近千里。地方官员无可奈何，遂上奏明廷。兵部举荐时任右佥都御史的王守仁巡抚江西，镇压民变。正德十三年（1518年）正月，王守仁平定池仲容（池大鬓）部，奏请设立和平县，并兴修县学。三月，守仁抵达江西莅任。他迅速调集三省兵力，镇压了信丰等地的起义。七月，王守仁念战争破坏巨大，上奏请求朝廷允准招安。明廷遂委以地方军政大权，准其便宜行事。十月，王守仁率兵攻破实力最强的江西崇义县左溪蓝天凤、谢志山军寨，并会师于左溪。王守仁并亲自前往劝降。十一月，王守仁遣使招安，并攻破蓝天凤部。就是在这烽火连天的两年里，他掌握了一样神秘的工具——"知行合一"。</p>
+<h3 id="擒获宁王"><a class="header" href="#擒获宁王">擒获宁王</a></h3>
+<p>王守仁一生最大的军事功绩，是平定洪都的宁王朱宸濠之乱。王守仁将去福建剿匪时（无大量军队），所率部队行军刚到丰城，宁王朱宸濠突然举兵叛乱。因此王守仁积极备战，调配军粮，修治器械，然后发出讨贼檄文，公布宁王的罪状，要求各地起兵勤王。</p>
+<p>当时，王守仁最为担心者，就是宁王朱宸濠挥师东下，占领故都南京。如果南京失守，宁王就有了称帝的资本，同时也占了地利，那就不容易消灭了。王守仁虚张声势，利用假宣传假情报，城中扰乱宁王的视线，逼他做出错误的判断，以为各路大军已经组成合围态势。同时使用反间计，命人携蜡丸潜入南昌，使宁王猜疑自己部下的进攻南京策略。宁王果然上当，有半个月时间犹豫观望、不知所措，没敢发兵攻打南京。王守仁利用这一时机，做好了防守南京的准备，使宁王欲攻南京，已无可能。</p>
+<p>七月，宁王率六万人，攻下九江、南康，渡长江攻安庆。王守仁这时已经调集了八万大军（主要为各地民兵与农民），对外号称三十万。王守仁召集部下问应如何退敌。有人指出应该急救安庆，王守仁说：“现在九江、南康已经被敌军占领，如果我们越过南昌跨江救援安庆，就会腹背受敌。现在南昌空虚，我军锐气正盛，可以一举攻破。敌军听说南昌失守，定会回师来救，这时我们在鄱阳湖迎击他，肯定能取得胜利。”由于先前进行大量宣传工作，谎称有大量军队攻城，南昌竟然不攻自破，停了两日，王守仁便派诸将分五路迎击回援南昌的宁王大军。四路分兵迎进，一路设伏。交战以后，宁王大军很快腹背受敌，被分割成几部分，后又中了埋伏，惨遭大败，溃逃退守八字脑地区。宁王眼观局势不妙，急忙调九江、南康的精锐部队出击，王守仁派几路大军迎战并取南康。</p>
+<p>这一仗打得相当激烈，是关键的一战。官军一度退却，王守仁部将伍文定立即斩杀了后退之人，命令诸军一决死战。最后终于打败了敌人，敌军退保樵舍地区，将大船结成方阵，宁王拿出金银珠宝犒赏将士，冲锋赏千金，负伤百金，要求他们死力一搏。</p>
+<p>但宁王军队的方阵（曹操用过的“连舟为方阵”）被王守仁看出破绽，他决定仿效赤壁之战，放火烧船。第二天，宁王群臣聚集在一起，正在船上召开“早朝”会议，王守仁大军杀到，用小船装草，迎风纵火，烧毁了宁王的副船，王妃娄氏以下的宫人以及文武官员们纷纷跳水。宁王的旗舰搁浅，不能行动，仓促间换乘小船逃命，被王阳明的部下追上擒获，宁王的其它文武大臣也成了阶下囚。不久，南康、九江也被官军攻陷，宁王之乱全面平息，前后只有三十五天时间。王守仁因此而获“大明军神”之称。</p>
+<p>后来，明武宗以“总督军务威武大将军总兵官朱寿”之化名出征，江彬意欲不轨，挑唆武宗与宁王打一仗并亲自俘获。王阳明对宦官张永动之以情、晓之以理，说明这样做会死更多人。最后协调结果是：让明武宗到了南京，再放出宁王让皇帝俘虏，高兴一下。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/celebrity-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/celebrity-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/celebrity-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/celebrity-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

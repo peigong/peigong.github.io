@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>明清皇家祭孔文物文化展 - 孔庙和国子监博物馆 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/exhibitions/exhibition-7.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="明清皇家祭孔文物文化展"><a class="header" href="#明清皇家祭孔文物文化展">明清皇家祭孔文物文化展</a></h1>
+<p>展览时间：2014年8月15日——2014年10月15日</p>
+<p>展览地点：国子监艺术展厅</p>
+<p>主办方：北京市文物局</p>
+<p>承办方：孔庙和国子监博物馆</p>
+<p>参观方式：面向所有游客开放，进入博物馆即可免费参观</p>
+<p>地址：北京市东城区国子监街15号</p>
+<p>交通指南：地体五号线C口出，向南步行至国子监街口，向西步行200米到达博物馆</p>
+<h2 id="展览介绍"><a class="header" href="#展览介绍">展览介绍</a></h2>
+<p>孔子是我国伟大的思想家、政治家、教育家、儒家学派创始人。孔子逝世之后，他的后人和弟子就开始进行祭祀活动。随着孔子历史地位的提高，祭祀活动也从民间走入庙堂，最终成为系统完备的国家祭祀体系的重要组成部分。</p>
+<p>皇家祭孔是以国家名义、由皇帝或政府官员主持的祭祀活动，是国家倡导儒学、重视教育的重要政治活动，属于国家祭祀体系。皇家祭孔活动由礼部、太常寺、鸿胪寺、光禄寺、钦天监、内阁、翰林院等多个部门组织和管理，其中礼部是祭祀制度的制定和决策建议机构，太常寺是祭祀活动的直接管理机构，其他部门则是祭祀礼仪的协助、监督机构。北京孔庙位于北京市东城区国子监街，是元、明、清三朝皇家祭孔活动的专用场所，是封建国家的最高权力阶层率先垂范、尊师重教的历史见证，是一座由政府投资精心营建的皇家孔庙，现存建筑、祭祀遗迹和遗物无不体现出其尊贵的皇家身份。</p>
+<p>“明清皇家祭孔文物文化展”是北京市文物局“2014年暑期展览季”的重点展览项目，也是孔庙和国子监博物馆首次举办全面展示祭孔礼仪和文化的展览。此展览主要由70块展板、皇家祭孔珍贵文物33件、祭祀礼乐器30件组成。这些首次展出的珍贵馆藏品，有青铜器、竹木漆器，还包括全套编钟、编磬、祭孔礼乐服饰、器物等。展品多数是明清皇家官造祭孔器物，器型古朴，制作精美、色彩绚丽，纹饰精湛，令人驻足、回味、忘返。展览分为三个部分：</p>
+<h2 id="第一部-孔庙历史概况"><a class="header" href="#第一部-孔庙历史概况">第一部 孔庙历史概况</a></h2>
+<p>建筑是无声的语言，北京孔庙是由众多单体建筑组合而成的祭祀空间，精致有序，严密紧凑，对称和谐，主次分明，错落有致，其建筑选址、建筑布局、建筑规制无不体现了祭拜者非同凡响的特殊身份和被祭拜者万世楷模的至尊地位。</p>
+<h3 id="一大都选址"><a class="header" href="#一大都选址">一、大都选址</a></h3>
+<p>北京孔庙选址在刘秉忠着手修建元大都的至元四年（公元1267年）就已经规划确定，将 “庙学”所在地安排在元大都的东北方位，与大都中心阁仅隔金台坊和灵椿坊，方便师生祭拜孔子，同时也便于皇帝及官员的祭拜活动。</p>
+<h3 id="二建筑布局"><a class="header" href="#二建筑布局">二、建筑布局</a></h3>
+<p>北京孔庙占地约22000平方米，共有三进院落，层层递进，围墙环绕，中正庄严。建筑空间布局是以“大成殿”院落为整体建筑群的核心，即以“庙”的祭祀空间为主体，构成前后三组功能不同的院落空间形式。</p>
+<p>外围建筑：外围建筑是北京孔庙建筑群的序幕，由成贤街、四座彩排牌楼、下马碑、影壁和围墙组成。</p>
+<p>中轴建筑：北京孔庙建筑群呈一路布局，左右沿中轴线对称，南北纵深为三进院落。中轴线上的五个主体建筑由南至北依次是先师门、大成门、大成殿、崇圣门、崇圣殿。</p>
+<h3 id="三建筑规制"><a class="header" href="#三建筑规制">三、建筑规制</a></h3>
+<p>为了凸显北京孔庙的皇家庙宇身份，营造者采用了多种手法：熠熠生辉的黄色琉璃瓦、气宇非凡的庑殿顶、描金抹彩的华夏龙图腾、帝王御笔的门楣匾额、处处可寻的九五之数，无不标示着北京孔庙建筑的等级、尊贵和讲究。</p>
+<h2 id="第二部分-祭孔礼乐文明"><a class="header" href="#第二部分-祭孔礼乐文明">第二部分 祭孔礼乐文明</a></h2>
+<p>祭孔内容以歌颂孔子生前的业绩为主，是礼、乐、歌、舞四位一体的庙堂艺术。祭孔音乐来源于孔子推崇的韶乐，舞蹈起源于夏朝。祭孔礼仪最大限度地保留了西周以来的礼乐文明。祭孔全部过程有典仪官主持，分六个部分，即：迎神、初献、亚献、终献、撤馔、送神。其场面宏大，典雅庄重。</p>
+<h3 id="一祭祀人物"><a class="header" href="#一祭祀人物">一、祭祀人物</a></h3>
+<p>供奉祭祀人物的场所主要是大成殿、两庑、崇圣祠和土地庙。大成殿祭祀孔子，四配、十二哲陪同祭祀，两庑祭祀历代先儒先贤。崇圣祠祭祀孔子的上五代祖先。土地庙是掌管孔庙地面的土地神，也称作韩公词。被祭祀者都是对儒学发展作出过突出贡献者，或者是践行儒家信条的楷模。</p>
+<h3 id="二祭祀礼仪"><a class="header" href="#二祭祀礼仪">二、祭祀礼仪</a></h3>
+<p>祭孔礼仪历代多有损益，一般都以三献礼为核心内容。主要分成六个部分：迎神、初献、亚献、终献、撤馔、送神六个部分。迎神就是迎来孔子神灵。初献是第一次献礼，行礼的内容奠帛献爵，恭读祝文，亚献、终献均为献爵，之后撤去贡品，送走神灵，宣告礼成。</p>
+<h4 id="祭孔仪式简介"><a class="header" href="#祭孔仪式简介">祭孔仪式简介</a></h4>
+<p>一.  第一部分迎神，即迎来孔子的神灵。迎神的内容由主祭官、陪祭官向孔子神位上香。乐曲演奏昭平之章。在演奏乐曲的同时演唱歌颂孔子的歌词。</p>
+<p>二.  第二部分初献礼，即第一次献礼。行礼的内容献帛，献酒。乐曲演奏宣平之章，舞生开始跳六佾舞，舞生左手持羽，右手持龠。每个动作代表一个字，四个字组成一句歌颂孔子的话。</p>
+<p>三. 第三部分亚献礼，即第二次献礼。献礼的内容是向孔子神位献酒。音乐演奏秩平之章，舞生表演第二成舞蹈。</p>
+<p>四. 第四部分终献礼即第三次献礼。行礼的内容是献酒。乐曲演奏叙平之章，舞生表演第三成舞蹈。</p>
+<p>五. 第五部分撤馔礼，音乐演奏懿平之章。(喊:奉祝、帛、馔送燎)“撤馔”就是撤去贡品。撤去的贡品由执事官送到焚帛炉燃烧。</p>
+<p>六.   第六部分送神礼。行礼的内容是有主祭官、陪祭官行三拜九叩大礼，恭送孔子神灵。随后典仪官宣布礼成，祭孔典礼到此结束。</p>
+<h3 id="三祭孔乐舞"><a class="header" href="#三祭孔乐舞">三、祭孔乐舞</a></h3>
+<p>祭孔乐舞的内容以颂扬孔子生前的业绩为主，是乐、歌、舞三位一体的综合艺术。歌曲每句四字，每字配合一个舞蹈动作。主要以弘扬传统文化，承继孔子思想之精华为核心内容。场面宏大，乐生45人，演奏中和韶乐，钟磬齐鸣；舞生64人，表演八佾舞，舞容古朴。</p>
+<h2 id="第三部分-祭祀文物展示"><a class="header" href="#第三部分-祭祀文物展示">第三部分 祭祀文物展示</a></h2>
+<p>孔庙祭祀文物主要分为乐器和祭器，乐器在演奏音乐时使用，祭器是摆放供品的容器，一般要成组摆放，以示祭祀等级的不同。孔子牌位前最多，三爵一登两鉶、两簋两簠、十二豆十二笾、一篚、六尊，四配、十二哲递减。用于祭祀的乐器均为中国传统乐器，分属金、石、竹、木、革、丝、匏、土八种不同材质，又称八音。</p>
+<h3 id="仪仗"><a class="header" href="#仪仗">仪仗</a></h3>
+<p>祭祀孔子仪仗只要用于皇帝祭孔进入孔庙后使用，进入孔庙前大驾卤簿停在成贤街上。孔庙内仪仗主要有提炉、执登，黄罗伞盖。</p>
+<h3 id="祭器"><a class="header" href="#祭器">祭器</a></h3>
+<p>祭器是指用以盛装、呈献祭品的各种器具。主要包括爵、尊、登、铏、簠、簋、笾、豆、篚等。因祭祀等级不同，祭器所采用的材质也不相同。除铜器外，还有瓷器和木器。</p>
+<h4 id="铜豆"><a class="header" href="#铜豆">铜豆</a></h4>
+<p>食器。出现于商代晚期，盛行于东周（春秋战国）时期。常以偶数组合使用，有“鼎俎奇而笾豆偶”之说。</p>
+<p>形态：该器型基本为圆形，直口，有盖。盖顶有绞绳扭抓手，粗柄，束腰，圈足。盖沿饰弦纹，面饰横鳞纹，波状纹。腹沿饰垂云纹，面饰弦纹，横鳞纹。腰饰垂鳞纹，箍棱饰金钣纹。圈足饰窃曲纹。足边外侧有一行六字“大清乾隆年制”篆书款。盖内有三行六字篆书“大清乾隆年制”。</p>
+<p>规格：通高26.5 厘米, 口径16.3厘米, 底径15.9厘米。</p>
+<p>用途：用于盛放鹿醢、兔醢等肉酱与肉羹者类，以及用盐腌制的芹、韭，竹笋。</p>
+<h4 id="铜簠"><a class="header" href="#铜簠">铜簠</a></h4>
+<p>食器。簠出现于西周早期，主要盛行于西周末东周初。</p>
+<p>形态：该器基本形状为长方斗形，侈口有盖，盖顶饰波状纹抓手，倒置可盛放食物，盖与器身斜壁两侧均附有夔龙型双耳，盖面饰夔龙纹，腹沿、器身饰横鳞纹、饕餮纹，腰回纹。方形足面饰云纹，四边铸有缺口。盖内与足底均镌刻三行六字篆书“大清乾隆年制”款。</p>
+<p>规格：长26厘米，宽21厘米，高23厘米。</p>
+<p>用途：盛放黍、稷、粱、稻等饭食。</p>
+<h4 id="铜铏"><a class="header" href="#铜铏">铜铏</a></h4>
+<p>食器。</p>
+<p>形态：器型基本为椭圆形，直口有盖，盖上为三片角形状，抓手饰云纹，倒置可盛食物。盖面与器身自上而下饰万字纹、回纹、花枝纹、藻纹、龟背纹，腹两侧附兽形耳一对，三足与盖形纹相同，腹底与盖内镌有篆书三行六字“大清乾隆年制”款。此器构思独具匠心，工艺精湛，代表了清乾隆时期青铜器铸造工艺水平。</p>
+<p>规格：通高26厘米，口径16.3厘米。</p>
+<p>用途：盛放和羹。和羹，放有酸咸或甜味等调味品的羹。</p>
+<h4 id="铜尊"><a class="header" href="#铜尊">铜尊</a></h4>
+<p>酒器。盛行于周。</p>
+<p>形态：基本形制为圆体型。直口，宽肩，鼓腹较深，下部收敛，平足。肩两侧附以羊首形双耳，通体素质无纹，足底镌有三行六字篆书“大清乾隆年制”款。</p>
+<p>规格：通高27厘米，口径16.5厘米，底径15厘米。</p>
+<p>用途：盛酒。</p>
+<h4 id="铜簋"><a class="header" href="#铜簋">铜簋</a></h4>
+<p>食器，也用作礼器，流行于商朝至东周。</p>
+<p>形态：器型为椭圆型，有盖，盖上为四片三角形捉手，饰以夔龙纹，倒置可放食物。盖沿器口饰回纹，盖面，器身饰夔形纹，弦纹。器身两侧附兽耳，腰饰波曲纹，高圈足饰乳钉纹，横鳞纹。盖内与足底镌刻三行六字篆书“大清乾隆年制”款。</p>
+<p>规格：长28.5 厘米，宽18厘米 ，高24厘米。</p>
+<p>用途：盛放煮熟饭食的器皿</p>
+<h4 id="铜爵"><a class="header" href="#铜爵">铜爵</a></h4>
+<p>酒器。</p>
+<p>形态：铜爵，圆腹高杯式，腹部饰兽面纹，流长尖，尾短圆，圆柱形双柱上刻涡纹。三平足呈鼎立之势，腹底镌有三行六字阳文篆书“大清乾隆年制”款。</p>
+<p>规格：长16.7厘米, 宽6.9厘米 , 高17.5厘米。</p>
+<p>用途：饮酒、温酒。</p>
+<h4 id="铜香炉"><a class="header" href="#铜香炉">铜香炉</a></h4>
+<p>祭器。</p>
+<p>形态：圆形，用以载香靠，弦纹直口，束颈，鼓腹，腹两侧附朝天双耳一对，通体光素，腹底铸三足。口沿外侧有一行双勾篆书“大清乾隆年造”款。</p>
+<p>规格：通高21厘米，口径15.7厘米。</p>
+<p>用途：焚香。</p>
+<h4 id="铜镫"><a class="header" href="#铜镫">铜镫</a></h4>
+<p>食器。</p>
+<p>形态：铜镫，有盖，盖钮为花瓣形提手，口沿饰回纹，腹部饰锦纹，柱为饕餮纹，圈足饰垂云纹。</p>
+<p>规格：通高26厘米，口径15.1厘米，底径16厘米。</p>
+<p>用途：盛放太羹。太羹，不加佐料的原汁肉汤。</p>
+<h4 id="竹篚"><a class="header" href="#竹篚">竹篚</a></h4>
+<p>祭器。</p>
+<p>形态：整体为长方体，有盖，通体红漆，编竹为之，四框素面漆边，内侧红漆，外侧竹编，底足为四角框型。</p>
+<p>规格：长72厘米，宽16厘米，高23厘米。</p>
+<p>用途：盛放帛。中国战国以前称丝织物为帛。包括锦、绣、绫、罗、绢、絁、绮、缣、紬等，曾在中国古代长期作为实物货币使用。</p>
+<h4 id="竹笾"><a class="header" href="#竹笾">竹笾</a></h4>
+<p>食器。</p>
+<p>形态：通体黄漆，编竹为之，有盖，盖为半圆型，盖顶圆钮，器身直口，内侧黄漆，外侧竹编，盘浅底平，柄较细，圈足侈大，口沿、足边饰以彩绘云纹，盖内及足底有三行六字篆书阳文“大清光绪年制”款。</p>
+<p>规格：口径15厘米，底径13厘米。</p>
+<p>用途：古代用竹编成的食器，形状如豆，祭祀时用来盛枣、栗、榛、菱等果实以及鹿脯等干肉。</p>
+<h3 id="表-孔子及四配十二哲从祀先贤先儒祭器配位"><a class="header" href="#表-孔子及四配十二哲从祀先贤先儒祭器配位">【表】 孔子及四配、十二哲、从祀先贤先儒祭器配位</a></h3>
+<h2 id="朝代--神主--祭器种类数量--说明"><a class="header" href="#朝代--神主--祭器种类数量--说明">朝代 | 神主 | 祭器种类、数量 | 说明</a></h2>
+<p>元 | 孔子 | 笾10，豆10，簠2，簋2，登3，鉶3，俎3 | 配位同
+| 从祀 | 笾2、豆2、簠1、簋1、俎1 |
+明（嘉靖） | 孔子 | 爵3，登1，铏2，簠2，簋2，籩10，豆10，俎1 | 牲用牛、羊、猪各1。
+| 四配 | 爵3，铏2，簠2，簋2，籩8，豆8，俎 1 | 每位一坛，俎盛猪肉、羊肉
+| 十哲 | 爵1，铏1，簠1，簋1，笾4，豆4 | 每位一坛，五位一俎（猪）
+| 两庑 | 爵3，簠1，簋1，籩4，豆4 | 三位一坛，每位猪肉一份
+| 启圣祠正位 | 爵3、鉶2、簠2、簋2、笾8、豆8、俎（猪、羊）1 |
+| 启圣祠配位 | 爵3，簠1，簋1，笾4，豆4，猪头1，猪肉1份 | 每位一坛。
+| 启圣祠从祀 | 爵3，簠1，簋1，笾4，豆4，猪头1 |
+清 | 孔子 | 爵3，登1，鉶2，10笾，10豆，簋2，簠2，篚1，三牲俎（牛、猪、羊）1 | 中祀。大祀为12笾、12豆。
+| 四配 | 爵3，铏2，簠2，簋2，笾8，豆8，俎（猪、羊）1 | 每位一案。崇圣祠正位同
+| 十二哲 | 爵3，铏1，簠1，簋1，笾4，豆4，俎（猪、羊）1 | 每位一案，俎六位共用。
+| 两庑 | 爵2，簠1，簋1，笾4，豆4 ，俎（猪、羊）1 | 二位一案，每庑共三俎
+| 崇圣祠正位 | 爵3，铏2，簠2，簋2，笾8，豆8，俎（猪、羊）1 | 每位一案。
+| 崇圣祠配位 | 爵3，铏1，簠1、簋1，笾4，豆4，俎（猪、羊）1 | 每位一案，二位一俎。
+| 崇圣祠两庑 | 爵1，簠1，簋1，笾4，豆4，俎（猪、羊）1 | 东庑二案，西庑一案。</p>
+<h3 id="乐器"><a class="header" href="#乐器">乐器</a></h3>
+<p>用于祭祀的乐器均为中国传统乐器，分属金、石、竹、木、革、丝、匏、土八种不同材质，又称八音。</p>
+<h2 id="结语"><a class="header" href="#结语">结语</a></h2>
+<p>皇家祭孔文物文化展从谋划筹备、设计立项、制作施工、布展开幕，历时近一年。我们秉承高品位打造精品展览的理念，依照艺术厅近700平方米古建自然格局精心设计布展，使展览的内容与形式统一协调，特色鲜明，凸显皇家气派。展览采用了先进的多媒体展示方法使观众有身临其境之感。3个互动项目使观众可以尽情享受参与的乐趣。整个展览制作精致、文物珍贵、古香古色，突出了文化性和历史感。展览力求以孔庙和国子监博物馆馆藏精品文物为载体，以精美图片、建筑模型、影像资料、数字虚拟为辅助手段，向观众展示了北京孔庙作为中国皇家祭祀孔子的专门场所所特有的文化内涵，体现了祭孔活动在国家祭祀体系中的独特地位，弘扬了中华民族尊师重教的传统美德。孔庙和国子监博物馆此次举办的皇家祭孔文物文化展，真正给广大观众特别是文物艺术品收藏爱好者提供了一个零距离欣赏明清皇家祭孔文物精品、深层次触摸祭孔文化的宝贵机会。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../exhibitions/exhibition-6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../exhibitions/exhibition-8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../exhibitions/exhibition-6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../exhibitions/exhibition-8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

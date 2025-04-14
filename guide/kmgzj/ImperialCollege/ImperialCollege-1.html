@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>鲤鱼跃龙门 - 孔庙和国子监博物馆 - https://pg.js.cn</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - https://pg.js.cn</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/ImperialCollege/ImperialCollege-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="鲤鱼跃龙门"><a class="header" href="#鲤鱼跃龙门">鲤鱼跃龙门</a></h1>
+<p>鲤鱼跃龙门，是古代中国的一个民间传说，发生在今河南洛阳龙门石窟所在地区（一说——陕西韩城黄河龙门）。</p>
+<p>传说只要鲤鱼能够跳过龙门，就会变化成为真龙。还有传说龙门为应龙开辟，有诗赋赞曰：“阙之所成兮，得应龙之伟力”，当鲤鱼跃龙门时，就会有应龙盘旋上空。</p>
+<p>科举制度推行后,鱼跃龙门被用来比喻科举中试，于是龙门在国人心里就有了神圣的地位。</p>
+<p>“鲤鱼跃龙门”的传说流传下来，也影响了日本等地，日本风俗在男孩节悬挂鲤鱼旗，就是希望孩子健康成长，像鲤鱼一样跳过龙门成龙。</p>
+<h2 id="赠崔侍郎"><a class="header" href="#赠崔侍郎">赠崔侍郎</a></h2>
+<p>《赠崔侍郎》（郎一作御），是唐代伟大诗人李白创作的两首同题酬赠诗，酬赠对象是同一个人，但不是同时同地之作。李白集中，现存有酬赠崔侍御诗十一首，除了两首之外，其余都是在金陵一带写的。李白《赠崔侍御》的两首诗，都表达了对仕宦的殷切。</p>
+<p>黄河三尺鲤，本在孟津居。</p>
+<p>点额不成龙，归来伴凡鱼。</p>
+<p>故人东海客，一见借吹嘘。</p>
+<p>风涛倘相见，更欲凌昆墟。</p>
+<h2 id="黄河鲤鱼"><a class="header" href="#黄河鲤鱼">黄河鲤鱼</a></h2>
+<p>古代传说，在很早很早以前，龙门还没有凿开，黄河里的鲤鱼逆流向上，到达龙门前的湖中，只要跳过龙门，就会变化成龙。但是除了个别的跳过去化为龙以外，大多数都过不去。凡是跳不过去，从空中摔下来的，额头上就落一个黑疤。据说直到今天，这个黑疤还长在黄河鲤鱼的额头上呢。</p>
+<h2 id="成语典故"><a class="header" href="#成语典故">成语典故</a></h2>
+<p>俗说鱼跃龙门，过而为龙，唯鲤或然。（宋·陆佃《埤雅·释鱼》）</p>
+<p>大禹凿门和鲤鱼登龙的故事，在民间流传很广，《水经注》、《三秦记》等古籍中均有记载。</p>
+<p>据《禹贡》载：“导河积石，至于龙门”。</p>
+<p>据《名山记》载：“河水至此山，直下千仞，水浪起伏，如山如沸”。</p>
+<p>清乾隆《韩城县志》载：“两岸皆断山绝壁，相对如门，惟神龙可越，故曰龙门。”“龙门”相传为大禹治水时所凿，亦称禹门渡。</p>
+<p>关于“禹凿龙门”，《吕氏春秋》说：“禹立，勤劳天下，日夜不懈，通大川，决壅塞，凿龙门。”</p>
+<p>《三才图会》记载：“此处两山壁立，河出其中，赛约百步，两岸断壁，状尽斧凿，形状似门，故称“龙门”。</p>
+<p>《太平广记》卷四六六“龙门”条引《三秦记》：“龙门山，在河东界。禹凿山断门阔一里余。黄河自中流下，两岸不通车马……每岁季春，有黄鲤鱼，自海及诸川，争来赴之。一岁中，登龙门者，不过七十二。初登龙门，即有云雨随之，天火自后烧其尾，乃化为龙矣。”</p>
+<p>而清张澍辑《三秦记》复云：“江海大鱼薄集龙门下，数千，不得上。上则为龙，不上者鱼，故云曝腮龙门。”后世民间传说，遂谓为鲤鱼跳龙门。</p>
+<p>《辛氏三秦记》：“河津一名龙门，禹凿山开门，阔一里馀，黄河自中流下，而岸不通车马。每逢春之际，有黄鲤鱼逆流而上，得过者便化为龙。”后以喻举业成功或地位高升。</p>
+<p>唐·元弼有《鱼跃龙门赋》。</p>
+<p>明 高明 《琵琶记·南浦嘱别》：“但愿鱼化龙，青云得路桂枝高折步蟾宫。”</p>
+<p>《水浒传》第一一三回：“正是了身达命蟾离壳，立业成名鱼化龙。”</p>
+<p>唐李白《赠崔侍御》诗：“黄河三尺鲤，本在孟津居，点额不成龙，归来伴凡鱼。”即用此典。人们还用“登龙门”来比喻因得到有力者的援引而致显耀。在科举时代，参加会试获得进士功名的，也被称作为“登龙门”。</p>
+<p>鲤鱼跳龙门，既是这个优美传说的形象表述，更寄托着祈盼飞跃高升、一朝交运的美好愿望。尤其是那些指望子弟靠读书应试博取功名前程的人家，都把它当作幸运来临的象征。</p>
+<h2 id="历史传说"><a class="header" href="#历史传说">历史传说</a></h2>
+<h3 id="传说一"><a class="header" href="#传说一">传说一</a></h3>
+<p>相传，禹辟伊阙以后，水流湍急，游息于孟津（今洛阳下辖县）黄河中的鲤鱼，顺着洛、伊之水逆行而上，当游到伊阙龙门（今洛阳龙门石窟所在地）时，波浪滔天，纷纷跳跃，意欲翻过。跳过者为龙，跳不过者额头上便留下一道黑疤，所以唐代大诗人李白在《赠崔侍御》诗中写道：“黄河三尺鲤，本在孟津居，点额不成龙，归来伴凡鱼。”</p>
+<p>从此，每逢暮春季节，就有无数金色鲤鱼循著黄河逆流而上，聚在禹门下，奋力跳跃，偶有一跃而过者，便化为苍龙，腾飞九天之上。化龙飞升的禹门叫「龙门」，「一跃龙门，身价百倍」意即如此。</p>
+<p>传装中，常以龙头鱼身的鳌鱼来表现「鲤跃龙门」的典故。本堵表现滚滚江浪中，鲤鱼在龙门下吐津迫，而跃过龙门成龙的鳌鱼，展翅欲飞冲天的模样。</p>
+<h3 id="传说二"><a class="header" href="#传说二">传说二</a></h3>
+<p>传说东海里的一大群金背鲤鱼、白肚鲤鱼、灰眼鲤鱼，听说禹王要挑选鱼类中的优秀者跃上龙门，管护龙门，无不惊喜万分，纷纷跃跃欲试。于是它们成群结队，沿黄河逆流而上，向龙门游来。</p>
+<p>灰眼鲤鱼被河水中的泥沙呛得喘不过气来，就掉头游了回去。金背鲤鱼和白肚鲤鱼摆成一字儿长蛇阵，迎风顶浪，日夜不停地逆流而上，在一个风平浪静、艳阳高照的中午来到了龙门山前。它们把头扬出水面，仰望龙门胜景：两边高山入云，陡崖千丈；中间黄水滔天，巨旋相连。龙门山上一条百丈石质巨龙昂首向天。河水翻滚，水珠飞溅到龙头之上，构成了奇异的仙境洞天。</p>
+<p>鲤鱼们看到龙门胜景，心旷神怡，便纷纷向禹王请命要跃过龙门。禹王喜道：“鱼龙本是同种，凡能跃上龙门的便可羽化成龙，管理龙门。”</p>
+<p>众鲤鱼一听，立即鼓鳃摇尾，鼓出全身力气向龙门跃起。谁知跃出水面一丈多高，就跌落下来，摔在水面。但它们并不灰心，日夜苦练跳跃之功。练了七七四十九天，跃起的高度提升到七七四十九丈。但要跃过百丈龙门还差之甚远，有的鲤鱼慢慢有些灰心了。</p>
+<p>禹王看见众鲤鱼肯吃苦，就点化它们说:“一根筷子易折断，万众一心移走山。”</p>
+<p>金背鲤鱼听了，若有所悟，便对大家说：“禹王说的话是要启发大家同心协力啊！咱们各跳各的，怕永远也跳不过去。”</p>
+<p>众鲤鱼说：“你说得对，那你给大家想个办法呀！”</p>
+<p>金背鲤鱼说：“我倒想了一个办法，叫‘垫背法’。我拼力一跃，到最高度时，另一位兄弟跃起来，在我的背上踩一下，再用力一跃，也许就能跃过龙门。”</p>
+<p>言罢，便自告奋勇愿做第一条垫背鱼。它跃起原先练就的四十九丈高度，第二条鲤鱼落在它的背上，再跃了四十九丈的高度，但是，还差两丈啊。禹王看见后，暗暗挥手，扇过一阵清风，鱼借风力，便跃上了龙门。</p>
+<p>这办法，众鲤鱼看得清清楚楚，便依法飞跃，一条条鲤鱼都跃上了龙门，最后就剩下那条垫背的金背鲤鱼了。忽然一股激流冲撞在龙门河心的巨石上，腾起滔天巨浪。金背鲤鱼顾不得疲劳，趁着激流跃上浪尖，又猛然用鱼尾猛击巨浪，竟跃上了蓝天白云间，一眨眼又轻轻飘向龙门之上。禹王看见了，惊叹不已。他赶紧拿出彩笔，随即在金背鲤鱼的头上轻轻点了一点红。霎时，鱼龙变化，金背鲤鱼变成了一条金黄色的巨龙。禹王就命令它率领众鲤鱼管护禹王带领百姓亲手开凿的龙门。</p>
+<h2 id="龙门在哪里"><a class="header" href="#龙门在哪里">龙门在哪里</a></h2>
+<p>“鲤鱼跃龙门”是一个广泛流传的神话传说。有河南洛阳龙门、山西和陕西交界处龙门、四川河津龙门（龙门山）、重庆龙溪河畔等不同说法。正式见诸文字记载的是汉代辛氏所著《三秦记》。这个传说主要讲述了鲤鱼成功跃过龙门后化为龙的故事，寓意着努力奋斗、逆流而上。</p>
+<h3 id="洛阳龙门传说"><a class="header" href="#洛阳龙门传说">洛阳龙门传说</a></h3>
+<p>传说中黄河鲤鱼跳过龙门（今称禹门口），当时龙门还未凿开，伊水流到这里被龙门山挡住，形成了一个大湖。居住在黄河里的鲤鱼听说了龙门的美景，都想去看看。它们从黄河出发，经过洛河，再顺伊河来到龙门，跃过龙门而化身为龙。</p>
+<h3 id="黄河龙门传说"><a class="header" href="#黄河龙门传说">黄河龙门传说</a></h3>
+<p>这个传说发生在山西和陕西两省交界处的黄河段上的龙门景区。每年春天，大批鲟鱼洄游至龙门穴洞之处集结，临产卵前两三天，雌雄鲟鱼追逐跳跃，形成“鲤鱼跃龙门”的壮观景象。</p>
+<h3 id="河津龙门传说"><a class="header" href="#河津龙门传说">河津龙门传说</a></h3>
+<p>河津（四川）地名来源于龙门，当地传说水险不通，鱼鳖之属莫能上。江海大鱼聚集在龙门下，无法上游。而在每年暮春之际，有黄鲤鱼逆流而上，成功跃过龙门的鲤鱼便化为龙。</p>
+<h3 id="龙门山传说"><a class="header" href="#龙门山传说">龙门山传说</a></h3>
+<p>在在龙门山（四川）河东界，每年春天都有黄鲤鱼逆流而上，成功跃过龙门化为龙。</p>
+<h3 id="龙溪河畔传说"><a class="header" href="#龙溪河畔传说">龙溪河畔传说</a></h3>
+<p>很早以前，在一个叫作宁河龙溪河畔（重庆）的地方，人们过着安居乐业的生活。但有一天，一条大黄孽龙降临此地，为非作歹，祸害百姓。它要么呼风唤雨破坏庄稼，要么吞云吐雾残害生灵，使得整个峡谷乌烟瘴气，人民生活不得安宁。每年六月六日，它生日这天，强迫人们献上一对童男童女、十头大黄牛和一百头猪羊供它享用。否则，它就会发怒作恶，吞噬人畜，破坏田园。</p>
+<p>在这个困境中，有一位名叫玉姑的聪明俊美的小姑娘，她下定决心要除掉这条恶龙。经过多次寻找，她终于在云台观找到了云台仙子，请求仙子赐予她力量。仙子告诉她，要想除掉恶龙，就必须牺牲自己。玉姑毫不犹豫地答应了这个条件。</p>
+<p>仙子指引玉姑去寻找鲤鱼仙子，寻求帮助。玉姑跋山涉水，历尽艰辛，终于在鲤鱼洞找到了鲤鱼仙子。仙子告诉她，要想消灭恶龙，就必须跳过龙门。跳过龙门，意味着牺牲生命，但玉姑毫不畏惧，表示愿意为民除害。</p>
+<p>在玉姑坚定的信念感动下，鲤鱼仙子赐予她神奇的力量。玉姑带着仙子的祝福，回到了家乡。在她准备跳过龙门的时候，无数的鲤鱼聚集在水面上，为她加油鼓劲。玉姑鼓足勇气，奋力一跃，终于跳过了龙门。</p>
+<p>就在这时，奇迹发生了。龙门后的山峰裂开，一条应龙从山峰中飞出，陪伴着玉姑。玉姑成功化身为龙，与应龙一起升腾在天空，降下甘霖，滋润大地。从此，宁河龙溪河畔的人们过上了幸福安宁的生活。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ImperialCollege/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ImperialCollege/ImperialCollege-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ImperialCollege/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ImperialCollege/ImperialCollege-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
