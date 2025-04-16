@@ -3,7 +3,7 @@ authors = ["VET. 周培公"]
 language = "en"
 multilingual = false
 src = "src"
-title = "北京海洋馆 - https://pg.js.cn"
+title = "北京海洋馆 - VET.周培公(https://pg.js.cn)"
 
 [build]
 build-dir = "../../public/guide/aquarium"

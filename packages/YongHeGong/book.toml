@@ -3,14 +3,14 @@ authors = ["VET. 周培公"]
 language = "en"
 multilingual = false
 src = "src"
-title = "中国农业博物馆 - VET.周培公(https://pg.js.cn)"
+title = "雍和宫 - VET.周培公(https://pg.js.cn)"
 
 [build]
-build-dir = "../../public/guide/ciae"
+build-dir = "../../public/guide/YongHeGong"
 
 [output.html]
 default-theme = "rust"
 git-repository-url = "https://github.com/peigong/peigong.github.io"
 edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
-site-url = "/guide/ciae/"
+site-url = "/guide/YongHeGong/"
 cname = "pg.js.cn"

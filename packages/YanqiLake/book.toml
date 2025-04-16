@@ -3,7 +3,7 @@ authors = ["VET. 周培公"]
 language = "en"
 multilingual = false
 src = "src"
-title = "雁栖湖 - https://pg.js.cn"
+title = "雁栖湖 - VET.周培公(https://pg.js.cn)"
 
 [build]
 build-dir = "../../public/guide/YanqiLake"
