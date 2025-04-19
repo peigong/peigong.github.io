@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>午门 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/meridian-gate.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="午门"><a class="header" href="#午门">午门</a></h1>
+<p>午门是紫禁城的正门兼仪门，因位于紫禁城午位，故称午门。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>午门建于明永乐十八年（1420年），次年元旦正式启用，嘉靖年间遭火灾后重建。清朝入关后，于顺治二年（1645年）重修。至乾隆、嘉庆年间屡有修饰，但是沿用了明朝的建筑形制。</p>
+<h2 id="建筑特点"><a class="header" href="#建筑特点">建筑特点</a></h2>
+<h3 id="色泽"><a class="header" href="#色泽">色泽</a></h3>
+<p>自古以来，色泽不仅仅是一种审美，更是与地位、等级联系在一起。</p>
+<p>午门城墙饰以最深的红色“绛”，而城门则饰最纯正的红色“朱”。朱红的城门上，有横九坚九的八十一颗黄铜色的馒头钉。</p>
+<p>午门楼宇的装饰，一如宫殿模式。丹楹朱户，黄色琉璃瓦，配以汉白玉栏杆。城台饰以土朱红，与楼阁互相映衬。</p>
+<h3 id="宫门双阙"><a class="header" href="#宫门双阙">宫门双阙</a></h3>
+<p>午门的建筑形式沿袭了唐代大明宫含元殿和宋朝宫殿丹凤门的形制，从汉代门阙演变而来。宫门两侧的城墙向前伸出，呈凹字形，两阙与城楼形成三面围合的广场。</p>
+<p>午门由城台和城楼两部分组成。</p>
+<p>城台正面有三个门洞，两翼与城楼的拐角处开左掖门和右掖门，左右掖门折而北上，所以午门北面是并排的五个大门洞，称为明三暗五。开掖门既有礼制规矩又有实际需要，因为左右两观，开不了五个门。</p>
+<p>城台以上为城楼，由正楼、明廊、角亭、雁翅楼几部分组成。</p>
+<p>午门正楼面阔九间，进深五间，前后出廊。重檐庑殿顶，覆盖黄色琉璃瓦。正楼两侧明廊各三间，原置钟鼓各一。由左右明廊折而南出，东西各有连檐通脊的长庑十三间，俗称雁翅楼。雁翅楼南北两端，各建一座镏金宝顶的四角攒尖重檐顶角亭。整组建筑，有五凤楼之称。</p>
+<p>午门正楼与太和殿虽同属古建筑的高等级重檐庑殿顶、九开间，但是出廊有所不同。午门正楼是前后檐出廊，两山不出廊。做法较简，等级也稍低。</p>
+<h2 id="建筑用途"><a class="header" href="#建筑用途">建筑用途</a></h2>
+<h3 id="门洞"><a class="header" href="#门洞">门洞</a></h3>
+<p>祭祀坛庙、命将出征等重大国事，皇帝出入午门正中的门洞。皇帝大婚，皇后从午门正中门洞进入。科举考试公布名次，叫大传胪。状元、榜眼、探花从午门正中门洞出宫。</p>
+<p>上朝时，三品以上的文武官员走东侧左门，宗室王公走西侧右门。大朝礼时，三品以下文官走左掖门，三品以下武官与外邦使节入右掖门。殿试时，贡士进宫按名单上的次序，单数走左掖门，双数走右掖门。</p>
+<h3 id="典礼仪式"><a class="header" href="#典礼仪式">典礼仪式</a></h3>
+<p>明清两代，一些重要的典礼仪式在午门举行。</p>
+<p>每逢较大规模的战争取得胜利后，要在午门举行献俘仪式。皇帝登上午门城楼，接受献俘礼。</p>
+<p>清朝的颁朔礼在午门举行，明朝颁历在奉天门。每年十月初一，颁布来年的时宪书（皇历）。</p>
+<p>遇到皇帝举行朝会，或大祀，以及元旦（春节）、冬至、万寿、大婚等重大节日，还要在午门陈列皇帝仪仗。</p>
+<p>在明朝，元宵节、立春、端午、中秋、腊八等节令时，皇帝在午门赏赐百官节令美食。每年正月十五，还曾有午门观灯，以示与民同乐。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="tian-an-gate.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-gate-of-supreme-harmony.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="tian-an-gate.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-gate-of-supreme-harmony.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

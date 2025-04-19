@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="圆明园"><a class="header" href="#圆明园">圆明园</a></h1>
+<p>圆明园位于北京市海淀区，由相邻的圆明、长春、绮春三园组成，统称圆明园。圆明园鼎盛时期东西长2620米，南北宽1880米，占地面积52万平方米。园内有一百多处风景园林建筑群，建筑面积达20多万平方米，由皇帝冠以佳名的殿阁亭榭八百多所。</p>
+<p>圆明园始建于康熙四十六年（1707年），最初为康熙帝赏赐于四皇子胤禛的花园，它历经康熙、雍正、乾隆、嘉庆、道光、咸丰共六朝帝王，至1860年被毁，先后营建153年，更是见证了雍正的励精图治，乾隆的盛极一时，嘉庆的艰难维持，道光的江河日下，咸丰的四面楚歌。</p>
+<p>康熙帝于康熙四十八年（1709年）亲题匾额“圆明园”，含义取自《中庸》所云“圆而入神，君子之时中也；明而普照，达人之睿智也”，寄托了父亲对儿子的殷切期望。康熙对圆明园初赏之面积约1200亩，后胤禛即皇帝位，年号雍正，他便从雍正三年开始，对圆明园进行扩建，从1200亩扩建至3000余亩。</p>
+<p>圆明园亦称圆明三园，分别是南边绮春园、东北长春园、西北圆明园组成，共占地5280亩（350公顷、350万平方米），故宫占地面积72万平方米，由此可见，圆明园是故宫面积的五倍，且较颐和园大900亩（60公顷），圆明园也是当时规模最宏大的一座皇家园林。圆明园较于其他长春园、绮春园来说，建造年代早、占地面积大、房屋建筑多、最具代表性，因此当前习惯上以圆明园作为统称，而非其他二园。</p>
+<p>胤禛继位后，园明圆升为御园。圆明园的地位与性质则是在雍正三年发生改变。从雍正到咸丰共五代皇帝，他们每年大概只有冬季三、四个月才回到皇宫生活，其他时间都选择御园居住。如雍正在位期间，平均每年在圆明园生活210天，乾隆126天，嘉庆162天，道光260天，咸丰216天，而且道光皇帝在道光二十九年（公元1849年），居住圆明园时间长达355天，成为皇帝御园居住时间之最。另外，因皇帝长期生活在圆明园，所以国家政务同样在此处理，圆明园的正大光明殿及勤政亲贤殿便是当年上朝、批注公文、接见大臣的场所。由此可见，圆明园从最初的一座王府花园逐步演变成为了第二个全国政治中心，被赋予政治作用，其地位与紫禁城相当。</p>
+<p>经过雍正朝十三年的拓建和乾隆初年的增建，到乾隆九年（1744年），圆明园四十景图建成。其后又在东邻建长春园，东南邻建绮春园。乾隆三十五年（1770年）基本形成三园格局，嘉庆十九年（1814年）达全胜规模。</p>
+<p>圆明园造景取材十分广泛，有仿建我国各地尤其是江南的胜景名园，有仿古代诗词绘画建造的人生佳境，有仿造神话传说建造的仙山琼阁。圆明园中还建有祖祠、佛寺、藏书楼、画廊、宫室、习射场、管家处等各种具有使用功能的园林景观，并在长春园仿建了一处欧式园林。</p>
+<p>圆明园是我国古典园林之集大成者，其盛名传至欧洲，被誉为万园之园和东方的凡尔赛宫。当年目睹胜景的英国随军牧师麦卡吉惊叹，这是《一午零一夜》中的场景，是一种幻境，就是狂想也想不出我们眼前确实存在的美景，必须有一位集诗人、画家、美术鉴赏家、历史学家和许多科学知识于一身的人，才能图写圆明园。</p>
+<p>不幸的是，在1860年爆发的第二次鸦片战争中，英法联军入侵北京，圆明园被侵略者大肆掠夺后，又付之一炬。这座历经康熙、雍正、乾隆、嘉庆、道光、咸丰六朝150年营建的华夏园林明珠，化为一片焦土。圆明园被焚毁后，同治、光绪两朝进行了小规模的修复。1900年八国联军侵略中国，攻陷北京，圆明园终遭灭顶之灾。</p>
+<p>全国解放后，圆明园遗址的整合和保护受到了十分重视，市、区政府先后将其列为公园用地和重点文物保护单位。国衰园毁，盛世兴园。1983年，国务院批准《北京城市建设总体规划方案》，把圆明园划为遗址公园，并明确了圆明园遗址公园的发展方向。</p>
+<p>1988年6月底，圆明园遗址公园正式开放。同年，圆明园遗址被国务院列为全国重点文物保护单位。为了突出圆明园遗址公园的特色，管理处重点清整了开放区内的遗址，力求遗址保持原有风貌，并竖立说明牌。圆明园遗址公园还被命名为爱国主义教育基地。</p>
+<p>如今，圆明园遗址公园已是山清水秀，林木葱茂，花草芬芳，景色宜人。在这里，每年都要举办踏青节、荷花节、菊花等旅游活动。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

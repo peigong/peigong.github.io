@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>叠山书院 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/carved-stone/academy.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="叠山书院"><a class="header" href="#叠山书院">叠山书院</a></h1>
+<blockquote>
+<p>原文：<a href="https://finance.sina.com.cn/jjxw/2023-12-01/doc-imzwncth1075057.shtml">爱国 守节 行大义</a></p>
+</blockquote>
+<p>在江西弋阳的信江之畔，有一座始建于元皇庆二年（1313年）的书院，它依山就势、红廊黛瓦、飞檐翘角、错落有致，集讲学、藏书、刻书诸多功能于一体，它就是江西省现存规模较大、建筑构架保存较为完整的古书院之一——叠山书院。</p>
+<h2 id="谢枋得与叠山书院"><a class="header" href="#谢枋得与叠山书院">谢枋得与叠山书院</a></h2>
+<p>叠山书院因谢叠山而建。谢枋得（1226—1289年），字君直，号叠山、别号依斋，信州弋阳（今上饶市弋阳县）人，南宋著名抗元将领、爱国诗人。南宋末年，元兵南侵，他率兵万余人在信州、安仁、武夷山、仙霞关等地同元军相抗，最终失败。南宋灭亡后，元朝统治者对南宋官员采取笼络收买之策，许以高官厚禄劝诱谢枋得就范，但他丝毫不为所动，于至元二十六年（1289年）在元大都绝食而死。</p>
+<p>谢枋得文章格调高奇，颇具欧阳修、苏轼遗风。所著《武夷山中》《小孤山》《元旦阻雨》《春日闻杜鹃》《寄谢叔鲁》等文章，大多收录于《叠山集》。他选编的《千家诗》在民间广为流传，影响极其深远，被认为是传统社会有启蒙性质的诗歌选本。他蔑视权贵、嫉恶如仇、忧国忧民，与文天祥（号文山）一起被誉为中国历史上的爱国主义“二山”。</p>
+<p>谢枋得逝后第24年，门生虞舜臣等人在其家乡择山环水抱之地修建了谢文节公祠（叠山祠），每年春秋两季都会在此聚集祭拜。为缅怀恩师、光大学派主张，谢枋得门生虞韶卿等人提议将叠山祠改建为叠山书院，元延祐四年（1317年）得到朝廷批准。至此，书院正式官学化，成为专讲程朱之学，供祀两宋理学家的传道授业之所。明清以来，叠山书院一直都是信江流域讲学布道的重要场所之一。</p>
+<p>书院自创立之初，就以谢枋得在《与李养吾书》中提出的“所谓为天地立心，为生民立极，为去圣继绝学，为万世开太平，正在我辈人承当，不可使天下后世谓程、朱之事皆大言无当也……”为教学宗旨。后逐步形成了讲学与时代、讲学与研究、讲学与议政三结合的经世致用精神。到了清代，在这里求学的诸生也以“敦伦纪、端品行、立志向、习礼仪、重经史”为约束，按照叠山书院的条规，努力做到“通时务、懂兵刑、理钱谷、知礼乐、掌律历、疏河渠、修水利、勘农田”。</p>
+<h2 id="林则徐与叠山书院"><a class="header" href="#林则徐与叠山书院">林则徐与叠山书院</a></h2>
+<p>走近叠山书院，首先映入眼帘的就是礼圣门。相传此门正上方“叠山书院”匾额原为林则徐所题。这位晚清著名政治家、儒学家和诗人与叠山书院亦有着颇深的渊源。</p>
+<p>林则徐在“虎门销烟”中极大地提振了中国人的志气，却得罪了腐败的朝廷。因遭投降派诬陷，他被降罪革职，又于次年被派赴浙江筹划海防。林则徐走水路途经广信府弋阳时，出于对谢叠山的仰慕，他不仅泊舟靠岸，专程前往书院拜谒，还应弋阳知县之请，为叠山书院题写了匾额和“讲经堂”前的楹联，林则徐在楹联中写道“为学日益为道日损，大勇若怯大智若愚”，意思为追求学问每天都有收获，修行大道每天自省吾身。勇敢的人往往看上去沉着冷静，才智出众的人往往表现得含蓄内敛。林则徐曾在书院讲学数日，其间他结合自己在两广总督任上提出的“师夷长技以制夷”观点，向书院的学子贤达们阐述了中国人应如何爱国自强，如何传承叠山先生忠贞不屈的精神，其经世致用的思想至今仍令世人为之敬仰。</p>
+<h2 id="方志敏与叠山书院"><a class="header" href="#方志敏与叠山书院">方志敏与叠山书院</a></h2>
+<p>民国初年，在叠山书院内设立了弋阳县四年制的初级小学。1916年改名弋阳县立高等小学，秋季开始招收第一届高小班学生。课程设有国文、数学、历史、地理、英文、自然、体育、手工、图画和修身等。此时的叠山书院已注入传授新文化知识的近代元素。弋阳县人方志敏、邵式平等20余人成为这里的首届学生。在校读书期间，方志敏等人组织成立了以“铲除邪恶、追求光明”为宗旨的进步青年组织——“九区青年社”（后改组为“弋阳革命青年社”），领导并发动了声震江西的抵制日货等一系列爱国行动。大革命时期，方志敏、邵式平等人又回到弋阳，邵式平曾兼任高小校长。不少学生如雷夏、方志纯等后来都成为赣东北苏维埃政权和红十军的骨干。作为培育革命人才的弋阳高小，在江西革命及教育史上留下了光辉的一页。</p>
+<p>早在私塾就读时，方志敏就对孔子“志士仁人，无求生以害仁，有杀身以成仁”及孟子“富贵不能淫，贫贱不能移，威武不能屈”的主张高度认同，同时对谢枋得率兵抗元的事迹感叹不已。进入弋阳县立高等小学后，他深受谢枋得爱国精神影响，立志报效祖国。高小毕业后，方志敏离开家乡外出寻求救国救民的真理，最终选择了共产主义，从此便为这个远大的理想开始了长期艰苦的奋斗，直至献出自己宝贵的生命。方志敏在其著作《可爱的中国》中曾回忆道：“我很小的时候，在乡村私塾中读书，无知无识，不知道什么是帝国主义，也不知道帝国主义如何侵略中国，自然，不知道爱国为何事。以后进了高等小学读书，知识渐开，渐渐懂得爱护中国的道理。”这正是对其在弋阳县立高等小学教育经历的生动总结。</p>
+<p>打开历史画卷，拂去岁月风尘。悠悠700年，这座以爱国志士谢叠山命名的古老书院经历了漫长的岁月洗礼和无数的风雨沧桑。仰望叠山楼、俯瞰信江水，书院的一草一木仍然青翠葱茏，先贤的精神风骨依旧薪火相传；从经世致用到爱国主义精神传承，水乳交融、延绵不绝，在新时代将焕发出新的勃勃生机。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../special/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../special/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

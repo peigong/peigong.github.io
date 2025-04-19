@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>午门 - 给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/meridian-gate.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="午门"><a class="header" href="#午门">午门</a></h1>
+<h2 id="知识点"><a class="header" href="#知识点">知识点</a></h2>
+<ul>
+<li>文物保护，参观秩序</li>
+<li>故宫中轴对称的布局</li>
+<li>午门的门洞</li>
+<li>五凤楼</li>
+<li>午门广场的用途</li>
+<li>门洞的用途</li>
+<li>午门的名称来历【需要详细讲解地支的研学主题】</li>
+<li>午门廷杖【初中、高中大孩子的主题】</li>
+</ul>
+<h2 id="互动设计"><a class="header" href="#互动设计">互动设计</a></h2>
+<ul>
+<li>在午门南面数门洞，过午门后，到北面再数【明三暗五】。</li>
+<li>猜哪个门洞是给皇帝走的。</li>
+</ul>
+<h2 id="讲解点和讲解路线"><a class="header" href="#讲解点和讲解路线">讲解点和讲解路线</a></h2>
+<ul>
+<li>集合后（路上）
+<ul>
+<li>参观注意事项</li>
+<li>故宫中轴对称的布局</li>
+<li>故宫的历史故事</li>
+</ul>
+</li>
+<li>午门外（检票前）
+<ul>
+<li>午门的门洞</li>
+<li>五凤楼</li>
+<li>午门广场的用途</li>
+</ul>
+</li>
+<li>午门内（检票后，内金水河前）
+<ul>
+<li>门洞的用途</li>
+<li>中轴线</li>
+</ul>
+</li>
+</ul>
+<h2 id="导游词"><a class="header" href="#导游词">导游词</a></h2>
+<h3 id="集合后路上"><a class="header" href="#集合后路上">集合后（路上）</a></h3>
+<h4 id="参观注意事项"><a class="header" href="#参观注意事项">参观注意事项</a></h4>
+<p>小朋友们，我们今天要参观的是什么地方啊？对了，是故宫。</p>
+<p>故宫是皇帝住的地方，规矩非常大。我们去了以后，也要遵守规矩，好不好？</p>
+<p>故宫有六百多年的历史了，里面的文物都非常贵重，所以我们参观的时候只能看不能摸。而且故宫里的参观的人特别多，我们要跟紧队伍，不单独行动，好不好？</p>
+<h4 id="故宫中轴对称的布局"><a class="header" href="#故宫中轴对称的布局">故宫中轴对称的布局</a></h4>
+<h4 id="故宫的历史故事"><a class="header" href="#故宫的历史故事">故宫的历史故事</a></h4>
+<h3 id="午门外检票前"><a class="header" href="#午门外检票前">午门外（检票前）</a></h3>
+<h4 id="午门的门洞"><a class="header" href="#午门的门洞">午门的门洞</a></h4>
+<p>我们现在站的这个地方，就是午门广场。我们面前的这座城堡，就是午门。午门是故宫的正门，也是故宫的南大门，非常的重要。</p>
+<p>小朋友们，这座午门是不是特别的高大，特别的雄伟啊？你们看看，这里下面看有几个门洞？有三个，对吧，好大家记住三个门洞这个数字啊，我们一会儿还有用。</p>
+<p>小朋友们看看，两边的城墙像不像两条胳膊，大家看胳肢窝的地方，是不是一边还藏着一个小门？</p>
+<h4 id="五凤楼"><a class="header" href="#五凤楼">五凤楼</a></h4>
+<p>我们再看午门的城台上面，有好多漂亮的小房子。看着小，是因为我们离的比较远，其实挺大的。这是午门的城楼，就像是给午门戴了一顶漂亮的帽子。午门的形状，像不像一个U（凹）字形？也像是一只展翅的凤凰，就是一只大鸟在展翅飞翔。正中的城楼就像是凤凰的头，两边的城楼就像是翅膀，叫雁翅楼。正中的城楼，和两边南北各一个城楼，是不是一共有五个城楼？所以，午门又叫五凤楼。</p>
+<h4 id="午门广场的用途"><a class="header" href="#午门广场的用途">午门广场的用途</a></h4>
+<p>在古时候，出去打仗的将军打了胜仗回来，皇帝就会在午门这里隆重举行盛大的仪式，欢迎他们，表扬将军和战士们打仗很厉害。现在，午门变成了我们参观故宫的重要入口，也在欢迎小朋友们从这里走进故宫。</p>
+<p>进了故宫，我们就可以看到，很多以前的皇帝用过的东西。</p>
+<h3 id="午门内检票后内金水河前"><a class="header" href="#午门内检票后内金水河前">午门内（检票后，内金水河前）</a></h3>
+<h4 id="门洞的用途"><a class="header" href="#门洞的用途">门洞的用途</a></h4>
+<p>小朋友们，我们现在已经过了午门，大家还记不记得刚才数的正面有几个门洞？对的，是三个。我们再看看，午门的背面有几个门洞？是不是变成了五个？大家还记得刚才我们看的两侧的小门吧，刚才东西两边的小门拐过来，就变成了两边多出来的门洞。</p>
+<p>小朋友们，这座午门是不是比我们学校的校门大很多呀？大家想一想，为什么午门在古代要建得这么大、这么宏伟呢？对啦。因为在古时候，皇帝住在故宫里，故宫就是皇帝的家，午门就是皇帝他们家的大门。午门代表的是皇帝的威风，以及整个国家的象征，所以要建得特别高大宏伟。</p>
+<p>故宫的正南门，为什么叫午门呢？这里边学问可大了。【需要详细讲解地支的研学主题】</p>
+<p>大家看看，这个门洞中间的大，两边的小。小朋友们猜一猜，哪个门洞是给皇帝走的？中间的门洞最大，那是给皇帝走的。皇帝最威风了，因为只有他能从这个最大的门洞进出。旁边小的门洞，是给王公大臣等这些有身份的人走的。</p>
+<p>中间的大门洞。因为是皇帝走的，所以最厉害。其实啊，除了皇帝以外，在特殊的情况下，还有一些人可以走。</p>
+<ul>
+<li>皇帝和皇后结婚的时候，皇后的轿子可以从大门洞抬进来一回。</li>
+<li>状元考试公布成绩的时候，前三名，就是古时候的超级学霸，可以光荣的从大门洞走出来一回。</li>
+</ul>
+<p>小朋友们，大家说前三名这三个人，进去的时候能不能走？对了。进去的时候不能走，因为进去的时候还没有公布成绩，还不知道他们三个是前三名。那他们进来的时候走哪个门？单数的考生走东边的小门，叫东掖门。双数的考生走西边的小门，叫西掖门。</p>
+<p>大家说两边的小门为什么叫掖门啊？因为小门开在两边城墙胳肢窝的地方。胳肢窝又叫掖窝，所以小门叫掖门。</p>
+<h4 id="中轴线"><a class="header" href="#中轴线">中轴线</a></h4>
+<p>大家看，从大门洞中间切一刀，午门左右两边长的是不是一样啊？刚才午门外边的两条胳膊、两只翅膀也是一样的，城墙上面的城楼两边也是一样的。这个就叫做中轴对称。我们从午门这里切一刀，从中间这里一直到最北门的中间，连起来的一条线就是中轴线。皇帝进出大门洞，就是走在这条中轴线上，我们今天也是沿着这条中轴线参观。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="tian-an-gate.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-gate-of-supreme-harmony.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="tian-an-gate.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-gate-of-supreme-harmony.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

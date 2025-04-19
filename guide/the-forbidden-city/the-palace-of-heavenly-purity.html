@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾清宫 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-palace-of-heavenly-purity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="乾清宫"><a class="header" href="#乾清宫">乾清宫</a></h1>
+<p>乾清宫，内廷后三宫之一。位于前三殿后紫禁城中轴线上，是内廷的中心建筑。宫后为交泰殿、坤宁宫。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>乾清宫始建于明朝永乐十八年（1420年），永乐二十年（1422年）、正德九年（1514年）、万历二十四年（1596年）三次毁于火灾，万历三十三年（1605年）重建。</p>
+<p>清沿明制，于顺治二年（1645年）重修。顺治十年（1653年）重建，顺治十三年（1656年）建成。</p>
+<p>康熙八年（1669年）、康熙十九年（1680年）重修。</p>
+<p>乾隆四年（1739年），乾清宫廊内换墁花斑石，二尺三寸见方，共 243 块。</p>
+<p>嘉庆二年（1797年）毁于火灾，并延烧弘德殿、昭仁殿、交泰殿，第二年重建。</p>
+<p>光绪十六年（1890年）曾修缮。</p>
+<h2 id="建筑特点"><a class="header" href="#建筑特点">建筑特点</a></h2>
+<p>乾清宫坐落在单层汉白玉石台基上，面阔九间，进深五间，重檐庑殿顶，覆盖黄色琉璃瓦，脊兽九只，殿内铺墁金砖。</p>
+<p>殿内明间、东西次间相通。明间前檐减去金柱，梁架结构为减柱造型式。后檐两金柱间设雕龙漆金屏风，屏前地平床上设宝座。</p>
+<p>地平床前及左右有景泰蓝香炉，地平床上有香亭、甪端、仙鹤等。</p>
+<p>宝座上方悬清顺治皇帝福临御题“正大光明”匾。</p>
+<p>东西梢间为暖阁，后檐设仙楼。乾隆皇帝御笔“温室”匾，曾悬挂于乾清宫西暖阁。</p>
+<p>因为是皇帝的生活区，乾清宫的殿基就是两级石台阶，交泰殿、坤宁宫的殿基仅二十厘米。</p>
+<p>殿前月台上，左右分别有铜龟、铜鹤、日晷、嘉量，尺寸比太和殿前的小一些。月台前设鎏金香炉四座。</p>
+<p>月台南正中出丹陛，接高台甬路，与乾清门相连。丹陛之下有老虎洞，石砌，拱形，两侧设门，可贯穿东西。</p>
+<p>须弥座东西两侧，各有文石台一座，建于顺治十三年（1656年）五月，石台上置仿木构建筑的铜镀金小殿，东为江山，西为社稷。</p>
+<p>两座金殿形制相同，坐落在文石台座上，平面呈方形，深广各一间，四面各设一槽四扇三交六椀菱花扇。重檐两层，下方，上圆，攒尖顶。</p>
+<p>文台石四周精刻十二生肖、海水江崖。</p>
+<h2 id="建筑用途"><a class="header" href="#建筑用途">建筑用途</a></h2>
+<h3 id="乾清宫-1"><a class="header" href="#乾清宫-1">乾清宫</a></h3>
+<p>乾清宫的建筑规模居内廷之首，作为明代皇帝的寝宫，自永乐皇帝朱棣至崇祯皇帝朱由检，除洪熙皇帝朱高炽外，共有十三位皇帝曾在此居住。明代乾清宫，曾为皇帝大婚的洞房。</p>
+<p>乾清宫也曾作为皇帝的停灵之处。</p>
+<p>清代康熙以前，沿袭明制，供皇帝居住。皇帝新丧，梓宫亦奉安于祭奠。</p>
+<p>康熙病逝，雍正皇帝即位后住养心殿。此后，雍正皇帝及其后的七位皇帝都住在养心殿，乾清宫改作皇帝召见廷臣、批阅奏章、处理日常政务、接见外藩属国使臣和岁时受贺、举行宴筵的重要场所。一些日常办事机构，包括皇子读书的上书房，也都迁入乾清宫周围的庑房。</p>
+<p>雍正皇帝即位后，废弃了公开建储制，宣布实行秘密建储。雍正元年（1723年）八月，雍正皇帝于乾清宫西暖阁召见王公大臣，宣布：“今朕诸子尚幼，建储一事，必须详加审慎，此事虽不可举行，然不得不预为之计。今朕特将此事，亲写密封，藏于匣内，置之乾清宫正中，世祖章皇帝御书‘正大光明’匾额之后，乃宫中最高之处，以备不虞，诸王大臣咸宜知之。”雍正皇帝命诸王大臣共议这种做法，诸王大臣均无异议。</p>
+<p>乾隆皇帝在对历朝历代的建储法详加比较剖析后，认定秘密建储实为美善，进一步将秘密建储确定为神圣不可更改的建储家法。乾隆以后，嘉庆、道光、咸丰，都是按秘密建储制继承皇位的。</p>
+<p>清代皇帝大婚的第四天，在乾清宫接受皇后、妃、嫔、公主、福晋及命妇等人的拜贺。</p>
+<p>清代皇帝有亲笔写福字的习俗，首开于康熙皇帝。写好的第一个福字，悬于乾清宫正殿，其他张贴于后宫、御花园等处，余下的赐予王公大臣及内廷翰林。原来写福字多在除夕前几天，乾隆二年（1737年）开始定于十二月初一日在漱芳斋开笔书福，后来成为惯例。</p>
+<p>清宫每遇皇帝寿辰、元旦、除夕及各节令，在乾清宫举行家宴，称乾清宫家宴仪。元旦或上元节前，皇帝在乾清宫举行宗室宴，皇子、皇孙、近支皇族、宗室王公参宴。</p>
+<p>正月初二或正月十六举行廷臣宴，皇帝与大学士、五府六部尚书、侍郎等饮宴赋诗。</p>
+<p>清朝殿试发榜前一日，在乾清宫举行小传胪，阅卷大臣将十份没有拆“弥封”的优卷呈皇帝。皇帝阅卷后，有时召见前十名新科进士，面试后再确定他们的名次。</p>
+<p>雍正十三年（1735年），雍正皇帝驾崩，乾隆皇帝以乾清宫南廊为苫次。</p>
+<h3 id="昭仁殿"><a class="header" href="#昭仁殿">昭仁殿</a></h3>
+<h3 id="弘德殿"><a class="header" href="#弘德殿">弘德殿</a></h3>
+<h3 id="乾清宫东庑"><a class="header" href="#乾清宫东庑">乾清宫东庑</a></h3>
+<h3 id="乾清宫南庑"><a class="header" href="#乾清宫南庑">乾清宫南庑</a></h3>
+<p>乾清门内东西两侧围房亦称乾清宫南庑，设有上书房、阿哥茶房、南书房，中间为乾清门，门西为宫殿监办事处、尚乘轿太监首领值房。</p>
+<h4 id="上书房"><a class="header" href="#上书房">上书房</a></h4>
+<p>上书房是清朝皇子、皇孙、近支王公子弟上学读书的地方。</p>
+<p>自顺治时就设有专门管理皇子读书的机构，康熙三十二年（1693年）始称上书房，设在西华门内南熏殿西侧的长房等处。</p>
+<p>雍正初年，雍正皇帝为了便于监督皇子们的学习，将上书房移至乾清门内东侧的南庑，选择房屋五间为皇子读书处。房内墙上悬挂孔子画像，雍正皇帝还亲题联：立身以至诚为本，读书以明理为先。</p>
+<p>皇子六岁开始读书，早上五点开始上课，七点半吃早饭，十二点吃晚饭（即午饭）。重要节日不开课，学生生日不上学。</p>
+<p>上书房读书没有毕业的概念，嘉庆和他的弟弟永璘在上书房读书二十多年。</p>
+<p>上书房自雍正初年迁至内廷，历经了乾隆、嘉庆、道光、咸丰五朝。同治、光绪、宣统三朝因无皇子，上书房不再使用。</p>
+<h4 id="敬事房"><a class="header" href="#敬事房">敬事房</a></h4>
+<p>乾清门西之三间为宫殿监办事处，亦称敬事房，清康熙十六年（1677年）设。清顺治时，曾名乾清宫执事，为总管太监办事的地方。</p>
+<p>内悬挂康熙御书匾额“敬事房”。置总管、副总管，专司宫内一切事务，奏行谕旨及承办内务府各衙门一切文移。</p>
+<h4 id="南书房"><a class="header" href="#南书房">南书房</a></h4>
+<p>南书房又称南斋，位于宫殿监办事处之西，北向。</p>
+<p>清初曾为圣祖皇帝读书处，康熙十六年（1677年）设，先翰林等官员中才品兼优者入值，陪伴皇帝赋诗撰文，写字作画，名南书房。非崇班贵檩，上所亲信者不得入。康熙十六年（1677年）十二月十七日，命侍讲学士张英、内阁学士衔高士奇供奉内廷，为南书房侍从，是南书房入值之始。康熙十七年，陈廷敬、叶方蔼、王世祯等入侍，在南书房候召。</p>
+<p>皇帝偶尔会来南书房，侍从地点多在懋勤殿。</p>
+<p>南书房供奉们辰时入值，戌时出宫，陪伴康熙皇帝谈论古今、品诗书画、整理谕旨，有时奉谕拟旨。南书房是康熙为自己建立的秘书班子。南书房供奉也会随驾出行。</p>
+<p>光绪二十四年（1898年）撤销。</p>
+<h2 id="历史典故"><a class="header" href="#历史典故">历史典故</a></h2>
+<h3 id="千叟宴"><a class="header" href="#千叟宴">千叟宴</a></h3>
+<ul>
+<li>康熙五十二年（1713年），康熙皇帝六旬庆寿时，在畅春园举行千叟宴。</li>
+<li>康熙六十一年（1722年），在乾清宫分两日举行六十五岁以上的满、蒙、汉文武大臣、官员共一千余人的筵宴。</li>
+<li>乾隆五十年（1785年）正月，以登位五十年大庆，在乾清宫举行千叟宴，宴请亲王以下六十岁以上的三千余人。</li>
+<li>嘉庆元年正月初四，在宁寿全宫皇极殿举行千叟宴。</li>
+</ul>
+<h3 id="壬寅宫变"><a class="header" href="#壬寅宫变">壬寅宫变</a></h3>
+<h3 id="红丸案"><a class="header" href="#红丸案">红丸案</a></h3>
+<h3 id="移宫案"><a class="header" href="#移宫案">移宫案</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-gate-of-heavenly-purity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-palace-of-union-and-peace.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-gate-of-heavenly-purity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-palace-of-union-and-peace.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

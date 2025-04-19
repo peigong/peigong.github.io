@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾清门 - 给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-gate-of-heavenly-purity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="乾清门"><a class="header" href="#乾清门">乾清门</a></h1>
+<h2 id="知识点"><a class="header" href="#知识点">知识点</a></h2>
+<ul>
+<li>天街</li>
+<li>狮子</li>
+<li>门洞和门钉</li>
+<li>门槛</li>
+<li>清版御门听政</li>
+<li>军机处和九卿值房</li>
+</ul>
+<h2 id="互动设计"><a class="header" href="#互动设计">互动设计</a></h2>
+<ul>
+<li>看黄色琉璃瓦，数脊兽，数面阔，复习一般知识点</li>
+<li>问小朋友哪只狮子是爸爸，哪只是妈妈？</li>
+</ul>
+<h2 id="讲解点和讲解路线"><a class="header" href="#讲解点和讲解路线">讲解点和讲解路线</a></h2>
+<ul>
+<li>乾清门前
+<ul>
+<li>天街</li>
+<li>一般知识点</li>
+<li>狮子</li>
+<li>门洞和门钉</li>
+<li>门槛</li>
+<li>清版御门听政</li>
+<li>军机处和九卿值房</li>
+<li>故事传说</li>
+</ul>
+</li>
+</ul>
+<h2 id="导游词"><a class="header" href="#导游词">导游词</a></h2>
+<h3 id="乾清门前"><a class="header" href="#乾清门前">乾清门前</a></h3>
+<h4 id="天街"><a class="header" href="#天街">天街</a></h4>
+<p>小朋友们，我们从太和门开始，参观了太和殿、中和殿和保和殿，这相当于是皇帝家的客厅和办公室，跟我们的家是一样的。只不过，皇帝家的客厅和办公室稍微大一点儿，对吧？后面接下来，我们要参观的是皇帝家的卧室。是皇帝和皇后、皇子、皇孙一家人居住、休息的地方。</p>
+<p>从前院的客厅，到后院的卧室，中间的分界线，就是我们现在所在的这个小广场。这个小广场，又叫天街，把故宫前面外朝办公的地方和后面内廷皇帝一家人居住睡觉的地方分开了。</p>
+<p>小朋友们知道为什么地面上铺的是大石板吗？这是因为古时候没有运输的卡车，冬天要在石板上泼水，结冰后运输巨大的石块。</p>
+<h4 id="一般知识点"><a class="header" href="#一般知识点">一般知识点</a></h4>
+<p>我们面前的这座乾清门，是故宫内廷的正门，也是很高大威风的。小朋友们看看，乾清门的屋顶是什么颜色的？为什么是黄色琉璃瓦呢？</p>
+<p>小朋友们，大家看看乾清门的房檐上，有几个小神兽？</p>
+<p>小朋友们再看看，乾清门是几间宽的？对了，是五间宽，三间深。</p>
+<p>大家再看，把乾清门从中间切开，两这长得是不是一样的？这叫什么来着？对了，是中轴对称，那从中间切开大殿的，就是中轴线。</p>
+<h4 id="狮子"><a class="header" href="#狮子">狮子</a></h4>
+<p>门前的大狮子，虽然比太和门前的大狮子小一点，但是他是全身鎏金的，金光闪闪的。小朋友们猜猜看，哪边的是爸爸，哪边的是妈妈？</p>
+<p>大家能看出来乾清门前的铜狮子与太和殿前的铜狮子，有什么不同吗？他们的耳朵是下垂的。因为皇帝和大臣们说的小秘密，不想让狮子听到。【需实地核对】</p>
+<h4 id="门洞门钉"><a class="header" href="#门洞门钉">门洞门钉</a></h4>
+<p>乾清门是故宫内廷的正门，也是很高大威风的，也有五个门洞。小朋友们猜猜看，中间最大的门洞是谁走的？大门上也有很多金黄色的门钉。这些门钉不只是为了好看和让大门更结实，还代表着皇帝家的尊贵和威严。小朋友们猜猜看，这门横着有几个钉子，竖着有几个钉子，一共有多少个钉子？</p>
+<h4 id="门槛"><a class="header" href="#门槛">门槛</a></h4>
+<p>小朋友们注意到这个门槛了吗？高高的。猜猜为什么门坎这么高？因为皇帝要步步高升啊。</p>
+<p>以前人们进门的时候，都要特别小心的迈过去。在古时候，门槛有特别的意义，代表着家里的规格和尊严，是不能随便踩的。</p>
+<h4 id="清版御门听政"><a class="header" href="#清版御门听政">清版御门听政</a></h4>
+<p>乾清门广场就像我们学校的升旗台一样，是举行重要活动的地方。皇帝在这里接见打了胜仗的英雄、宣布大事，就像校长在升旗时讲话一样。</p>
+<p>古时候，皇帝也会在乾清门和大臣们开会，就像我们开班会、晨读一样的，就是原来在太和门开的那个班会。大臣们一大早就要在这里排队，像不像你们早上起床上学的晨读？</p>
+<p>有的大臣上奏，我最近成绩不好，妈妈就要揍我。我知道要好好学习了，皇上能不能让妈妈不揍我啊？皇帝就挥挥手说，准奏。</p>
+<p>小朋友们，上学有没有迟到过？在这里，如果大臣迟到了就会被扣工资的，有的甚至要打屁股。是不是比你们上学还要严格？</p>
+<p>如果皇帝去太和殿上朝上班，就是从这里出发的。如果你们是皇帝，从这里去上朝上班的时候，会想什么啊？</p>
+<h4 id="军机处和九卿值房"><a class="header" href="#军机处和九卿值房">军机处和九卿值房</a></h4>
+<p>内廷是皇帝的家，只有皇帝和皇帝家里的人才能进去，就是极其重要的大臣，也要在外面等着。广场东边这一排小房子，是九卿值房，是大臣们的休息室，大臣们在这里等着皇帝召见的地方。广场西边的这一排小房子，是军机处，是皇帝的秘书们的超级办公室，是皇帝和重要大臣们商量国家大事的地方。</p>
+<h4 id="故事传说"><a class="header" href="#故事传说">故事传说</a></h4>
+<p>有一次在乾清门广场上举行盛大宴会，清朝的乾隆皇帝邀请了文武百官和外国使臣。宴会上，突然刮起了一阵大风，把桌子上的蜡烛都吹灭了。乾隆皇帝不慌不忙，从袖子里掏出一块火石，当场打火点燃了蜡烛，大家都非常惊讶，没想到皇帝居然随身会带着火石。</p>
+<p>有一次皇帝在乾清门听政时，突然下起了大雨，但是皇帝仍然坚持坐在那里听大臣们汇报，因为他认为国家大事比什么都重要。</p>
+<p>清朝末年，慈禧太后曾经在乾清门广场上观看过一场精彩的马术表演，表演者骑着马在广场上奔跑跳跃，非常精彩。</p>
+<hr />
+<p>具体的互动教学案例：</p>
+<ol>
+<li>
+<p><strong>故宫小书包</strong>：这是故宫博物院面向乡村儿童发起的公益活动，包含故宫相关的绘本、读物、音频故事、动画课堂和互动游戏。 通过这些内容，孩子们可以感受到中国古人的智慧和传统文化之美。</p>
+</li>
+<li>
+<p><strong>你好呀！ 故宫</strong>：由故宫博物院与涂思美育合作推出，专为4至12岁儿童设计。 课程采用“音频+视频+艺术创作”的形式，通过音视频与手工创作互动教学，让孩子们不仅听到故宫知识、看到故宫实景，还能结合古人的美学灵感进行创作。</p>
+</li>
+<li>
+<p><strong>故宫文创儿童体验店</strong>：位于故宫博物院景仁门区域，设有“上书房”、“互动教学区”和“家长等待区”。 店内展示了百余件专门为儿童设计的故宫文创产品，提供互动教学和动手活动，如手绘瓷盘、制作朝珠等。</p>
+</li>
+<li>
+<p><strong>故宫课堂</strong>：故宫博物院与VIPKID合作，推出双语文化课程，培养全球儿童跨文化交流能力。 课程结合了线下课堂和外教互动，让孩子们在新鲜的体验中理解中国文化的特征。</p>
+</li>
+<li>
+<p><strong>故宫知识课堂</strong>：自2006年推出以来，吸引了上万名学生参与。 课程内容涵盖建筑、文物、历史等多个方面，如“仰望太和殿”、“珍宝的故事”等，激发孩子们对故宫的兴趣。</p>
+</li>
+<li>
+<p><strong>故宫儿童学艺中心</strong>：专为5至12岁儿童设立的艺术学习空间，设有环形剧场、互动展示区和教育特展区。 孩子们可以通过观察、思考、动手和游戏等方式，亲近了解故宫文物。</p>
+</li>
+<li>
+<p><strong>故宫游学活动</strong>：幼儿园和学校组织的故宫游学活动，结合绘本、故事和文创产品，让孩子们在实地参观中学习故宫的历史文化。</p>
+</li>
+<li>
+<p><strong>数字故宫</strong>：故宫博物院的官方网站设有青少年版本，提供互动视频、游戏和收藏馆等内容。 微信小程序“数字故宫”也提供了实景游览和文物欣赏资源。</p>
+</li>
+<li>
+<p><strong>编程游戏《召唤神兽》</strong> ：基于AISpark的编程游戏化教学改革案例，以故宫为题材，设计了一系列编程小游戏，通过游戏激发学生的学习兴趣，并巩固相关知识。</p>
+</li>
+</ol>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-hall-of-preserving-harmony.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-palace-of-heavenly-purity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-hall-of-preserving-harmony.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-palace-of-heavenly-purity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

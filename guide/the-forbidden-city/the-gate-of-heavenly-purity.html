@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾清门 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-gate-of-heavenly-purity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="乾清门"><a class="header" href="#乾清门">乾清门</a></h1>
+<p>乾清门为紫禁城内廷的正门。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="乾清门-1"><a class="header" href="#乾清门-1">乾清门</a></h3>
+<p>乾清门建于明永乐十八年（1420年），清沿明制，于顺治十二年（1655年）重修。</p>
+<h3 id="景运门"><a class="header" href="#景运门">景运门</a></h3>
+<h3 id="隆宗门"><a class="header" href="#隆宗门">隆宗门</a></h3>
+<h2 id="建筑特点"><a class="header" href="#建筑特点">建筑特点</a></h2>
+<h3 id="乾清门-2"><a class="header" href="#乾清门-2">乾清门</a></h3>
+<p>乾清门面阔五间，进深三间，单檐歇山顶，坐落在 1.5 米高的的汉白玉须弥座上，周围环以雕石栏杆。</p>
+<p>门前三层台阶，各九级，中为御路，前绕白石栏杆。两侧列瑬金铜狮子一对。中开三门，门扉安设在后檐部位，门厅敞亮。两梢间为青砖槛墙，方格窗。</p>
+<p>门两侧是八字形琉璃影壁，两端接宫墙。壁心及岔角以琉璃花装饰，琉璃顶及须弥座。影壁心饰以缠枝宝相花，四岔角饰菊花、牡丹花。宫墙下摆放着铜缸、路灯。门内有高台甬路连接乾清宫月台。</p>
+<h3 id="景运门-1"><a class="header" href="#景运门-1">景运门</a></h3>
+<h3 id="隆宗门-1"><a class="header" href="#隆宗门-1">隆宗门</a></h3>
+<h2 id="建筑用途"><a class="header" href="#建筑用途">建筑用途</a></h2>
+<h3 id="乾清门广场"><a class="header" href="#乾清门广场">乾清门广场</a></h3>
+<p>广场北侧正中为乾清门，东为内左门，西为内右门。内右门外西侧宫墙之下，为侍卫房、军机处、内务府等值房。</p>
+<p>乾清门广场东面内左门与景运门之间的值房（值庐），为内奏事处（收接大臣们的奏折）以及侍卫大臣和文武官员的用房，为蒙古王公及九卿值房，是文武大臣奏事等待召见的地方。西面内右门与隆宗门内北侧排房为军机处办公处。</p>
+<p>广场两端东为景运门，西为隆宗门。景运门内南侧为奏事待漏所，隆宗门内南侧为军机章京值房。</p>
+<p>广场南侧中为保和殿后陛，及后左门、后右门。</p>
+<p>乾清门广场宽阔、平坦，是外朝内廷的分界线，也是紫禁城内东西联系的主要通道。</p>
+<h3 id="乾清门-3"><a class="header" href="#乾清门-3">乾清门</a></h3>
+<p>大祀前，皇帝进行斋戒（亦称戒斋），斋戒首日黎明，太常寺卿等将斋戒牌、斋戒铜人恭设于乾清门内左侧，清朝沿袭了明朝的惯例。</p>
+<p>乾清门在清代兼为处理政务的场所，清代自康熙年始在此御门听政。此后，斋戒、请宝、接宝等仪式都在乾清门举行。</p>
+<p>皇帝召见满汉大臣由乾清门出入，太监带领太医院值班御医走乾清门。军机大臣和年老的文武大臣准由内右门出入，造办处官员进内接活，也可由内右门走。内左门则常闭不开。</p>
+<p>皇帝前往慈宁宫向皇太后问安行礼，走隆宗门。御奉先殿祭祀及往宁寿宫，走景运门。</p>
+<p>皇帝崩逝，梓宫经由乾清门、景运门出东华门。</p>
+<h3 id="军机处"><a class="header" href="#军机处">军机处</a></h3>
+<p>雍正七年（1729年），雍正皇帝以西北用兵军情告急，设立军机房，三年后改称办理军机处。</p>
+<p>军机处实际上是皇帝直接控制的、得力的、高效率的工作班子，增强皇权，削弱内阁的职权。</p>
+<p>军机处的主要职责是承旨书谕（恭拟上谕）、奉旨议政、处理要奏、奉旨钦差、举荐官员、督察科举等。</p>
+<p>宣统三年（1911年）内阁成立，雍正设立并传之多代的军机处撤销了。</p>
+<h3 id="景运门-2"><a class="header" href="#景运门-2">景运门</a></h3>
+<h3 id="隆宗门-2"><a class="header" href="#隆宗门-2">隆宗门</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-hall-of-preserving-harmony.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-palace-of-heavenly-purity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-hall-of-preserving-harmony.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-palace-of-heavenly-purity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

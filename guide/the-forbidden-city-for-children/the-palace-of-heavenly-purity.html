@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾清宫 - 给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">给小朋友讲故宫 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-palace-of-heavenly-purity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="乾清宫"><a class="header" href="#乾清宫">乾清宫</a></h1>
+<h2 id="知识点"><a class="header" href="#知识点">知识点</a></h2>
+<ul>
+<li>上书房</li>
+<li>乾清宫名称</li>
+<li>宝座</li>
+<li>正大光明匾</li>
+<li>卧室</li>
+<li>壬寅宫变</li>
+<li>康熙皇帝的学习和工作</li>
+<li>千叟宴</li>
+</ul>
+<h2 id="互动设计"><a class="header" href="#互动设计">互动设计</a></h2>
+<blockquote>
+<p>采用 <strong>“3+1”模式</strong>：3个核心知识点 + 1个互动环节，总时长控制在30分钟内，符合小学生注意力集中规律。</p>
+</blockquote>
+<ul>
+<li>看黄色琉璃瓦，数脊兽，数面阔，复习一般知识点</li>
+</ul>
+<h2 id="讲解点和讲解路线"><a class="header" href="#讲解点和讲解路线">讲解点和讲解路线</a></h2>
+<ul>
+<li>乾清门内
+<ul>
+<li>上书房</li>
+<li>乾清宫名称</li>
+<li>一般知识点</li>
+</ul>
+</li>
+<li>乾清宫殿前
+<ul>
+<li>宝座</li>
+<li>正大光明匾</li>
+<li>卧室</li>
+</ul>
+</li>
+<li>乾清宫殿前空地
+<ul>
+<li>壬寅宫变</li>
+<li>康熙皇帝的学习和工作</li>
+<li>千叟宴</li>
+</ul>
+</li>
+</ul>
+<h2 id="导游词"><a class="header" href="#导游词">导游词</a></h2>
+<h3 id="乾清门内"><a class="header" href="#乾清门内">乾清门内</a></h3>
+<h4 id="上书房"><a class="header" href="#上书房">上书房</a></h4>
+<p>大家看，乾清门东侧，坐南朝北的一排房子，就是上书房。上书房是皇帝的儿子、孙子，以及皇帝亲戚家的小朋友们，来上学读书的地方。</p>
+<p>皇子们从六岁开始读书，就像我们上小学一样的。早上五点开始上课，是不是比小朋友们的晨读还要早啊？七点半吃早饭，十二点的时候吃午饭。</p>
+<p>重要节日不开课，学生生日不上学。我们现在也是重要节日的时候，学校会放假不上课。小朋友们过生日的时候，是不是也必须要去学校上课的？</p>
+<p>我们小朋友的小学是五年毕业，还是六年毕业的？在上书房读书的皇子皇孙们，可没有毕业的概念，有一位清朝的皇帝和他的弟弟，在上书房读书读了二十多年。</p>
+<h4 id="乾清宫名称"><a class="header" href="#乾清宫名称">乾清宫名称</a></h4>
+<p>前面就是乾清宫，这个名字可大有来头的，寓意国家安定和皇帝的公正廉洁。乾的意思是天，象征着皇帝的权力是上天赐予的，皇帝代表老天爷管理天下。清的意思是清澈、安宁，表示皇帝希望自己的国家安定，百姓生活富足。就像我们生活的城市，如果天空湛蓝、河水清澈，大家开开心心地生活在没有污染的环境里。</p>
+<p>乾清宫是一个超级神秘，又超级厉害的地方，就像是一个超级大卧室兼超级大办公室。古时候，皇帝在这里吃饭、睡觉、写作业。只不过皇帝的作业是批改奏折，管理国家等重要的事情。当皇帝有一个好处，就是躺下就可以睡觉，站起来就算是上班了。</p>
+<h4 id="一般知识点"><a class="header" href="#一般知识点">一般知识点</a></h4>
+<p>小朋友们看看，乾清宫的屋顶是什么颜色的？为什么是黄色琉璃瓦呢？</p>
+<p>小朋友们，大家看看乾清宫的房檐上，有几个小神兽？对，是九只。在故宫里，这是第几等级的啊？</p>
+<p>小朋友们再看看，乾清宫是几间宽的？对了，是九间宽，五间深。</p>
+<p>大家再看，把乾清宫从中间切开，两这长得是不是一样的？这叫什么来着？对了，是中轴对称，那从中间切开大殿的，就是中轴线。</p>
+<h3 id="乾清宫殿前"><a class="header" href="#乾清宫殿前">乾清宫殿前</a></h3>
+<h4 id="宝座"><a class="header" href="#宝座">宝座</a></h4>
+<p>屋里正中间就是皇帝的宝座，特别大，上面还有好多精美的雕刻。皇帝就坐在这个宝座上，处理国家的大事，是不是蛮威风的？</p>
+<p>如果你们是皇帝，会在宝座旁边放上什么玩具？</p>
+<h4 id="正大光明匾"><a class="header" href="#正大光明匾">正大光明匾</a></h4>
+<p>宝座上面这个大的匾额，写的是“正大光明”四个大字，是由顺治、康熙、乾隆三位皇帝合作完成，象征公正与正义，反映了皇帝治理国家的理念。皇帝这是提醒自己，要做一个公正的、光明的好皇帝。</p>
+<p>每年冬至正中午的时候，正大光明匾的四个大字和下面的五个金龙，依次会被阳光点亮。</p>
+<p>从清朝的雍正皇帝开始，皇帝想让谁当太子将来继承他的皇帝宝座，就把他的名字写好，放在一个秘密盒子里，藏在大匾的后面。等他去世后，大家打开盲盒，一看就知道谁是下一任的皇帝了。乾隆皇帝等四位皇帝，都是通过这个皇帝版的时间胶囊继位当的皇帝。</p>
+<p>如果是你们，会把谁当下一个皇帝的秘密，藏在什么地方？</p>
+<h4 id="卧室"><a class="header" href="#卧室">卧室</a></h4>
+<p>皇帝睡觉的地方，叫暖阁。乾清宫有暖阁九间，分为上下两层，每间有三张床，共27张床，皇帝可以随意换床睡觉。每一张床都很大，床上有很漂亮的被子和枕头。皇帝每天就是在这里睡觉，做着当皇帝的美梦呢？你们觉得皇帝会做什么梦，会不会做当皇帝的美梦？</p>
+<p>小朋友，你们说皇帝冬天的时候怎么取暖啊？大殿的地底下是有地暖的，只不过是烧炭火取暖，和我们现在的暖气不一样。</p>
+<h3 id="乾清宫殿前空地"><a class="header" href="#乾清宫殿前空地">乾清宫殿前空地</a></h3>
+<h4 id="壬寅宫变"><a class="header" href="#壬寅宫变">壬寅宫变</a></h4>
+<p>小朋友们，你们觉得在这里边睡觉安全不安全？应该是挺安全的。但是，在明朝的嘉靖皇帝的时候，有一天晚上，一群宫女想刺杀皇帝，但是最后没有成功。这个故事告诉我们，乾清宫不但是皇帝工作生活的地方，还发生过许多惊心动魄的事情。</p>
+<h4 id="康熙的学习和工作"><a class="header" href="#康熙的学习和工作">康熙的学习和工作</a></h4>
+<p>清朝的时候，小皇帝康熙就住在乾清宫旁边的宫殿里。康熙皇帝可是很勤奋的，每天都会到乾清宫来向他的父亲顺治皇帝的画像行礼，然后就开始学习。</p>
+<p>康熙皇帝长大后，就经常在乾清宫里听大臣们汇报工作，和大臣们商量怎么让国家变得更好。有时候，康熙皇帝会一直忙到很晚，当皇帝其实也挺辛苦的。</p>
+<p>那时候又没有电灯，只能点蜡烛，所以皇帝晚上批奏折写作业，眼睛还是会很累的。</p>
+<h4 id="千叟宴"><a class="header" href="#千叟宴">千叟宴</a></h4>
+<p>说到了康熙皇帝。在清朝的康熙和乾隆年间，还曾在乾清宫举办过千叟宴，就是皇帝请上千个老头儿在这里一块吃饭。</p>
+<p>这么多人吃饭，在乾清宫坐的下吗？坐不下怎么办呢？</p>
+<p>这么多人吃饭，饭菜很容易凉。小朋友，如果是你们，会让这些老头儿们吃什么啊？对了，涮火锅就很好，可以让老头儿们吃得很舒服，也一直是热乎的。</p>
+<p>乾隆皇帝的时候，在这里请三千位老头儿吃饭后，还给每个人发了一个退休大礼包，里面是如意和朝珠。如意就是金刚葫芦娃里面，如意如意称我心意的那个如意。朝珠就是电视剧里演的，清朝的大官脖子上挂的，像项链一样的一串珠子。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-gate-of-heavenly-purity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-palace-of-union-and-peace.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-gate-of-heavenly-purity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-palace-of-union-and-peace.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
