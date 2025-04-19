@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "祡禁城 - VET.周培公(https://pg.js.cn)"
+
+[build]
+build-dir = "../../public/guide/the-forbidden-city"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/the-forbidden-city/"
+cname = "pg.js.cn"

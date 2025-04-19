@@ -1,0 +1,12 @@
+{
+  "name": "prince-gongs-mansion",
+  "version": "1.0.0",
+  "description": "恭王府",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

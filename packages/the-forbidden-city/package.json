@@ -1,0 +1,12 @@
+{
+  "name": "the-forbidden-city",
+  "version": "1.0.0",
+  "description": "祡禁城",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

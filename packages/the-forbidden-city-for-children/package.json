@@ -1,0 +1,12 @@
+{
+  "name": "the-forbidden-city-for-children",
+  "version": "1.0.0",
+  "description": "给小朋友讲故宫",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

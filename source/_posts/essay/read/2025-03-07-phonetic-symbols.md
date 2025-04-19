@@ -13,6 +13,8 @@ updated: 2025-03-07 00:00:00
 
 r + 元音，多个“**若**”：your eyes -> your (**若**) eyes
 
+<!-- more -->
+
 l + 元音，多个“**了**”：double of -> double (**了**) of
 
 t + 元音，变成“**的**”：so it is -> so i(**的**) is
