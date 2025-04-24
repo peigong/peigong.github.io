@@ -1,0 +1,12 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "动物园",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
