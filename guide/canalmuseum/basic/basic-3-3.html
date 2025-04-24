@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>（金）海陵王完颜亮 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-3-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="金海陵王完颜亮"><a class="header" href="#金海陵王完颜亮">（金）海陵王完颜亮</a></h1>
+<p>完颜亮（1122年2月24日—1161年12月15日），字元功，本名迪古乃，会宁府（今黑龙江省哈尔滨市阿城区）人。金朝第四位皇帝、文学家。金太祖完颜旻之孙，太师完颜宗干次子，母为大氏。</p>
+<p>天眷三年（1140年），完颜亮以宗室子官至奉国上将军。皇统四年（1144年），加封为龙虎卫上将军。后升任尚书右丞、平章政事、右丞相。皇统九年（1149年），完颜亮杀金熙宗自立，改元天德。完颜亮在位期间，采取了一系列推进女真社会发展和金朝封建化的措施，为金朝的持续发展打下了良好的基础。贞元元年（1153年），将都城从上京会宁府迁至燕京，改称中都。正隆元年（1156年），迁葬始祖以下诸帝至大房山。正隆二年（1157年），毁上京旧宫殿和贵族府第及储庆寺。</p>
+<p>正隆六年（1161年），完颜亮意图统一华夏，发大军南征南宋，在瓜洲渡江作战时死于完颜元宜等人手中，时年四十岁。死后先被追废为海陵炀王，不久被废为庶人。
+完颜亮喜读书，有文才，工于诗词，史称“一咏一吟，冠绝当时”。代表作有《待月》，还著有《书壁述怀》《咏道驿竹》《过汝阴作》《题画屏》。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="初出茅庐"><a class="header" href="#初出茅庐">初出茅庐</a></h3>
+<p>完颜亮自幼聪敏好学，汉文化功底甚深，他雅歌儒服，能诗善文，又爱同留居于金地的辽宋名士交往。品茶弈棋，谈古论今，成为文韬武略兼备，且神情闲逸，态度宽和之人。</p>
+<p>完颜亮生性风流倜傥，志大才高，能言善辩，喜怒不形于色，而且极能揣摩人的心理。金熙宗深忌其才，恐为后患，未敢大用。</p>
+<p>天眷三年（1140年），完颜亮十八岁时以宗室子为奉国上将军，赴梁王完颜宗弼（兀术）军前任使，管理万人，迁骠骑上将军。</p>
+<p>皇统四年（1144年），完颜亮加龙虎卫上将军，为金朝中京（位于今北京一带）留守，迁光禄大夫。</p>
+<p>皇统七年（1147年）五月，金熙宗召完颜亮入当时的金朝首都上京（今黑龙江省哈尔滨市阿城区内）为同判大宗正事，加特进。十一月，拜尚书左丞，把持了权柄，安插自己的心腹担任要职，其中萧裕成为兵部侍郎。十一月某日和金熙宗谈话时，谈到金太祖创业艰难，完颜亮痛哭流涕，熙宗认为他很忠心。</p>
+<p>皇统八年（1148年）六月，拜平章政事。十一月，拜右丞相。</p>
+<p>皇统九年（1149年）正月，兼都元帅。三月，拜太保、领三省事，更加八面玲珑，和有权势家族来往密切，结其欢心。</p>
+<h3 id="弑君篡位"><a class="header" href="#弑君篡位">弑君篡位</a></h3>
+<p>皇统九年（1149年），金熙宗已经对完颜亮突然膨胀的势力有所不满。正月，金熙宗派寝殿小底大兴国以宋司马光画像及其它珍玩赐完颜亮生日礼物，悼平皇后裴满氏也附赐礼物，结果引起金熙宗不悦，罚小底大兴国一百杖，追回其赐物，完颜亮知道后由此不安。四月，学士张钧起草诏书时擅自改动，被查出处。金熙宗问是谁指使的，左丞相完颜宗贤回答说是太保完颜亮。金熙宗不悦，遂贬完颜亮，降为到汴京（今河南开封）领行台尚书省事。完颜亮路过中京时，和那里的兵部侍郎萧裕密谋定约而去。走到良乡，又被熙宗召还。完颜亮不知熙宗的意图，非常恐惧。回到上京，又恢复为平章政事，但完颜亮反意已决。当初，当金熙宗以金太祖的嫡孙身份嗣位时，完颜亮认为自己是金太祖长子完颜宗干的儿子，也是金太祖的孙子，所以对皇位心怀觊觎。</p>
+<p>早在皇统七年（1147年），金熙宗就开始胡乱发脾气杀人，比如赐宴时因为一些小事滥杀无辜，引起朝臣的不满。皇统八年（1148年）七月，以驸马尚书左丞唐括辩奉职不谨，杖之。皇统九年（1149年）八月，杖平章政事完颜秉德。对金熙宗不满的人即有废立的想法，唐括辩、完颜秉德先和大理卿完颜乌带（完颜言）谋划废掉熙宗，而乌带就此引入完颜亮。完颜亮与唐括辩密谋废立，问到若废熙宗，可以立谁继位？唐括辩与秉德初意并不在完颜亮。唐括辩说胙王完颜常胜（完颜元）似乎可以。完颜亮再问其次是谁，唐括辩说邓王完颜奭（shì）之子完颜阿楞可以。完颜亮反驳说阿楞不行。唐括辩反问：“公难道有称帝的意愿吗？”完颜亮说：“这是迫不得已，舍我其谁！”不久完颜亮和唐括辩等旦夕密谋，引起了护卫将军完颜特思的怀疑。特思告诉了悼平皇后裴满氏，因此金熙宗得知。金熙宗发怒召唐括辩并杖之。完颜亮因此非常忌讳完颜元、完颜阿楞，并且极其讨厌完颜特思。</p>
+<p>正好当时河南有兵士孙进冒称皇弟按察大王，而金熙宗之弟只有完颜元和完颜查剌。金熙宗怀疑是完颜元，派完颜特思调查，却什么结果也没有。完颜亮乘机诬陷，金熙宗深以为然，派唐括辩、萧肄拷问完颜特思，完颜特思被逼招认，完颜元于是获罪。十月，杀完颜元，一并连完颜查刺、完颜特思、完颜阿楞以及阿楞弟完颜挞楞一起杀掉。这样一来，金熙宗杀光了自己的亲兄弟，更加孤立。</p>
+<p>皇统九年（1149年）十二月，要废熙宗的人已经结党行事。从前因送礼一事被杖责一百的大兴国，因为和完颜亮的心腹尚书省令史李老僧是亲戚，于是和完颜亮结党，当时正在伺候熙宗在寝殿内的起居生活，总是有意无意地乘夜从主事者那里带皇宫钥匙回家，大家习以为常。护卫十人长仆散忽土要报答完颜亮之父完颜宗干的旧恩，徒单阿里出虎是完颜亮的姻亲。十二月九日丁巳，此二人值班之夜，大兴国用皇宫钥匙打开所有宫门，和完颜亮、秉德、唐括辩、乌带、徒单贞、李老僧至寝殿。金熙宗本来常置佩刀于床上，这天夜里大兴国先取之放到床下，等到事发，熙宗求佩刀不得，遂遇弑。众人拜完颜亮为皇帝，时年27岁，改皇统九年为天德元年。并假称金熙宗想要商议立后，召众大臣入宫，杀曹国王完颜宗敏、左丞相完颜宗贤。</p>
+<p>完颜亮在上台后的第二年就向宗室开刀，领行台尚书省事完颜秉德、东京留守完颜宗懿、北京留守完颜卞以及金太宗子孙七十余人、宗翰子孙三十余人、其他宗室五十余人被杀。久握重兵在外的宿将老臣完颜撒离喝也被杀。后来又杀死了亡辽耶律氏、宋赵氏子男一百三十余人。</p>
+<p>完颜亮不但杀宗室大臣，而且还把他的嫡母徒单氏也杀了。徒单氏是宗干的嫡妻，完颜亮的生母大氏是妾，在平时的生活中就得看徒单氏的眼色行事，大氏“事之甚谨，相得甚欢”，通过小心谨慎，来换得表面上的平等关系。对此，完颜亮看得十分清楚，对徒单氏耿耿于怀。</p>
+<p>1161年完颜亮要调集大军伐宋，徒单太后竭力反对。想想年少时就受其气，完颜亮脱口就骂：“非朕母，乃梁宋国王之小妻也。”接着派遣大怀忠、习失、高福等人将太后杀戮于宁德宫，并将太后侍婢十余人一并灭口。杀死了太后还觉得不过瘾，又投其骨于水，几近疯狂的地步。</p>
+<h3 id="迁都燕汴"><a class="header" href="#迁都燕汴">迁都燕汴</a></h3>
+<p>金灭北宋后，与南宋划淮为界，占有中原和中国北部的疆土。金朝威服高丽、西夏等国，所辖地域广袤，而首都却偏于东北一隅，物资运输与公文传递多有违误，使节往来艰于行旅，致使政令无法及时畅达内外。早在金熙宗皇统八年（1148年）时问题就已暴露，尚书省的选举等事务因为上京偏僻，决定改到燕京进行。同时海陵王在大肆杀戮行台尚书省官员后罢废了行台，也就需要改变金熙宗时期以汴京行台统治中原的方式，将统治中心进一步南迁以适应其加强对中原统治的需要。</p>
+<p>完颜亮登基后向百官求言，当时上封事者大多再次在陈言中强调会宁府“僻在一隅，官难于转输，民艰于赴诉”，应该迁都到燕山府的建议，很合完颜亮的意。于是他命张浩、卢彦伦等人在燕京原有的基础上进行扩建和改建，用了百万级的劳力，历时三年，终于将燕京城建完。从天德三年下诏开始营建，到了贞元元年（1153年）其终于自中京来到燕京，改燕京为中都，府曰大兴，汴京开封府为南京，中京大定府为北京。此举一定程度上加速了女真的封建化及与汉族的融合。</p>
+<p>正隆二年（1157年）八月，完颜亮下令撤销上京留守司衙门，罢上京称号，只称会宁府，派吏部郎中萧彦良来会宁府督办，毁掉了旧宫殿、宗庙、诸大族宅第及皇家寺院储庆寺，接着把它夷为平地，听任耕种，不留任何痕迹。</p>
+<p>正隆三年，完颜亮又准备迁都汴京，命左丞相张浩、参知政事敬嗣晖前往营建南京开封府的宫室，虽然张浩反对在民力尚未恢复时继续进行这样的大工程，但海陵仍一意孤行。之后几年在营建宫室的同时先将榷货务搬迁到汴京，又将尚书省、枢密院以下的百官都调到南京处理政事，只有吏、户、兵、刑部，四方馆，都水监，大理司官各仅留一员在中都，再次进行了政治中心的转移，并作为对宋南征的准备但营建南京的过程极其奢侈，耗费了大量的人力物力，也给各地百姓造成了巨大负担，和南征军队物资的巨大消耗一起引发了巨大的破坏和百姓的不满。</p>
+<h3 id="荒淫无度"><a class="header" href="#荒淫无度">荒淫无度</a></h3>
+<p>完颜亮荒淫好色，曾对大臣高怀贞说他的志向：“吾有三志，国家大事，皆我所出，一也；帅师伐远，执其君长而问罪于前，二也；无论亲疏，尽得天下绝色而妻之，三也。”</p>
+<p>贵妃定哥长得花容月貌，原是崇义节度使乌带的妻子，早年曾与完颜亮有私情。乌带镇守边疆，每逢佳节或完颜亮生辰，都派家奴葛鲁、葛温诣阙上寿，定哥也派侍婢贵哥前去问候。完颜亮通过贵哥给定哥带话：“自古天子就有两个皇后的，能把你的丈夫杀掉跟着我吗？”贵哥回去后，将完颜亮的话告诉了定哥。定哥叹道：“年轻时，君王太不老实了，做出了令人羞愧的事情。现在儿女都已经长大成人，怎能再像年轻时那般胡闹！”完颜亮知道后，心生一计，派人对定哥说：“你不忍心干掉你的丈夫，我将族灭你们全家。”定哥仍然不为所动。一次，乌带喝醉了酒，完颜亮授意葛鲁、葛温将他缢杀，却猫哭老鼠假慈悲。乌带下葬后不久，他就迫不及待地纳定哥为娘子，后进封为贵妃，常与她一同乘车游览瑶池，其他妃嫔都徒步跟从。</p>
+<p>丽妃石哥是定哥的妹妹、秘书监文的妻子。海陵王见她秀美，早已魂不守舍，想把她纳到宫中。他对文的庶母按都瓜说道：“你一定要休掉你的儿媳妇，否则的话我会采取别的行动。”按都瓜把海陵王的话告诉了文，文心里非常难过。按都瓜叹息道：“陛下说要采取别的行动，就是要杀你，怎能因为一个妻子而招致杀身之祸呢?”夫妻二人拥抱在一起，痛哭而别。完颜亮如愿以偿，但仍不满足。他把文招至便殿，派石哥说些污言秽语来羞辱文，以此为笑谑。</p>
+<p>昭妃阿里虎初嫁阿虎迭，生女重节，重节有羞花闭月之貌，海陵王禁不住内心的骚动，跟她在—起淫乱。阿里虎知道后，极为震怒，掌击重节，惹得完颜亮非常不高兴，大杀宗室后，完颜亮把妇女们都释放了，因为她们中不少人都有美色：他想把她们纳入宫中，就派人对大臣萧裕说：“朕的后代还不够多，这些妇女中有朕的亲戚，把他们纳入宫中怎么样？’萧裕回答道：“最近大杀宗室，朝廷内外议论纷纷，为什么还要做这种事情呢，”可是完颜亮不达目的决不罢休，萧裕也只好赞同。</p>
+<h3 id="四路征宋"><a class="header" href="#四路征宋">四路征宋</a></h3>
+<p>正隆六年（1161年）十月，完颜亮兵分四路，对南宋发动全面进攻。一路自海道进攻临安；一路自蔡州（今河南汝南）出发，进攻荆州（今湖北江陵）；一路由凤翔进攻大散关（今陕西宝鸡西南），待命入川。他亲自率领三十二总管兵，进军寿春（今安徽凤台）。金军“众六十万，号百万，毡帐相望，钲鼓之声不绝，远近大震。”</p>
+<p>战争初期，金兵进展顺利。汉南道刘萼部攻取宋归化军、蒋州、信阳军。别部徒单贞领兵二万人，大败宋建康都统王权于盱眙，进取扬州。前锋军连败宋军，攻占和州（今安徽和县）。他到和州指挥作战。宋军来战，兵部尚书耶律元宜击退宋军，斩首数万，宋军退保江南。</p>
+<p>十一月二日，完颜雍登位的消息传到前线，军心动摇，加之有三路水军被宋军击败，至此己军无斗志。</p>
+<p>就完颜亮的性格而言，绝不肯在败时无功而返，因此他决定先取南宋或至少胜利渡过长江，捞回个"面子"后，再北上与完颜雍抗衡。于是金军自和州渡江攻宋，宋将虞允文大败金朝水师于采石矶，战船全被宋军烧毁。金军伤亡惨重，海陵被迫移驻瓜州渡。完颜雍称帝和采石之战的溃败，使完颜亮觉得更没面子了，他仍无退意。</p>
+<h3 id="叛乱四起"><a class="header" href="#叛乱四起">叛乱四起</a></h3>
+<p>从正隆四年（1159年）起，完颜亮为了发动对宋战争，大规模征兵，制造兵器和战船，在各地区大规模征调马匹，与此同时还进行南京的修建工程，于是各族百姓开始反抗他的暴政，开始出现小规模的盗贼并被镇压。之后两年反抗愈演愈烈，次年三月东海县发生张旺、徐元的起义，六月才被派去增援的金军平定。而完颜亮继续命人对汉人进行签军并征调水手，于是山东、河东、河北、中都等路仍然不断爆发反抗，完颜亮不得不派人到这些地区组织镇压。正隆六年（1161年），完颜亮正式开始进行南征的同时，各地义军的规模也不断扩大，形成了“大者连城邑，小者保山泽”的情形，而完颜亮厌恶反叛者，也不让臣下提起有关义军的事，自顾自地命令大军继续南征。当时在北方，契丹诸部因不满完颜亮的征调发动了叛乱，攻陷了咸平府，势力不断扩大，完颜亮派出的讨伐军作战不利，于是愤怒地诛杀了几个派去的将领。完颜亮的从弟，被完颜亮起用为东京留守参与镇压契丹的完颜雍，也在契丹军势力逼近东京后，在逃回金军的拥戴下于东京（辽阳）称帝。</p>
+<p>在中原地区，杜奎发动起义占据单州，被称为王九的王友直攻占了大名府。很多义军投降南宋成为南宋的忠义人配合南宋作战，如魏胜占据海州，王宏杀掉金将以兰州投降南宋，杜海等人被宋将武矩招纳参与对金作战，孟俊攻取顺昌府等，在山东地区，以耿京、开赵等为首的义军也与宋将李宝互相声援，进攻济州、密州等地，向南宋纳款。</p>
+<p>南征开始后由于完颜亮征调走了绝大多数军队，各地的州县官吏面对义军的攻击大都无力镇压，只能通过修筑城墙等方式来防守，无力反击，南征军运输的道路在义军的攻击下也变得十分艰难。</p>
+<p>与此同时，完颜亮派出的南征军内部军心也十分不稳，很多军士都想逃归，逃兵的队伍在道路上接连不断，有的南征军士兵还想劫夺将领的指挥权，而山东的南征军则有一部分在获得兵器后即前往东京拥立完颜雍，试图结束完颜亮的统治。</p>
+<h3 id="惨遭缢杀"><a class="header" href="#惨遭缢杀">惨遭缢杀</a></h3>
+<p>正隆六年（1161年）十一月二十六日，完颜亮集中兵力，勒令将士说：“三日渡江不得，将随军大臣尽行处斩。”这就激起了兵变，兵马都统领耶律元宜与其子王祥和都总管徒单守素、猛安唐括乌野等联兵反叛，与完颜亮近卫军将士共谋，于次日拂晓发动兵变，完颜亮闻变，以为是宋军劫营，急忙起身穿衣。这时一支箭射入帐内，他拿起一看，很吃惊地说：“这是我的兵器啊。”刚伸手取弓，便中箭倒地。叛将纳合斡鲁补上前刺杀，完颜亮中剑后手足犹动，叛将们缢杀了他。耶律元宜代行左领军副大都督事，率军北还。完颜亮被以庶人之礼安葬。</p>
+<p>大定二年（1162年）四月，降封为海陵郡王，谥号为炀，所以又称海陵炀王，葬于大房山鹿门谷诸王的墓地中。</p>
+<p>大定二十一年（1181年）正月，由于为海陵王所弑的金熙宗于大定十九年供入太庙，完颜亮又再被降为海陵庶人，改葬于山陵西南四十里。今北京市房山区有海陵王陵。</p>
+<h2 id="为政举措"><a class="header" href="#为政举措">为政举措</a></h2>
+<h3 id="政治"><a class="header" href="#政治">政治</a></h3>
+<h4 id="体制改革"><a class="header" href="#体制改革">体制改革</a></h4>
+<p>完颜亮即位后，把金熙宗期间的"三省六部制"改为"一省六部制"。首先，弱化三师、三公兼领三省事，将其变为最高荣职，只给奉禄，不给权力。在正隆初年，最终废掉了三师、三公兼领三省事。第二，实行一省制，在正隆元年（1156年）废除中书省、门下省，只保留尚书省。尚书省直接由皇帝控制，作为中央政权最高执行机构。第三，取消行台尚书省。第四，废除元帅府，改为枢密院，以此来改变都元帅掌重兵，中央难以指挥的局面。海陵王通过对官制的改革，确立了"一省六部制"的中央官制，机构精简、效率倍增、协同共事、互为制约，更加有利于君主集权制。海陵罢去中书门下止置尚书省的改制终金之世未尝再变。</p>
+<p>除此之外，完颜亮还恢复了辽制登闻检院，以供民众得以就尚书省行事之不当进行检举。登闻检院自唐朝开创，五代后唐庄宗时再度启用，延续至宋辽之际，直至女真入主中原方才废弃。完颜亮这次恢复登闻检院，一方面保障尚书省的权力不会因此过度庞大，另一方面给与百姓与政府上层就政事进行交流的通道，并帮助了海陵王及金章宗的汉化改革，保证了廉政。后元明人士就事论之，叹金检院明古之风，尤胜宋六院。</p>
+<h4 id="用人制度"><a class="header" href="#用人制度">用人制度</a></h4>
+<p>完颜亮不看背景家室，大批起用渤海、契丹、汉人人才，无论贵寒，以扩大政权的基础，巩固统治。</p>
+<p>但其任用佞幸、宦官干政，亦造成了相当的负面影响，如张仲轲为谏议大夫不进谏言却怂恿其南征，梁珫在营建宫室时极端铺张浪费，却连丞相张浩都不敢劝阻。</p>
+<p>其在位末期还因在契丹反叛中镇压不力而对契丹官员大开杀戒，导致契丹人在朝廷中地位逐渐降低。</p>
+<p>天德三年（1151年），罢世袭万户职，设置节度使。世袭万户所辖户数不下数万，与留守总管无异，却又是世袭，权力更超过留守总管，此举改变了当地贵族“子孙相继”，专揽威权状况。</p>
+<p>天德二年，恢复殿试制度，更定考试日期。天德三年，完颜亮效仿古中原王朝制度，设国子监以教育生员，并重新改革科举考试，罢去经义、策试科，专以词赋取士合并南北二选为一。贞元元年（1153）制定贡举程试条理格法。正隆元年，下令从《五经》、《三史》正文内出题，开始定为三年一辟并创立监考院，用于监督科举。</p>
+<p>但海陵王合并南北二选的同时将总计二百五十人的录取名额降低到六七十人，导致县令等官员阙员。</p>
+<p>完颜亮还屡次亲自监督殿试，并自身上台出题乃至解题，其思颇妙，每言及国家大事尝自感慨而言语恳切，一时也传做佳闻。</p>
+<h4 id="法律制定"><a class="header" href="#法律制定">法律制定</a></h4>
+<p>完颜亮一朝非常重视律法的改革。金朝自太祖之鞭策中原，一直到太宗，熙宗朝都主要沿用本民族习惯法，谓呼“法制简易，无轻重贵贱之别”。等到熙宗朝后期方才制定了金朝的首件成文公制《皇统制》，然而其中虽然参考了隋唐制，辽宋法，但是本质上依旧以女真部落旧制为根本，并且其中多有互相矛盾之处，难以落实。论熙宗后期律法混乱腐败，《皇统制》本身的问题也是主要的原因。</p>
+<p>在经历了熙宗朝的混乱后，完颜亮于正隆年间颁布实行了金朝的又一部成文公法，即《续降制书》与旧有的《皇统制》并行，仍有任情用法之弊。《续降制书》中体现了完颜亮虐用法律的一面，其中率意更改很多，或者同罪异罚，或者罪罚轻重不适应，或者同一条律文重复出现，或者产生了大量虚文赘意，存在严重问题。与《皇统制》并用导致是非紊乱，官吏无所适从，利用其多有舞弊。</p>
+<p>元世祖后来方论金律，评其刑法峻严太过，不过厚待奴婢农户尚且仁慈。</p>
+<p>后来通过大定年间重修法律《续降制书》被整理进入《大定重修制条》，后章宗时又以此制条为基础修订法律，因此章宗朝《泰和律义》三十卷及其《新定律令敕条格式》部分取编自续降制书，至此金律方才完备。</p>
+<h3 id="经济"><a class="header" href="#经济">经济</a></h3>
+<p>完颜亮继续执行女真人南迁的政策，并对众多的猛安谋克进行整顿合并。他在中原实行括地，派人到各地拘收原侵官地和荒闲的牧地，授予南迁的女真猛安谋克户耕作，积极扶植女真贵族向封建地主转化。多余的土地允许汉人租佃。这一措施促进了女真族猛安谋克内部封建制生产关系的形成，同时也扩大了国家的封建领户，增加了税收。</p>
+<p>他的另一重大经济措施是印钞铸钱，改革币制。金朝建国以来，一直沿用辽、宋的旧钱，没有铸造货币。贞元二年，他命户部尚书蔡松年主持印制交钞（纸币），与铜钱并行。交钞分为大钞、小钞两类，共十种。朝廷设交钞库，管理印造、兑换事务。正隆二年，他又下令铸造铜钱“正隆元宝”，与旧钱通用。先后在中都和京兆府（今陕西西安）设置了三处铸钱监，专司其事。朝廷制造交钞和铜钱，从而掌握和控制了货币流通，进一步从经济上加强了中央集权的统治。</p>
+<h2 id="文学成就"><a class="header" href="#文学成就">文学成就</a></h2>
+<p>完颜亮对文学创作参与，不但影响了大金朝的一代文风，也给南宋文学溶入了刚建朴质的活性因素。他上承苏轼、黄庭坚、宇文虚中及蔡松年等人，下启蔡珪、赵可、辛弃疾等人。他的诗词雄浑遒劲，气象恢弘，充满了不为人下的雄霸之气。</p>
+<p>天辅六年（1122年）完颜亮出生，自幼聪明好学，曾拜汉儒张用直为师。“学奕、象戏、点茶、延接儒生，谈论有成人器”，汉文化功底甚深，他雅歌儒服，能诗善文，又爱同留居于金地的辽宋名士交往。品茶弈棋，谈古论今，成为文韬武略兼备，且神情闲逸，态度宽和之人。从一些现存的完颜亮诗篇来看，他不但精通汉学而且颇有文才且野心勃勃。做藩王时，他给人题写扇面，有“大柄若在手，清风满天下”之句，呈显志向非凡；他一日入妻子居室，见瓶中木樨花灿然而放，溢彩流金，乃索笔为诗曰：绿叶枝头金缕装，秋深自有别般香。一朝扬汝名天下，也学君王著赭黄。</p>
+<p>其诗笔力雄浑，气象恢弘，鸿鹄之志，梦想“黄袍加身”的意旨，已跃然纸上。乃至决定南征而了解临安风物时，则触景生情，写下“万里车书一混同，江南岂有别疆封？提兵百万西湖上，立马吴山第一峰！”的诗；志在“天下一家”的情绪，益显激越豪迈；在征伐南宋时，海陵写了一首《喜迁莺》词，其中有“金印如斗，独在功名取，断锁机谋，垂鞭方略，人事本无今古。试展卧龙韬韫，果见功成朝暮”之句，激励兵将建功立业的雄健豪迈之气，足可令人感奋。特别是他的《念奴娇·咏雪》词，气韵苍凉，文思奇诡，实为古来咏雪诗词中的上乘之作。所以，时人称他“一吟一咏，冠绝当时”，连江南之士看到他诗词都不得不叹服，说：“北地之坚强，绝胜江南之柔弱。”</p>
+<h2 id="历史评价"><a class="header" href="#历史评价">历史评价</a></h2>
+<p>《金史》：</p>
+<p>①“海陵在位十余年，每饰情貌以御臣下。却尚食进鹅以示俭，及游猎顿次，不时需索，一鹅一鹑，民间或用数万售之，有以一牛易一鹑者。或以弊衾覆衣，以示近臣。或服补缀，令记注官见之。或取军士陈米饭与尚食同进，先食军士饭几尽。或见民车陷泥泽，令卫士下挽，俟车出然后行。与近臣燕语，辄引古昔贤君以自况。显责大臣，使进直言。使张仲轲辈为谏官，而祁宰竟以直谏死。比昵群小，官赏无度，左右有旷僚者，人或以名呼之，即授以显阶。常置黄金裀褥间，有喜之者，令自取之。而淫嬖不择骨肉，刑杀不问有罪。至营南京宫殿，运一木之费至二千万，牵一车之力至五百人。宫殿之饰，遍傅黄金而后间以五采，金屑飞空如落雪。一殿之费以亿万计，成而复毁，务极华丽。其南征造战舰江上，毁民庐舍以为材，煮死人膏以为油，殚民力如马牛，费财用如土苴，空国以图人国，遂至于败。”</p>
+<p>②“海陵智足以拒谏，言足以饰非。欲为君则弑其君，欲伐国则弑其母，欲夺人妻则使之杀其夫。三纲绝矣，何暇他论。至于屠灭宗族，翦刈忠良，妇姑姊妹尽入嫔御。方以三十二总管之兵，图一天下，卒之戾气感召，身由恶终，使天下后世称无道主以海陵为首。可不戒哉！可不戒哉！”</p>
+<p>③熙宗、海陵济以虐政，中原觖望，金事几去。</p>
+<p>④海陵无道，自取覆败</p>
+<p>⑤海陵蛊惑群嬖，几亡其国</p>
+<p>⑥荀首有言：“不以人子，吾子其可得耶？”海陵睨人之子不翅鱼肉，而独己子之谋安，不可得矣。</p>
+<p>⑦异哉，海陵之为君也，舞智御下而不恤焉。君子仕于朝，动必以礼，然后免于耻。</p>
+<p>刘祁：“至海陵庶人，虽淫暴自强，然英锐有大志，定官制、律令皆可观。又擢用人才，将混一天下。功虽不成，其强至矣。”</p>
+<p>王夫之：“刘渊、石虎、苻坚、耶律德光、完颜亮，天亡之在眉睫矣，不知乘时者，犹以为莫可如何，而以前日之覆败为惩。悲夫！”</p>
+<p>努尔哈赤：</p>
+<p>①“从来国家之败亡也，非财用不足也，皆骄纵所致耳。若夏桀、商纣、秦始皇、隋炀帝、金完颜亮，咸贪财好色，沉湎于酒，昼夜宴乐，不修国政，遂致身死国亡。”</p>
+<p>②“金主完颜亮违悖天常，荒淫不道，获罪于天，卒被篡弑。”</p>
+<p>皇太极：“朕思金太祖、太宗法度详明，可垂久远。至熙宗合喇及完颜亮之世尽废之，耽于酒色，盘乐无度，效汉人之陋习。”</p>
+<p>赵翼：</p>
+<p>①“海陵荒淫，最为丑秽，身为帝王，采取美艳，何求不得？乃专於宗族亲戚中恣为奸乱，甚至杀其父、杀其夫而纳之，此千古所未有也。”</p>
+<p>②“海陵在位，盖兼齐文宣、隋炀帝之恶而更过之。”</p>
+<p>③“自古大兵大役，未有不民怨沸腾、丧国亡身者，海陵既竭天下之力，先筑燕京，次营汴京，工役甫毕，又兴此大众，以极无道之主，行此大肆虐之事，岂有不自速其毙者。”</p>
+<p>蔡东藩：“历代无道之主，莫如金亮，亮之罪上通于天，大举伐宋，正天益之疾而夺其魄耳。”</p>
+<h2 id="主要作品"><a class="header" href="#主要作品">主要作品</a></h2>
+<ul>
+<li>《书壁述怀》</li>
+<li>《以事出使道驿有竹辄咏之》</li>
+<li>《鹊桥仙·待月》</li>
+<li>《昭君怨·雪》</li>
+<li>《过汝阴作》</li>
+<li>《喜迁莺》</li>
+<li>《立马吴山第一峰》</li>
+<li>《念奴娇·咏雪》</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-3-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-3-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-3-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-3-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

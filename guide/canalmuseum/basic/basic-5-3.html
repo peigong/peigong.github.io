@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>十二章纹 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-5-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="十二章纹"><a class="header" href="#十二章纹">十二章纹</a></h1>
+<p>十二章纹，又称十二章、十二纹章，是中国帝制时代的服饰等级标志。</p>
+<p>帝王及高级官员礼服上绘绣的十二种纹饰，分别为日、月、星辰、群山、龙、华虫（有时候分花和鸟两个章）、宗彝（南宋以前就是一只老虎一只猴子）、藻、火、粉米（晋朝以前是粉和米两个章）、黼、黻等，通称“十二章”，实际上“十六章”。绘绣有龙纹的九章礼服称为“衮服”。</p>
+<p>十二章内涵丰富：日、月、星辰，取其照临之意；山，取其稳重、镇定之意；龙，取其神异、变幻之意；华虫，美丽花朵和虫羽毛五色，甚美，取其有文采之意；宗彝，取供奉、孝养之意；藻，取其洁净之意；火，取其明亮之意；粉米，取粉和米有所养之意；黼，取割断、果断之意；黻，取其辨别、明察、背恶向善之意。</p>
+<p>十二章纹的起源可追溯到舜帝时期，后世沿用，到了周代，周公旦制定《周礼》，规定以日、月、星辰三章画于旗帜，衣服上只保留九章纹，以龙为首章而称为“龙衮”。后来秦始皇帝登基，废除章纹制度，祭祀礼服一律为纯黑，称为“袀玄”。直到东汉才再度恢复十二章纹。</p>
+<p>十二章为章服之始，以下又衍生出九章、七章、五章、三章之别，按品位递减。例如明代服制规定：天子十二章，皇太子、亲王、世子俱九章。</p>
+<h2 id="基本简介"><a class="header" href="#基本简介">基本简介</a></h2>
+<p>按照史料十二章纹在在周朝时便已明确形成，后至秦汉。所以不可能取材于汉朝之后的书籍。</p>
+<p>十二章纹其实就是十二种图案（记住实际上历朝历代的十二章都不是一样的加起来一共是十六章）。</p>
+<p>“日”即太阳，太阳当中常绘有金乌，这是汉代以后太阳纹的一般图案，取材于“日中有乌”、“后羿射日”（《淮南子·精神训》等）等一系列神话传说。</p>
+<p>“月”即月亮，月亮当中常绘有蟾蜍或白兔，这是汉代以后月亮纹的一般图案，取材于“嫦娥奔月”（《归藏》、《淮南子》古本、张衡《灵宪》）等优美的神话传说。</p>
+<p>“星”即天上的星宿，常以几个小圆圈表示星星，各星星间以线相连，组成一个星宿。</p>
+<p>“山”即群山，其图案即为群山形。</p>
+<p>“龙”为龙形。</p>
+<p>“华虫”，按孔颖达的解释，即是“花“和“雉”，“华虫者，谓花和雉也。花就是花朵……雉是鸟类，其颈毛及尾似蛇，兼有细毛似兽”。（《礼记·王制》孔颖达疏）。</p>
+<p>“宗彝”，就是老虎和猴子即宗庙彝器，南宋以后作尊形画在杯子上。</p>
+<p>“藻”即水藻，为水草形。</p>
+<p>“火”即火焰，为火焰形。</p>
+<p>“粉米”即白米，和粉，粉为碎米，米为米粒形。</p>
+<p>“黼”是黑白相次的斧形，刃白身黑。</p>
+<p>“黻”是黑青相次的“亚”形。</p>
+<h2 id="象征意义"><a class="header" href="#象征意义">象征意义</a></h2>
+<p>以上十二种图案，各有其象征意义。按照历代注疏《周礼·春官·司服》的封建学者们的解释，日月星辰，“取其明也”；山，“取其人所仰”；龙，“取其能变化”；华虫，“取其文理”（即取其五彩的外貌）；宗彝，取其忠孝，因有的绘成虎与猿形，虎，“取其严猛”，猿，取其“智”；藻，取其洁净；火，取其光明，粉米，取其“养人”（即取其滋养）；黼，取其“割断”（做事果断之意）；黻，取其“背恶向善”（见《周礼·春官·司服》贾疏）。</p>
+<h2 id="由来"><a class="header" href="#由来">由来</a></h2>
+<p>十二章纹由来已久，在舜帝时代正式形成。《尚书·益稷》记载了舜帝和大禹的对话:“予欲观古人之象，日、月、星辰、山、龙、华虫，作会；宗彝、藻、火、粉米、黼、黻，絺绣，以五采彰施于五色，作服。”从舜帝开始制定十二章纹，之后王朝更替，夏商周，纹饰各有不同。《礼记·明堂位》曰:“有虞氏服韍，夏后氏山，殷火，周龙章。”根据《周礼注疏》记载，周代有官职名为“司服”，“掌王之吉凶衣服”，周朝将日、月、星辰三章画在旗帜上，而用于祭祀的礼服只保留九章，并且采用“玄衣纁裳”。即《左氏春秋》所谓的“三辰旂旗，昭其明也。火，龙，黼，黻，昭其文也。”公爵八命故用八章，侯爵七命、伯爵五命，故用七章、五章，以示等级。不过，《周礼》本身并没有记载十二章纹之制，只是说“王之吉服”有“裘冕”、“衮冕”、“鷩冕”、“毳冕”、“希冕”、“玄冕”，即所谓“天子六冕”。只是以后注疏《周礼》的人都一致认为周礼中有十二章纹之制。所以，十二章纹究章于何时形成，尚未确考。</p>
+<p>秦汉以后，封建统治者为了维持封建的统治秩序，纷纷制定详细、繁琐的封建礼仪，为了说明这些封建礼仪的合理、正统，都把一些礼仪的产生时间上推至三皇五帝时代，对于十二章纹也是如此。例如，《史记·孝文本纪》载：“盖闻有虞氏之时，画衣冠、异章服以为僇，而民不犯，”《后汉书·舆服下》载：“黄帝尧舜垂衣裳而天下治，……上衣玄，下裳黄。日月星辰，山龙华虫，作绘；宗彝，藻火粉米，黼黻，絺绣。以五采章施于五色作服”。《晋书·刑法志》亦云：“五帝画衣冠而民知禁”等等。所有这些，均无案可稽。</p>
+<h2 id="历史记载"><a class="header" href="#历史记载">历史记载</a></h2>
+<p>十二章纹的最早而又全面的记载，是《尚书·益稷》中舜帝与大禹的对话：“予欲观古人之象，日、月、星辰、山、龙、华虫，作会（绘）；宗彝、藻、火、粉米、黼、黻，絺绣，以五采彰施于五色，作服。汝明。”这段记载指明舜帝制定礼服制度。《诗经·秦风·终南》有“君子至止，黻衣绣裳”；《左传·桓公二年》又载：“君人者将昭德塞违，以临照百官，犹惧或失之。……火、龙、黼、黻，昭其文也”；《荀子·富国》又云，“黼黻文（纹）章，以藩饰之”，“天子袾裷衣冕，诸侯玄裷衣冕，大夫裨冕，士皮弁服。”等等。“君子”、“君人”、“天子”等措辞，都说明了，十二章纹当中的火、龙、黼、黻等等，是代表等级制度的纹饰。</p>
+<h2 id="章服制度"><a class="header" href="#章服制度">章服制度</a></h2>
+<p>章服制度真正确立，是在东汉初年。在此以前，封建制度虽已确立，但许多礼仪还是空白。即使战国（或以前）时期有章服方面的规定，但“秦以战国即天子位，灭去礼学，郊祀之服皆以袀玄”（《后汉书·舆服下》），汉承秦制，亦无详细的章服制度，所以，东汉以前，章服制度作为封建礼仪制度中的一个重要组成部分，还没有正式确立。东汉永平二年，孝明皇帝诏有司博采《周官》、《礼记》、《尚书》等史籍，制定了详细的祭祀服饰及朝服制度，从此确定了汉代的服制。东汉初规定：“天子、三公、九卿……祀天地明堂，皆冠旒冕，衣裳玄上纁下，乘舆备文，日月星辰十二章，三公、诸侯用山龙（以下）九章，九卿以下用华虫（以下）七章，皆备五采……”（《后汉书·舆服下》）从此以后直到明清，十二章纹作为帝王百官的服饰，一直延用了近两千年。</p>
+<h2 id="历史沿袭"><a class="header" href="#历史沿袭">历史沿袭</a></h2>
+<p>十二章纹之制自东汉确立之后，各朝各代都把它作为封建的舆服制度的一个重要组成部分。魏晋规定，皇帝郊祀天地、明堂、宗庙，元会临轩，其服装，“衣画裳绣，十二章”，王公、卿助祭郊庙，王公衣九章，卿衣七章（《晋书·舆服志》）。南北朝时期，章服制度更趋繁琐，以后周为例，不仅不同等级的人有不同等级的章服，即使同一等级，不同用处的礼服也各有不同的章纹。皇帝“祀昊天上帝”等，用十二章，“享诸先帝”等，用九章；诸公之服，有时用九章，有时用八章，有时用七章，有时用六章（《隋书·礼仪六》）</p>
+<p>隋大业元年，炀帝诏定章服之制，并规定了十二章纹在皇帝“衮冕”上的具体位置：“于左右髆上为日月各一，当后领下而为星辰，又山龙九物，各重行十二，……衣质以玄，如山、龙、华虫、火、宗彝等，并织成为五物：裳质以纁，加藻、粉米、黼、黻之四。衣裳通数，此为九章，兼上三辰（指日、月、星），而备十二也。”将日、月分列两肩，星辰列于后背，从此“肩挑日月，背负星辰”就成为历代皇帝冕服的既定款式。至于皇太子、侯伯、子男、孤卿、诸侯，则分别为九章、七章、五章、三章（《隋书·礼仪七》）。</p>
+<p>唐武德四年，朝廷发布诏令，宣布车舆、服装之令，“上得兼下，下不得拟上”，违者治罪。天下只有皇帝可用十二章，皇太子及一品之服用九章，“龙、山、华虫、火、宗彝在衣；藻、粉米、黼、黻在裳”；二品之服用七章，“华虫、火、宗彝在衣；藻、粉米、黼、黻在裳”；三品之服用五章，“宗彝、藻、粉米在衣；黼、黻在裳”；四品之服用三章，“粉米在衣，黼、黻在裳”；五品之服用一章，“裳刺黻一章”（《新唐书·车服志》）。</p>
+<p>宋代初期，天子之衮服，“青色，日、月、星、山、龙、雉、虎、猿，七章（在衣）；红裳，藻、火、粉米、黼、黻五章（在裳）。”太祖建隆元年又改为前制，“玄衣纁裳，十二章，八章在衣，日、月、星辰、山、龙、华虫、火、宗彝；四章在裳，藻、粉米、黼、黻”（《宋史·舆服志》）。至于皇太子，仍为九章，九卿五章。</p>
+<p>明代洪武十六年也明文规定了章服之制，皇帝衮冕“玄衣黄裳，十二章，日、月、星辰、山、龙、华虫六章织于衣，宗彝、藻、火、粉米、黼、黻六章绣于裳”（《明史·舆服二》）十二旒冕。亲王上衣绘山、龙、华虫、火、宗彝5章花纹，下裳绣藻、粉米、黼、黻4章花纹。共9章，九旒冕。世子八章，八旒冕。郡王七章，七旒冕。还有五章衮衣，赐予外藩，朝鲜曾获赐五章衮衣。</p>
+<p>中国古代十二章纹之制前后绵延近两千年，文献记载很多，但流传下来的实物却很少。明定陵出土的数件缂丝衮服（圆领袍式）为我们了解古代十二章纹之制提供了实物资料。在这两件衮服上，龙纹最突出，共有十二团龙，分别织于两肩和前后襟上。另外，两肩织日、月，背织星辰、群山，两袖饰华虫。宗彝、藻、火、粉米、黼、黻等六种纹饰分别列于前后襟团龙两侧，共列十二章纹，与明制符合，是不可多得的珍贵历史文物。</p>
+<p>满清入关以后，废除中国传统的汉服制度，实行剃发易服政策，衮龙袍与其他汉服一道，成为了历史的记忆。满清皇帝所穿的龙袍为满族服饰改制，配以汉族传统的纹、章。</p>
+<p>十二章纹包含了至善至美的帝德，象征皇帝是大地的主宰，其权力“如天地之大，万物涵复载之中，如日月之明，八方照临之内”。</p>
+<h2 id="等级制度"><a class="header" href="#等级制度">等级制度</a></h2>
+<p>十二章纹是封建等级制度的体现。作为封建舆服制度的一个重要组成部分，它早已随着满清的剃发易服政策而消亡。但十二章纹毕竟在中国古代曾长期存在过，因此，了解十二章纹，对于我们阅读古籍、考察中国古代典章制度的沿革，体会中国帝制时代的严格而繁琐的等级制度，还是有所帮助的。</p>
+<p>龙袍十二章纹包括：日、月、星辰、山、龙、华虫、宗彝、藻、火、粉米、黼、黻。十二章纹发展历经数千年，每一章纹饰都有取义，日、月、星辰代表三光照耀，象征着帝王皇恩浩荡，普照四方。山，代表着稳重性格，象征帝王能治理四方水土。龙，是一种神兽，变化多端，象征帝王们善于审时度势地处理国家大事和对人民的教诲。华虫，通常为一只雉鸡，象征王者要“文采昭著”。宗彝，是古代祭祀的一种器物，通常是一对，绣虎纹和蜼（一种长尾猿）纹，象征帝王忠、孝的美德。藻，则象征皇帝的品行冰清玉洁。火，象征帝王处理政务光明磊落，火炎向上也有率士群黎向归上命之意。粉米，就是白米，象征着皇帝给养着人民，安邦治国，重视农桑。黼，为斧头形状，象征皇帝做事干练果敢。黻，为两个己字相背，代表着帝王能明辨是非，知错就改的美德。</p>
+<h2 id="主要影响"><a class="header" href="#主要影响">主要影响</a></h2>
+<p>李氏朝鲜衣冠学习明制，国王著九章冕服，即：“上衣青色，装饰五章，龙在两肩，山在背部，火、华虫和宗彜在两袖，此三章每袖自上而下各三；下裳纁（xūn，有浅红色等释义）色，装饰四章，藻、粉米、黼、黻，每章各二”，另有大带、蔽膝、佩、绶等配件；王世子著七章冕服。朝鲜独立后，成立大韩帝国，皇帝冕服亦改做最高等级的十二章冕服。
+日本从唐朝引进十二章纹制，文武天皇发布的《大宝律令》规定，天皇在正式场合著十二章冕服“衮龙御衣”。732年，冕服上衣饰日、月、七星、山、火、龙、华虫，下裳饰藻、粉米、斧、黻。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-5-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-5-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-5-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-5-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

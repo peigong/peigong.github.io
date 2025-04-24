@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>项橐（xiàng tuó） - 孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/celebrity-9.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="项橐xiàng-tuó"><a class="header" href="#项橐xiàng-tuó">项橐（xiàng tuó）</a></h1>
+<p>项橐（xiàng tuó），春秋时期莒国（今山东日照）的一位神童，虽然只有七岁，孔夫子依然把他当作老师一般请教，后世尊项橐为圣公。《战国策·秦策五》： “甘罗曰：‘夫项槖生七岁而为孔子师，今臣生十二岁于兹矣！君其试焉，奚以遽言叱也？’”后以“项橐”代称早慧的儿童。据考，这种说法最早见于《战国策》。</p>
+<h2 id="人物设定"><a class="header" href="#人物设定">人物设定</a></h2>
+<p>项橐（xiàng tuó）：他是春秋时代莒国神童，学识渊远，为当世及后世之师，被尊为“圣公”。</p>
+<p>项羽与项橐关系推断：项橐因为“圣人之师”，算是比较早的一位项氏名人；项羽，中国古代“勇战”派代表人物，秦末起义军领袖，秦亡后称西楚霸王。如果按照“项无二姓”的说法，那么这二位肯定有莫大的关系，首先最简单明了的就是项橐肯定项羽的老祖，即使不是一脉，但是肯定项橐要比项羽早出生好几百年，因为项橐是春秋时期莒国的人，而项羽是秦国统一天下之后的人，由此可以断定项橐是项羽的祖先。</p>
+<p>一般项师为项氏公认的第一祖，下面依次是师---昊---橐---绣---文叔---徽---绎---承---燕---荣---箕（庄）---明---隆---镇---延---赴---益绎---谈---墀---潘---霖---治---森---璨---堃---钻---虞---蛟---覃---轼---邦---瑀---岿---善卿---灏---翊---元旺（斯）。</p>
+<p>项师为项氏第一祖，项橐为项师之孙，第十代至项荣，项荣为项羽、项庄的父亲，项羽与项庄为亲兄弟，我们很清晰的看出项橐、项羽之间的世系。</p>
+<p>此处有疑问，既然项橐十岁就死了，怎么还会有绣、文叔等后代呢，更不用说项羽了。</p>
+<h2 id="历史记载"><a class="header" href="#历史记载">历史记载</a></h2>
+<h3 id="战国策文信侯欲攻赵以广河间"><a class="header" href="#战国策文信侯欲攻赵以广河间">《战国策·文信侯欲攻赵以广河间》</a></h3>
+<p>文信侯欲攻赵，以广河间，使刚成君蔡泽事燕，三年而燕太子质于秦。文信侯因请张唐相燕，欲与燕共伐赵，以广河间之地。张唐辞曰：“燕者，必径于赵，赵人得唐者，受百里之地。”文信侯去而不快。少庶子甘罗曰：“君侯何不快甚也？”文信侯曰：“吾令刚成君蔡泽事燕，三年，而燕太子已入质矣。今吾请张卿相燕，而不肯行。”甘罗曰：“臣行之。”文信君叱去曰：“我自行之而不肯，汝安能行之也？”甘罗曰：“夫项橐生七岁为而为孔子师，今臣生十二岁于兹矣！君其试臣，奚以遽言叱也？”</p>
+<h3 id="淮南子修务训"><a class="header" href="#淮南子修务训">《淮南子·修务训》</a></h3>
+<p>故钟子期死，而伯牙绝弦破琴，知世莫赏也；惠施死，而庄子寝说言，见世莫可为语者也。夫项橐七岁为孔子师，孔子有以听其言也。以年之少，为闾丈人说，救敲不给，何道之能明也！昔者，谢子见于秦惠王，惠王说之。以问唐姑梁。唐姑梁曰：“谢子，山东辩士，固权说以取少主。”惠王因藏怒而待之，后日复见，逆而弗听也。非其说异也，所以听者易。夫以徵为羽，非弦之罪；以甘为苦，非味之过。楚人有烹猴而召其邻人，以为狗羹也而甘之。后闻其猴也，据地而吐之，尽写其食。此未始知味者也。邯郸师有出新曲者，托之李奇，诸人皆争学之。后知其非也，而皆弃其曲。此未始知音者也。鄙人有得玉璞者，喜其状，以为宝而藏之。以示人，人以为石也，因而弃之。此未始知玉者也。故有符于中，则贵是而同今古；无以听其说，则所从来者远而贵之耳。此和氏之所以泣血于荆山之下。</p>
+<h3 id="淮南子说林训"><a class="header" href="#淮南子说林训">《淮南子·说林训》</a></h3>
+<p>蹠越者或以舟，或以车，虽异路，所极一也。佳人不同体，美人不同面，而皆说于目。梨、橘、枣、栗不同味，而皆调于口。人有盗而富者，富者未必盗；有廉而贫者，贫者未必廉。蔐苗类絮而不可为絮，磨不类布，而可以为布。出林者不得直道，行险者不得履绳。羿之所以射远中微者，非弓矢也；造父之所以追速致远者，非辔衔也。海内其所出，故能大。轮复其所过，故能远。羊肉不慕蚁，蚁慕于羊肉，羊肉膻也。醯酸不慕蚋，蚋慕于醯酸。尝一脔肉而知一镬之味，悬羽与炭而知燥湿之气，以小见大，以近喻远。十顷之波可以灌四十顷，而一顷之陂可以灌四顷，大小之衰然。明月之光可以远望，而不可以细书；甚雾之朝可以细书，而不可以远望寻常之外。画者谨毛而失貌，射者仪小而遗大。治鼠穴而坏里闾，溃小疱而发痤疽，若珠之有类，玉之有瑕，置之而全，去之而亏。榛巢者处林茂，安也；窟穴者托埵防，便也。王子庆忌足蹑麋鹿，手搏兕虎，置之冥室之中，不能搏龟鳖，势不便也。汤放其主而有荣名，崔杼弑其君而被大谤，所为之则同，其所以为之则异。吕望使老者奋，项托使婴儿矜，以类相慕。《淮南子·说林训》高诱注：项橐年七岁，穷难，孔子而为之作师。</p>
+<h3 id="史记樗里子甘茂列传"><a class="header" href="#史记樗里子甘茂列传">《史记·樗里子甘茂列传》</a></h3>
+<p>甘罗者，甘茂孙也。茂既死后，甘罗年十二，事秦相文信侯吕不韦。秦始皇帝使刚成君蔡泽于燕，三年而燕王喜使太子丹入质于秦。秦使张唐往相燕，欲与燕共伐赵以广河间之地。张唐谓文信侯曰：“臣尝为秦昭王伐赵，赵怨臣，曰：‘得唐者与百里之地。’今之燕必经赵，臣不可以行。”文信侯不快，未有以彊也。甘罗曰：“君侯何不快之甚也？”文信侯曰：“吾令刚成君蔡泽事燕三年，燕太子丹已入质矣，吾自请张卿相燕而不肯行。”甘罗曰：“臣请行之。”文信侯叱曰：“去！我身自请之而不肯，女焉能行之？”甘罗曰：“夫项橐生七岁为孔子师。今臣生十二岁于兹矣，君其试臣，何遽叱乎？”于是甘罗见张卿曰：“卿之功孰与武安君？”卿曰：“武安君南挫彊楚，北威燕、赵，战胜攻取，破城堕邑，不知其数，臣之功不如也。”甘罗曰：“应侯之用于秦也，孰与文信侯专？”张卿曰：“应侯不如文信侯专。”甘罗曰：“卿明知其不如文信侯专与？”曰：“知之。”甘罗曰：“应侯欲攻赵，武安君难之，去咸阳七里而立死于杜邮。今文信侯自请卿相燕而不肯行，臣不知卿所死处矣。”张唐曰：“请因孺子行。”令装治行。</p>
+<h3 id="论衡实知"><a class="header" href="#论衡实知">《论衡·实知》</a></h3>
+<p>难曰：夫项橐年七岁教孔子。案七岁未入小学而教孔子，性自知也。孔子曰：“生而知之，上也。学而知之，其次也。”夫言生而知之，不言学问，谓若项托之类也。王莽之时，勃海尹方年二十一，无所师友，性智开敏，明达六艺。魏都牧淳于仓奏：“方不学，得文能读诵，论义引《五经》文，文说议事，厌合人之心。”帝征方，使射蜚虫，策射无〔弗〕知者，天下谓之圣人。夫无所师友，明达六艺，本不学书，得文能读，此圣人也。不学自能，无师自达，非神如何？</p>
+<h3 id="春秋后语"><a class="header" href="#春秋后语">《春秋后语》</a></h3>
+<p>《御览》四百四引《春秋后语》</p>
+<p>甘罗曰：“夫项橐七岁，为孔子师。”</p>
+<h3 id="高士传"><a class="header" href="#高士传">《高士传》</a></h3>
+<p>《文选》卷二颜延年《皇太子释奠会作》诗中“庶士倾风，万流仰镜”句下李善注引晋人嵇康《高士传》谓：项橐七岁为圣人师。孔子问项橐曰：“居何在？”曰：“万流屋是也。”注曰：“言与万物同流匹”。雒书曰：秦失金镜。郑玄曰：金镜，喻明道也。</p>
+<h3 id="论衡校释卷第二十六实知"><a class="header" href="#论衡校释卷第二十六实知">《论衡校释卷第二十六实知》</a></h3>
+<p>难曰：“夫项讬年七岁教孔子。见国策七、淮南修务训、说林训注、新序杂事五。御览四百四引春秋后语作“十岁”，误。隶释童子逢盛碑云： “才亚后橐，当为师表。”“后、项”，“橐、讬”， 音近假借。新序杂事五云：“秦项橐。”是项橐秦人。汉书董仲舒传，仲舒对策曰：“此亡异于达巷党人，不学而自知。”孟康注云：“人，项橐也。”淮南修务训 云：“项讬七岁为孔子师，孔子有以听其言也。以年之 少，为闾丈夫说，救敲不给，何道之能明也？”似亦以项橐为里党人。史记孔子世家又云：“达巷党人童子。 ”则孟康盖本旧说也。以为秦人者，潘维城曰：“当由甘罗尝言之。”文选颜延之皇太子释奠诗注引嵇康高士传：“孔子问项橐曰‘居何在？’曰：‘万流屋。’注：‘言与万物同流匹也。’”此更神其说也。盼遂案：战国策秦策五：“甘罗曰：‘夫项橐七岁而为孔子师。’”淮南子修务、说林皆作项橐。论衡此文作项讬，与汉书董仲舒传孟康注 同。盖古讬、橐音同。又案：项讬性自知说，亦本董仲舒传。传云：“良玉不琢，资质润美。不待刻琢，此亡异于达巷党人，不学而自知也。”注：“党人项橐也。 ”此仲任所本。（此则梁玉绳古今人表考三及俞正燮癸 巳类□卷十一项橐考。）案七岁未入小学，王制疏引尚书大传周传曰：“王子公卿大夫元士之适子， 十三入小学。”又略说曰：“余子十五入小学。”而教孔子 ，性自知也。孔子曰：‘生而知之，上也；学而知之， 其次也。’见论语季氏篇。夫言 生而知之，不言学问，谓若项讬之类也。王莽之时，勃 海尹方年二十一，无所师友，性智开敏，明达六艺。魏都牧淳于仓奏：‘方不学，得文能读诵，论义引五经文 ，文说议事，厌合人之心。’帝征方，使射蜚虫，策射无非（弗）知者，先孙曰：“非”当为“ 弗”。天下谓之圣人。夫无所师友，明达六艺，本不学书，得文能读，此圣人也。不学自能，无师自达，非神如何？”曰：虽无师友，亦已有所问受矣；不学书，已弄笔墨矣。儿始生产，耳目始开，虽有圣性，安能有知？项讬七岁，其三四岁时，而受纳人言矣。“而”读“能”。尹方年二十一，其十四五时，多闻见矣。性敏才茂，独思无所据，御览九七〇引作“使圣人空坐独思”。不睹兆象，不见类验，却念百世之后，有马生牛，牛生驴，桃生李，李生梅，圣人能知之乎？臣弑君，子弑父，仁如颜渊，孝如曾参，勇如贲、育，辩如赐、予，论语云：“言语，宰我、子贡。”圣人能见之乎？孔子曰：“其或继周者，虽百世可知也。”论语为政篇，子曰：“殷因于夏礼，所损益可知也。周因于殷礼，所损益可知也。其或继周者，虽百世亦可知也。”又曰：“后生可畏，焉知来者之不如今也？”论语子罕篇文。论损益，言“可知”；称后生，言“焉知”。后生难处，损益易明也。此尚为远，非所听察也。使一人立于墙东，令之出声，使圣人听之墙西， 能知其黑白、短长、乡里、姓字、所自从出乎？沟有流堑（澌），先孙曰：“堑”当作“澌” 。四讳篇云：“出见负豕于涂，腐澌于沟。”（淮南泰族训：“虽有腐髊流渐，弗能污也。”许注云：“渐，水也。”庄逵吉据御览校改“渐”为“澌”，与此误同 。）曲礼下郑注：“死之言澌也，精神斯尽也。”泽有枯骨，发首陋亡，肌肉腐绝，使〔圣〕人询之，先孙曰：“使人”当作“使圣人”，此挩一“ 圣”字。能知其农商、老少、若所犯而坐死乎？“若”犹“与”也。非圣人无知，其知无以知也。知无以知，非问不能知也。不能知，则贤圣所共病也。</p>
+<h3 id="高士咏项橐"><a class="header" href="#高士咏项橐">《高士咏·项橐》</a></h3>
+<blockquote>
+<p>唐·吴筠</p>
+</blockquote>
+<p>太项冥虚极，微远不可究。</p>
+<p>禀量合太初，返形寄童幼。</p>
+<p>孔父惭至理，颜生赖真授。</p>
+<p>泛然同万流，无迹世莫觏。</p>
+<h2 id="人物经历"><a class="header" href="#人物经历">人物经历</a></h2>
+<h3 id="神童诞生"><a class="header" href="#神童诞生">神童诞生</a></h3>
+<p>在岚山区的南部，巨峰和碑廓交界处，有条东西走向的山脉，绵亘起伏近廿华里。东头一座山，峰峦耸峙，名叫幽儿崮，山峰成北南走向，在山峰的西北角，离峰顶50米左右，岩石形成一个圆圈，约有半亩地，过去这里有座奶奶庙，站在庙天井，南可望见海洲湾，海水在阳光照耀下好似一泓水晶。西边一座山，叫圣公山。站在山前的碑廓镇向北望，像是一个大椅子圈。圈内有座庙，叫圣公庙，坐北朝南站在庙天井里近可看万亩湖、绣针河、岚坪铁路和岚兖公路上车来车往；远可望见连云港的云台山。幽儿崮和圣公山之间有座矮山叫火石顶，似一条压弯了的扁担挑两山。古时候有三条驿道从圣公山前经过。一是南北方向的，南经碑廓、青口、海州、下扬州，北经巨峰、沈町奔青州；另条东南西北向的，东经甫田庄、前合庄、安东卫到岚山，西北经山西头、朱芦、坟疃、莒州、沂水到泰安。还有一条是西南东北向的，向西南经东西辛兴、十字路，去沂州、徐州等地。东北经巨峰、涛雒、日照，奔胶、莱一带。这三条驿道都在圣公山前的袁家庄交会。此地周朝属纪国，后并于莒，到战国时代，莒国先被楚灭，后被齐吞，成为齐国的南大门。</p>
+<h3 id="与世无争"><a class="header" href="#与世无争">与世无争</a></h3>
+<p>就在这山清水秀、交通便利的袁家庄村后，住着一户姓项的人家，妻魏氏。此家男耕女织，待人诚恳，邻里和睦，过着与世无争的生活。魏氏怀孕后，在家仍纺线织布，料理家务，出门拾草、捞柴、捡茹、挖药，样样都干。这年的阴历四月初八日，与邻居姑嫂二人一块儿到幽儿崮挖药材。来到崮顶西北角，感到腹中阵阵坠痛，不一会儿，魏氏生了一个男孩，哇啦一声，响彻山谷。邻居姑嫂二人前来帮忙，想脱件上衣包孩子回家，但孩子脐带还未断，母婴仍相联，姑嫂二人就用随带的柴刀剁，铲子铲，忙活了一大会儿，汗流满面，脐带仍未截断。这时魏氏想起平时经常被茅草叶子划破手指，劙破脚脖，就让姑嫂二人用茅草劙试试，果然奏效，一劙两断，嫂子抱着孩子，村姑搀扶着魏氏，一同往回走。丈夫听说妻子在山上生了孩子，就跑去迎。接过孩子一看，小孩子长的天格方圆，地格饱满，脱口而出说，像个小橐（口袋）就叫他橐吧。魏氏同意，因姓项，以后大名就叫项橐。</p>
+<h3 id="孔子师项橐"><a class="header" href="#孔子师项橐">孔子师项橐</a></h3>
+<p>兖州城西北旧关村，原为古城西关外，称“达巷党”，当年孔子任中都宰，往来憩息于此。《论语·子罕》：“达巷堂人曰：‘大哉孔子！博学而无所成名。’”这儿便是《三字经》中“昔仲尼，师项橐”的地方。那位聪明的孩童项橐，在地上画了座城，硬让一代圣人孔子“绕城而过”，不得踏城直进，且能言善辩，令孔子佩服，遂拜其为师，“七岁而为孔子师”留下佳话。旧关村东原有”达巷党人里”石碑，可惜毁于“文革”中。但孔子在此师项橐的故事，却世代流传，在民间传说中又增添了幽默色彩，变幻了故事主题，颇有意思。</p>
+<p>下面选录其一：</p>
+<p>相传有一年冬天，孔子游说讲学，一日行至兖州西关（今旧关），遇见一个小孩正用树枝在路上画画。孔子凑近一看，见小孩画了一座城，孔子见他画得认真仔细，城也画得很漂亮，不忍从上面踏过，便从一旁绕着走。</p>
+<p>孔子刚刚走过，不想那小孩竟气恼地甩掉画画的树枝说：“你这老先生好没道理，放着城门不走，为何绕城而过？”</p>
+<p>孔子以为小孩误解自己，便解释说：“我是看你城画得好，怕踩坏了，才绕道而过，你应该感谢我才对呀？”</p>
+<p>小孩不以为然地说：“城若不让人过，要城有何用？我画的城就是让大家走的。”</p>
+<p>孔子见小孩聪明伶俐，顽皮中显露才智，有心试探他一番，故意为难地说：“你画的城门这么小，我如何过去呢？”</p>
+<p>没想到那小孩一拍脑门，恍然大悟地回答：“对，画上的小城门是给小人走的，你是大人，应该走大城门，这如何办呢？我再给你画个大的吧？”说着，小孩转过身去对着兖州城方向，用手指在空中虚划一番，然后恭敬地对孔子说：“大人，那座城画好了，请上路前行吧。”</p>
+<p>见到这么聪颖的孩子，孔子顿起爱才之心，就约他一路同行。因为是冬天，树上的叶子早就掉光了，只有松树和柏树仍挂着绿，小孩指着路过的几棵松树问孔子：“老先生，你说松树为何冬天也不落叶，天再冷也能枝茂叶青？”</p>
+<p>孔子说：“松树心实不虚，所以才耐得严寒。”</p>
+<p>“老先生说得不对，竹子倒是心虚不实，可他也跟松树一样耐得严寒。”</p>
+<p>孔子见小孩说得很有哲理，感叹地说：“虚心之竹，四季常青，人应学松之品质，竹之虚心，吾常言‘三人行必有吾师焉’，这孩童可为吾师也。”</p>
+<p>两人走到护城河时，正巧有一群鹅“哦哦”地叫着跳进了水里。小孩又问孔子：“老先生你说说鹅的叫声为什么这样响亮？”</p>
+<p>孔子想了想说：“鹅的脖颈长，故能引吭高歌。”</p>
+<p>小孩摇摇头说：“老先生，那井里的蛤蟆河里的蛙，脖子能算长吗？却是叫声震天不亚于鹅。”</p>
+<p>孔子暗自佩服这小孩子才智过人。</p>
+<p>两人又往前走，来到城门口，忽然听到一阵阵吹吹打打的喇叭声，只见从城里走出一队送葬的人。领头的那个人披麻戴孝，挥舞着器丧棍边走边唱，后面的那些人却没有哭的。</p>
+<p>孔子心里老大不快，正想走过去教训他们一番，却被那小孩拉住了胳膊。待到送葬的人走远，孔子责问小孩说：“生之于父母，养之于父母，父母过世悲哭才是。刚才那帮人不光不流眼泪，而且还边走边唱，真是不成体统。我要去教训教训他们，你却把我拉住，这是什么道理？”</p>
+<p>小孩反问孔子：“老先生可曾听清他唱些什么？”</p>
+<p>孔子说：“不曾听清。”</p>
+<p>“您连人家唱些什么都没有听清，却要去教训人家，不知老先生怎样‘对症下药’？”</p>
+<p>孔子问小孩：“你可曾听清他唱些什么？”</p>
+<p>“听清了。他们唱的是‘肥猪出了圈，野马上了羁，金银入了柜’。”</p>
+<p>孔子不解，他问小孩：“你可解得这其中之意？”</p>
+<p>小孩说：“这有啥难？‘肥猪出了圈’就是闺女找了婆家，‘野马上了羁’就是给儿子娶了媳妇，该操心的事都操完了。”</p>
+<p>孔子又问：“那金银入了柜又作何讲？”</p>
+<p>小孩说：“金银入了柜”指的是父母享尽天年有了归宿。老先生刚才讲过，生之于父母，养之于父母，这话不假，但是父母过世不一定悲哭就好，有的人父母在世时百般虐待，是不孝之子，而父母去世时却装出一副孝敬悲伤的样子，放声嚎哭，以欺世人。而有的人却不这样，父母在世时他们问寒问暖，百般敬重；父母过世时，心中虽然悲痛，但却问心无愧。真正孝敬的人，悲痛只是装在心里，有些啼啼哭哭的人不过是做样子给别人看的。刚才那人一路走一路唱，我看他是个懂得孝道的人。唱只是有意警醒世人，并不为过。”</p>
+<p>孔子点点头，觉得这孩童不但才华过人，而且深知孝道。礼贤下士的孔子便和这孩子结下忘年之交，拜他为师。</p>
+<p>这个孩子就是项橐。</p>
+<h2 id="文献记载"><a class="header" href="#文献记载">文献记载</a></h2>
+<h3 id="项氏宗谱"><a class="header" href="#项氏宗谱">项氏宗谱</a></h3>
+<p>婺源《汝南项氏宗谱》：项橐，字仲廉，鲁人，生周敬王丁未（前494）三月十八日。世居曲阜县奄宅里鲁城洙泗泽。</p>
+<h3 id="三字经"><a class="header" href="#三字经">《三字经》</a></h3>
+<p>昔仲尼，师项橐，古圣贤，尚勤学，赵中令，读鲁论，彼既仕，学且勤，披蒲编，削竹简，彼无书，且知勉。</p>
+<p>译：从前，孔子是个十分好学的人，当时鲁国有一位神童名叫项橐，孔子就曾向他学习。像孔子这样伟大的圣贤，尚不忘勤学，何况我们普通人呢？西汉时路温舒把文字抄在蒲草上阅读。公孙弘将春秋刻在竹子削成的竹片上。他们两人都很穷，买不起书，但还不忘勤奋学习。</p>
+<h2 id="别称考证"><a class="header" href="#别称考证">别称考证</a></h2>
+<h3 id="达巷党人"><a class="header" href="#达巷党人">“达巷党人”</a></h3>
+<p>钱穆《先秦诸子系年考辨》附“项橐考”一节，曾引刘师培说，证“汉儒相传，殆均以达巷党人即项橐也”，“大项”盖即“达巷”转音，“殆古人实有项橐，即达巷橐，又云大项橐，其人聪慧不寿如颜回。” [2]</p>
+<h3 id="太后詫大后橐"><a class="header" href="#太后詫大后橐">“太后詫”、“大后橐”</a></h3>
+<p>汉代部分画像砖（石）中，对项橐的榜题标为“太后詫”或“大后橐”。中国台湾学者邢义田在其著作《画外之意：汉代孔子见老子画像研究》中写道：“关键性的榜题‘太后詫’正巧可以与和林格尔汉墓孔子见老子壁画中的残榜‘大后橐’参照，可证太（大）后詫即项橐。”</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/celebrity-8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/celebrity-10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/celebrity-8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/celebrity-10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

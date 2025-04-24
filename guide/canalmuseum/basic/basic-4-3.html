@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>白浮泉 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-4-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="白浮泉"><a class="header" href="#白浮泉">白浮泉</a></h1>
+<p>白浮泉是北京市文物保护单位，位于北京城北昌平县化庄村东龙山东麓，又名龙泉。白浮引水工程的源头。元代著名科学家郭守敬为引水济漕，解决大都城的漕运，上奏元世祖引白浮泉水作大运河北端上游水源，至元二十九年(1292)白浮堰建成。</p>
+<p>白浮泉遗址，位于北京市昌平区龙山山顶，始建于元朝时期，是通惠河的水源地，建有北京历史上唯一一座以“都”字冠名的敕建龙王庙。</p>
+<p>白浮泉遗址包括九龙池和都龙王庙。九龙池围于白浮泉，因流水出处有9个龙头，故取名九龙池。都龙王庙坐北朝南，占地面积约2500平方米，由照壁、山门、钟鼓楼、正殿及配殿等建筑组成。白浮泉遗址包括九龙池和都龙王庙。白浮泉遗址是研究北京水利事业发展史以及古代民俗风情的重要实物。</p>
+<p>1990年2月23日，白浮泉遗址——九龙池、都龙王庙被北京市人民政府公布为北京市第四批市级文物保护单位。2013年3月5日，包含白浮泉遗址在内的大运河被公布为第七批全国重点文物保护单位合并项目，归入第六批全国重点文物保护单位京杭大运河，更名为大运河。2014年6月22日，包含白浮泉遗址在内的中国大运河被联合国教育、科学及文化组织公布为世界文化遗产。</p>
+<p>2021年10月22日，被列入北京市第一批水利遗产名录。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>元至元二十九年（1292年），郭守敬筑堰障水，汇西山诸水，引白浮泉水济漕，白浮泉成为通惠河上游水源，新运河被赐名通惠河。</p>
+<p>元朝时期，引白浮泉水济漕工程完成后，在龙山之巅兴建都龙王庙，并在其源头处修建九龙池。</p>
+<p>明嘉靖十五年（1536年），修复通惠河时，九龙池重修。</p>
+<p>1958年，白浮泉出水日渐减少。</p>
+<p>20世纪70至80年代，由于北京地下水水位下降，白浮泉泉水逐渐干涸。</p>
+<p>1990年，白浮泉遗址九龙池上新建白浮泉遗址碑亭，立白浮泉遗址整修记碑。</p>
+<p>2013年，白浮泉遗址建设为白浮泉遗址公园。</p>
+<p>2020年，昌平区人民政府对白浮泉遗址内的都龙王庙壁画进行修复。</p>
+<p>2023年4月8日，基于白浮泉遗址打造的大运河源头遗址公园正式对公众开放。</p>
+<h2 id="白浮泉与白浮堰"><a class="header" href="#白浮泉与白浮堰">白浮泉与白浮堰</a></h2>
+<h3 id="天生白浮泉"><a class="header" href="#天生白浮泉">天生白浮泉</a></h3>
+<p>昌平州的东南有一座孤山。此山不高，但名称就有多个：龙泉山、龙山、神山，还称凤凰山、白浮山、神岭山。《光绪顺天府志》引《明一统志》：“考神岭山，即神山也。”</p>
+<p>此山引人，是这里源源不断的泉水。水量大，且稳定。村子叫白浮村，泉也称为白浮泉了。泉水发自龙泉山的东北麓，半山腰有一块盆地，清澈的泉水从山根处的碎石间奔涌而出，形成一潭清水。《日下旧闻考》载：“潭东有泉出乱石间，清湛可濯。”明初在泉上修建了九龙池，池壁用的花岗岩，龙头用汉白玉雕刻，嵌入石壁。泉水便从九个龙口中流出了。</p>
+<p>有了泉水，也就有了这座山上的人文景观。</p>
+<p>离泉不远处有龙泉寺。《昌平州志》：“龙泉有二。一在州东都龙王祠下，一在州西神岭山下，亦有龙潭。”寺内正殿三间，东西配殿各三间。正殿内供奉着弥勒佛。</p>
+<p>寺后有七十六级台阶，笔直，可达山顶，上有都龙王庙。都龙王庙建于元代。寺院不大，有50米见方。正殿配殿格局规整。东西两边建有钟楼鼓楼。正殿门口的楹联：九江八河天水总汇；五湖四海饮水思源。横批都龙王祠。寺内供的是人面龙王。大殿两侧的墙上绘有《东游巡踪》彩色壁画。现在，色彩暗淡，墨迹不清。</p>
+<p>为何叫都龙王祠？当地人有两种说法：此庙是北京规模最大的龙王庙，再是统管所有龙王。道教有诸天龙王，四海龙王，五方龙王的说法；佛教也有无量诸大龙王，如毗楼博义龙王，婆竭罹龙王等记述。于此可知在元代，泉之重要，山之重要。</p>
+<h3 id="神秘古山洞"><a class="header" href="#神秘古山洞">神秘古山洞</a></h3>
+<p>此山常能形成独特的小气候，都龙王庙的意义进一步扩大，历朝都有修护。明代洪武八年曾重修。</p>
+<p>光绪年间也有记载。《光绪昌平州志》中有这样一段记述。李鸿章上书皇帝，奏章中说：据昌平知州吴履福禀称，“该州白浮村北凤凰山，旧有都龙王庙，每遇水旱祈祷辄应。”而今年春夏以来，天久不雨，庄稼都生了虫子。这里的人们“诣山虔祷，旬日间甘霖大霈”，被虫吃的庄稼也“得雨复生”。秋天收成很好，乡民共同庆贺。当地官民准备自筹资金，重修庙宇，希望能御赐匾额。臣李鸿章核实了此事，“早晚秋禾，皆得及时补种，实属御灾捍患，功德及民。”他也恳请皇上“天恩俯准”，能颁发匾额一方。</p>
+<p>光绪皇帝看罢李鸿章的奏折，回复了《上谕》，并果真“恭书匾额一方，交李鸿章祗领，敬谨悬挂昌平州凤凰山都龙王庙。匾额四字为：祥徵时若。</p>
+<p>因此，遇到干旱少雨，便由地方官绅或耆老率领，每户出一男丁，抬三牲厚礼，上香祈雨。每年农历六月十一至十三日，龙泉山还有庙会。内容丰富，不仅可看州官到都龙王庙上香的全过程，还有戏曲、花会表演、购物等。早年山脚下曾有戏楼。坐南朝北，10米见方，高5米，楼顶为单檐起脊。戏台5米见方，前面有木制护栏。</p>
+<p>龙泉山神奇，也就有一些传奇故事。山半腰曾有一古洞，且载入志书。《日下旧闻考》引自《畿辅山川志》：“龙泉山在州东南五里，山顶有都龙王祠。山半一洞，尝有人附石而下，初狭渐广，行里许，水声砰訇，不敢前。洞北麓有潭，深不可测。”在《光绪昌平州志》中也有类似的记述。古洞自清末便没了记载。为何消失？这引起人们的种种猜测和想像，也引出了一些故事：说是八国联军火烧颐和园后，和尚保护国宝，拉回三车藏在山洞里。后来慈禧张榜要杀死护宝之人，于是和尚便把古洞堵上了。如今无人知道洞在何处。</p>
+<p>按庙内乾隆十七年制的《都龙王庙置田碑记》载：龙泉山上有三个寺庙：“一白衣庵，一龙泉寺，其峰顶侧都龙王庙焉。”早年，人们来龙泉山游山玩水。白浮泉、上寺、下寺、戏楼和古洞，成为人们喜爱的景观，昌平州人游览的佳境。《光绪昌平州志》所载，时人评选的燕平八景，白浮泉名列其中，有《龙泉喷玉》诗为证：“凭虚■薄泻飞泉，矫矫翔龙出九渊。峭壁危崖愁绝倒，琼珠玉粒讶空悬。风定涧头声细细，雨余谷底水涓涓。怪来爽气清人骨，过客临流思欲仙。”</p>
+<h3 id="惊世白浮堰"><a class="header" href="#惊世白浮堰">惊世白浮堰</a></h3>
+<p>元代，大都的空气湿润，地下水非常丰沛。至元二十八年(1291年)，朝廷派郭守敬巡察水利。他经过详细勘测，发现了白浮泉的利用价值，回来后，便把多年对水利调查研究的成果，归纳为11项建议，向朝廷禀报。第一条便是彻底改变大都地区的水源问题，提出了一个大胆的建议：“上自昌平县白浮村引神山泉西折而南，过双塔、榆河、一亩、玉泉诸水，经甕山泊至西水门入都城”。《元史·河渠志》：“南汇为积水潭，东南出文明门(今崇文门)，东至通州高丽庄入白河。”最后“入于潞河，以便漕运。”元世祖忽必烈非常高兴，对这一方案给以极高的评价，立即表示：“当速行之”，并下了一道特殊的命令：“丞相以下皆亲操畚锸倡工”，多大的领导也要带头干活；且“待守敬指授而后行事”，一切还要听从郭守敬安排。这给郭守敬以极大的支持。</p>
+<p>引水方案有几个重大的技术问题：如直奔东南引向大都，有沙河、清河两条大河当道，且河谷低下，难以逾越；如向西行，那里是西山，京都西高东低。在一般人眼中，“神山、白浮皆在州之东南，地势西高东下”，水怎么会逆流而上呢！</p>
+<p>面对这种复杂的地形条件，郭守敬运用早年在治理黄河时总结出的理念：也就是今天的海拔高度理论。经过实地测量，他得出了白浮泉地势要高于西山山麓。按今天的测量，白浮泉的海拔为55米，瓮山泊的海拔为40米。时人不能知道海拔概念，而感叹：“守敬乃能引之而西，是不可晓。”</p>
+<p>这一结论强力支持着郭守敬的观点。他把泉水引向西山，然后大体沿50米等高线南下，避开河谷低地，再向东南注入瓮山泊。瓮山泊又名七里泊，清代向东南开拓，改名为昆明湖，用它作为河水涨落的调节水库。沿渠修筑堤堰——白浮堰。《天府广记》载：“郭守敬所筑堰，起白浮村至青龙桥，延袤五十余里。”河渠沿大都北部的山脚划出一道漂亮的弧线，沿途又拦截了沙河、清河上游的水源，汇聚西山诸泉，使水量大增。河水再向东南流入高梁河，进入积水潭，并以此为停泊港。积水潭东侧开河引水，向东南流，再经金代的闸河故道向东至通州。“全长一百六十四里又一百四步”，真乃北京水利史上的惊世杰作。从此，北京有了供水的命脉。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>白浮泉遗址包括九龙池和都龙王庙。九龙池围于白浮泉，因流水出处有9个龙头，故取名九龙池。都龙王庙坐北朝南，占地面积约2500平方米，由照壁、山门、钟鼓楼、正殿及配殿等建筑组成。</p>
+<h2 id="主要建筑"><a class="header" href="#主要建筑">主要建筑</a></h2>
+<h3 id="九龙池"><a class="header" href="#九龙池">九龙池</a></h3>
+<p>九龙池围于白浮泉，因流水出处有9个龙头，故取名九龙池。龙头均为青石雕刻，从石壁内向外探出，水流喷涌而出，再汇聚于深潭，有“九龙戏水”“九龙喷玉”之美称。水池之上建有白浮泉遗址碑亭，面阔三间，进深一间，为四梁八柱仿元代建筑风格木亭，顶部为灰瓦灰砖修建，木构件以传统棕色油饰，方椽椽头以绿色油饰，檐椽椽头用蓝色油饰，栏杆柱子采用的是中间粗两头细的形制。</p>
+<h3 id="都龙王庙"><a class="header" href="#都龙王庙">都龙王庙</a></h3>
+<p>都龙王庙坐北朝南，占地面积约2500平方米，由照壁、山门、钟鼓楼、正殿及配殿等建筑组成。正殿、配殿格局规整，东西两边建有钟楼、鼓楼。正殿门口的楹联：“九江八河天水总汇，五湖四海饮水思源。”横批“都龙王祠”。院内有5块明清碑刻。殿内供奉的是人面龙王、雷公、电母、风伯、雨神，大殿两侧的墙上绘有彩色壁画《东游巡踪》，主要内容是大旱时民间百姓到都龙王庙祈求雨水，龙王显灵降雨的故事。</p>
+<h2 id="文物遗存"><a class="header" href="#文物遗存">文物遗存</a></h2>
+<h3 id="东游巡踪壁画"><a class="header" href="#东游巡踪壁画">《东游巡踪》壁画</a></h3>
+<p>《东游巡踪》壁画位于都龙王庙大殿两侧，两幅共计45.97平方米。画法与传统画法不太一样，没有采用大红大绿那种平涂式画法，而是采取比较清新的国画式，用墨线来勾勒它的轮廓，描绘的都是老百姓求雨的场景。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="龙山庙会"><a class="header" href="#龙山庙会">龙山庙会</a></h3>
+<p>都龙王庙是明清时期著名的祈雨之所，香火鼎盛。历经数百年的传承，形成了独具特色的龙山庙会文化和祈雨习俗。每年农历六月十三日，附近州县的民众还要在山门下的戏楼演戏3天，作为祭祀活动的主要内容之一。</p>
+<h3 id="燕平八景之一"><a class="header" href="#燕平八景之一">燕平八景之一</a></h3>
+<p>燕平八景起源于明隆庆年间，由崔学履所著《昌平州志》中提出，以天寿山为中心，将昌平地区的名胜归纳为八景，分别为天峰拔萃、石洞仙踪、银山铁壁、虎峪辉金、龙泉喷玉、安济春流、居庸霁雪、松盖长青。清康熙十二年（1673年）重修的《昌平州志》中将松盖长青和安济春流，替换为神岭千峰和沟崖双瀑，将天峰拔萃更名为陵阙晴霞，石洞仙踪更名为石洞松涛，龙泉喷玉更名为龙泉漱玉。其中龙泉漱玉指的就是白浮泉遗址中九龙泉的景色。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>白浮泉遗址是研究北京水利事业发展史以及古代民俗风情的重要实物。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<p>1990年2月23日，白浮泉遗址——九龙池、都龙王庙被北京市人民政府公布为北京市第四批市级文物保护单位。</p>
+<p>2013年3月5日，包含白浮泉遗址在内的大运河被公布为第七批全国重点文物保护单位合并项目，归入第六批全国重点文物保护单位京杭大运河，更名为大运河。</p>
+<p>2014年6月22日，包含白浮泉遗址在内的中国大运河被联合国教育、科学及文化组织公布为世界文化遗产。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-4-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-4-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-4-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-4-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

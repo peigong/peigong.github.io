@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾隆粉彩六方套瓶 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-5-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="乾隆粉彩六方套瓶"><a class="header" href="#乾隆粉彩六方套瓶">乾隆粉彩六方套瓶</a></h1>
+<p>乾隆八年，督窑官唐英和助手们研制成夹层玲珑瓶九种，呈献给乾隆皇帝，这件由粉彩繁缛华丽、工艺精致的六方套瓶就是其中一种，瓶高40.6厘米，口径11.4厘米，底座12.4厘米，主体为酱褐色釉彩，口足部施以金釉，用金银双色及红黄彩等勾绘缠枝花卉、焦叶等纹饰，镂空开窗处施有粉彩西番莲、佛手、寿桃纹等，内瓶上精绘有青花缠枝花卉，底部有青花篆书的“”大青乾隆年制的落款。所附的收藏表集中记载，1860年英法联军入侵中国期间，这件陶瓷瓶被洛克爵士掠得，后来卖给了大收藏家莫里逊氏。</p>
+<h2 id="现状"><a class="header" href="#现状">现状</a></h2>
+<p>国宝乾隆粉彩六方套瓶现存放于中国北京首都博物馆陶瓷珍品展厅。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>此瓶原为一对，一只收藏于北京首都博物馆，另一只收藏于台北鸿禧美术馆。这件被摆放在北京首都博物馆陶瓷珍品展厅入口处的陶瓷珍品，以独特美观的造型，每天吸引着参观者驻足仔细欣赏。</p>
+<p>乾隆八年（1743年）春季的一天，乾隆帝兴致勃勃地巡视圆明园，总觉得园中缺少了陈设珍品，于是返回紫禁城后，便给督窑官唐英下旨，让他设计几种用于观赏的新式瓷器小样。据《清宫档案》记载：唐英，字俊公，号蜗寄，是清朝功底最为深厚、成就最为显著的陶器工艺品大师，在景德镇督理陶务的三十年间悉心钻研陶务，对景德镇瓷业生产技艺进行科学总结，先后编写出《陶务叙略》《陶冶图说》《陶成纪事》《瓷务事宜谕稿》等著作。圣旨责令唐英为圆明园烧制“登峰造极”的陈设瓷器。经过一番苦思冥想，唐英很快设计出九种夹层玲珑交泰瓶样式，其中就包括这件镂空六方套瓶。</p>
+<p>瓷瓶的试制过程十分复杂，主要有三难：由于瓷瓶是六方瓶，所以不能上圆盘拉坯，成型极为困难，此为一难；瓷瓶雕刻后的瓷胎由于应力改变，烧制中极易变形，此为二难；瓷瓶为内青花外粉彩套瓶，即镂空瓶中再套一瓶，其工艺极其复杂，须两次入窑烧成，成品率极低，此为三难。设计登峰造极，烧制还有三难，这一切都使此瓶具有极高的艺术价值、观赏价值和收藏价值。一对瓷瓶试制成功后，乾隆帝龙颜大悦，将其陈设在圆明园中观赏。</p>
+<h2 id="国宝回归之路"><a class="header" href="#国宝回归之路">国宝回归之路</a></h2>
+<p>关于这件流浪海外多年的陶瓷珍品的回归路程，却有着一个曲折的感人故事。</p>
+<p>关于这件陶瓷珍品的回归故事，还要追溯到2000年的一个拍卖消息。那是2000年春天，北京市文物公司总经理、北京翰海拍卖公司总经理秦公先生得到一条拍卖消息，英国苏富比拍卖公司不顾中国国家文物局的公开表态，执意于5月2日在香港拍卖1860年被英法联军从圆明园掠去的乾隆粉彩六方套瓶，凭着高度职业敏感性，也为了不让流失的国宝不再次流失海外，秦公先生以自己丰富的文物鉴赏经验和爱国热情，展开了一场没有硝烟的文物回归战。由于拍卖是在香港举行，谁也没有亲眼见过这件真品，也就没有百分之百的把握确定它就是从圆明园流失的国宝乾隆粉彩六方套瓶，在拍卖前的短暂时间里，秦公先生和有关人员经过了紧张的搜集资料查证和研究，经过对第一手资料拍卖图录的细致研究判断，认定了这件拍卖品就是当年的故物。</p>
+<p>2000年5月2日下午2点20分，在香港苏富比拍卖现场，这件国宝拍卖开始了，现场竟拍者强手如林，当拍卖师以420万港币的底价开始叫拍后，现场场上应者如云，在经历了40多次的竟拍之后，北京市文物公司最终以1900万港币的价格压倒所有竞拍者，拍得了这件国宝。让这件流失海外的“艺术孤儿”终于回到了母亲的怀抱里。</p>
+<p>令人遗憾的是，秦公先生却没能亲眼看一眼自己花费心血抢救回来的国宝，在拍卖会圆满成功8天之后，秦公先生却因积劳成疾突发心脏病病逝在工作工位上。</p>
+<p>国宝拍得回归后，经过8位专家的鉴定，给这件身价1900万港币的拍品鉴定结论是：“乾隆粉彩六方套瓶”是乾隆早期御窑厂烧制的器物，曾陈设于圆明园，这件传世作品极为罕见。器型规整，工艺精美奇巧，集粉彩、珐琅彩、镂空等多种装饰技法于一器，纹饰图案融合了中西文化，代表了中国陶瓷工艺的最高水平，“乾隆粉彩六方套瓶”属国家一级文物。</p>
+<p>如今，这件被称为“中国陶瓷发展到登峰造极时期的登峰造极之作品”，在首都博物馆新馆的陶瓷精品展厅，向每一位参观者讲述着国宝归来的故事，绽放着国宝的美丽，也享受着祖国人民的特别厚爱。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-5-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-5-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-5-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-5-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

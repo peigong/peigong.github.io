@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>周礼考工记 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-4-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="周礼考工记"><a class="header" href="#周礼考工记">周礼考工记</a></h1>
+<p>《考工记》出于《周礼》，是中国春秋战国时期记述官营手工业各工种规范和制造工艺的文献。这部著作记述了齐国关于手工业各个工种的设计规范和制造工艺，书中保留有先秦大量的手工业生产技术、工艺美术资料，记载了一系列的生产管理和营建制度，一定程度上反映了当时的思想观念。</p>
+<p>《考工记》是中国所见年代最早关于手工业技术的文献，该书在中国科技史、工艺美术史和文化史上都占有重要地位。 在当时世界上也是独一无二的。全书共7100余字，记述了木工、金工、皮革、染色、刮磨、陶瓷等六大类30个工种的内容，反映出当时中国所达到的科技及工艺水平。此外《考工记》还有数学、地理学、力学、声学、建筑学等多方面的知识和经验总结。</p>
+<p>关于《考工记》的作者和成书年代，长期以来学术界有不同看法。有学者认为，《考工记》是齐国官书（齐国政府制定的指导、监督和考核官府手工业、工匠劳动制度的书），作者为齐稷下学宫的学者；《考工记》主体内容编纂于春秋末至战国初，部分内容补于战国中晚期。</p>
+<h2 id="内容简介"><a class="header" href="#内容简介">内容简介</a></h2>
+<h3 id="概述"><a class="header" href="#概述">概述</a></h3>
+<p>中国先秦时期手工艺专著。作者不详。据传西汉时《周官》（即《周礼》）缺《冬官》篇而以此补入，得以流传。全文约7000多字，记述了木工、金工、皮革工、染色工、玉工、陶工等6大类、30个工种，其中6种已失传，后又衍生出1种，实存25个工种的内容。</p>
+<p>《考工记》分别介绍了车舆、宫室、兵器以及礼乐之器等的制作工艺和检验方法，涉及数学、力学、声学、冶金学、建筑学等方面的知识和经验总结。清代学者戴震著有《考工记图》、程瑶田著有《考工创物小记》等有关研究著作。</p>
+<h3 id="详述"><a class="header" href="#详述">详述</a></h3>
+<p>今所见的《考工记》是作为《周礼》的一部分。《周礼》原名《周官》，由"天官"、"地官"、"春官"、"夏官"、"秋官"、"冬官"六篇组成。西汉时，"冬官"篇佚缺，河间献王刘德便取《考工记》补入。刘歆校书编排时改《周官》为《周礼》，故《考工记》又称《周礼·考工记》（或《周礼·冬官考工记》）。</p>
+<p>《考工记》篇幅并不长，但科技信息含量却相当大，内容涉及先秦时代的制车、兵器、礼器、钟磬、练染、建筑、水利等手工业技术，还涉及天文、生物、数学、物理、化学等自然科学知识。正因为此，历代有关《考工记》的注释和研究层出不穷，其中成绩卓著的学者，早期有汉代的郑玄，中期有唐代的贾公彦、杜牧，晚期有清代的戴震、程瑶田、孙诒让等。</p>
+<p>进入20世纪，西方科学技术的传入，科学考古的开展，使对《考工记》的研究进入了一个新阶段。研究者利用科学的手段和思维方法，利用考古实物和模拟实验资料，对《考工记》所涉及的古代技术、科学知识以及社会科学中的问题进行专题研究，发表了许多论文，在整体上把《考工记》研究提升到一个新水平。</p>
+<h2 id="内容特点"><a class="header" href="#内容特点">内容特点</a></h2>
+<h3 id="重视发展社会生产力"><a class="header" href="#重视发展社会生产力">重视发展社会生产力</a></h3>
+<p>《考工记》十分重视生产工具的制造和改进，体现了它重视发展生产力的思想。馎是锄田器，是春秋时期一种重要的农具。斧、斤、凿、曲刀、量器等则是手工业生产不可少的工具。《考工记》从青铜手工业的冶铸技术角度对这类器具的制作工艺进行了总结，“攻金之工，筑氏执下齐，冶氏执上齐，凫氏为声，栗氏为量，段氏为馎器，桃氏为刃”。“五分其金，而锡居一，谓之斧斤之齐”，指出“斧斤之齐”和包括馎器在内的生产工具所需铜和锡的比例是五比一。车辆在春秋时期不仅是重要的战争工具，也是常见的交通运输工具。</p>
+<p>《考工记》对车的制作甚为重视，它提出只有把车轮制成正圆，才能使轮与地面的接触面“微至”，从而减小阻力以保证车辆行驶“戚速”。它还规定制造行平地的“大车”和行山地的“柏车”的毂长（两轮间横木长度）和辐长（连接轴心和轮圈的木条长度），各有一定尺寸，说“行泽者欲短毂，行山者欲长毂。短毂则利，长毂则安”。这种工艺也是按照不同地势条件以求达到较大的行驶效率。</p>
+<p>《考工记》还十分重视水利灌溉工程的规划和兴修，它记述了包括“浍”（大沟）、“洫”（中沟）、“遂”（小沟）和“畎”（田间小沟）在内的当时的沟渠系统，并指出要因地势水势修筑沟渠堤防，或使水畅流，或使水蓄积以便利用。对于堤防的工程要求和建筑堤防的施工经验，它也作了详细的记述。</p>
+<h3 id="重视生产经营和经济效益"><a class="header" href="#重视生产经营和经济效益">重视生产经营和经济效益</a></h3>
+<p>《考工记》将制作精工产品规定为手工业生产的目标，而将天时、地气、材美和工巧以及四者的结合，看作必备的条件和重要的生产方法。它认为天时节令的变化会影响原材料的质量，进而影响制成品的质量，所以强调“弓人为弓，取六材必以其时”。它重视地气，是由于某些地方生产的某种原材料质量较优，或者有制造某种工艺的优良传统。它说，“郑之刀，宋之斤，鲁之削，吴粤（越）之剑，迁乎其地而不能为良，地气然也”。至于工巧，它认为是与分工有关。</p>
+<p>《考工记》所记述的手工业，分工细密，攻木之工有七种，攻金之工有六种，攻皮之工有五种，设色之工有五种，刮摩之工（玉石之工）有五种，搏埴之工（陶工）有二种。分工细密，人尽其能，则有助于工匠技艺专精。它对“工”的见解非常卓越。它说，“知者创物，巧者述之，守之，世谓之工”，这是对不断创新，提高工效，保持优良传统工艺的歌颂。</p>
+<p>在生产经营上，为了使制成品合乎规格，保证良好的效益，需设工师专管。《考工记》对此也作了记述，“凡试梓饮器，乡衡而实不尽，梓师罪之”，这是说工师检验梓人所制的饮器，如平爵向口，爵中还留有余沥，便不合标准，梓人就要受到处罚。《考工记》还指出在市场上用于交换的手工业制品，必须符合规格，为买者乐于接受，残次品不能上市。</p>
+<p>为了提高效益，必须精于算计。《考工记》以修筑沟防为例，提出“凡沟防，必一日先深之以为式，里为式，然后可以傅众力”。就是说，在沟防修筑中，应以劳工一天完成的进度作标准，以完成一里地的劳力和日数来计算整个工程所需的人力。</p>
+<h3 id="言官府工业而不非议民间工业"><a class="header" href="#言官府工业而不非议民间工业">言官府工业而不非议民间工业</a></h3>
+<p>《考工记》开宗明义就说，“国有六职，百工与居一焉”。这一方面是说“百工”的重要性，另一方面也说明“百工”是属于官府手工业。郑玄注说，“百工司空事官之属”，“监百工者，唐虞已上曰共工”。虽然《考工记》所记都是官工，但它说有些诸侯国对于有些产品，并没有设官工制造。</p>
+<p>它指出其原因是：“粤（越）之无馎也，非无馎也，夫人而能为馎也。燕之无函也，非无函也，夫人而能为函也。秦之无庐也，非无庐也，夫人而能为庐也。胡之无弓车也，非无弓车也，夫人而能为弓车也”。</p>
+<p>这是说，这些诸侯国和有的地区，或由于山出铜锡，或由于地处边区，所以民间都能制造这些产品，而不必专门设官制造。《考工记》对于民间手工业的肯定态度是与春秋时期的社会改革相一致的，也与它认为“工”是“知者创物”等的见解相符合。</p>
+<h3 id="世界最早的合金配比文献"><a class="header" href="#世界最早的合金配比文献">世界最早的合金配比文献</a></h3>
+<p>《考工记》中记载了中国古代创制的六种铜锡比例不同的合金成分配比，称之为“六齐”，是中国也是世界上最早的合金配制记载，故其科学价值为许多学者所关注。“齐”，“剂”也，就是混合物及其配方。</p>
+<p>但实践得知，含锡达到25%以上的器物，脆弱且不能用，若果达到50%则稍碰即碎。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-3-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-4-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-3-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-4-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

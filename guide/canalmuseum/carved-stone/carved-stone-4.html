@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>蚣蝮 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/carved-stone/carved-stone-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="蚣蝮"><a class="header" href="#蚣蝮">蚣蝮</a></h1>
+<p>蚣蝮（gōng fù），是中国古代神话传说是龙生的九子之一。好水，又名避水兽，头部有点像龙，不过比龙头扁平些，头顶有一对犄角。身体、四条腿和尾巴上都有龙鳞。</p>
+<p>相传很久很久以前蚣蝮的祖先因为触犯天条，被贬下凡，被压在巨大沉重的龟壳下看守运河1000年。千年后，避水兽的祖先终于获得自由，脱离了龟壳。人们为了纪念、表彰其家族护河有功，按其的模样雕成石像放在河边的石礅上，并说这样就能镇住河水，防止洪水侵袭。寓意四方平安之意,水性非常好，修桥之时，放于桥头或桥身。嘴大，肚子里能盛非常多的水，所以多用于作为建筑物的排水口。也有传说能吞江吐雨，负责排去雨水。在故宫、天坛等中国古代经典的宫殿建筑群里经常可以看到蚣蝮的身影。它爱喜波弄水，长年累月在河水中玩耍，又名帆蚣，擅水性，喜欢吃水妖，据说是龙王最喜之子。</p>
+<h2 id="版本不一"><a class="header" href="#版本不一">版本不一</a></h2>
+<h3 id="大百科全书"><a class="header" href="#大百科全书">大百科全书</a></h3>
+<p>龙生九子说法不一，龙生九子之蚣蝮同样混乱，许多小出版社的书刊来回抄袭，以讹传讹，应该以中国大百科全书为准。蚣蝮的读音总不会再往上倒至“上古汉语的拟音”，一是没有必要，二是上古汉语、中古汉语和现代汉语读音大相径庭。</p>
+<h3 id="脱龟壳即蚣蝮"><a class="header" href="#脱龟壳即蚣蝮">脱龟壳即蚣蝮</a></h3>
+<p>传说“蚣蝮”因为触犯天条，被贬下凡，被压在巨大沉重的龟壳下看守运河，千年后因功获得自由，脱离了龟壳。功能是镇水，防止洪水侵袭。在故宫、天坛等华夏各地负责排水的地方经常能看到“蚣蝮”的身影。据中国社科院研究生院龙生九子专家梁海燕考证善于负重的龙子“赑屃”另外一个名字叫“霸下”，龙生九子之“蚣蝮”（读音：gōng fù）是正解，有关“八夏”一说实为“霸下”和“蚣蝮”的混淆，把[bà xià] “霸下”当做（gōng fù）“蚣蝮”是误会。</p>
+<h2 id="神话寓意"><a class="header" href="#神话寓意">神话寓意</a></h2>
+<p>中国民间的神话传说中，一直流传着“龙生九子不成龙”的说法，也就是说龙的九种子嗣都不是龙，而是九种不同的动物。这个传说有很多个版本，各不统一，不过基本上都是九种动物排名的差异，对于九种动物本身基本都是一样的。</p>
+<p>蚣蝮，又名避水兽，没人说得清它的样子。头部有点像龙，不过比龙头扁平些，更接近于兽类，有点狮子相，头顶有一对犄角。身体、四条腿和尾巴上都有龙鳞。相传很久很久以前，避水兽的祖先因为触犯天条，被贬下凡，被压在巨大沉重的龟壳下看守运河1000年。千年后，避水兽的祖先终于获得自由，脱离了龟壳。人们为了纪念、表彰其家族护河有功，按其的模样雕成石像放在河边的石礅上，并说这样就能镇住河水，防止洪水侵袭。</p>
+<p>蚣蝮：寓意四方平安之意，水性非常好，修桥之时，放于桥头或桥身。嘴大，肚子里能盛非常多的水，所以多用于作为建筑物的排水口。也有传说蚣蝮能吞江吐雨，负责排去雨水。</p>
+<p>在故宫、天坛等中国古代经典的皇家建筑群里经常可以看到蚣蝮的身影。</p>
+<p>蚣蝮，性善好水，又称吸水兽，会调节水量，使洨河水“少能载船，多不淹禾”，保佑一方平安，倍受百姓崇敬。以此灵异之物镇于桥顶两侧，面向滔滔河水，寓示大桥会永避水害，长存永安。</p>
+<h2 id="龙生九子"><a class="header" href="#龙生九子">龙生九子</a></h2>
+<h3 id="解释"><a class="header" href="#解释">解释</a></h3>
+<p>龙生九子是指龙生九个儿子，九个儿子都不成龙，各有不同。</p>
+<p>所谓“龙生九子”，并非龙恰好生九子。中国传统文化中，以九来表示极多，有至高无上地位，九是个虚数，也是贵数，所以用来描述龙子。龙有九子这个说法由来已久，但是究竟是哪九种动物一直没有说法，直到明朝才出现了各种说法。明代一些学人笔记，如陆容的《菽园杂记》、李东阳的《怀麓堂集》、杨慎的《升庵集》、李诩的《戒庵老人漫笔》、徐应秋的《玉芝堂谈芸》等，对诸位龙子的情况均有记载，但不统一。</p>
+<p>一说：囚牛|睚眦|嘲风|蒲牢|狻猊|赑屃|狴犴|负屃|螭吻</p>
+<h2 id="相关传说"><a class="header" href="#相关传说">相关传说</a></h2>
+<h3 id="传说一"><a class="header" href="#传说一">传说一</a></h3>
+<p>在明代，龙还被人们附会出了一个繁盛的家庭。龙在其形象形成史中，曾是由多面一，即汇集了多种怪异的兽形象而演化为龙。然而并非所有的怪异兽像都百川归海，纳入了龙像之中，在与龙形象形成、发展的同时，一些怪异兽象也在发展，并且在某一方面糅合了龙的某一种形象特征。因而有人又把二者联系起来。在中国民间，很久就流传着龙生九子的说法，但是九子为何物，并没有确切的记载，然而这一公案却由于“真龙天子”的好奇而有了结果。据说一次早朝，明孝宗朱佑樘突然心血来潮，问以饱学著称的礼部尚书、文渊阁大学士李东阳：“朕闻龙生九子，九子各是何等名目？”李东阳仓卒间不能回答，退朝后左思右想，又向几名同僚询问，糅合中国神话传说，七拼八凑，才拉出了一张清单，向皇帝交了差。按李东阳的清单，龙的九子是：</p>
+<ol>
+<li>蚣蝮[gōng fù]：性喜水，被雕成桥柱上的兽形；</li>
+<li>嘲风[cháo fēng]：喜好冒险，因而人铸其像，置于殿角；</li>
+<li>睚眦[yá zì]：平生好杀，喜血腥之气，其形为刀柄上所刻之兽像；</li>
+<li>赑屃[bìxì]：力大，其背亦负以重物，即今刻在石碑
+下的石龟；</li>
+<li>椒图[jiāo tú]：形状似螺蚌，性好闭，铺首衔环是其形象；</li>
+<li>螭吻[chī wěn]：平生好吞，即殿脊的兽头之形；</li>
+<li>蒲牢[pú láo]：平生好鸣，它的头像被用作大钟的钟纽；</li>
+<li>狻猊[suān ní]：喜欢蹲坐，佛像座下的狮子是其造型；</li>
+<li>囚牛[qiú niú]：性喜音乐，其形为胡琴琴杆上端的刻像；</li>
+</ol>
+<p>所谓龙生九子，并非龙恰好生九子。中国古代传统文化中，往往以九来表示极多，而且有至高无上的地位。九是个虚数，又是个贵数，所以用来描述龙子。</p>
+<h3 id="传说二"><a class="header" href="#传说二">传说二</a></h3>
+<ul>
+<li>好重者：赑屃（音毕戏），最喜欢背负重物，所以背上驮一块石碑。</li>
+<li>好望者：鸱吻（音吃吻），最喜欢四处眺望，常饰于屋檐上.参见中国古建筑的岔脊上的装饰小兽</li>
+<li>生性好杀者：睚眦（音牙自），嗜杀喜斗，常饰于兵器刀环,剑柄.</li>
+<li>狴犴(音毕岸),最憎恶犯罪的人，所以常饰于监狱的门楣上.</li>
+<li>好烟火者：狻猊（音酸泥），性好烟火，常饰于香炉盖子的盖钮上.</li>
+<li>好水者：蚣蝮（gōng fù）位于桥边的最喜欢水，常饰于石桥栏杆顶端。在后门桥的四个角上趴着，造型非常优美。</li>
+<li>性情温顺者：椒图，最反感别人进入它的巢穴,常饰于大门口。</li>
+<li>好鸣者：蒲牢，最喜欢音乐和吼叫，常饰于大钟的钟纽上。</li>
+</ul>
+<h3 id="传说三"><a class="header" href="#传说三">传说三</a></h3>
+<p>龙生九子古时神话传说有“龙生九子，不成龙，各有所好”的传说。但九子是什么，说法也不同。《中国吉祥图说》谓：</p>
+<ul>
+<li>九子之老大叫囚牛，喜音乐，蹲立于琴头；</li>
+<li>老二叫睚眦(ya zi)，嗜杀喜斗，刻镂于刀环、剑柄吞口；</li>
+<li>老三叫嘲风，平生好险，今殿角走兽是其遗像；</li>
+<li>四子蒲牢，受击就大声吼叫，充作洪钟提梁的兽钮，助其鸣声远扬；</li>
+<li>五子狻猊(suan ni)，形如狮，喜烟好坐，倚立于香炉足上，随之吞烟吐雾；</li>
+<li>六子霸下，又名赑屃（bi xi），似龟有齿，喜欢负重，碑下龟是也；</li>
+<li>七子狴犴(bi àn)，形似虎好讼，狱门或官衙正堂两侧有其像；</li>
+<li>八子负屃，身似龙，雅好斯文，盘绕在石碑头顶；</li>
+<li>老九螭（chi）吻，又名鸱尾或鸱（chi）吻，口润嗓粗而好吞，遂成殿脊两端的吞脊兽，取其灭火消灾。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../carved-stone/carved-stone-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../carved-stone/academy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../carved-stone/carved-stone-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../carved-stone/academy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

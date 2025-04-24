@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>刘秉忠 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-4-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="刘秉忠"><a class="header" href="#刘秉忠">刘秉忠</a></h1>
+<p>刘秉忠（1216年－1274年），初名刘侃，法名子聪，字仲晦，号藏春散人。邢州（今河北省邢台市）人，祖籍瑞州。大蒙古国至元代初期杰出的政治家、文学家。</p>
+<p>刘秉忠出身世宦之家，自幼聪颖，十三岁时入都元帅府为质子，十七岁为邢台节度府令史。之后一度弃官隐居，拜虚照禅师为师。后入大蒙古国忽必烈幕府，以布衣身份参预军政要务，被称为“聪书记”。至元元年（1264年），升任光禄大夫、太保，领中书省政事。至元八年（1271年），建议忽必烈取《易经》“大哉乾元”之意，将蒙古更名为“大元”。至元十一年（1274年），刘秉忠逝世，年五十九。累赠推诚协谋同德翊运功臣、太师、开府仪同三司、上柱国、常山王，谥号“文正”，为元代汉人位封三公的唯一一人。</p>
+<p>刘秉忠兼备释、道、儒之学，活跃于蒙元初期政坛，对元代政治体制、典章制度的奠定发挥了重大作用。他对元大都的规划设计，奠定了北京市最初的城市雏形。刘秉忠兼擅诗文词曲，潇散闲澹，与其为人相类。有《藏春集》《平沙玉尺经》等传世。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="早期经历"><a class="header" href="#早期经历">早期经历</a></h3>
+<p>刘秉忠，字仲晦，初名刘侃，因信佛教改名子聪，任官后而名秉忠。他生于金宣宗贞祐四年（1216年），祖籍瑞州，世代为辽朝官宦大族。曾祖父（姓名不详）曾任金朝的邢州节度使，家居邢州，所以从他祖父刘泽算起，其家族成为邢州人。其父刘润在大蒙古国太师国王木华黎攻取邢州后投靠其麾下为官。</p>
+<p>刘秉忠自幼聪颖，八岁入学就能日诵文数百言。十三岁在帅府做人质，十七岁为邢台节度使府令史，以便于就近奉养其亲。刘秉忠为令史时常郁郁不乐，一日感叹道：“我家世代为官，难道我宁愿沦为书记小吏吗？大丈夫生不逢时，只有隐退以待时而起。”便弃官隐居于武安山中。若干年后，他被天宁寺的虚照禅师收为徒弟。后又云游云中，留居南堂寺。</p>
+<h3 id="幕府书记"><a class="header" href="#幕府书记">幕府书记</a></h3>
+<p>乃马真后元年（1242年），北方禅宗临济宗领袖海云奉蒙古宗王忽必烈之诏前往和林。路过云中时，海云听闻刘秉忠博学多才，遂邀他同行。刘秉忠拜见忽必烈后，讲述佛法大意，忽必烈甚为称赞，多次垂询。刘秉忠于书无所不读，尤其深入研究《易经》及宋邵雍《经世书》，至于天文、地理、律历、占卜无不精通，天下事了如指掌。忽必烈对刘秉忠甚是宠爱，海云返回南方后，刘秉忠就留在忽必烈的府邸供职。</p>
+<p>贵由汗元年（1249年），刘秉忠因父亲去世奔丧回家，忽必烈赐金百两为治葬之用，且遣使送至邢州。服丧期满，便召还至和林。次年（1250年），刘秉忠至和林后，上书多达数十万字。可大致分为十四条：</p>
+<ol>
+<li>建议忽必烈效仿周公辅周武王事，辅佐蒙哥汗治理天下；</li>
+<li>选派开国功臣的子孙到京府州县去监督、考核旧官，根据考察结果进行奖惩；</li>
+<li>按现在的户口确定差税，招揽被压迫出逃的流民。规定百官爵禄，对其德行进行奖惩及约束；</li>
+<li>对天下之民多施教化，不许下级官员随意定罪，死罪须上报听候断决；</li>
+<li>清查官府所欠债务，若原系正当借贷一本一利由官府归还，若系非正当借贷，且无借据，以及息大于本者，一概豁免；</li>
+<li>百姓纳公粮以就近输仓原则为准，确定“关市津梁正税”，禁止各处行商坐贾巧取横夺，禁止奢华，规定上下服饰，减轻赋税，差遣劝农官督课农桑；</li>
+<li>兴办学校，实行科举制，引导开国功臣的子孙入学校，选用有才能者；</li>
+<li>慎择县官，招抚招抚关西、河南流民，抚恤孤寡残疾者，不许朝廷使臣在地方骚扰官民，应设馆安置；</li>
+<li>令各地立庙祭祀孔子，访察当地名儒，举行祀典；</li>
+<li>请蒙哥汗颁行新历，同时着手撰修《金史》；</li>
+<li>国家拨出一部分经费赡养生活困难的名士学者，免除其中自有产业者的赋税差役，使其为国家尽其才能；</li>
+<li>广开言路，鼓励直言。明君要分辨君子和小人，使贤者在位，能者在职。</li>
+<li>将国内人民必须之盐场和矿冶交各路课税所管理，禁止好利之徒依恃官势害民，使商贾与平民互不欺夺；</li>
+<li>禁止私设牢狱，禁鞭背之刑。要正纪纲，行法度，使天下可不劳而治。注意拔擢廉洁能干的官员。</li>
+</ol>
+<p>忽必烈对他的这番议论，甚为赞赏，均加采纳。刘秉忠又建议：“邢州户口原有万余，自兴兵以来都不满数百，若派真定的张耕、洺水的刘肃这样的良吏去治理，必定能恢复旧日盛况。”于是朝廷派张耕为邢州安抚使，刘肃为副使。不久流民复业，升邢州为顺德府。</p>
+<p>元宪宗三年（1253年）、元宪宗四年（1254年）和元宪宗九年（1259年），刘秉忠随忽必烈两次征伐大理国和伐南宋。忽必烈采纳了刘秉忠的“赞（辅）以天地之好生，王者之神武不杀”之言，命大将裂帛为旗，在旗帜上写“止杀”二字，分头号令各军在攻入大理城后，不得妄杀。所以在此役中，蒙古军每克一城，都没有妄戮一人。征南宋时，所到之处，人民全活者不可胜计。</p>
+<p>中统元年（1260年），忽必烈称帝，即元世祖。忽必烈采纳刘秉忠的建议，下诏建元纪年，设立中书省和宣抚司，朝廷旧臣、山林隐士都被录用。刘秉忠虽居于忽必烈左右，但仍着旧服，当时人称他为“聪书记”。</p>
+<h3 id="深得宠眷"><a class="header" href="#深得宠眷">深得宠眷</a></h3>
+<p>至元元年（1264年），翰林学士承旨王鹗奏言：“刘秉忠早在陛下即位前，就参与军国大事，有劳有功。今陛下即位，万象更新，而刘秉忠仍着旧装，我等于心不安。应正其衣冠，给以厚爵。”忽必烈采纳，当天便下诏拜刘秉忠为光禄大夫、太保，参领中书省政事，又将翰林侍读学士窦默的女儿嫁给刘秉忠为妻，在奉先坊赐他宅第，“以少府宫籍监户给之”。</p>
+<p>刘秉忠受命后以天下为己任，凡国家大小事务，都知无不言，言无不尽，深得忽必烈宠信。所推荐和提拔的人，后大多成为名臣。</p>
+<p>刘秉忠侍从忽必烈三十多年，不管是远征或两都巡幸，他都随行，受到特殊的信任。《元史·后妃传》载，怯薛官曾奏请割京师外近地牧马，已批准，察必皇后想谏止，先故意责备刘秉忠：“汝汉人聪明者，言则帝听，汝何为不谏。”连皇后进谏都要借重于他，可见忽必烈对他确实到了言听计从的程度。</p>
+<h3 id="开元勋臣"><a class="header" href="#开元勋臣">开元勋臣</a></h3>
+<p>早在蒙哥在位时，忽必烈便对中原都城的重要性开始重视，于是在抚州之东、滦水之北的龙岗命刘秉忠建开平，即位后升为上都。这实际上是将蒙古统治中心向燕京过渡的序幕，到至元年间，复改燕京为中部，实行两京制度；而最终目的还是准备将都城内迁于燕。建立大都一大都规划、建设的使命落到刘秉忠身上。至元三年（1266年），刘秉忠在考察辽、金旧都后，在原燕京城的东北设计建造一座新的都城，即元大都（今北京市）。新城规模宏伟，工程浩大，在刘秉忠和张柔、段贞等主持下，进展很快。至元十一年（1274年）正月，大都宫阙建成。除主持设计大都外，刘秉忠还参与了元陪都上都（今内蒙古自治区锡林郭勒盟正蓝旗境内）的营建。</p>
+<p>至元六年（1269年），刘秉忠负责订立朝仪，制定官制，朝见皇帝礼节、百官的服饰及俸禄等。这些都成为元代的定制。</p>
+<p>至元八年（1271年），刘秉忠建议忽必烈取《易经》“大哉乾元”之意，将蒙古更名为“大元”，忽必烈采纳，这就是元王朝命名所由来。</p>
+<h3 id="无疾而终"><a class="header" href="#无疾而终">无疾而终</a></h3>
+<p>至元十一年（1274年），刘秉忠扈从忽必烈至上都，在南屏山的精舍清修。八月，刘秉忠忽然无病端坐而逝，享年五十九岁。忽必烈闻讯大为震惊，对群臣说：“秉忠为朕尽忠三十余年，小心谨慎，不避艰险，言无隐情，其学问之深，惟朕知之。”下令出内府钱助丧，派礼部侍郎赵秉温护送灵柩，葬于大都，后移葬到刘秉忠的故乡。</p>
+<p>至元十二年（1275年）正月，忽必烈追赠刘秉忠为太傅、赵国公，谥号“文贞”。元成宗时，加赠推诚协谋同德翊运功臣、太师、开府仪同三司、上柱国，改谥“文正”。元仁宗时，又进封爵位为常山王。有元一代，汉人位封三公的，仅有刘秉忠一人而已。</p>
+<h2 id="主要影响"><a class="header" href="#主要影响">主要影响</a></h2>
+<h3 id="政治"><a class="header" href="#政治">政治</a></h3>
+<h4 id="助行汉法"><a class="header" href="#助行汉法">助行汉法</a></h4>
+<p>刘秉忠进入大蒙古国忽必烈幕府后，以布衣身份参预军政要务。海迷失后二年（1250年），刘秉忠向忽必烈上万言书，向其阐明了“以马上取天下，不可以马上治天下”的主张，然后就户口逃亡、官员课税、刑法教令等问题充分阐述了自己的治国主张，为日后忽必烈施行汉法打下了基础。</p>
+<p>忽必烈统治中原，需要大批汉族知识分子。为此，刘秉忠鼎力推荐了张文谦、张易、郭守敬、王恂、王文统、张耕、刘肃等“耆儒硕德，奇才异能之士”。忽必烈能“得中土心”，赢得汉族知识分子的拥护，与刘秉忠有极大关系。</p>
+<h4 id="建设礼乐"><a class="header" href="#建设礼乐">建设礼乐</a></h4>
+<p>元朝建立初期，在设立中书省和宣抚司、选用官员等举措中，刘秉忠都起到了重要的作用，国家的礼乐典章制度也焕然一新。</p>
+<h4 id="规划两都"><a class="header" href="#规划两都">规划两都</a></h4>
+<p>刘秉忠还是一个古代城市的规划设计和建设专家，他于元宪宗六年（1256年）受命在漠南金莲川草原上设计建造元上都城，历时三年建成，忽必烈在此登基。又于至元三年（1266年）奉命在原燕京城东北规划设计并开始建造一个规模宏伟、工程浩大的新都城，即元大都。刘秉忠为都城寻找水源，确定皇宫方位和建城的中轴线，连一个城隍庙的具体位置也是由他来确定的。至元十一年（1274年）初，元大都宫阙告成。</p>
+<p>元大都以其因地制宜，兼收并蓄及富于创新等特色，成为古代都城建设的杰作。而刘秉忠对元大都的规划设计，也奠定了北京市最初的城市雏形。</p>
+<h4 id="制定国号"><a class="header" href="#制定国号">制定国号</a></h4>
+<p>至元八年（1271年），刘秉忠建议忽必烈取《易经》“大哉乾元”之意，将大蒙古国更名为“大元”。</p>
+<h3 id="经济"><a class="header" href="#经济">经济</a></h3>
+<p>忽必烈曾向刘秉忠询问“钱币之制”，刘秉忠回答：“‘钱用于阳，褚用于阴’。我国家龙兴于朔漠之地，应该使用褚币（纸币），子孙世代继承。如果用钱币，天下将不安宁。”忽必烈同意他的看法。《新元史》据此认为，元代中后期元武宗、元惠宗铸钱的措施，招致“天下亡于盗贼”，应验了刘秉忠的话。</p>
+<h3 id="文学"><a class="header" href="#文学">文学</a></h3>
+<h4 id="词曲"><a class="header" href="#词曲">词曲</a></h4>
+<p>刘秉忠学问功底深厚，自号藏春散人，是一位著名的学者、诗人和散曲家，每以吟咏自适。他的散曲多写景物，风格萧疏闲淡而隽永。</p>
+<p>刘秉忠的词、曲在元代都称名家。张文谦《刘公行状》则称其“诗章乐府，又皆脍炙人口”。人们谈元词，无例外地要举出《藏春词》，清人编《历代诗余》，选刘秉忠词五首（两首误收，一首《沁园春》非刘秉忠所作，一首《干荷叶》虽为刘秉忠作但属曲而非词）。清顾嗣立《元诗选》小传称其“以佐命元臣，寄情吟咏，其风致殊可想也”。顾奎光《元诗选》录其诗三首，评价在耶律楚材上。清代词人王鹏运《藏春乐府跋》“谓雄廓而不失之伧楚，酝藉而不流于侧媚”二语，为刘秉忠词风格评论定调。今人论元词，刘秉忠也居重要位置。</p>
+<h4 id="诗"><a class="header" href="#诗">诗</a></h4>
+<p>刘秉忠诗的内容也颇为丰富，可以大致分为遣怀、吟兴、咏志之作，记行记游及军旅之作，赠答之作，题画之作，即事、写景及咏物等题咏之作，还有咏史诗和论诗诗。其诗“萧散闲淡，类其为人”，能于淡中寓奇，追求恬淡辞面下的深蕴，故能淡而不枯。刘秉忠在元代不以诗文名世而以事功著称，但还是以他的创作丰富了当时北方的诗坛。杨镰的《元诗史》就用了相当篇幅评价其诗，认为“他是元初北方诗坛有代表性的诗人之一”。</p>
+<h2 id="历史评价"><a class="header" href="#历史评价">历史评价</a></h2>
+<p>察必：汝汉人聪明者，言则帝听，汝何为不谏？</p>
+<p>王鹗：秉忠久侍籓邸，积有岁年，参帷幄之密谋，定社稷之大计，忠勤劳绩，宜被褒崇。</p>
+<p>忽必烈：</p>
+<p>①气刚以直，学富而文。虽晦迹于空门，每潜心于圣道。朕居藩邸，卿实宾僚。侧闻高谊，余二十年。出从遐方，几数万里。迨予嗣服，须汝计安。不先正名，何以压众。（《拜光禄大夫太保参领中书省事制》）</p>
+<p>②秉忠事朕三十余年，小心慎密，不避险艰，事有可否，言无隐情。又其阴阳术数之精，占事知来，若合符契，惟朕知之，他人不得与闻也。</p>
+<p>③学窥天人，识贯今古。邃冲而有守，安静而无华。昔侍潜藩，稔闻高论。适当三接之，际恳上万言之书。盖将举天下而措诸安，以戒为人主者果于杀。朕嗣服而伊始，卿尽力以居多。盖得卿寔契于朕心，而独朕悉知于卿意。事皆有验，人匪他求。周旋三十年，不避其难。剀切数百奏，各中其理。</p>
+<p>李槃：故光禄大夫、太保、参领中书省事刘秉忠，学窥天人，识贯今古。邃冲而有守，安静而无华。昔侍潜藩，稔闻高论。适当三接之际，恳上万言之书。盖将举天下而措诸安，以戒为人主者果于毅。朕嗣服而伊始，卿尽力以居多。盖得卿实契于朕心，而独朕悉知于卿意。事皆有验，人匪他求。周旋三十年，不避其难；剀切数百奏，各中其理。（《太保刘秉忠赠谥制》）</p>
+<p>王磐：辅佐圣天子开文明之治，立太平之基，光守成之业者，实惟太傅刘公为称首。</p>
+<p>阎复：当云霾草昧之世，天开地辟，赞成文明之治……至于裁云镂月之章，阳春白雪之曲，在公乃为余事。（《藏春集序》）</p>
+<p>宋濂：</p>
+<p>①秉忠生而风骨秀异，志气英爽不羁……秉忠自幼好学，至老不衰，虽位极人臣，而斋居蔬食，终日淡然，不异平昔。自号藏春散人。每以吟咏自适，其诗萧散闲淡，类其为人。</p>
+<p>②贤者在世，视时诎信。挂瓢武安，绝世离群。扇然而起，拏风跃云。乃垒乃城，乃阙乃庭。乃建滦京，滦京之封。龙冈欝冲，王气所钟。伊刘公是，庸作皇邑。土中敷文，教万邦驰。车书来同，维公之功。</p>
+<p>姚广孝：良骥色同群，至人迹混俗；知己苟不遇，终身不怨讟。……一朝风云会，君臣自心腹；大计业已成，勋名照简牍。</p>
+<p>孙承恩：脱迹空门，致身台铉。大计密谋，忠勤不倦。滦京崇崇，王气所钟。定鼎宅中，召公之功。</p>
+<p>朱轼：秉忠当出处之际，踪迹甚奇。方其栖心方外、放浪山泽间，宁自知遭时遇主，出素蕴以纲维一世、垂之无穷哉？昔范蠡泛舟，观兵强吴；李泌衡山之逸客，再定两京，光复唐室。秉忠岂其流亚耶？</p>
+<p>爱新觉罗·昭梿：却特氏起自沙漠，一时所用将相，如耶律文正、杨中令惟中之相业，许文正、窦学士默、姚文宪枢之文学，刘太保秉中之谋画，商孟阳挺、郝伯常经之刚直，廉中书弟兄之忠梗，史丞相天泽、伯右相颜之战功，张都统宏范、李统制恒、阿太尉术之勇略，率皆拔出一时者。</p>
+<p>柯劭忞：刘秉忠、张文谦、窦默、姚枢，皆世祖潜邸宾僚，赞帷幄之谋，以成大业。</p>
+<p>查洪德：刘秉忠诗文词曲兼擅.......可以肯定地说，在元代诗史和词史上，其成就是不可忽视的，并且具有他自己的个性特色。他的散曲还不具备元散曲的典型风格，但写得也不错，所以才赢得后人的注目。在元好问、耶律楚材之后，郝经、姚燧、卢挚、刘因之前，因为有刘秉忠的创作，北方文坛便不寂寥。</p>
+<h2 id="轶事典故"><a class="header" href="#轶事典故">轶事典故</a></h2>
+<h3 id="学际天人"><a class="header" href="#学际天人">学际天人</a></h3>
+<p>刘秉忠兼备释、道、儒之学，“通晓音律，精算数，仰观占候、六壬遁甲、《易经》象数、邵氏《皇极》之书靡不周知”，《元史·李俊民传》称“时之知数（术数）者，无出刘秉忠”。元世祖忽必烈也称赞刘秉忠“其阴阳术数，占事知来，若合符契，惟朕知之，他人莫得与闯也”。蒙古崇拜长生天，“事必称天”，以占卜辨吉凶。精于术数、占卜，又深明治国之术，两者相辅而行，这正是刘秉忠比当时的其他僧侣和儒士更受蒙古皇帝亲信的重要原因。他与忽必烈的关系是“情好日密，话必夜阑，如鱼得水，如虎在山”，被元代学者姚枢比为三国的诸葛亮，西晋的道安，南朝宋的“黑衣宰相”慧琳，北宋象数祖师邵雍（据说能预言祸福）。元人还盛传他通秘术、行师用兵之际，役使鬼神、多著奇效。</p>
+<h3 id="简朴淡然"><a class="header" href="#简朴淡然">简朴淡然</a></h3>
+<p>刘秉忠虽身居忽必烈身边，但始终保持了简朴淡然的生活习惯，终日素衣简居、粗茶淡饭。他以“臣山野鄙人，金无所用”的淡泊心境来对待忽必烈的赏赐，推辞不过，才将所赐的白金千两，都散发给了急需用钱的人。</p>
+<h2 id="主要作品"><a class="header" href="#主要作品">主要作品</a></h2>
+<p>刘秉忠一生在天文、卜筮、算术、文学上著述甚丰，计有《藏春集》（或名《藏春散人集》《藏春诗集》）6卷，《藏春词》1卷，《诗集》22卷，《文集》10卷，《平沙玉尺》4卷，《玉尺新镜》2卷等。其中《藏春集》所收诗词，诗计七律239首，七绝151首。《永乐大典》残卷中尚有一部分刘秉忠诗。</p>
+<p>刘秉忠的词及散曲，大致可依《藏春集》卷5与《全金元词》所收，今知有小令《干荷叶》1组8首和《蟾宫曲》1组4首，分别载《阳春白雪》前集卷1和《阳春白雪》后集卷1，《全元散曲》收录。其中《干荷叶》第5至第8首可以断定非刘秉忠作，则实存散曲2组8首。他一生写作有大量文章，但多已佚失，今仅有《全元文》卷115收录其文3篇。</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="墓地"><a class="header" href="#墓地">墓地</a></h3>
+<p>关于刘秉忠墓的记载，史书中有不同的说法。</p>
+<h4 id="卢沟桥墓"><a class="header" href="#卢沟桥墓">卢沟桥墓</a></h4>
+<p>明万历年间人蒋一葵《长安客话》载：“元太保刘秉忠墓在卢沟桥北，墓前石兽尚在。”按其所记，刘秉忠墓应位于今北京市石景山区卢沟桥北、永定河东。但其墓至今已无遗迹可寻。</p>
+<h4 id="邢台墓"><a class="header" href="#邢台墓">邢台墓</a></h4>
+<p>现存的刘秉忠墓位于河北省邢台市桥西区贾村西约1公里处，被称为“刘太保墓”。据明末朱国祯《涌幢小品》记述： “刘太保秉忠，祖康懿公，弟秉恕墓，俱在邢台县治西南先贤村”。墓原本完好，规模宏大，是邢台三大古墓之一，后多次被挖盗，今已被破坏殆尽，只余一个残碑。墓为省级重点文物保护单位。</p>
+<h4 id="三文贞公祠"><a class="header" href="#三文贞公祠">三文贞公祠</a></h4>
+<p>“三文贞公祠”建于元代，在顺德府城内（今河北邢台桥东区）。祠原名太保刘文正公庙，明代时改为三文贞公祠，祭祀籍贯邢州、谥号都为“文贞”的三位名相魏徵、宋璟和刘秉忠。祭词：“世间明贤，同产此邦，文章德业，先后相望，历时愈远，声则弥光”。此祠解放后被拆毁。</p>
+<h2 id="史料索引"><a class="header" href="#史料索引">史料索引</a></h2>
+<ul>
+<li>《元朝名臣事略》卷7《太保刘文正公》</li>
+<li>《元史》卷157《刘秉忠传》</li>
+<li>《史传三编》卷41《名臣传三十三》</li>
+<li>《新元史》卷157《刘秉忠传》</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-4-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-4-5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-4-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-4-5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

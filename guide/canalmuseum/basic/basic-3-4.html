@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>衍圣公 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-3-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="衍圣公"><a class="header" href="#衍圣公">衍圣公</a></h1>
+<p>衍圣公，为孔子嫡长子孙的世袭封号，始于1055年（宋至和二年），历经宋、金、元、明、清、民国，直至1935年（民国二十四年）国民政府改封衍圣公孔德成为大成至圣先师奉祀官为止。</p>
+<p>册封孔子后裔始于公元前195年（汉高祖十二年），封孔子的第8世孙孔腾为奉祀君，自此孔子嫡系长孙便有世袭的爵位，之后的千年时间里，封号屡经变化，直至1055年（宋至和二年）改封为衍圣公，曾一度改为奉圣公，后又改回衍圣公，后世从此一直沿袭封号。</p>
+<p>1935年（民国二十四年），民国政府取消衍圣公称号，改封为大成至圣先师奉祀官。孔子第77代孙，袭封31代衍圣公孔德成，成为末代衍圣公，首任大成至圣先师奉祀官。</p>
+<p>衍圣公是中国封建社会享有特权的大贵族，宋代时相当于八品官，元代提升为三品，明初是一品文官，后又“班列文官之首”，清代还特 许在紫禁城骑马，在御道上行走。其居住的衍圣公府（今孔府），是全国仅次于明清皇宫的最大府第。曲阜孔氏家族受历代帝王追封赐礼，谱系井然，世受封爵。</p>
+<p>衍圣公因得益于先祖孔子荣耀，成为中国历史上经久不衰、世代腾黄、地位显赫的特殊公爵，与朝廷互相依偎，故而经久不衰。</p>
+<h2 id="爵号沿革"><a class="header" href="#爵号沿革">爵号沿革</a></h2>
+<p>“衍圣公”封号始于公元11世纪中国宋王朝，至1935年被中华民国政府废止，曲阜孔氏世袭“衍圣公”爵位累计八百八十年。
+宋至和二年（1055年），太常博士祖无择上书仁宗皇帝：“按前史，孔子后袭封者，在汉魏曰褒成、褒尊、宗圣，在晋宋曰奉圣，后魏曰崇圣，北齐曰恭圣，后周、隋并封邹国，唐初曰褒圣，开元中，始追谥孔子为文宣王，又以其后为文宣公。不可以祖谥而加后嗣。”意思是：唐朝开元年间追封孔子谥号“文宣王”，而孔子后裔封爵“文宣公”，将其先祖孔子的谥号加在孔子后裔身上，不可以，应当纠正。（《宋史·礼志·宾礼四》）</p>
+<p>宋仁宗采纳这个建议，“遂诏有司定封宗愿衍圣公，令世袭焉。”其诏文曰：“孔子之后以爵号褒显，世世不绝，其来远矣。自汉元帝封为褒成君以奉其祀，至汉平帝时封为褒成侯，始追谥孔子为褒成宣尼公。褒成，其国也；宣尼，其谥也；公侯，其爵也。后之孙虽更改不一，而不失其义。至唐开元（713年—741年）中始追谥孔子为文宣而尊以王爵，封其嗣褒圣侯为文宣公。孔氏子孙去国号袭谥号，礼之失也盖自此始。朕稽考前训，博采群议，皆谓宜法汉之旧，革唐之失，稽古正名，于义为当。朕念先帝崇尚儒术，亲祠阙里，而始加至圣之号，务极尊显之意。肆朕纂临，继奉先志，尊儒重道，不敢失坠，而正其后裔嗣爵之号不其重欤！宜改至圣文宣王四十六代孙孔宗愿为衍圣公。”</p>
+<p>公元11世纪中国宋王朝皇帝宋仁宗的“衍圣公”封号，官职品级虽不高，但文化含金量甚足。与以往的褒成、褒尊、宗圣、奉圣、崇圣、恭圣、褒圣等封号相比，“衍”寓意圣裔持续衍展、世代繁衍无止境，代表了封建帝王尊孔崇圣的至高境界。</p>
+<p>“衍圣公”爵号问世后，女真人、蒙古人争相窃取借以笼络人心。公元12世纪宋、金、元政权各拥“衍圣公”，一在衢州、一在开封、一在曲阜。宋崇宁三年（1104年），诏宣议郎孔端友袭封奉圣公（大观年间（1107年—1110年）复改封衍圣公），为通直郎、直秘阁，仍许就任关升，以示崇奖。宋高宗绍兴二年（1132年），以四十九代孙孔玠袭封衍圣公。其后，以搢、以文远、以万春、以洙，终宋世，皆袭封主祀事。13世纪元王朝统一中国版图后，蒙古族统治者试图收买宋衍圣公孔洙，孔洙运用儒家智慧全身而退。14世纪初元仁宗恢复曲阜孔氏嫡长孙袭封衍圣公爵号，确认“以嫡应袭封者思晦也”。（《元史·列传·孔思晦》）明王朝、清王朝均沿用此封号。</p>
+<h2 id="二宗并立"><a class="header" href="#二宗并立">二宗并立</a></h2>
+<p>也是从孔端友以后，由于宋金元三朝并起纷争，使得孔子后裔册封出现了南宗和北宗。北宋后期，女真族南下，赵构渡江于临安建立了南宋政权。孔端友于建炎二年（公元1128年）随高宗南迁，遂寓于衢州（今浙江省衢州），是为南宗。其后南宗袭封衍圣公的有孔玠、孔搢、孔文远、孔万春、孔洙等人。</p>
+<p>宋廷南迁后，刘豫建立了伪齐政权，于阜昌三年（公元1132年）封孔端友的弟弟孔端操之子孔璠为衍圣公，主持曲阜孔庙祀事。伪齐政权被推翻后，金熙宗于天眷三年（公元1140年）继封孔璠为衍圣公，其后有孔拯、孔摠、孔元措等袭封衍圣公，是为北宗。</p>
+<p>后因蒙古族起兵南下，孔元措随金政权迁往汴京，曲阜孔庙则由其族兄孔元用主持祀事。蒙古族占领曲阜，先后以孔元用、孔之全父子为衍圣公。这样，宋金元三朝并起，各有一个衍圣公。元太宗五年（公元1233年），蒙古骑兵攻下金汴都，金封衍圣公孔元措被元政权所得，仍封孔元措为衍圣公，而改封孔之全止充曲阜令。北宗孔元措无子，由其弟孔元綋的孙子孔浈为嗣。孔浈于元宪宗元年（公元1251年）袭封衍圣公。后来，元政权先前所封衍圣公曲阜令孔之全之子孔治率孔氏族人上书皇帝，言孔浈不修祖祀，且非孔氏之宗，而系孔元綋的儿子孔之固侧室所生，且生母早已改嫁驱口李氏，孔浈曾随李氏姓李，不可为孔氏宗。宪宗二年（公元1252年）皇帝下诏免去孔浈衍圣公封号。其后相当一个时期没有任命新的衍圣公。公元1279年，南宋灭亡后，宋所封衍圣公五十二世孙孔洙归元。元朝统一，元世祖忽必烈于至元十九年（公元1282年）访查孔子后裔宗子，曾召孔洙至京师，孔洙让位于曲阜宗子，忽必烈对孔洙大加赏识曰："乃真圣人后也。"于是命孔洙为国子监祭酒、承务郎兼提举浙东学校事，赐护持林庙玺书，免去衍圣公封号。</p>
+<p>此时，南北宗的衍圣公均被免职，十余年后，元成宗元贞元年（公元1295年）因孔之全长子孔治权奉祀事三十余年而奉诏袭封衍圣公。结束了长达一百多年的双宗并立。元仁宗延祐二年（公元1315年），孔氏族人又上书皇帝，说孔治之子孔思诚是庶支。仁宗皇帝派大臣元明善调查，并亲取孔氏族谱查考，确定宗子继承人应该是孔思晦。孔思晦和孔思诚均为四十五代孔宗愿三子孔若愚的七世孙，孔思晦是四十九代孙孔拂长子孔元孝的嫡长孙，孔思诚是孔拂次子孔元用的嫡长孙，因此，元仁宗于延祐三年（公元1316年）罢黜孔思诚而以孔思晦袭封衍圣公，并授阶为中议大夫，列正四品。从此，衍圣公之位在此一脉中延续。</p>
+<h2 id="清廷承认"><a class="header" href="#清廷承认">清廷承认</a></h2>
+<p>清顺治元年（公元1644年），清世祖承认衍圣公在明代享受的全部特权，六十四代衍圣公孔衍植仍任衍圣公加太子太傅。朝见时衍圣公仍列内阁大臣之上。</p>
+<p>衍圣公与朝廷的密切关系，到乾隆时期达到巅峰，乾隆帝曾多次来曲阜，并颁御书“与天地参”、“时中立极”、“化成悠久”等匾额，重建棂星门，易木为石。对于乾隆帝与孔府的关系密切，多有猜测，包括七十一代衍圣公孔宪培的一品夫人于氏（无后），与乾隆帝关系密切，孔府盛传于氏为乾隆帝之女。据考证，乃乾隆帝义女（官臣于敏中之女）。后于道光年间于孔府东路建有于氏的祭祀专祠沐恩堂。于敏中被罢官后，其后裔也多寄居孔府。</p>
+<h2 id="封号废除"><a class="header" href="#封号废除">封号废除</a></h2>
+<p>第七十六代衍圣公孔令贻，是倒数第二代衍圣公，他倍受皇恩。在京为慈禧太后祝寿时，赏戴双眼花翎；清宣统二年（公元1910年）又赏穿带嗉貂褂。民国二年（公元1913年），袁世凯下令所有衍圣公暨配祀贤哲后裔所受清代的荣典一切照旧，颁给衍圣公孔令贻一等大绶宝光嘉禾章。孔令贻于1919年病逝北京，1920年2月其遗腹子孔德成出生，4月大总统令孔德成袭封衍圣公。民国二十四年（公元1935年），民国政府令孔子嫡系裔孙改任大成至圣先师奉祀官。至此，延续了八百多年的衍圣公封号被废除。</p>
+<h2 id="世袭表"><a class="header" href="#世袭表">世袭表</a></h2>
+<h3 id="宋代与金代"><a class="header" href="#宋代与金代">宋代与金代</a></h3>
+<ul>
+<li>46代孔宗愿，字子庄，宋宝元二年（1039年）袭文宣公，至和二年（1055年）改封衍圣公，孔延泽（孔宜次子，孔宜长子孔延世之弟）子、孔圣祐（孔延世子，无后）从弟</li>
+<li>47代孔若蒙，字公明，宋熙宁元年（1068年）袭衍圣公，元祐元年（1086年）改封奉圣公，授承奉郎，后废，孔宗愿长子</li>
+<li>47代孔若虚，字公实，宋元符元年（1098年）袭奉圣公，孔宗愿次子</li>
+<li>48代孔端友，字子交，宋崇宁三年（1104年）袭奉圣公，授朝奉郎、直秘阁，宋大观年间（1107年—1110年）复改封衍圣公，1128年南渡，孔若蒙长子，无后</li>
+<li>49代孔玠，字锡老，宋绍兴二年（1132年）袭衍圣公，南宗，孔端操（孔若蒙次子，孔端友之弟）长子</li>
+<li>49代孔璠，字文老，伪齐阜昌三年（1132年）封衍圣公，金天眷三年（1140年）封衍圣公，未袭，1140年卒，北宗，孔端操（孔若蒙次子，孔端友之弟）次子</li>
+<li>50代孔搢，字季绅，宋绍兴二十四年（1154年）袭衍圣公，南宗，孔玠子</li>
+<li>50代孔拯，字元济，金皇统二年（1142年）袭衍圣公，授文林郎，北宗，孔璠长子，无后</li>
+<li>50代孔摠，字元会，金大定三年（1163年）袭衍圣公，兼曲阜县令，北宗，又名孔詌，孔璠次子</li>
+<li>51代孔文远，字绍先，宋绍熙四年（1193年）袭衍圣公，南宗，孔搢子</li>
+<li>51代孔元措，字梦得，金明昌二年（1191年）袭衍圣公，随金迁汴京，蒙古太宗五年（1233年）封衍圣公，北宗，孔摠长子，无后</li>
+<li>51代孔元用，字俊卿，蒙古太祖十五年（1220年）封衍圣公，蒙古太祖二十一年（1226年）罢，北宗，孔拂次子、孔琥孙、孔端立的曾孙、孔若愚（孔宗愿第三子，孔若蒙、孔若虚之弟）的玄孙、孔宗愿的第5世孙</li>
+<li>52代孔万春，字耆年，宋宝庆二年（1226年）袭衍圣公，南宗，孔文远子</li>
+<li>52代孔之全，字工叔，蒙古太祖二十一年（1226年）封衍圣公，蒙古太宗五年（1233年）罢，专任曲阜县令，北宗，孔元用子</li>
+<li>53代孔洙，字景清，宋绍定四年（1231年）袭衍圣公，1282年让位，南宗，孔万春子</li>
+<li>53代孔浈，字昭度，蒙古宪宗元年（1251年）袭衍圣公，次年（1252年）免，北宗，孔之固子、孔元紘（孔摠次子，孔元措之弟）孙</li>
+</ul>
+<h3 id="元代"><a class="header" href="#元代">元代</a></h3>
+<ul>
+<li>53代孔治，字世安，元元贞元年（1295年）封衍圣公，孔之全子</li>
+<li>54代孔思诚，字致道，元大德十一年（1307年）袭衍圣公，1316年罢，孔治子</li>
+<li>54代孔思晦，字明道，元延祐三年（1316年）封衍圣公，孔浣子、孔之厚孙、孔元孝（孔拂长子，孔元用之兄）的曾孙、孔拂的玄孙</li>
+<li>55代孔克坚，字璟夫，元至元六年（1340年）袭衍圣公，孔思晦子</li>
+<li>56代孔希学，字士行，元至正十五年（1355年）袭衍圣公，明洪武元年（1368年）封衍圣公，孔克坚子</li>
+</ul>
+<h3 id="明代"><a class="header" href="#明代">明代</a></h3>
+<ul>
+<li>57代孔讷，字言伯，明洪武十七年（1384年）袭衍圣公，正一品，班列群臣之首，孔希学子</li>
+<li>58代孔公鉴 字昭文，明建文二年（1400年）袭衍圣公，孔讷子</li>
+<li>59代孔彦缙，字朝绅，明永乐八年（1410年）袭衍圣公，孔公鉴子</li>
+<li>60代孔承庆，字永祚，早卒，明景泰六年（1455年）追赠衍圣公，孔彦缙子</li>
+<li>61代孔宏绪，字以敬，明景泰六年（1455年）袭衍圣公，后废，孔承庆长子</li>
+<li>61代孔宏泰，字以和，明成化六年（1470年）袭衍圣公，孔承庆次子</li>
+<li>62代孔闻韶，字知德，明弘治十六年（1503年）袭衍圣公，孔宏绪子</li>
+<li>63代孔贞干，字用济，明嘉靖二十五年（1546年）袭衍圣公，孔闻韶长子</li>
+<li>64代孔尚贤，字象之，明嘉靖三十五年（1556年）袭衍圣公，孔贞干子，无后</li>
+<li>65代孔衍植，字懋甲，明天启元年（1621年）袭衍圣公，清顺治元年（1644年）十月二日封衍圣公，孔尚坦子、孔贞宁（孔闻韶次子，孔贞干之弟）孙、孔闻韶的曾孙、孔宏绪的玄孙</li>
+</ul>
+<h3 id="清代"><a class="header" href="#清代">清代</a></h3>
+<ul>
+<li>66代孔兴燮，字起吕，清顺治五年（1648年）袭衍圣公，孔衍植子</li>
+<li>67代孔毓圻，字钟在，清康熙六年（1667年）袭衍圣公，孔兴燮子</li>
+<li>68代孔传铎，字振路，清雍正元年（1723年）袭衍圣公，孔毓圻子</li>
+<li>69代孔继濩，字体和，早卒，清雍正十三年（1735年）追赠衍圣公，孔传铎子</li>
+<li>70代孔广棨，字京立，清雍正九年（1731年）袭衍圣公，孔继濩子</li>
+<li>71代孔昭焕，字显文，清乾隆九年（1744年）袭衍圣公，孔广棨子</li>
+<li>72代孔宪培，字养元，清乾隆四十七年（1782年）袭衍圣公，孔昭焕长子，无后</li>
+<li>73代孔庆镕，字陶甫，清乾隆五十八年（1793年）袭衍圣公，孔宪增（孔昭焕次子，孔宪培之弟）子</li>
+<li>74代孔繁灏，字文渊，清道光二十二年（1842年）袭衍圣公，孔庆镕子</li>
+<li>75代孔祥珂，字觐堂，清同治二年（1863年）袭衍圣公，孔繁灏子</li>
+<li>76代孔令贻，字谷孙，清光绪三年（1877年）袭衍圣公，民国二年（1913年）封衍圣公，孔祥珂子</li>
+</ul>
+<h3 id="民国"><a class="header" href="#民国">民国</a></h3>
+<ul>
+<li>77代孔德成，字玉汝，民国九年（1920年）袭衍圣公，民国二十四年（1935年）改称大成至圣先师奉祀官。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-3-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-4-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-3-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-4-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

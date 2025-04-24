@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>通州燃灯佛舍利塔 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/extend/Tongzhou-Lighthouse-Pagoda.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="通州燃灯佛舍利塔"><a class="header" href="#通州燃灯佛舍利塔">通州燃灯佛舍利塔</a></h1>
+<p>通州燃灯塔（Tongzhou Lighthouse Pagoda），又称燃灯佛舍利塔，位于北京市通州区大城街1号，始建于北周年间，唐贞观七年（633年）重修，清康熙三十七年（1698年）重建塔身，与临清舍利宝塔、杭州六合塔、扬州文峰塔并称“运河四大名塔”。</p>
+<p>通州燃灯塔是一座砖木结构的实心密檐塔，平面呈八角形，原高48米，现高约56米。塔基基座由大城砖砌筑而成，其上是双层须弥座。平座位于须弥座之上，下有仿木斗拱承托。平座之上用三层硕大的仰蓬莲瓣簇拥塔身。塔身平面呈八角形，塔身中空，内置神台。塔身之上建造13层密檐式塔檐。塔刹是两层八角形须弥座承托仰莲。燃灯塔是通州古城的象征，具有较高的历史文化研究价值和参观游览价值。</p>
+<p>1979年8月21日，燃灯塔被北京市人民政府公布为北京市第二批市级文物保护单位。2019年10月7日，通州燃灯塔被中华人民共和国国务院公布为第八批全国重点文物保护单位合并项目，归入第六批全国重点文物保护单位大运河。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>北周年间，佑圣教寺始建通州燃灯塔。</p>
+<p>唐贞观七年（633年），尉迟敬德监督重修通州燃灯塔。</p>
+<p>辽重熙年间（1032年~1054年），通州燃灯塔重建。</p>
+<p>元大德年间（1297年~1307年），通州燃灯塔修缮。</p>
+<p>明成化年间（1465年~1487年），通州燃灯塔修缮。</p>
+<p>清康熙九年（1670年），通州燃灯塔修缮。</p>
+<p>清康熙十八年（1679年），通州燃灯塔塔身毁于地震，只剩下基座。</p>
+<p>清康熙三十七年（1698年），通州燃灯塔塔身重建完成。</p>
+<p>清光绪二十六年（1900年），八国联军侵占通州期间，通州燃灯塔遭到严重破坏。</p>
+<p>文化大革命期间，通州燃灯塔塔身的佛像、兽雕被破坏。</p>
+<p>1976年，通州燃灯塔受唐山大地震影响，塔身受损。</p>
+<p>1985年，通州燃灯塔开始进行修缮，重建塔顶、补配铜铃，恢复塔基。</p>
+<p>1987年，重修通州燃灯塔塔顶。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>通州燃灯塔是一座砖木结构的实心密檐塔，平面呈八角形，原高48米，现高约56米。塔基基座由大城砖砌筑而成，其上是双层须弥座，须弥座束腰雕有图案，下层雕双龙戏珠图案，转角部分雕刻狮子头像，上层须弥座设有壶门形小龛，龛内雕坐佛一尊，转角处亦雕有顶抗塔基形象的金刚力士像，顶盔挂甲，共104尊。平座位于须弥座之上，砖雕双层勾栏，上层雕动物图案，下层雕几何图形。平座下面有仿木斗拱承托，拱眼壁间嵌有花卉图案。平座之上用三层硕大的仰蓬莲瓣簇拥塔身。塔身平面呈八角形，四正面辟拱门，四斜面雕饰直棂假窗。四座券门除南门外，其余三个券门都是仿木砖雕假门。南门为木制，门上有门钉和门钹等装饰物，门楣雕花卉图案。塔身中空，塔内置神台，其上供燃灯古佛。塔身之上建造13层密檐式塔檐，檐下均施以仿木结构的双翘单昂五踩砖制斗拱。檐椽及角梁为木制，在每根椽子的端部，都悬挂制作精致的风铃一枚，风铃上篆刻有捐银者的姓名及捐助数目。在每层斗拱的拱眼壁之间，置有佛像一尊，全塔总共有风铃2248枚，神像共计415尊。第十三层檐正南面中间部分，放置砖刻碑记一方，碑首刻“万古流芳”。碑身篆刻七言诗一首：“巍巍宝塔镇潞陵，层层高耸接青云。明明光影河中现，朗朗铃音空里鸣。时赖周唐人建立，大清复整又重新。永保封疆千载古，万姓沾恩享太平。”背面正中刻“立碑僧寂玉造”。塔刹是两层八角形须弥座承托仰莲，纵贯铁杵，上置铜质相轮等饰件，有八根铁链连接于塔尖各脊。</p>
+<h2 id="文物遗存"><a class="header" href="#文物遗存">文物遗存</a></h2>
+<p>通州燃灯塔上共悬铜质风铃2248枚，转角檐头挂大铃，其余为小铃，大铃一个重2斤，小铃一个重1斤。角梁下壁处各倾置一尊砖雕力士神像，共104尊，其中有一尊猪八戒像，为明代所雕，早于《西游记》小说问世数十年。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="艺文"><a class="header" href="#艺文">艺文</a></h3>
+<p>“云光水色潞河秋，满径槐花感旧游。无恙蒲帆新雨后，一支塔影认通州。”——清·王维珍《文昌阁十二景·古塔凌云》</p>
+<p>“千尺巍峨塔势雄，层霄矗立障天风。半空铃语云间碧，元夕灯光顶上红。多宝自应真佛现，题名不与曲江同。潞亭作镇城楼北，终古祥雯五色笼。”——清·王维珍《通州八景·古塔凌云》</p>
+<p>“郡城塔影落波尖，生齿休和日日添。才命农官出红朽，顿教米贱乐穷阎。”——清·爱新觉罗·弘历《过通州浮桥即景杂咏·其三》</p>
+<h3 id="传说轶事"><a class="header" href="#传说轶事">传说轶事</a></h3>
+<p>相传，通州燃灯塔修缮竣工当晚，尉迟敬德叫工匠在塔下燃起篝火，四周拉起帷幔，火光冲天，照得塔顶的鎏金铜镜光芒四射，连塔下十里以外的船只都可以看到。从此以后，运河上的船只来来往往特别顺畅。通州燃灯塔也成为运河上一座著名的“灯塔”。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>通州燃灯塔是通州古城的象征，与临清舍利宝塔、杭州六合塔、扬州文峰塔并称“运河四大名塔”，具有较高的历史文化研究价值和参观游览价值。</p>
+<p>文物保护</p>
+<p>1979年8月21日，燃灯塔被北京市人民政府公布为北京市第二批市级文物保护单位。</p>
+<p>2019年10月7日，通州燃灯塔被中华人民共和国国务院公布为第八批全国重点文物保护单位合并项目，归入第六批全国重点文物保护单位大运河。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/celebrity-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/celebrity-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

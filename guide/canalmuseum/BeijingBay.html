@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北京湾 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/BeijingBay.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京湾"><a class="header" href="#北京湾">北京湾</a></h1>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="总述"><a class="header" href="#总述">总述</a></h3>
+<p>14亿年前的“燕山运动”使西北部上升为山地，东部下陷为平原，地理学上把这块平原称为“北京湾”。</p>
+<p>历史上的北京城水资源非常丰富，堪称一座水城，北京内城与城外的联系常常依靠密布的河网。像通惠河、温榆河、潮白河等，都能通船。那时从通州起航的船只可以一直开到密云城下，如果再顺着温榆河逆流而上，一直能开到昌平的沙河。地下水也很丰富，在永定河和潮白河两大洪积冲积扇的中上部地区，形成两大地下水溢出带，泉水众多，泉流丰沛。一条是沿山前平原呈弧形，分布于南部的昆明湖、紫竹院至右安门，直到南苑镇，有多处泉水。如海淀的万泉庄，据记载有28个大泉眼，这些泉眼流出来的泉水，通过万泉河向北流。康熙年间兴建圆明园的时候，主要水源就是万泉庄的泉水。玉泉山的泉水水量更大，后来随着水系变迁，这些水源基本枯竭了。另一条在北部，从南口以下至百泉庄、四家庄、亭子庄等地，呈长条状分布，有一亩泉、满井、百泉等。</p>
+<h3 id="辽代"><a class="header" href="#辽代">辽代</a></h3>
+<p>辽南京城、金中都城，城市水源主要依赖莲花池水系。金对辽南京城水系做了较大改变，形成新的护城河系统。源于莲花池的洗马沟（莲花河）被圈入城内，成为宫苑水源。在宫城西面建同乐园，开西华潭等湖泊，宫城之内建鱼藻池。莲花河流经皇城宣阳门前，由南城垣下流出城外，河水经城垣处建有规模宏大的水关。在中都城内还开辟了一些小河，如会城门至莲花河的水渠、迎春门内的水渠等。</p>
+<h3 id="元代"><a class="header" href="#元代">元代</a></h3>
+<p>元大都城建成后，开通了由大都城至通州的坝河和通惠河。坝河起于大都城内的积水潭，下接温榆河，与运河相通。至元三十年（1293）修建完成的通惠河，由昌平白浮泉引水，西折而南，聚昌平西部泉水汇入瓮山泊，合玉泉山水，引入大都积水潭，再由积水潭引至通州，与大运河相接。又开金水河，引玉泉山水入内。元末开凿金口新河，引卢沟河水至通州，因水量过大，威胁城池而废弃。</p>
+<h3 id="明代"><a class="header" href="#明代">明代</a></h3>
+<p>明代，北京城及近郊水系在元代基础上有了较大变化。明初北京城放弃了元大都城北部，将元大都城内的坝河河段改建为北护城河。永乐年间北京城南扩，原元大都南护城河填平为城市街区，在扩建后的南城门外开凿了新的南护城河，在皇城承天门前增加了金水河。元大都的金口河故道因城市建设而湮废，正统年间在原金口新河故道上开通三里河，嘉靖年间修建外城，开挖了外护城河。元代金水河至明代湮废。</p>
+<h3 id="清代"><a class="header" href="#清代">清代</a></h3>
+<p>清代，北京城及近郊河湖水系变化不大，只有局部变动。清中叶，大明濠横桥以北河段湮废，瓮山泊扩建为昆明湖。</p>
+<h2 id="地理环境"><a class="header" href="#地理环境">地理环境</a></h2>
+<p>“北京湾”特殊的地形地势，使西北部徜徉流转于群山中的大小河流向东南平原汇流，到北京平原上形成了五大水系——永定河水系、潮白河水系、温榆河—北运河水系、拒马河水系、泃河水系。</p>
+<h2 id="气候特点"><a class="header" href="#气候特点">气候特点</a></h2>
+<p>夏季，北京湾对着温暖湿润的东南风敞开怀抱，让其长驱直入，来自海洋的夏季风带来了降水，降水和夏季较高的气温结合在一起，被称为“雨热同季”，这对农业很有利。</p>
+<p>夏季风吹到太行山和燕山脚下，沿着山坡逐渐抬升，水汽冷凝形成降水，降水又在山区形成一条条河流从山里流到平原，河流不仅带来生命中不可缺少的水，还带来了泥沙和砾石，这些泥沙砾石沉积下来，形成冲积扇，冲积扇又连接起来，形成平原。因此风水宝地的“中堂”中不能缺少“萦绕的流水”。</p>
+<p>冬季，季风调转方向从北方吹来。寒冷的季风被高大绵延的太行山和燕山山脉阻挡，季风即使越过山脉也会因为下沉的过程而增温。所以太行山和燕山脚下比较温暖。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="GrandCanal/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="GrandCanal/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

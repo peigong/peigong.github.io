@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>董其昌 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/celebrity-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="董其昌"><a class="header" href="#董其昌">董其昌</a></h1>
+<p>董其昌（1555年2月10日—1636年10月26日），字玄宰，号思白、香光居士，松江华亭（今上海市）人。明朝后期大臣、书画家。</p>
+<p>万历十七年（1589年），考中进士，授翰林院编修。一度担任皇长子朱常洛的讲官。历任湖广提学副使、福建提学副使、河南参政，因病辞职。泰昌元年（1620年），明光宗朱常洛继位，授太常少卿、国子司业，参修《明神宗实录》。天启五年（1625年），出任南京礼部尚书，因事辞官。崇祯五年（1632年）任太子詹事。崇祯七年（1634年）回归乡里。崇祯九年（1636年）去世，谥号“文敏”。</p>
+<p>董其昌擅于山水画，师法于董源、巨然、黄公望、倪瓒，笔致清秀中和，恬静疏旷；用墨明洁隽朗，温敦淡荡；青绿设色，古朴典雅。以佛家禅宗喻画，倡“南北宗”论，为“华亭画派”杰出代表，兼有“颜骨赵姿”之美。存世作品有《岩居图》《秋兴八景图》《昼锦堂图》《白居易琵琶行》《草书诗册》《烟江叠嶂图跋》等。画作及画论对明末清初的画坛影响甚大。书法出入晋唐，自成一格。作品《戏鸿堂帖》（刻帖）。颇能诗文，著有《画禅室随笔》《容台文集》等。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="初露锋芒"><a class="header" href="#初露锋芒">初露锋芒</a></h3>
+<p>董其昌，南直隶松江府上海县董家汇（今上海市）人。嘉靖三十四年（1555年2月10日）出生。</p>
+<p>董其昌17岁时，参加松江府会考。当时他写了一篇很得意的八股文，自以为准可夺魁，谁知发榜时，竟屈居于堂侄董原正之下。原因是松江知府衷贞吉嫌他试卷上的字写得差，文章虽好，只能屈居第二。此事使董其昌深受刺激，从此他发愤学习书法。以唐人颜真卿《多宝塔帖》为楷模，后来又改学魏、晋，临摹钟繇、王羲之的法帖。经过十多年的刻苦努力，董其昌的书法有了很大的进步，山水画也渐渐入门。</p>
+<h3 id="进退得宜"><a class="header" href="#进退得宜">进退得宜</a></h3>
+<p>明万历十七年（1589年），董其昌考中进士，并因文章、书法优秀被选为庶吉士，入翰林院深造，供职于翰林院。翰林学士田一儁去世，告假护柩南下数千里，送老师回福建大田县。一度担任皇长子朱常洛的讲官。</p>
+<p>不久，便告病回到松江。而京官和书画家的双重身份，使他的社会地位迥异往昔。其后，他相继担任过湖广提学副使、福建副使，一度还被任命为河南参政从三品的官职。一年之后，他就奉旨以编修养病，“家食二十余年”。其时，正值明朝历史上长达十余年的“国本之争”，其间还发生了著名的“妖书案”、“楚太子狱”，朝廷内部为册立太子一事党争不休，风云诡谲。董其昌借口回家养病辞官。</p>
+<h3 id="潜心书画"><a class="header" href="#潜心书画">潜心书画</a></h3>
+<p>在研习经史之余，董其昌与同僚诸友切磋书画技艺，纵论古今，品评高下。又从韩世能那里借阅晋、唐、宋、元法帖宝绘，心摹手追，有时废寝忘餐，因而学问大进，开始在京中有些名气。在家乡，董其昌筑“来仲楼”、“宝鼎斋”、“戏鸿堂”、“画禅室”、“香光室”等，牙签玉轴，左图右史，置身其中，著书立说，探究古今书画艺术。</p>
+<p>他不遗余力地搜集王羲之、王献之、谢安、桓温、赵佶、米芾诸名家法书，于万历三十一年（1603年）刊刻《戏鸿堂法帖》行世。</p>
+<p>病休松江时期，他正值四十余岁的盛年，广闻博识，采集众长，悠居林泉，心闲手熟，创作了《葑泾访古图》《鹤林春社图》《浮岚暖翠图》《神楼图》《西湖八景图》《溪回路转图》等许多描绘江南风光的著名山水画。</p>
+<h3 id="亦官亦隐"><a class="header" href="#亦官亦隐">亦官亦隐</a></h3>
+<p>泰昌元年（1620年），神宗驾崩，朱常洛即位，是为光宗。光宗即位，启用董其昌为太常少卿，掌国子司业。其间，奉命修《神宗实录》。但是，光宗执政一个月就驾崩，继任的明熹宗宠信魏忠贤与乳母客氏。</p>
+<p>天启五年（1625年），董其昌被任命为南京礼部尚书，在任一年即辞官退隐，退隐“家居八载”。</p>
+<p>崇祯五年（1632年），魏忠贤已死，政局趋向清明，七十七岁的董其昌第三次出仕，“起故官，掌詹事府事”。</p>
+<p>崇祯六年（1633年），阁臣周延儒遭温体仁排挤，离开内阁，温体仁在魏忠贤余党的鼓动下，掀起党争，排斥东林。次年（1634年），董其昌又乞求致仕。</p>
+<p>从三十五岁走上仕途到八十岁告老还乡，为官十八年归隐二十七年。与家乡松江的先贤陆机崇奉“士为知己者死”相比，董其昌把明哲保身的政治智慧用得出神入化。他以科举入仕进入精英阶层，既结交东林派、公安派，又与反东林党人惺惺相惜。</p>
+<h3 id="死后哀荣"><a class="header" href="#死后哀荣">死后哀荣</a></h3>
+<p>崇祯九年九月二十八日戌时（1636年10月26日），董其昌在松江寓所逝世，享年八十二岁。（是日距董其昌知交好友袁可立三周年祭日十二天）后来葬于吴县（今属江苏）渔洋湾董氏坟茔。</p>
+<p>弘光元年（1644年），南明福王政权追赐董其昌谥号“文敏”（与赵孟頫相同）。因此，后人也把他称作“董文敏”。</p>
+<h2 id="主要影响"><a class="header" href="#主要影响">主要影响</a></h2>
+<h3 id="艺术成就"><a class="header" href="#艺术成就">艺术成就</a></h3>
+<h4 id="综述"><a class="header" href="#综述">综述</a></h4>
+<p>董其昌书法上有“邢张米董”之称，即把他与临邑邢侗、晋江张瑞图、须天米万钟并列；绘画上有南董北米之说。莫是龙、陈继儒提倡“南北宗”之说，即把“院体”山水画与“文人画”分为南北两派。董其昌一生创作的书画作品不可胜数，临仿古人的绘画和诗帖是其中的一个重要部分。</p>
+<p>他在《画禅室随笔》中所说的“读万卷书”正是指一个人要想成为艺术家，必须学习传统，学习古人。他17岁开始学习书法时临写颜真卿的《多宝塔》，22岁学习绘画时师法黄公望，以后又遍学诸家，这种以古人为师的作法八十而不辍，伴其终生。他广泛吸取，对唐宋元诸家优长，抉精探微，使其书画取得了超越古人的艺术成就。</p>
+<h4 id="绘画"><a class="header" href="#绘画">绘画</a></h4>
+<p>董其昌强调以古人为师，但反对单纯机械地模拟蹈袭。随着阅历的增加、思想的成熟，他在继承前人技法时不倚傍他人庑下“作重台”，而是有选择地取舍，融入自己的创意。他认为如果离开了自己的创意，古人的精神也难以表达，故应以自己独创的形式再现古人的“风神”。凭借自己对古人书画技法得失的深刻体会，他摄取众家之法，按己意运笔挥洒，融合变化，达到了自成家法的化境。</p>
+<p>董其昌的山水画大体有两种面貌：一种是水墨或兼用浅绛法，这种面貌的作品比较常见；另一种则是青绿设色，时有出以没骨，比较少见。他十分注重师法古人的传统技法，题材变化较少，但在笔和墨的运用上，有独特的造诣。他的绘画作品，经常是临仿宋元名家的画法，并在题识中加以标榜，虽然处处讲摹古，并不是泥古不化，而是能够脱窠臼，自成风格，其画法特点，在师承古代名家的基础上，以书法的笔墨修养，融会于绘画的皴、擦、点划之中，因而他所作山川树石、烟云流润，柔中有骨力，转折灵变，墨色层次分明，拙中带秀，清隽雅逸。</p>
+<p>他在天启二年，67岁时临摹北宋范宽的《溪山行旅图》采取青绿设色、水墨兼并浅绛的综合绘画技艺手法，充分表现出他的人物工笔精湛、山水风格独特画坛艺术自然传承的巨匠魅力。他的画风在当时声望显著，成为“华亭派”的首领。</p>
+<p>董其昌特别讲求用墨的技巧，水墨画兼擅泼墨、惜墨的手法，浓淡、干湿自然合拍，着墨不多，却意境深邃，韵味无穷；无须炫异矜奇，而真气横溢，充塞纸间。董其昌的设色山水，或用杨升没骨法，从彩笔代替墨笔，完成线条、轮廓、钩、勒、皴、擦，尽态极妍，不为刻画；或仿黄公望的浅绛法，参以赵大年、赵孟頫的青绿法，别树一格，层次分明，淡雅清新，生机盎然。</p>
+<p>董其昌作画强调写意，使绮丽多姿的山水显得有些捉襟见肘的色彩。但是他兼长书法、诗文，每每绘完山水，题以诗文，行楷簇簇如行蚕，闪闪如迅霆飞电，全图诗、书、画相映成趣，和谐一致，更富有抒情意境。董氏的创作，因而成为文人画追求意境的典范。</p>
+<p>如《遥峰泼翠图》，整个画面不过是干远景而已，笔墨也很简单，但神韵、骨力俱足。画面的前部作一隅坡脚，缀以数块荒石。坡脚上有三株老树，交错而立。中间一株是夹叶树，稍事勾勒，却枝叶备见；旁边两株的树叶，则充分发挥泼墨的作用，左以直抹示盘曲，右以横点示傲岸，浓淡相间，一派生机。画面上部以淡墨一抹而就，远山横贯，仅见轮廓隐入天际，山体却茫茫然，仿佛烟岚萦绕，雄浑无比。作者再用浓墨在一片淡远的景色中，染出几处高低错落的树叶，远近有致，层次丰富，烟云流动，充塞渚岸。左侧绘有小坡，坡上以横墨抹出数株直树。中间汪洋大水，不施笔墨，而万顷湖面浩瀚无涯之气势跃然纸上。此图长225厘米，宽75厘米，如此大幅立轴，只寥寥地布置些近树远山，就把握住整个画面峰遥、水阔、树翠的神情。这正是董其昌巧妙地运用“王洽泼墨，李成惜墨，两家合之，乃成画诀”的结果。</p>
+<p>全幅似疏似漏，但没有照应不到的地方，用笔爽利遒劲，又含蓄灵秀，纯以墨色气势的润泽、醒目而动人遐思。如不是熟练地掌握“空处有画”的本领，就不会有这样高明的布局。有人认为这是董其昌从“宽能走马、密不通风”的书体结构中触悟而得，这并不是没有道理的。整幅立轴不设色，但面貌清丽，有咫尺千里之势，给人以远深宁静的感觉。</p>
+<p>再如他暮年所作《关山雪霁图》，山峦林壑，绵延无际。右方重峦叠嶂，气势沉雄。中间幽壑重重，峭壁矗立，村落、丛林、流泉、山径，错落有致，杂而不乱；大江曲折跌宕其间，虽有千岩万壑，亦无窒碍不通的感觉。左方云烟弥漫，浸淫树石，路遥山重，隐入微茫，深远莫测，意味不尽。图中以渴笔钩勒峰峦山石，皴擦的运用极其准确、灵活，而线条流走轻快，疏密得宜。山冈陵石的凹凸明暗，则以横点巨苔，配上淡墨直皴的层层渲染来加以完成，技巧纯熟，无懈可击。意境朴厚深邃，很有“千山鸟飞绝，万径人踪灭”的诗意。</p>
+<p>全图用笔老辣生拙，骨力练达，墨气鲜润，绝去甜俗，以疏旷之笔，画出凝寒淡远的景致。卷尾数行行楷跋文，书体娟秀刚劲，更使此图富有书卷气，爽朗潇洒，自具风格。正如中国当代书画家南山乐山评论董其昌的艺术特点说：董香光（董其昌）满腹经纶，故能笔清墨润，山色如洗，宁静深邃，绝无尘垢。</p>
+<h4 id="书法"><a class="header" href="#书法">书法</a></h4>
+<p>董其昌的书法，吸收古人书法的精华，但不在笔迹上刻意模仿，兼有“颜骨赵姿”之美。</p>
+<p>董其昌的书法成就也很高，董的书法以行草书造诣最高，他对自己的楷书，特别是小楷也相当自负。董其昌虽处于赵孟頫、文徵明书法盛行的时代，但他的书法并没有一味受这两位书法大师的左右。他的书法综合了晋、唐、宋、元各家的书风，自成一体，其书风飘逸空灵，风华自足。笔画圆劲秀逸，平淡古朴。用笔精到，始终保持正锋，少有偃笔、拙滞之笔；在章法上，字与字、行与行之间，分行布局，疏朗匀称，力追古法。用墨也非常讲究，枯湿浓淡，尽得其妙。如董其昌在黄庭坚书法《黄文节梵志诗》的题跋：黄文节公书世多摹本又多赝本，生平所见以此卷为灼然无疑，梵志诗较寒山更自奇崛书亦近之。董其昌观因题。</p>
+<p>书法至董其昌，可以说是集古法之大成，“六体”和“八法”在他手下无所不精，在当时已“名闻外国，尺素短札，流布人间，争购宝之。”（《明史·文苑传》）。</p>
+<p>一直到清代中期，康熙、乾隆都以董的书为宗法，备加推崇、偏爱，甚而亲临手摹董书，常列于座右，晨夕观赏。康熙曾为他的墨迹题过一长段跋语加以赞美：“华亭董其昌书法，天姿迥异。其高秀圆润之致，流行于楮墨间，非诸家所能及也。每于若不经意处，丰神独绝，如清风飘拂，微云卷舒，颇得天然之趣。尝观其结构字体，皆源于晋人。盖其生平多临《阁帖》，于《兰亭》《圣教》，能得其运腕之法，而转笔处古劲藏锋，似拙实巧。……颜真卿、苏轼、米芾以雄奇峭拔擅能，而要底皆出于晋人。赵孟頫尤规模二王。其昌渊源合一，故摹诸子辄得其意，而秀润之气，独时见本色。草书亦纵横排宕有致，朕甚心赏。其用墨之妙，浓淡相间，更为绝。临摹最多，每谓天姿功力俱优，良不易也。”</p>
+<p>据说，康熙还亲自临写董书，致使董书得以风靡一时，出现了满朝皆学董书的热潮。一时追逐功名的士子几乎都以董书为求仕捷径。在康熙、雍正之际，他的书法影响之深，是其他书法家无法比拟的。</p>
+<p>董其昌没有留下一部书论专著，但他在实践和研究中得出的心得和主张，散见于其大量的题跋中。董其昌有句名言：“晋人书取韵，唐人书取法，宋人书取意。”这是历史上书法理论家第一次用韵、法、意三个概念划定晋、唐、宋三代书法的审美取向。这些看法对人们理解和学习古典书法，起了很好的阐释和引导作用。董其昌一生勤于书画，又享高寿，所以传世作品很多，代表作有《白居易琵琶行》《袁可立海市诗》《三世诰命》《草书诗册》《烟江叠嶂图跋》《倪宽赞》《前后赤壁赋册》等。</p>
+<h3 id="艺术影响"><a class="header" href="#艺术影响">艺术影响</a></h3>
+<p>董其昌是中国书法史上颇有影响的书法家之一，其书法风格与书学理论对后世产生了一定的影响。在赵孟頫妩媚圆熟的“松雪体”称雄书坛数百年后，董其昌以其生秀淡雅的风格，独辟蹊径，自立一宗，亦领一时风骚，以致“片楮单牍，人争宝之”。在中国美术史上地位十分重要，他针对中国传统文人画创作所提出的“南北宗”论对后世影响很大，成为之后近300余年文人画创作的主要指导思想。董其昌深受禅宗思想影响，正因董其昌有禅宗的思维，才能有对中国画进行空前绝后大省减的魄力和勇气，他对文人画发展的作用，才能同苏轼、赵孟頫并列。</p>
+<p>虽然董其昌"南北宗论"对山水画进行的分类，为后世提供了剖析绘画的哲学观念，他以禅喻画提倡文人画，强调画家的道德修养及思想境界，对中国画的发展产生了积极的影响。但是"南北宗论"同时也助长了绘画上的宗派之争，存在着明显的负面影响。</p>
+<p>明朝著名画家蓝瑛、王鉴、袁枢等拜其为师，蓝瑛的著名作品如《白云红树图》收藏于北京故宫博物院。袁枢的作品《平泉十石图》收藏于广东省博物馆，《松溪泛舟图》于2013年9月17日在北京嘉德拍卖会上出现。</p>
+<p>2019年9月下旬，“百代标程——董其昌书画艺术展”在山西博物院开展。此次展览遴选上海博物馆馆藏董其昌及相关艺术家作品共计40余件（组），较好地呈现了艺术性、经典性与学术性的统一。此次展览由“董其昌和他的时代”“董其昌的艺术成就与超越”及“董其昌的艺术影响和作品辨伪”三个部分组成，展品尽可能涵盖董其昌各时期代表作，包括传世所见其最早画作《山居图》扇页和最晚作品《细琐宋法山水图》卷，跨度长达48年，较好地呈现了董其昌的艺术世界。该展览一直持续至2019年12月20日。</p>
+<h2 id="历史评价"><a class="header" href="#历史评价">历史评价</a></h2>
+<p>《画史绘要》：董其昌山水树石，烟云流润，神气俱足，而处于儒雅之笔，风流蕴藉，为本朝第一。</p>
+<p>周之士：六体八法，靡所不精，出乎苏，入乎米，而丰采姿神，飘飘欲仙。</p>
+<p>何三畏：天真烂漫，结构森然，往往有书不尽笔，笔不尽意者，龙蛇云物，飞动腕指间，此书家最上乘也。</p>
+<p>爱新觉罗·玄烨《跋董其昌墨迹后》：</p>
+<p>①华亭董其昌书法，天姿迥异。其高秀圆润之致，流行于楮墨间，非诸家所能及也。每于若不经意处，丰神独绝，如微云卷舒，清风飘拂，尤得天然之趣。</p>
+<p>②结构字体皆源于晋人，能得其运腕之法，转运处古劲藏锋，似拙实巧，雄奇峭拔，草书纵横排宕有致。</p>
+<p>《明史·董其昌传》：性和易，通禅理，萧闲吐纳，终日无俗语。人儗之米芾、赵孟頫云。同时以善书名者，临邑刑侗、顺天米万钟、晋江张瑞图，时人谓刑、张、米、董，又曰南董、北米。然三人者，不逮其昌远甚。</p>
+<p>《明史·文苑传》：</p>
+<p>①名闻国外，尺素短札，流布人间，争购宝之。</p>
+<p>②同时以善书名者，临邑邢同、顺天米万锺、晋江张瑞图，时人谓“邢张米董，然三人者不逮其昌甚远。</p>
+<p>王文治《论书绝句》：书家神品。</p>
+<p>包世臣：行笔不免空怯。</p>
+<p>翁同龢：董公此书，正如天女散花，神龙戏海，最后题字又谨严超秀，奇迹也。</p>
+<p>康有为《广艺舟双楫》：香光（董其昌）虽负盛名，然如休粮道士，神气寒俭。若遇大将整军厉武，壁垒摩天，旌旗变色者，必裹足不敢下山矣。</p>
+<p>李志敏：主张学古变古，但在书法神韵问题上的迷信观念，却比古人尤有过之。</p>
+<h2 id="主要作品"><a class="header" href="#主要作品">主要作品</a></h2>
+<h3 id="著作"><a class="header" href="#著作">著作</a></h3>
+<p>董其昌一生创作了极多的书画作品，流传至今的也很多，其存世作品有《岩居图》《秋兴八景图》《昼锦堂图》《白居易琵琶行》《三世诰命》《草书诗册》《烟江叠嶂图跋》等，著有《画禅室随笔》《容台文集》《戏鸿堂帖》（刻帖）等。</p>
+<p>其中已定论为真迹的收藏在故宫、上海博物馆、吉林省博物馆，南京博物院等处。故宫博物院收藏的董其昌作品最多，绘画方面较著名的有：《高逸图》轴，作于63岁，略仿倪、黄、笔墨丽秀是中晚年佳作；《关山雪霁图》卷，作于81岁，是老年的用力之作，根据卷末自题，此卷是从关仝的《关山雪霁图》原幅改写而成。藏于故宫的著名书法作品有：《月赋》卷，作于47岁，取法唐晋，笔画秀娟，是早年小楷书精心之作；《东方先生画赞碑》，作于50岁，所作楷书，师法颜真卿，字体规整，行气疏朗，是中年时期楷书代表性杰作；《三世浩命》卷，作于71岁，楷书、师法颜真卿，结体端正，法度严谨；《岳阳楼记》卷，作于54岁，大行书，师法颜真卿、李兆和（李北海，即李邕）。运笔中锋直下，转折流畅，反映了中年时期行书面貌。《路马湖记》卷，代表晚年行书之作；《观海市》，作于69岁，以“米家法”为其同年袁可立所书，十分秀逸飘洒，成为山东蓬莱阁上的传世名品。</p>
+<p>上海博物馆收藏的代表作有：山水画《江干三树图》《秋兴八景》大画册；北京市文物商店藏有一件书法作品《金沙帖》；天津博物馆有一幅其晚年为同年袁可立所创作的《疏林远岫图》（2012年4月19日中央电视台《国宝档案》栏目播出）；南京博物院藏有书法作品《松江府制诰》；安徽省博物馆收藏有16幅《董其昌纪游册》，本为河南袁可立家藏品，吉林省博物馆藏有一件著名山水画《昼锦堂图》卷。</p>
+<p>主要作品如下：</p>
+<p>《石渠宝笈》著录董其昌《疏林茅屋图卷》。</p>
+<h2 id="人际关系"><a class="header" href="#人际关系">人际关系</a></h2>
+<p>据松江光训堂《董氏族谱》卷二《世谱》所载，董其昌有四个儿子。除了长子祖和为董其昌原配夫人龚氏所生，另外三个儿子都是庶出。</p>
+<p>董祖和（1586年—1662年），字孟履，号起玄。上海廪生，荫入国学，选都察院照磨，升工部营缮司主事。配潘氏，葬四保五六图新阡，子庭、广、用威、赓。</p>
+<p>董祖常，字仲权，号得庵。华亭庠生，以荫选太常寺典簿，升南京应天府通判，升刑部江西司主事。生母陆氏，配潘氏，葬胡港上原新阡，子延年、康、廙。</p>
+<p>董祖源（1596年—1647年），字季苑。官生。生母刘氏，配徐氏，子黄中、建中。</p>
+<p>董祖京，字欲仙，号瀛山。官生。生母唐氏，配王氏，子之帷。</p>
+<h2 id="轶事典故"><a class="header" href="#轶事典故">轶事典故</a></h2>
+<h3 id="藏书之家"><a class="header" href="#藏书之家">藏书之家</a></h3>
+<p>善鉴别古书画，擅长写书法。在书法上造诣颇深，由于爱好书法，所以对书籍有很强的收藏欲。遂藏书尤多，家有“玄赏斋”，贮法帖、名画、古书。撰有《玄赏斋书目》，不著撰人及收藏人姓氏，有人疑为是他人所撰，清人张均衡在《适园藏书志》中，认为董其昌的家藏书目较可信。</p>
+<h3 id="袁董奇缘"><a class="header" href="#袁董奇缘">袁董奇缘</a></h3>
+<p>睢阳（袁可立祖籍睢阳卫，属明代河南睢州，今睢县）的袁可立比云间（上海松江）的董其昌小七岁，但董其昌总是对袁可立谦称为“弟”，两者的家乡相距千里，同窗共读成为同年知交，传为千载佳话。</p>
+<p>清代乾隆年间，王椷的《秋灯丛话》对二人的神交奇缘做了这样的记载：“前明睢州（应为松江）有宿儒某（董其昌），屡试不第，郁愤无聊。夜梦人谓曰：‘子须待袁可立（睢州人）同考，乃可望中耳。’觉而异之，遍访学校内，并无其人。偶出游，力倦憩村塾中，见一总角童子貌颇歧嶷。诘其姓名，师曰：‘此袁氏子，名可立。’某闻之，甚为惊异。询其家，贫甚。乃携归，亲为课读。弱冠联登甲第，某乡会皆与同榜。”</p>
+<p>王溢嘉在《中国人的心灵图谱》中引述清代王椷《秋灯丛话·梦与袁可立同科》：睢州（应为华亭）有一位儒生（董其昌）屡试不第，心情十分郁闷。有一天晚上，忽然梦见神人前来告诉他说：“你要等待袁可立和你同考，才有希望上榜”。他梦醒后觉得非常奇怪，于是到各地学堂逐一查访，终于找到袁可立。在知道袁可立家中贫穷恐无力上进后，就将袁可立带回家中亲自课读。到袁可立二十多岁时，两人一起参加考试，结果在乡试和会试中都果然中榜。”</p>
+<p>而今在袁可立的家乡一带族里间，还有一个同样神奇的故事在一代代相传：袁可立幼年时，一天夜里，漆黑异常，袁可立秉灯入厕，却没有放灯的地方。忽然身后有声音说：“尚书爷尚书爷，请你把灯盏放到这里吧。”袁可立好生奇怪，昏暗的灯光下却看到一个光头的小鬼。他拍拍小鬼的头就把灯盏放了上去，并说道：“小鬼小鬼你好大的头呀。”小鬼答：“尚书爷尚书爷你好大的胆。”幼年的袁可立很是诧异地问：“小鬼小鬼你为什么这样称呼我？”小鬼说：“我是受人之托告诉您，有一位姓董的文曲星老爷转世，正等着你前去同读共考呢 ，来日当有尚书爷的名位等着你。”袁可立起身取过灯盏，那小鬼便消失在黑夜中。</p>
+<p>上述两则故事出处不同，却有异曲同工之妙。一个记载于清代笔记，一个出自民间口碑，但二者却互为印证似有同根之源。而且袁可立和董其昌在知道这是神明向他们泄露天机后，并没有消极等待，而是都不辞辛苦地去努力奋斗，最后皇天不负苦心人，先后在乡试和会试中双双同科考取了举人和进士，成功地兑现了两个年轻人各自所窥见的天机。</p>
+<p>袁可立和千里之外的董其昌同窗拜读于陆树声尚书之门，并不仅仅是一个传奇故事这么简单，而是在大明万历十七年会试大比记录中留下了浓墨重彩一笔的盛事。颜晓军在他的博士论文中继续求证道：“就在万历五年（1577），陆树声延请董其昌馆于其家，教授他的儿子陆彦章。……同时在陆家私塾寄读的还有睢阳人袁可立，后来董、袁、陆三人于万历十七年（1589）己丑一起中进士，堪称是陆树声家门的荣耀。袁可立后来官至兵部尚书，陆彦章则官至南京刑部侍郎。”要知道这个三人的同科中榜直接影响了当年进士总名额的一个百分点。</p>
+<p>明著名学者黄道周《节寰袁公传》也有相同的记载。董其昌在《袁伯应诗集序》中写道：“余与伯应（袁可立子袁枢字伯应）尊公（父亲）少司马（即袁可立）同举于兰阳陆先生之门。”</p>
+<p>在今天的山东蓬莱阁避风亭内《袁可立海市诗》刻石上，仍然留下了二人在事业顶峰时期的合作之笔“睢阳袁可立题、云间董其昌书”的字样。董在尾跋中称颂袁可立的“大作雄奇”、“弟以米家法书之”等语，世人将此称为珠联璧合之作，至今为海内外所重。</p>
+<p>崇祯六年（1633年）冬，袁可立病逝于睢州，八十一岁高龄的董其昌以悲壮的心情为故友写下了《节寰袁公行状》：“呜呼哀哉！念其昌与公同举于兰阳陆宗伯（陆树声）先生之门。……虽天涯契阔，合并恒难。要以风义交情，皎如白日，知公者宜莫如昌”，《行状》分元、亨、利、贞四册。款云：“明崇祯八年六月，光禄大夫、太子太保、礼部尚书掌詹事府事、特准致仕驰驿归里邻治弟华亭董其昌顿首撰并书。”</p>
+<p>明崇祯六年十月，董其昌触景生情，想其退休在家多年的故友袁可立，作山水画《疏林远岫图》相寄。然而就在董其昌把袁可立比作隔水对岸高大的山峰凝神作画时，远在河南72岁的袁可立却溘然长逝，似乎也有了冥冥之中的一个幽会和照应。</p>
+<p>正所谓“茫茫一水间，相隔不能语”，这一时刻董其昌是否也有传奇的另外一梦，我们因没有找到相关记载不得而知。但明末著名学者黄道周在给袁可立作《节寰袁公传》时对他的仙逝却做了这样耐人寻味的记载：“（袁可立）自知其名位所届，寿至七十有二卒。卒之前夕，有巨星陨西南，坠地有声。”</p>
+<p>在袁可立去世三周年来临十二天前的一个晚上，董其昌无疾而终薨逝于家，至此这两位富有传奇色彩的挚友亡灵得以永久相聚，后人一直以为是冥冥之中有此际会。</p>
+<p>二人在仕途上同样坎坷多艰，几起几落，休戚共生。明万历中都遭贬回籍，后来又都是泰昌皇帝同时启用的旧臣贤能。在魏忠贤横行的天启年间，两人都受到阉党排挤和迫害，董其昌是“深自引远，请告归”（《明史·董其昌传》），袁可立是“当魏崔时，盖无复然明义、真者。有之，则必自大司马节寰袁公也。”（黄道周《节寰袁公传》）。</p>
+<p>董其昌卒后，一生最喜爱的“四源堂”四幅名画多归袁枢所有，至今尚藏于安徽省博物馆的16幅《董其昌纪游册》，为董其昌早年作品，世所罕见。还有美国波士顿艺术博物馆的《画稿册》，均为睢阳尚书袁氏家藏旧物，钤有“袁赋谌印”（袁可立仲孙名袁赋谌）等多枚袁氏印章，足见董、袁二人关系绝非一般同年，当是深交挚友，也与传说中的袁董奇缘不应而合。</p>
+<h2 id="人物争议"><a class="header" href="#人物争议">人物争议</a></h2>
+<h3 id="民抄董宦"><a class="header" href="#民抄董宦">“民抄”董宦</a></h3>
+<p>董其昌晚年居乡时，其次子董祖常在万历四十三年（1615年）八月诱淫并强抢同城生员陆兆芳家婢女绿英，引起董陆两家到官府争讼纷纷。经乡绅何三畏、吴尔成等极力劝解，“陆生甘心含忍，自秋迄春，抱病杜门”不出，默示抗议，但事情得到平息。不过，松江社区流言说唱四起，十分不满董家强行霸道，为陆家平白无故受辱鸣叫不平。董其昌恼怒万分，状告于官府。官府下令追查，却查无得实。董其昌只得动用家丁四处寻访，结果查到说书瞎子钱二。钱二拒不承认，推头说唱本来自同城生员范昶，引得董、钱当堂跪地对质，范生不认，董、范又去面对城隍发毒誓相应。范生经此变故，忧忿交加，不到十日，悒愤暴亡。范母、范媳、范婢骂上董门，被董宦家奴分隔，将范婢三人剥裤捣阴，血流如注。这一当众侮辱、惨无人性的凶恶行径立即肇致道路侧目，在社区传播的作用下，民众平素对董家的怨愤被充分调激起来，而秀才出于社会义愤和公正，勇于向府县官员陈情请事，要求严惩凶犯。松江官府积级惩处董家家奴头目陈明，以示支持。但民众因怒而起的集合行为已成势头，群情激奋，斗志高昂，加上少数地方无赖觊觎董家财物已久，乘机搀和，而董家处事惊慌，一味蛮横骄纵，终于导致董家和民众的直接冲突。万历四十四年三月十六日（1616年5月1日）傍晚5—7点，在江南南直隶松江府城（今上海市松江区治所），府属华亭、上海、青浦三县和金山卫军民上万人，“民抄”董其昌的家宅，焚毁室庐，抢劫财宝。据明人无名氏《十五十六民抄董宦事实》描写其暴乱现场为：“自此无不怒发上指，激动合郡不平之心，初十、十一、十二等日，各处飞章投揭，布满街衢，儿童妇女竞传‘若要柴米强，先杀董其昌’之谣。以致徽州湖广川陕山西等处客商，亦共有冤揭粘贴，娼妓、龟子游船等项，亦各有报纸相传，真正怨声载道，穷天罄地矣。”自此，董家多年积聚的辉煌，统统毁于一举∶房宅被烧，财物被抢，文物受毁，声名受损。董其昌和家人仓惶亡命于于苏州、镇江、丹阳、吴兴等地，事隔半年才被平息。此事就是震动朝野的晚明“民抄”董宦事件。</p>
+<p>也有人怀疑“民抄董宦”的真实性，如清代前期的官修《明史》说事情的起因缘于董其昌为官时不徇私情，得罪了一些有权势的人，是这些势家鼓动的乱民所为。清朝初年修撰《明史》的学者认为，“督湖广学政，不徇请嘱，为势家所怨，嗾生儒数百人鼓噪，毁其公署。”但这种观点并没有得到广泛的认可。</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="董其昌墓"><a class="header" href="#董其昌墓">董其昌墓</a></h3>
+<p>明代著名书画家董其昌的墓位于苏州胥口镇渔洋山，而渔洋山就在太湖大桥入口处。碑前有一块吴县人民政府1986年3月25日立的石碑，上刻“吴县文物保护单位：董其昌墓”。碑阴刻有简介：墓在胥口乡渔洋里，传有两处：一在阳家场，墓穴已毁，墓地平为桑田；另在渔洋山坞，规制较大，有龟、狮、马、翁仲、碑等石构件。墓小而简陋，一堆乱石，几丛衰草。墓碑上刻的是“明董文敏公墓”，题款：已未冬吴中保墓会立，后学吴荫培拜书。</p>
+<h3 id="邮票"><a class="header" href="#邮票">邮票</a></h3>
+<p>纪念邮票《董其昌作品选》，2010年发行。</p>
+<h3 id="旧居"><a class="header" href="#旧居">旧居</a></h3>
+<p>董其昌故居-醉白池，位于上海市松江区人民南路，始建于1644年，为明代画家董其昌觞咏处，也是名人学士常游之地。</p>
+<h2 id="史料索引"><a class="header" href="#史料索引">史料索引</a></h2>
+<p>《明史·董其昌传》</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/celebrity-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../extend/Tongzhou-Lighthouse-Pagoda.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/celebrity-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../extend/Tongzhou-Lighthouse-Pagoda.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>阿尼哥 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/Anigo.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="阿尼哥"><a class="header" href="#阿尼哥">阿尼哥</a></h1>
+<p>阿尼哥（Anigo，1244年—1306年），元朝建筑师、雕塑家、工艺美术家，元帝师八思巴的嫡传弟子。尼波罗国（今尼泊尔）人，为王室后裔，大元凉国公。其祖名密迪迩，父名腊可纳。</p>
+<h2 id="优秀工艺师"><a class="header" href="#优秀工艺师">优秀工艺师</a></h2>
+<h3 id="来自尼波罗的优秀工艺师"><a class="header" href="#来自尼波罗的优秀工艺师">来自尼波罗的优秀工艺师</a></h3>
+<p>阿尼哥自幼诵习佛书，并通梵文。有从事画塑业的同学读《尺寸经》，他一听即能默记，稍长大后，就善于画塑和铸金为像。尼波罗国曾属于吐蕃王国，九世纪玛剌（Malla）王朝建立后，仍与吐蕃保持着密切的往来。其国人擅长建筑、雕塑、绘画等工艺。</p>
+<p>中统元年（1260），元世祖忽必烈命八思巴建黄金塔于吐蕃，以尼波罗国多良工，发诏书征召，其国搜罗得80人应征，令推一人为领队，阿尼哥自清任之，时年仅17岁。遂率诸匠至吐蕃，受命督役，次年塔成请归，八思巴奇其才，劝其入朝，乃为之祝发，收为弟子，授以秘典，并荐之元廷。</p>
+<p>元世袒遣使召阿尼哥至京，问以“汝来何为？”答曰：“臣世家西土，奉诏构塔于吐蕃者二载，见彼土兵难，愿至尊安戢之，特为苍生来耳。”又问其能，答曰：“臣以心为师，粗知绘塑铸镂。”元世祖遂命他修补一尊针灸铜人像，系窝阔台时王檝出使南宋时所得献进者，关膈脉络皆备，但年久损坏，诸匠皆不敢承命修补，阿尼哥请试为之，于至元二年（1265）补成，令诸匠折服，叹为天巧。此后凡大寺庙建塔、造像及重要画塑、铸镂等工事多以委之。</p>
+<p>至元十二年，立诸色人匠总管府，下统梵像局等18个司局，授阿尼哥为总管。时其妻尚留本国，察必皇后遣人赐金。至元十三年，特命中使携黄金500两乘驿往召之来京。至元十五年，诏命阿尼哥还俗，授光禄大夫、大司徒，兼领将作院；以宋景献太子孙女妻之，并赐景献太子所有之府库田宅。至元十六年，因建圣寿万安寺塔成，赐京畿良田万五千亩、农夫百人及牛具等物。元贞元年（1295），以建五台山万圣佑国寺，皇太后阔阔真赐银万两，并赐贵戚女为妻。次年，崇真万寿宫建成，诏为其设位置像。元成宗大德十年（1306），病卒于大都。至大四年（1311），加赠开府仪同三司、太师、凉国公，谥敏慧。</p>
+<h2 id="非凡成就"><a class="header" href="#非凡成就">非凡成就</a></h2>
+<h3 id="建筑工艺上的非凡成就"><a class="header" href="#建筑工艺上的非凡成就">建筑工艺上的非凡成就</a></h3>
+<p>阿尼哥巧思绝人，凡塔庙之建筑，像设之铸镂、雕塑或绘织以及其余器物之铸造刻镂，无不精湛。仕元四十余年，主持的大型工事有塔三座，大寺九座，祠祀两座，道宫一座，像设多出其手。著名者如西园之“凌空”玉塔、大圣寿万安寺塔（今北京白塔寺之白塔[妙应寺白塔]），五台山佛塔，大都护国仁王寺之庄严佛像，涿州护国寺及所塑摩诃葛剌（大黑天神）主从之像，大都东花园寺所铸丈六金身佛像，圣寿万宁寺所塑千手千眼菩萨及所铸五方如来，大都和上都国学文庙所祀之孔夫子及十哲肖像，元世祖和察必皇后之织像，真金和其长妃阔阔真之织像等。此外还先后铸成内廷之大鹏金翅雕和尚酝巨瓮；制造了镔铁自运法轮，元世祖行幸时用于前导。</p>
+<p>阿尼哥对中国艺术的主要贡献，其一为创作、传授了佛教造像的“西天梵相”，至元七年建护国仁王寺时，汉族巧匠刘元被召参加塑造佛像，从阿尼哥学西天梵相，得其神妙，遂为绝艺，成为仅次其师的元代最著名的塑像工艺家，这种造像式样也日益盛行。其二设计建造了尼泊尔式塔，最著名的就是现存元大都西城大圣寿万安寺“释迦舍利灵通之塔”，建于至元八年，高50.9米，砖造，塔基上建二重复合式方形折角须弥座，其上为覆莲承托之圆瓶形硕大塔身，塔颈作圆锥形相轮状，顶端华盖直径9.9米，其周边悬挂36个铜质透雕之流苏和风铃，其上之塔顶为一铜质小塔（原为一宝瓶）。因塔座、塔身通体用石灰粉妆，故俗称“白塔”。</p>
+<p>阿尼哥有子六人，长阿僧哥，授大司徒；次阿述腊，任诸色人匠总管府达鲁花赤。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-4-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/The-Travels-of-Marco-Polo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-4-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/The-Travels-of-Marco-Polo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
