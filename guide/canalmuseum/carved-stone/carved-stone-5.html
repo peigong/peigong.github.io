@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>万宁寺 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/carved-stone/carved-stone-5.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="万宁寺"><a class="header" href="#万宁寺">万宁寺</a></h1>
+<p>万宁寺建于元大德九年（1305），距今已有六百九十八年的历史了。万宁寺内的中心阁位于今鼓楼的位置，是大都南北中轴线的城市标志。</p>
+<p>今草厂胡同12号是万宁寺残址，在鼓楼东侧，如果对其适当修复，既保护了重要的历史遗迹，又可以增加那里的文化内涵，提升鼓楼附近的旅游价值，而且可以改善那里的居住环境。</p>
+<h2 id="万宁寺概况"><a class="header" href="#万宁寺概况">万宁寺概况</a></h2>
+<p>万宁寺建于元大德九年（1305），距今已有六百九十八年的历史了。万宁寺内的中心阁位于今鼓楼的位置，是大都南北中轴线的城市标志。今草厂胡同12号是万宁寺残址，在今天的鼓楼东侧，如果对其适当修复，既保护了重要的历史遗迹，又可以增加那里的文化内涵，提升鼓楼附近的旅游价值，而且可以改善那里的居住环境。</p>
+<h2 id="神御殿"><a class="header" href="#神御殿">神御殿</a></h2>
+<p>根据《长安客话》的记载，在大都的西部，原来有一座建于辽代的寺庙，已经废弃不堪了，只有一座佛塔还在，题曰“释迦舍利塔”，塔内珍藏有二十粒舍利，一到深夜“屡放神光”，附近的居民以为失火了，仰视天空，却没有一丝火焰，“乃知舍利威灵，人始礼敬”。</p>
+<p>元世祖忽必烈知道这件事情以后，命人把这座辽塔打开，发现里面有许多灿如金粟的舍利，其中还有一枚铜钱，上铸“至元通宝”四字。忽必烈十分高兴，因为，忽必烈的年号也是“至元”，认为这是天意，是“圣人制法，予定冥中，待时呈现”。</p>
+<p>这一天是至元八年（1271）的三月二十五日，距今七百三十二年了。于是忽必烈敕令在那里构筑一座规模宏大的藏式佛塔，并以塔为中心向四方各射一箭，作为寺的界址，名曰“大圣寿万安寺”，既今天俗称的白塔寺。</p>
+<p>忽必烈的做法为其后的皇帝继承下来，在元代，每位皇帝在位的时候都要修建一座或者几座寺庙。忽必烈的孙子成宗兴建了大天寿万宁寺。之后，武宗建大崇恩福元寺、仁宗建大承华普庆寺、英宗建大永福寺、大昭孝寺、文宗建大承天护圣寺、明宗建大天缘延圣寺。</p>
+<p>大昭孝寺在寿安山，是在唐兜率寺的基础上修建的，冶铜五十万斤铸卧佛，精美肃穆，至今为人称道。</p>
+<p>这些皇帝，生前到他们构建的寺庙里做佛事，故去以后，其肖像往往供奉在他们所营造的寺庙里，享受祭祀。比如，忽必烈在万安寺、成宗在万宁寺、武宗在福元寺。</p>
+<h3 id="万宁寺-1"><a class="header" href="#万宁寺-1">万宁寺</a></h3>
+<p>元成宗建造的大天寿万宁寺在今天东城区草厂胡同12号。营建于元成宗的大德九年（1305），规模浩大，其西，至于今天的鼓楼。“中塑秘密佛像”，十分丑怪，成宗的皇后布尔罕，看到这个佛像，传旨把它的头部用手帕蒙起来，不久，又下令把佛像毁坏。</p>
+<p>二十二年以后，泰定帝在位，也就是泰定四年（1327），在那一年的五月，泰定帝在万宁寺，建造供奉成宗御容的神御殿，称万寿殿。从此这里成为祭祀成宗的地方。</p>
+<p>元朝灭亡以后，万宁寺规模缩小，逐渐荒废，清乾隆年间的《日下旧闻考》引述《析津日记》说：</p>
+<p>今寺之前后皆兵民居之。从室而入，有穹碑二，尚存，长各二丈余。西一碑国书，不可读，东一碑，欧阳原功文，张起岩书，姚庆撰额，题曰：成宗钦明广孝皇帝作天寿万宁寺神御殿碑。其北列明碑四，一为冯祭酒梦祯文，一为焦太史文。</p>
+<p>“室”在古文之中有浴室的意思，洗澡的地方，进万宁寺为什么要经过浴室，不得而知。但，由此可知，万宁寺当时的环境是恶劣的。或者，受阿拉伯人的影响，在万宁寺里设有可以洗浴的房间？</p>
+<p>到了《日下旧闻考》的成书年代，只剩下焦的那块石碑了。</p>
+<p>民国以后，当时的市政府，做过几次寺庙调查，其中，1936年的万宁寺是这样的：</p>
+<p>坐落内五区鼓楼东大街草厂七十四号……不动产土地约三亩，房屋四十间。管理及使用状况为自行管理，所有殿房除供佛僧人住外，余房外租。庙内法物有佛偶像三尊，神偶像九尊，礼器六件，法器两件，另有水井一眼。</p>
+<p>在这次调查中，万宁寺，写作万灵寺。原因是清代的道光皇帝叫宁，为避讳，把万宁寺改称万灵寺。有两名僧人，主持叫全祥。</p>
+<p>上世纪五十年代，万宁寺已无僧人，成为大杂院，仅余山门与一座大殿。山门坐西向东，大殿坐北朝南。山门与大殿均为三间，硬山筒瓦箍头脊。1986年调查，山门与大殿也拆掉，在殿基建民房，门口构公厕。据说，有一座石碑被砌在居民房屋的墙壁里。</p>
+<h2 id="城市标志"><a class="header" href="#城市标志">城市标志</a></h2>
+<p>在大都时代，万宁寺是重要的城市标志。</p>
+<p>根据历史记载，大都的中心是中心台。方圆一亩，缭以围墙，是大都的中心点。中心台不在大都的中轴线上，而是在其偏西一点的位置，在今鼓楼的西侧。</p>
+<p>中心台的附近是鼓楼。但是，鼓楼在中心台的东侧，还是西侧，北京的史家有不同说法。一派意见认为在其西，今天的旧鼓楼大街的南端；另一派意见认为在其东，今天的鼓楼的位置，明代的鼓楼与元代鼓楼的位置是一致的。这就牵涉到万宁寺内中心阁的所在位置了。</p>
+<h2 id="历史记载"><a class="header" href="#历史记载">历史记载</a></h2>
+<p>元人熊梦祥《析津志》说：</p>
+<p>中心台，在中心阁西十五步。</p>
+<p>中心阁的位置与今天鼓楼的位置大体相当。</p>
+<p>中心阁是否是元代的鼓楼呢？不是，鼓楼当时叫齐政楼，中心阁则是万宁寺里面的重要建筑，是供奉元成宗的地方。《析津志》载：</p>
+<p>原庙 行香 完者笃皇帝中心阁。 正月初八日。</p>
+<p>每年的正月初八日到中心阁行香，祭祀完者笃皇帝。完者笃皇帝即元成宗蒙古语的称谓。这就是说，中心阁是成宗的神御殿。</p>
+<p>根据《元史》“祭祀志”与“泰定帝本纪”的记载，成宗的神御殿建于泰定四年（1327），额曰“广寿”，距离大都的建成时间——至元十三年（1276），已有五十一年了。易言之，在五十一年的时间里，在大都的南北中轴线上，其中部，并没有标志性建筑，五十一年后，才出现，即：中心阁。“阁”称中心的原因便在于此。</p>
+<p>中心阁所在的位置，与现在鼓楼的位置，大体相当。这就是说，今之鼓楼的位置，在元代是中心阁，而不是其他。</p>
+<p>其西是中心台，再西才是鼓楼，位于今旧鼓楼大街南端。</p>
+<h2 id="寺庙现状"><a class="header" href="#寺庙现状">寺庙现状</a></h2>
+<p>万宁寺建于元大德九年（1305），距今已有700多年的历史。万宁寺为元成宗铁穆耳兴建，寺内的中心阁位与今之鼓楼的位置相当，是大都南北中轴线的城市标志。现在的鼓楼东侧的草厂胡同12号，便是万宁寺的残余部分，应该对其适当修复，这样既保护了重要的历史遗迹，又可以增加北京城中轴线的文化底蕴，提升鼓楼附近的旅游价值。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../carved-stone/academy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../outdoor/outdoor-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../carved-stone/academy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../outdoor/outdoor-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

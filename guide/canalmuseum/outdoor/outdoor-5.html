@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>雕漆 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/outdoor/outdoor-5.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="雕漆"><a class="header" href="#雕漆">雕漆</a></h1>
+<p>雕漆，又称剔红，是中华民族传统工艺的瑰宝和精华，与景泰蓝、象牙雕刻、玉雕一起被誉为京城工艺“四大名旦”，再加上宫毯、京绣、金漆镶嵌、花丝镶嵌，则合称“燕京八绝”。雕漆始于漆器，是以大漆为原料，在胎体上一层层涂堆到适当厚度再进行加工雕刻的艺术品。</p>
+<p>雕漆是用天然漆料，在胎上涂抹出一定厚度，再用刀雕刻出花纹的技法，也被称为时间的艺术，需要经过画图、制漆、髹漆、雕刻和打磨等百余道工序手工完成，每道工序，都依赖时间的沉淀。而一件作品的圆满，凝聚着无数匠人的智慧。一位匠人，至少需要十年左右，才能熟练掌握各种雕漆技法，达到器物有灵的境界。</p>
+<p>2006年，雕漆被列为国家非物质文化遗产保护名录，进入被保护的范畴。</p>
+<h2 id="艺术简介"><a class="header" href="#艺术简介">艺术简介</a></h2>
+<p>雕漆是中国传统民族艺术，至少有一千四百余年历史。横跨唐、宋、元、明、清五个朝代，在明清两朝还是皇家宫廷工艺器物，历来具有崇高的社会地位和艺术价值。雕漆在历史上又被称为：漆雕、剔红、剔黄、剔绿、剔犀、剔黑、剔彩、堆朱、堆漆，明朝中后期才统称雕漆。</p>
+<h2 id="原料与辅料"><a class="header" href="#原料与辅料">原料与辅料</a></h2>
+<h3 id="漆料"><a class="header" href="#漆料">漆料</a></h3>
+<p>制造雕漆漆器的主要原料是大漆，又名生漆、土漆、天然漆、中国漆，是从漆树上割取下来的浅灰白色液体树汁，漆树野生，在中国生长区域广泛。生漆干燥后具有抗热、耐酸、耐碱、耐潮、耐磨等天然优良特性；干锢后具有极具韵味和柔和的光泽，显得明润透体。在原生漆的基础上进行加工可以得到制作漆器需要的各种漆料。</p>
+<p>（1）净生漆：是对原生漆进行物理性能净化后所得。</p>
+<p>（2）加潮漆：在净生漆中加入一定比例的净水，用来补充原生漆在采割、运输、储藏过程中蒸发掉的水分，保持大漆原有的化学成份，使大漆的性能稳定不变，这样的加潮漆才能用来调制漆灰与调制其他色漆。</p>
+<p>（3）罩漆：是由加潮漆添进适量比例的熟桐油调制而成，增加了漆质的柔软性和可雕刻性，它是配制各种色漆的基本成份。</p>
+<p>（4）彩色漆：是用罩漆加各种化工颜料，均匀搅拌压研而成的各种颜色的漆。原北京雕漆厂可以调制近百种不同色调的颜色漆。传统上以红、黄、绿、黑漆为主，在其上雕刻分别称为剔红、剔黄、剔绿、剔黑，另还有剔犀、剔彩的雕刻。</p>
+<p>（5）退光漆：又称推光漆，素漆，为半透明漆。在雕漆制品中用量较少，主要是在不进行浮雕处的次要部位的装饰，俗称"做里子"。</p>
+<p>（6）金脚漆：又称为金胶，浑金漆、贴金漆，油光漆。用干快净生漆加适量比例的熟桐油，搅拌均匀即可。主要用来粘贴金、银箔，金银粉。</p>
+<p>（7）霸王鳔：又称漆鳔，漆胶。用净生漆与白色面粉按一定比例调制而成，主要用来制作脱胎器，糊布，或用以粘接剂用。</p>
+<h3 id="桐油"><a class="header" href="#桐油">桐油</a></h3>
+<p>雕漆工艺的制作，除去主要原料大漆外，桐油也是必不可少的原料。桐油，是从油桐树的果实中压榨出来的植物油，色透明微黄，主要用来涂饰木器胎体，目的是防止潮湿之气侵入木料内部，充当隔离剂；生桐油还用来配制其它的漆料、油料；在雕漆中主要用来配制罩漆。</p>
+<p>各色颜料：雕漆漆器的色调，是有一定的传统习惯，雕漆的颜色，是由于在大漆中加入了不同的颜色。雕漆的传统颜色是红、黑、黄、绿，最常用为红色。但由于颜色用量的不同，各种颜料的配比也有差别。一般包括下列颜料：银朱、天然朱砂、丹红、绛矾、石黄、汉沙黄、钛青蓝、靛华、钛白粉、石青、石绿、漆绿、钛绿、烟煤等。</p>
+<h3 id="胎料"><a class="header" href="#胎料">胎料</a></h3>
+<p>（1）铜料：北京雕漆使用铜料是为了制造内胎。由于铜材有压延性，可塑性，适宜于各种形体的制作；铜材硬中有软，又适合铜漆吻合的需要，且易于抛光擦拭，所以铜材成为制造雕漆内胎的最主要的原材料。使用铜料的雕漆制品，大都是瓶类、罐类、盒类、洗类、炉鼎熏类等，以圆体形的内胎为多数。北京雕漆使用的铜材，主要是国产的，以洛阳地区较好，也有一定的进口铜。</p>
+<p>（2）木料：雕漆漆器使用木材制造内胎的历史是很悠久而且大量的，也应用得非常广泛。木料最好是陈年旧料，不容易发生干裂和变形，而且不同的雕漆制品的木胎对木料要求也不一样，还因雕漆品在制作过程中，要几十次、上百次地进入湿热窨箱，又要进入烘干火箱四至五回，所以对木料的选择和挑剔是必不可少的。如屏风、家具等，要采用上等红松，雕漆串珠则用杨木、柳木、枣木为好，还有的木胎需要使用硬木，如梨木、榆木、紫檀、红木、沉香木等。</p>
+<p>（3）夏布：属于麻的织物，包括麻、麻布，也是雕漆制胎中不可缺少的主料。夏布与生漆、生漆灰、霸王鳔，一次次、一层层有规则的在胎体上糊压，待夏布漆灰的胎模干固后，便可以剥毁内部胎体，于是内空外实的完整的夏布胎体，就被脱制出来--脱胎。福州脱胎漆器几乎全部采用脱胎工艺制造内胎，北京雕漆漆器中，有些是采用脱胎的，主要是用在异型立体造型上。</p>
+<h2 id="种类"><a class="header" href="#种类">种类</a></h2>
+<p>雕漆工艺复杂，种类繁多，可以分为剔红、剔黑、剔黄、剔绿、剔彩等品种。剔红的做法是在器物胎骨上髹涂一定厚度的朱漆，少则二、三十道，多则百道，然后在漆的厚层上雕刻花纹。剔黑、剔黄、剔绿等技法与之相同，只是漆色不同。</p>
+<p>剔彩为雕漆的一种，亦以漆层雕刻，但技法与剔红等完全不同。剔彩有“重色雕漆”和“堆色雕漆”之分。“重色”俗曰“横色”，“堆色”俗曰“竖色”。重色雕漆是在器物胎骨上分层髹涂不同颜色的漆层，当漆层达到一定的厚度时，根据图案色调的要求，需要哪种颜色，就将其以上的颜色剔掉，露出所需色漆，并在其上剔刻花纹，故又谓之“雕彩漆”。“堆色雕漆”是用局部填漆的方法，即先涂一种色漆至一定的厚度，再根据图案的要求　将需配色的花纹轮廓内的原漆层剔掉，填上所需的色漆，再剔刻花纹的细部。</p>
+<h2 id="工艺特色"><a class="header" href="#工艺特色">工艺特色</a></h2>
+<h3 id="元代"><a class="header" href="#元代">元代</a></h3>
+<p>元代雕漆的工艺在宋代的基础上达到了炉火纯青的程度，传世的张成、杨茂、张敏德的雕漆作品代表了元代雕漆的最高水平。宋元时期雕漆作品的特点是刀痕不露，磨工大于雕工。</p>
+<h3 id="明代"><a class="header" href="#明代">明代</a></h3>
+<p>由于元代雕漆巨匠张成之子张德刚主持果园厂的漆器生产，故明永乐、宣德时期的雕漆仍保持着元代雕漆的风格，漆层肥厚，花纹层次感很强，刀痕不露，磨工大于雕工。果园厂发展了雕漆的工艺技法，其表现是髹漆层较厚，多者厚达百层，尤其是花果题材的作品，有的花纹起伏竟达三、四层之多，花果纹饰更加凸显。明中期以后，雕漆技艺出现了新的艺术倾向：雕漆漆层减薄，作品层次感不强，有些作品的纹饰与锦地漆的层厚度相当；雕刻刀法上虽保留着早期雕漆的磨退，但已难掩饰刀锋快利、磨工不细的痕迹。嘉靖、万历时期的雕漆，雕工精细，刻后不磨，锋棱清楚有力。</p>
+<h3 id="清代"><a class="header" href="#清代">清代</a></h3>
+<p>清朝乾隆时期的雕漆技法集前代之大成，融会了明代的风格特点并有创新和发展。原在造办处“牙作”当差的南方牙匠，乾隆时命他们雕刻漆器，他们自然追求雕牙般的精细纤巧。乾隆时期大量的雕漆交由苏州制作，苏州匠人则将雕刻竹木逸品奇俏清新、气韵生动的风格带到雕漆中来。在这两种因素的作用下，乾隆时期雕漆的技法形成了新的风格。</p>
+<h2 id="装饰题材"><a class="header" href="#装饰题材">装饰题材</a></h2>
+<h3 id="元代-1"><a class="header" href="#元代-1">元代</a></h3>
+<p>元代雕漆的装饰题材承袭宋代漆器的风格，花卉鸟禽、山水人物仍是漆器的主要装饰纹样。以花卉为题材的作品，其构图或以一大朵花卉作为主题，旁衬数枚含苞欲放的花蕾，或数朵大花满铺全器，枝叶肥厚，舒卷自如。以花鸟为题材的作品，以花卉衬底，上压飞禽，这种装饰风格至明初仍继续使用。以山水人物为题材的作品，通常刻三种锦纹，以表示天、水、地不同的空间，天锦用曲折回转的单线表示，水锦用波纹组成，地锦用方格或斜方格内饰多瓣形小花表示，似繁花遍地。以锦纹为背景的空间中刻画树木殿阁、人物生活等，画面的层次感十分清晰。</p>
+<h3 id="明代-1"><a class="header" href="#明代-1">明代</a></h3>
+<h4 id="花卉图案"><a class="header" href="#花卉图案">花卉图案</a></h4>
+<p>明代的雕漆作品多以花鸟、龙凤、山水人物等内容作为装饰题材。</p>
+<p>花卉题材的作品，早期为大朵花满铺的装饰风格，后变为缠枝、折枝花卉和小朵花头，图案布局变得疏朗清新。花鸟以四季题材为主，常见的有鸟鸣枝头、鸳鸯戏水、绶带牡丹等。以花卉、鸟禽、龙螭等为主要题材的复合纹样的作品，多用夸张的表现形式，这些作品均以盛开的花卉为地，上压成双的游穿于花丛之中的飞禽、龙螭，浪漫色彩浓厚。</p>
+<h4 id="山水人物图案"><a class="header" href="#山水人物图案">山水人物图案</a></h4>
+<p>山水人物题材的作品，图案取材于历史故事、生活场景等，这些作品反映了文人墨客悠闲清雅、寄情山水的生活情趣。</p>
+<h4 id="吉祥图案与龙凤纹饰"><a class="header" href="#吉祥图案与龙凤纹饰">吉祥图案与龙凤纹饰</a></h4>
+<p>由于嘉靖皇帝朱厚熜信奉道教，嘉靖、万历时期雕漆的装饰纹样一改前期风格，一是寓意吉祥如意的图案内容增多，动植物、神灵形象及自然景象和谐地组织在一起，常见有松树、灵芝、仙桃、鹿鹤、祥云以及八宝、八卦纹等，以取长生不老、如意吉祥之意；或以松竹梅的枝干蟠成“福”“禄”“寿”等吉祥文字，与其它装饰纹样组合成图案。二是龙凤图案骤增，尤其万历时期，龙凤纹饰成为装饰图案的主流。</p>
+<h3 id="清代-1"><a class="header" href="#清代-1">清代</a></h3>
+<p>清代中期，特别是乾隆时期，雕漆的装饰纹样更加丰富多彩，无所不有，新的题材不断涌现，集中表现在以下几个方面：一是仿明代以文字和吉祥纹样组合成的装饰图案，大体字成为主要纹样。二是以海水波涛中的鱼龙海兽等为题材，多为三、九奇数的鱼龙海兽在波涛中嬉戏，令人耳目一新，这种题材的雕漆作品波纹如丝，锋芒毕露。三是仿古装饰纹样亦别出心裁，如仿古青铜器的器型和青铜器上的虬螭纹、夔龙纹、凤纹、谷纹等。四是在满刻锦纹的漆地上加刻诗文词句，或以诗写景，或以景配诗，诗情画意交相辉映。此外，以神话故事和具有宗教意味的题材为装饰的雕漆作品也较常见，如八仙人物等。</p>
+<h2 id="艺术特点"><a class="header" href="#艺术特点">艺术特点</a></h2>
+<h3 id="元代-2"><a class="header" href="#元代-2">元代</a></h3>
+<p>元代雕漆的款识，根据现存实物可以确定为针划名谓款，有“张成造”、“杨茂造”、“张敏德造”等，均刻在器物底部。</p>
+<h3 id="明代-2"><a class="header" href="#明代-2">明代</a></h3>
+<p>明代官办漆器作坊生产的雕漆均刻年号款。永乐时期的雕漆仍沿袭元代雕漆款识的针划法，多在器物底部左侧边缘针划“大明永乐年制”六字竖行款。</p>
+<p>宣德时期的雕漆改为刀刻填金“大明宣德年制”六字楷书款，字体粗大醒目，刀锋刚劲，刻款位置无定制。嘉靖时期的雕漆款识均在器物底部正中刀刻填金“大明嘉靖年制”楷书款，其位置从右至左横行、竖一行或两行不等。</p>
+<p>万历时期的雕漆亦为刀刻填金楷书纪年款，但多在年号之外加干支纪年，刻款部位多在器底上方边缘从右至左横刻，也有竖行或双行刻于器底正中者，字迹工整纤秀。</p>
+<h3 id="清代-2"><a class="header" href="#清代-2">清代</a></h3>
+<p>清代乾隆时期雕漆的款识为刀刻填金年号款和吉言器名款，常见的部位在器底正中或盖内、器内底，也有刻在器盖面做出的圆圈内的，款字有“大清乾隆年制”、“乾隆年制”、“大清乾隆仿古”、“乾隆仿古”等，其中以楷书款为主，也有篆书和隶书。格式有横行、竖行、双行、三行不等，款外有用单方框或双方框。其年号款之外还有加吉言器名者，有的器物年号和器名分别刻在盖内和器底，如剔红雅集宝盒，盒底刻“大清乾隆年制”年号款，盖内镌“雅集宝盒”四字。也有的器物只刻器名不刻年款。乾隆以后的雕漆，有年款的仅见嘉庆雕漆上的“嘉庆年制”篆书款。</p>
+<h2 id="元代雕漆"><a class="header" href="#元代雕漆">元代雕漆</a></h2>
+<p>据黄成《髹饰录》记载，我国雕漆技法出现于唐代：“剔红，即雕红漆也。髹层之厚薄，朱色之明暗，雕镂之精粗，亦甚有巧拙。唐制多印板刻平锦朱色，雕法古拙可赏，复有陷地黄锦者。”后杨明加注补充道：“唐制如上说，而刀法快利，非后人所能及。陷地黄锦者，其锦多似细钩云，与宋元以来之剔法大异也。”这两段记载无疑证明唐代已有雕漆并论及其基本特征，唯至今未见实物。宋元时期，我国雕漆工艺得到发展，至元代已达到炉火纯青的程度。《髹饰录》中评价：“宋元之制，藏锋清楚，隐起圆润，纤细精致。又有无锦纹者。”宋元两代雕漆技法已臻成熟，传世的元代雕漆制品以张成、杨茂等的作品为代表。</p>
+<h2 id="明代雕漆"><a class="header" href="#明代雕漆">明代雕漆</a></h2>
+<p>在继承元代雕漆工艺的基础上，明代的雕漆生产有了飞跃的发展，尤其是永乐、宣德时期，雕漆技艺取得了空前辉煌的成就。明成祖朱棣酷爱雕漆，明朝迁都北京后，他命御用监在皇城内建立了专为皇家服务的漆器作坊——果园厂，专门生产雕、填漆器。工匠从全国各地精选，永乐皇帝亲召元代雕漆巨匠张成之子张德刚进京，授其营缮所副，专司果园厂雕漆的生产。这一时期果园厂的雕漆产品精美绝伦，代表了明代雕漆工艺的最高水平。精美的雕漆制品不仅满足了皇家的需求，永乐皇帝还以此为礼品馈赠日本国王。
+明代嘉靖、万历时期，官办漆器作坊生产的漆器一直保持着较高的工艺水平，装饰纹样一改前期风格，除部分继承了反映民间文化习俗的题材外，对帝王歌功颂德、宣扬宗教神话和表现长生、升仙、福寿吉祥的内容成为雕漆装饰的主流风格。雕漆的这种特点与嘉靖皇帝朱厚熜信奉道教密切相关。</p>
+<h2 id="清代雕漆"><a class="header" href="#清代雕漆">清代雕漆</a></h2>
+<p>由于乾隆帝酷爱雕漆，清乾隆时期雕漆工艺得以蓬勃发展，百工炫巧争奇，料不厌精，工不厌细，雕漆工艺达到了漆工艺史上最高的水平，雕漆制品的数量也非常巨大，现存乾隆御制诗中咏雕漆的诗文即有几十首。乾隆朝雕漆多为养心殿造办处制造或交由苏州承做。乾隆后期，雕漆生产由盛而衰，至光绪时，雕漆技法几乎失传，慈禧太后六十寿辰令苏州制作雕漆，但得到的承办，至此，雕漆生产跌入低谷。</p>
+<h2 id="机构工匠"><a class="header" href="#机构工匠">机构工匠</a></h2>
+<h3 id="果园厂"><a class="header" href="#果园厂">果园厂</a></h3>
+<p>明永乐十九年（1421年），明成祖朱棣迁都北京后，“御用监”便在皇城内设置了御用漆器作坊果园厂。元代雕漆名匠张成之子张德刚被召进京，“面试称旨，即授营缮所副”，掌管果园厂漆器的生产。因此，明永乐、宣德时期，果园厂的雕漆保持了元代张成、杨茂雕漆“浑厚圆润，藏锋清晰，磨工大于雕工”的特点。果园厂遗址今不存，据文献记载，其厂址在西安门内，棂星门迤西，约为现西什库之东的灵境胡同一带。</p>
+<h3 id="养心殿造办处"><a class="header" href="#养心殿造办处">养心殿造办处</a></h3>
+<p>清代皇家御用品多由养心殿造办处制作，造办处设十四作，其中包括漆作。清代养心殿造办处漆作制作的漆器代表了清代漆器的最高水平。</p>
+<h3 id="张成"><a class="header" href="#张成">张成</a></h3>
+<p>张成，元代雕漆巨匠。据《嘉兴府志》载：“张成、杨茂，嘉兴府西塘杨汇人，剔红最得名。”张成的雕漆作品特点是髹漆肥厚，雕工圆润，藏锋清晰。其雕漆技艺全面，作品题材广泛，山水人物题材的作品通常画面疏朗，景物深远，空旷辽阔。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../outdoor/outdoor-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../outdoor/outdoor-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../outdoor/outdoor-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../outdoor/outdoor-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

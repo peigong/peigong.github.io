@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>船闸 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/extend/extend-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="船闸"><a class="header" href="#船闸">船闸</a></h1>
+<h2 id="通惠河和巴拿马运河的船闸"><a class="header" href="#通惠河和巴拿马运河的船闸">通惠河和巴拿马运河的船闸</a></h2>
+<p>通惠河船闸和巴拿马运河船闸在功能、原理等方面有相似之处，但在规模、建造背景等方面存在差异，以下是具体对比：</p>
+<h3 id="相同点"><a class="header" href="#相同点">相同点</a></h3>
+<ul>
+<li>功能作用：二者都是为了克服水位差，帮助船舶顺利通过不同水位区域，保障航道的畅通，以实现内河或跨洋的航运交通。</li>
+<li>基本原理：都采用了船闸的基本工作原理，即通过闸室的充水和泄水，使船舶能够在不同水位之间升降，从而适应航道的水位变化。</li>
+</ul>
+<h3 id="不同点"><a class="header" href="#不同点">不同点</a></h3>
+<ul>
+<li>建造背景与目的：通惠河船闸是元代为解决大都（今北京）的漕运问题，使南方物资能更便捷地运至京城而修建。巴拿马运河船闸是为连接大西洋和太平洋，缩短船只航行距离，促进全球贸易和航运发展而建造。</li>
+<li>规模与尺寸：巴拿马运河船闸规模大，可容纳大型远洋轮船，如第三套船闸闸室宽55米，长427米。通惠河船闸主要服务于内河运输，规模小，如元代通惠河上的船闸，闸室长度一般在几十米左右。</li>
+<li>技术复杂程度：巴拿马运河船闸因要适应不同季节、不同海域的水位变化以及大型船舶的通行需求，技术复杂，有完善的水位调节、船舶引导和闸室维护系统。通惠河船闸相对简单，主要是依据内河的水位变化和小型船舶的通航要求设计。</li>
+<li>运行管理：巴拿马运河船闸由专门的管理机构负责，面向全球船舶，管理严格，有标准化的操作流程和收费制度。通惠河船闸在古代由朝廷相关部门管理，主要服务于国内漕运和内河航运，管理模式相对简单。</li>
+</ul>
+<h2 id="巴拿马运河的设计"><a class="header" href="#巴拿马运河的设计">巴拿马运河的设计</a></h2>
+<p>巴拿马运河的设计主要包括以下几个方面：</p>
+<h3 id="整体布局"><a class="header" href="#整体布局">整体布局</a></h3>
+<p>利用巴拿马地峡的地形，以加通湖为中心，通过船闸和人工渠道连接大西洋和太平洋。运河呈西北—东南走向，全长约81.3千米。</p>
+<h3 id="船闸系统"><a class="header" href="#船闸系统">船闸系统</a></h3>
+<ul>
+<li>船闸构造：设有三级船闸，如加通水闸、佩德罗—米格尔水闸和米拉弗—罗林斯水闸。每组船闸成对设置，船只可双向同时通过。闸室长300米，宽33米，深12米。闸门宽20米，厚2米，高14~25米不等，由电动机驱动，由控制塔操控开合。</li>
+<li>运作原理：船只从海平面进入船闸后，通过闸室充水，使船只上升到加通湖的高度（海拔26米），然后驶过运河中部的航道；在另一端，再通过船闸泄水，使船只降至海平面。</li>
+</ul>
+<h3 id="人工湖"><a class="header" href="#人工湖">人工湖</a></h3>
+<p>加通湖是巴拿马运河的关键部分，由加通大坝拦截查格雷斯河及其支流形成。它是世界上最大的人造湖之一，面积达430平方公里，为船闸提供了所需的淡水。</p>
+<h3 id="航道设计"><a class="header" href="#航道设计">航道设计</a></h3>
+<ul>
+<li>宽度和深度：最窄处152米，最宽处304米，水深13~15米，能满足不同类型船只的通航需求。</li>
+<li>弯道和坡度：因运河沿线地形起伏，航道有一定的弯道和坡度，在一些狭窄或弯曲地段，对船只的航行操作有较高要求。</li>
+</ul>
+<h3 id="配套设施"><a class="header" href="#配套设施">配套设施</a></h3>
+<ul>
+<li>防护链：在船闸入口两壁间设有防护链，防止船只行驶过快发生碰撞。</li>
+<li>牵引机车：稍大的船只靠运行于闸壁顶部齿轨上的电动机车牵引通过船闸。</li>
+<li>导航设施：配备了完善的导航设施，如灯塔、信号标志等，为船只在运河内的航行提供指引。</li>
+</ul>
+<p>在2016年扩建后，新增的三级船闸长427米、宽55米，可用深度18.3米，极大地提升了运河的通航能力，能允许载重13000标准箱的集装箱船通过。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../extend/extend-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../extend/extend-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../extend/extend-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../extend/extend-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

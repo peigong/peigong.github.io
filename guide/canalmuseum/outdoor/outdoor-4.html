@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>髹（xiū）漆 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/outdoor/outdoor-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="髹xiū漆"><a class="header" href="#髹xiū漆">髹（xiū）漆</a></h1>
+<p>髹，汉语二级字，读作髹（xiū），其本义为以漆漆物。</p>
+<p>髹漆亦作“髤漆”，是漆器工艺中的一种技艺，雕漆工艺中的一步工序，亦指油漆。</p>
+<p>髹漆是指将漆涂在器物上，雕漆通常需要16毫米厚的漆，必须髹漆300道左右。髹漆的最佳温度为23摄氏度到30摄氏度，湿度80%，工匠需在阴暗闷热又潮湿的车间工作。</p>
+<p>《续资治通鉴·宋徽宗政和元年》:“ 辽主方纵肆，贪得南方玉帛珍玩，而贯所齎皆极珍奇，至运两浙髹漆之具以为馈。”</p>
+<p>最早的漆器是1978年在浙江省河姆渡遗址中发现的木胎朱漆碗。</p>
+<h2 id="涵义"><a class="header" href="#涵义">涵义</a></h2>
+<p>一、以漆涂物</p>
+<p>用来防止腐蚀、虫蛀，兼具美观。</p>
+<p>髹，以漆涂物。例：木器髹者千枚。——《史记·货殖列传》</p>
+<p>漆，以漆涂物。例：把大门漆成红色的。</p>
+<p>出处：</p>
+<p>我想像秦淮河的极盛时，在这样宏阔的桥上，特地盖了房子，必然是髹漆得富富丽丽的。----朱自清《桨声灯影里的秦淮河》</p>
+<p>二、油漆</p>
+<p>出处：</p>
+<ol>
+<li>唐 刘禹锡 《武陵观火》诗:“瑶坛被髹漆，宝树攒珊瑚。”</li>
+<li>清 田雯 《黔书·雄黄》:“茅胶者，薯蓣之别种，不可食者也，其汁若髹漆，可以合离而萃涣。”</li>
+<li>清 无名氏 《梵门绮语录·震泽新庵连生》:“丰容盛鬋，发光泽如髹漆。”</li>
+</ol>
+<h2 id="起源"><a class="header" href="#起源">起源</a></h2>
+<p>现知最早的漆器是浙江井头山遗址出土的两件涂有漆层的木器，将中国甚至世界使用漆器的历史提前到距今八千年前。不过从单纯使用天然漆到用色料调漆，其间还有一个漫长的过程，有待今后我们作进一步的探索。商周时代已用色漆和雕刻来装饰器物，并以松石、螺钿、蚌泡等作镶嵌花纹。战国在漆工史上是一个极为重要的时期，器物品种和髹（xiū，指把漆涂在器物上）饰技法等都有很大的发展。汉代漆器产地之广、数量之多、传播之远是前所未有的。器物的造型及装饰也呈现新的面貌。魏晋南北朝漆器发掘出土的虽不多，惟据历史文献可知当时花色颇繁，制作亦精。体大质轻的夹纻（zhù，指用苎麻织成的粗布）像，油漆兼用的密陀绘具有时代的特色。唐代文明高跻当时世界之巅，漆器和其他工艺一样有特殊的成就。它表现在起源于前代的金银平脱至此而愈加华美，盛行于后代的剔红、犀皮等又始创于斯时（据最近在安徽马鞍山朱然墓发现的漆器，三国吴已有犀皮，本文不及收入和更改，另有专文论及）。宋代一向以一色漆器制作精良为世所称，而近年来又发现有极为精美纹饰的堆漆与镶嵌、戗金与填漆相结合的漆器更呈异彩。元代漆工名匠辈出，尤以剔红、剔犀、戗金诸作，达到了历史的顶峰。明代是我国漆工史上又一次有重大发展和革新的时代，髹饰工艺可谓至此而大备。多种技法和不同纹、地的结合，迎来了千文万华之盛。清代前半叶大规模地任用了明代髹工，由于宫廷的好尚，更趋精工细巧而不免流于纤密繁琐。中叶以后，国运日促，导致各种工艺的全面衰退。</p>
+<p>总的说来，我国漆工艺几千年的发展和成就，对全世界的漆器工艺都产生了影响，先是东亚、东南亚、继而是西欧及北美。可以说世界上一切制造漆器或用其他物质摹仿漆器的国家，无不或多或少受中国漆器的影响。中国传统漆工艺曾经为人类文明作出了重大的贡献。</p>
+<p>中国历史上有关髹工、漆器的著作，为数不多，且大都散佚失传。现存唯一的古代漆工专著是明代黄成撰的《髹饰录》。(1)它是研究漆工史、明代漆工的原料和技法的最为重要的文献，使我们认识和了解祖国漆器的丰富多彩，为继承发扬、推陈出新这一工艺提供了宝贵材料。它还为古代漆器的定名及分类提供了可靠的依据。</p>
+<h2 id="漆器分类"><a class="header" href="#漆器分类">漆器分类</a></h2>
+<ol>
+<li>质色门 即各种一色漆器。</li>
+<li>纹■门 即表面有不平细纹的各种漆器。</li>
+<li>罩明门 即在各色漆地上罩透明漆的各种漆器。</li>
+<li>描饰门 即用漆或油描绘花纹的各种漆器。</li>
+<li>填嵌门 即填漆、嵌螺钿、嵌金银等各种漆器。</li>
+<li>阳识门 即用漆堆出花纹的各种漆器。</li>
+<li>堆起门 即用漆灰堆出花纹，上面再加雕琢、描绘的各种漆器。</li>
+<li>雕镂门 即各种雕漆，包括剔红、剔犀等及假雕漆、雕螺钿等各种漆器。</li>
+<li>戗划门 即刻划花纹，纹内填金或银或彩色的各种漆器。</li>
+<li>斒斓门 即两种或两种以上纹饰相结合的各种漆器。</li>
+<li>复饰门 即某种漆地与一种或多种文饰相结合的各种漆器。</li>
+<li>纹间门 即填嵌门中的某种做法与戗划门中的某种做法相结合的各种漆器。</li>
+</ol>
+<p>最后是裹衣门和单素门，讲的是两种用简易方法做胎骨的漆器。</p>
+<h2 id="家具髹漆辨伪"><a class="header" href="#家具髹漆辨伪">家具髹漆辨伪</a></h2>
+<p>各种家具有各自的髹漆工艺，所谓髹漆辨伪，主要对象是珍贵硬质木材家具，即黄花梨，紫檀，红木类家具。这类家具的传统髹漆技法是“揩漆”工艺，首先进行打磨，以体现木材的天然纹理，然后用天然漆（生漆）髹涂于器物的表面，待漆要干未干时，用布纱揩掉表面漆膜。如此，反复多次，直至表面呈现光亮，这就是“清水货”。而仿制家具，常采用“混水货”工艺，即用有色的漆膜，覆盖家具的表面，看不到木材的天然纹理。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../outdoor/outdoor-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../outdoor/outdoor-5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../outdoor/outdoor-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../outdoor/outdoor-5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
