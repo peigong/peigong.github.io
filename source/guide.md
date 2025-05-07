@@ -26,3 +26,4 @@ title: 导游笔记
 13. [北京动物园](./guide/zoo)
 14. [北京海洋馆](./guide/aquarium)
 15. [雁栖湖](./guide/YanqiLake)
+16. [只有红楼梦·戏剧幻城](./guide/Unique-Dream-of-Red-Mansion)

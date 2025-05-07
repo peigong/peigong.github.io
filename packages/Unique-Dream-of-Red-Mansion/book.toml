@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "只有红楼梦·戏剧幻城 - VET.周培公(https://pg.js.cn)"
+
+[build]
+build-dir = "../../public/guide/Unique-Dream-of-Red-Mansion"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/Unique-Dream-of-Red-Mansion/"
+cname = "pg.js.cn"
