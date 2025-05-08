@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 概况简介</a></li><li class="chapter-item expanded "><a href="RedMansions-33.html"><strong aria-hidden="true">2.</strong> 第三十三回 手足眈眈小动唇舌　不肖种种大承笞挞</a></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 概况简介</a></li><li class="chapter-item expanded "><a href="lesson/index.html"><strong aria-hidden="true">2.</strong> 名著里的语文课</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lesson/carved-beams-and-painted-rafters.html"><strong aria-hidden="true">2.1.</strong> 雕梁画栋</a></li><li class="chapter-item expanded "><a href="lesson/lesson-1.html"><strong aria-hidden="true">2.2.</strong> 脊兽</a></li><li class="chapter-item expanded "><a href="lesson/eaves-tile.html"><strong aria-hidden="true">2.3.</strong> 瓦当</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 原著小说</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="fiction/fiction-33.html"><strong aria-hidden="true">3.1.</strong> 第三十三回 手足眈眈小动唇舌　不肖种种大承笞挞</a></li></ol></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split("#")[0];
         if (current_page.endsWith("/")) {

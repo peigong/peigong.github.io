@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>脊兽 - 只有红楼梦·戏剧幻城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">只有红楼梦·戏剧幻城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/lesson/lesson-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="脊兽"><a class="header" href="#脊兽">脊兽</a></h1>
+<p>脊兽是中国古代汉族建筑屋顶的屋脊上所安放的兽件。它们按类别分为跑兽、垂兽、“仙人”及鸱吻，合称“脊兽”。其中正脊上安放吻兽或望兽，垂脊上安放垂兽，戗脊上安放戗兽，另在屋脊边缘处安放仙人走兽。汉族古建筑上的跑兽最多有十个，分布在房屋两端的分散戗脊上，由下至上的顺序依次是：龙、凤、狮子、天马、海马、狻猊、狎鱼、獬豸、斗牛、行什。</p>
+<p>太和殿作为故宫里等级最高的宫殿，脊兽的数量达到了10个。</p>
+<h2 id="基本信息"><a class="header" href="#基本信息">基本信息</a></h2>
+<p>脊兽由瓦制成，高级的汉族建筑多用琉璃瓦，其功能最初是为了保护木栓和铁钉，防止漏水和生锈，对脊的连接部起固定和支撑作用。后来脊兽发展出了装饰功能，并有严格的等级意义，不同等级的汉族建筑所安放的脊兽数量和形式都有严格限制。</p>
+<p>中国古建大都为土木结构，屋脊是由木材上覆盖瓦片构成的。檐角最前端的瓦片因处于最前沿的位置，要承受上端整条垂脊的瓦片向下的一个“推力”；同时，如毫无保护措施也易被大风吹落。因此，人们用瓦钉来固定住檐角最前端的瓦片，在对钉帽的美化过程中逐渐形成了各种动物形象，在实用功能之外进一步被赋予了装饰和标示等级的作用。</p>
+<p>古代的汉族宫殿建筑多为木质结构，易燃，因此檐角上使用了传说能避火的小动物。这些美观实用的小兽端坐檐角，为汉族古建筑增添了美感，使汉族古建筑更加雄伟壮观，富丽堂皇，充满艺术魅力。梁思成评价道：“使本来极无趣笨拙的实际部分，成为整个建筑物美丽的冠冕”。 唐宋时，还只有一枚脊兽，以后逐渐增加了数目不等的蹲兽，到了清代形成了今天常见的“仙人骑凤”领头的小动物队列形态。宫殿垂脊兽的装饰,是有严格等级区别的,只有“金銮殿”顶上垂脊兽十样俱全。“中和殿”及“保和殿”才只有九样,其它宫殿的垂脊上虽然亦有走兽,但是都要按级递减。</p>
+<h2 id="古建构件"><a class="header" href="#古建构件">古建构件</a></h2>
+<p>古建的殿顶多为庑殿顶，还有歇山顶、悬山顶、攒尖顶等。而庑殿顶是汉族古建屋顶中的高级建筑形式。其屋顶前后左右四面都有斜坡，前后两坡相交成为正脊，左右两坡与前后两坡相交形成四垂脊，合为五脊。重檐庑殿顶则是在其下又有短垂脊，共九脊。</p>
+<p>再说吻，正脊两头安放面朝里的龙首形瓦件称“正吻”、“螭吻”，因传说此兽好吞，故在正脊两端作张嘴吞脊状，又称“吞脊兽”。一说其为海兽，喜登高眺望，喷水如雨不怕火，于是将之装饰于此，取喷水镇火保平安意。其背后各有双角小兽头，称脊兽。而在殿顶各条垂脊端部的龙首称“鸱吻”，即鹞鹰，因喜四方眺望，故置于此。在殿顶岔脊的下端，又有一龙首，称“嘲风”，传说其胆大、好险，便置此。这屋脊、角兽合称 “五脊六兽”。</p>
+<p>再说小兽，在殿顶翘起的戗脊上安放着仙人和各种小兽，称“戗兽”，其数目与种类有着严格的等级区别，小兽越多，建筑级别越高，常见为9、7、5、3不等，均为奇数。雍和宫各大殿上的小兽以法轮殿和万福阁为最，均为7个，因此二殿系寺院的中心建筑，小兽的数量是随着宫殿等级的抬升而逐渐增加的。</p>
+<p>小兽的排列是有寓意的。先看这些小兽的最前面有一个领头的，那是骑凤的仙人。民间也叫做“仙人骑鸡”。关于“仙人”和凤凰，民间对此有着各种各样的传说。</p>
+<p>一种传说他是姜子牙的小舅子，想利用姜子牙的关系往上爬。姜子牙看出小舅子的居心，但深知道他才能有限，因此对他说：“你的官已升到顶了，如果再往上爬就会摔下来。”古代的汉族建筑师们根据这个传说，把他放在了檐角的最前端，如果再往上爬一步就会掉下去摔得粉身碎骨。</p>
+<p>另一种传说他是齐泯王，在位期间不务正业，昏庸无道，所以遭到群众的憎恨，珍禽异兽穷追猛打，把他追到走投无路的地步，再往前迈一步，就会掉下来摔得粉身碎骨。</p>
+<p>至于为什么用仙人骑着凤凰，传说齐国的国君在一次作战中失败，被敌人追到一条大河边，眼看就要走投无路了。突然，一只大鸟飞到眼前，国君急忙骑上大鸟，化险为夷。因此人们把他放在建筑脊端，寓意着逢凶化吉。</p>
+<h2 id="历史规定"><a class="header" href="#历史规定">历史规定</a></h2>
+<p>《大清会典》上说这些琉璃釉面小兽的排列顺序为：龙、凤、狮子、天马、海马、狻猊、狎鱼、獬豸、斗牛、行什。其中天马与海马、狻猊与押鱼之位可置换。如若数目达不到9个时，则依先后顺序。故宫太和殿为等级最高的汉族古建筑，角脊之上排列着10个小兽，其顺序为：“一龙二凤三狮子，海马天马六押鱼，狻猊獬豸九斗牛，最后行什像个猴”，象征着皇权的至高无上。</p>
+<p>这些小兽各有寓意，并均赋予了神奇的本领，有的能镇水避火，有的能降魔除障，有的能带来吉祥好运：</p>
+<p>龙与凤代表至高无上的尊贵，龙的角似鹿、鳞似鱼、爪似鹰。唐宋两朝视为祥瑞的象征。明清将之象征帝王，皇帝称自己为真龙天子，由此这龙是皇权的象征。凤是传说中的百鸟之王。雄为凤，雌称凰，通称为凤凰，是祥瑞的象征，在旧时还比喻有圣德的人。</p>
+<p>狮子作吼，群兽慑服，乃镇山之王，寓意勇猛威严，在寺院中又有护法意，寓示佛法威力无穷。唐虞世南《狮子赋》描绘其：“筋骨纤维，殊恣异制，阔臆修尾，劲豪柔毛。钗爪锯牙，藏锋蓄锐，弥耳宛足，伺间借势……遂感德以仁。”在这里，狮子是“猛”、“仁”兼具的瑞兽。天马意为神马，与海马均为古代神话中吉祥的化身，汉朝时，对西域的良马称为天马，天马又是尊贵的象征。“天马行空，独往独来”，将其形象用于殿脊之上，有种傲视群雄，开拓疆土的气势。</p>
+<p>海马亦称落龙子，象征忠勇吉祥，智慧与威德通天入海，畅达四方。</p>
+<p>狻猊在古籍记载中是接近狮子的猛兽，能食虎豹，亦是威武百兽的率从。一说它日行五百里，性好焰火，故香炉上面的龙首形装饰为狻猊，有护佑平安意。</p>
+<p>押鱼是海中的异兽，说它能喷出水柱，寓其兴风作雨，灭火防火。</p>
+<p>獬豸有神羊之称，为独角，又称一角羊。《神异经》云：“东北荒中有兽如羊，一角，毛青，四足，性忠直。见人斗则触不直，闻人论则咋不正。”因善于辨别是非曲直，力大无比，古时的法官曾戴獬豸冠，以示善断邪正。将它用在殿脊上装饰，象征公正无私，又有压邪之意。斗牛为传说中的虬龙，无角，与押鱼作用相同，一说其为镇水兽，古时曾在发生水患之地。多以牛镇之。《宸垣识略》中说：“西内海子中有斗牛，即虬螭之类，遇阴雨作云雾，常蜿蜒道旁及金鳌玉蝀坊之上。”故它是祥瑞的动物。立于殿脊之上意有镇邪、护宅之功用。</p>
+<p>行什因排行第十，故得此名。是一种带翅膀猴面孔的压尾兽。</p>
+<p>小兽的递减是从后面的行什开始的。后来我发现在古建中多有不涂釉面的瓦件，称“黑活”。黑活不用仙人，领头的为狮，后面均为马。雍和宫的配殿即是，无论琉璃还是黑活做法。小兽设置一般多为单数，其大小、数目是根据柱高、等级、角脊长短诸多因素而定的。</p>
+<p>这些小兽具有极强的装饰作用，使汉族古建筑更加宏伟庄重。同时，在结构上稳固了屋脊和瓦垄，吻是固定正脊、岔脊的构件，其他小兽均具有防止屋脊滑动的作用，是汉族古代建筑不可缺少的一部分。经风吹日晒数百年，一直牢牢地屹立在殿脊上。</p>
+<p>晨钟暮鼓，岁月悠悠。殿顶上的脊兽给人们带来了无限的遐想……</p>
+<h2 id="放置方向"><a class="header" href="#放置方向">放置方向</a></h2>
+<p>脊兽按其口的朝向，可分为两类：一类，口向下，呈含脊状，称为螭吻；另一类，口向上，或张嘴或闭嘴，叫做垂兽、望兽、蹲兽。</p>
+<h2 id="建筑定制"><a class="header" href="#建筑定制">建筑定制</a></h2>
+<p>最前面的领队是一个骑鹤仙人，其后依次为龙、凤、狮子、天马、海马、狻猊、押鱼、獬豸、斗牛、行什。而皇帝居住和处理日常政务的乾清宫。地位仅次于太和殿，檐角的小兽为9个。坤宁宫原是皇后的寝宫，小兽为7个。妃嫔居住的东西六宫，小兽又减为5个。有些配殿，仅有1个。古代的宫殿多为木质结构，易燃。传说这些脊兽能避火。由于神化动物的装饰，使帝王的宫殿成为一座仙阁神宫。</p>
+<p>汉族古建筑上的跑兽最多有十个，分布在房屋两端的垂脊上，由下至上的顺序依次是：龙、凤、狮子、天马、海马、狻猊、狎鱼、獬豸 、斗牛、行什，这些跑兽的设置有不同的寓意。龙，是传说中一种能兴云作雨的神异动物，是皇权的象征；凤，古代传说中的鸟中之王，是吉瑞之象，比喻有圣德之人；狮子，代表勇猛威严，群兽慑服；天马、海马是吉祥的化身，象征着皇家的威德能通天入海，畅达四方；狡猊是传说中能食虎豹的猛兽；狎鱼是海中异兽，传说是驾云降雨，灭火防灾的能手；獬豸是传说中能辨别是非曲直的一种独角猛兽，是正大光明、 清平公正的象征；斗牛也称蚪牛，是龙的一种，可除祸灭灾；行什是带着翅膀的猴面人像，是压尾兽。垂兽单指蛮吻，也叫哜吻，传说它性格好高骛远，喜欢登高眺望，所以把它放在跑兽的上端。</p>
+<p>由于在佛教里，奇数表示清白，所以在屋脊上装饰的跑兽大多是奇数。明清两代有明确规定，全国除皇宫太和殿（金銮殿）的跑兽用十个外，其他建筑上都要用奇数，数目因建筑的等级而相应增减。在州县的建筑中，带有龙、凤的很少，数目一般都在五个以下。宁远在清代是州级建制，古城城楼垂脊上有天马、海马、狮子三个跑兽，蓟辽督师府、城隍庙中也是如此，只有供奉孔子的文庙中主要建筑是五个跑兽。而北京天安门、曲阜孔庙大成殿、承德外八庙大雄宝殿等建筑因其地位的神圣而有九个跑兽。</p>
+<h2 id="作用"><a class="header" href="#作用">作用</a></h2>
+<p>一、螭吻所安放的位置，恰是房顶前后两坡垄与山墙的交汇点，换句话就是屋顶和山墙交汇的枢纽所在。如果不加以严密封堵，雨水很容易渗入建筑物主体，而破坏整栋建筑物。运用整体构件安于此薄弱环节处，是封堵雨水渗透的最好办法，建筑物长期安全使用才成为可能。这些，可说是吻的实用价值。</p>
+<p>二、古代木构建筑最大的威胁是火灾。信奉神灵的古人急切需要一种灵物能灭火消灾，保佑平安。传说螭吻能喷水降雨，遂将其像安于屋顶正脊两端。祈求这种雨神座物能为人们消除火祸，带来幸福。</p>
+<p>三、螭吻的安放，给山西的曲线屋顶增添了更丰富的曲线。使屋顶起伏错落，层次感强。在蓝天的衬托下，使整座建筑物造型，既规格严整，又富于变化。达到了庄重与生动的巧妙结合，宏伟和明快的完整统一。</p>
+<p>千百年来随着历史变迁，人们赋予螭吻的作用越来越多。如象征着吉祥、美丽和威严；承载着震摄、去秽与消灾。因此，它的存在使高大的汉族古建筑平添了一层神秘的色彩。</p>
+<h2 id="历史发展"><a class="header" href="#历史发展">历史发展</a></h2>
+<p>中国古建的檐角屋脊上常常排列着一些数目不等的小动物作为装饰，这些美丽的装饰品是汉族建筑装饰的一大特点。这些小动物一般叫做屋脊走兽、檐角走兽、仙人走兽、垂脊吻等，古建行内部也称为小跑或“走投无路”。它们已经“走”到了檐角的最前端，再向前一步就会掉下去，真的是走投无路的。</p>
+<p>唐宋时，还只有一枚兽头，以后逐渐增加了各种数目不等的蹲兽，到了清代形成了这样的形态。</p>
+<p>在小仙人之后，坐姿排列着一队小动物，根据汉族建筑规模和等级不同而数目有所不同，多为一、三、五、七、九等单数。北京故宫的太和殿用到了十个，除了象征着皇权的至高无上外，大概也意味着只有皇帝才配享受到“十全十美”的待遇。在不同的建筑物上小动物的数目不等，用九个来举例，它们依次是：鸱吻（龙的九子之一）、凤、狮子、天马、海马、狻猊、押鱼、獬豸、斗牛。故宫太和殿在最后增加了一个行什。数目越多，表示级别越高。拿故宫来说，太和殿用了十个，天下无二；皇帝居住和处理日常政务的乾清宫，地位仅次于太和殿，用九个；坤宁宫原是皇后的寝宫，用七个；妃嫔居住的东西六宫，用五个；某些配殿，用三个甚至一个。</p>
+<h2 id="寓意"><a class="header" href="#寓意">寓意</a></h2>
+<p>跑兽前面装饰着一个“仙人”造型，它也称“骑凤仙人”，固定着垂脊下数第一块瓦件。传说仙人是战国时期齐国的国君齐闵王，一次兵败后被追兵紧逼，逃至河边为水所阻，正在危急之中，忽见一只凤凰飞至面前，闵王骑上凤渡江而去，终于逢凶化吉。“骑凤仙人”除表示鹏程万里之外，还有祈求吉祥之意。在有的汉族古建筑中，“骑凤仙人”被省略了，如兴城古城城楼上就没有设置。其实，将仙人和跑兽、垂兽设置在垂脊上，是古人考虑到建筑力学的需要，还带有朴素的汉族建筑美学思想。</p>
+<p>封建社会，神兽们是吉祥的象征，看来，它们为汉族古建筑增添了一分神奇色彩。</p>
+<p>汉族古建筑正脊两端的兽头，称为鸱吻，因其位置和形态又称正吻、龙吻、大吻。传说龙生九子，是龙与九样灵兽繁衍的混血儿，每个都不是龙，鸱吻和前面提到的狻猊、蛮吻都在其中。据说，鸱吻住在南海，能喷水成雨。汉武帝时，因宫殿经常发生火灾，依据“术士”们的说法，在宫殿的正脊两端装饰鸱吻寓意镇火，后来沿袭成制。细心的人们会发现在鸱吻的背上插有一把短剑，相传这把宝剑是晋代名道士许逊之物，插在鸱吻背上以防鸱吻逃跑，使其永远喷水镇火；另外，传说那些妖魔鬼怪最怕许逊这把扇形剑，放在鸱吻上还有避邪之意。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../lesson/carved-beams-and-painted-rafters.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../lesson/eaves-tile.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../lesson/carved-beams-and-painted-rafters.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../lesson/eaves-tile.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
