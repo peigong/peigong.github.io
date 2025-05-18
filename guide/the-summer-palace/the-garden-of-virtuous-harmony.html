@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>德和园 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-garden-of-virtuous-harmony.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="德和园"><a class="header" href="#德和园">德和园</a></h1>
+<p>光绪年间有四大建筑，重建的太和门、祈年殿、佛香阁，新建的德和园大戏楼。颐和园与清漪园最明显的外在区别，就是多了一座德和园，以庆寿的排云殿置换了敬佛的大报恩延寿寺。</p>
+<p>德和园于光绪十七年十二月十一日动工，光绪二十一年十月建成（1891 ~ 1895年），历时五年，耗银七十一万两。</p>
+<p>德和园大戏楼是清代皇家五大戏楼中最大、最后建造的一座戏楼。清代五大皇家戏楼是紫禁城畅音阁、紫禁城寿安宫、避暑山庄清音阁、圆明园同乐园、颐和园德和园。现在只有畅音阁和德和园大戏楼完整的保存了下来。</p>
+<p>为庆祝乾隆七旬大寿，三庆、四喜、春台、和春四大徽班陆续进京（徽班主要是指徽商办的戏班和唱徽调的戏班）。徽班艺人吸收了汉调、昆曲、秦腔等戏曲曲调，人称皮黄（西皮、二黄）。1876年3月2日，《申报》上登了一篇《图绘伶论》的文章，第一次正式使用了京剧的字样，宫里称京戏。</p>
+<h2 id="德和园-1"><a class="header" href="#德和园-1">德和园</a></h2>
+<p>勤政殿（仁寿殿）的北边，有一座怡春堂，即弘历说的勤政殿左侧。这是一座单独的院落，建有正殿和后罩殿。因为殿址距大宫门很近，便成为弘历奉母休憩的地方。皇太后去世后，弘历便很少再到怡春堂了。</p>
+<p>怡春堂在道光年间失火烧毁。道光二十四年（1844年）正月初八，苑丞嵩源等入内查取陈设，遗落火种。夜间火起成灾，殿堂被烧毁。崇源杖打一百，流放三千里，发入乌鲁木齐效力。光绪年间修建颐和园时，在此处建成了德和园大戏楼建筑群。</p>
+<p>德和园大戏楼，是慈禧太后看戏的“皇家大剧场”。</p>
+<h3 id="历史小故事"><a class="header" href="#历史小故事">历史小故事</a></h3>
+<p>大戏楼建于1891年，是慈禧太后为庆祝60岁生日花巨资修建的。当时颐和园里有三座戏台，它是最大的，足足花了3年才建成呢！</p>
+<h3 id="建筑超特别"><a class="header" href="#建筑超特别">建筑超特别</a></h3>
+<ul>
+<li>三层“叠叠乐”舞台：戏台有三层，从上到下分别叫“福台”“禄台”“寿台”。演神仙戏时，演员能从“福台”“禄台”用绳索吊下来，像腾云驾雾一样！</li>
+<li>地下有机关：寿台地板下有6个地井，能升降道具，比如突然“冒”出假山、海浪，或者让“妖怪”从地下钻出来，超神奇！</li>
+<li>屋顶像皇冠：戏台屋顶是黄色琉璃瓦，上面还有龙的图案，一看就是皇家气派！</li>
+</ul>
+<h3 id="看戏的vip座位"><a class="header" href="#看戏的vip座位">看戏的“VIP座位”</a></h3>
+<ul>
+<li>慈禧的专属包厢：大戏楼对面是“颐乐殿”，慈禧就坐在殿里的宝座上看戏，身边还能放点心、茶水，超舒服！</li>
+<li>大臣坐哪儿：颐乐殿两边有廊子，大臣们只能站着或坐在廊下的凳子上陪看，可没慈禧这么自在哦！</li>
+</ul>
+<h3 id="为什么叫德和园"><a class="header" href="#为什么叫德和园">为什么叫“德和园”</a></h3>
+<p>“德和”取自《易经》，意思是“道德和谐”，慈禧希望用看戏的方式让大家“和和美美”，不过其实就是她自己想享受啦！</p>
+<h3 id="现在的样子"><a class="header" href="#现在的样子">现在的样子</a></h3>
+<p>现在大戏楼还保留着当年的模样，偶尔会有传统戏曲表演。如果你们去颐和园，远远就能看到这座三层高的大戏楼，像个“戏剧大城堡”，超壮观！</p>
+<p>小思考：要是你在三层舞台上表演，会想扮演哪个角色呢？是腾云的神仙，还是从地下冒出来的小妖怪？😜</p>
+<h2 id="京戏轶事"><a class="header" href="#京戏轶事">京戏轶事</a></h2>
+<p>进宫演戏的名角儿称为内廷供奉，赏四品顶戴。</p>
+<h3 id="听戏忌羊"><a class="header" href="#听戏忌羊">听戏忌羊</a></h3>
+<h3 id="四五花洞"><a class="header" href="#四五花洞">四五花洞</a></h3>
+<h3 id="武生杨小楼"><a class="header" href="#武生杨小楼">武生杨小楼</a></h3>
+<h3 id="天下第一丑刘赶三"><a class="header" href="#天下第一丑刘赶三">天下第一丑刘赶三</a></h3>
+<h3 id="谭鑫培"><a class="header" href="#谭鑫培">谭鑫培</a></h3>
+<h2 id="慈禧画像"><a class="header" href="#慈禧画像">慈禧画像</a></h2>
+<h3 id="美国女画家柯尔"><a class="header" href="#美国女画家柯尔">美国女画家柯尔</a></h3>
+<h3 id="荷兰男画家华士胡博"><a class="header" href="#荷兰男画家华士胡博">荷兰男画家华士.胡博</a></h3>
+<h3 id="德龄公主"><a class="header" href="#德龄公主">德龄公主</a></h3>
+<p>清朝的德龄公主一般指裕德龄，她并非真正的公主，而是被慈禧太后封为郡主，因英文中“公主”和“郡主”翻译混淆而被误称为“德龄公主”。她是一个具有多面特点的人物，具体如下：</p>
+<h4 id="才华出众"><a class="header" href="#才华出众">才华出众</a></h4>
+<ul>
+<li>语言能力强：精通多国语言，能流利地进行英语、法语和汉语等语言的对译，为其在宫廷中担任翻译以及后来在国际交流中发挥了重要作用。</li>
+<li>知识丰富：跟随父亲在国外生活多年，对西方的社会、制度、文化、历史等有深入了解，还擅长演奏多种乐器，能跳多种舞蹈。</li>
+</ul>
+<h4 id="思想进步"><a class="header" href="#思想进步">思想进步</a></h4>
+<ul>
+<li>具有西方视野：接受了西式教育，具有开阔的国际视野和现代思想观念，与传统的清朝宫廷女性不同，她能将西方的先进科技、文化和生活方式等介绍给慈禧太后和宫廷中的其他人。</li>
+<li>反抗封建礼教：当慈禧太后打算将她指婚给荣禄之子时，她极力抗拒，最终在光绪帝的帮助下得以拖延，体现了她对封建包办婚姻的反抗。</li>
+</ul>
+<h4 id="爱国奉献"><a class="header" href="#爱国奉献">爱国奉献</a></h4>
+<ul>
+<li>传播中国文化：离开宫廷后，积极投身社会活动，致力于中西方文化交流，通过出书、演讲等多种大众传播活动来改善华人在美国上层社会的形象。</li>
+<li>支持抗日救亡：抗战期间，参与宋庆龄发起的保卫中国同盟活动，在美国积极组织华人华侨为中国抗战募捐，为中国的抗日救亡事业做出了贡献。</li>
+</ul>
+<h4 id="善于观察与记录"><a class="header" href="#善于观察与记录">善于观察与记录</a></h4>
+<ul>
+<li>记录宫廷生活：以自己在宫廷中的亲身经历为基础，撰写了《清宫二年记》《御香缥缈录》《瀛台泣血记》等多部作品，生动地描绘了宫廷生活的细节和人物风貌，为后人了解晚清宫廷及社会政治生活提供了珍贵资料。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-hall-of-benevolence-and-longevity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="long-corridor.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-hall-of-benevolence-and-longevity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="long-corridor.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
