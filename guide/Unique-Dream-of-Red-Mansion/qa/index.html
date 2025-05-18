@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>常见问题 - 只有红楼梦·戏剧幻城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">只有红楼梦·戏剧幻城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/qa/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="常见问题"><a class="header" href="#常见问题">常见问题</a></h1>
+<h2 id="红楼梦的别称"><a class="header" href="#红楼梦的别称">红楼梦的别称</a></h2>
+<p>《红楼梦》别称主要有以下几个：</p>
+<ul>
+<li>《石头记》：以开篇“石头”（通灵宝玉）的故事为引，是最常见的别称。</li>
+<li>《情僧录》：因书中“情僧”抄录传世的情节得名。</li>
+<li>《风月宝鉴》：与书中“风月宝鉴”（警示贪色之鉴）的意象相关。</li>
+<li>《金陵十二钗》：以书中十二位贵族女子（正册）为核心线索命名。</li>
+</ul>
+<p>此外，早期抄本中还有《金玉缘》等称法，但影响较小。</p>
+<h2 id="太虚幻境"><a class="header" href="#太虚幻境">太虚幻境</a></h2>
+<h3 id="茶"><a class="header" href="#茶">茶</a></h3>
+<p>太虚幻境中饮的茶名为千红一窟。</p>
+<p>此茶名谐音“千红一哭”，暗喻大观园中众多女子的悲剧命运，是曹雪芹以物喻人的典型笔法。</p>
+<h3 id="酒"><a class="header" href="#酒">酒</a></h3>
+<p>太虚幻境中品的酒名为万艳同杯。</p>
+<p>此酒名谐音“万艳同悲”，与“千红一窟”茶相呼应，暗喻书中女子皆难逃悲剧结局，蕴含作者对红楼众艳的悲悯之情。</p>
+<h3 id="曲"><a class="header" href="#曲">曲</a></h3>
+<p>太虚幻境中听的歌曲是《红楼梦曲》。</p>
+<p>这组曲子共十四支，其中首支、末支分别为引子、收尾，中间十二支分咏小说中“金陵十二钗”正册人物，预示着她们的命运。具体曲目包括《红楼梦引子》《终身误》《枉凝眉》《恨无常》《分骨肉》《乐中悲》《世难容》《喜冤家》《虚花悟》《聪明累》《留余庆》《晚韶华》《好事终》《飞鸟各投林》。</p>
+<h2 id="凫靥裘是什么毛"><a class="header" href="#凫靥裘是什么毛">凫靥裘是什么毛？</a></h2>
+<p>《红楼梦》中凫靥裘是用野鸭子面部的绒毛制成的皮草服饰。</p>
+<p>“凫”指野鸭，“靥”指面部，其毛细密柔软，呈黛青色，极为珍贵。薛宝琴曾穿过这件斗篷，彰显出贾府的奢华及对她的看重。</p>
+<h2 id="盛筵必散是谁说的"><a class="header" href="#盛筵必散是谁说的">盛筵必散是谁说的？</a></h2>
+<p>“盛筵必散”是《红楼梦》中秦可卿说的。</p>
+<p>秦可卿死前托梦给王熙凤，说道“万不可忘了那‘盛筵必散’的俗语。此时若不早为后虑，临期只恐后悔无益了”。她用这句话告诫王熙凤，贾府虽然此时繁华热闹，但不会永远如此，总有衰败的时候，要早做打算。</p>
+<h2 id="千里搭长棚是谁说的"><a class="header" href="#千里搭长棚是谁说的">千里搭长棚是谁说的？</a></h2>
+<p>“千里搭长棚，没有个不散的筵席”是《红楼梦》中**小红（林红玉）**说的话。</p>
+<p>出自第二十六回，她以俗语感叹聚散无常，暗示贾府及众人命运的兴衰起落。</p>
+<h2 id="红楼梦中最具叛逆性格的三个人是谁"><a class="header" href="#红楼梦中最具叛逆性格的三个人是谁">红楼梦中最具叛逆性格的三个人是谁？</a></h2>
+<p>《红楼梦》中最具叛逆性格的三个人是贾宝玉、林黛玉、晴雯，具体分析如下：</p>
+<h3 id="贾宝玉"><a class="header" href="#贾宝玉">贾宝玉</a></h3>
+<ul>
+<li>蔑视封建礼教和科举制度：他鄙视功名利禄，不愿走“学而优则仕”的仕途，痛恨“八股”，辱骂读书做官的人是“国贼禄蠹”，懒于与他们接触拜会。</li>
+<li>挑战传统性别观念：他认为“山川日月之精秀，只钟于女儿，须眉男子不过是些渣滓浊沫而已”，并钟爱和怜悯女孩子，为自己生有一个男子之身而感到遗憾。</li>
+<li>追求自由的爱情婚姻：他与林黛玉的爱情基于共同的叛逆精神，追求婚姻自主，背离了封建社会的人生之道。 </li>
+</ul>
+<h3 id="林黛玉"><a class="header" href="#林黛玉">林黛玉</a></h3>
+<ul>
+<li>追求爱情自由：她与贾宝玉相爱，将人生希望寄托在宝玉身上，渴望婚姻自主，虽受封建礼教约束无法表白，但内心坚定，与封建礼教对女子的束缚背道而驰。</li>
+<li>蔑视功名权贵：她对追求功名利禄的行为不屑一顾，与宝玉一样，不被封建世俗的价值观所左右，保持着自身的清高和独立。</li>
+<li>坚持自我个性：她性格孤傲，敏感细心，从不掩饰自己的真实情感和想法，不迎合他人，坚守自己的内心世界，展现出对封建礼教所要求的女子温顺、内敛等品质的叛逆。 </li>
+</ul>
+<h3 id="晴雯"><a class="header" href="#晴雯">晴雯</a></h3>
+<ul>
+<li>反抗封建等级制度：她不认为自己低人一等，渴望与主子平等相待，会藐视王夫人为笼络小丫头所施的小恩小惠，嘲讽向主子讨好邀宠的袭人。</li>
+<li>性格直率敢作敢为：心直口快，不拘泥于封建礼法，在王善保家搜查大观园时，她挽着头发走进来，将箱子掀开，把所有之物全都倒出来，还当众把狗仗人势的王善保家痛骂了一顿。</li>
+<li>追求独立自主：有自己的主见，不随波逐流，即使身处丫鬟的地位，也不愿被封建礼教和规矩束缚，始终保持着自己的个性和尊严。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../fiction/fiction-33.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../qa/bao-yu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../fiction/fiction-33.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../qa/bao-yu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
