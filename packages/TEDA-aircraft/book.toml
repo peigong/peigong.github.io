@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "天津泰达航母主题公园 - VET.周培公(https://pg.js.cn)"
+
+[build]
+build-dir = "../../public/guide/TEDA-aircraft"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/TEDA-aircraft/"
+cname = "pg.js.cn"

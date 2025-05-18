@@ -1,0 +1,12 @@
+{
+  "name": "teda-aircraft",
+  "version": "1.0.0",
+  "description": "天津泰达航母主题公园",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
