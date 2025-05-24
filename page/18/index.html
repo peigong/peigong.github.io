@@ -85,6 +85,278 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-it-studio-2014-04-16-openx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2014-04-16-openx.html" class="article-date">
+  <time class="dt-published" datetime="2014-04-15T16:00:00.000Z" itemprop="datePublished">2014-04-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-studio-2014-04-16-openx.html">学习OpenX广告管理与跟踪系统</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>OpenX Ad Server (简称OpenX )是一个采用PHP开发的广告管理与跟踪系统。</p>
+</blockquote>
+<h2 id="安装和部署"><a href="#安装和部署" class="headerlink" title="安装和部署"></a>安装和部署</h2><h3 id="配置要求"><a href="#配置要求" class="headerlink" title="配置要求"></a>配置要求</h3><ol>
+<li>支持PHP</li>
+<li>支持MySql</li>
+</ol>
+<h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>从<a target="_blank" rel="noopener" href="http://www.openxconsultant.com/blog/2013/08/openx-source-v2-8-11-released-for-download/">http://www.openxconsultant.com/blog/2013/08/openx-source-v2-8-11-released-for-download/</a>下载源代码，或者先从<a target="_blank" rel="noopener" href="http://www.openxconsultant.com/blog/category/featured/">http://www.openxconsultant.com/blog/category/featured/</a>检查最新发布。</p>
+<p><strong>提示：</strong>如果研究学习源代码，可以使用SVN检出，地址：<a target="_blank" rel="noopener" href="https://svn.openx.org/openx/tags/2.8/openx-2.8.11/">https://svn.openx.org/openx/tags/2.8/openx-2.8.11/</a></p>
+<h3 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h3><ol>
+<li>将下载的源代码命名为“openx”，上传到WEB服务器的根目录下。</li>
+<li>给var、plugins、www&#x2F;admin&#x2F;plugins、&#x2F;www&#x2F;images子目录赋予写权限。</li>
+<li>在浏览器中访问http:&#x2F;&#x2F;{yourdomain}&#x2F;openx，进入到OpenX的安装界面。</li>
+<li>根据提示信息设置数据库配置和管理员配置。</li>
+</ol>
+<p><strong>提示：</strong>选择中文简体，会出现一些乱码问题，建议采用命名和语言版本均以英文为主。时区可以选择Asia&#x2F;Shanghai。</p>
+<h2 id="基本的操作和使用"><a href="#基本的操作和使用" class="headerlink" title="基本的操作和使用"></a>基本的操作和使用</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><ol>
+<li>Advertisers：广告主</li>
+<li>Campaigns：广告活动</li>
+<li>Banners：广告</li>
+<li>Websites：网站</li>
+<li>Zones：广告位</li>
+<li>Targeting Channels：目标频道</li>
+</ol>
+<h3 id="基本操作步骤"><a href="#基本操作步骤" class="headerlink" title="基本操作步骤"></a>基本操作步骤</h3><ol>
+<li>添加广告主。例如：京东商城</li>
+<li>为广告主添加广告活动。例如：节日大促</li>
+<li>添加广告。例如：广告 980 X 90</li>
+<li>添加网站。例如：<a target="_blank" rel="noopener" href="http://www.uuu.com/">http://www.uuu.com</a> </li>
+<li>添加广告位。例如：广告位 980 X 90</li>
+<li>链接广告到广告位</li>
+<li>复制广告位代码到网站</li>
+</ol>
+<h3 id="添加广告主"><a href="#添加广告主" class="headerlink" title="添加广告主"></a>添加广告主</h3><p>登录系统后，进入Inventory &gt; Advertisers。</p>
+<p>选择添加新广告主（Add new advertiser），进入添加新广告主界面。</p>
+<p>填写广告主的基本信息（Basic information）：</p>
+<ul>
+<li>名称（Name）: 广告主名称必须唯一，广告主名称不能相同。 这里我们写“京东商城”</li>
+<li>联系人（Contact）: 联系人将被用在所有给广告主的邮件里。</li>
+<li>邮箱（Email）: 必填项，广告主的邮箱</li>
+</ul>
+<p>在广告主报告（Advertiser report）区域，选择什么条件以及什么时间下需要给广告主发邮件：</p>
+<ul>
+<li>当广告计划自动生效或者失效的时候发邮件（Email when a campaign is automatically activated&#x2F;deactivated）：OpenX会在广告计划生效或者失效的时候给广告主发邮件提醒。如果你不想发送此提醒，可以不选此框。</li>
+<li>广告计划投放报告邮件（Email campaign delivery reports）： 当您想日常性的给广告主发送报告的时候选择此选择框。默认的设置是每周发送报告给广告主。如果您想修改发送报告的周期（Number of days between campaign delivery reports），只要简单的修改下周期即可。如果您给广告主提供的访问系统的帐号，则不建议发送邮件报告。</li>
+</ul>
+<p>其他（Miscellaneous）区域可以让您设置广告投放的限制选项：</p>
+<ul>
+<li>在一个页面只显示此广告主的一个广告（Display only one banner from this advertiser on a web page）： 限制广告在一个页面上只显示一次。</li>
+<li>备注（Comments）： 广告主的备注信息。</li>
+</ul>
+<h3 id="添加广告活动"><a href="#添加广告活动" class="headerlink" title="添加广告活动"></a>添加广告活动</h3><p>完成广告主(京东商城)创建后，从广告主界面点击添加新广告活动（Add new campaign），系统将会带您到添加新广告活动的界面。</p>
+<p>填写基本信息（Basic information）：</p>
+<ul>
+<li>名称（Name）：广告活动名称</li>
+<li>广告活动的类型（Campaign type）：</li>
+</ul>
+<p>下一步是选择广告活动的类型。有三种活动类型可选： </p>
+<ol>
+<li>合约型（排期）：Contract: 合约型广告计划将会在预订的时间和显示次数内投放。  </li>
+<li>合约型（买断）：Contract (Exclusive): 买断式的广告计划将会占用所有的显示资源，并且优先级高于所有其他广告计划。</li>
+<li>剩余抄底：Remnant: 标准的广告计划类型，可以基于特殊的投放限制及时期来进行投放。</li>
+</ol>
+<p>选择好广告计划类型后，可以设置一些其他的内容：</p>
+<ul>
+<li>日期：Date: 输入广告计划的开始和结束日期。</li>
+<li>计费模式：Pricing: 允许您设置广告计划的计费模式（CPM、CPC、APC），费率和展示次数。  </li>
+<li>广告计划优先级：Priority in relation to other campaigns: 默认的优先级为5. 优先级设置级别在1到10之间（10代表优先级最高），如果需要的话，可以设置每天投放的PV&#x2F;Click或者转换的限额Set   </li>
+<li>用户投放频次：Delivery capping per visitor: 此处可以设置总共以及每用户显示的限额次数。</li>
+<li>其他：Miscellaneous: 如果希望隐藏与此广告计划关联的广告主和网站，可以进行设置。另外，也可以设置竞争机制，如果设置了竞争机制，则OpenX在显示的时候投放该计划下所有的广告。</li>
+</ul>
+<p>设置完成后，点击保存。</p>
+<h3 id="添加广告"><a href="#添加广告" class="headerlink" title="添加广告"></a>添加广告</h3><ol>
+<li>点击添加广告（Add new banner）链接。</li>
+<li>选择广告的类型（Please choose the type of the banner）。默认为上传本地广告物料文件到Web服务器（Upload a local banner to the webserver）。</li>
+<li>填写广告名字（如广告 980 X 90）</li>
+<li>上传图片</li>
+</ol>
+<h4 id="广告类型"><a href="#广告类型" class="headerlink" title="广告类型"></a>广告类型</h4><ol>
+<li><strong>使用Web服务器的本地广告</strong> 这是使用最广泛的广告类型。它用于图像广告包括JPG，GIF和PNG文件。广告上传到OpenX的广告服务器并存储在文件系统中的一个文件夹。安装系统时，默认图片文件上传到www&#x2F;images&#x2F;，并生生一个随机字符串文件名的文件。</li>
+<li><strong>使用SQL的本地广告</strong> 是把广告图保存在，在数据库中的二进制数据，而不是存储在一个文件夹。</li>
+<li><strong>通用的HTML广告</strong> 这可能是一个HTML网页的形式，多张图片，表格，JavaScript文件。</li>
+<li><strong>通用文本横幅</strong> 适用于任何拟作为纯文本显示。简单的文本链接是受欢迎的用法。此外，也可以写长段的文本作为广告。</li>
+<li><strong>外部广告（即url图片地址）</strong></li>
+</ol>
+<h3 id="添加网站"><a href="#添加网站" class="headerlink" title="添加网站"></a>添加网站</h3><p>进入Inventory &gt; Websites，在网站管理界面，在右上方选择添加新网站（Add new website），您将可以看到添加新网站界面。</p>
+<p>创建新网站：</p>
+<ul>
+<li>网站URL（Website URL）: 输入您网站的URL。</li>
+<li>网站名（Name）：输入网站名称。此名称将会显示在网站列表界面，注意网站名必须唯一。</li>
+<li>联系人（Contact）：输入网站联系人。</li>
+<li>Email: 输入网站管理员的Email地址。</li>
+<li>类目（Category）：在下拉列表里选择网站的类目。</li>
+<li>国家&#x2F;语言（Country&#x2F;Language）： 在下拉列表中选择相关的国家和语言。</li>
+</ul>
+<p>完成以上操作后点击保存，添加网站成功。</p>
+<h3 id="添加广告位"><a href="#添加广告位" class="headerlink" title="添加广告位"></a>添加广告位</h3><p>进入Inventory &gt; Zones，点击添加新广告位（Add new zone）选项，到达添加新广告位页面。</p>
+<p>添加新广告位：</p>
+<ul>
+<li>名称（Name）： 广告位名称必须唯一。如果此项为空，OpenX默认会设置一个名称，默认的是网站名称后面加上“-default”。</li>
+<li>描述（Description）：输入广告位的相关信息。如广告位 980 X 90</li>
+<li>行业分类（Category）：</li>
+<li>类型（Zone type）：选择广告位类型（本指南有专门的页面解释各种广告位类型）</li>
+<li>尺寸（Size）：必须为每个广告位选择尺寸（除了文字广告位之外），只有符合尺寸的广告创意才会在此广告位显示。下拉列表里面的尺寸都是IAB定义的标准尺寸，也可以设置自定义的尺寸。</li>
+<li>备注（Comments）：广告位备注</li>
+</ul>
+<p>一旦完成操作点击保存，完成添加广告位。</p>
+<h4 id="广告位类型"><a href="#广告位类型" class="headerlink" title="广告位类型"></a>广告位类型</h4><ol>
+<li><strong>旗帜，按钮，或矩形：</strong>这是使用最广泛的广告位类型，可以显示包括图像在内的任何有创意的类型 JAVASCRIPT，HTML，等等。</li>
+<li><strong>浮动广告</strong> 此广告位类型是用来显示浮动或弹出的横幅上，如出现网络浏览器的动态行为  消失了一段时间后，移动光标，等等。</li>
+<li><strong>文字广告</strong> 你想要您的网站上卖文本连接，你应该使用这种类型</li>
+<li><strong>电子邮件&#x2F;邮件列表版位</strong> 如果你想给你的网站用户发送电子邮件和简讯，使用此广告位，可以在电子邮件中嵌入广告横幅。</li>
+</ol>
+<h3 id="链接广告到广告位"><a href="#链接广告到广告位" class="headerlink" title="链接广告到广告位"></a>链接广告到广告位</h3><p>在广告位列表中，点击链接广告（Linked Banners），选择一个广告主和广告活动。</p>
+<p>或者在广告的详细页面的链接广告位（Linked Zones）标签中，选择一个广告位。</p>
+<h3 id="复制代码到网站"><a href="#复制代码到网站" class="headerlink" title="复制代码到网站"></a>复制代码到网站</h3><p>在广告位列表中，点击获取代码（Invocation Code）</p>
+<h2 id="Openx-账户类型"><a href="#Openx-账户类型" class="headerlink" title="Openx 账户类型"></a>Openx 账户类型</h2><p>用户有一个用户名和密码，与至少一个OpenX帐户，并可以与任意数量的账户挂钩。一个用户可以有不同的连结多种帐户的多个角色。每个角色都有其自己的设置权限，定义用户可以执行相关联的帐户上的行动。</p>
+<h3 id="角色和权限"><a href="#角色和权限" class="headerlink" title="角色和权限"></a>角色和权限</h3><p>系统安装后的初始用户即是管理员，又是经理。</p>
+<p>进入广告主，或网站的详情编辑页面，点击用户访问（User Access）标签，在操作（Actions）下拉菜单中，可以创建或关联使用该账户访问的用户。</p>
+<h4 id="管理员（Administrator）"><a href="#管理员（Administrator）" class="headerlink" title="管理员（Administrator）####"></a>管理员（Administrator）####</h4><ul>
+<li>创建经理帐户</li>
+<li>将用户添加到经理帐户</li>
+<li>可以作为一个经理</li>
+<li>创建其他管理员用户</li>
+<li>查看主页和用户日志页</li>
+<li>管理全球和维护设置</li>
+<li>直接选择</li>
+</ul>
+<h4 id="经理（Manager）"><a href="#经理（Manager）" class="headerlink" title="经理（Manager）"></a>经理（Manager）</h4><ul>
+<li>创建和管理广告商和网站</li>
+<li>添加其他的经理帐户</li>
+<li>将用户添加到广告商和网站</li>
+<li>查看主页和用户日志页</li>
+<li>管理帐户偏好</li>
+<li>渠道管理</li>
+</ul>
+<h4 id="网站（Website）"><a href="#网站（Website）" class="headerlink" title="网站（Website）"></a>网站（Website）</h4><ul>
+<li>创建区域</li>
+<li>横幅链接到区域</li>
+<li>生成调用代码</li>
+<li>链接此帐户的其他用户</li>
+</ul>
+<h4 id="广告主（Advertiser）"><a href="#广告主（Advertiser）" class="headerlink" title="广告主（Advertiser）"></a>广告主（Advertiser）</h4><ul>
+<li>查看广告活动</li>
+<li>修改广告信息</li>
+<li>激活广告活动</li>
+<li>停用广告活动</li>
+<li>链接此帐户的其他用户</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://openx.com/">OpenX官网(http://openx.com/)</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.openxconsultant.com/blog/2013/08/openx-source-v2-8-11-released-for-download/">OpenX Source v2.8.11 released for download</a></li>
+<li><a target="_blank" rel="noopener" href="http://download.openx.org/">OpenX源代码历史版本(http://download.openx.org/)</a></li>
+<li><a target="_blank" rel="noopener" href="http://wenku.baidu.com/link?url=Cy8j6kSPXU6VRkc0umh5cSOfLh6ADzps41cddZZYPFVGylsVY2YBcBqwQw53azBG7duxkm15JxqQttraU0_8y-3S3yZae7y8b1VI3CsDKAm">Openx 用户指南</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab.html" class="article-date">
+  <time class="dt-published" datetime="2014-02-21T16:00:00.000Z" itemprop="datePublished">2014-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-env-2014-02-22-TortoiseGit-andl-msysGit-for-gitlab.html">GitLab和TortoiseGit、msysGit的配合使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>下载和安装windows下Git环境：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://tortoisegit.org/download/">TortoiseGit(https://tortoisegit.org/)</a>，是 TortoiseSVN 的 Git 变种，主要用于图形化显示。</li>
+<li><a target="_blank" rel="noopener" href="https://gitforwindows.org/">msysGit(https://gitforwindows.org/)</a>，windows 下的Git 版本，是 TortoiseGit 所必须依赖的。</li>
+</ol>
+<p>下载完两个软件之后，首先安装 TortoiseGit，安装完 TortoiseGit 之后先别急着用，接着安装 msysGit，安装过程中的一些选项都可以默认！</p>
+<h2 id="SSH密钥和Git-Bash"><a href="#SSH密钥和Git-Bash" class="headerlink" title="SSH密钥和Git Bash"></a>SSH密钥和Git Bash</h2><p>本节介绍在 Git 命令行（Git Bash）中 SSH 密钥的生成，以及在 Gitlab 上的使用。</p>
+<p>使用命令行进行 Git 操作，显得高端、大气、上档次。如果你不慕虚名，只想生活简单而美好，就像使用 SVN 小乌龟（TortoiseSVN）那样工作，可以直接跳过本节。</p>
+<h3 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h3><ol>
+<li>检查当前用户目录中有没有 .ssh 目录。如果没有的话，在命令行中使用 <code>mkdir .ssh</code> 创建。</li>
+<li>安装 Git 后，进入某个目录，使用右键菜单打开 “Git Bash”。</li>
+<li>键入命令：<code>ssh-keygen -t rsa -C &quot;your email&quot;</code>。邮件地址可以不写，默认是 <code>本机用户名@本机机器名</code> 。最好是填写一些标识自己的记号。</li>
+<li>提醒你输入 key 的名称，输入 id_rsa。<strong>注意：</strong> id_rsa 名字是固定的，因为 GitLab 只认识这个。</li>
+<li>提醒你输入 key 的密码，空白即可。</li>
+<li>在当前目录下产生两个密钥文件：id_rsa 和 id_rsa.pub</li>
+<li>把生成的密钥文件复制到当前用户的 .ssh 目录下。</li>
+</ol>
+<h3 id="在-Gitlab-上添加公钥"><a href="#在-Gitlab-上添加公钥" class="headerlink" title="在 Gitlab 上添加公钥"></a>在 Gitlab 上添加公钥</h3><p>用记事本打开、复制 id_rsa.pub 文件的内容，在 Gitlab 网站 My Porfile 页面右下角，点击 Add Public Key ，粘贴刚才复制的内容到 Key 的大文本框，提交即可。</p>
+<p><strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。</p>
+<h3 id="在命令行中进行Git操作"><a href="#在命令行中进行Git操作" class="headerlink" title="在命令行中进行Git操作"></a>在命令行中进行Git操作</h3><p>从程序目录打开 “Git Bash”（或使用右键菜单），在命令行中<code>git clone</code>一个项目。</p>
+<p>提示是否把项目Git库的域名设置为可信任的已知域名，直接回答<code>yes</code>就可以了。</p>
+<p>其他命令，一样的用法。不清楚的话，可以查阅《<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a>》。</p>
+<h2 id="TortoiseGit中的密钥"><a href="#TortoiseGit中的密钥" class="headerlink" title="TortoiseGit中的密钥"></a>TortoiseGit中的密钥</h2><p>本节介绍在Git小乌龟（TortoiseGit）中生成密钥，以及在Gitlab上的使用。</p>
+<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><ol>
+<li>在开始菜单-&gt;TortoiseGit-&gt;Puttygen。这是一个用于TortoiseGit的Putty密钥生成器。</li>
+<li>点击 generate 按钮。让鼠标在 generate 按钮以上、进度条以下的空白区域随机晃动，直到密钥生成完毕。</li>
+<li>复制粘贴空白区域生成的SSH密钥文本（ssh-rsa。。。），在Gitlab网站My Porfile页面右下角，点击 Add Public Key ，粘贴刚才复制的内容到Key的大文本框，提交即可。<strong>注意：</strong>在复制内容的时候，文本的两端都不要有空格和换行。Title文本框随便写一些内容就可以，主要是区别不同的Key，没有特别的用途。</li>
+<li>点击 save private key 按钮，把文件生成在当前用户目录下的.ssh目录中（生成的文件后缀是<code>.ppk</code>）。</li>
+</ol>
+<h3 id="使用右键菜单"><a href="#使用右键菜单" class="headerlink" title="使用右键菜单"></a>使用右键菜单</h3><ol>
+<li>在打算<code>git clone</code>项目的目录中，右键选择<code>Git克隆</code>。</li>
+<li>勾选 加载putty密钥 ，并选择上面生成的后缀是<code>.ppk</code>的私钥文件。</li>
+<li>后续的操作，及除<code>git clone</code>以外的工作，就不需赘述了。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">史上最浅显易懂的Git教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/book/zh">The entire Pro Git book</a></li>
+<li><a target="_blank" rel="noopener" href="http://feiyang.me/2013/03/work-with-gitlab/">用Gitlab来工作</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.docin.com/p-596784591.html">GitLab使用介绍</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/bluesky8640/article/details/8171104">GitLab在windows用户端的使用教程</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/lenolix/archive/2013/02/06/2906466.html">gitlab搭建之旅</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.linuxidc.com/Linux/2013-05/85184.htm">在CentOS里安装GitLab</a></li>
+<li><a target="_blank" rel="noopener" href="http://herry2013git.blog.163.com/blog/static/219568011201341111240751/">gitlab多人协同工作</a></li>
+<li><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/gitlab/?setlang=zh_CN">软件包详情: gitlab 6.4.0-1</a></li>
+</ul>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-it-lessons-2014-01-23-installation-and-use-of-yeoman" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/it-lessons-2014-01-23-installation-and-use-of-yeoman.html" class="article-date">
@@ -907,99 +1179,6 @@ test( &quot;测试方法4&quot;, function() &#123;&#125;);
 <p>总是难忘许多情。</p>
 <p>两年通宵电影院，</p>
 <p>一段基情卧牛城。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-buddha-2013-09-04-fo-jing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-buddha-2013-09-04-fo-jing.html" class="article-date">
-  <time class="dt-published" datetime="2013-09-03T16:00:00.000Z" itemprop="datePublished">2013-09-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/buddha/">禅宗心得</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-buddha-2013-09-04-fo-jing.html">佛经</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="我念一段佛经"><a href="#我念一段佛经" class="headerlink" title="我念一段佛经"></a>我念一段佛经</h2><p>我念一段佛经，</p>
-<p>祈祷人心的光明。</p>
-<p>授你无相的戒律，</p>
-<p>约束你的怨嗔。</p>
-<p>摩挲你的头顶，</p>
-<p>消融你的仇恨。</p>
-<p>我念一段佛经，</p>
-<p>超度不能转世的灵魂。</p>
-<p>阴暗的井底，</p>
-<p>冰冷的井水，</p>
-<p>一样都是地狱的幽禁。</p>
-<p>彻骨的惩罚，</p>
-<p>不过是洗手的金盆。</p>
-<p>天地轮回中，</p>
-<p>从来没有不能原谅的人。</p>
-<p>我念一段佛经，</p>
-<p>张扬无边的悲悯。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-a-2010-2013-08-30-lao-seng" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2010-2013-08-30-lao-seng.html" class="article-date">
-  <time class="dt-published" datetime="2013-08-29T16:00:00.000Z" itemprop="datePublished">2013-08-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2010/">2010 ~ 2014</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2010-2013-08-30-lao-seng.html">老僧</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>空杯人易醉，</p>
-<p>夙夜酒难醒。</p>
-<p>江湖多闲事，</p>
-<p>不要问老僧。</p>
 
       
     </div>

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>从追赶到超越：中国歼击机地崛起之路 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-fighter/f1-fighter-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="从追赶到超越中国歼击机地崛起之路"><a class="header" href="#从追赶到超越中国歼击机地崛起之路">从追赶到超越：中国歼击机地崛起之路</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1831965011391312112&amp;wfr=spider&amp;for=pc">从追赶到超越：中国歼击机地崛起之路</a></p>
+</blockquote>
+<p>在现代战争的天空舞台上，歼击机无疑是最为耀眼的主角之一，它不仅是国家空中力量的核心象征，更是捍卫领空主权的坚实盾牌。回顾中国歼击机的发展历程，那是一部充满挑战与突破、汗水与荣耀的奋斗史诗。从新中国成立初期的艰难起步，到如今与世界强国并肩的卓越成就，中国歼击机走过了一条波澜壮阔的发展道路。</p>
+<h2 id="仿制起步歼-5开启喷气时代"><a class="header" href="#仿制起步歼-5开启喷气时代">仿制起步：歼-5开启喷气时代</a></h2>
+<p>新中国成立之初，百废待兴，航空工业基础极为薄弱。当时，国际形势复杂严峻，中国急需建立一支强大的空军来保卫国家领空。在这样的背景下，1951年，中苏政府签订技术援助协定，中国开始了仿制生产喷气式歼击机的艰难历程。1956年9月8日，沈阳飞机厂成功试制出中国第一种喷气式歼击机歼-5，这一历史性时刻标志着中国航空工业正式踏入喷气时代，成为当时世界上少数几个能够成批生产喷气歼击机的国家之一。</p>
+<p>歼-5以苏联米格-17Ф型为蓝本，具备火力强、速度快、机动性好等显著特点。它装备了3门机炮，可携带火箭弹和炸弹，最大平飞速度达0.9马赫，实用升限16000米 。在服役期间，歼-5凭借出色的性能，多次击落入侵敌机，捍卫了国家的领空安全，立下赫赫战功，成为中国空军早期的主力作战机型。</p>
+<h2 id="自主探索歼-6歼-7迈向超音速时代"><a class="header" href="#自主探索歼-6歼-7迈向超音速时代">自主探索：歼-6、歼-7迈向超音速时代</a></h2>
+<p>随着国际局势的变化和航空技术的发展，中国航空工业开始尝试在仿制基础上进行自主探索。1964年1月，沈阳飞机厂成功仿制出前苏联米格-19型超音速歼击机，命名为歼-6。歼-6是中国第一种国产超音速歼击机，于1959年9月23日首飞成功，它的诞生标志着新中国航空工业正式进入超音速时代。歼-6为单座双发超音速喷气战斗机，主要用于国土防空和夺取前线局部制空权，也可执行一定的对地攻击任务。它的大量装备，极大地增强了中国空军的作战能力，在国土防空作战中发挥了重要作用，成为20世纪60 - 70年代中国空军的主力机型。</p>
+<p>为了进一步提升国土防空和夺取战区制空权的能力，1967年6月，中国以苏联米格-21战斗机为基础，成功研发出单座单发轻型超音速歼7战斗机。歼-7具有体积小、重量轻、机动性好、成本低等优点，其飞行性能、火力和侦察能力都有了显著提升，能够适应多种复杂的作战环境。歼-7系列战机经过不断改进和升级，衍生出多个型号，成为中国空军和海军航空兵装备数量最多、服役时间最长、实战中战果最辉煌的国产喷气式战斗机之一，出口到多个国家，在国际市场上也展现了中国航空工业的实力。</p>
+<h2 id="艰难突破歼-8撑起国产高空高速战机一片天"><a class="header" href="#艰难突破歼-8撑起国产高空高速战机一片天">艰难突破：歼-8撑起国产高空高速战机一片天</a></h2>
+<p>20世纪60年代，面对高空高速侦察机的威胁，中国决定自主研制一款高空高速歼击机。1969年7月5日，歼-8完成首飞，这是中国航空工业自主研制的第一型高空高速歼击机。歼-8采用机头进气、双发、三角翼气动布局，最大飞行速度可达2.2马赫，实用升限20500米 ，主要用于国土防空作战，拦截高空高速敌机和侦察机。</p>
+<p>歼-8的研制过程充满艰辛，克服了技术基础薄弱、工业配套不完善等重重困难。在后续发展中，歼-8不断改进升级，如歼-8Ⅱ改进为两侧进气，换装更先进的雷达和航电系统，增强了多用途作战能力。歼-8系列战机在很长一段时间内作为中国空军的主力截击机，为保卫国家领空安全做出了重要贡献，是中国航空工业在艰难中突破自我的重要标志。</p>
+<h2 id="弯道超车歼-10实现国产三代机的跨越"><a class="header" href="#弯道超车歼-10实现国产三代机的跨越">弯道超车：歼-10实现国产三代机的跨越</a></h2>
+<p>20世纪80年代，世界航空技术迅猛发展，第三代战斗机已成为主流。为了不在未来战场上受制于人，中国于1988年开始了歼-10歼击机的完全自主研发。这是一项具有里程碑意义的重大工程，面临着技术封锁、资金紧张、人才短缺等诸多难题，但中国航空人凭借顽强的意志和不懈的努力，攻克了一系列关键技术。</p>
+<p>1998年3月23日，歼-10成功首飞，这是中国航空工业从跟踪引进到自主研制的重大跨越。歼-10是一款单发、鸭式布局的轻型多用途战斗机，具有高机动性、先进航电系统和强大的武器挂载能力。它装备了先进的脉冲多普勒雷达，可同时跟踪多个目标并攻击其中最具威胁的目标。武器系统丰富多样，包括空空导弹、空地导弹、精确制导炸弹等，具备制空、对地、对海攻击等多种作战能力。</p>
+<p>歼-10的研制成功，带动了中国航空工业一系列关键技术的突破和创新，形成了完整的自主研发体系，培养了大批航空人才。歼-10系列飞机不断改进发展，歼-10B换用相控阵雷达和一体化蚌式进气道，歼-10C进一步优化性能，增强了信息化作战能力，成为中国空军的主力作战机型之一，多次参加国际军事演习和飞行表演，展示了中国航空工业的先进水平和中国空军的强大实力。</p>
+<h3 id="印巴冲突中的猛龙歼-10c"><a class="header" href="#印巴冲突中的猛龙歼-10c">印巴冲突中的“猛龙”歼-10C</a></h3>
+<p>歼-10C作为歼-10系列的最新改进型号，是中国自主研发的新型超音速多用途战斗机，被称为“猛龙”。它采用单发、单垂尾鸭式气动布局，配备了先进的有源相控阵雷达，拥有超过1200个T/R组件 ，探测距离突破220公里，具备同时跟踪12个目标，并打击其中威胁最大的6个目标的能力。歼-10C的航电系统实现了真正的多用途自动切换，电子战能力也十分强大。</p>
+<p>在武器挂载方面，歼-10C可搭载多种先进弹药，包括射程可达150公里以上的PL-15E先进空空导弹。在2025年5月7日的印巴空战中，巴基斯坦空军的歼-10C大放异彩。当天凌晨，印度空军发动突袭，巴方歼-10C紧急升空迎敌。凭借雷达性能优势，歼-10C在超视距外率先发现印军战机并提前锁定。利用PL-15E的射程优势，在印军“阵风”战机射程外果断发动攻击，据巴军公布战果，成功击落3架“阵风”、1架苏-30MKI、1架米格-29和1架以色列产的“苍鹭”无人机，其中至少3架“阵风”战机是被歼-10C击落，极大地扭转了空战局势。</p>
+<h2 id="走向巅峰歼-20引领五代机新时代"><a class="header" href="#走向巅峰歼-20引领五代机新时代">走向巅峰：歼-20引领五代机新时代</a></h2>
+<p>进入21世纪，随着科技的飞速发展，第五代战斗机成为各国竞相研制的焦点。中国航空工业紧跟时代步伐，开启了歼-20的研制征程。2011年11月4日，歼-20实现首飞，历时18分钟，这一激动人心的时刻标志着中国隐形战斗机的研制工作掀开了新的一页。经过多年的试飞和改进，歼-20于2017年正式列装部队，中国空军自此迈入五代机时代。</p>
+<p>歼-20是一款具备高隐身性、高态势感知、高机动性等特点的隐形第五代制空战斗机，也是当今世界最先进的战斗机之一。它采用了先进的DSI两侧进气道、全动垂尾、鸭式布局等设计，配备两台国产涡扇10B发动机，具备超音速巡航能力。歼-20的航电系统高度信息化，装备了先进的有源相控阵雷达、分布式光电孔径系统等，能够实现对目标的全方位探测和跟踪，在复杂电磁环境下保持强大的作战能力。武器系统方面，歼-20内置弹舱可携带多种先进空空导弹和空地导弹，具备强大的制空和对地攻击能力，可在战争中执行“踹门”任务，摧毁敌方关键防空节点，为后续作战力量开辟安全通道。</p>
+<p>除了上述主要机型，中国还拥有其他多种型号的歼击机，如歼-11系列（包括歼-11B、歼-11BS等，是中国购买俄罗斯专利及授权的苏-27SK的国产组装改进飞机，属于三代半战机，具备远程制空作战能力）、歼-15（沈阳飞机工业集团参考俄苏-33自主研发的中国首款舰载重型多用途战斗机，可在航母上起降，执行对空、对海作战任务 ）、歼-16（沈阳飞机公司以歼-11BS为基础，参考俄罗斯苏-30战机研制的重型多用途双座歼击机，配备有源相控阵雷达，兼具空战与对地/海攻击能力 ）等，这些机型共同构成了中国空军强大而完备的歼击机体系。</p>
+<h2 id="中外对比与美俄并驾齐驱"><a class="header" href="#中外对比与美俄并驾齐驱">中外对比：与美俄并驾齐驱</a></h2>
+<p>在当今世界，美国和俄罗斯一直是航空强国，拥有先进的歼击机技术和庞大的装备数量。与美国相比，中国歼击机在技术水平和装备规模上既有差距，也有优势。美国拥有世界上最庞大的五代机机群，如F-22和F-35，其中F-22在隐身性能、发动机技术等方面具有一定优势，其采用的菱形机头与S形进气道设计，配合吸波复合材料，将雷达反射面积控制在0.01平方米以下 ，装备的F119-PW-100发动机推力达15.6吨，能以1.82马赫持续巡航。但中国歼-20也有自身亮点，通过DSI进气道与等离子体隐身技术的结合，雷达反射面积压缩至0.05平方米，换装WS-15发动机后最大飞行速度提升至2.2马赫 ，并且在信息化作战能力方面，歼-20的分布式光电孔径系统可同时追踪60个目标，具备强大的态势感知能力。在四代机方面，中国歼-10、歼-16等数量可观且性能先进，歼-16配备有源相控阵雷达，兼具空战与对地/海攻击能力，在规模上与美国的F-16、F-18等四代机机群形成有力竞争。</p>
+<p>与俄罗斯相比，中国歼击机发展后来居上。俄罗斯的苏-57是其现役唯一的五代机，虽然具备强大的机动性和载弹量，最大载弹量达10吨 ，但在隐身性能上存在短板，受制于直通式进气道设计，其正面雷达反射面积超过0.5平方米 。而中国歼-20在隐身性能上明显更优。在四代机领域，俄罗斯的苏-27、苏-30、苏-35等机型虽然性能出色，但数量相对有限，且部分机型面临升级改进的需求。中国则拥有大量先进的四代机，如歼-10系列、歼-11系列、歼-16等，形成了更为完备的作战体系。</p>
+<p>中国当前最先进的战机当属歼-20，作为五代机，它相比四代半的歼-10C有着代差优势。歼-20具备高隐身性，采用多种隐身设计与材料，使其雷达反射截面积远小于歼-10C，能够更隐蔽地接近敌方目标发动攻击；拥有超音速巡航能力，可快速抵达作战区域，掌握空战主动权；航电系统更为先进，分布式光电孔径系统等设备，赋予其全方位的态势感知能力，能在复杂战场环境下先敌发现、先敌攻击 ，这些都是歼-10C所不具备的关键优势。</p>
+<p>中国六代机的研发已经吵的沸沸扬扬，但是官方一直没有确切的消息，应该是研发的差不多了，只待择机公开亮相，这一定是领先全世界的存在。这也让美西方国家包括印度十分焦虑，他们深切的感觉到在航空领域，与中国的差距越来越大。美国已经将六代机项目加大立项投资，印度专家建议，印度直接研发七代机，实行弯道超车，可是没有人相信他们。</p>
+<p>中国歼击机的发展历程是一部自力更生、艰苦奋斗、不断创新的壮丽篇章。从最初的仿制起步，到如今在五代机领域与世界强国并驾齐驱，中国航空工业实现了从无到有、从弱到强的伟大跨越。每一款歼击机的诞生都凝聚着无数航空人的智慧和汗水，见证了中国科技实力和国防实力的飞速提升。在未来，随着科技的不断进步和创新，中国歼击机必将继续向着更高的目标迈进，为捍卫国家领空安全、维护世界和平稳定做出更大的贡献，在世界航空舞台上绽放更加耀眼的光芒。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-fighter/f1-fighter-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-rocket-force/df-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-fighter/f1-fighter-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-rocket-force/df-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

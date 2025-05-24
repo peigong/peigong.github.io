@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国退役后的战斗机都去了哪？ - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-fighter/f1-fighter-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国退役后的战斗机都去了哪"><a class="header" href="#中国退役后的战斗机都去了哪">中国退役后的战斗机都去了哪？</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1797044635206499754&amp;wfr=spider&amp;for=pc">中国退役后的战斗机都去了哪？1956年4月23日第1架歼击机试制成功</a></p>
+</blockquote>
+<p>1956年，歼5在中国诞生，是苏联的米格17喷气式战斗机。</p>
+<p>在1953年，中苏达成协议，由苏联提供全部技术和生产设备，帮助中国完成米格15的仿造工作。</p>
+<p>在1954年，中国提出想要仿造更先进的米格17，苏联研究后表示同意。</p>
+<p>米格17是苏军在1952年开始服役的先进飞机，在当年来说已经是最先进的。</p>
+<p>沈飞在1956年4月23日大体完成仿造，7月正式首飞，1957年开始服役，共制造了1900多架。在1990年，所有的歼5退出现役。</p>
+<p>至于歼6也就是米格19，制造了4500多架，也在2010年全部退役。</p>
+<p>即便比较先进的歼7，也就是米格21，在2013年已经停产。现役的2400多架歼7，也大批量的退役。在2023年，解放军现役歼7减少到200多架，预计几年内就会完全退役。</p>
+<p>仅仅是歼5、歼6、歼7的总数就有8000多架，一旦退役就是个非常大的数字。</p>
+<p>那么，退役后的战斗机到底怎么处理？</p>
+<p>大体这几个用处：</p>
+<p>第一，销毁、回收。</p>
+<p>战机的材料是比较值钱的，交给专业工厂进行拆卸还能卖不少钱。</p>
+<p>常见的老式战机都是使用优质铝材制造，都是相当不错的。</p>
+<p>驼峰航线的美军C47经常坠机，当地山民将飞机残骸的铝制部分捡走，自制成脸盆、桌椅板凳之类，往往能使用几十年都不会坏。</p>
+<p>除了单纯的机体材料以外，一架飞机大约90%的零部件或材料能被回收再利用。除了发动机、武器系统、弹射装置等部件会被拆解保存，航空仪表盘、紧急滑梯、机轮、刹车系统、起落架和航电设备，经过检验符合技术要求后，往往可以重新进入二手机航材市场。</p>
+<p>第二，博物馆。</p>
+<p>大家有兴趣去北京小汤山航空博物馆，里面有海量的飞机，总数高达近300架。</p>
+<p>现在中国各大城市，尤其是省会城市基本都有军事博物馆，或者军事教育基地，大多有战斗机作为展品。</p>
+<p>博物馆的展品只有极少的一部分，还以有特殊荣誉的战机或者独特的战机为主。</p>
+<p>如几千架退役的歼6，能够展出的往往是击落敌机较多的。</p>
+<p>歼10的01号机，就在中国航空博物馆展出。</p>
+<p>在我们南京，国防园内就有多架战机作为展品。</p>
+<p>另外，还有一个不对外开放的南航航空航天博物馆，里面也有不少战机。</p>
+<p>第三，出售。</p>
+<p>老旧战机性能尚且不错的，往往可以出售到第三世界国家。</p>
+<p>一些非洲国家买新飞机出不起钱，就购买一些中国快要退役的老旧战机，也包括运输机。</p>
+<p>这些飞机虽然服役时间长了，性能还是不错的，关键还可以以低价格出售，属于皆大欢喜的生意。</p>
+<p>解放军曾经出售过二手的歼7，主要卖给对战斗机要求不高的非洲国家。</p>
+<p>对于非洲国家来说，这些米格21的性能足够用于实战，性价比最高。</p>
+<p>第四，封存。</p>
+<p>同所有国家一样，中国封存了一些战机。</p>
+<p>这里就要提一提，解放军空军编余飞机储存中心，也就是赫赫有名的鲁山军用机场。</p>
+<p>这是亚洲第一，世界第二规模的编余飞机储存中心。</p>
+<p>鲁山军用机场位于小小的河南鲁山县城，本来是一个大型军用机场。</p>
+<p>鲁山军用机场建立于60年代，之所以被解放军重视，因为它距离国防部秘密地下指挥基地只有80公里。这个地下指挥基地的规模很大，有大量地下指挥掩体和作战掩体，花费巨资修建而成。由于规模太大，地下工程和配套的鲁山军用机场直到1973年才完工。</p>
+<p>鲁山军用机场的地位特殊，是一个非常重要的战备机场，面积高达2700亩，可以停放大量战机。</p>
+<p>不过，世界大战没有爆发，而80年代解放军又开始大裁军，将过时的战机批量退役，数量逐步超过千架。</p>
+<p>考虑其中大部分战机的情况较好，仍然具有战斗力，单纯的送到工厂回炉太可惜了。那么，要怎么处理这些战机呢？</p>
+<p>80年代是中美蜜月期，解放军派出一个考察团，专门考察了美国亚利桑那州图森的戴维斯·蒙森空军基地。</p>
+<p>这个基地在美国中部沙漠地区，气候非常干燥，一年也不会下一次雨，非常适合存放战机。</p>
+<p>在这个巨大的基地，存放着从二战以来高达5000多架的各种型号美制战机。其中相当一部分战机状况较好，经过维护和检测后，可以用于实战。</p>
+<p>中国考察团认为这种模式很好，回国后决定也建立一个类似的基地。</p>
+<p>经过反复研究，解放军最终选择了鲁山军用机场，由空军副司令员林虎负责。</p>
+<p>鲁山军用机场在1990年，正式成为空军编余飞机储存中心。</p>
+<p>之所以选择鲁山，一来这里有现成的大型机场和众多空军掩体，二来鲁山县四季比较干燥，全年平均气温15度左右，适合战机的存放。</p>
+<p>在1990年，鲁山军用机场的规模还很小，仅有一百架规模，更多用于战机的转场和维护。</p>
+<p>到了1991年情况就不同，短短1个月内鲁山军用机场就接受了全国各地数百架战机，包括一部分比较先进的歼7。</p>
+<p>经过几十年的建设，鲁山军用机场成为一个融飞行保障、航空修理、飞机储存为一体的多功能航空基地。</p>
+<p>它不是战机坟墓，而主要停放有一定剩余飞行寿命，或者还有一定实战价值的战机，主要作为战备战机。</p>
+<p>除了停机山洞外，平时机场上就有数百架退役的歼5和歼6战斗机。</p>
+<p>虽然这些战机大多不可能继续作战，仍然保持着相对完好的状态，而不是单纯当作金属垃圾。</p>
+<p>其中一些战机，仍然具有作战的能力。</p>
+<p>鲁山军用机场，机务分队平均每人负责四五架飞机，几乎天天在机场搞维护。得益于存储中心工作人员的悉心呵护，该储存中心先后调出400多架各型飞机，全部达到一次性起动成功、一次性试飞成功、一次性转场成功。</p>
+<p>这些战机会陆续彻底报废，目前还有战略储备的意义。</p>
+<p>如果世界大战突然爆发，战机的数量也很重要，即便是一些落后的战机也可以对地攻击。</p>
+<p>目前鲁山军用机场有大概2000多架战机，分为20多种型号，包括比较先进的歼8和米17。</p>
+<p>第五，靶机、无人机。</p>
+<p>只要在战机上安装简易自动驾驶系统，就可以用于军事演习和测试重要武器。在最初将退役的歼5战斗机改造为靶五乙取得良好效果后，解放军又研制歼6无人靶机。1995年歼6无人靶机首飞成功，让成千架退役歼6变废为宝，成了超音速无人机，填补了国内空白，还积累了大量经验，为中国研制新一代大型尖端高速无人机打下了基础。</p>
+<p>2015年报道：央视曝光中国金头盔飞行员驾驶战机实弹演习的画面。歼11战机对目标发射中距导弹，导弹将歼6无人靶机凌空打爆，形成巨大的火球。</p>
+<p>自然，这些战斗机也可以作为无人机使用。</p>
+<p>乌俄战争中，各种无人机大放光彩，前线几乎成为无人机战争。</p>
+<p>一切地面目标，都是双方的无人机威胁下，连单个步兵也难以逃过猎杀。</p>
+<p>目前我们明确知道，歼5已经大量改装为无人机。</p>
+<p>在2002年，外媒发现了不少歼5改装的无人机。这些歼5可以携带650公斤炸药，安装自动飞行控制仪器，可以作为自杀式巡航导弹使用。</p>
+<p>至于歼6，也进行了类似的改造。2016年外媒报道，解放军空军在福建和广东的两个机场部署了大量的歼6无人机，用于对雷达站进行攻击，为此还修建了连体式机库。</p>
+<p>歼6无人机的性能就更优秀，可以携带2到6枚250公斤炸弹，射程高达600公里，作为巡航导弹使用。</p>
+<p>歼6无人机有很多作用，比如作为诱饵机、侦察机、布雷机等等。</p>
+<p>不过，歼5和歼6无人机总体是比较落后的。这是因为，虽然改造为无人机，战斗机还是要按照以往的标准进行维护、检测、加油、装弹等等。这就等于在维护一架战斗机，相比现代化无人机，这个性价比不高。</p>
+<p>而解放军今天的无人机，性能其实远远高于歼5、歼6无人机，性价比也高得多。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-fighter/f1-fighter-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-fighter/f1-fighter-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-fighter/f1-fighter-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-fighter/f1-fighter-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

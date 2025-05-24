@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国造歼-5歼击机 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-fighter/J5.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="歼-5"><a class="header" href="#歼-5">歼-5</a></h1>
+<p>歼-5（英文：Shenyang J-5/F-5，北约代号：Fresco，译文：壁画）战斗机，是中国沈阳国营112厂（现称：中航工业集团沈阳飞机工业公司）在20世纪50年代仿制的单座单发第一代战斗机，是中国制造并装备空军的第一种高亚音速喷气战斗机。</p>
+<p>该机参照苏联米格-17Φ（米格-17F）型战斗机研制，采用机头进气的后掠式中单翼气动布局。飞机全金属结构，体积小，重量轻、低空机动性能好，装配中国仿制“涡喷-5”型发动机。</p>
+<p>歼-5研制从1954年10月开始，1956年7月13日全部采用中国自制零件的第一架歼-5完成总装。1956年7月19日，歼-5原型机由试飞员吴克明驾驶首次试飞成功。歼-5自1956年9月正式投入批量生产，到1959年5月停产，共生产767架。在歼-5的基础上，成都飞机厂研制歼-5甲和歼教-5飞机，分别于1964年11月和1966年试飞成功。歼-5的研制装备，标志着中国成为当时世界上能够成批生产喷气战斗机的国家之一。</p>
+<h2 id="发展沿革"><a class="header" href="#发展沿革">发展沿革</a></h2>
+<h3 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h3>
+<p>中华人民共和国成立后，在朝鲜战争空战中面对美国空军的现实威胁，中国开始了仿制生产喷气式战斗机的工作。</p>
+<p>1951年4月18日重工业部设立航空工业局，统一负责飞机的维修工作。1951年7月，根据中苏双方签订的苏联援助中国建设航空工业的协议，苏联航空工业专家组来到中国。1951年8月9日，航空工业局向中央报告了《航空工业建设计划的初步意见》，中苏政府于1951年10月正式签订了《苏维埃社会主义共和国联盟给予中华人民共和国在组织修理飞机、发动机及组织飞机厂方面以技术援助的协定》。</p>
+<p>1953年10月24日，航空工业管理局拟定了沈阳国营112厂（1957年6月15日更名为国营松陵机械厂）扩建为米格-15喷气式飞机制造厂的总体设计任务书，其中明确了要在1957年之前，建成年产1000架喷气式飞机的制造厂，并完成第一架喷气式歼击机的试制任务。</p>
+<p>由于苏联政府认为米格-15喷气式歼击机已属于落后型号，即便是试制成功也将落后于时代，难以满足中国防空作战的需要，所以在1954年10月，建议中国停止试制米格-15歼击机，改为试制米格-17Φ歼击机。1953年11月25日，苏联政府同意向中国移交米格-17Φ歼击机的制造许可证。与此同时，二机部四局正式向112厂下达了试制米格-17Φ歼击机的命令，并要求于1956年10月1日前试制出第一架喷气式飞机。</p>
+<h3 id="赴苏考察"><a class="header" href="#赴苏考察">赴苏考察</a></h3>
+<p>沈阳国营112厂选派了由熊焰、王新、叶正大、庄树山、孟勤功、章华、易志斌等7人组成考察组，前往苏联共青城126厂对米格-17的生产进行考察学习。由于苏联所有型号的米格-17飞机都已停产，生产线上生产的是米格-19飞机，并开始向超两倍音速的米格-21飞机过渡进行前期生产准备。经与苏方协商，考察组改为通过米格-19飞机的生产线，了解和掌握喷气式飞机研制的全过程。</p>
+<p>根据引进试制计划，整个试制过程分为四个阶段：即第一阶段是用苏联提供的部件装配飞机；第二阶段是用苏联提供的组合件装配飞机；第三阶段是用苏联提供的零件装配成组合件，再装配成部件，最后再装配成飞机；第四阶段是用自制零件装配成组合件，再装配成部件，直至总装成国产飞机。为了缩短试制周期，根据苏联专家的建议，工厂采用了四个阶段平行交叉作业的快速试制方法。实践表明，四个阶段平行交叉作业法的确很成功。仅用不到一年的时间，就完成了需要几年的试制周期。</p>
+<p>1954年10月，沈阳飞机制造公司接受了飞机试制任务，工厂命名为“东风101”。1955年4月，前苏联提供的米格-17Φ飞机成套技术资料和图纸到齐，工厂立即组织翻译和绘图，同年9月开始制造飞机。至1956年2月，整个飞机的14719种253550个零件全部制造完毕。</p>
+<p>1956年7月19日，中国东北某机场，一架银白色的喷气式歼击机腾空而起。在飞机机身前部，印着鲜红的大字：中0101。这个代号的意思是，新中国生产的喷气式歼击机的第一批第一架。</p>
+<h3 id="首飞告捷"><a class="header" href="#首飞告捷">首飞告捷</a></h3>
+<p>1954年中国第一批飞机及其发动机试制成功，1956年9月8日，沈阳飞机厂试制成功中国第一种喷气式歼击机歼-5，即米格-17Ф型。为了确保中国第一架喷气式飞机首次试飞成功，工厂提前在1955年底就通过组织程序，请求空军选派一名优秀的喷气式战斗机飞行员担此重任。空军便把选派试飞员的任务交给了空军航空兵某师李永泰副师长。最后确定由参加过抗美援朝战争的吴克明担任试飞，吴克明的成功完成了首次试飞亮相。</p>
+<p>1955年12月5日早上，吴克明正式接到要向中央领导同志作飞行表演的通知，表演结束后，试飞员吴克明与观看表演的刘少奇和邓小平等领导同志合影。这次试飞表演任务完成后，吴克明被调到112厂，进行第一架国产喷气式飞机首飞的准备工作。根据总装进度推算，国产第一架喷气式飞机将提前在7月中旬下线。1956年7月19日，吴克明驾驶“中0101”飞机进行跃升、俯冲、盘旋、通场等预定的试飞科目，吴克明驾驶“中0101”飞机稳稳地停在跑道上后，中国第一架喷气式战斗机首飞成功。</p>
+<h3 id="验收投产"><a class="header" href="#验收投产">验收投产</a></h3>
+<p>首飞成功后，吴克明进行了高强度综合性科目的试飞试验。他在15天的时间内，先后进行了19次综合性能试飞试验，并对试飞中发现的问题和故障进行了调整和排除。最后的试飞结果表明：“中0101”号飞机在最大速度、最大高度时，特种设备、发动机等各项性能、数据已全部达到试飞大纲的标准和要求。</p>
+<p>1956年9月8日，国家验收委员会在112厂举行了验收签字仪式，工厂曾称之为“东风” 101 歼击机，代号 44 号机；空军并把该型飞机命名为“56式”飞机（后在全国飞机统一编号时改称为歼-5飞机），同时批准成批生产。国家验收委员会主任王秉璋在签字仪式上宣布了验收结论："国营112厂已经试制成功56式飞机，并可以成批生产，交付空军及海军航空兵部队使用。"1956年9月9日，《人民日报》在头版，以《中国试制成功新型的喷气式战斗机》为题报道了这一消息。</p>
+<p>1956年9月10日，国营112厂（现中航工业沈飞）隆重召开国产第一架喷气式歼击机——歼5飞机试制成功祝捷大会，军委副主席聂荣臻和司法部部长史良、第二机械工业部部长赵尔陆到会祝贺。聂荣臻为歼-5飞机剪彩，代表国务院总理周恩来发给112厂20万元奖金，并向苏联专家颁发了感谢状。当天，中共中央、国务院向全体职工发来了贺电，勉励工厂“再接再厉，为进一步提高航空工业的技术水平，确保航空产品质量和取得成批生产的经验而努力”。</p>
+<p>1956年9月19日，首批生产的4架歼-5飞机交付部队使用。</p>
+<p>1956年10月1日，新生产的第一批4架歼5型歼击机，参加了国庆阅兵，正在天安门城楼上的检阅的毛泽东主席，指着飞机对外国朋友说："我们自己的飞机飞过去了。"后来，他把这种感受写进了《论十大关系》，其中写道“自从盘古开天地以来，我们不晓得造飞机、造汽车，而今开始都能造了。”</p>
+<h3 id="停产回顾"><a class="header" href="#停产回顾">停产回顾</a></h3>
+<p>1959年5月，国营112厂因转产新机型，歼-5飞机停产。</p>
+<p>歼-5飞机于1955年初投入试制，1956年7月13日完成总装，7月19日首飞成功，9月投入批生产。随即，歼 -5 飞机正式列编，装备空军、海军航空兵。歼-5总共生产1994 架。其中， 歼-5飞机767 架，歼-5甲124架，歼教-5教练机1087架，歼侦-5侦察校射飞机16架。</p>
+<h2 id="技术特点"><a class="header" href="#技术特点">技术特点</a></h2>
+<h3 id="气动布局"><a class="header" href="#气动布局">气动布局</a></h3>
+<p>歼-5采用单座、单发、机头进气、后掠式中单翼布局，机翼后掠角45°，为双梁结构。机翼内侧有角度可控的后退式襟翼，副翼偏转角范围为±18°。尾翼垂直尾翼分成上下两段，下段固定在后机身的承力斜框上，上段可拆卸。垂直尾翼后缘是方向舵，转动角度为25°，水平尾翼后掠角为45°，安装在垂直尾翼下段顶部，其后缘的升降舵，向上可转动32°，向下为16°。机身全金属半硬壳式构造，外形为圆形截面的流线体。圆形机头进气道。机身后部装有可操纵的减速板。</p>
+<p>起落架舱在机翼根部，主起落架收在机翼的两个舱内。起落架前三点式起落架，均为单轮。前起落架收入前机身下部的轮舱内，主起落架收入机翼内。主起落架装有缓冲器，前起落架装有减震器和减摆器。主轮轮胎压力为8.34×105帕。座舱密封式单人座舱，应急时舱盖可抛掉。座椅是可弹射的，可以保证飞行员在紧急时迅速安全地脱离飞机。系统操纵系统为硬式操纵。副翼调整片和升降舵调整片为电操纵。液压系统用于收放起落架、襟翼、减速板、可调喷口和操纵副翼。冷气系统用于刹车、密封座舱、应急收放起落架和应急刹车等。</p>
+<h3 id="动力系统"><a class="header" href="#动力系统">动力系统</a></h3>
+<p>歼-5动力装置装是一台涡喷-5型（WP-5）离心式喷气发动机，带加力。最大推力25.50千牛（2600千克），额定推力2400千克，巡航推力2160千克，加力推力33.15千牛（3380千克），不同状态耗油率介乎2吨/小时到1.05吨/小时之间。机内燃油1170千克，外挂两个400升副油箱。该发动机是苏联克里莫夫设计局的VK-1F发动机的仿制品，VK-1F是米格-17的发动机。1951年航空工业局成立后，开始组织发动机生产，学习苏联新的喷气发动机生产工艺资料。在苏联的援助下，引进了VK-1F的专利制造权。1956年6月包括中国知名发动机设计师吴大观在内的队伍，在沈阳航空发动机厂（现“沈阳黎明机械公司”）仿制成功涡喷-5。1964年生产任务转由西安红旗机械厂负责，1966年转产定型投入批量生产。</p>
+<p>歼-5的机载设备有超短波指挥电台、无线电罗盘、无线电高度表、信标接收机、敌友识别器、护尾器、测距器等。</p>
+<h3 id="武器系统"><a class="header" href="#武器系统">武器系统</a></h3>
+<p>歼-5的最主要的空战武器是三门固定机炮。这一机炮火力配置偏向于拦截敌方大型飞机如轰炸机，符合20世纪60年代美苏空中力量对比的情况。武器机头左侧下方装两门23毫米机炮，机头右侧下方装一门37毫米机炮。备弹量为200发。机上装有光学半自动瞄准具，有两具照相枪。左、右翼下可各挂一颗100～250千克的炸弹。机翼为后掠式中单翼，副翼的偏转角范围为±18度。机头左侧下方装两门23-1型23毫米机炮，机头右侧下方装一门31型37毫米机炮。装弹量为200发。23-1机炮初速680米/秒，射速800发/分，弹种包括航23-1杀燃、航23-1杀燃曳光、航23-1穿燃、航23-1训练自炸弹。37-1型初速690米/秒，射速400发/分，1954年开始研制，开始时因考虑到该炮性能落后、苏联已有后继型号，故仅计划少量生产以避免浪费，后来因为歼-5需求量增加，最终生产了236门后于1959年停产。机翼下可挂两枚100-250千克的炸弹。</p>
+<p>在实际作战中，这三门火炮与美军战斗机的火力配置相比，在空战中存在以下缺陷：一、美军战斗机，例如F-86拥有更为先进的火控系统，例如高精度的光学瞄准具和相关的火力计算设备，很大程度上弥补了枪弹威力上的缺陷；二、歼-5火炮威力虽大，备弹量却比美军战斗机要低得多，不利于进行争夺空优的作战；三、三门火炮的弹道性能差别很大，导致炮弹散布过大，射速也过低，这使得与敌方飞行速度快的战斗机交战时效能大大低于攻击大型飞机时的效能。</p>
+<h2 id="衍生型号"><a class="header" href="#衍生型号">衍生型号</a></h2>
+<p>歼-5飞机后来有两种改进型：第一种是歼-5甲，第二种是歼教-5。</p>
+<h3 id="歼-5甲"><a class="header" href="#歼-5甲">歼-5甲</a></h3>
+<p>歼-5甲（J-5A），是中国成都飞机厂在歼-5基础上改进研制的全天候型战斗机，工厂命名为“东风104”。该机于1961年8月开始设计的，经过15个月的设计开发，1962年10月，发出了全套歼5甲设计图纸和资料，展开了全面试制工作。1963年3月开始制造零件，1964年6月完成总装，1964年11月11日歼-5甲首飞成功，试飞员为吴有昌。该型机1964年11月30日定型。1968年5月停产，共生产了124架。</p>
+<p>20世纪60年代初，台湾海峡形势紧张，美蒋飞机P2V经常夜间低空入侵沿海各省进行侦察骚扰，中国虽有一些进口的、配备搜索瞄准雷达的米格-17PF夜间截击机，但已不够满足紧迫的需求。而且中苏关系破裂后，已不可能再进口该机，因此，急需在歼-5基础上发展一个夜战型号。这一研制任务交给了成都飞机厂并任命1960年春调入成飞厂的屠基达为歼-5甲飞机的主任设计师。</p>
+<p>歼-5甲没有设计图纸和生产资料，只有两架实物飞机和全套歼5图纸。工装飞机外型和结构是按飞机实物严格测绘的，但强度计算、外载荷计算、静力试验任务书和技术条件等则是按自行设计方法制定的。结构全面测绘完毕后，经分析对比，发现有36项部件，包括机翼、后机身与歼-5大同小异，没有原则性差别，经报告上级批准后，改用歼-5图纸。在这种情况下，自主设计的图纸仍占全机的60%，一万项零件中，与歼-5不同的占50%。时任第三机械工业部部长孙志远说：“歼-5甲是成都飞机厂的发家机。”</p>
+<h3 id="歼教-5"><a class="header" href="#歼教-5">歼教-5</a></h3>
+<p>歼教-5（JJ-5，FT-5），歼教-5是在歼-5甲的基础上改型设计的全天候双座喷气教练机，由中航工业成都飞机工业公司负责。而在苏联，米格-17/19没有教练型，飞行员要在米格-15的教练型上训练。</p>
+<p>歼教-5于1964年设计，1966年5月8日试飞，同年12月定型并装备部队，到1968年为止共生产了1061架。</p>
+<p>该机研制工作始于1964年初，1965年初歼教-5的研制任务正式下达，详细设计开始了。歼-5甲的总设计师屠基达再次担当重任，不仅主持设计同时兼任飞机试制领导小组副组长。当时提出的设计指导思想是，在满足教练任务的前提下，尽可能的省，降低成本，提高质量。在设计现场，屠基达强调最多的是：设计员笔下有黄金，一点一线都联系着飞机的制造成本，设计资料不能留下祸根。有问题，设计时改好了，只需花1元钱；试制时改好就可能花百元、千元；批生产时再改，可能就得花万元、几十万元，不能不算这笔账呀，因为国家、工厂眼下还很穷。什么样的思维，造就什么样的创造精神和工作态度。设计图纸发出后，屠基达带领设计人员深入车间，和工人一起动手准备试验，一起做实验，一起解决试制中的问题，努力推动飞机由图纸转化为实物。试制工作出现了又快又省的局面，整个飞机的研制费只花了100多万元。原型机于1966年4月出厂并进行静力载荷实验。</p>
+<p>歼教-5除装备空军、海军之外，还援助或出口到第三世界国家。</p>
+<h3 id="靶-5"><a class="header" href="#靶-5">靶-5</a></h3>
+<p>靶-5（Ba-5）靶机，是以歼-5为基础研制的无人机。该靶机将驾驶员座舱内原来的飞行员座椅移除后的空间，用于安装自动化飞行控制系统。几百架退役歼-5已经被改装用于空对空和空对地导弹测试。</p>
+<p>另外，中国空军还探索使用靶-5无人机用于对地攻击的可能性。这样靶-5就成了重型巡航导弹，一次航距平均以六百公里计算，所携六百五十千克炸药加上一千公里左右的余程航油有巨大破坏力，相当于中程巡航导弹。</p>
+<p>靶机的种类繁多，按其性能有从低速到超声速，从低空到高空靶机。按动力装置有活塞式、涡轮喷气式、冲压喷气式和火箭发动机等类型靶机。还有仿真缩比靶机、战斗机改装的靶机等。靶机有一次使用的，也有多次使用的。靶机上的专用设备有脱靶量指示器、模拟红外辐射和雷达截面积（RCS）的设备、电子和光学干扰设备以及高速照相机等。</p>
+<p>20世纪60年代以来，中国研制成功了一些靶机，主要作为制导武器检验和打靶训练使用。</p>
+<p>用米格-15比斯飞机改制的靶-5乙，其外形尺寸、结构强度、雷达和红外特征等，均为真实实体目标，对兵器的制导系统、引战配合较逼真，用于检验战斗部杀伤效果等。</p>
+<p>歼-5退出装备序列之后，部分状态较好的飞机还有剩余寿命，于是空军某基地将该机改为无人靶机，模拟飞机、导弹飞行状态。用于鉴定各类航空兵器的性能，供战斗机飞行员和高射炮、地空导弹、雷达操纵人员演练和打靶。</p>
+<h3 id="歼侦-5"><a class="header" href="#歼侦-5">歼侦-5</a></h3>
+<p>歼侦-5型侦察校射飞机是在歼教-5飞机基础上改型设计的，主要用于侦察、观察和校正弹着点，以提高地面炮兵对敌打击的精度和效率。</p>
+<p>1972年7月26～28日，在芜湖市召开了歼教-5飞机改装炮兵校射机的方案讨论会。1972年9月14日，611所根据会议精神提出了改装设计方案：将炮舱油箱切割出盛60升燃油的位置，把航甲13-40相机和航甲11-10相机按前后顺序安置于前机身6～8框原炮位内，并固定在炮架梁上。将信标机天线移至后机身。</p>
+<p>1975年先后改装了16架歼教-5炮兵校射机，提升了炮兵航空照相侦察能力。1986年空军侦察校射大队撤编，所装备的飞机调歼击机部队作教练机。</p>
+<h2 id="服役动态"><a class="header" href="#服役动态">服役动态</a></h2>
+<h3 id="空战实例"><a class="header" href="#空战实例">空战实例</a></h3>
+<p>歼-5飞机装备部队后，在国土防空任务中发挥了十分重要的作用。中国空军和海军航空兵的飞行员使用歼-5飞机击落过F-84、F-86、RB-57A和F-4B等多种入侵飞机。</p>
+<p>1、1958年1月7日，海军航空兵4师2架歼-5击落国民党空军RB-57A高空侦察机，为航空史上首例同温层空战。</p>
+<p>2、1958年7月至10月，中国空军歼-5击落“台湾”空军的2架F-84G和6架F-86F，并有其他小冲突战例。1958年9月歼-5编队又与台湾24架F-86配有新型AIM-9B响尾蛇导弹的编队在浙江温州上空遭遇，该战双方互有损失但是互相史料记载不一，空军飞行员王自重因掉队被其中12架F-86围困。王自重单机击落敌两架F-86后，被F-86携带的AIM-9“响尾蛇”导弹击落。这是世界上第一次实战中空空导弹取得的战绩。但当天F-86发射的AIM-9中有一发未爆炸，坠落后被中国军民发现。这枚AIM-9被送往苏联，苏联在此基础上研制成功了K-13（AA-2）空空导弹，中国的进口仿制品即霹雳-2空空导弹。</p>
+<p>3、1960年2月16日，台湾海峡及福建、粤东地区天气晴朗。16时许，驻台南机场的国民党空军第一大队，出动4架F-86，其中两架携带着“响尾蛇”空空导弹，由特技飞行表演小组“雷虎”小组长带队，航向280度、高度10000米，大摇大摆地直奔福建、粤东沿海地区。驻福建地区的空军某部随即以8架歼-5型飞机升空迎战。大队长王子民驾驶的歼-5先后两次开炮，击伤一架F-86，中国空军歼-5飞机全部安全返航。</p>
+<p>4、1965年4月9日，四架中国空军歼-5战机于南海上空与美国海军的F-4B遭遇，发生近距离空中冲突。解放军于该次事件中可能击落一架美国海军所属的F-4B战机。然而，根据解放军驾驶员在1994年的调查中回忆指出，当时四架歼击机飞行员均未收到开火的许可，中国空军歼-5在拦截期间，F-4B匆忙发射AIM-7“麻雀”导弹，不料歼-5拐弯半径小得以逃脱，脱靶的AIM-7竟然飞向远方的一架F-4B，并将其击落。</p>
+<p>5、1966年1月9日，空24师歼-5飞机在海面超低空击落国民党空军HU-16运输机1架。</p>
+<p>6、1966年5月12日，空21师歼-5飞机击落美军RB-66电子侦察机1架，被护航的美军F-4C用导弹击落1架歼-5。</p>
+<p>7、1967年4月24日，中国空军4架歼-5战斗机在中国广西板兴地区上空，击落美国F-4B战斗机一架。此次空战，中国歼-5从发现美机到将其击落，只用了3分钟。</p>
+<p>8、1968年2月14日，海军航空兵六师18团副大队长陈武录、飞行员王顺义驾驶歼-5双机在海南岛上空击落美国海军A-1H“空中袭击者”舰载攻击机2架。</p>
+<p>9、1970年2月10日上午9时左右，海南陵水机场突然警铃大作，雷达发现有敌机入侵海南。海军航空兵某部飞行员周新成和祁德起立即驾驶歼-5战机起飞迎敌。两人起飞三四分钟后就发现了目标，然而亚音速的歼-5战斗机战斗中只能飞到1.6万米高度，而“萤火虫”无人机正在1.8万米的高空悠然飞行，根本无法靠近。但是已经熟悉无人机飞行特点的中国飞行员并未着急，他们知道，无人机很快便会降低高度。两人驾机跟踪了一段时间后，“萤火虫”果然开始按预定程序降低了高度准备加速逃离，一下就落入歼-5的火力范围内。周新成抓住机会连开数炮，击中敌机尾部，无人机拖着长长的火舌一头栽进海南岛五指山的一片森林中。</p>
+<h3 id="装备出口"><a class="header" href="#装备出口">装备出口</a></h3>
+<p>除中华人民共和国空军装备歼-5外，中国还向朝鲜、越南、阿尔巴尼亚、孟加拉国、巴基斯坦、斯里兰卡、苏丹、索马里、津巴布韦、坦桑尼亚等10国援助、出口国歼-5各型战斗机。</p>
+<p>另外美国有的民间航空爱好团体购买过歼-5。</p>
+<h2 id="总体评价"><a class="header" href="#总体评价">总体评价</a></h2>
+<p>歼-5采用机头进气，后掠式中单翼布局，机动性好、火力凶猛、生存力强。机身为金属结构，体积小，重量轻。歼-5采用了后掠翼，但后掠角由35度增大到45度，进一步提升超音速性能；机翼上增加了一片翼刀达到每侧三片以提升低速性能；使用改进版的VK-1F离心式喷气发动机，其推力更大、响应更快，歼-5使用的是VK-1F的中国产仿制型号涡喷-5。歼-5装备一门37毫米机炮加两门23毫米机炮，火力凶猛且威力强大，37毫米炮弹可以在飞机上撕开一个近1米的口子，23毫米炮弹则可以在机体上撕开一个近半米的口子。而同时期，美制喷气式战斗机多装备12.7毫米航空机枪或20毫米机炮。不过，歼-5的武器系统也有缺陷，那就是备弹相对较少。</p>
+<p>歼-5的研制使中国结束了不能制造喷气式战斗机的历史，成为当时世界上少数几个能够成批生产喷气式飞机的国家之一，中国航空工业跨进喷气技术时代。（“中国军网”评）</p>
+<p>歼-5歼击机，自装备中国部队以后，屡立战功，在福建前线和广西击落击伤入侵敌机多架，创下以劣势装备战胜优势装备的多起战例。（《名机点评》评）</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-fighter/ChineseFighter.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-fighter/J6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-fighter/ChineseFighter.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-fighter/J6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
