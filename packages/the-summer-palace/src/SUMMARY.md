@@ -7,8 +7,3 @@
 - [长廊](./long-corridor.md)
 - [排云殿](./the-hall-of-dispelling-clouds.md)
 - [佛香阁](./the-tower-of-buddhist-incense.md)
-- []()
-- []()
-- []()
-- []()
-- []()
