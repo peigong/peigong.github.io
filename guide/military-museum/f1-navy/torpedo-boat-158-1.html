@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>军博专号：击沉太平舰 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-navy/torpedo-boat-158-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="军博专号击沉太平舰"><a class="header" href="#军博专号击沉太平舰">军博专号：击沉太平舰</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1809798933187433808&amp;wfr=spider&amp;for=pc">军博专号：击沉太平舰，中国鱼雷艇终于找到了趁手的家伙</a></p>
+</blockquote>
+<p>击沉太平号，中国鱼雷艇终于找到了趁手的家伙</p>
+<p>在军博里面有两艘半舰艇，之所以这么说，是因为有一艘导弹艇是安放在前庭中的，没有放置在大厅里。在军博的馆内只有一艘414炮艇、一艘158鱼雷艇展出。在展馆里放两艘舰艇，也已经很惊人。船这种东西，都是海上看着小，走近了才明白是庞然大物，比坦克、飞机更难放进展馆，能放进屋可不是件容易的事情。即便这两条艇都是不过几十吨的迷你战船，414艇也不得不把桅杆放下来，不然就顶到天花板啦！</p>
+<p>军博中展出的158号P-4型鱼雷艇，是人民解放军鱼雷艇部队的功勋快艇。</p>
+<p>这艘鱼雷快艇在1954年11月的海战中，参加了对美制蒋舰太平号护航驱逐舰的奇袭。</p>
+<p>在这次海战中，我东海舰队31鱼雷艇大队的4艘鱼雷艇在指挥员朱洪禧率领下，于深夜伏击了刚刚完成大陈列岛北部巡逻任务，正在返航的太平号。实战记录如下——</p>
+<p>1时35分30秒，155艇在与敌距离约10链时发射2条鱼雷，并释放烟幕、打开消音器，以35节航速撤出战斗。157艇于1时34分50秒向左转向缩小敌舷角，1时36分20秒，距敌5链，发射鱼雷2条，同时也释放烟幕，高速撤离战斗。156艇位于157艇左右侧，1时36分40秒，该艇发射鱼雷2条。</p>
+<p>此时，“太平”舰开始射击，发射曳光弹。我158艇跟进157艇转向，打开消音器，采取35节高速向敌冲击；1时37分距敌舰5链，发射2条鱼雷。敌舰以火炮向我舰射击，当我艇转向后，发现鱼雷命中敌舰，海面上掀起了巨大的水柱和黑烟。</p>
+<p>——《击沉“太平”号》</p>
+<p>太平号是国民党海军排名第七的主力战舰，原为美国海军的“德克尔号”（USS Decker，编号DE-47，也翻译为“戴克尔号”），建造于费城海军船坞，1943年服役。依据二战租借法案提供给蒋介石政府的海军使用，但因此后舰员需要在美接受培训，回国时已经到了1946年，未能赶上抗日战争。该舰在海军名将林遵指挥下曾参加收复南海诸岛。它的标准排水量1140吨，如果在炮战中会是一个不那么容易击沉的目标，但是面对人民海军发射的鱼雷，它就显得相当脆弱了。</p>
+<p>中雷后的太平号挣扎良久，还是在拖航中因进水过多而沉没。</p>
+<p>这次战斗为我军在收复浙东列岛争夺制海权中关键一战，难怪立功的158艇会被送进军博了。</p>
+<p>这时忽然想起来，似乎曾在哪里见过放鱼雷艇的房子。</p>
+<p>威海卫刘公岛保存至今的北洋水师鱼雷艇维修车间。</p>
+<p>海边遗存的雷轨，当年北洋水师的鱼雷艇就是在它上面被拖进车间进行维修的。</p>
+<p>也只有这时，我们才会更清楚地感受到158艇的价值，它不仅是人民海军鱼雷艇部队第一次胜利的参与者，而且是中国海军百年发展鱼雷艇终于结出硕果的见证者。</p>
+<p>1884年马江海战中，福建水师旗舰扬武号在战斗开始不久便遭到法军雷艇的突袭而重伤沉没。应该说，这艘中国海军参战的唯一巡洋舰被击沉，严重影响了此后的战局。</p>
+<p>不久，法军雷艇再次在石浦海战中偷袭我驭远号巡洋舰得手。</p>
+<p>也许正是因为这几次的教训，使中国海军在随后的发展中十分重视鱼雷艇部队的建设。从清朝到民国，鱼雷艇队多次建立，多次毁灭，其中不乏英勇作战之士，但作战成果与预期相距甚远。</p>
+<p>甲午海战中，北洋水师福龙号鱼雷艇突袭日本海军部长桦山资纪座舰西京丸，若林钦绘。</p>
+<p>这一方面是因为受制于海军的总体水平，另一方面则是与武器的缺陷有关。可以说，中国海军是直到引进158艇这一代苏制P-4型鱼雷艇，才真正找到了称手的家伙。</p>
+<p>清代海军最早装备的雷艇，严格意义上来说还不是鱼雷艇，而是马尾海战中法军所用的“杆雷艇”——在快艇上安装长杆，顶端放置雷体，直接撞击敌舰起爆。</p>
+<p>1880年从英国购买的超勇、扬威两艘巡洋舰上，便装有这种仿佛枪骑兵一样的杆雷艇。当时马江海战还没有发生，李鸿章已经开始重视雷艇这种武器，是因为看到美国南北战争中雷艇的作用。不过由于技术发展，这种杆雷艇在我国海军中并未被用于实战。</p>
+<p>真正参加实战的是北洋水师的鱼雷艇，比如前面提到攻击过西京丸号的福龙号，便是购自德国的大型远海鱼雷艇。北洋水师专门设有鱼雷艇队，虽然在最后的威海卫保卫战中表现不佳，但此前不乏英勇的战斗。</p>
+<p>可惜，当时鱼雷技术还在襁褓之中，更适合于攻击固定目标，而北洋水师将其用于海战有些揠苗助长，福龙号攻击西京丸的鱼雷，远了航速太慢被规避，近了发射时会往深水钻，从敌舰船底钻过，没能爆炸。</p>
+<p>北洋水师覆灭后，清末重建海军时建立鱼雷游击队，先后购买过辰级、湖级鱼雷艇各四艘（广东地方海军也发展过一批），航速23节左右，如果在甲午海战中可算快艇，但此时正是世界海军技术高速发展之际，随着蒸汽轮机投入使用，世界主力舰艇的航速普遍提升到30节左右。这些鱼雷艇根本追不上对手，无法发挥作用，大多只能重做巡逻艇使用。</p>
+<p>抗日战争前，国民党方面有感自身海军力量薄弱，面对强大的日本海军必须另辟蹊径，因此设立电雷学校，专门发展鱼雷艇和水雷作战。他们从德国和英国各引进过一批鱼雷艇，建立了史可法、岳飞、文天祥各中队，在抗战初期曾潜入黄浦江，夜袭日军在华舰队旗舰出云号。</p>
+<p>可惜的是，这次奇袭中鱼雷（日军称为水雷）只击中了出云舰舷侧的栈桥，未能成功。</p>
+<p>史-102号鱼雷艇在战斗中被击伤搁浅。</p>
+<p>这次作战的教训是选用的快艇放雷方式不佳——英式快艇虽然航速快，目标小，但过于简陋。</p>
+<p>鱼雷放置在尾部卡槽中，攻击时转向将其“甩”向目标，很难瞄准，故此命中率低，白白浪费了难得的机会。</p>
+<p>而击沉太平号的158艇属于我国从苏联获得的P-4型高速鱼雷艇（123艇），我军据此于1950年9月组建4个鱼雷艇大队，31大队便是其中之一。P-4型鱼雷艇属于铝制艇体，排水量25吨，装备457毫米鱼雷发射管两具，航程和待机时间短，防御不足，性能并不十分突出。而且苏联方面给我们提供的是旧艇，有的发动机只有几十个小时使用寿命，速度也普遍从设计的48节降低到42节左右。</p>
+<p>但它依然是人民海军第一型进攻型武器，航速足以对国民党海军和周边其他国家海军的主力舰艇构成威胁，而固定式前向发射管可以使鱼雷艇以艇首指向目标的方式完成瞄准，命中率较高。</p>
+<p>这一切都使它摆脱了此前历代中国海军使用鱼雷艇的缺陷，配合人民海军敢于刺刀见红的战斗作风，可说如虎添翼，终于在作战中取得了成功。此后，我鱼雷艇部队取得了八六海战、击沉洞庭号、崇武以东海战等一系列胜利，威名大震。</p>
+<p>这之后，我国曾从苏联引进更大型的P-6鱼雷艇并仿制成功，自行开发湖川级高速水翼鱼雷艇，达到了鱼雷艇技术的巅峰。</p>
+<p>在今天，鱼雷艇已经逐渐成为边缘化的海战武器，替代它的是导弹艇和高速潜艇，它们具有更高的作战效率。但是，回顾中国鱼雷艇的发展，依然让我们仿佛重现百年来历代海军军人努力为这个国家建设海防的身姿。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-navy/torpedo-boat-158.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-navy/torpedo-boat-158.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

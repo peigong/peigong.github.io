@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国飞行试验研究院 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/TestPilots/ChineseFlightTestEstablishment.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国飞行试验研究院"><a class="header" href="#中国飞行试验研究院">中国飞行试验研究院</a></h1>
+<p>航空工业试飞中心，简称试飞院，坐落于西安市阎良区，创建于1959年，是经国家授权的军民用飞机、航空发动机、机载设备等航空产品国家级鉴定试飞机构，是国家级的飞行试验技术研究机构，同时也是国家“飞机适航认可实验室”。</p>
+<h2 id="主要任务"><a class="header" href="#主要任务">主要任务</a></h2>
+<ol>
+<li>承担军民用飞机、直升机、航空发动机、机载设备等航空产品的鉴定试飞及民机适航审定试飞工作</li>
+<li>承担飞行技术及试飞方法研究；负责编制各种飞行试验条例、条令、标准、规范和手册</li>
+<li>承担飞行测量试验技术研究，开展测量试验设备的研制与生产；开展各种试验机的研究和模拟试验技术，人机工程的研究，为探索航空新技术和有关型号研制提供技术支持</li>
+<li>负责培训国内外试飞员（飞行员），试飞工程师、机务人员及技术考核；开展飞行试验领域内的国际合作和学术交流等</li>
+</ol>
+<h2 id="发展现状"><a class="header" href="#发展现状">发展现状</a></h2>
+<ol>
+<li>近50年来，中国飞行试验研究院从无到有，从小到大，拥有了承担研制新机、改型机、航空发动机等试飞任务以及多种机载设备的鉴定定型和民机适航审定试飞的综合实力。拥有一支高素质的试飞科技队伍。拥有专业技术人员和技能人员3500多名，高级技术人员和技能人员1000多名，其中：中央军委任命的试飞英雄3名；国家级专家2名；中国航空金奖获得者2名；中国国防科技511工程专家5名；省部级专家23名；中航工业院级专家20名；64人享受政府特殊津贴。他们是中国航空工业的精英，也是航空试飞人的杰出代表。</li>
+<li>拥有科学高效的组织管理体系。现设有管理部门15个，基层单位15个；2003年，我们确立了一分为二的管理框架，即以军品为主的科研主业部分和以经营、三产为主的辅业部分。拥有完善的飞行试验专业。从飞机性能、飞行品质、结构完整性、动力装置、综合航电和机械电气等航空专业到试飞测试、飞机改装、可靠性等四性研究、飞机驾驶、机务保障、场务保障等专门技术，我院航空器飞行试验体系共设28个专业系统，120多个专业。</li>
+<li>拥有30多种用于飞行试验的各类型飞机。拥有30多种用于飞行试验的各类型飞机，其中包括自行研制的多轴变稳试验机、弹射试验机、电子试验机、飞行试验台等多用途的专用试验飞机，借助于这些试验平台相继完成了一系列重要的科研验证试飞。空中综合模拟试验机的自主研制成功，使我国成为世界上五个拥有多轴变稳机的国家之一。</li>
+</ol>
+<h2 id="取得成绩"><a class="header" href="#取得成绩">取得成绩</a></h2>
+<ol>
+<li>拥有从地面到天空、专业配套齐全的研究性实验室和试验设施。拥有自主研发的具有六自由度运动平台、计算机成像的全任务数字式实时飞行地面仿真系统；拥有多种规格的发动机试车台以及航电仿真实验室等多种空中专业试验平台。利用这些实验室和试验设备，可以承担各类预先研究试飞和支持型号定型试飞的试验。</li>
+<li>拥有处于国内领先地位的航空测试能力和自主研制配套能力。在机载采集记录、地面遥测监控等方面的规模、技术和手段均处于国内领先地位。同时，具备强大的航空测试设备的研制配套能力。其中，为型号试飞自行研制的实时数据采集和处理系统，单架飞机可同时采集、记录、处理6000个参数。</li>
+<li>拥有齐全的飞行试验场务保障设施。拥有两条长3400米的军用特Ⅰ级标准跑道；建有夜航灯光系统的机场，可昼夜组织飞行试验；拥有气象、雷达、微波仪表着陆、导航通讯等一系列先进的场务保障设施。</li>
+<li>拥有强大的飞行组织和保障能力。能同时承担20个型号、40架新型飞机的试飞任务，具备了混合场次、大强度综合试飞能力，并始终保持着高效试飞状态，推动了各型号科研试飞任务的进度，从而使我国军用飞机的型号试飞水平基本与国际先进水平接轨。</li>
+<li>拥有可靠完善的质量、安全、保密保障体系。于 1997年通过质量体系认证，2004年通过转版认证。2003年通过国家一级保密资格认证，先后荣获国防科工委质量先进单位，中国一航安全生产先进单位、重点保密先进单位、质量工作先进单位等一系列荣誉称号。</li>
+</ol>
+<p>2014年9月17日，中航工业试飞中心在青海省成功完成了国内首次歼击机高原起降性能试飞任务，此次试飞是两型发动机装机状态的首次高原试验。</p>
+<h2 id="获得荣誉"><a class="header" href="#获得荣誉">获得荣誉</a></h2>
+<p>2005年10月，获得中央精神文明建设指导委员会授予的“第一批全国文明单位”荣誉称号。</p>
+<p>2022年4月，中国飞行试验研究院航电所团支部被共青团中央授予全国五四红旗团支部称号。</p>
+<p>2023年5月30日，入选2023年度科学家精神教育基地。</p>
+<h2 id="技术特点"><a class="header" href="#技术特点">技术特点</a></h2>
+<p>全院拥有飞行力学、强度、飞行品质、颤振、动力装置、机载设备、电子、武器火控、高空防护与救生、测试、自动控制及辨识技术等120多个专业，构成相互配套、系统完整的研究、设计、试验、试制体系；两条长3400米的国家一级跑道，配有国际通用标准的全天候飞行导航保障设备；现有大型实验室1.4万平方米，正在新建的实验室1万平方米，有空中试车台、弹射、变稳、电子特设、航测、飞播等试验研究机及飞行模拟台、天线试验场、激光雷达站、地面标准试车台、微波着陆系统等大型设备36项，自行研制的实时数据采集和处理系统达到国际九十年代先进水平,空中综合模拟试验机居国际前列；1997年通过ISO9001质量体系认证。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../TestPilots/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../TestPilots/wu-ke-ming.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../TestPilots/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../TestPilots/wu-ke-ming.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>鱼雷艇创造奇迹，击沉太平号驱逐舰 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-navy/torpedo-boat-158-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="鱼雷艇创造奇迹击沉太平号驱逐舰"><a class="header" href="#鱼雷艇创造奇迹击沉太平号驱逐舰">鱼雷艇创造奇迹，击沉太平号驱逐舰</a></h1>
+<blockquote>
+<p>原文：<a href="">六十四年前海军的辉煌胜利：鱼雷艇创造奇迹，击沉太平号驱逐舰</a></p>
+</blockquote>
+<h2 id="导语"><a class="header" href="#导语">导语</a></h2>
+<p>1954年11月14日爆发（《档案里的中国海军历史》等说14日，《世界鱼雷艇战史》说15日，存疑，本文采纳14日之说）的渔山列岛海战，又称击沉“太平”号战斗，是中国人民解放军海军鱼雷快艇部队的初战。在这次战斗中，人民海军鱼雷快艇第31大队第1中队4艘鱼雷快艇（155、156、157、158号）在海岸雷达站的引导下，利用夜暗条件，在14日凌晨一举击沉国民党海军“太平”号护航驱逐舰，而自身无一损失。以小搏大，初战告捷，直接击沉“太平”号的158号鱼雷快艇被收藏于中国人民革命军事博物馆。</p>
+<h2 id="海战装备"><a class="header" href="#海战装备">海战装备</a></h2>
+<p>此战人民海军鱼雷快艇第31大队装备的鱼雷快艇是苏联123bis型（又称P-4型）。该型艇最高航速48节，但由于鱼雷快艇的主机寿命短，且苏联出售给中国的艇都是二手的，因此不能发挥出最高航速。</p>
+<p>“鱼雷快艇的主机寿命很短，中国进口的部分P-4鱼雷艇是第二次世界大战期间建造的，主机在使用500小时后就要进行修理，修理后的主机只能再用250小时到300小时。而1951年进口的第一批18艘鱼雷艇中13艘未修过，主机接近翻修期，剩下的寿命最多的160小时，最少的仅64小时，7艘在100小时以下。翻修过的5艘主机剩下的寿命均在300多小时。123型快艇本来航速普遍在48节以上，而根据中国自己的测试，进口艇的航速最大只有42节，显然是因为机器磨损而显著下降。”——《世界鱼雷艇战史》第631页</p>
+<p>123bis型鱼雷快艇装备四挺12.7mm DShK机枪，安装在两座MTU-2型双联机枪座上，一座位于中部，一座位于尾部。装备450mm鱼雷发射管两具，向前固定安装，使用450mm 45-36N鱼雷。</p>
+<p>DShK机枪射速600发/分钟，有效射高2500米，由于本次海战中不存在空中目标，其攻击能力可以忽略。</p>
+<p>450mm 45-36N鱼雷的战斗部重200kg，41节下射程3000米，32节下射程6000米。Seekrieg 4的鱼雷列表中虽然不存在这种鱼雷，但该型鱼雷是基于1932年从意大利阜姆（今克罗地亚里耶卡）购买的鱼雷开发的，因此可以类比战斗部重量相同的意大利45cm W200鱼雷，伤害等级设定为C。</p>
+<p>据舟山基地司令部通信科的刘金禄回忆，此战人民海军岸上指挥所引导鱼雷快艇部队的是一台美制SO-8舰用对海雷达。SO-8是SO雷达系列中的小型版，而SO雷达主要用于美军的鱼雷快艇，可想而知SO-8体积更小。SO-8的角度分辨率为4度，距离分辨率未知，但SO和SO-1雷达对驱逐舰目标的距离分辨率都是200码。SO-8对驱逐舰的探测距离是12海里，对水面航行的潜艇探测距离是5海里。本次海战中，这部雷达在15海里的距离上探测到了“太平”号，可能与架设高度较高有关。</p>
+<p>刘金禄回忆：“那时，敌人舰艇差不多每天晚上（白天怕我飞机轰炸不敢出来）都用舰炮轰击我雷达天线，但均未得逞。因为雷达天线安装在靠近山顶，炮打低了，炮弹不是在滩头就是在山坡上爆炸；打高了炮弹又飞到山后面去了。”——《通信兵故事13：恪尽职守篇（下册）》</p>
+<p>国民党海军“太平”号护航驱逐舰原为美国“埃瓦茨”（Evarts）级护航驱逐舰“德克尔”（Decker）号，1945年租借给中国海军，1948年正式移交。</p>
+<p>可见，“太平”号的DP为40，123bis型鱼雷快艇发射的一枚45-36N鱼雷使其失去战斗力的概率为92%。实战中，“太平”号确实是在被一枚鱼雷击中后，失去战斗力，最终在拖航中沉没的。</p>
+<p>该级舰装备的对海武器有三座Mk 22型3英寸/50火炮，两座位于前部，呈背负式布局，一座位于尾部。装备Mk 1博福斯40mm双联高射炮一座，位于中轴线上。装备厄利孔20mm高射炮九座，均为单装，一座位于中轴线上，其余八座分布在两舷。“太平”号在当时的装备情况有待考证，但武器型号没有变化。</p>
+<p>Mk 22型3英寸/50火炮射速约15-20发/分钟，射程13350米，有效射高9270米，可发射穿甲弹（AP）、高爆弹（HC）、对空弹（AA）和近炸引信对空弹（AA VT）。</p>
+<p>博福斯40mm高射炮在高射时射速120发/分钟，平射时由于重力作用，射速有所提高，可达140-160发/分钟，可发射穿甲弹（AP）和高爆弹（HE），发射穿甲弹时最大射程为8795米，发射高爆弹时最大射程为10249米，有效射高6797米。</p>
+<p>厄利孔20mm高射炮的实际射速约250-320发/分钟，射程4389米，有效射高3048米，可发射高爆弹（HE）、高爆燃烧弹（HE-I）、高爆曳光弹（HE-T）和穿甲弹（AP）。</p>
+<p>在Seekrieg 4中，Mk 22型3英寸炮的攻击力为3，其高爆弹装药为0.34kg TNT。博福斯40mm高射炮的高爆弹装药为0.067kg TNT（HE Mark 1炮弹）或0.068kg TNT（HE Mark 2炮弹），其攻击力数值可以据此比例推算，设为0.6。厄利孔20mm高射炮的高爆弹装药0.011kg，其攻击力数值按比例设为0.1，曳光弹的装药量只有0.005kg，其攻击力数值设为0.05。博福斯和厄利孔的穿甲弹均不装药，对鱼雷快艇的伤害可以忽略。</p>
+<p>SL雷达是美国二战期间大规模装备在护航驱逐舰以及更小的舰艇上的对海雷达。在Seekrieg 4中最大探测距离18海里。而对标准排水量750吨以下的目标，Seekrieg 4认为小型舰艇（标准排水量3000吨以下）上安装的一般的对海雷达的探测距离会从44000码下降到25700码。参照SL雷达的最大探测距离，其对这类目标的探测距离约为19500米。这对鱼雷快艇大小的目标显然不合理。</p>
+<p>时任“太平”号通讯官的回忆如下：“约在一点三十分左右，雷达发现方位330有四个快速目标。我一听报告，立刻拿望远镜往这个方向搜索，看见少许白浪花，……”——《档案里的中国海军历史》第403-404页</p>
+<p>可见，“太平”号上的雷达对鱼雷快艇大小的目标的最大探测距离和目视发现此类目标的距离差别不大。</p>
+<p>此战中，虽然人民海军岸上指挥部和鱼雷快艇进行过多次无线电联系，但“太平”号始终没有发现这些信号，可以认为“太平”号此战没有无线电测向能力，可能是不知道人民海军鱼雷快艇的无线电发报频率。</p>
+<p>如果把海战比作一场戏，现在“演员”和“道具”已经备齐，下面就到“前情提要”的时间了。</p>
+<h2 id="战前态势"><a class="header" href="#战前态势">战前态势</a></h2>
+<p>经过1954年5月的东矶列岛战役，人民解放军解放了东矶列岛，后在东矶列岛的田岙（又名高岛）架设了一部从原国民党海军舰艇上拆下的一台SO-8舰用对海雷达，设立田岙岛（高岛）观通（观察、通信）站，密切监视大陈列岛和渔山列岛之间国民党海军舰艇的活动。人民空军此时进驻浙东，威胁到国民党海军舰艇的安全。国民党海军为防范空袭，只能在夜间巡逻大陈列岛和渔山列岛附近海域，这给鱼雷快艇进行夜袭提供了良机。为此，人民海军鱼雷快艇部队组织了针对性训练，力求首战告捷。</p>
+<p>9月24日，鱼雷快艇第31大队秘密进驻高岛，但由于风浪过大，一直无法把握出击的机会，一个多月后返回石浦港。11月1日，第31大队1、3分队再次秘密进驻高岛，副大队长季智良在田岙观通站开设了岸上指挥所。华东军区海军司令部通信处制定了鱼雷快艇部队引导导航组织和通信联络组织的计划，由舟山基地司令部通信科负责组织实施和提供通信器材及人员保障。岸上指挥所各部门架设了有线电话，对鱼雷快艇开设了四个短波无线电专向和网路。指挥所对上也是依靠短波通信。</p>
+<p>来自舟山基地司令部通信科，负责开设鱼雷艇指挥所通信枢纽，现地组织实施这次战斗的观察通信保障任务的刘金禄回忆：“在田岙岛北岙的沙滩上架了一顶帐篷，就算是临时信号台，担负与待机的鱼雷艇和临时停泊舰艇的视觉通信任务。这个临时信号台，只有1名信号兵、1付手旗、1只手电筒和1架望远镜。10月31日傍晚，鱼雷艇从定海港由4艘护卫艇拖带，于11月1日20时隐蔽抵达 田岙岛锚地。为了隐蔽我作战企图，将帆船靠在鱼雷艇的外侧，以挡住敌人的视线。每天晚上指挥所向鱼雷艇队通报敌舰艇活动情况时，先用电话告诉信号兵，再用灯光信号发给艇队。这方法既不及时，又易产生差错。我们就试着用新的被复线当水线，与鱼雷艇沟通电话，我们一直担心被复线经不住海水浸泡而短路，可被复线经海水一个多月的浸泡，始终未影响通话质量。这样，我们就解决了岸上指挥员与锚地指挥员的有线电通信问题。”——《通信兵故事13：恪尽职守篇（下册）》</p>
+<p>根据这段话还可以推断出鱼雷快艇在高岛的泊地可能是北岙。海上指挥所开设在155号艇上，由中队指导员朱红禧和副中队长铁江海负责。抵达当晚雷达即发现目标，但敌舰提前返航，攻击未果。12日下午1时许，3分队由于没有注意到潮汐变化，两艘快艇搁浅，螺旋桨受损，不得不拖回定海修理。当日2分队抵达高岛接替3分队。13日晚，雷达又发现目标，鱼雷快艇当即出击，但很快海上气象变坏，鱼雷快艇不得不返航。按计划，15日鱼雷快艇部队必须返回舟山，因为大风浪季节即将来临。机会就在14日凌晨来到了。</p>
+<p>国民党海军的方面，负责大陈列岛和渔山列岛附近海域巡逻的是“太”字号护航驱逐舰，疑为显示存在，每次出动三艘。</p>
+<p>“台湾海军当时有六艘‘太’字号军舰，分为两组，每组三艘，轮流在大陈岛执行任务，每三个月轮换一次。每组内的三艘军舰也轮流担任旗舰，轮流执勤。巡逻的方法是定点定线，区域北到渔山，南到大屿，全程约19海里，并规定，每天晚上一定要出海巡逻，白天则视状况而定。巡逻时，不管用何种速率，从日落到日出，一定要两度到达南北端点。照规定的航线，不能离开航线5海里以上。每艘‘太’字号军舰巡逻五天，然后回基隆整备。‘太平’舰与‘太康’舰、‘太和’舰分为一组，担任1954年9、10、11月三个月的巡航任务。”——《档案里的中国海军历史》第402页</p>
+<p>“太”字号驱逐舰在10月中旬的一次出击可以侧面印证这种说法。</p>
+<p>“10月中旬的一天，3艘国民党海军美制‘太’字号护航驱逐舰从大陈北上东矶列岛，炮击头门山岛的130毫米海岸炮阵地。”——《世界鱼雷艇战史》第633页</p>
+<p>11月13日夜，“太平”号驶出大陈港。时任“太平”号通信官的马顺义中尉这样描述：</p>
+<p>“‘十一月十三日晚上上级本来下令不要出海巡逻，在大陈港区内抛锚警戒即可。因为连巡好几天，不出任务，官兵心情都轻松下来，副长、轮机长都在官厅打桥牌打到很晚。我因为要值零点到四点的更，所以很早就睡了。通信官的房间在官厅隔壁，中间仅隔一条帘子，当天二十二时半左右，我听到他们说：“电报来了，今天晚上又要出去，要暖机了。”我也就醒来。’”——《档案里的中国海军历史》第403页</p>
+<p>时任“太平”号航海官的陈学才中尉回忆，“太平”号的出航目的不是巡逻，而是去渔山岛接劳军的康乐队回大陈岛。</p>
+<p>“据‘太平’号航海官陈学才中尉回忆，‘太平’号深夜出航并非以前传言的例行巡逻，而是连续三晚上被派往渔山岛接劳军的康乐队（类似于文工团）回大陈岛，前两次都在半路上被叫了回来，原因是康乐队延期，结果第三夜就遇袭了。”——《世界鱼雷艇战史》第639页</p>
+<p>时任人民海军鱼雷快艇第31大队1中队指导员的朱红禧的回忆指出，“太平”号这次出航的航线有些异常。</p>
+<p>“这时在岸上担任指挥员的纪智良副大队长听了记录员的报告后，发现敌舰这次活动的航线有些异常，他立即走到航海业务长面前仔细查看了一下标在图上的敌舰航迹，果然与往常不同，平时敌舰出来活动总是先由南向北巡逻一遍，然后再回到大陈岛，这一次却不是这样，而是一直向东北方向的渔山列岛开去。”——《击沉“太平”号——记人民海军第一次鱼雷战》</p>
+<p>11月14日0时5分，田岙观通站发现目标，指挥所判明是台湾海军“太”字号军舰。但当日气象预报是中浪，风力4级，能见度2.5海里，按照条令不能出击。副大队长纪智良求战心切，派出158艇观察海面实际气象情况。海上实际气象情况如何，有不同的说法。</p>
+<p>“中浪，风力2-3级，能见度良好，符合鱼雷艇作战要求。”——《世界鱼雷艇战史》第634页</p>
+<p>“海上风浪2～3级，轻浪，视距2～3海里，适合鱼雷艇出击作战。”——《击沉“太平”号》</p>
+<p>“马顺义说：‘是日天候尚佳，海象两级到三级，非常好。但能见度较差，有低云层。’”——《档案里的中国海军历史》第403页</p>
+<p>尽管叙述有些出入，但气象情况适合鱼雷艇出击是可以确定的。纪智良立即命令第31大队1中队四艘鱼雷快艇进入一级战备。0时23分，纪智良命令1中队进入位于五棚屿以东1海里处的待机地点。1中队于0时50分抵达待机地点。</p>
+<p>大幕已经拉开，主演即将登台。</p>
+<h2 id="海战复盘"><a class="header" href="#海战复盘">海战复盘</a></h2>
+<p>11月14日0时5分，田岙观通站发现目标。雷达测得的目标参数有多种说法。</p>
+<p>“方位137度，距离15海里，航向50度，速度12节。”——《档案里的中国海军历史》第402页</p>
+<p>“田岙观通站雷达在方位147度，距离15海里处，发现自大陈锚地出航的敌军舰1艘。”——《通信兵故事13：恪尽职守篇（下册）》</p>
+<p>“该目标航向62度，速度12节……”——《“铁拳头”显神威--击沉“太平号”护卫舰的功勋鱼雷快艇》</p>
+<p>0时52分，1中队以89度航向开始接敌。</p>
+<p>0时57分，岸上指挥所发现接敌速度不够，命令快艇增速至23节。</p>
+<p>本文在图上作业时，出于简化目的，假设0时52分到0时57分为均匀加速至23节，0时57分后保持23节匀速前进。</p>
+<p>1时25分，“太平”号进入高岛雷达的盲区。</p>
+<p>这片高岛雷达的盲区可能是位于田岙岛东偏南方向的东矶岛造成的，可以根据在推测雷达站的位置，比较随意地划出一片可能的雷达盲区。如果根据《档案里的中国海军历史》所言进行图上作业，从0时5分到1时25分，“太平”号航行了16海里，它的位置应当在下图中蓝色线段的右上端点处。这个位置位于可能的雷达盲区外，与交战过程中“太平”号一直处于雷达盲区中的情况不符。</p>
+<p>此外，不论航向是50度还是62度，都不指向渔山列岛。“太平”号要去渔山列岛，必须中途改变航向。</p>
+<p>关于“太平”号被击沉前的航速和航向，“太平”号上的马顺义回忆：“我们出海以航向正北000，速率十节向北往渔山方向航行……”——《档案里的中国海军历史》第403页</p>
+<p>《世界鱼雷艇战史》认为这是建立目视接触时“太平”号的航速和航向：“当时‘太平’号以10节航速向正北行进，鱼雷快艇的出击正对其左舷。”——《世界鱼雷艇战史》第637页</p>
+<p>考虑到“太平”号是正常航行，出海后保持10节的航速是一种比较现实的推测。假如12节是雷达测速得到的，那么可以采信12节一说。但高岛的雷达并没有测速功能，航速12节可能是根据测量多个时刻下目标位置后进行图上作业得出的，带有较大误差。故本文采信10节一说。综合起来，本文认为比较符合实际情况的目标参数是：方位147度，距离15海里，航向62度，速度10节。据此进行图上作业。可能的误差来源主要是雷达测角误差（正负4度）、测距误差（正负约0.1海里）、测航向误差、测速误差以及雷达站位置误差。</p>
+<p>本文无法解决的疑点在于“太平”号何时转向正北。由上图可见，在1时25分，“太平”号恰好位于南渔山的正南方。不妨假设“太平”号就在此时转向正北。</p>
+<p>1时26分，155艇发现右前方灯光一闪，纪智良命令“快艇向闪光方向加速前进”。</p>
+<p>1时28分，1中队发现目标，朱红禧用望远镜识别，确认目标为“太平”号，下令“向左展开，准备战斗”。</p>
+<p>这四艘鱼雷快艇的加速度不好确定。在Seekrieg 4中，对舰艇的加速度规定为：舰艇在2分钟内最大可以增加其最大航速的三分之一。根据这一规则，1时26分1中队的速度为23节，在1时26分到1时28分这两分钟内，1中队的平均速度可以达到37节。</p>
+<p>约2分钟后，“太平”号的雷达和舰上当值的马顺义都发现了这四艘鱼雷快艇。</p>
+<p>“‘约在一点三十分左右，雷达发现方位330有四个快速目标。我一听报告，立刻拿望远镜往这个方向搜索，看见少许白浪花，表示他们正在加速。……并下令警戒中的舰尾的三十二炮（太平舰三门三吋炮之一）和驾驶台前的四十公厘炮，对准方位330，距离6000码追瞄。’”——《档案里的中国海军历史》第403-404页</p>
+<p>可以发现，马顺义的回忆和之前的图上作业对不上，而之前的图上作业中，最大的假设就是1时25分“太平”号转向正北。但不论怎样调整“太平”号转向的时刻，都无法同时满足方位330，距离6000码两个条件。本文只能放弃采纳此回忆。</p>
+<p>此外，方位330是左舷30度，处于左前方。“太平”号位于舰尾的三英寸主炮理应无法向这个角度射击。相比之下，下面的说法更可信，因为“太平”号的2号主炮是指向前的。</p>
+<p>“枪炮官周官英中尉立即指挥2号3寸炮、1号2号40毫米炮和中甲板官员步台侧的1门20毫米炮向左舷射击，同时舰长操船进行了规避，及时躲过了至少2-3枚鱼雷。”——《世界鱼雷艇战史》第637页</p>
+<p>还有一条经常被提到的信息，即“太平”号相对1中队处于距离37海里，左舷45度的位置。</p>
+<p>“1时28分，快艇编队在距离37海里，左舷45度处发现目标。”——《档案里的中国海军历史》第402页</p>
+<p>“……右前方发现灯光一闪，随即熄灭，事后推测可能是敌舰人员开舱门使舱内灯光外泄，这时在海图室作业的葛绵绵也报告，敌舰应在距离37海里，左舷45度处。”——《世界鱼雷艇战史》第634页</p>
+<p>但37海里这一距离实在太大，要知道田岙观通站发现“太平”号时，“太平”号与雷达的距离才15海里，到此时怎会还相距37海里呢？况且155艇已经在“右前方发现灯光一闪”，“太平”号怎么会跑到左舷45度去呢？考虑到苏联海军习惯以链为海上距离单位，人民海军可能也如此，1链等于0.1海里，或许原文是37链，此后以讹传讹，成了“37海里”。相对而言，下面的说法更可靠。</p>
+<p>“1时28分，一中队发现敌舰，距离20～30链。”——《击沉“太平”号》</p>
+<p>20～30链即两三海里，这符合之前天气预报中提到的能见度2.5海里。假设1时28分“太平”号与1中队的距离是2.5海里，那么可对此前的图上作业进行修正。</p>
+<p>发现“太平”号后，155艇上的海上指挥部立即向岸上指挥部报告，并通报各艇组成左梯队接敌，以155、156艇主攻，157、158艇牵制。但这一战术没有奏效。155艇为了避免妨碍其他艇的动作，向右转向避让，156艇则为取得一定的提前角向左转。这样，主攻两艇的距离迅速拉大，负责牵制的157和158艇则插入其间，形成了一个松散的单横阵。此后很难继续追踪每一艘快艇的航迹，本文的图上作业到此为止。</p>
+<h2 id="战斗打响"><a class="header" href="#战斗打响">战斗打响</a></h2>
+<p>具体描述鱼雷发射情况的文献仅有一篇——《击沉“太平”号》。</p>
+<p>“1时35分30秒，155艇在与敌距离约10链时发射2条鱼雷，并释放烟幕、打开消音器，以35节航速撤出战斗。157艇于1时34分50秒向左转向缩小敌舷角，1时36分20秒，距敌5链，发射鱼雷2条，同时也释放烟幕，高速撤离战斗。156艇位于157艇左右侧，1时36分40秒，该艇发射鱼雷2条。此时，‘太平’舰开始射击，发射曳光弹。我158艇跟进157艇转向，打开消音器，采取35节高速向敌冲击；1时37分距敌舰5链，发射2条鱼雷。敌舰以火炮向我舰射击，当我艇转向后，发现鱼雷命中敌舰，海面上掀起了巨大的水柱和黑烟。”——《击沉“太平”号》</p>
+<h2 id="兵棋推演"><a class="header" href="#兵棋推演">兵棋推演</a></h2>
+<p>Seekrieg 4兵棋推演的第一步，是对环境因素的量化。海战发生时风力2-3级，在Seekrieg 4中，这样的风力不影响各种海上作业。能见度2.5海里，约合5063码。查表得知，一艘40DP的舰船对一艘1DP的小艇的能见度在完美条件下为18400码，夜间能见距离减少60%，即夜间完美气象下的能见度为7360码，可见当时海上能见度为夜间完美气象下的69%，对应的能见度等级为8级（37%～85%），属于能见度较佳。1954年11月14日是农历十月十九，但马顺义回忆当晚有低云层，因此海上是否有月光尚待考。</p>
+<p>实战中，“太平”号没有对鱼雷快艇形成有效杀伤，这固然可能与国民党海军缺乏训练有关，但经过分析，客观因素也起到了重要作用。“太平”号发现1中队四艘鱼雷快艇之后，首先进行跟瞄，再等值更军官向舰长报告后开火。考虑到可能双方时钟存在误差，以及有些炮弹打得太偏没有被人民海军指战员注意到，“太平”号的开火时刻不会早于1时30分，不会晚于1时36分。Seekrieg 4以2分钟为一回合，经过这样分析，在被鱼雷命中前，“太平”号的射击机会有一到四个回合。</p>
+<p>下面根据Seekrieg 4的高级命中率规则估算“太平”号的Mk 22型3英寸/50火炮的命中率。</p>
+<p>上表中的第一回合命中率和后续回合命中率，都是先通过最右侧一列的各项修正值加和得到各自的命中修正值，然后查命中率表得到与命中修正值对应的命中率得到的。对于命中修正值为负数或零的情况，也认为其命中率为1%。这是因为Seekrieg 4是20世纪80年代出现的手工兵棋，模拟随机数只能依赖骰子。Seekrieg 4为了模拟1到100这100个随机整数，采用两个不同的正十面体骰子分别代表随机整数的个位和十位。因此Seekrieg 4规则中，命中率的最小值为1%。这意味着“太平”号的Mk 22型3英寸/50火炮在没有月光的情况下，对鱼雷快艇的命中率为1%；在有月光的情况下，对鱼雷快艇的命中率在第一回合为1%，后续回合为2%。</p>
+<p>Mk 1博福斯40mm双联高射炮和厄利孔20mm高射炮缺少对海火控系统，其命中率远远低于1%，但根据规则，还是将其命中率设定为1%。此外，这些火炮几乎不根据上次射击的水柱进行校正，只能进行弹幕射击。根据规则，命中率为1%的火炮在进行弹幕射击时，其命中数减少40%。</p>
+<p>查命中部位表，得该距离下哑弹率为15%。考虑到123bis型鱼雷快艇干舷和上层建筑低矮，可以将规则中击中上层建筑的概率（20%）去除，其命中效果合并到击中指挥塔（15%）的概率中；考虑到123bis型鱼雷快艇无炮塔，把击中炮塔的概率（10%）去除。在上述两项修正的作用下，最终的有效命中率还会再下降45%。由于123bis型鱼雷快艇的吨位太小，一发有效命中的3英寸炮弹不论击中何处，都会使其失去战斗力。</p>
+<p>Seekrieg 4的规则对射速也有规定。对于需要观测水柱校正的射击，在目标距离2500码以内时每根炮管最大射速为每分钟5发，在2600码到5000码时，最大射速为每分钟4发。弹幕射击的最大射速是其两倍。考虑到1时35分155艇距离“太平”号约1海里，近似认为1时34分以前二者距离大于2500码，1时34分以后二者距离小于2500码</p>
+<p>Mk 22型3英寸/50火炮的高爆弹伤害值为6（基础伤害值为3，高爆弹伤害为基础值的2倍），只要命中一发且不是哑弹，就可以使一艘123bis型鱼雷快艇失去战斗力。下面分情况讨论“太平”号的Mk 22型3英寸/50火炮使鱼雷快艇31大队1中队任意一艘艇失去战斗力的概率P1。</p>
+<p>博福斯40mm高射炮的高爆弹伤害值为1.2，有效命中一发以上也可使一艘123bis型鱼雷快艇失去战斗力。下面分情况讨论“太平”号的Mk 1博福斯40mm双联高射炮使鱼雷快艇31大队1中队任意一艘艇失去战斗力的概率P2。</p>
+<p>不论有无月光、是否为第一回合，博福斯40mm高射炮的命中率均为1%。由于弹幕射击规则，实际命中一发以上需要在计算中命中两发以上。根据二项分布公式可以计算得到下表。因为Seekrieg 4会对伤害取整，所以这两发必须在同一回合命中才能造成伤害。</p>
+<p>厄利孔20mm高射炮的高爆弹伤害为0.2，高爆曳光弹伤害为0.1。分别需要有效命中五发和十发才能使一艘123bis型鱼雷快艇失去战斗力。根据二项分布的特点，可以知道一门命中率为1%的炮弹在一回合内命中这么多发的概率是多么低下。博福斯40mm高射炮使一艘123bis型鱼雷快艇失去战斗力的概率已经如此低，厄利孔20mm高射炮杀伤力更可以忽略不计。可见，“太平”号对鱼雷快艇的主要威胁来自具备完善对海火控系统和单发杀伤能力的3英寸主炮，且杀伤概率与有无月光和开火时刻密切相关。</p>
+<p>由于155艇对“太平”号建立目视接触时的相对距离只有2.5海里，四艘鱼雷快艇即便以35节的航速，也能在四到五分钟航行完这段距离，而实际上鱼雷分别是在建立目视接触后7（155艇）、8（156、157艇）、9（158艇）分钟时才射出。这说明本战中的四艘鱼雷快艇进行了机动，发挥自身速度和灵活性远远超过“太平”号的优势，寻找合适的敌舷角。因此这里敌舷角均取80度，实际可能更接近90度。</p>
+<p>首先计算155艇的鱼雷命中率。距离1海里，合1852米，代入公式，保留小数点后两位，得到0.33。查鱼雷命中率表，0.33对应的命中率为6%。这就是155艇的鱼雷命中率。可见，历来评价155艇过早发射鱼雷，是有原因的。</p>
+<p>其他三艘艇的距离只有0.5海里，只有155艇的一半，代入公式得到0.66。查鱼雷命中率表，0.66对应的命中率为32%。这是其他三艘艇的鱼雷命中率。</p>
+<p>对于当时45-36N鱼雷采用何种引信，我没有找到资料。但二战时期广泛采用在鱼雷上采用磁性引信的国家只有德国和美国，因此45-36N鱼雷更可能是碰撞引信。碰撞引信的可靠性普遍好于磁性引信，这一点在Seekrieg 4的规则中也有所反映：除了某些例外情况（如1943年9月以前的美国鱼雷，有兴趣的读者可以去搜索“MK14铁棍”），碰撞引信鱼雷的哑弹率为15%，磁性引信鱼雷的哑弹率为20%。</p>
+<p>每艘艇发射两枚鱼雷，共计八枚，哑弹率15%，则命中“太平”号且不哑弹的鱼雷数的数学期望是1.734枚。</p>
+<p>“太平”号被一枚鱼雷命中后还能保持战斗力的概率只有8%，故“太平”号遭遇此次鱼雷攻击后失去战斗力的概率约为84.1%，也就是除去不被鱼雷命中、命中的全是哑弹和被一枚非哑弹鱼雷命中但还能保持战斗力这三种情况以外的概率，可谓凶多吉少。实战中，“太平”号被一枚鱼雷命中前机舱和通信室之间，当即失去战斗力。“太平”号没有当场沉没，还能缓慢倒车，一直等到拖航舰艇赶到才沉没，对它而言已经算一个相对“幸运”的结果</p>
+<h2 id="参考文献"><a class="header" href="#参考文献">参考文献</a></h2>
+<ul>
+<li>马骏杰. 档案里的中国海军历史[M]. 山东画报出版社, 2014.</li>
+<li>刘致. 世界鱼雷艇战史[M]. 山东画报出版社, 2014.</li>
+<li>赵志辉. 通信兵故事[M]. 军事科学出版社, 2001.</li>
+<li>Norman Friedman. Naval Radar[M]. Conway Maritime Press Ltd, 1981.</li>
+<li>李巍. 击沉“太平”号[J]. 现代兵器, 2009(8):67-69.</li>
+<li>朱洪禧. 击沉“太平”号——记人民海军第一次鱼雷战[J]. 海事大观, 2006(4):75-77.</li>
+<li>马骏杰. 功过是非“太平”舰[J]. 现代舰船, 2009(10A):52-56.</li>
+<li>梁永胜. “铁拳头”显神威--击沉“太平号”护卫舰的功勋鱼雷快艇[J]. 党史纵览, 2003(2):46-47.</li>
+<li>Tony, DiGiulian. NavWeaps[EB/OL]. www.navweaps.com.</li>
+<li>Ivan, Gogin. NAVYPEDIA[EB/OL]. http://www.navypedia.org/index.htm.</li>
+<li>Торпедные катера типа Комсомолец[EB/OL]. https://ru.wikipedia.org/wiki/Торпедные_катера_типа_Комсомолец.</li>
+</ul>
+<p>本文作者：飞荇猪，微信公众号“这才是战争”加盟作者，未经作者本人及微信公众号“这才是战争”允许，不得转载，尤其是最不要脸的铁血网，违者必追究法律责任
+公众号作者简介：王正兴，原解放军某野战部队军官，曾在步兵分队、司令部、后勤部等单位任职，致力于战史学和战术学研究，对军队战术及非战争行动有个人独到的理解。其著作《这才是战争》于2014年5月、6月，凤凰卫视“开卷八分钟”栏目分两期推荐。他的公众号名亦为“这才是战争”，欢迎关注</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-navy/torpedo-boat-158-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-navy/torpedo-boat-158-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

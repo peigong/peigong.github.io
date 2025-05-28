@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>后掠翼 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-fighter/f1-fighter-5.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="后掠翼"><a class="header" href="#后掠翼">后掠翼</a></h1>
+<p>早期的飞机一般都采用平直翼，当随着飞行速度的提高，飞机会在高速俯冲时因解体而坠毁。后来，科学家们发现飞行速度接近音速时，飞机会遇到极大的激波阻力。这时，飞机要么速度难以再提高，要么承受不住巨大的冲击力而粉身碎骨。为了克服和减小激波阻力，人们一改平直的机翼形状，提出了后掠翼设计方案。</p>
+<p>后掠翼就是前缘和后缘均向后掠的机翼，表征机翼后掠程度的指标是后掠角，即机翼前缘与水平线的夹角。后掠翼的气动特点是可增大机翼的临界马赫数，推迟激波的到来，并减小超音速飞行时的阻力。后掠翼的出现是机翼形状的一次重大变革，对飞机发展产生了极大影响。</p>
+<h2 id="后掠翼的优点"><a class="header" href="#后掠翼的优点">后掠翼的优点</a></h2>
+<h3 id="降低飞行阻力"><a class="header" href="#降低飞行阻力">降低飞行阻力</a></h3>
+<p>飞机前行的时候，飞机对前方空气产生压力，压力波以声速一层一层地向外传递，声速是空气性质的分界线。亚声速飞行时，前方空气在压力波推动下有序地向两侧让开飞机。然而，当飞机速度达到声速时，压力波不再可能赶在飞机前面把前方空气有序地向两侧分开。相反，压力波挤到一起，密度剧增，这就是所称的激波。激波的锋面在正好是声速的时候是平直的。随着速度的增加，激波的锋面变成圆锥形，锥的后倾角度随速度增加而增加，锋面背后的空气重新回到亚声速。如果平直的机翼后掠，“躲”到机头引起的激波锋面的背后，就可以避免机翼本身引起的激波阻力。</p>
+<p>事实上，后掠翼避免机翼本身引起激波阻力的作用在飞机速度还没有达到超声速时已经体现出来了。机翼是通过对上表面气流加速以形成上下表面气流的速度差、进而导致压力差而产生升力的。当垂直于机翼前缘的气流流速接近音速时，机翼上表面局部地区的气流受凸起的翼面的影响，其速度将会超过音速，出现局部激波，从而使飞行阻力急剧增加。采用后掠翼的话，迎面气流按后掠角分解成垂直于机翼前缘的分量（法向分量）和平行于机翼前缘的分量（展向分量），法向分量产生升力，展向分量不产生升力。后掠角等于零时，法向分量和迎面气流相等；后掠角越大，法向分量越小。因而与平直机翼相比，只有在更高的飞行速度情况下才会出现激波(即提高了临界马赫数)，从而推迟了机翼面上激波的产生，即使出现激波，也有助于减弱激波强度，降低飞行阻力。</p>
+<h2 id="后掠翼的问题"><a class="header" href="#后掠翼的问题">后掠翼的问题</a></h2>
+<h3 id="翼尖失速"><a class="header" href="#翼尖失速">翼尖失速</a></h3>
+<p>翼尖先失速的原因，有两方面。一方面，在机翼上表面的翼根部分，因翼根效应，平均吸力较小；在机翼上表面的翼尖部分，因翼尖效应，平均吸力较大。于是，沿翼展方向，从翼根到翼尖存在压力差。</p>
+<p>这个压力差促使附面层内的空气向翼尖方向流动，以致翼尖部分的附面层变厚，动能损失较多，容易产生气流分离。另一方面，由于翼尖效应，在翼尖部分的上表面前段，流管变细，吸力增大；而在上表面后段，流管变粗，吸力减小。于是，翼尖上表面的后缘部分与最低压强点之间的逆压梯度增大，这就增强了附面层内空气向前倒流的趋势，容易形成气流分离。由于上述两方面原因，当迎角增大到一定程度，机翼上表面的翼尖部分首先产生气流分离，形成翼尖先失速。</p>
+<p>翼尖失速后，轻则左右机翼失速程度不对称，飞机自动倾转，重则突然上仰然后整机下坠。飞机起飞或降落阶段机头抬起，迎角比较大，离地又不高，出现翼尖失速是致命的问题。因此，必须采取附加的气动布局措施，如机翼几何扭转、设置翼刀、减小后掠翼翼尖部分的后掠角、机翼前缘锯齿和缺口等。</p>
+<h3 id="升力效率较低"><a class="header" href="#升力效率较低">升力效率较低</a></h3>
+<p>后掠翼相对于平直翼来讲在亚声速时升力效率较低，因为当自由流吹过后掠翼时由于展向分速，总速度被分解掉了一部分，实际有效的法向分速就降低了，升力也降低了。此外后掠翼的临界迎角就比平直翼小，当后掠翼达到临界迎角时，其最大升力系数就小于平直翼的最大升力系数。</p>
+<h3 id="扭转刚度差"><a class="header" href="#扭转刚度差">扭转刚度差</a></h3>
+<p>后掠翼扭转刚度差，在相同的展弦比和梯形比下，后掠翼的真实长度比平直翼长，垂直于机翼刚度轴的弦较短，又采用了相对厚度较小的翼型，因此后掠翼显得细长而薄，弯曲刚度有所降低。后掠翼的气动合力作用点向翼尖靠近，使弯矩和扭矩增大。所以总的来说，后掠翼的强度、刚度特性都差，后掠角越大，这一问题越突出。后掠翼的制造比平直翼要麻烦，翼根不仅要承受机身重量带来的应力，还要机翼上扬造成的向前扭转的应力，需要大大加强结构，带来较大的重量。</p>
+<h3 id="后掠效应"><a class="header" href="#后掠效应">后掠效应</a></h3>
+<p>后掠翼根部由于纵向元件长度不同，因而前缘纵向元件受力减小，后缘纵向元件受力增大。这种载荷向后缘集中的现象叫做“后掠效应”。后掠角越大，后掠效应越严重。</p>
+<h2 id="后掠翼的诞生历史"><a class="header" href="#后掠翼的诞生历史">后掠翼的诞生历史</a></h2>
+<p>在人类有动力飞行的前40年里，一般飞机都采用直机翼设计。第二次世界大战过后，后掠翼异军突起，成了高速飞机普遍采用的机翼形式。在一些人看来，似乎是战争才使航空技术获得了较大的发展，事实上并非如此，早在1935年，关于后掠翼的设想在一个人的脑子里就已经孕育出来了。这个人就是阿道夫·布兹曼(Adolf Buseman)，当时他还是德国德累斯顿的一个年轻学者。那时候，地球上很多地方都是一片萧条景象，但年轻的布兹曼踌躇满志，正在为“给飞机插上后掠翼”，让人类飞行得更快，而不懈地努力着……</p>
+<p>第一次世界大战后的15年，飞机设计突飞猛进，其间涌现出了不少胆识超群的飞行员和想象力极为丰富的飞机设计师。是他们使世界上的飞机飞得更高、更远和更快：飞机的飞行高度延伸到了同温层；能做不着陆的洲际飞行，先是飞越大西洋，而后是太平洋;伴随着国际性空中竞赛，飞机的速度记录日新月异，其中“施奈德杯”(chneider Cup)是当时为世界航空工业竞争而专门设立的奖项，1920年夺得此奖的飞机时速为167公里，而到了1931年，当英国飞机第三次蝉联此项比赛的胜利时，其时速已达547公里了。随着飞行事业的发展，针对飞机的各种学术研究也逐渐受到重视。</p>
+<p>布兹曼在德国领导研究后掠翼时，他们很快就发现了：当飞机的飞行速度达到比较高的速度后，翼面会出局部超音速流，后掠翼可以推迟局部超音速流的出现，对提高飞机的飞行速度，具有很重要的应用价值，尤其对军事航空来说意义更大。于是，在后掠翼提出一年后，德国军方就将其纳入了秘密研究计划。从此，布兹曼也在世界航空界的公共场合中消失了。</p>
+<p>由于后掠翼的应用价值已被认识，为了保密起见，布兹曼的研究所被秘密地迁到了隐蔽性非常好的不伦瑞克森林里。在这里，布兹曼和他的同伴们潜心工作，得出了大量关于后掠翼的风洞实验数据。实验表明：机翼后掠不仅在超音速和高亚音速时可减小阻力(波阻)、增加升力、使飞机突破“音障”变得容易，而且可大大提高飞机高速飞行时的稳定性。当时，德国的梅塞施米特( Messerschmitt)飞机公司的工程师们对这一研究成果感到异常兴奋，他们准备立即将其应用于军用飞机上。</p>
+<p>第二次世界大战期间，德国人成功地将后掠翼技术应用到了世界上最早的喷气式战斗机Me一262和最早的实用火箭飞机Me一163上。到战争末期，经过多次改进的Me一262飞机的机翼后掠角达到了45度。Me一163飞机甚至只有后掠的主机翼，没有水平尾翼，这实际上就是后来出现的三角翼飞机的前身。从现代超音速理论的观点来看，这两种飞机的设计都是成功的，只是由于当时德国军飞行员对其性能和驾驶不熟悉，使其未能在空战中表现出较大的优势，因而未对战争产生重大影响。但是，在当时的作战飞机中，这两种飞机的速度是很高的，曾引起盟军飞行员的关注。早在1941年的最初几次飞行中，Me-163的飞行速度就超过了998公里/小时(马赫数0.84)，这在当时是最快的飞机，只是由于保密，这一速度记录未能被国际航联所承认。</p>
+<p>二战结束后，布兹曼及其同事一起离开了不伦瑞克，也离开了家人，被盟军带到了英国逗留了九个月左右。美国人充分认识到布兹曼这个人才的巨大价值，聘请他到弗吉尼亚的NACA(即NASA—美国航空航天局的前身)兰利研究中心工作，不久他的家属也被接往美国。为了让世界航空界了解阿道夫·布兹曼的存在，美国人在加拿大专门为他安排了一次公开露面的机会。</p>
+<p>在战后的混乱日子里，所有盟国的军队都在搜寻布兹曼的研究成果，包括后掠翼的实验数据和其它资料等，一旦发现，便迫不及待地被抢劫一空。</p>
+<p>二战以后不久，苏联人很快将搜集到的数据和资料派上了用场，著名的米高扬飞机设计局借鉴于布兹曼的后掠翼研究成果，研制出了米格-15喷气式后掠翼战斗机。美国人则利用布兹曼的数据对直机翼的FJ-1进行了重新设计，最后变成了北美公司的F-86“佩刀”后掠翼战斗机，该机的机翼可以说完全是Me-262的翻版。</p>
+<p>这两种后掠翼飞机都在1947年进行了首次飞行，但米格-15飞机由于保密而不为人知，直到它出现在朝鲜战场后才引起轰动，舆论哗然。当米格-15参战的消息见诸报端后，西方的一些航空权威竟然不敢相信，在一段时期内他们还以为米格-15是出自于德国工程师之手。米格-15的问世，在世界航空史上曾产生过前所未有的冲击。后发展了多种型别，共生产了15000多架飞机，是世界上产量最大的著名战斗机之一。</p>
+<p>应该说，当时的苏联人是最大限度地利用了布兹曼的成果和数据，而美国人则是拥有了布兹曼本人。双方的成果—米格-15和F-86--一后来成了朝鲜战场上的对手，并在空中展开了你死我活的较量。这两种飞机的出现代表着战斗机一个新时代的开始，它们的飞行速度都达到了1094公里/小时。据介绍，F-86的是最大飞行速度达到过1152公里/小时。</p>
+<p>米格-15和F-86的成功应用，标志着布兹曼的后掠翼技术得到认可。此后，后掠翼被世界上所有的高速飞机所采用，几十种、几百种，无人计数。后掠翼成了飞行器突破“音障”的重要“功臣”之一(另一个是喷气式发动机)，后来又成了超音速飞机的代名词，阿道夫·布兹曼功不可灭。</p>
+<p>从上面的介绍不难看出，后掠翼的诞生是曲折的、近乎戏剧性的，但后来的应用和发展却是顺利的、有条不紊的。开始是所有的超音速飞机和高亚音速飞机都采用后掠翼，后来在此基础上发展了三角翼、变后掠翼和不对称的斜机翼等。三角翼是后掠翼的自然衍生物，它可以改善机翼的升阻比特性，同时有利于飞机的结构设计、提高机翼强度和增加翼内可利用空间。可变后掠翼可随飞机速度、高度等飞行状态调节机翼的后掠角大小，以获得最佳飞行效果，兼顾高低速飞行的需要。今天，后掠翼技术仍在不断发展，如美国的NASA多年来一直在对斜翼机、前掠翼等形式进行探讨和试验，并做出了试验机，取得了一些成果。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-fighter/f1-fighter-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../TestPilots/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-fighter/f1-fighter-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../TestPilots/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

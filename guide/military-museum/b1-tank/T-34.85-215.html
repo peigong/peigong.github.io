@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>英雄的215坦克 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-tank/T-34.85-215.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="英雄的215坦克"><a class="header" href="#英雄的215坦克">英雄的215坦克</a></h1>
+<p>这辆中国人民志愿军215号坦克是苏联造T-34/85中型坦克。1953年7月，该坦克全体成员以机智勇敢的战斗动作，创造了单车突袭，击毁敌人重型坦克3辆的光辉战例，有力地支援了石砚洞北山防御部队的作战。</p>
+<p>这辆坦克在抗美援朝战争期间，共击毁敌人重型坦克5辆，击伤1辆，击毁化学迫击炮9门、汽车1辆，摧毁敌地堡26个，坑道和指挥所各一个，出色地完成了7次配合步兵作战任务。为此，中国人民志愿军领导机关授予215号坦克“人民英雄坦克”光荣称号，全体乘员记集体特等功，车长杨阿如荣立一等功，获二级战斗英雄称号。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：5人</li>
+<li>武器装备：85毫米火炮1门  7.62毫米机枪2挺</li>
+<li>装甲厚度：18至90毫米</li>
+<li>火炮射速：3至4发/分</li>
+<li>发动机最大功率：368千瓦</li>
+<li>最大速度：55千米/时</li>
+<li>最大行程：300千米</li>
+<li>最大爬坡度：30度</li>
+<li>越壕宽：2.39米</li>
+<li>涉水深：1.3米</li>
+<li>通过垂直墙高：0.79米</li>
+<li>全重：32吨</li>
+</ul>
+<h2 id="215号坦克"><a class="header" href="#215号坦克">215号坦克</a></h2>
+<p>215号坦克是一辆苏制T-34-85型坦克，乘员5人，车长杨阿如、炮长徐志强、驾驶员陈文奎、装填手兼预备炮长师凤山、无线电员许世德。</p>
+<h3 id="历史事件"><a class="header" href="#历史事件">历史事件</a></h3>
+<p>1953 年7月，中国人民志愿军开始了夏季反击战役。在石砚洞北山某高地上，敌人的3辆坦克严重的威胁着志愿军的阵地，必须先拔掉这颗钉子。这个光荣而艰巨的任务就交给了某部2排排长兼215号坦克车车长杨阿如。上级指示他务必在8日晚9点30分之前消灭346高地上的3辆敌军坦克，配合步兵争夺石岘洞北山。</p>
+<p>7日夜里，杨阿如奉命率3辆坦克，冒着暴雨开赴前线。前进的道路泥泞不堪，在距敌人1200多米的地方，215号坦克陷进了泥坑里，战士们迅速跳下车，进行抢挖，可是坦克还是一动不动。怎么办？杨阿如及时向指挥所报告了情况。了解到215号的处境后，指挥所断然下达命令，陷在泥里也要打！这3辆坦克对反击部队威胁极大，在战斗发起前5分钟内必须消灭掉。接受命令后，他们当即决定，后边两辆坦克先退回去，由215号坦克单独承担这项艰巨的任务。此时，天色已晚，夜幕成了最好的保护网。大家分头找来了各种草木，用泥土将215号坦克隐蔽的像小山丘一样。战士们躲在坦克掩体里，对敌人的3辆坦克进行认真观察。次日度过了漫长的白天，敌人丝毫没有发觉。</p>
+<p>黄昏时分，车长指挥215号坦克开火了，连续准确地射击，击毁敌人的M26坦克2辆，击伤1辆，完成了消灭敌人坦克的任务。</p>
+<p>趁着夜色，他们马上把215号坦克隐蔽起来。第二天，敌人的炮火更加猛烈了，硝烟和焦土笼罩着阵地。坦克上所有的窗门都关起来，偶尔只能打开驾驶窗，呼吸一点新鲜空气。无线电员、炮长、驾驶员相继昏倒了。指挥所要求他们留下两个人，把其他人员撤下去。可谁也不肯离队。就这样全体乘员以顽强的毅力，坚守在215号坦克上，共同度过了生死攸关的两天两夜。</p>
+<p>紧张的抢救坦克工作开始了。排障救车的关键是伐木。只有把路垫好了，坦克才能开出来。已经十分疲惫的乘员们为了躲避敌机的轰炸，先将自己伪装起来。把泥和草捆在身上，然后爬到几百米以外的山上把被敌人炮火炸断的树干，用绳子栓住，然后捆在腰上往回拖，有时连滚带爬，就这样冒着敌人的炮火往返数次，终于在临近傍晚时聚集了70多根木头，垫平了道路。</p>
+<h3 id="战斗的胜利"><a class="header" href="#战斗的胜利">战斗的胜利</a></h3>
+<p>他们马不停蹄地开始紧张的炮击准备工作，驾驶员陈文奎整理弹壳，炮长许世德检查弹头，预备炮长师凤山担任炮长射击。战斗打响了，师凤山以准确的技术，仅用了11分钟，以44发炮弹的代价，击毁敌M26坦克2辆，地堡12个，机枪巢3个，小口径炮3门。就这样215号坦克的乘员们在坦克陷入困境的情况下，不畏艰难、沉着应战，顽强坚持战斗3天3夜，并胜利地完成战斗任务，安全地撤回了后方。在英雄坦克的有力配合下，志愿军最终完全控制了石岘洞北山阵地。</p>
+<h3 id="功勋"><a class="header" href="#功勋">功勋</a></h3>
+<p>215号坦克在抗美援朝战争中，共击毁敌M26坦克5辆、击伤1辆、摧毁地堡26个、击毁敌迫击炮9门、坑道和指挥所各1个、汽车1辆，出色地完成了七次配合步兵的作战任务。为此，中国人民志愿军总部授予215号坦克“人民英雄坦克”光荣称号，全体乘员记集体特等功一次，车长杨阿如荣立一等功、获二级战斗英雄称号。陈文奎和师凤山记二等功一次，徐志强记三等功一次。</p>
+<h2 id="英雄的215号坦克"><a class="header" href="#英雄的215号坦克">英雄的215号坦克</a></h2>
+<blockquote>
+<p>原文：<a href="http://www.81.cn/zt/2020nzt/zhjc_196723/gxzb/9828308.html">英雄的215号坦克</a></p>
+</blockquote>
+<p>这辆Т-34/85中型坦克，原隶属于中国人民志愿军坦克第1师，编号“215”号。炮管上清晰可见的6颗红星，记载着这辆英雄坦克的辉煌战绩。在抗美援朝战争期间，该坦克先后击毁敌坦克5辆，击伤1辆，击毁敌迫击炮9门，汽车1辆，摧毁敌地堡26个，坑道和指挥所各1个，7次配合步兵作战。为表彰他们的战功，志愿军领导机关授予215号坦克“人民英雄坦克”的光荣称号，为全体乘员记集体一等功，车长杨阿如荣立一等功，获二级战斗英雄称号，陈文奎、师凤山记二等功一次，徐志强记三等功一次。1953年10月，朝鲜民主主义人民共和国最高人民会议常务委员会授予车长杨阿如“二级自由独立勋章”。</p>
+<p>该坦克乘员5人，车长8.1米，车宽3米，车高2.74米，装甲厚度18～90毫米，战斗全重32吨，发动机功率368千瓦，最大时速55千米/小时，最大行程300千米，装备85毫米火炮1门，7.62毫米机枪2挺。</p>
+<p>该型坦克由苏联哈尔科夫坦克厂生产制造，1940年1月装备苏军，有10种改进型号，最主要型号为Т-34/76和Т-34/85中型坦克。</p>
+<h2 id="看英雄坦克手如何出奇制胜"><a class="header" href="#看英雄坦克手如何出奇制胜">看“英雄坦克手”如何出奇制胜</a></h2>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s?__biz=MjM5MTE2NDUwMA==&amp;mid=2657313505&amp;idx=1&amp;sn=cb3d023bbe506fc798bfafc8d3ba2c0a&amp;chksm=bd2e73da8a59facc926ba9131bc338efb24384ee8aca4265ce62a02d22db9dd84e5c7ab2f803&amp;scene=27">抗美援朝战场上，它击毁5辆敌重型坦克！看“英雄坦克手”如何出奇制胜</a></p>
+</blockquote>
+<p>1962年，八一电影制片厂拍摄了战斗故事片《英雄坦克手》，影片讲述志愿军装甲兵215号坦克的英雄坦克兵，在抗美援朝战争中屡建奇功的故事。215号坦克先后击毁美军坦克5辆，击伤1辆，被中国人民志愿军总部授予“人民英雄坦克”的光荣称号。在中国人民革命军事博物馆，至今存放着这辆编号为“215”饱经炮火硝烟的苏制T-34坦克。215号坦克炮管上印有6颗红星，标志着该坦克曾经的辉煌战绩。</p>
+<p>其实，“215号”英雄坦克只是志愿军装甲兵的一个缩影。</p>
+<p>1950年10月，中国人民志愿军首批入朝参战部队中，还看不到坦克的身影。那时我军装甲兵作为一个独立兵种刚刚成立，力量还很薄弱，共有2个师零1个团，400余辆坦克，主要是解放战争中缴获的美制M3A3轻型坦克和日制97式中型坦克，这些坦克性能较差，磨损严重，缺乏零部件，多数已经难以有效使用。</p>
+<p>为适应朝鲜战场作战形势，1950年11月起，T-34中型坦克、IS-2重型坦克、SU-122自行火炮陆续装备中国人民志愿军参战部队。</p>
+<p>志愿军装甲兵部队于1951年3月开始入朝，首批入朝部队为坦克第1师（辖第1、第2团）、第2师第3团、第26师第53团，并由第1师师部组成志愿军装甲兵指挥所，7月开始参加作战。11月，坦克独立第1团入朝。1952年6月，坦克第3师率第5、第6团及第2师第4团入朝，并由第3师师部组成志愿军装甲兵指挥所，轮换首批入朝的坦克部队。1952年10月，坦克独立第2团入朝轮换坦克独立第1团。1953年1月，志愿军装甲兵指挥所改称装甲兵第1指挥所，负责指挥在正面战场作战的装甲兵部队。同时以坦克第1师师部和坦克第2师师部部分人员组成装甲兵第2指挥所，率坦克第1、第2团、独立第3团和战防炮兵第401团、坦克第2师炮兵团入朝，归志愿军西海岸指挥部领导，担负朝鲜西海岸抗登陆作战任务。</p>
+<p>志愿军装甲兵参加作战后，在正面战场上基本保持4个团160余辆坦克的兵力。在初期作战中，主要是集中使用，以连、排为单位，实施遮蔽阵地射击，压制所谓“联合国军”远射程炮兵，消灭其浅近纵深内集结的部队，摧毁其观察所、指挥所和通信枢纽。</p>
+<p>朝鲜境内河流纵横，山路崎岖，不利于坦克运动，而制空权又掌握在敌人手中，志愿军装甲兵面临严峻挑战。当时志愿军炮兵较少，为增大我远程炮兵的火力密度，装甲兵部队决定采用超越射击方式配合步兵作战。超越射击就是以坦克炮隔着遮蔽物，打击不能直接观察到的目标，临时充当支援火炮。</p>
+<p>1951年秋马良山战役，志愿军装甲兵大显神威。这次作战，坦克第1师第1团配属第64军。其中坦克第1团第2连是由人民装甲兵第一位“全国战斗英雄”董来扶亲自带领的。至9月上旬，坦克第1团已经通过间接瞄准射击方式压制和打击了敌军目标19次，支援步兵进攻5次。在实战中，我军装备的T-34坦克的85毫米坦克炮在数千米距离上仍具有较好的射击精度，而重坦克的122毫米加农炮有效射程更远。</p>
+<p>志愿军司令部在马良山作战总结指出：“根据经验，凡我有坦克之地区，敌坦克即不敢随便向我侧后迂回，给我作战有甚大便利。”担任主攻的第64军第191师致函坦克1团称赞：“你们以准确的射击技术，摧毁敌人坚固地堡，圆满完成任务，配合步兵取得辉煌战绩。”</p>
+<p>马良山战役的胜利，是志愿军第一次采取步兵、炮兵、装甲兵、工兵等诸兵种协同作战的经典战例，有力策应了临津江东岸第47军防御作战，确保了临津江西岸地区的安全，标志着志愿军完成了运动防御到阵地防御的转变。</p>
+<p>志愿军坦克部队在配合步兵作战的同时，不断摸索适于装甲兵部队作战的有效方法，坦克伏击战就是其中之一。阵地战阶段，敌人的坦克侦察群和游动的坦克经常在我军阵地前骚扰。为了避免敌飞机和火炮攻击，装甲兵就在我阵地前沿、敌坦克必经要道两侧、隘路口、道路交叉口等处，构筑掩体坑道工事，利用夜间占领阵地，严密伪装。发现敌坦克后，志愿军冷静掌握有利射击时机，把敌人的坦克放到最有效的射击距离内（通常是500至1500米），一举击毁。</p>
+<p>采取抵近射击的方法，参加防御和反击作战，先后参加1952年秋季战术反击作战、1953年春季反登陆作战准备和夏季反击战役。</p>
+<p>在1953年6月进行的石岘洞北山战斗中，志愿军坦克第4团配属第23军对防守石崛洞北山的美军和防守281.2高地之南朝鲜军实施反击，在10多天的战斗中出动坦克25辆次，作战11次，击毁敌坦克14辆、击伤4辆，摧毁敌地堡67个、火炮11门，配合步兵完成了进攻任务。在1953年7月进行的金城战役中，志愿军坦克部队以20辆坦克协同步兵参加了进攻作战。</p>
+<p>自1951年3月至1953年7月，入朝参战的装甲兵部队先后有坦克第1师、坦克第3师全部和坦克第2师大部，坦克独立第1、2、3、6团和4个师属坦克自行火炮团，共14个坦克团、2个炮兵团、1个摩托步兵团、3个高炮营、2个工兵营。抗美援朝战争中，我志愿军装甲兵部队在没有制空权、装备数量处于绝对劣势（坦克数量最多时仅为所谓“联合国军”的七分之一）的情况下，不畏强敌，采取灵活机动的战法，共参战246次，出动坦克998次，配合步兵消灭“联合国军”的有生力量，共击毁击伤坦克74辆，击毁火炮20门，摧毁地堡864个。高炮分队对空作战1200余次，击落敌机109架，击伤460架，涌现了大量的英雄人物和先进集体，荣立一等功14人，荣立二等功229人，荣立三等功5313人，有197个单位荣立集体功，其中，战绩突出、堪为楷模，被志愿军总部授予荣誉称号的有：“功勋战车”（志愿军第16军第46师坦克团第1连104车）、“人民英雄坦克”（志愿军装甲兵坦克第2师第4团第2连215车）、“战功车”（志愿军第16军第46师坦克团第5连501车）。</p>
+<p>215号坦克共击毁敌M46坦克5辆、击伤1辆、摧毁地堡26个、击毁敌迫击炮9门、坑道和指挥所各1个、汽车1辆，出色地完成了七次配合步兵的作战任务。1953年7月30日，中国人民志愿军总部授予215号坦克“人民英雄坦克”光荣称号，全体乘员记集体特等功一次，车长杨阿如荣立一等功、获“二级战斗英雄”称号。</p>
+<p>致敬，中国人民志愿军装甲兵！</p>
+<h2 id="英雄坦克手"><a class="header" href="#英雄坦克手">英雄坦克手</a></h2>
+<blockquote>
+<p>原文：<a href="http://m.people.cn/n4/2020/0914/c36-14419105.html?from=singlemessage">英雄坦克手</a></p>
+</blockquote>
+<p>中国人民革命军事博物馆展厅内，一辆坦克威严伫立。坦克长8.15米、宽2.99米、高2.74米，战斗全重32吨，炮塔上印着编号215，炮管上印有红色五角星，解说词上标注着：英雄的215号坦克。</p>
+<p>深受影迷喜爱的经典战争电影《英雄坦克手》，讲述了志愿军坦克手不畏强敌、英勇作战，为战友们打通出击道路的感人故事。片中主角坦克的原型，就是曾在抗美援朝战争中立下战功的人民英雄坦克215号。</p>
+<p>1953年，中国人民志愿军开始了夏季反击战役。志愿军坦克2师坦克4团2连215号坦克，受命潜入石岘洞北山南侧，消灭346.6高地上的3辆敌军坦克。</p>
+<p>此时，志愿军坦克部队还是一支年轻部队，作战经验不足，在人员训练和装备数量上都无法与“联合国军”正面抗衡。在这样极不对称、极为艰难的条件下，新生的坦克部队弘扬革命英雄主义精神，英勇顽强、舍生忘死，经过艰苦卓绝的战斗，多次成功反制敌军坦克，有效支援步兵作战。215号坦克就是最有力的证明。</p>
+<p>1953年7月6日，215号坦克冒着敌人的炮火，在夜色和大雨的掩护下，缓缓朝着预设阵地前进。通向阵地的是一条只够一辆坦克通行的道路，那是工兵们冒着炮火花了20多个夜晚，用泥土、木料和石头铺成的。</p>
+<p>距离目标阵地不到300米，坦克突然遇到弹坑，猛地颠簸起来。驾驶员陈文奎加大油门想冲过去，坦克吼了几声，向上一挺，半斜起车身，接着又向下一沉，无法动弹了。</p>
+<p>排长杨阿如立即指示联系工兵，同时组织展开自救。工兵赶到后即刻投入救援，然而到了后半夜，坦克仍无法驶出弹坑。战士们用树枝、藤条和泥巴把坦克伪装成一个大土包，炮长徐志强将炮管摇向车后，使它看起来“像一根靠在土包上的木头”。</p>
+<p>“首长批准就地开炮。”7月7日，命令传来。这时，敌人的坦克就在346.6高地的主峰上，侧面正好朝着215号。徐志强根据杨阿如的指引，提前标定好密位。</p>
+<p>黄昏时分，大家各就各位，瞄准第一辆敌军坦克，连续发射3枚穿甲弹，目标被击中燃烧起来，大火照亮了高地。另两辆敌军坦克反应过来，慌乱开始还击，敌人的炮弹不断落在215号周围。但215号毫不畏惧，连续发射5发炮弹，第二辆敌军坦克燃起大火。坦克手们越战越勇，第三辆敌军坦克也被击中。</p>
+<p>据专家分析，被击毁的3辆M46坦克是二战后美军研制的，火炮口径90毫米，正面装甲超过100毫米。而215号坦克是苏联二战前研制的T-34坦克改进型，火炮口径85毫米，正面倾斜装甲厚度才60毫米。</p>
+<p>“敌人武器比我们还先进，为啥他打不胜咱，咱能打胜他？”多年后，年迈的坦克预备炮长兼装填手师凤山接受采访时说，在艰苦而危险的环境中鼓足一口气打败强敌，是因为“大家有着保家卫国的信念，心中充满了对祖国的热爱”。</p>
+<p>三辆坦克被端后，高地上敌人的炮火更加密集地袭来。215号坦克依旧无法动弹，随时可能被敌军击中，处境十分危险。当时情形下，弃车是最安全的选择。但英雄坦克215号做出了另一个选择。“人不能离武器，就是死在这儿，也不能离开坦克。”年迈的师凤山回忆往事仍然语气坚定。</p>
+<p>7月8日，敌军的飞机和地面炮火对山下空地进行轰炸，弹片和石头不断落到215号坦克上。笼罩坦克的硝烟从缝隙钻进来，使人难以呼吸。炽热的太阳烤着坦克，舱内就像一个大闷罐，战士们又饿又渴，有人甚至出现昏迷症状。师凤山自告奋勇外出找水，刚掀开坦克舱盖，敌人的一排炮弹就打了过来。他猛跑到河边，成功给战友们带回了水。</p>
+<p>突然，346.6高地再次传来坦克的炮声，又有两辆敌军坦克出现在高地上。上级指示：明晚9点击毁它们。为把坦克救出弹坑，坦克手和工兵们一起挖泥土、搬石头、运木料，敌人的冷炮不停在周边落下，石头划破了双手……大家全然不顾，没有一个人喊苦喊累，没有一个人害怕退缩。</p>
+<p>7月9日夜，215号坦克重新点火，在轰鸣声中开出弹坑，很快到达新的射击阵地。坦克手们转动炮塔，瞄准敌军坦克开炮。两辆敌军坦克还没来得及还手，就被干掉了。215号身陷险境绝地反击，一连摧毁击伤敌军5辆坦克，有力配合志愿军步兵作战，并最终占领石岘洞北山阵地。</p>
+<p>资料显示，在抗美援朝战争中，215号坦克除击毁击伤6辆敌军坦克外，还摧毁地堡26个、击毁敌迫击炮9门、坑道和指挥所各1个，出色地完成7次配合步兵的作战任务。中国人民志愿军总部授予215号坦克“人民英雄坦克”称号。</p>
+<p>“打仗是一口气。咱心里不害怕，一打一个准，一害怕一哆嗦，就打不准了。”师凤山说。为了完成祖国和人民赋予的使命，英雄坦克打出了敢于斗争、敢于胜利的英雄精神和大无畏的英雄气概。</p>
+<p>精神的力量穿越时空。“抗美援朝战争继承和弘扬了中国共产党和中国人民军队的革命精神，奠定了新中国发展进步的重要基础，是中华民族从此站立起来的重要象征。”中国人民大学中共党史党建研究院耿化敏教授认为，215号坦克凝聚着的英勇顽强、舍生忘死的革命精神，永远是中华民族伟大复兴进程中的宝贵财富和精神动力。</p>
+<h2 id="坦克英雄杨阿如"><a class="header" href="#坦克英雄杨阿如">坦克英雄杨阿如</a></h2>
+<blockquote>
+<p>原文：<a href="https://www.zjhy.gov.cn/art/2020/11/4/art_1622104_59015907.html">坦克英雄杨阿如</a></p>
+</blockquote>
+<p>70年前，中国人民志愿军雄赳赳、气昂昂，跨过鸭绿江，开始了伟大的抗美援朝战争。</p>
+<p>为铭记历史、缅怀先烈，解放军报微信将陆续推出“纪念中国人民志愿军抗美援朝出国作战70周年•文物背后的故事”系列文章，一起回顾那段英雄岁月。</p>
+<p>中国人民革命军事博物馆展区内，静静地伫立着一辆T-34型坦克。聚光灯下，一身军绿的它显得沉稳、庄重。岁月的气息悄然弥漫开来，这让它前伸的炮管上那六颗红五角星格外引人瞩目。这就是被中国人民志愿军总部授予“人民英雄坦克”称号的215号英雄坦克。</p>
+<p>1953年，中国人民志愿军开始了夏季反击战役。同年7月，我坦克第2师第4团2连在夏季反击战役中担任主攻美军石砚洞北山阵地的作战任务。战斗中，敌军在石砚洞北山346高地派出3辆M46坦克，像是插入志愿军阵地的一颗钉子，对我方造成严重威胁。志愿军独立坦克第4团2连2排排长兼215号坦克车长杨阿如受领了“拔钉子”的任务：在7月8日晚9时30分前消灭高地上的3辆敌军坦克，配合步兵争夺石砚洞北山。</p>
+<p>向预定阵地开进那日，正值雨季，许多巨大的弹坑都被积水掩盖。7日夜，杨阿如和车组成员冒着暴雨开赴前线，3辆坦克驶入一片开阔的泥泞地时，崎岖难行。一发炮弹突然在215号坦克正前方落下，泥地瞬间被炸出一个大坑。驾驶员陈文奎立即刹车，但为时已晚，巨大的惯性把坦克带进了深坑，淤泥漫过挡板，动弹不得。</p>
+<p>此处距敌阵地仅千余米，不易隐蔽，情况万分危急！弃车求存还是拼死一搏？杨阿如与战友们毅然选择了后者。杨阿如和战友们跳下战车，垫木头、挖泥土，用尽办法，但重达32吨的坦克依旧动弹不得。新命令很快下达：其他2辆坦克先行撤退，由215号坦克单独承担消灭敌坦克任务。</p>
+<p>如此作战环境，要想完成任务，难度可想而知。在夜色掩护下，坦克手们再次跳下战车，用泥土、碎石、草木将坦克伪装成一个小土包。为使其更加逼真，他们抹平了周围20米内履带碾压的痕迹，摆正了几株被撞倒的植被……</p>
+<p>高地上的敌军似乎有所觉察，对这片开阔地的炮击更加猛烈、密集。伪装后的215号坦克门窗紧闭，车内闷热不堪。没有食物，也没有水，大家咬紧牙关继续对敌方阵地进行认真观察，仔细记录高地上敌军动态。</p>
+<p>8日黄昏，正当大家准备实施自救时，346.6高地上突然出现了敌人3辆坦克。如不马上将其消灭，我军防守北山的步兵将遭受重大损失。炮长徐志强迅速标定了敌人坦克的位置，只听杨阿如一声令下：“打！”轰轰几声巨响，几枚穿甲弹飞向敌坦克，敌一辆坦克顿时火光四溅。敌炮火迅速向我还击，215号坦克顽强应对，又是一阵连发，敌人的第二辆坦克也应声起火。剩下的一辆坦克见势不妙慌忙躲进掩体，215号又接连打出10多发爆破弹，把掩体炸得粉碎，敌坦克的炮身也被打成了两截。这使杨阿如他们更加坚信，只要战术运用得当，照样能以弱制强，取得胜利。</p>
+<p>一连摧毁、击伤敌3辆坦克后，215号坦克的方位暴露了，虽然敌步兵不敢擅动，但坦克周围爆炸声已四起。是丢下坦克撤退？还是等在原地挨炸？机智的驾驶员陈文奎想出一计，他迅速发动坦克，猛踩一脚油门，让发动机大声吼叫，然后慢慢降低油门，逐渐压低发动机声音，最后把坦克熄火，故意制造我方坦克已经撤出阵地的假象。敌人上当了，他们的炮火沿着坦克可能退却的道路，狂轰滥炸地延伸了2千多米。原地未动的215号坦克毫发未损。</p>
+<p>趁着夜色，大家再次利用地形把坦克伪装了起来，门窗几乎都被覆盖，只能偶尔打开驾驶窗，呼吸一点新鲜空气。由于缺氧，无线电员、炮长、驾驶员相继昏倒。指挥所允许只留下两个人，其他人员全部撤出。可谁也不肯离开。在重型装备紧缺的那个年代，坦克就是坦克兵的命根子，大家为了保住坦克宁愿把命拼上也都不肯离开，在狭小的空间里共同捱过了生死攸关的两天两夜。</p>
+<p>10日早上，215号坦克收到指挥所新命令：消灭敌方高地上新调进的2辆坦克。面对新的作战命令，已经十分疲惫的官兵以常人难以想象的顽强毅力再次行动起来。首先要把坦克开出来！他们把混合了泥土的草堆捆在身上，以躲开敌机侦察和狙击手偷袭，爬到几百米以外的山上寻找被炮火炸断的树干。经过了不知多少次往返，他们终于在临近傍晚时聚集了70多根木头，垫平道路，将坦克开出了弹坑。</p>
+<p>午夜，战斗打响，215号坦克仅用11分钟，就击毁敌M46坦克2辆、地堡12个、机枪巢3个、小口径炮3门。在215号坦克的有力配合下，志愿军最终控制了石岘洞北山阵地，实现了“人与装备最佳结合”的生动演绎。战后，志愿军总部授予215号坦克“人民英雄坦克”光荣称号，全体乘员记集体特等功。</p>
+<p>这只是215号坦克参加的众多战斗之一。有关资料显示，在抗美援朝战争中，车长杨阿如、炮长徐志强、驾驶员陈文奎、装填手兼预备炮长师凤山、无线电员许世德，驾驶215号坦克，共击毁敌重型坦克5辆、击伤1辆，击毁敌迫击炮9门、汽车1辆，摧毁敌地堡26个、坑道和指挥所各1个，出色完成7次步兵协同作战任务，战功赫赫。</p>
+<p>英雄本平凡，不平凡的是他们的精神和这种精神的赓续。回顾这段历史，人们不会忘记，杨阿如率领的班组和他们驾驶的215号坦克，更不会忘记215号坦克身上所承载的重大意义。</p>
+<p>（特别鸣谢中国人民革命军事博物馆）</p>
+<p>来源解放军报微信</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-tank/97-1945-11.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-tank/T-62.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-tank/97-1945-11.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-tank/T-62.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

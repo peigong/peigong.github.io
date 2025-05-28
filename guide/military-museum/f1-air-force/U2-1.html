@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>陈毅：用竹竿捅下来的 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-air-force/U2-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="陈毅用竹竿捅下来的"><a class="header" href="#陈毅用竹竿捅下来的">陈毅：用竹竿捅下来的</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1825103867760812650&amp;wfr=spider&amp;for=pc">“打不下来的U-2”被我军首次用导弹击落，陈毅：用竹竿捅下来的</a></p>
+</blockquote>
+<p>1962年9月9日，中国空军打破了“U-2侦察机无法被击落”的说法。</p>
+<p>当时的中国军方，被外界认为技术落后，空军装备不行，面对美国这样的超级对手，几乎没人认为我们能有所突破。</p>
+<p>可是，事实却打了一个响亮的耳光，陈毅在面对记者时笑着说：“我们是用竹竿捅下来的。”</p>
+<p>到底，这个简单的回应背后，隐藏着怎样的技术突破与军事博弈？</p>
+<p>美国的U-2侦察机，自1956年投入使用以来，几乎成为美国获取情报的利器。</p>
+<p>U-2的设计理念，是通过极高的飞行高度，躲避地面防空武器的追击，最初的设计高度，可以达到21,000米。</p>
+<p>面对U-2，中国空军显得毫无办法，美国利用U-2在中国上空的飞行，轻松地获取了大量情报，侦察活动，对中国来说无疑是一种巨大的威胁。</p>
+<p>几乎没有任何防空导弹，能够达到如此高的高度，更不用说击落它。</p>
+<p>在那个年代，中国的技术处于落后状态，防空力量薄弱。</p>
+<p>美国的高空侦察机，肆无忌惮地飞行，无人能阻挡，这种局面，没有让中国的军事指挥官们妥协。</p>
+<p>他们在艰难的条件下，开始寻找突破口。</p>
+<p>面对空中的U-2侦察机，地面防空的技术难题，成了所有人，都无法回避的难题。</p>
+<p>1961年，正值中苏关系遇冷时期，中国在技术和战略上，都面临着巨大的压力。</p>
+<p>西方对中国的敌意愈加明显，尤其是对中国核设施的监视。</p>
+<p>每一次U-2的飞行，都在向中国传递一种无形的威胁——无法摆脱掌控，美国通过U-2侦察机，收集情报，更是对中国的一种侮辱和威慑。</p>
+<p>中国的防空技术，曾被认为是“无法逾越的鸿沟”。</p>
+<p>这些侦察机，每隔一段时间，就能侦察到中国的军事动向，迅速将情报传递回美国。</p>
+<p>中国军方深感威胁，尤其是在经过了，朝鲜战争的洗礼后，形成了强烈的自我保护意识。</p>
+<p>面对U-2这种让人束手无策的高空侦察机，军方的防空专家们没有放弃，必须做出改变。</p>
+<p>为了应对U-2侦察机的威胁，中国开始着手发展地空导弹技术。</p>
+<p>中国的导弹技术起步较晚，刚开始时根本没有足够的技术储备，来面对美军先进的空中力量。</p>
+<p>中国利用有限的资源，不断进行实验，研发出了具有一定威胁的防空导弹。</p>
+<p>1960年，苏联向中国提供了萨姆-2型地空导弹，这是中国防空力量的一个重大突破。</p>
+<p>萨姆-2导弹被认为能够击落空中敌机，是对抗美军高空侦察机的关键武器。</p>
+<p>中国面临的一个问题，就是如何将这种导弹系统，成功部署到实际战斗中。</p>
+<p>萨姆-2型导弹的复杂性不言而喻，除了射程和精度的问题，还需要解决，操作人员的训练，和系统的协调问题。</p>
+<p>那时，中国的军事技术整体上，处于薄弱状态，很多人员的操作经验几乎为零。</p>
+<p>解放军的技术人员，积极学习苏联的导弹技术，同时加紧进行自主研发。</p>
+<p>萨姆-2导弹系统不是全然依赖外部的技术，包含了复杂的雷达锁定系统和火控设备，关键在于如何精准地，打击高空高速飞行的敌机。</p>
+<p>每一发导弹的发射，背后都是一次精密的计算与预测。</p>
+<p>目标速度、飞行高度、导弹的飞行轨迹、雷达锁定系统的稳定性……这些都决定了，导弹是否能够命中目标。</p>
+<p>在接下来的两年里，我军地空导弹部队，进行了大量的实战演习。</p>
+<p>每一次的发射，都成为中国防空力量的一次试炼。</p>
+<p>无数次的失败，无数次的尝试，积累了宝贵的经验，中国防空部队的技术人员和操作员们，从最初的不懂操作，到后来能够熟练掌握这些，高精尖的武器装备，每一次进步都让人惊叹。</p>
+<p>1962年，中国终于完成了对萨姆-2导弹系统的有效部署。</p>
+<p>导弹部队的成功建设，为后来的战斗提供了基础，而就在此时，U-2侦察机的频繁出现，激起了中国军方的强烈反应，中国空军，终于迎来了挑战美国的机会。</p>
+<p>U-2侦察机的威胁已经持续了数年，空中的美国侦察机，依然在中国上空肆意横行。</p>
+<p>中国的导弹部队，经过了长时间的训练和实践，终于可以迎接这场空中的挑战。</p>
+<p>所有的准备工作，所有的技术储备，都为了这一刻的来临。</p>
+<p>美国的U-2侦察机，进入了中国的空域，根据情报，U-2将在一天之内，多次飞过江西省鄱阳湖一带。</p>
+<p>导弹部队得到了指令，开始严密监视。</p>
+<p>在技术人员的指导下，操作员们进入了战斗状态，开始全程锁定目标，这一刻，所有的训练、所有的技术，最终都要付诸实践。</p>
+<p>1962年9月，U-2侦察机再一次飞越江西鄱阳湖的上空。</p>
+<p>中国的防空部队早已严阵以待，雷达屏幕上，敌机的身影逐渐清晰。</p>
+<p>指挥员冷静地观察着飞行轨迹，整整一个上午，雷达屏幕上都没有消失过，那架不断逼近的U-2侦察机的信号。</p>
+<p>它像一只无形的眼睛，悄无声息地扫过中国领土，收集着情报，监视着一切。</p>
+<p>这一次，导弹部队已经准备好迎接挑战。</p>
+<p>指挥员指挥下，操作员们开始调整，射击角度和发射准备，目光紧紧锁定着即将到来的目标。</p>
+<p>面对这架高空飞行的敌机，萨姆-2导弹的发射将决定一切。</p>
+<p>每一秒钟的等待都异常紧张，空气仿佛凝固了，导弹发射的瞬间，所有人的心跳几乎都停顿了。</p>
+<p>只见一条火龙划破天空，朝着远处的U-2侦察机扑去。</p>
+<p>导弹突破了云层，飞速接近，就在最后的几秒钟，导弹准确命中目标，U-2侦察机瞬间被爆炸吞噬。</p>
+<p>整个过程迅速而决绝，完全打破了美国，对中国防空能力的高估。</p>
+<p>中国的防空力量，得到了外界的认可，也让世界感受到了，中国军力的崛起。</p>
+<p>几十次的演习，数不清的测试，换来了这一刻的胜利，更重要的是，这代表着中国在国际舞台上自信的宣言。</p>
+<p>面对美国的超级武器，中国成功地迎头而上，打破了西方对中国军力的偏见。</p>
+<p>击落U-2的消息迅速传开，在国内外引起了轰动。</p>
+<p>中国军方的反应迅速而低调，既没有过多的庆祝，也没有做过多的宣传。</p>
+<p>陈毅在随后的记者会上，以一贯的幽默风格回应了外界的关注：“我们是用竹竿捅下来的。”这句话，瞬间成为了中国外交史上经典的名句。</p>
+<p>对于陈毅来说，这是一种自信的表达，在面对强敌时，能够从容自若、充满幽默感，既是一种外交技巧，也体现了中国在困境中，逆袭的决心和实力。</p>
+<p>陈毅的那句“用竹竿捅下来的”，显然让所有人都大吃一惊。</p>
+<p>在西方媒体和一些国际观察者眼中，中国一直处于技术落后的局面，无法与美国等军事强国抗衡。</p>
+<p>而这次成功击落U-2侦察机，却给了他们一个深刻的教训。</p>
+<p>中国能够打破外界的预期，更重要的是，拥有了足以捍卫自己领空的能力。</p>
+<p>陈毅的幽默回应背后，是中国自信的体现。</p>
+<p>陈毅以他独特的外交风格，将这种胜利转化为一种轻松的语言，让中国军力的崛起，更具震撼性。</p>
+<p>从战略角度来看，击落U-2侦察机，向外界展示了，中国日益增强的防空能力和技术实力。</p>
+<p>冷战期间，尤其是对抗美国的背景下，任何一次军事胜利，都会在全球产生连锁反应。</p>
+<p>U-2的击落，使世界重新审视中国的军事能力，也为中国的国防发展，树立了新的信心。</p>
+<p>中国，已经不再是那个任人轻视的国家，是一个有着强大实力的民族，能够捍卫自己的领土，保护自己的主权。</p>
+<p>在面对敌人的威胁时，中国不低头，迎难而上，创造了属于自己的奇迹。</p>
+<h2 id="参考资料"><a class="header" href="#参考资料">参考资料：</a></h2>
+<ul>
+<li>李伟. 《中国防空导弹发展史》. 北京：国防工业出版社, 2014.</li>
+<li>王建国. “U-2侦察机事件与中国防空技术的突破.” 《军事历史》, 第29卷, 第3期, 2017, 页码45-58.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-air-force/U2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-air-force/U2-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-air-force/U2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-air-force/U2-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

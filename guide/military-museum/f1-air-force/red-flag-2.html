@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国造红旗2号地空导弹 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-air-force/red-flag-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国造红旗2号地空导弹"><a class="header" href="#中国造红旗2号地空导弹">中国造红旗2号地空导弹</a></h1>
+<p>该型导弹是中国制造的第一代地空导弹，1966年3月开始装备部队，用于打击高、中空敌机和其它空中目标。</p>
+<p>1967年9月8日，人民空军地空导弹部队首次使用该型导弹在华东地区击落国民党空军美制U-2高空侦察机1架。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>有效射程：12至32千米</li>
+<li>作战高度：3至24.5千米</li>
+<li>目标最大飞行速度：420米/秒</li>
+<li>制导方式：无线电指令制导</li>
+</ul>
+<p>“红旗”2号地对空导弹是中国仿苏联萨姆-2导弹研制的导弹，其外形与萨姆-2地对空导弹相似，但在性能上作了21项技术改进。该导弹由二级火箭组成，一级火箭由固体燃料推进器、连接舱和稳定尾翼组成，用于起飞加速；二级火箭由战斗部、无线电引信、液体火箭发动机、导弹控制系统和弹体组成，用于续航飞行和击毁敌目标。1967年9月8日，人民解放军空军首次使用国产“红旗”2号地对空导弹在浙江嘉兴上空击落美制U-2高空侦察机。现收藏于中国人民革命军事博物馆。</p>
+<h2 id="红旗-2地空导弹强弓长箭射天狼"><a class="header" href="#红旗-2地空导弹强弓长箭射天狼">红旗-2地空导弹：强弓长箭射天狼</a></h2>
+<blockquote>
+<p>原文：<a href="http://www.mod.gov.cn/gfbw/gfjy_index/js_214151/4853804.html">红旗-2地空导弹：强弓长箭射天狼</a></p>
+</blockquote>
+<p>在今年盛大的国庆阅兵式中，“红旗”系列的多型导弹集体亮相。看着这些导弹威武的身形，无数国人为之欢呼雀跃，为之热血沸腾。</p>
+<p>自豪之余，也让人不由想起红旗-2地空导弹（下文简称“红旗-2”）。作为我国研制的首款地空导弹，红旗-2及其改进型的相继问世标志着我国的防空导弹已经由单纯的仿制走上自行研制的道路。50多年后，我们回望来路不难发现，正是因为有了红旗-2的成功研制与不断改型，此后一系列新型防空导弹的研制才有了坚实的技术与人才基础，我国的万里长空才有了不断刷新与升级的钢铁屏障，得以保持和平与安宁。</p>
+<p>如今，“红旗”系列的防空导弹已经涵盖了中远程、中高空到近程超低空的火力范围，形成了“红旗漫天”之势，成为我国防空力量的中流砥柱。</p>
+<p>在中国人民革命军事博物馆，有一架硕大的飞机残骸，那是上个世纪六十年代我军击落的U-2高空侦察机。残骸的旁边有标牌，标牌上有文字说明，提示参观者这架飞机残骸是由4架U-2高空侦察机残骸拼起来的。</p>
+<p>在U-2高空侦察机残骸不远的地方，静静地矗立着红旗-2。作为曾经击落U-2高空侦察机的“强弓”，此时的红旗-2通体已被刷成银白色，若不留心，很难在诸多展品之间发现它。但是，走近细看，就会发现它仍然保持着一种凌厉之势，犹如时刻就会腾空而起。</p>
+<p>如今，作为功勋兵器之一的红旗-2更像一个功成身退的老兵，精神矍铄却悄然无声。如果人们不去细细探问，很难知道它也曾经一飞冲天、建功苍穹。</p>
+<h3 id="名副其实的高端赶考"><a class="header" href="#名副其实的高端赶考">名副其实的“高端”赶考</a></h3>
+<p>红旗-2的前身是红旗-1，而红旗-1则是苏联S-75地空导弹的仿制产品。</p>
+<p>作为苏联第一代实用化的防空导弹系统，S-75地空导弹由拉沃契金设计局和“金刚石”中央设计局联合研制，最初目的是为了防范携带核弹的美英战略轰炸机对苏联主要城市实施核打击。</p>
+<p>从研制时间上看，这型导弹从1953年11月开始研制到1957年12月通过技术验收，前后用了4年多时间。如果不是苏联前期研制的S-25防空导弹系统为其提供了大量铺垫与经验教训，S-75地空导弹的研制时间可能还会更长。</p>
+<p>从研发的背景到初衷，从研发所用时间到研发者，无论从哪个方面来看，S-75地空导弹系统当时都属于高技术含量的高端兵器。</p>
+<p>此后的战绩也证实了这型防空导弹的性能与威力。从1958年起装备苏联国土防空军后，1960年5月苏军就用它在斯维尔德洛夫斯克附近击落U-2高空侦察机。</p>
+<p>而研制红旗-2则是要在这样的高起点上再进一步，通过自主研发，赋予红旗-1先前所不具有的抗干扰等多种能力。</p>
+<p>显然，这是一场名副其实的“高端”赶考，而且是一场迫在眉睫的赶考。</p>
+<p>当时，在我英勇的防空部队官兵接连击落美蒋U-2高空侦察机之后，对手采用了新改进的机载电子预警系统，该系统能在飞机被导弹锁定后指令干扰机自动发射干扰信号，成功躲开导弹攻击。</p>
+<p>如何使地空导弹重获高空摧毁U-2侦察机的能力？成了当时摆在我国导弹研发人员面前重大而紧迫的问题。</p>
+<p>不用去赘述研发红旗-2时我国研发人员所面临的重重困难。只要明白一点：研制红旗-2，是要对红旗-1和S-75地空导弹暴露出来的问题有针对性地加以改进，就可以知道其难度。</p>
+<p>以解决导弹抗干扰问题为例，研究人员夜以继日地分析试验。针对敌机预警系统发出的干扰信号比真实回波信号滞后0.3个微秒的特点，他们设计出一个“去伪存真”的电路，这个电路可以滤掉干扰信号，留下真正的敌机信号。随即，该电路被成功加入红旗-2武器系统中。而像这样的问题，在研发红旗-2的过程中，技术人员在性能上做了21项改进。</p>
+<p>从1965年开始研制，到1967年6月定型。两年多时间里，我国技术人员完成了一次大考。自主研制的红旗-2不仅继承了红旗-1射程远、拦截空域大、杀伤威力强的优点，而且大大提高了抗干扰能力，综合性能得到很大提升。</p>
+<h3 id="用自己的竹竿捅下飞机"><a class="header" href="#用自己的竹竿捅下飞机">用自己的“竹竿”捅下飞机</a></h3>
+<p>回看过去那段历史，人们细心分析就会对先辈们更加充满敬意。1958年我国引进了5套S-75地空导弹和62枚导弹。1959年10月7日，地导2营就首开纪录，击落窜犯的敌RB-57D高空侦察机。至1965年1月，防空部队的官兵先后4次击落入侵的U-2高空侦察机及数架无人驾驶飞机。从列装到形成战斗力，时间之短让世界震惊！</p>
+<p>如此机智英勇、战力惊人的部队官兵，换装红旗-2后能否再立功勋、续写传奇？这既是对英雄的防空部队官兵的挑战，也是对红旗-2真实战力的检验。</p>
+<p>与红旗-1相比，红旗-2增加了燃料舱容量，加大了前翼面积，增加了射高与射程，还有针对性地加装了“28号反干扰电路”。作为一种用液体燃料提供动力的导弹，它的最大射程达到35公里，最大射高为27公里，发射准备时间仍然较长。</p>
+<p>关键的一战很快到来。1967年9月8日上午，我军雷达侦测到，敌U-2高空侦察机从江苏启东入陆，经金山飞往杭州湾方向。而此时，距离红旗-2的定型时间只有两三个月。</p>
+<p>地空导弹14营的6发导弹接电同步做好发射准备后，带有干扰机的U-2高空侦察机却避开导弹火力范围，擦边飞向杭州湾。但就在解除接电指令下达仅半分钟后，敌机突然来了一个180度的大转弯，再次直飞嘉兴。</p>
+<p>当敌机距地导14营阵地35公里时，指挥员立刻下令打开制导雷达。敌机见势不妙，立即施放干扰，向左侧大坡度逃跑。我雷达操纵员打开反干扰雷达，保证了正常跟踪，同时连续发射3发导弹。一分钟后，第二发导弹一举命中目标，敌上尉飞行员黄荣北毙命于座舱内。</p>
+<p>我国再次击落U-2高空侦察机的消息震惊了世界，而研发该型导弹的技术人员和使用该型导弹的防空部队官兵更是欣喜异常。在此之前，防空部队官兵用S-75地空导弹击落U-2高空侦察机时，时任外交部部长陈毅元帅在一次记者招待会上戏称，U-2高空侦察机是“用竹竿捅下来的”。那么这次，则是英勇的官兵用我们自己的“竹竿”捅下了这架号称世界最先进的高空侦察机。</p>
+<p>当时的人们不会知道，这根“竹竿”背后，隐藏着多少科技人员夜以继日的呕心沥血。简单的一个“捅”字，又不知凝聚着多少人的智慧与汗水。</p>
+<p>如果没有钱文极、陈怀瑾、吴大观等老一辈科学家的艰辛努力、倾心付出，就不会有红旗-2的诞生。如果没有我雷达部队等部门的通力协作，没有我军官兵创造的“弹炮结合、协同作战，动静结合、机动歼敌，巧妙示形、以假隐真，疏散配置、集中使用”等战术战法，也不可能击落U-2高空侦察机。</p>
+<p>到上世纪60年代末，我国具备了批量生产红旗-2的能力，年产量可装备25个营。</p>
+<h3 id="从一枝独秀到蔚然成林"><a class="header" href="#从一枝独秀到蔚然成林">从一枝独秀到蔚然成林</a></h3>
+<p>在北京昌平区大汤山脚下的航空博物馆里，有一处模拟地空导弹阵地。这个阵地由红旗-2和制导站组成，部分重现了红旗-2当年在防空作战中的场景。</p>
+<p>而在今年9月本报刊登的《军队系统“最美奋斗者”建议人选及事迹简介》中，笔者又看到了“岳振华”这个名字，这位中国首批组建的地空导弹营的首任营长，在国土防空作战中，带领部队4次击落美蒋高空侦察机。被国防部授予空军战斗英雄荣誉称号，荣获三级独立自由勋章、三级解放勋章。</p>
+<p>这些，都彰显着一个事实：功臣永远被铭记。</p>
+<p>作为我国空军的主力防空导弹，红旗-2在长期服役过程中，一直在与敌航空兵器的斗智斗勇中不断改进。最初它发展出以坦克底盘做载车的红旗-2B以及使用卡车做载车的红旗-2J，后来又推出了红旗-2F、红旗-2P和红旗-2乙等型号。红旗-2甲和红旗-2乙先后参加了1984年和1999年的阅兵式。</p>
+<p>每一次改进都意味着性能的提升，每一次改型都汇聚着新的战力，每一次成功升级都使我国“高空篱笆”扎得更紧。</p>
+<p>在此过程中，我防空官兵用红旗-2又击落过3架无人驾驶高空侦察机和1架米格-21战斗机，在边境自卫反击作战中也屡屡建功。</p>
+<p>如今，随着时代的变迁与技术的发展，早期的红旗-2性能上已经难以适应现代作战需要，开始渐渐淡出人们的视线。但是，老兵永不凋零。红旗-2研制成功的意义在于，它迈出了我国自主研制防空导弹的关键一步，并通过不断改型，攻克了难以胜数的科研难关，培养了一支年轻的、掌握地空导弹系统研制技术的人才队伍，建起了完善的地空导弹生产体系，为我国自行研制新型防空导弹系统奠定了坚实基础。</p>
+<p>老兵虽老，但家族繁盛，“红旗”仍然漫卷长空，这也许最能诠释当年那些峥嵘岁月红旗-2横空出世的现实与历史意义。</p>
+<h2 id="我国防空导弹家族的常青树"><a class="header" href="#我国防空导弹家族的常青树">我国防空导弹家族的常青树</a></h2>
+<blockquote>
+<p>原文：<a href="https://mp.weixin.qq.com/s?__biz=MzUyNDM4OTgzNQ==&amp;mid=2247529208&amp;idx=5&amp;sn=c2a1053b976191797ad5ec3bcbc3b48a&amp;chksm=fbd444514d40f4b4d19518118efeae3c31011bdb36bad5ee01d32d73440a64672cf001917355&amp;scene=27">我国防空导弹家族的常青树，红旗-2防空导弹</a></p>
+</blockquote>
+<p>我国“红旗”系列防空导弹是从仿制苏联而起家的。红旗-1防空导弹是中国根据前苏联C-75型(北约命名为SA-2)地空导弹系统仿制的半固定式中高空、中近程地空导弹武器系统。1958年6月开始仿制，1964年12月10日，中国仿制“斯-75”型地空导弹成功，命名为红旗1号导弹系统。</p>
+<p>该系统由导弹、发射架、制导站等组成。导弹动力装置由固体火箭发动机和液体火箭发动机两级组成，导弹采用无线电指令制导，弹长10.90米，弹径0.65米，翼展2.56米，发射重量2160千克，最大速度3马赫，射程13-29千米，射高3-22千米，战斗部为高能破片杀伤型，单发命中率68%,主要用于攻击高空、高速飞机和飞航式导弹。不过由于该系统机动性差，命中率低，易受电子干扰，故不久就不再生产。</p>
+<p>通过对红旗1号导弹系统的仿制，中国防空导弹研制、生产、试验达到了初步配套，科技队伍也迅速成长，为走向自行研制打下了良好的基础。</p>
+<p>上世纪50年代末，美国政府和台湾当局不断派高空侦察机对中国大陆进行侦察、窜扰。1959年10月至1965年1月，中国防空导弹部队用红旗-1防空导弹多次击落入侵的U-2型高空侦察机及无人驾驶飞机。但后来的入侵飞机采取了欺骗式干扰，红旗-1已不能适应严峻的电子战形势，急需研制抗干扰能力强的防空导弹武器系统。</p>
+<p>1965年4月，有关部门对改进设计抗干扰能力强的中高空地空导弹武器系统进行了分析论证，确定了研制方案，开始研制红旗-2导弹系统。为加快进度，整个研制试验工作分为两个阶段。第一阶段为基本试制阶段，使用战斗弹11发，分别对不同高度和不同速度的模拟目标伞靶和中速、中空靶机进行射击。第二阶段为遥测弹和补充试验阶段，目的在于摸清控制系统性能和气动力系数在高空的变化情况，检验数学模型的正确性。</p>
+<p>红旗-2导弹于1967年6月27日定型，随即装备部队。红旗-2导弹系统的基本作战单位为营，包括6部发射架及底盘、24枚导弹和1个制导站。导弹长10.84米，发射重量2322千克，最大速度3.8马赫，射程7-35千米，射高1-27千米，战斗部为高能破片杀伤型，单发命中率73%-92%。采用无线电指令制导，抗干扰能力强，不仅具有迎向攻击能力，还具有侧向攻击和尾追攻击能力。1967年9月8日，我空军防空导弹部队在浙江嘉兴首次用新研制的红旗-2防空导弹，在有干扰的条件下击落一架U-2高空侦察机，证明了该导弹采取的抗干扰措施非常有效。在以后的国土防空作战中，用红旗-2导弹又击落过3架无人驾驶高空侦察机和1架米格-21战斗机。</p>
+<p>红旗-2的研制成功及其在防空作战中取得的辉煌战果，标志着我国防空导弹的发展已由单纯的仿制走向自行研制的道路。而且在长期的生产、使用过程中，研制人员和使用部队根据作战任务的需要，采用新技术，对导弹和制导站不断进行改进，发展了红旗-2B、红旗-2F、红旗-2J、红旗-2P等多种改进型号，使其作战能力不断提高，并一直服役到现在，是我国防空导弹领域的常青树。</p>
+<h2 id="当年令美国u2侦察机胆寒的国产杀器"><a class="header" href="#当年令美国u2侦察机胆寒的国产杀器">当年令美国U2侦察机胆寒的国产杀器</a></h2>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1816928184974020750&amp;wfr=spider&amp;for=pc">当年令美国U2侦察机胆寒的国产杀器——红旗-2地空导弹</a></p>
+</blockquote>
+<p>红旗-2地空导弹是中国研制的首款地空导弹。它的前身是红旗-1，而红旗-1则是苏联S-75地空导弹（北约代号：萨姆-2）的仿制产品。</p>
+<p>S-75地空导弹最初是为了防范携带核弹的美英战略轰炸机对苏联主要城市实施核打击而研制的。中国于1958年引进了S-75地空导弹。</p>
+<p>1964年1月，为满足对敌斗争的迫切需要，国防部五院提出在红旗一号导弹的基础上研制红旗二号导弹的任务。经过努力，1967年红旗-2导弹研制设计定型，批量装备部队。</p>
+<p>红旗-2继承了红旗-1射程远、拦截空域大、杀伤威力强的优点，并且提高了抗干扰能力，综合性能有很大提升。1967年9月8日，中国空军地空导弹第14营使用红旗-2防空导弹成功击落一架 U-2侦察机，经此一役，红旗-2型地空导弹成为中国空军防空部队装备序列中的重要力量，陆续装备200多个防空导弹营。</p>
+<p>红旗-2及其改进型的相继问世标志着中国的防空导弹已经由单纯的仿制走上自行研制的道路。</p>
+<p>在20世纪80年代的两伊战争中，中国还曾在红旗2型防空导弹的基础上，研发出代号为“B610/8610/M7”的战术导弹系统并出口，该导弹射程150千米，速度3.8马赫，将原有的防空战斗部换为对地高爆战斗部，装药170公斤。其部分技术被一些中东国家所借鉴，用于研发自己的战术弹道导弹。</p>
+<p>红旗2号地空导弹是我军装备数量最多的全天候、中高空、中程地空导弹武器系统，主要担负要地防空任务，用于对付敌轰炸机、歼击轰炸机和侦察机等。我国还向阿尔巴尼亚、朝鲜、越南等国家提供了红旗-2武器装备。</p>
+<p>红旗-2防空导弹在国土防空等方面发挥了重要作用，为保卫国家领空安全做出了贡献。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-air-force/U2-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-air-force/f1-air-force-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-air-force/U2-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-air-force/f1-air-force-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

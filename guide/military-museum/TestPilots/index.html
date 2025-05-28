@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>空军试飞员 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/TestPilots/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="空军试飞员"><a class="header" href="#空军试飞员">空军试飞员</a></h1>
+<p>试飞员（Test Pilots）专门担任飞机飞行试验任务的飞机驾驶员。早期的飞机设计者通常自己充当试飞员，主要凭个人经验通过驾机试飞摸索出飞机存在的问题。</p>
+<h2 id="详细介绍"><a class="header" href="#详细介绍">详细介绍</a></h2>
+<p>测试一架飞机需要测试其在特殊情况下的机动性并进行记录。这样做的目的是确定被试飞的飞机的性能是否符合设计标准。试飞是检测一架新飞机或者对现有飞机的修改是否能胜任其飞行任务的关键步骤。</p>
+<p>现代飞机日益复杂，尽管有了先进的机载测试设备和地面试验设备，但在评定飞机性能、监控飞机各系统的工作情况等方面试飞员的作用仍然十分重要。试飞员通常是从飞机设计的初始阶段就参加工作，从使用和安全的角度对设计方案提出意见。在试飞中，试飞员除按要求安全地完成飞行动作外，还要从理论上解释各种飞行现象，准确地报告飞行情况，提出改进建议。新飞机在研制过程中虽已进行过大量而完善的理论计算和各种地面试验，但在进行第一次飞行和高难度科目飞行时仍有一定的危险性。在遇到异常现象时，试飞员应能准确判断和及时妥善处置，因此试飞员必须具有熟练的驾驶技术、较高的理论水平和献身精神。试飞员一般是从有经验的飞行员、航空院校毕业生和工程技术人员中挑选，年龄一般在30岁以下，须经过专门的严格的培训。试飞员的训练内容包括基础理论、试飞理论和技术、地面飞行模拟器操作和空中飞行训练。有些国家（如美国、英国和法国）还设有专门的试飞员学校，学制通常为8～9个月。</p>
+<p>在1950年代，试飞员的死亡率高达每周都有一名试飞员死亡。在1960年代以后，由于航空技术的成熟、更佳的地面测试以及模拟实验的导入，危险性已大幅降低。</p>
+<h2 id="历史"><a class="header" href="#历史">历史</a></h2>
+<p>试飞作为一项系统性的活动开始于第一次世界大战中英国的Royal Aircraft Establishment（RAE），整个二十年代，试飞活动在英国和美国分别由RAE和NACA（National Advisory Committee for Aeronautics）所推动。50年代，NACA转变成NASA，在这些年里面，作为验证飞行器的操作性和稳定性的工作，试飞越来越参与很多科学研究领域。</p>
+<p>世界上最古老的试飞员学校如今叫皇家试飞员学校，在英国皇家空军Boscombe Down。在美国，“美国空军试飞员学校”位于Edwards空军基地。“美国海军试飞员学校”位于马里兰州的Patuxent River的海军空军基地。</p>
+<p>试飞员欧仁·勒菲弗，1909年第一位在驾驶动力飞机时丧生的飞行员。</p>
+<h2 id="资格"><a class="header" href="#资格">资格</a></h2>
+<p>理解测试计划；</p>
+<ul>
+<li>能够按照计划执行任务，在非常明确的情况下操作飞机；</li>
+<li>仔细记录每一次试飞的结果；</li>
+<li>对飞机的细微动作保持敏感，也就是在飞机出现异常情况时能够作出准确判断的能力；</li>
+<li>能够在试飞期间飞机出现特殊情况时短时间内快速地解决问题；</li>
+<li>能够在同一时间应付多个问题，因为这种情况在试飞过程中非常常见。</li>
+</ul>
+<h2 id="著名试飞员"><a class="header" href="#著名试飞员">著名试飞员</a></h2>
+<ul>
+<li>尼尔·阿姆斯壮</li>
+<li>约翰·格伦</li>
+<li>查克·叶格</li>
+<li>霍华德·休斯</li>
+<li>艾伦·宾</li>
+<li>哈尔·乔丹</li>
+<li>皮特·康拉德</li>
+<li>艾伦·雪帕德</li>
+<li>艾德加·米切尔</li>
+<li>詹姆斯·艾尔文</li>
+<li>约翰·杨</li>
+<li>查尔斯·杜克</li>
+<li>尤金·塞尔南</li>
+<li>艾琳·科林斯</li>
+<li>下川万兵卫</li>
+<li>埃里希·瓦西兹</li>
+<li>吴克明</li>
+<li>李中华</li>
+<li>刘刚</li>
+<li>李国恩
+…………</li>
+</ul>
+<h2 id="中国试飞事件"><a class="header" href="#中国试飞事件">中国试飞事件</a></h2>
+<ul>
+<li>1952年，为满足抗美援朝作战需求，在一穷二白的基础上，3名空军飞行员以不惜一死的拼命精神，短短9个月将473架修理修复的飞机送上蓝天。</li>
+<li>1956年，试飞员吴克明驾驭第一架国产歼-5飞机，冒着机毁人亡的风险飞出8个G的过载，一次试飞3次发动机空中停车等极限课目，助推中国航空跨入喷气时代。</li>
+<li>上世纪六七十年代，面对苏联撤走专家的困境，年轻的中国空军试飞员用一年时间飞出了新中国第一架“争气机”，从此中国航空工业走上了自行设计的道路。</li>
+<li>上世纪八九十年代，三角翼飞机失速尾旋成为世界公认的“死亡禁区”。人类第一位宇航员加加林，就曾因飞机进入尾旋而殒命苍穹。面对这一制约我国航空工业发展和部队战斗力建设的瓶颈，试飞员李中华和战友们挺身而出，舍生忘死，攻克了这一世界性飞行难题。</li>
+<li>1993年8月28日，试飞员刘刚驾机升空试验，飞机在空中解体爆炸。</li>
+<li>1993年10月16日，汤连刚、张海等8名试飞员，在蓝天白云间胜利完成了“惊天一吻”——我国首次成功实施三机空中对接加油。</li>
+<li>2009年7月28日，在试飞员李国恩的建议下，空军“飞行品质及人机功效联合研究中心”正式挂牌成立。歼-15舰载机从设计制造到实现首飞，只用了不到两年时间。</li>
+</ul>
+<h2 id="相关信息"><a class="header" href="#相关信息">相关信息</a></h2>
+<p>上世纪50年代末，刚刚走过从修理飞机到仿制飞机阶段的中国航空工业，开始考虑自行研制飞机。1959年中国飞行试验研究院成立，并开始着手试飞员队伍的培养工作。</p>
+<p>1958年，从北京航空学院飞机制造专业毕业的王昂和一批其他航空院校的毕业生，经过严格选拔，成为我国第一批大学生飞行员，并由此迈出了成长为优秀试飞员的第一步。</p>
+<p>当年，航空部门考察了国外试飞员的选拔培训工作后得出结论，试飞员要具备大学学历，可以从优秀的空军飞行员中选拔。但相对于外国空军飞行员高学历的情况，我国空军飞行员的学历普遍偏低。因此，选拔并培养试飞员的目光就落在了地方航空院校毕业的大学生身上。</p>
+<h2 id="特殊要求"><a class="header" href="#特殊要求">特殊要求</a></h2>
+<p>试飞工作对飞行员的要求很高。试飞员与普通飞行员的最大不同是，他们所驾驶的飞机从未有人飞过。试飞员的综合素质要高，既要有深厚的理论和知识底蕴，有高超的飞行经验和技能，更重要的是要有良好的心理素质和诚实的个人品格。</p>
+<p>试飞员在飞行结束后，通常要回答三个问题：今天飞了什么动作？飞机发生了什么问题？解决的方案是什么？其中第一个问题大多数试飞员都能回答。而对飞行中飞机出现的问题，一个合格的试飞员也可以感觉得到。但最关键的是第三个问题，就是要求试飞员从现象看出本质，了解到底是飞机的什么部位出现了问题，针对这些问题，他要提出自己的解决方案，供设计人员参考以修改飞机设计。还有，一个优秀的试飞员要有良好的语言表达能力。过去的机载测试记录手段不完善，只有一个能记下12组数据的示波器记录仪，其他的试验情况都需要试飞员的口头描述。试飞员要用相应的技术语言将问题明白无误地说出来，这就要求试飞员的航空理论知识要扎实，充分了解飞机的设计思路和特性，尤其是对存在的问题要十分清楚。</p>
+<p>试飞员还要经过各种机型的训练，这样才能建立起各种飞机的飞行经验和鉴别对比能力。在评测飞机的飞行品质时，才能给出准确的评判。通常，试飞员还要在空军作战部队经过较长时间的训练，了解飞机在实战中的表现，这样在试飞时才能有的放矢，提出有实用价值的建议。 虽然现在试飞的试验记录设备和技术比较完善，但对试飞员的要求没有变。</p>
+<p>一名优秀的试飞员还要有能力合理安排试飞科目和进度，这样可以提高每架次飞行的试验效率，缩短飞机试飞定型时间。一些特殊的飞行动作和性能是试飞员飞出来的，而不是设计师在纸面或计算机上得出来的。前苏联试飞员普加乔夫在苏-27上创造的“眼镜蛇”机动，就是一个典型。</p>
+<p>选择试飞员这个职业，首先是个人的兴趣和志向，其次是希望获得他人的尊敬。做试飞员是不能强求的，一定要自己愿意，他自己就是怀揣着为中国航空事业发展做点什么的强烈愿望加入到试飞员队伍中来的。而且无论面对生死考验、利益诱惑，从来没有动摇过。</p>
+<p>试飞员不仅要有过硬的飞行技术、广博的知识、过人的胆量，更重要的是要有良好的道德修养。诚实是试飞员的基本素质，要真实地记录和反映飞机所出的问题。如果这些问题以及所做的改进都得到了验证，自然会得到设计人员的认可与尊敬。</p>
+<p>试飞员要争取多参加国际交流活动，加入国际上的一些试飞员协会。试飞员之间最具有共同语言，交流是没有国界的，很多重要问题在私下交流中可以很自然地获得。参加这些试飞员协会组织的年会，认识更多的朋友，对试飞员知识面的拓宽、飞行技术的进步是很有益处的。</p>
+<p>过去的20年，我国一共招收了三批大学生试飞员，他们经过理论培训，并到空军部队获得飞行经验。经我们自己的试飞员学院培训，再被送到国外培训，如俄罗斯格罗莫夫试飞院、西方国际试飞员学校等。目前这批试飞员都取得了双学士学历，其中还有一些在试飞员学院获得了硕士学位。张景亭、李中华、徐勇凌等就是这批大学生试飞员的杰出代表。</p>
+<p>在西方国际试飞员学校，中国试飞员在变稳飞机上真实感受了数字电传操纵系统飞机的飞行品质。变稳飞机可以模拟F-16、“阵风”、“台风”、JAS-39等第三、三代半战斗机的飞行品质，这些飞机都采用了数字电传操纵系统。它与机械操纵系统的飞机不一样，人机耦合后会发生“飞行员诱发振荡”。驾驶电传操纵系统的飞机，在特定情况下，如果飞行员操纵动作过猛，会导致舵面偏转达到极限，从而使飞机进入发散的不稳定状态。由于是电传操纵，飞行员从驾驶杆上得到的响应并不是从飞机 控制面传回的真实响应，而是模拟生成的，一旦出现滞后或延迟，飞行员采取的控制措施就会与飞机控制面的动作相叠加，使这种振荡加剧、发散，最终造成坠机事故。</p>
+<p>国外采用电传操纵系统的战斗机在试飞中大都发生过坠机事故。JAS-39战斗机2次发生“飞行员诱发振荡”，造成飞机坠毁。美国的F-22也是这个原因造成2架飞机坠毁。在我国某型第三代战斗机的试飞工作中，一次飞机在降落过程中发生了“诱发振荡”，试飞员钱学林由于在变稳飞机上体验过了“诱发振荡”，并且知道如何处理，用已经掌握的技术保住了飞机，安全着陆。</p>
+<p>有过变稳飞机以及其他各型飞机的飞行体验，他们就具备了对比和鉴别的能力，这对安全顺利地完成我国第三代机试飞工作发挥了重要作用。</p>
+<p>试飞员队伍是一个特殊的团队，需要经过长期的培养。初级试飞员在优秀的飞行员基础上，经过一年的培养 ，就能从事一些基本的、单一性的试飞科目，如一些不影响飞行安全的改装改进试飞等。中级试飞员要经过3～4年时间的试飞锻炼，能完成70%～80%的试飞科目。而高级试飞员需要6～7年的时间，才可以飞任何陌生的机种。因为未经定型的新飞机都是没有说明书的，所有飞行操纵方法都需要试飞员自己去摸索。新飞机的飞行手册往往是由试飞员在定型试飞完成后，与总设计师单位共同编写的。</p>
+<p>我国试飞员队伍的建设并不乐观。从地方大学招收培养试飞员的工作陷于停顿。实践证明，这种试飞员培养方式是比较适合中国国情的，也产生了相当的影响。好的制度和方式 要坚持。只有切实关注试飞员队伍的培养与维持，中国的新机研制工作才能连续、正常地向前发展。</p>
+<p>目前，我国已经基本掌握了第三代战斗机的研制技术，设计人员已经把目光瞄准了第四代战斗机。即使从现在开始新型战斗机的研制工作，估计也要十几年后才能看到它的首飞。在此期间，没有后继的优秀试飞员，第四代战斗机的各种预研课题就无法在飞行中得到验证。而我国第四代战斗机是否能够顺利研发成功，是与一支优秀的试飞员队伍分不开的。</p>
+<h2 id="试飞员制度"><a class="header" href="#试飞员制度">试飞员制度</a></h2>
+<p>试飞员工作具有高危险性，他们长期在高空、高辐射、大负荷、纯氧等非常恶劣的环境下工作，会患上不同程度的职业病，对他们采取的人事和养老制度来进行管理。我国现行试飞员工作制度是参照空军飞行员制度制定的，试飞员工作到四十几岁后就停飞了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-fighter/f1-fighter-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../TestPilots/ChineseFlightTestEstablishment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-fighter/f1-fighter-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../TestPilots/ChineseFlightTestEstablishment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

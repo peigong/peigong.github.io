@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>太平舰只有1000吨为什么如此有名？ - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1-navy/torpedo-boat-158-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="太平舰只有1000吨为什么如此有名"><a class="header" href="#太平舰只有1000吨为什么如此有名">太平舰只有1000吨为什么如此有名？</a></h1>
+<blockquote>
+<p>原文：<a href="">太平舰只有1000吨为什么如此有名？1954年11月14日太平舰被击沉</a></p>
+</blockquote>
+<p>太平舰为何名声在外，尽管它仅有1000吨的排水量？1954年11月14日，台湾海军接收的美国驱逐舰太平号在渔山岛附近被解放军第31大队的鱼雷快艇击沉，这一事件被称为太平舰事件。</p>
+<p>太平舰属于美国埃瓦茨级护航驱逐舰系列，这类舰艇是专门设计用于执行护航任务的驱逐舰。</p>
+<p>二战期间，美国共生产了97艘舰艇，其中32艘转交给了英国。太平舰从设计阶段就被定位为护航驱逐舰，其核心职责并非与敌方主力舰队对抗，而是为运输船队提供保护。该舰的首要任务是反潜作战，应对德国潜艇的威胁。此外，它还承担防空任务，拦截可能袭击运输船的远程轰炸机。</p>
+<p>太平舰的糟糕表现，很大程度上归咎于其设计理念的缺陷。这种设计思路直接导致了战舰性能的低下，无法达到预期效果。</p>
+<p>驱逐舰通常以高速著称，许多型号的航速能突破35节，并且配备强大的鱼雷攻击能力，能同时发射多枚鱼雷。然而，太平舰的职责并非与敌方舰队正面交锋，而是执行护航任务。因此，它的最高航速仅为19节，巡航速度维持在15节左右，与商船的航行速度相近。</p>
+<p>这艘驱逐舰并未配备常规的鱼雷系统，仅装载了百余枚专门用于对抗潜艇的深水炸弹。</p>
+<p>太平舰的船体总重量达到1200吨，配备了三门76毫米口径的通用火炮，这些火炮既能对空射击，也能打击水面目标，其主要任务是进行空中防御。</p>
+<p>此外，该舰还配备了4门28毫米口径和9门20毫米口径的防空炮，主要用于应对空中威胁。</p>
+<p>从性能指标来看，太平舰作为驱逐舰并无突出之处，整体表现平平无奇。该舰在设计上缺乏创新，作战能力也仅处于中等水平，难以称得上是优秀的海军装备。其各项技术参数与同期同类舰艇相比并无明显优势，整体战斗力较为一般。综合评估，太平舰在驱逐舰领域只能算作一款中规中矩的产品，不具备特别出众的作战效能或技术特点。</p>
+<p>1944年二战期间，这艘军舰主要在美国本土用于训练任务，一直服役到战争落幕。期间虽然承担过几次护航工作，但并未取得显著战果。</p>
+<p>按照中美双方达成的协议，美国在1944年承诺向中国提供一批海军装备，包括两艘护航驱逐舰、四艘扫雷舰和两艘护航巡逻舰。这些舰艇的援助旨在提升中国军队在抗日战争中的作战能力，以更有效地对抗日本侵略者。</p>
+<p>1945年，太平舰正式加入中华民国海军序列，成为两艘护航驱逐舰之一。这艘军舰的服役标志着中华民国海军力量的进一步增强，为后续的海上任务提供了重要保障。作为护航驱逐舰，太平舰在维护海上航线安全方面发挥了关键作用，其加入使海军在执行护航任务时更加得心应手。</p>
+<p>太平舰刚返航回国，便立即被委以重任，前往执行收复南沙群岛的军事行动。</p>
+<p>在抗日战争期间，日本侵略者占领了南沙群岛。随着日本的战败投降，周边国家开始觊觎这片海域，试图侵占。然而，当时的民国海军在战争中损失惨重，尽管有意收回南沙，却缺乏足够的军舰执行任务。1946年7月，太平舰刚返回国内不久，便在同年10月接到命令，要求其必须夺回南沙群岛。</p>
+<p>法国海军在10月5日进入南沙群岛水域并计划建立军事设施，这一举动使得局势变得紧迫，必须立即采取行动。</p>
+<p>南海在这个季节经常遭遇强风和暴雨，海况极其不佳。太平舰由于仅有1000吨的排水量，难以在这样的恶劣环境中航行。因此，太平舰与中业号登陆舰在11月抵达海南岛后，连续两次尝试南下均因台风被迫返回。直到12月9日，太平舰第三次尝试南下，最终在12月12日成功抵达南沙群岛，并在最大的岛屿登陆。官兵们拆除了日本侵略者留下的纪念碑，并竖立了象征中国主权的石碑。为了纪念太平舰，该岛被更名为太平岛。</p>
+<p>太平岛作为南沙群岛中面积最大的岛屿，拥有该地区唯一的淡水资源，目前处于中国的有效管辖之下。</p>
+<p>自1956年以来，太平岛一直由中国实际掌控。尽管在50年代初，国军因战事失利曾短暂撤离该岛，但此后数十年间，该岛始终处于中国的有效管辖之下。这一历史事实表明，中国对太平岛的主权主张具有连续性和稳定性。</p>
+<p>太平舰最初为人所知，便是因为这一事件。</p>
+<p>随着国共内战的全面展开，太平舰在初期并未展现出显著的军事价值，其主要任务仅限于运送撤退的国民党部队。这一时期，太平舰的角色相对被动，缺乏重大的战略影响。</p>
+<p>1949年10月，金门战役成为太平舰首次展现实力的舞台。当月25日，解放军出其不意地在大金门登陆，导致国民党守军一度难以招架。作为台湾的战略要地，金门的得失直接关系到台湾的安全态势。如果解放军成功占领金门，台湾将面临严峻的战略困境。</p>
+<p>从军事角度来看，金门是台湾防御体系中的关键屏障。守住金门，就能有效阻挡来自大陆的军事威胁，确保台湾本岛的安全。换句话说，金门就是台湾的第一道防线，只要这道防线稳固，台湾就能获得足够的安全保障。因此，金门的战略地位至关重要，它直接关系到台湾的整体防御态势。</p>
+<p>25日，太平舰作为主力舰，带领其他战舰迅速赶往澎湖支援。当时海况极其恶劣，太平舰在巨浪中倾斜达到40度，情况十分危急。但任务紧迫，太平舰不得不顶着风浪全速前进，最终抵达大金门。到达后，太平舰与同行战舰合力，将解放军在滩头的所有民用船只全部击毁，彻底封锁了金门解放军的撤退路线，最终导致对方全军覆没。</p>
+<p>太平舰不仅针对解放军在大嶝岛和小嶝岛的炮兵阵地展开火力压制，随后更是将炮火延伸至金门滩头区域，实施直接打击。</p>
+<p>在这场战役中，太平舰虽有所贡献，但其火力配置仅包括三门大口径火炮，导致其炮击压制效果并不显著。</p>
+<p>在海南岛战役期间，太平舰的表现乏善可陈，不仅未能发挥重要作用，反而遭到解放军海岸炮火的打击，导致舰体受损。舰务官罗俊钧在战斗中牺牲，第三舰队司令王恩华也在此役中受伤。这场战役进一步暴露了太平舰的作战能力不足，成为其军事行动中的一次重大挫折。</p>
+<p>在随后的岁月里，太平舰持续在近岸海域执行巡航与侵扰任务。这艘军舰以浙江大陈岛为基地，开展常态化海上巡逻，对浙江沿海地区构成了严重的安全隐患。其长期驻守与频繁活动，使该区域始终处于紧张态势之中。</p>
+<p>1952年3月，太平舰在大陈岛以南约20海里执行巡逻任务时，拦截了3艘来自大陆的可疑渔船。尽管对船只进行了全面搜查，并未发现任何武器或通讯设备，但由于船上既无渔网也无渔获，舰长桂宗炎决定将所有渔民押上军舰，并移交给大陈岛防卫司令部处理。虽然这3艘渔船最终被放行，但此类事件在当时并不罕见。</p>
+<p>太平舰在浙江海域的活动严重干扰了当地渔民的日常作业、商业贸易以及海上运输的正常运行。因此，解放军将太平舰视为必须清除的重大威胁。</p>
+<p>1954年10月25日，华东军区海军负责人张爱萍前往高岛确认了相关情报，随后下令对太平舰发起进攻。</p>
+<p>解放军选择袭击太平舰，主要是基于几个关键因素。首先，太平舰的巡逻路径是固定的，必须严格遵守预定航线，无法随意调整。这条航线途经多个岛屿，为解放军从苏联引进的鱼雷艇提供了理想的伏击环境。此外，尽管太平舰排水量达到1000吨，但其作战能力主要集中在反潜和防空方面，对舰攻击能力较弱，难以有效应对鱼雷艇的快速突袭。</p>
+<p>为应对解放军在沿海部署的大量战机，太平舰等军舰被迫调整策略，改为夜间行动，以避免遭遇空袭。同时，鱼雷艇在夜色掩护下发动突袭，成功率显著提高。</p>
+<p>1954年11月初，解放军派出4艘鱼雷艇，悄悄埋伏在一江山岛东北方向的小岛附近。这支队伍由副大队长纪智良、中队指导员朱洪禧和副中队长铁江海共同指挥，他们在那里隐蔽待命，持续守候了超过十天。</p>
+<p>这艘P4型鱼雷艇是从苏联引进的，是解放军海军首批装备的鱼雷快艇。它采用铝制船体，虽然排水量仅20多吨，但速度能达到48节。不过，它的航程较短，只有400海里，主要用于近海作战，不具备远洋能力。防御方面也比较薄弱，即使是小口径火炮的攻击对它来说也很致命。尽管如此，它配备了两具457毫米鱼雷发射管，可以发射重达900多公斤的鱼雷，其中战斗部就有200多公斤。即便是敌方的主力舰，一旦被这种鱼雷击中，也会遭受重创甚至沉没。</p>
+<p>太平舰的排水量仅为1000吨，这种体型的军舰极其脆弱，只需一发鱼雷命中就足以使其沉没。</p>
+<p>11月14日午夜时分，太平舰被解放军雷达锁定。随后，四艘鱼雷艇迅速出击，在雷达的精准指引下展开了攻势。</p>
+<p>深夜1点28分，鱼雷艇观察到了太平舰的照明信号，随即展开了鱼雷攻击。前三艘艇发射的六枚鱼雷均未命中目标。然而，158艇大胆接近至仅几百米距离，成功发射鱼雷并命中太平舰的舰艏仓库，造成严重损害。此次袭击导致28人丧生，其中包括副舰长宋季晃和轮机长周相辉。</p>
+<p>在遭到攻击时，太平舰迅速调整航向并展开火力反击，成功避开了多枚鱼雷的袭击。然而，尽管采取了这些紧急措施，该舰最终仍未能幸免，被一枚鱼雷击中，导致严重损毁。</p>
+<p>即便是排水量达到4000吨的巡洋舰，只要被这种鱼雷击中，也会遭受严重损伤，更不用说只有1000吨的太平舰了。</p>
+<p>太平舰的鱼雷爆炸瞬间，周官英中尉回忆道，爆炸的冲击让所有人瞬间失去意识，无论是否受伤。巨大的爆炸声几乎无人能听到。爆炸过后，炮架严重变形难以操作，舰桅的固定钢索全部断裂，小艇和救生筏被抛入海中，军官舱室的地板几乎全部塌陷，无线电报机等设备也被震倒。李长孝舰务官补充说，军官的餐桌消失不见，甲板被炸出一个直径十多尺的大洞，许多军官可能掉入其中，包括副长宋季晃中校和接替他轮机官职务的张才储。轮机长室外，有人紧贴墙壁站立，触摸时感觉皮肤似乎被剥离。</p>
+<p>太平舰在战斗中遭受严重损伤，三艘邻近的军舰迅速赶到现场进行援助，并协助拖拽该舰继续前行。尽管进行了长达六小时的持续努力，太平舰最终还是未能避免沉没的命运。</p>
+<p>或许你会好奇，太平舰的雷达系统为何没能及时探测到那些鱼雷艇的靠近。</p>
+<p>太平舰装备的海面搜索雷达技术较为陈旧，其探测小型目标的能力存在明显不足。该舰的雷达系统在识别和追踪小型舰艇或低空飞行器时，表现尤为不佳，难以有效应对现代海战中的复杂态势。这种技术缺陷使得太平舰在执行海上警戒和侦察任务时，面临较大的局限性，影响了整体作战效能。</p>
+<p>解放军在山顶部署的地面雷达系统，能够有效监测距离15海里外、排水量达1000吨的太平舰。这种雷达布局充分利用了制高点优势，显著提升了探测范围和精度。通过这种部署方式，解放军实现了对周边海域的有效监控，特别是对太平舰这种中型舰艇的追踪能力得到了明显增强。这种雷达系统的配置，体现了解放军在沿海防御方面的战略考量和技术实力。</p>
+<p>解放军的鱼雷艇部队巧妙地利用岛屿作为掩护，避免被敌方发现。一旦接到作战指令，他们便迅速启动引擎，在雷达系统的精准引导下全速驶向目标区域。</p>
+<p>当鱼雷艇逼近到肉眼可见的范围内，大约相距三四海里时，太平舰的雷达才侦测到潜在威胁。据当时担任太平舰通讯官的描述：“大约在凌晨一点半，雷达在330方位捕捉到四个高速移动的目标。接到报告后，我立即用望远镜朝那个方向观察，发现了一些白色的浪花，……”</p>
+<p>太平舰迅速采取行动，周官英中尉指挥2号3寸炮、1号和2号40毫米炮以及中甲板步台侧的20毫米炮向左舷开火。与此同时，舰长迅速调整航向，成功避开了至少两到三枚鱼雷的袭击。</p>
+<p>鱼雷艇的航行速度相当惊人，短短3海里的路程对它们而言轻而易举。即便面对如此近的距离，它们依然毫不犹豫地展开了近距离攻势。</p>
+<p>太平舰之所以沉没，主要原因是它太大意了，完全没料到会被人埋伏。这种轻敌的心态让它措手不及，最终导致了悲剧的发生。简单来说，就是太平舰太自信了，结果吃了大亏。</p>
+<p>与太平舰迟缓的表现形成鲜明对比，解放军的鱼雷艇部队展现了卓越的作战能力。他们以零人员损失的代价，成功击沉了敌方一艘主力战舰。这次行动充分体现了鱼雷艇部队的高效作战水平和精准打击能力，为整个战局带来了关键性的转折。在战术运用和执行力方面，解放军鱼雷艇部队远胜于对手，展现了强大的实战能力。</p>
+<p>有趣的是，太平舰的生还船员们认为，舰艇的编号22，两个数字相加等于4，这个数字在传统观念中被认为是不祥之兆，他们相信这是导致悲剧发生的原因。</p>
+<p>从那时起，台湾军方在给军舰编号时，特意避开了所有加起来等于4的舷号组合。这个做法一直延续至今，成为了一种不成文的规定。他们之所以这么做，主要是考虑到数字4在中文里发音和“死”相似，被认为不吉利。为了避免这种忌讳，军方在制定舷号时，会特别留意确保各个数字的总和不会出现4。这种做法既体现了对传统文化的尊重，也反映了在军事管理中注重细节的态度。</p>
+<p>年轻时哪懂得世道艰难，遥望北方中原，豪情壮志如高山般坚定。</p>
+<p>深夜的瓜洲渡口，战船在飘雪中静静停泊，秋风吹过大散关，铁骑的嘶鸣回荡在山谷间。</p>
+<p>我曾自诩为边疆的坚固堡垒，如今却只能对镜自怜，看着斑白的鬓发无声叹息。</p>
+<p>《出师表》这篇传世之作，堪称千古绝唱，千百年来无人能与之比肩。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../f1-navy/torpedo-boat-158-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../f1-navy/torpedo-boat-158-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1-navy/torpedo-boat-158-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
