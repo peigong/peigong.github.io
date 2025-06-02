@@ -1,0 +1,16 @@
+[book]
+authors = ["VET. 周培公"]
+language = "en"
+multilingual = false
+src = "src"
+title = "中国国家博物馆 - VET.周培公(https://pg.js.cn)"
+
+[build]
+build-dir = "../../public/guide/chnmuseum"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/chnmuseum/"
+cname = "pg.js.cn"
