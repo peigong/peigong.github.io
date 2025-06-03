@@ -29,11 +29,12 @@ title: 导游笔记
 
 ## 北京博物馆
 
-1. [中国人民革命军事博物馆](./guide/military-museum)
-2. [孔庙和国子监博物馆](./guide/kmgzj)
+1. [中国国家博物馆](./guide/chnmuseum)
+2. [中国人民革命军事博物馆](./guide/military-museum)
 3. [北京大运河博物馆](./guide/canalmuseum)
-4. [中国农业博物馆](./guide/ciae)
+4. [孔庙和国子监博物馆](./guide/kmgzj)
 5. [中国科学技术馆](./guide/cstm)
+6. [中国农业博物馆](./guide/ciae)
 
 ## 外埠景点
 
