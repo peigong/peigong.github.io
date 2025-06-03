@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>非洲起源说 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/reference-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="非洲起源说"><a class="header" href="#非洲起源说">非洲起源说</a></h1>
+<p>在人类起源的问题上，包括有有人科的起源和智人的起源。从考古成果来看，对于人科的共同祖先约700万年前至500万年前起源于非洲。</p>
+<h2 id="dna研究"><a class="header" href="#dna研究">DNA研究</a></h2>
+<p>基于现今现代人线粒体、Y染色体和基因组基因（Brown，1980；Cann et al.，1987；Stringer and Andrews，1988；Stringer，1992；Templeton，2002）、化石（Bräuer，2008；Fleagle and Gilbert，2008）、现代人结构学（Hanihara，2008；von Cramon-Taubadel and Lycett，2008；Betti et al.，2009，2012），甚至语言学（Atkinson，2011）的研究均表明现代人起源于非洲。Cann et al.（1987）对来自非洲、欧洲、亚洲、澳大利亚、新几内亚5个地区147个个体的mtDNA进行限制性片段长度分析，确立了134个单倍型，构建了最大简约树。该简约树有两大分支，其中一支无一例外由非洲单倍型组成，约占1/3的非洲单倍型，另一支由非非洲单倍型和剩下的2/3非洲单倍型组成，这说明第一次分歧发生在非洲人和非非洲人之间。据此提出所有现代人都是20万年前生活在非洲的一位女性的后代，而这一支系之外的所有古人群都在进化中走向灭绝。这一被称为“出自非洲说”或“替代说”的理论很快得到更多遗传学研究的支持，古人类学界中很多学者加入新假说的理论阵营，使其很快风行起来。从1998年开始，一些遗传学家在学术刊物上发表一系列有关中国现代人起源问题的论文，支持“出自非洲说”（Chu et al.，1998；Su et al.，1999；柯越海等，2000，2001；Ke et al.，2001）。英国剑桥大学和安格利亚鲁斯金大学的研究者基于基因的研究结果显示，澳大利亚土著人起源于非洲，走出非洲的时间在7~5万年前。</p>
+<h2 id="基因线索"><a class="header" href="#基因线索">基因线索</a></h2>
+<p>对于现代人的起源，国际学术界有很多理论。其中最著名的包括“非洲起源说”及“多地区起源”。非洲起源说认为，非洲以外现代人的共同祖先来自于5万年前的非洲。多地区起源论则认为现今世界各地人类与原先分布于亚、非、欧三大洲的早期智人乃至更早的直立人有连续演化的关系，在中国人类化石中较其他地区古人群出现频率更高的一系列共同的形态特征是支持该地区人类连续演化的重要证据。而非洲起源说的理论障碍包括有“如何解释澳大利亚土著的起源”，因为在澳大利亚所发现的一些头骨化石和残留工具，与那些生活在南亚沿海地带的非洲早期移民有着明显的区别。</p>
+<p>澳大利亚四面环水，孤立在波涛汹涌的太平洋之中，与其它地区相隔离。土著居民体质特点更是别具一格：宽鼻子、厚嘴唇、深色眼睛、棕色皮肤及波浪形头发。支持非洲起源说的人类学家们认为，澳大利亚土著的头发呈波浪形，这与非洲黑人非常相似，应属非洲人种。一些学者则认为，澳大利亚人与欧洲人一样，有着发达的体毛和狭窄的鼻子，其体征接近欧洲人，因此他们可能来自欧洲。有学者将澳大利亚的凯洛尔人头骨和印度尼西亚的瓦贾克人头骨相比较，发现两者大同小异，据此认为澳大利亚土著是由早期的亚洲现代人发展而来。还有的学者认为，澳大利亚土著是由早期的移民者与当地的直立人杂交繁殖所产生。</p>
+<p>剑桥大学和安格利亚鲁斯金大学的研究人员组成的研究小组，分析了澳大利亚土著居民和来自新几内亚的美拉尼西亚人的线粒体DNA（母系）和Y染色体DNA（父系）基因信息，推定了一个DNA的平均变化率后，通过计算DNA样本的变化，追溯出人类起源的分歧时间，并计算出人类祖先迁徙至世界各地的时间节点。研究结果显示，澳大利亚土著共具有四个DNA聚类枝，而这四个DNA聚类枝的祖先均为距今7万至5万年前的非洲现代人。最新的研究还显示，澳大利亚土著人的遗传基因中，没有来自直立人的遗传基因特征，这表明，澳大利亚的早期移民并没有与直立人杂交繁殖，他们与其他欧亚大陆上的人有着共同的祖先。</p>
+<p>科学家推测，约5万年前，非洲现代人首先迁徙至欧亚大陆。由于处于冰期海平面较低，当时的澳大利亚和新几内亚之间海峡之间比较狭窄，直到8000年前，澳大利亚和新几内亚之间的陆桥才被海洋淹没。早期的定居者可能是穿越了澳大利亚和邻近的新几内亚岛大陆桥，到达澳大利亚定居下来。领导该项研究的安格利亚鲁斯金大学的福斯特博士表示，科学家早就猜测澳大利亚土著人与新几内亚人有着共同的祖先，但由于化石记录的结果差异太大而难于证明。这次研究的结果首次发现了他们之间的基因联系，证实他们均源自非洲。一些研究人员认为，这些研究结果推翻了人类起源的“多地区起源论”。</p>
+<p>随着古DNA分析技术的发展，使得科学家直接从化石中提取DNA成为可能，又得益于高通量测序技术的出现（Church，2006；Mardis，2008），使得科学家能够获得准确的古DNA信息。近几年来，古人类学的研究取得了极大进展（Green et al.，2010；Reich et al.，2010；Fu et al.，2014；2015；2016；Prüfer et al.，2014）。古人类与现代人有一定程度的基因交流，现代人基因中有部分比例的古人类基因，这已被越来越多的研究结果所证实。Green et al.（2010）首次获得了尼安德特人全基因组数据，并证实欧亚当代人的基因组成里包含有1~4%的尼安德特人基因，现代人基因中尼安德特人的基因片段大小显示混种发生的时间在约50000年前（Wall et al.，2013；Sankararaman et al.，2012；2014；Vernot&amp;Akey，2014）；Reich et al.（2010）研究发现，往东迁徙的一部分现代人与丹尼索瓦人有基因交流，在美拉尼西亚人基因中可找到证据；Fu et al.（2015）发现3.7~4.2万年前的罗马尼亚Oase 1基因组与尼安德特人基因组具有6%–9%的相似度，推测出4到6代之前，其祖先与尼安德特人有过基因交流；Kuhlwilm et al.（2016）研究发现，现代人的祖先早在在10万年前就与尼安德特人有过基因交流。这些研究结果部分推翻了非洲起源说，至少现代人在向非洲以外扩散时，并没有完全替代当时已生活在欧亚大陆上的古人类，他们之间进行了一定程度的基因交流。</p>
+<h2 id="现代人起源"><a class="header" href="#现代人起源">现代人起源</a></h2>
+<p>关于现代人的起源，有两种理论：一种是“单一地区起源说”，这种理论认为现代人是某一地区的早期智人“侵入”世界各地而形成的，这个地区过去被认为是亚洲西部，近年来则变为非洲南部；另一种是“多地区起源说”，这种理论认为亚、非、欧各洲的现代人，都是当地的早期智人甚至直立人演化而来的。1967年，美国伯克利加州大学的生物化学与分子生物学教授艾伦·威尔逊和萨里奇共同提出了分子钟的假设，用免疫测量法确定各种灵长类血液白蛋白的不同分量，从而推算出各种灵长类系统分离的时间，其结果推断人属与黑猩猩属分离的时间在距今500万年前（当时根据化石证据得出的年代距今1400万年以上）。1987年三位美国遗传学者根据对黑种、白种、黄种等人群的线粒体DNA变异的研究，提出所有人类都来源于一个共同祖先（Cann et al.，1987）。她在大约20万年前出现于非洲，她的后代在大约13万年前走出非洲来到亚洲和欧洲，完全地取代那里的原住民。后来许多学者利用其他遗传位点进行研究也主张现代人起源于非洲，只是不同研究者得出的共同祖先生活的年代和其后代走出非洲的年代往往有很大的不同。共同祖先的年代短的有5万多年，长的达到300万年。这种关于晚期智人起源的假说，被称为“近期出自非洲说”或“夏娃说”。这个假说的主要依据对现代人基因的研究，从1998年开始，一些遗传学家在学术刊物上发表一系列有关中国现代人起源问题的论文，支持“出自非洲说”（Chu et al.，1998；Su et al.，1999；柯越海等，2000，2001；Ke et al.，2001）；他们质疑古人类学家基于人类化石和旧石器考古材料提出的中国人类本土连续演化的证据，认为在距今10~5万年间这里没有人类生存。但是这一学说也一直接受着各方面的挑战，高星等（2010）对更新世东亚人群连续演化的考古证据及相关问题进行了专门的论述，指出在中国境内的许多考古发现（秦岭诸遗址、北窑、大地湾、徐家城、乌兰木伦、织机洞、井水湾、黄龙洞等遗址），推翻了5~10万年前东亚没有人类生存这一观点。近年来基于古DNA信息的研究发现，现代人与尼安德特人和丹尼索瓦人均有不同程度的基因交流，证明现代人走出非洲时并非完全替代了当时生活在亚欧大陆的其它古人类，部分推翻了此前认为的“出自非洲说”。</p>
+<h2 id="化石证据"><a class="header" href="#化石证据">化石证据</a></h2>
+<p>在相当长的一段时间里，“非洲起源说”缺乏至关重要的化石证据。科学家没能在非洲智人起源的关键阶段———距今30万年前至10万年前找到较为完整且生存年代明确的智人化石。直到1997年赫图化石出土，才打破了这一局面；而奥莫人化石年代的确定，也为“非洲起源说”提供了新证据。另外还有边界洞、克拉济斯的化石也常常被赞同“非洲起源说”的古人类学者引用作为支持此说的主要化石证据，但是奥摩、边界洞、克拉济斯的年代颇有争议，赫图、奥摩、克拉济斯的化石具有比较古老的特征，但表现出明显的过渡性质。</p>
+<p>1967年在埃塞俄比亚西南部的奥莫河附近出土的一块被称为“奥莫1”的化石，包含了部分头骨和身体骨骼化石；从河对岸出土的“奥莫2”化石，则是一块更大的头骨，但是没有找到骨骼化石。遗憾的是，根据找到的化石，考古学家无法拼出一张完整的头部。在两块化石出土以后，曾在考古界引起不小的学术争论。一些专家坚持认为，两块化石并非来自同一时期，因为“奥莫1”显然比“奥莫2”更“现代”。但科学家们最终确定，这些骨骼化石的代表的个体生活在距今19．5万年前，正负误差5000年，因此“奥莫1”和“奥莫2”是迄今发现的最为古老的现代人化石”。至于“奥莫2”显得更久远，则是因为骨骼来自不同但是有重叠部分的族群。</p>
+<h2 id="学术争议"><a class="header" href="#学术争议">学术争议</a></h2>
+<p>1983年，科学家们根据线粒体DNA（mtDNA）系统发育树构建了首个现代人起源的分子模型，认为现代人起源于亚洲，但1987年非洲起源说的提出取代了这一亚洲起源说。非洲起源说所依赖的无限多位点假说以及分子钟假说后来被普遍认为是错误的且不切实际的。中国学者提出了一个新的分子进化模式，即遗传多样性上限理论，重新构建了一个新的人类起源模型。这一模型与多地区起源说基本吻合，重新把现代人类起源地定位在了东亚。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-5/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../reference/reference-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-5/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../reference/reference-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

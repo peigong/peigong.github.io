@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>毛公鼎 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-1/DukeMaoTripod.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="毛公鼎"><a class="header" href="#毛公鼎">毛公鼎</a></h1>
+<p>毛公鼎（Duke Mao Tripod），西周晚期青铜器，因作器者毛公而得名，清道光二十三年（1843年）出土于陕西岐山（今宝鸡市岐山县），现藏于台北故宫博物院，是其三大镇馆之宝之一（另两件为翠玉白菜和东坡肉形石）。</p>
+<p>鼎高53.8厘米，腹深27.2厘米，口径47厘米，重34.700公斤。口饰重环纹一道，敞口，双立耳，三蹄足。</p>
+<p>鼎内铭文长度接近五百字（有497字、499字、500字三说），在所见青铜器铭文中为最长。铭文的内容可分成七段，是说：周宣王即位之初，亟思振兴朝政，乃请叔父毛公为其治理国家内外的大小政务，并饬勤公无私，最后颁赠命服厚赐，毛公因而铸鼎传示子孙永宝。</p>
+<h2 id="大事记"><a class="header" href="#大事记">大事记</a></h2>
+<ul>
+<li>1843年 - 出土 - 陕西岐山县董家村村民董春生在村西地里挖出毛公鼎。</li>
+<li>1852年 - 流转 - 潍县金石学家、收藏家陈介祺从苏亿年之手购得毛公鼎。</li>
+<li>1946年 - 流转 - 陈永仁将毛公鼎捐献给政府，隔年由上海运至南京，收藏于中央博物馆。</li>
+<li>1948年 - 流转 - 国民党退守台湾，大量南京故宫博物院珍贵文物南迁至台北，其中就包括毛公鼎。</li>
+<li>1965年 - 展出 - 台北故宫博物院建成，毛公鼎成为台北故宫的镇馆之宝之一，在商周青铜展厅展出。</li>
+</ul>
+<h2 id="流传历史"><a class="header" href="#流传历史">流传历史</a></h2>
+<h3 id="清朝时期"><a class="header" href="#清朝时期">清朝时期</a></h3>
+<p>清代道光二十三年（1843年），毛公鼎被陕西岐山县董家村村民董春生在村西地里挖出来。有古董商人闻名而来，以白银300两购得，但运鼎之际，被另一村民董治官所阻，买卖没有做成。古董商以重金行贿知县，董治官被逮下狱，以私藏国宝治罪。此鼎最后运到县府，被古董商人悄悄运走，张燕昌之子张石瓠曾巧见此鼎。后毛公鼎辗转落入古董商苏亿年之手。</p>
+<p>咸丰二年（1852年），潍县金石学家、收藏家陈介祺又从苏亿年之手购得，并赏给苏亿年1000两，此鼎深藏于密室，鲜为人知。陈介祺病故后，1902年其后人卖出此鼎，归两江总督端方所有，1911年11月27日端方被派到四川镇压保路运动，被革命军所杀。</p>
+<h3 id="民国时期"><a class="header" href="#民国时期">民国时期</a></h3>
+<p>民国期间端方后人因家道中落，将毛公鼎典押给天津俄国人开办的华俄道盛银行。英国记者辛浦森出美金5万元向端家购买，端家嫌钱太少，不肯割爱。当时有爱国人士极力呼吁保护国宝，毛公鼎辗转至当时担任北洋政府交通总长的大收藏家、后来国学馆馆长叶恭绰手中，存入大陆银行。</p>
+<p>1937年抗日战争爆发，叶恭绰避走香港，毛公鼎未能带走，藏在了上海的寓所里。由于叶恭绰是用假名买得毛公鼎，让日本人无法查知它的下落。叶恭绰嘱咐其侄叶公超有朝一日将鼎献给国家。毛公鼎几经易手，甚至差点被日本军方夺走，所幸叶公超拼死保护，誓不承认知道宝鼎下落。叶恭绰为救侄子，制造了一只假鼎上交日军。叶公超被释放后，于1941年夏密携毛公鼎逃往香港。不久，香港被日军攻占，叶家托德国友人将毛公鼎辗转返回上海。后来因生活困顿，将毛公鼎典押给银行，由钜贾陈永仁出资赎出，毛公鼎才不至于流浪他乡。</p>
+<p>1946年陈咏仁将毛公鼎捐献给政府，隔年由上海运至南京，收藏于中央博物馆。1948年，国民党退守台湾，大量南京故宫博物院珍贵文物南迁至台北。</p>
+<h3 id="1949年迁台后"><a class="header" href="#1949年迁台后">1949年迁台后</a></h3>
+<p>1965年，台北故宫博物院正式建成，稀世瑰宝毛公鼎成为台北故宫的镇馆之宝之一，放在商周青铜展厅最醒目的位置，是永不更换的展品。后作为台北故宫博物院的两大纪念章之一。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>毛公鼎通高54厘米，腹深27.2厘米，口径47厘米，重34.5千克，由作器人毛公而得名。鼎为直耳，半球腹，足为兽蹄形，矮短而庄重有力，鼎的口沿还装饰有环带状的重环纹。整个造型浑厚凝重，饰纹简洁古雅朴素，具有浓厚的生活气息，是西周晚期的鼎由宗教转向世俗生活的代表作品。</p>
+<p>毛公鼎为西周晚期的重器，鼎内壁铸有铭文，32行，近500字，是现存青铜器铭文中最长的一篇，堪称西周青铜器中铭文之最。其内容叙事完整，记载详实，被誉为“抵得一篇《尚书》”，是研究西周晚年政治史的重要史料。</p>
+<p>该铭书法极其饱满庄重，充满了无与伦比的古典美。以至于出土以来，清末书法家们无不为之倾倒。</p>
+<h2 id="铭文"><a class="header" href="#铭文">铭文</a></h2>
+<h3 id="原文隶定"><a class="header" href="#原文隶定">原文隶定</a></h3>
+<p>王若曰：“父歆，丕显文武，皇天引厌氒德，配我有周，膺受大命，率怀不廷（庭）方亡不觐于文武耿光。唯天将集厥命，亦唯先正，，氒辟爵堇大命，肆皇天亡，斁临保我有周，丕巩先王配命，敃天疾威，司余小子弗，彶邦将害吉？迹迹四方，大从丕静。呜呼！惧作小子溷湛于艰，永巩先王”。</p>
+<p>王曰：父歆，余唯肇经先王命，命汝辥我邦，我家内外，憃于小大政，甹朕立，虩许上下若否。宁四方死母童，祭一人才立，引唯乃智，余非庸又昏，汝母敢妄宁,虔夙夕，惠我一人，拥我邦小大猷，毋折缄，告余先王若德，用印邵皇天，緟恪大命，康能四国，俗我弗作先王忧。</p>
+<p>王曰：父歆，余之庶出，入事于外，专命专政，蓺小大楚赋，无唯正闻，引其唯王智，廼唯是丧我国，历自今，出入专命于外，厥非先告歆，父歆舍命，母又敢专命于外。 王曰：父歆，今余唯緟先王命，命汝亟一方，弘我邦我家，毋顀于政，勿雝建庶口。母敢龏槖，龏槖乃侮鳏寡，善效乃友正，母敢湛于酒，汝母敢坠在乃服，恪夙夕，敬念王畏不赐。女母弗帅用先王作明刑，俗女弗以乃辟圅于囏。</p>
+<p>王曰：父歆，已曰及兹卿事寮，大史寮，于父即君，命女摄司公族，雩三有司，小子，师氏，虎臣雩朕亵事，以乃族干吾王身，取专卅寽，赐汝秬鬯一卣，裸圭瓒宝，朱市，悤黄，玉环，玉瑹金车，绎较，朱嚣弘斩，虎冟熏裹，右厄，画鞴，画輴，金甬，错衡，金童，金豙，涑燢，金簟笰，鱼箙，马四匹，攸勒，金口，金膺，朱旂二铃，易汝兹关，用岁于政，毛公对歆天子皇休，用作尊鼎，子子孙孙永宝用。</p>
+<h3 id="参考释文"><a class="header" href="#参考释文">参考释文</a></h3>
+<p>周王这样说：“父歆啊！伟大英明的文王和武王，皇天很满意他们的德行，让我们周国匹配他，我们衷心地接受了皇天的伟大命令。循抚怀柔了那些不来朝聘的方国，他们没有不在文王、武王的光辉润泽之中的。这样，老天爷就收回了殷的命令而给了我们周国。这也是先辈大臣们辅助他们的主君，勤恳奉天大命的结果。所以皇天不懈，监护着我们周国，大大巩固了降给先王的匹配命令。但是严肃的上天突然发出威怒，嗣后的我虽没来得及领略天威，却知道对国家是不吉利的。扰扰四方，很不安宁。唉！我真害怕沉溺在艰难之中，永远给先王带来忧惧。”</p>
+<p>周王说：“父歆啊！我严正地遵守先王的命令，命令你治理我们国家和我们家族的里里外外，操心大大小小的政事。屏卫我的王位，协调上下关系，考绩四方官吏，始终不使我的王位动摇。这需要发挥你的智慧。我并不是那么平庸而昏聩的，你也不能怠忽苟安，虔诚地时刻地惠助于我，维护我们国家大大小小的谋划，不要闭口不说话。经常告诉我先王的美德，以便我能符合天意，继续勉力保持大命，使四方诸国康强安定，使我不造成先王的担忧！”</p>
+<p>周王说：“父歆啊！这些众官出入从事，对外发布政令，制定各种徭役赋税，不管错对，都说是我的英明。这是可以造成亡国的！从今以后，出入或颁布命令，没有事先报告你，也不是你叫他们颁布的，就不能对外胡乱发布政令！”</p>
+<p>周王说：“父歆啊！现在我重申先王的命令，命令你做一方的政治楷模，光大我们的国家和家族。不要荒怠政事，不要壅塞庶民，不要让官吏中饱私囊，不要欺负鳏公寡妇。好好教导你的僚属，不能酗酒。你不能从你的职位上坠落下来，时刻勉力啊！恭恭敬敬地记住守业不易的遗训。你不能不以先王所树立的典型为表率，你不要让你的君主陷入困难境地！”</p>
+<p>周王说：“父歆啊！我已对这些卿事僚、太史僚说过，叫他们归你管束。还命令你兼管公族和三有司、小子、师氏、虎臣，以及我的一切官吏。你率领你的族属捍卫我。取资三十寽，赐你香酒一坛、裸祭用的圭瓒宝器、红色蔽膝加青色横带、玉环、玉笏、金车、有纹饰的蔽较、红皮制成的鞃和艰、虎纹车盖绛色里子、轭头、蒙饰车厢前面栏杆的画缚、铜车辔、错纹衡饰、金踵、金秜、金蕈席、鱼皮箭袋、四匹马、镳和络、金马冠、金缨索、红旗二杆。赐你这些器物，以便你用来岁祭和征伐。”毛公歆为了报答天子的辉煌美德，因而铸造了一个宝鼎子子孙孙永远宝用。</p>
+<h2 id="书法价值"><a class="header" href="#书法价值">书法价值</a></h2>
+<p>毛公鼎的铭文作为西周晚期金文的典范之作，表现出上古书法的典型风范和一种理性的审美趋尚，体势显示出大篆书体高度成熟的结字风貌，瘦劲修长，不促不懈，仪态万千。章法纵横宽松疏朗，错落有致顺乎自然而无做作，呈现出一派天真烂漫的艺术意趣。通过《毛公鼎》文字书写的完美布局，表现出西周晚期的文字书写形成了具有纯熟书写技巧和表现手法的形式和规律。</p>
+<p>毛公鼎铭文的笔法圆润精严，线条浑凝拙朴，用笔以中锋裹毫为主。在具体操作中应是逆锋而入，抽掣而行，提笔中含，锋在画中而至于收笔；其收笔未必笔笔中锋，只是轻按笔锋停止即可，即所谓“平出之法”。因而在临写时应特别注意表现出线条的浑厚、拙重与雄强之气。但在表现轻重变化笔意时，不可有故作颤抖之笔，否则难以体现其真意而毫无生气可言。所以毛公鼎为后人提供了很好的临摹模版。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-1/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-1/SanFamilyPlate.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-1/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-1/SanFamilyPlate.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

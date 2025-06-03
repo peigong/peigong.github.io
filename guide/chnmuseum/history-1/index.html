@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>夏商西周时期 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-1/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="夏商西周时期"><a class="header" href="#夏商西周时期">夏商西周时期</a></h1>
+<blockquote>
+<p>原文：<a href="https://m.chnmuseum.cn/portals/0/web/zt/gudai/detail2.html">夏商西周时期（约公元前21世纪-公元前771年）</a></p>
+</blockquote>
+<p>夏、商、西周时期是中国古代早期国家形态的形成与初步发展阶段。这一时期，王权政治得以强化，并不断完善。青铜铸造达到鼎盛，辉煌灿烂。丰富的汉字材料，记录了当时政治、经济与文化面貌。西周统治者推行的礼制，重在彰显、维护等级秩序，对此后中国古代社会的发展产生了深远影响。</p>
+<h2 id="第一单元-早期国家的形成与初步发展"><a class="header" href="#第一单元-早期国家的形成与初步发展">第一单元　早期国家的形成与初步发展</a></h2>
+<p>夏、商、西周是中国古代早期国家形态的形成与初步发展阶段。这一时期，伴随着朝代更迭，王权政治得以强化，并不断完善。盘庚迁殷之后，商朝开始强盛。西周统治者通过分封诸侯巩固了政权，同时将影响区域空前扩大。</p>
+<p>夏、商、西周时期形成的政治结构，促进了当时社会经济与文化的繁荣，也为此后中国古代社会的进一步发展奠定了坚实基础。西周晚期，王室衰微，各阶层间矛盾激化，社会变革势在必然。</p>
+<h3 id="第一组-夏朝的建立"><a class="header" href="#第一组-夏朝的建立">第一组 夏朝的建立</a></h3>
+<p>约在公元前21世纪，禹治水成功，被推举为联盟首领。禹死后，其子启继位。自此，传统推举首领的“禅让”制为王位世袭制所代替，中国历史上出现了第一个王朝——夏。</p>
+<p>夏人的主要活动地域在今河南西部与山西南部。以河南偃师二里头遗址为中心的“二里头文化”，分布地域和延续年代基本与夏人活动的地域和时间相符，是目前探索夏人历史面貌的主要遗存。</p>
+<h3 id="第二组-商朝的强盛"><a class="header" href="#第二组-商朝的强盛">第二组 商朝的强盛</a></h3>
+<p>约在公元前16世纪，成汤率领商族趁夏乱起兵，灭夏，建立了商朝。商初建都于亳，后又经数次迁徙，约在公元前14世纪，商王盘庚定都于殷（今河南安阳）, 直至公元前11世纪商朝灭亡。盘庚迁殷之后，商朝的发展进入了强盛。</p>
+<h3 id="第三组-西周的封邦建国"><a class="header" href="#第三组-西周的封邦建国">第三组 西周的封邦建国</a></h3>
+<p>商朝后期，居住在陕西岐山之南周原一带的周人逐渐强大，约在公元前11世纪，周武王联合许多方国、部落，大败商军于牧野，灭商，建立了周朝,都于镐（今陕西西安），史称西周。</p>
+<p>周武王死后，由周公摄政，他平定了管叔、蔡叔与商纣王子武庚联合发动的叛乱，并分封诸侯。</p>
+<h2 id="第二单元-夏商西周时期的经济"><a class="header" href="#第二单元-夏商西周时期的经济">第二单元　夏商西周时期的经济</a></h2>
+<p>农业是这一时期主要的经济部门，管理体制较为完善。手工业在二里头文化时期内部已出现专业分工，到了商代，生产规模进一步扩大，同时，商业活动也取得显著发展。西周时期，手工业内部分工更细，号称“百工”，与商业同为官府垄断，即所谓“工商食官”。其主要生产门类包括青铜铸造、玉石器加工、陶瓷器制作、纺织与髹漆等。</p>
+<h3 id="第一组-农业"><a class="header" href="#第一组-农业">第一组 农业</a></h3>
+<p>这一时期的生产工具以木、石、骨、蚌器为主，青铜工具使用较少。商王极其重视农业，设有主管农事之官，当时的生产过程包括作垄、收获、储藏等一系列完备的环节。西周的土地为周王所有，周王将土地赐给各级贵族与平民。劳动者在布满沟洫的井田上，进行大规模的集体耕作，并采取休耕轮作以保持地力。</p>
+<h3 id="第二组-青铜铸造"><a class="header" href="#第二组-青铜铸造">第二组 青铜铸造</a></h3>
+<p>二里头文化时期，青铜合金技术普及，出现了采用多块复合范浇铸的青铜礼器群，工艺复杂。商代的青铜铸造业内部出现分工，生产规模扩大，能熟练地制作器范，并用一次浇铸的浑铸法与先铸器体或附件然后接铸两者的分铸法，铸造出品类多样、造型复杂、纹饰精美的器物，在器型设计、制作工艺等方面均有较大突破。西周早期的青铜制品，整体面貌较多承袭商代遗风。西周中期之后，发明了一模翻制数范的方法，并在铸器时使用焊接技术，器类、器型、纹饰也发生了明显的变化，出现了许多新的式样。</p>
+<h3 id="第三组-原始瓷器制作"><a class="header" href="#第三组-原始瓷器制作">第三组 原始瓷器制作</a></h3>
+<p>中国是瓷器的故乡，二里头文化时期已发现原始瓷器。商代的一部分原始瓷器，以高岭土为胎，人工配制的石灰釉施在器表及部分口沿内，光亮透明，呈现深浅不同的青色，烧成温度约在1200℃左右，质地坚硬，无吸水性或吸水性很弱，已经具备瓷器的基本特征。西周时期，原始瓷器的制作工艺比商代有所提高，器类增加，使用更加普遍。</p>
+<h3 id="第四组-玉石器加工"><a class="header" href="#第四组-玉石器加工">第四组 玉石器加工</a></h3>
+<p>二里头文化时期，玉石器器类增多，雕琢更加精细，出现了新的装饰纹样以及在青铜上镶嵌绿松石的工艺。商代的玉石器加工工艺取得了明显进步,器类更多，其中的人物、动物造型生动传神，通常装饰程式化的纹样，反映出艺术发展的成熟。</p>
+<p>西周时期，玉石器被赋予丰富的礼制内涵，其中由多件玉饰结成的玉佩与玉覆面尤具时代特色。</p>
+<h3 id="第五组-纺织与髹漆"><a class="header" href="#第五组-纺织与髹漆">第五组 纺织与髹漆</a></h3>
+<p>二里头文化时期，平纹绢与斜纹织物均有发现。商代丝织品中，出现了菱形纹的回纹绮、大孔罗，表明当时已有了配备提花装置的织机。
+髹漆工艺运用较多。商代后期，这项工艺中还加入蚌片、绿松石、龟甲片等细小饰物的镶嵌。西周时期，漆器数量明显增加，使用范围扩大，出现了雕花漆器与漆木、青铜复合器。</p>
+<h3 id="第六组-商业与交通"><a class="header" href="#第六组-商业与交通">第六组 商业与交通</a></h3>
+<p>这一时期，在遗址、墓葬之中大量发现海贝，在商代遗址中还出土鲟鱼鳞片、鲸骨、海蚌、龟甲、玉料，这些物品大多由远方贡献及交换而来。</p>
+<p>车是中国古代的重要发明，二里头遗址内已发现双轮车辙。车既是当时的交通工具，也是军队的重要装备。</p>
+<h2 id="第三单元-夏商西周时期的文化"><a class="header" href="#第三单元-夏商西周时期的文化">第三单元　夏商西周时期的文化</a></h2>
+<p>汉字是世界上最古老的文字之一，自成体系，使用时间最长。商代后期，汉字已发展到成熟阶段。丰富的汉字材料，记录了当时政治、经济与文化面貌。西周统治者以宗法制为基础，推行一整套完备的礼制，重在彰显并严格维护等级秩序，对此后的中国古代社会产生了深远影响。</p>
+<h3 id="第一组-汉字"><a class="header" href="#第一组-汉字">第一组 汉字</a></h3>
+<p>汉字在夏代已经使用，商代后期的汉字已经具备汉字结构的基本形式，是一种发展到成熟阶段的文字。</p>
+<p>夏、商、西周时期，在青铜器、龟甲、兽骨、玉石器及陶器上留下了异常丰富的汉字材料，内容涉及祭祀、政治、军事、田猎、刑罚、农业、畜牧业、手工业、商业、医学与历法等领域。</p>
+<h3 id="第二组-天象气象的观察与历法"><a class="header" href="#第二组-天象气象的观察与历法">第二组 天象、气象的观察与历法</a></h3>
+<p>由于农业、畜牧业的发展及日常生活需要，商人对日食、月食、星等天象以及云、雷、雨、虹、雹、雪、雾、风等气象的观察频繁而细致，使用太阴纪月、太阳纪年的阴阳合历，其纪日、纪时方式长期为后世沿用。</p>
+<h3 id="第三组-音乐"><a class="header" href="#第三组-音乐">第三组 音乐</a></h3>
+<p>二里头文化时期，乐器种类主要有埙、鼓、铃、磬，到了商代，出现了铙、编铙、编磬。西周时期，钲、编钟的应用，极大丰富了音乐的表现力。</p>
+<h3 id="第四组-西周的礼制"><a class="header" href="#第四组-西周的礼制">第四组 西周的礼制</a></h3>
+<p>西周时期，以宗法制为基础，推行一整套完备的礼制，内容包括祭祀、丧葬、朝聘、征伐、宴飨、赏赐及册命等，重在彰显并严格维护等级制度。不同等级贵族所使用礼器的数量、组合各不相同，庶人不得使用贵族的礼仪。</p>
+<h2 id="第四单元-夏商西周时期的周边各族"><a class="header" href="#第四单元-夏商西周时期的周边各族">第四单元　夏商西周时期的周边各族</a></h2>
+<p>夏、商、西周时期，也是中原文化区周边各族形成的重要阶段。在这一发展过程中，周边各族形成了各具特色的文化，并与中原文化进行频繁的交流。</p>
+<h3 id="第一组-北部地区"><a class="header" href="#第一组-北部地区">第一组 北部地区</a></h3>
+<p>夏、商、西周时期，肃慎、戎狄等部族曾经活动在今东北、内蒙古、河北、山西及陕西部分地区。分布在此地的夏家店下层文化、西团山文化、朱开沟文化等遗存，属于这一时期。</p>
+<h3 id="第二组-西北地区"><a class="header" href="#第二组-西北地区">第二组 西北地区</a></h3>
+<p>夏、商、西周时期，今甘肃、青海等地主要有羌、戎狄部族，此地分布着齐家文化、四坝文化、寺洼文化、辛店文化及卡约文化等青铜时代的遗存。</p>
+<h3 id="第三组-东部地区"><a class="header" href="#第三组-东部地区">第三组 东部地区</a></h3>
+<p>夏、商、西周时期，生活在东部地区的部族主要有东夷与淮夷。分布在山东地区的岳石文化，其时代大体与夏、商前期相当，是东夷的遗存。</p>
+<h3 id="第四组-东南与南部地区"><a class="header" href="#第四组-东南与南部地区">第四组 东南与南部地区</a></h3>
+<p>夏、商、西周时期，今江苏南部、安徽南部、浙江、江西、湖北、湖南、福建、广西及广东南部地区，是吴与多支越族的聚居地。在这片广大区域内，普遍发现几何印纹硬陶器与青铜器。其中洞庭湖周围地区出土的青铜器明显受到商文化的影响，而且多动物造型，形象生动、工艺精湛。</p>
+<h3 id="第五组-西南地区"><a class="header" href="#第五组-西南地区">第五组 西南地区</a></h3>
+<p>商周时期，今四川、重庆主要是蜀人与巴人的活动地区。四川广汉三星堆出土的玉器、青铜树、青铜人、青铜面具等造型具有鲜明的地方特色，但其装饰及青铜尊、青铜罍等明显受到商文化的影响。</p>
+<h2 id="山西运城绛县横水西周中期倗伯夫人毕姬墓出土精品"><a class="header" href="#山西运城绛县横水西周中期倗伯夫人毕姬墓出土精品">山西运城绛县横水西周中期倗伯夫人毕姬墓出土精品</a></h2>
+<p>2004年，在山西运城绛县横水镇北约一公里之地发现一处西周时期的墓地，经过考古人员数年的艰苦发掘，一个不见史载、尘封近三千年的西周封国跃然重现，这就是倗国。此墓地从西周早期延续至西周晚期，揭示了倗国的兴衰与辉煌。其中，西周中期的倗伯与其夫人毕姬并穴合葬墓规模最大，规格最高，而且，毕姬墓出土的青铜礼器、玉器、荒纬极为耀眼。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/prehistory-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-1/DukeMaoTripod.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/prehistory-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-1/DukeMaoTripod.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

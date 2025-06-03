@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>古DNA与分子考古研究 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/reference-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="古dna与分子考古研究"><a class="header" href="#古dna与分子考古研究">古DNA与分子考古研究</a></h1>
+<blockquote>
+<p>原文：<a href="http://kaogu.cssn.cn/zwb/kgyd/kgsb/202211/t20221123_5566158.shtml">古DNA与分子考古研究</a></p>
+</blockquote>
+<p>2022年10月，著名人类学家斯万特?帕博(Svante paabo)被授予诺贝尔生理学（医学）奖，以表彰他在已灭绝古人类和人类进化研究中的杰出贡献，成为古代DNA研究领域首位诺贝尔奖得主。什么是古DNA，古DNA在考古研究中又有哪些应用呢？本文将简要介绍古DNA研究的基本原理、方法及其在考古学研究中的应用。</p>
+<p>古DNA是指残存在古代生物遗骸（如化石、亚化石、博物馆收藏标本、考古学与法医学标本等）中的遗传物质：脱氧核糖核酸。分子考古研究就是利用现代分子生物学的技术、方法和手段，开展古代人类和动植物DNA的提取、扩增和测序研究，从分子遗传学角度探讨人类起源与迁徙、农业起源、家养动物驯化等考古学重大问题。</p>
+<p>古DNA具有含量极低、高度降解、广泛损伤的特点，导致古DNA的研究极为困难。人们一度认为有机体死亡后DNA会很快降解消失殆尽。直到1984年，美国加利福尼亚大学伯克利分校的Higuchi等成功地从博物馆保存的已灭绝斑驴（Quagga）中提取出DNA，人们才看到一丝曙光。帕博随后陆续开展了古埃及木乃伊研究、尼安德特人研究，逐渐打开了古DNA研究的大门。1986年PCR技术(Polymerase Chain Reaction—聚合酶链式反应)的出现，引发了古DNA研究的第一次革命。PCR技术能够灵敏、高效、特异性扩增上百万的目的DNA片段，快速获得大量的DNA进行测序，极大推动了古DNA研究的发展。但是，由于第一代测序通量低、读长短，仅能提供有限的遗传信息，所揭示的考古问题不全面。近年来随着科技发展，高通量、低成本的第二代测序技术逐渐成熟，DNA捕获技术广泛应用，古DNA研究全面进入到古基因组时代，在人类起源、农业起源、家养动物起源与驯化、古代疾病演化等方面都取得了举世瞩目的研究成果。</p>
+<h2 id="一人类起源研究"><a class="header" href="#一人类起源研究">一、人类起源研究</a></h2>
+<p>人类起源研究是考古学研究重大课题之一。作为人类的近亲，尼安德特人研究一直受到人们的关注。从早期的线粒体片段的研究到高质量基因组的发布，尼安德特人的古DNA研究经历了数十年的艰辛历程。1997年Krings等首次从尼安德特人化石中成功提取出线粒体片段，研究结果显示尼安德特人与现代人类之间存在较大分歧，尼安德特人对现代人类没有任何基因贡献。后续对北高加索、克罗地亚、比利时、法国、西班牙等地的尼安德特人的古DNA研究，都显示在线粒体层面上，尼安德特人与人类没有基因联系。但是线粒体DNA携带的信息过少，全面否定尼安德特人和现代人之间的基因交流为时过早。2006年，美国454公司开发了具有高通量的焦磷酸测序技术，使得核基因组测序成为可能。同年，Green等利用焦磷酸测序技术成功地获得了尼安德特人100万个DNA碱基对。2010年，Green等公布了尼安德特人核基因组草图，研究结果显示现代人中有约1%—4%的DNA来自尼安德特人。这一结果表明，走出非洲的晚期智人在踏上欧亚大陆时曾与尼安德特人进行过基因交流。</p>
+<p>除了尼安德特人的研究以外，古基因组研究还揭示了一个新的、以往不为人知的灭绝古人类：丹尼索瓦人(Denisova hominin)。2008年在阿尔泰山丹尼索瓦洞穴中出土了一个未知人类的指骨，线粒体研究显示，这是与尼安德特人和现代人完全不同的古人类。2012年，Meyer等公布了一个高达30X的高质量丹尼索瓦人基因组，研究显示丹尼索瓦人与现代巴布亚新几内亚人群的遗传关系较近。</p>
+<p>2019年，我国科学家利用古蛋白组学方法确定甘肃省甘南州夏河县白石崖溶洞发现的古人类属于丹尼索瓦人，揭示了丹尼索瓦人广泛的地理分布范围，为探索丹尼索瓦人的进化历史提供了新的线索。近年来的研究还显示，尼安德特人和丹尼索瓦人之间进行过基因交流。相信在不远的将来，古基因组研究将揭开人类起源的神秘面纱。</p>
+<h2 id="二农业起源研究"><a class="header" href="#二农业起源研究">二、农业起源研究</a></h2>
+<p>人类历史中最重大的事情之一是农业革命，农业、牧业逐渐成为了人类主要的经济支柱。</p>
+<p>在10000年前，居住在新月沃地（Fertile Crescent）的古人就开始种植小麦、大麦等农作物。2016年，一个国际研究小组首次成功地对距今6000年前以色列Yaram洞穴出土的大麦进行了古DNA研究，这是迄今重建的最古老的植物基因组。六倍体普通小麦是世界上最重要的粮食作物之一，小麦驯化向西扩散到欧洲，向东扩散到东亚。然而，小麦进入中国的传播途径仍不清楚。</p>
+<p>2019年，武喜艳等成功获得距今3800年的小麦全基因组序列，证明了古代小麦与中国西南地区现存的普通小麦地方品种的密切关系，提出普通小麦从青藏高原边缘到长江流域的扩散路线，为研究中国种植的现存小麦地方品种的栽培起源、扩散和遗传改良提供了重要信息。</p>
+<h2 id="三家养动物起源与驯化"><a class="header" href="#三家养动物起源与驯化">三、家养动物起源与驯化</a></h2>
+<p>家养动物的出现为人类提供了稳定的肉食资源以及奶、毛皮、蛋等副产品，同时作为生产、骑乘、运输的工具，极大地提高了人类的生产与生活能力，导致社会经济形态复杂化并逐渐由采集、渔猎向定居、农耕转变。迄今为止，考古学研究积累和古DNA技术的进步，使我们对家养动物驯化历史有了更进一步的认识。</p>
+<p>在人类文明发展历史中，家马(Equus caballus)曾是推动文化交流、促进人类社会发展的主要动力。考古学研究认为，家马可能来自多个驯化起源地种群。近年来古基因组研究显示，现代家马的驯化起源可能比之前人们所猜测的更加复杂。</p>
+<p>来自乌克兰大草原的古代波太（Botai）马被认为是最早被驯化的家马。然而，2018年Gaunitz等的研究显示，波太野马被驯化后并没有延续下来，现代的所有家马起源于一个未知的野生祖先，被命名为DOM2。最近的研究显示，DOM2祖先生活在欧亚大陆西部草原，尤其是伏尔加河下游，但不在安纳托利亚，在公元前四千年末和三千年初。</p>
+<p>中国家马起源与驯化研究一直是国际学术界关注的前沿和热点科学问题。考古学证据表明，早在龙山时期，考古遗址中就开始有零星的马骨发现，但该时期马在中国是否被驯化在学术上一直存在争议。蔡大伟研究团队对中国北方龙山至青铜时代（距今3500年以来）三个考古遗址（黑龙江洪河遗址、陕西木柱柱梁遗址以及宁夏沙塘北塬遗址）出土的26例古代马进行了全基因组分析，在国际上首次成功获得了已灭绝马属动物E.(Sussemionus) ovodovi（奥氏马）的高质量全基因组数据（测序深度13.4X），重建了马属动物的演化历史，发现奥氏马属于马属动物除马、斑马和驴三个亚属之外的第四个亚属，并且在中国青铜时代依然存在，更新了我们关于中国早期野马的认识，为中国家马的起源与驯化研究提供了重要线索。</p>
+<h2 id="四中国古代人群研究"><a class="header" href="#四中国古代人群研究">四、中国古代人群研究</a></h2>
+<p>近年来，我国科学工作者在中国古代人群的起源、形成与演化研究中取得一系列重大成果，为揭示中华民族多元一体格局的形成，深化中华文明起源研究，推进中华文明探源工程，实证中华文明延绵不断、多元一体、兼收并蓄的发展脉络提供了重要支撑。</p>
+<p>付巧妹研究团队成功获取了我国南北方11个遗址26个9500—3000年前个体的古基因组，揭示在距今9500年前中国南北方人群就已经分化了；在距今8000年前，南北人群开始融合交流；至4800年前，南北融合的趋势逐渐加强，并延续至今。该研究首次揭示了中国南北方人群遗传格局的形成与发展过程，对于探索中国古代人群起源与迁徙历史具有重大的意义。</p>
+<p>崔银秋研究团队对黄河流域、西辽河流域及黑龙江流域19个考古遗址年代距今7500—1700年的55个个体进行了古基因组分析，研究结果显示，至少从距今7500年以来，中原地区人群在整体的遗传结构上保持连续性，最晚自仰韶时期（距今约7000—5500年）开始，受到中国南方人群的持续性遗传贡献，最终形成现在的汉族人群。</p>
+<p>新疆地处欧亚大陆腹地，作为联通欧亚的主要桥梁，一直是欧亚大陆东西文化、贸易、技术、人群交流的重要通道。揭示新疆地区古代人群的源流及迁徙，是实证中华民族多元一体格局形成的重要一环。付巧妹团队对新疆阿勒泰、塔城、伊犁、昌吉、巴音郭楞、喀什、和田等地区的39个遗址出土的201例个体进行了古基因组分析，研究显示青铜时代新疆西北部早期人群中不同程度上混合了周边的人群，随着时间推移，古东亚人群的成分不断增加，来源不同的人群紧密地融合在一起，历经几千年岁月的洗礼，至今仍能在现代新疆人群中看到类似的遗传成分。</p>
+<p>近年来，随着古DNA提取技术和测序技术的发展，古DNA研究对象不仅仅局限在人类、动植物的遗骸上，通过古微生物DNA信息追溯古代疫病流行，通过土壤提取古代人类DNA，通过口腔牙结石微生物揭示人体健康和饮食习惯已经成为分子考古新的研究方向。</p>
+<p>我国拥有五千年灿烂的古代文明，是世界文明史上古代文明最丰富最发达的地区之一，同时拥有最为丰富的古代人类动植物遗传资源，这些生物资源中所蕴含的全基因组信息能够为中华民族的形成演化及中华文明的探根溯源提供重要线索和佐证。未来，我们要持续加强古基因组研究，加快构建中国古代生物遗传资源数据库，深化中华文明起源研究，推进中华文明探源工程，为人类文明新形态建设提供理论支撑。（作者系吉林大学考古学院教授）</p>
+<p>（文章来源：中国社会科学网）</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/reference-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/reference-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

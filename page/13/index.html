@@ -85,6 +85,166 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-poem-a-2015-2015-09-23-yu-guo-tian-qing" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html" class="article-date">
+  <time class="dt-published" datetime="2015-09-22T16:00:00.000Z" itemprop="datePublished">2015-09-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-09-23-yu-guo-tian-qing.html">雨过天晴</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>雨过，天晴。</p>
+<p>或许不留一点点尘埃，</p>
+<p>或许有一段彩虹挂在天外。</p>
+<ul>
+<li></li>
+</ul>
+<p>雨已过，天已晴。</p>
+<p>或许蓝天白云终一世，</p>
+<p>或许也有风雨在未来。</p>
+<ul>
+<li></li>
+</ul>
+<p>天睛，雨过。</p>
+<p>不想看白色的云狗，</p>
+<p>可以闭上自己的双眼。</p>
+<ul>
+<li></li>
+</ul>
+<p>天已晴，雨已过。</p>
+<p>撑着曾经的伞，</p>
+<p>也回不到淋漓的过去。<br>‌‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-it-studio-2015-09-18-webplate-stack" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/it-studio-2015-09-18-webplate-stack.html" class="article-date">
+  <time class="dt-published" datetime="2015-09-17T16:00:00.000Z" itemprop="datePublished">2015-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/studio/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/it-studio-2015-09-18-webplate-stack.html">前端框架Webplate的技术栈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前端框架Webplate"><a href="#前端框架Webplate" class="headerlink" title="前端框架Webplate"></a>前端框架Webplate</h2><p><a target="_blank" rel="noopener" href="http://getwebplate.com/">Webplate</a>是一款优秀的前端框架，可使开发者专注于站点或应用的开发，它提供了稳健的布局引擎、全局按钮元素和可定制性的表格，同时还包括了jQuery插件和大量工具。 &#x3D; <a target="_blank" rel="noopener" href="https://github.com/chrishumboldt/webplate">GitHub</a></p>
+<p>Webplate is an awesome front-end framework that lets you stay focused on building your site or app all the while remaining really easy to use.</p>
+<h2 id="Yepnope-js"><a href="#Yepnope-js" class="headerlink" title="Yepnope.js"></a>Yepnope.js</h2><p>Yepnope.js是一个能够根据输入条件来选择性异步加载资源文件的js脚本，可以在页面上仅加载用户需要的js&#x2F;css。</p>
+<p>The first thing executed by the stack is yepnope.js to asynchronously load the necessary Javascript and CSS files. In essence the stack.js file is a custom configured deployment and will load up essential libraries before checking for project files. Even though this library has been deprecated it is still valuable in its execution and is the core of how Webplate runs. There are plans to build a custom loader but for now this works great.</p>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><p>Next up is jQuery and is one of the most important libraries used by Webplate. All of the Javascript tools, custom plugins and wrappers are written using jQuery and as such cannot be removed. Also the version 2 build of jQuery is being used and as such Webplate is not compatible with any IE version below 9. This is a conscious decision to stay ahead of the curve in terms of front-end development.</p>
+<h2 id="Modernizr"><a href="#Modernizr" class="headerlink" title="Modernizr"></a>Modernizr</h2><p>Modernizr是一个开源的JS库，它使得那些基于访客浏览器的不同（指对新标准支持性的差异）而开发不同级别体验的设计师的工作变得更为简单。它使得设计师可以在支持HTML5和CSS3的浏览器中充分利用HTML5和CSS3的特性进行开发，同时又不会牺牲其他不支持这些新技术的浏览器的控制。</p>
+<p>Another critical library, Modernizr is a feature detection script used to determine what the browser is capable of doing, ranging from CSS animations to touch enabled events. It does so by assigning a class to the HTML element which can then be used by your Javascript or CSS.</p>
+<h2 id="Hammer-js"><a href="#Hammer-js" class="headerlink" title="Hammer.js"></a>Hammer.js</h2><p>Hammer.js是一个轻量级的JavaScript库（仅有2kb），能让你的网站轻松实现触控事件。它依赖于jQuery，用来控制触摸设备上的多点触控特性。</p>
+<p>All touch based gestures are handled through Hammer.js with the jQuery plugin included as part of the stack. This really is a great library and replaces the original inclusion of jQuery.Finger. To find out more visit the Hammer.js site.</p>
+<h2 id="Velocity-js"><a href="#Velocity-js" class="headerlink" title="Velocity.js"></a>Velocity.js</h2><p>Velocity.js 是velocity模板语法的javascript实现。Velocity 是基于Java的模板引擎，广泛应用在阿里集 体各个子公司。Velocity模板适用于大量模板使用的场景，支持复杂的逻辑运算，包含 基本数据类型、变量赋值和函数等功能。Velocity.js 支持 Node.js 和浏览器环境。</p>
+<p>Animations are an important part of the front-end experience but managing the right kind of animation for the particular device is a challenge. Velocity.js is the best out there for this job and will give you smooth Javascript animations across the board.</p>
+<h2 id="Fastclick"><a href="#Fastclick" class="headerlink" title="Fastclick"></a>Fastclick</h2><p>FastClick 是一个简单，易于使用的JS库用于消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟。</p>
+<p>Most mobile devices come with an irritating delay on touch click events for links and buttons. Fastclick removes this delay resulting in a more app like feel to the whole project. Note that this library will only be loaded if Webplate detects touch capabilities and is executed automatically.</p>
+<h2 id="Normalize-css"><a href="#Normalize-css" class="headerlink" title="Normalize.css"></a>Normalize.css</h2><p>Normalize.css 是一个可定制的 CSS 文件，使浏览器呈现的所有元素，更一致和符合现代标准。它正是针对只需要统一的元素样式。该项目依赖于研究浏览器默认元素风格之间的差异，精确定位需要重置的样式。这是一个现代的，HTML5-ready 的 CSS 重置样式集。</p>
+<p>A collection of HTML element and attribute style-normalizations to help clear any strange style nuances. Normalize.css helps maintain consistency across all your projects in all the browsers.</p>
+<h2 id="Typeplate"><a href="#Typeplate" class="headerlink" title="Typeplate"></a>Typeplate</h2><p>Typeplate 是一个“排版入门套件”。我们不需要美学设计,但定义适当的标记与可扩展样式为常见的排版模式。一个精简Sass 库关注适当的技术实现的设计模式。</p>
+<p>Typelate is a “typographic starter kit” used to define proper markup for common typographic patterns. It will handle all your type from heading tags, to paragraphs and lists.</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-characters-2015-07-31-xiang-fei" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-characters-2015-07-31-xiang-fei.html" class="article-date">
+  <time class="dt-published" datetime="2015-07-30T16:00:00.000Z" itemprop="datePublished">2015-07-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/characters/">人物</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-characters-2015-07-31-xiang-fei.html">湘妃</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="雨"><a href="#雨" class="headerlink" title="雨"></a>雨</h2><blockquote>
+<p>2015-07-31</p>
+</blockquote>
+<p>湘妃或从南方来，</p>
+<p>一抹乌云暑气收。</p>
+<p>点点珠泪随风洒，</p>
+<p>不着欢喜不着愁。</p>
+<h2 id="巫山"><a href="#巫山" class="headerlink" title="巫山"></a>巫山</h2><blockquote>
+<p>2012-04-28</p>
+</blockquote>
+<p>斑斑哀怨斑竹泪，</p>
+<p>楚楚娇柔楚云飞。</p>
+<p>巫山朝暮云雨后，</p>
+<p>不知先王曾是谁。</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-poem-characters-2015-06-16-gao-su" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/poem-characters-2015-06-16-gao-su.html" class="article-date">
@@ -257,70 +417,6 @@
 
 
   
-    <article id="post-poem-a-2015-2015-06-04-zai-chen-shi-jian" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html" class="article-date">
-  <time class="dt-published" datetime="2015-06-03T16:00:00.000Z" itemprop="datePublished">2015-06-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html">尘世</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="在尘世间"><a href="#在尘世间" class="headerlink" title="在尘世间"></a>在尘世间</h2><p>在观众里，</p>
-<p>我看这尘世间的戏。</p>
-<p>王侯将相，</p>
-<p>才子佳人，</p>
-<p>你方唱罢我登场，</p>
-<p>都是聚散离合，</p>
-<p>都是悲欢苦乐。</p>
-<ul>
-<li></li>
-</ul>
-<p>在演员中，</p>
-<p>我看这尘世间的观众。</p>
-<p>男女老少，</p>
-<p>士农工商，</p>
-<p>散去一场又来一场，</p>
-<p>忽而哭的流涕，</p>
-<p>忽而笑的俯仰。</p>
-<ul>
-<li></li>
-</ul>
-<p>在尘世间，</p>
-<p>我当着观众当演员。</p>
-<p>酒色财气，</p>
-<p>名闻利养，</p>
-<p>放不下来舍不去，</p>
-<p>为功名利禄受辛苦，</p>
-<p>为爱伤心落泪哭。</p>
-<p>‌‌</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-poem-a-2015-2015-06-04-meng-xing-lai" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/articles/poem-a-2015-2015-06-04-meng-xing-lai.html" class="article-date">
@@ -384,6 +480,70 @@
 <p>七宝墁地，</p>
 <p>金绳界道，</p>
 <p>我身如琉璃。<br>‌‌</p>
+
+      
+    </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-poem-a-2015-2015-06-04-zai-chen-shi-jian" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html" class="article-date">
+  <time class="dt-published" datetime="2015-06-03T16:00:00.000Z" itemprop="datePublished">2015-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/articles/poem-a-2015-2015-06-04-zai-chen-shi-jian.html">尘世</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="在尘世间"><a href="#在尘世间" class="headerlink" title="在尘世间"></a>在尘世间</h2><p>在观众里，</p>
+<p>我看这尘世间的戏。</p>
+<p>王侯将相，</p>
+<p>才子佳人，</p>
+<p>你方唱罢我登场，</p>
+<p>都是聚散离合，</p>
+<p>都是悲欢苦乐。</p>
+<ul>
+<li></li>
+</ul>
+<p>在演员中，</p>
+<p>我看这尘世间的观众。</p>
+<p>男女老少，</p>
+<p>士农工商，</p>
+<p>散去一场又来一场，</p>
+<p>忽而哭的流涕，</p>
+<p>忽而笑的俯仰。</p>
+<ul>
+<li></li>
+</ul>
+<p>在尘世间，</p>
+<p>我当着观众当演员。</p>
+<p>酒色财气，</p>
+<p>名闻利养，</p>
+<p>放不下来舍不去，</p>
+<p>为功名利禄受辛苦，</p>
+<p>为爱伤心落泪哭。</p>
+<p>‌‌</p>
 
       
     </div>
@@ -541,147 +701,11 @@
 
 
   
-    <article id="post-poem-a-2015-2015-03-31-meng-huan" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-03-31-meng-huan.html" class="article-date">
-  <time class="dt-published" datetime="2015-03-30T16:00:00.000Z" itemprop="datePublished">2015-03-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-03-31-meng-huan.html">梦幻</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>无明樵楼鼓三更，</p>
-<p>六道凡夫一夜梦。</p>
-<p>无始劫来无量情，</p>
-<p>纷纷不断万相生。</p>
-<p>心中幻想多挂碍，</p>
-<p>梦里人物难自醒。</p>
-<p>持戒修福生实信，</p>
-<p>皈依觉正皈依净。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-poem-a-2015-2015-03-31-chen-gou" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/poem-a-2015-2015-03-31-chen-gou.html" class="article-date">
-  <time class="dt-published" datetime="2015-03-30T16:00:00.000Z" itemprop="datePublished">2015-03-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/poem/">培公诗抄</a>►<a class="article-category-link" href="/categories/poem/a-2015/">2015 ~ 2024</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/poem-a-2015-2015-03-31-chen-gou.html">尘垢</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>似清水中垢，</p>
-<p>若净空中尘。</p>
-<p>了了心无事，</p>
-<p>梦里现真身。</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-it-env-2015-03-26-linux-zip-unzip" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/articles/it-env-2015-03-26-linux-zip-unzip.html" class="article-date">
-  <time class="dt-published" datetime="2015-03-25T16:00:00.000Z" itemprop="datePublished">2015-03-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/it/">IT</a>►<a class="article-category-link" href="/categories/it/env/">开发环境</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/articles/it-env-2015-03-26-linux-zip-unzip.html">Linux下的压缩解压缩命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><pre><code>zip -r peigong.zip ./peigong
-</code></pre>
-<p>将当前目录下的所有文件和文件夹全部压缩成<code>peigong.zip</code>文件，<code>－r</code>表示递归压缩子目录下所有文件。</p>
-<h2 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h2><pre><code>unzip -o -d /home/peigong peigong.zip
-</code></pre>
-<p>把<code>peigong.zip</code>文件解压到<code>/home/peigong/</code></p>
-<ol>
-<li>**-o:**不提示的情况下覆盖文件。</li>
-<li><strong>-d:</strong><code>-d /home/peigong</code>指明将文件解压缩到<code>/home/peigong</code>目录下。</li>
-</ol>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code>zip -d peigong.zip smart.txt
-</code></pre>
-<p>删除压缩文件中<code>smart.txt</code>文件</p>
-<pre><code>zip -m peigong.zip ./rpm_info.txt
-</code></pre>
-<p>向压缩文件中<code>peigong.zip</code>中添加<code>rpm_info.txt</code>文件</p>
-
-      
-    </div>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/12/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/14/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/12/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/14/">下一页 &raquo;</a>
   </nav>
 
 </section>
