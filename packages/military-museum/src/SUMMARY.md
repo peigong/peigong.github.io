@@ -25,6 +25,7 @@
     - [被竹竿捅下来的黑鸟](./f1-air-force/U2-4.md)
     - [7架被击落，5架在中国](./f1-air-force/U2-5.md)
     - [中国造红旗2号地空导弹](./f1-air-force/red-flag-2.md)
+    - [S-75防空导弹（萨姆-2地空导弹）](./f1-air-force/S-75.md)
     - [空军的军徽一直就是红色八一吗？](./f1-air-force/f1-air-force-1.md)
 - [一层 歼击机](./f1-fighter/README.md)
     - [中国歼击机](./f1-fighter/ChineseFighter.md)
