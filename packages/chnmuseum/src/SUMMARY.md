@@ -15,7 +15,7 @@
 - [三国两晋南北朝时期](./history-4/README.md)
 - [隋唐五代时期](./history-5/README.md)
     - [王处直](./history-5/history-5-1.md)
-    - [李静训](./history-5/history-5-1.md)
+    - [李静训](./history-5/history-5-2.md)
 - [辽宋夏金元时期](./history-6/README.md)
     - [螭吻](./history-6/chiwen.md)
 - [明清时期](./history-7/README.md)
