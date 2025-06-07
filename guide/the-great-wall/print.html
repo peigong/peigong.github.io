@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>长城 - VET.周培公(https://pg.js.cn)</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">长城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="长城"><a class="header" href="#长城">长城</a></h1>
+<p>中国长城有两千多年的修建历史，不同朝代长城的位置也是不断变化的。</p>
+<p>中国最早的长城修筑于春秋战国时期，是各诸侯国为了保护自己而修建的。北方的几个诸侯国还修建了防御游牧民族入侵的长城。这是当时齐国（今山东北部）的长城。</p>
+<p>秦始皇统一中国后，把北方各国原先用来防御游牧民族的长城连接在一起，西起临洮（táo）​，东到辽东，形成了中国历史上最早的万里长城。</p>
+<p>相传秦朝有个叫范喜良的人修长城时累死了，他的妻子孟姜女到长城边找他，仰天痛哭，以至于一段长城为之倒塌。现在山海关长城附近还有人们为纪念她修建的姜女庙呢。</p>
+<p>汉朝长城比秦朝更长。为了保护丝绸之路，汉武帝把长城一直修到了今天我国的甘肃西部和新疆，那里当时叫西域。</p>
+<p>为了阻止北方游牧民族南下抢掠，历史上许多王朝都修筑过长城。一些我们之前认为没修过长城的朝代，现在都被证实的确曾经修建过长城了。</p>
+<p>历代长城经过上千年时间，大多数已经损毁消失。今天我们能够见到的长城，大部分是500多年前的明朝留下的，那时也将长城称为“边墙”​。</p>
+<p>现存的明朝长城东起辽宁丹东的虎山，西到甘肃嘉峪关。明朝把长城沿线划分成九大军区，叫作“九边重镇”​，用来防御游牧民族“瓦剌”​（wǎ là）​“鞑靼”​（dá dá）和“女真”​。</p>
+<p>历代长城大多是就地取材，用夯土和石头修建的。明朝中期以前的长城仅用一道墙串联起许多实心的墩台，无论大雨还是暴晒，士兵都难以躲避。</p>
+<p>明朝中期出现了一位民族英雄戚继光，他是位了不起的军事家，率领戚家军在东南沿海打败了烧杀抢掠、无恶不作的海盗和倭寇。</p>
+<p>后来戚继光被调到北方练兵和守卫长城。他设计并推广了“空心敌楼”​。</p>
+<p>空心敌楼是按照各地不同的地形、敌情和具体用途等实际情况，由不同的守卫部队因地制宜建造的，因而形式也是千差万别，各具特色。</p>
+<p>到了明朝中期，随着烧砖技术的发展，许多重要地段的城墙都开始用砖来建造了。为了明确建造者的责任，不少长城砖上都刻有建造时间和施工队伍的名字。</p>
+<p>明朝时，长城上的士兵除了使用大刀、长矛、弓箭之类的传统武器之外，还有大型的火炮“红衣大炮”和小型的火炮“佛郎机”​“虎蹲炮”​，这些火药武器的出现使长城的防御能力更加强大。</p>
+<p>空心敌楼和烽火台并不是一回事哦！空心敌楼既是一座哨所，又是一处坚固的堡垒，士兵可以在这里居住、存放武器和战斗，它的诞生，是长城建筑形式的巨大飞跃。</p>
+<p>并非所有墩台都叫烽火台，只有位置高、视野好并且相互望得见的制高点才有资格修建烽火台。烽火台在不同地区以不同形式出现。山区的烽火台大多建在高峰上，能瞭望很远处的敌情。如有警报，白天点狼烟，晚上举火，这个信号能立即传递给视野范围内的下一座烽火台，依次传递，几百公里外的敌情当天就能传回京城。</p>
+<p>在沙漠或戈壁的长城上，既有高大的烽火台，叫作“烽”​，又有通常排列在其旁边的许多小台子，叫作“燧”​，合起来就是“烽燧”​。这样在空旷的原野上，古代的守台士兵就能通过烽火的数量通报敌军的规模。</p>
+<p>烽火台不仅仅出现在内地。明朝为防范倭寇，在沿海的重要地段也建有烽火台，俗称“狼烟墩台”​，如山东烟台即因此而得名。</p>
+<p>烽火台的历史比长城还要久远。早在西周时，周幽王为了博取妃子褒姒（bāo sì）一笑，多次点起都城烽火，戏耍赶来救援的诸侯联军。当敌人真来侵犯时，诸侯们都不再相信烽火警报了，结果周幽王被杀死，西周灭亡了。</p>
+<p>长城不是一道简单的墙，而是由关隘、城堡、敌楼、烽火台，以及起接应保障作用的远方许多大小城池共同组成的纵深防线。如著名的八达岭长城，其实它只是关沟防线的一部分，这条四十里长的山沟中筑有包括居庸关在内的五道防线呢。明朝九镇的长城之下都包含镇城、路城、卫城、所城、堡城、驿城等众多级别的各类城池，补充了长城防线，形成了独特的防御体系，其庞大程度令人震惊。</p>
+<p>我们今天所能见到的敌楼密集的万里长城，就是在戚继光带领下建造的，他的努力使长城在当时空前强大，几百年后更成为了中华民族的象征。今天在我们的生活中随处可见长城元素的使用。</p>
+<p>1933年，日本帝国主义妄图侵占中国的华北地区，中国军队曾在长城的许多关口坚决抗击，史称“长城抗战”​，古老的长城又一次发挥了抵御侵略者的作用。日寇在飞机、大炮、坦克和优势兵力的配合下对长城各关口发动了疯狂进攻，中国守军依托长城进行了殊死抵抗，给侵略者以沉重的打击。</p>
+<p>1937年，日本帝国主义发动了全面的侵华战争，占领了大片中国领土，英勇无畏的八路军坚持战斗在古长城上，显示了中国人民抗战到底的决心。长城成了中华民族不屈不挠的精神象征。</p>
+<p>2003年，中国宇航员杨利伟乘坐‘神舟’五号宇宙飞船进入太空时，并没有看到长城。</p>
+<p>历史上一直认为明朝长城的东端起点在山海关。其实，真正的东起点是虎山长城，在辽宁丹东的虎山。</p>
+<p>河北拥有很多明长城，其中以山海关最为著名。其他如刘家口、界岭口、冷口、喜峰口、张家口、紫荆关、倒马关等，都是重要关隘。</p>
+<p>天津的长城较少，最著名的是蓟州的黄崖关长城。</p>
+<p>位于北京的居庸关历史悠久，巍峨雄壮。此外，北京还有将军关、司马台、古北口、慕田峪、箭扣、黄花城等长城，也都享誉中外。</p>
+<p>现在内蒙古自治区以清水河县明长城作为和山西的省界，所以也算是有明长城的省份。</p>
+<p>山西曾是游牧民族进攻的重点地区，明朝修建了内外两道长城，著名关口有平型关、雁门关、娘子关、宁武关、偏头关、得胜口、杀虎口等。</p>
+<p>陕西的明长城里，最著名的就是榆林镇北台了，这是一座三层高的大平台，被称作万里长城上最大的墩台。</p>
+<p>宁夏保存了多个时代的长城遗址，被誉为长城博物馆。贺兰山三关口长城是其中著名的段落。</p>
+<p>明长城最西端的嘉峪关在甘肃西部，是万里长城上至今保存最完整的一座关城。此外，甘肃还有汉朝长城的玉门关和阳关遗址。</p>
+<p>在湖南也有明朝时修建的少量长城，被称作“南方长城”​。</p>
+<h2 id="相关人物和事件"><a class="header" href="#相关人物和事件">相关人物和事件</a></h2>
+<h3 id="孟姜女庙"><a class="header" href="#孟姜女庙">孟姜女庙</a></h3>
+<h3 id="谭伦"><a class="header" href="#谭伦">谭伦</a></h3>
+<p>隆庆三年《请建空心敌台疏》</p>
+<h3 id="戚继光"><a class="header" href="#戚继光">戚继光</a></h3>
+<h3 id="蓟州兵变"><a class="header" href="#蓟州兵变">蓟州兵变</a></h3>
+<h3 id="烽火戏诸侯"><a class="header" href="#烽火戏诸侯">烽火戏诸侯</a></h3>
+<h3 id="长城抗战"><a class="header" href="#长城抗战">长城抗战</a></h3>
+<h4 id="国歌和大刀进行曲"><a class="header" href="#国歌和大刀进行曲">国歌和大刀进行曲</a></h4>
+<h3 id="不到长城非好汉"><a class="header" href="#不到长城非好汉">不到长城非好汉</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

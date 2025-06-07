@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>王处直 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-5/history-5-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="王处直"><a class="header" href="#王处直">王处直</a></h1>
+<p>王处直（862年－923年），京兆万年（今陕西省西安市）人。唐朝兴元节度使王宗之子，唐朝至五代时期大臣、将领。</p>
+<p>早年历任易、祁二州刺史。乾宁二年（895年）出任义武军后院中军都知兵马使。光化三年（900年），不敌朱温部将张存敬的进攻，投降朱温，驱逐侄子王郜，继任义武军节度使，累封太原王。朱温称帝建梁后，受封北平郡王。开平四年（910年）归降晋王李存勖，保持半独立的状态，成为北方重要的割据势力。龙德元年（921年）底，养子王都发动兵变，王处直被囚禁而死。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="接任节度"><a class="header" href="#接任节度">接任节度</a></h3>
+<p>王氏祖辈世代都是长安的富豪，其父名为王寮（《新五代史》称王宗），善于经商，很是富贵，并且出任唐朝的神策军吏、左金吾大将军、左街使，遥领兴元节度使。唐僖宗乾符六年（879年），王处直之堂兄王处存平定黄巢起义中建立功勋，被任命为义武军节度使。从此，王氏开始世袭统治定州（今河北定州），而王处直亦出任王处存辖下的易州、祁州刺史。</p>
+<p>乾宁二年（895年），王处存去世，王处存之子王郜继任义武军节度使，王处直为后院中军都知兵马使。光化三年（900年），朱温派大将张存敬进攻定州，王处直请求凭借坚固的城墙为依靠，以逸待劳，进击朱温。孔目官梁汶说：“当年幽州、镇州三十万大军来攻，当时我军人马不满五千，一战败之。今张存敬的兵马不过三万，我军已经十倍于往昔，为什么要向张存敬示弱，想要依靠城池来坚守呢！”王郜派王处直在沙河（今河北邢台沙河）抵抗张存敬，结果大败于张存敬，死者过半，随即部队发生哗变，众将领推举王处直为留后，率兵回定州驱逐节度使王郜。王郜逃归晋王李克用，王处直成为义武节度使。</p>
+<p>张存敬大军进围定州，朱温亲至定州城下。王处直登城向朱温说：“我们对朝廷尽忠侍奉，也未尝侵犯您的领土，为什么要来攻我？”朱温回答：“你为什么要依附于河东的李克用呢？”王处直回答说：“我的兄长王处存与晋王李克用同时为朝廷平定叛乱，立下功勋，分封的区域接近，而且以互相结为姻亲，所以相互之间修好往来是常理，我可以改为臣服于你。”朱温听了之后同意了。王处直出绢十万匹犒劳朱温。</p>
+<p>朱温上表唐帝，封王处直为义武军节度使，累封太原郡王。开平元年（907年），朱温取代唐朝建立后梁。开平三年（909年），朱温封王处直为北平王。</p>
+<h3 id="绝梁附晋"><a class="header" href="#绝梁附晋">绝梁附晋</a></h3>
+<p>后梁开平四年（910年），后梁派兵进攻镇州（今河北正定）的赵王王镕，王镕向晋王李存勖求救，此时，担心自己被后梁兼并的王处直派人到晋国，表示愿意背弃后梁，与晋结盟。晋王李存勖派兵救援王镕，王处直率五千精兵出征，大败梁军于柏乡（今河北邢台柏乡县）。其后的十数年中，晋王李存勖北上攻灭桀燕，南下进取魏博，与后梁大战于黄河，王处直都率兵相助。</p>
+<p>王处直虽然归附于晋王李存勖，但却保持着半独立的状态，是北方一个重要割据者，专制于义武镇。义武军统有易、定、祁三州，治于定州，王处直被封北平王后，北平国实质上已经建立，北平国东北与桀燕比邻，南与赵国和后梁相接，西部则是逐渐强盛的晋国，地理环境极其重要。王处直称雄北平竟长达二十二年之久。</p>
+<h3 id="宠溺奸幸"><a class="header" href="#宠溺奸幸">宠溺奸幸</a></h3>
+<p>王处直好于巫术，他手下有个人叫李应之，是个道士，王处直得了病，李应之用旁门左道给王处直医治，结果王处直的病碰巧在这时好了，于是王处直便以为李应之是神人，很是宠信他，还让他穿着道士的衣服，封他为行营司马，军政大小事情都让他给决断。军中的将领们都知道这样潜伏着大的危险，但是却没有一个人敢向王处直进谏。</p>
+<p>李应之原在陉邑收养了一个小孩，本来叫刘云郎，李应之收他做了养子，后来因为王处直还没有儿子，便把刘云郎给了王处直，说这个孩子生有异样，王处直收其为养子，改名为王都，因而更加宠信李应之了。于是，李应之就更加骄横，他征集壮丁，另立新军。王处直的手下将领都知道这是一个祸患，但是还是没有人敢进谏直言。</p>
+<p>幽州李匡筹借道中山到京师的时候，王处直派甲士埋伏在城外，以防不测。李匡筹的军队走后，甲士们进城包围了李应之的府第，擒杀了李应之。随后进见王处直，请求杀了王都，王处直不同意。第二天，在论功行赏的时候，王处直暗地里记下了甲士的姓名，在其后二十多年里，自队长以上的将领都被王处直以各种罪名杀死，无一人幸免。</p>
+<h3 id="遭囚身亡"><a class="header" href="#遭囚身亡">遭囚身亡</a></h3>
+<p>后梁贞明七年（921年），赵王王镕被其养子张文礼（王德明）弑杀，李存勖派兵讨伐张文礼，王处直与将领们商议说：“镇州是定州的屏蔽，张文礼虽然有罪，但镇州被吞并，定州就不能独自生存了。”于是派人请求李存勖不要发兵。李存勖把张文礼写给后梁的蜡书给王处直看，说：“张文礼背叛了我，不可退兵！”</p>
+<p>王处直有个儿子王郁，在王郜逃亡晋国的时候，也逃到了晋国，晋王把女儿嫁给了他，被封为新州防御使。王处直听说晋王李存勖决意要讨伐张文礼，心里很惶恐。于是就与王郁谋划，让王郁引契丹进军入塞，来牵制晋兵，并许诺让王郁成为他的继承人。王都听说后，很不高兴。</p>
+<p>王郁引来契丹军后，定州的民众都非常怨恨，王都手下的一个小吏和昭训劝王都举事，于是王都发动兵变，将王处直软禁在西宅。王都自称义武军留后，大肆杀戮王氏子孙和王处直的手下将领。</p>
+<p>后梁龙德三年（923年，天祐二十年）正月十八日，王处直去世，享年六十一岁。天成四年（929年）二月，定州城最终被后唐攻破，王都和家属全都自焚而死，而王处直所创建的北平政权也随之灭亡。</p>
+<h2 id="主要影响"><a class="header" href="#主要影响">主要影响</a></h2>
+<h3 id="统治北平"><a class="header" href="#统治北平">统治北平</a></h3>
+<p>王郜被驱逐，逃到晋后，王处直开始了对定州（今河北定州）长达二十二年的统治，成为北方重要诸侯之一。当梁兵进围定州时，王处直出绢十万匹犒劳梁兵，向梁军求和，表示愿意绝晋事梁。朱温上表封王处直为义武军节度使，累封太原王。朱温称帝后，梁开平三年（909年）封王处直为北平王。此后又归降晋王，王处直虽然归附于晋王李存勖，但是却保持半独立的状态，是北方一个重要的割据者，专制于义武镇。义武军统有易、定、祁三州，治于定州。镇州 （今河北正定）是五代赵国的都城， 镇州与定州为邻。王处直被封为北平王后，北平国实质上已经独立。王处直周旋后梁、晋国等强大势力，长期称雄北平。</p>
+<h3 id="军事成就"><a class="header" href="#军事成就">军事成就</a></h3>
+<p>梁开平四年（910年）后梁派兵攻打赵王王镕，王镕向晋王李存勖求救。同时，王处直也派人到晋，愿意叛梁附晋。晋兵救王镕，王处直派五千兵随从，破梁军于柏乡。其后，十余年来，晋王李存勖北上攻灭桀燕南下进取魏博，与后梁大战于黄河，每次战役王处直都派兵参战。</p>
+<h2 id="历史评价"><a class="header" href="#历史评价">历史评价</a></h2>
+<p>《王处直墓志》：公宗申岳而生，应萧星以出，才兼将相，貌焕丹青。致之以家祀国祀，赡之以天爵人爵。顷以家居帝辇，誉满国朝。</p>
+<p>薛居正等《旧五代史》：“处直分易、定以为帅，亦既重侯。一则惑佞臣而覆其宗，一则嬖孽子而失其国，其故何哉？盖富贵斯久，仁义不修，目眩于妖妍，耳惑于丝竹，故不能防奸于未兆，察祸于未萌，相继败亡，又谁咎也！”</p>
+<h2 id="轶事典故"><a class="header" href="#轶事典故">轶事典故</a></h2>
+<p>王处直在碑楼见到一条黄蛇，王处直以为是有龙降世，于是将黄蛇藏起来祭拜。又看见了数百只野鹊在麦田中筑巢。王处直以为是自己为政有德所导致，定州的民众都说这是一件不吉祥的事情，有人说：“蛇本来应该在山泽之间生存，现在却被供到了人的居室；喜鹊本来应该在野外筑巢，而现在到了田间筑巢。这是有小人窃取高位，而在身居高位的人失去自己地位的预兆啊。”这件事过了不久王处直就被王都所囚禁。</p>
+<h2 id="人物争议"><a class="header" href="#人物争议">人物争议</a></h2>
+<h3 id="死亡时间"><a class="header" href="#死亡时间">死亡时间</a></h3>
+<p>王处直的死亡时间在史书和墓志铭有不同记载。《新五代史》、《资治通鉴》记载后梁龙德二年（922年）正月元旦，王都到西宅拜谒王处直，王处直愤怒的捶着胸口大喊道：“逆贼，我何时负过你！”当时王都身边没有带人，王处直就想去咬王都的鼻子，王都甩开袖子离开。不同的是，《新五代史》记载王处直因此被杀。而《资治通鉴》记载王处直在此之后不久忧愤而死，此外《旧五代史》也未记载王处直被杀，只说“为其子都废归私第，寻卒”。</p>
+<p>王处直的墓志铭则记载，王处直在唐天祐十八年（921年）冬，主动让位于王都，天祐二十年（923年）正月十八日病卒。考虑到墓志撰文者和少微很可能就是史书中提到怂恿王都发动兵变的和昭训，因此他所言王处直主动让位云云应为隐瞒事实的曲笔，但卒年当以墓志铭为准。</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="王处直墓"><a class="header" href="#王处直墓">王处直墓</a></h3>
+<p>王处直墓位于河北省保定市曲阳县灵山镇西燕川村，1995年7月12日，由河北省、保定市、曲阳县文物部门组成的考古队，正式对王处直墓进行清理发掘。依唐制，墓室修建在一块三面环山的风水宝地之中，其北面是一座形若屏幕的山峦，左右两侧是逶迤平缓的山岗，喻意青龙、白虎拱卫。南面有案山与北面遥遥相对，墓穴设在开阔舒展的平地之下。整个墓葬布局科学合理，完整统一。墓葬为前后两室的双室墓，以青石砌筑，整个墓室绘满了包括奉侍、山水、花鸟、云鹤、星象等精美壁画。墓中用18块曲阳汉白玉石，雕出了武士门神、生肖、散乐、奉侍等几组雕刻，装饰于墓室各壁，构成了墓葬的一大特点。北方地区发现的有明确纪年的五代墓较少，王处直墓是研究五代北方地区墓葬形制的珍贵材料。墓室壁画浮雕对中国雕塑史和美术史的研究提供了形象的材料，也是曲阳石雕艺术历史发展的重要实物佐证。</p>
+<h2 id="史料索引"><a class="header" href="#史料索引">史料索引</a></h2>
+<p>关于王处直的生平，主要参见《旧唐书·一百八十二·列传第一百三十二》《旧五代史·卷五十四·列传六》《新五代史·卷三十九·杂传第二十七》《资治通鉴·卷第二百六十二》。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-5/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-5/history-5-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-5/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-5/history-5-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>龙骨坡遗址 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/prehistory-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="龙骨坡遗址"><a class="header" href="#龙骨坡遗址">龙骨坡遗址</a></h1>
+<h2 id="龙骨坡遗址-1"><a class="header" href="#龙骨坡遗址-1">龙骨坡遗址</a></h2>
+<p>龙骨坡遗址，位于重庆市巫山县庙宇镇龙骨坡，距巫山县城约57公里，占地面积约1300平方米。截至2023年，龙骨坡遗址是欧亚大陆时代最早、内涵最丰富的史前文化遗址之一，被誉为“东亚人类摇篮”。</p>
+<p>龙骨坡遗址又称“巫山猿人遗址”，是一处更新世时期遗址，1984年被中国古人类与旧石器专家黄万波、李宣民等人发现，并出土了“巫山人”化石。“巫山人”化石中国境内发现最早的人类化石，这一发现揭示了人类发展的进程，填补了中国早期人类化石的空白，使得该遗址的发现对于探索人类起源和演化过程提供了科学资料。</p>
+<p>1996年11月20日，龙骨坡遗址被国务院公布为第四批全国重点文物保护单位。</p>
+<h3 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h3>
+<p>龙骨坡遗址位于重庆市巫山县庙宇镇龙骨坡，1984年被发现，1985年—1988年开始第一阶段的发掘工作。</p>
+<p>1984年，中国古人类与旧石器专家黄万波、李宣民等人首先发现了此处遗址。</p>
+<p>1985年，考古工作者在该地点的早更新世早期地层中，发掘出一段带有2颗臼齿的残破直立人左侧下颌骨化石以及一些有人工加工痕迹的骨片。</p>
+<p>1986年，考古工作者发掘出3枚门齿和一段带有2个牙齿的下牙床化石。</p>
+<p>1988年岁末，考古专家在这里采集到脊椎动物化石120种。</p>
+<p>1997年10月中旬，巫山县人民政府提供经济资助，经过国家文物局批准，黄万波、徐自强、长绍武、税明轩等人组成的考察队，开始对龙骨坡遗址的第二阶段的发掘工作，经过挖掘发现了一批已有200万年历史的“有清楚的人工打击痕迹”的石器。</p>
+<p>1998年9月，为进一步对龙骨坡遗址展开持续深入的研究，经重庆市科委批准，在巫山县庙宇镇筹办起中国第一所民办科研机构，即“龙骨坡巫山古人类研究所”，以争取多方支持。</p>
+<p>1998年10月，黄万波等人组成的考察队对龙骨坡遗址的第二阶段进行该阶段的第二次发掘。</p>
+<p>2003年—2006年，是对为发掘龙骨坡遗址的第三阶段。</p>
+<p>2011至2012年，重庆中国三峡博物馆主持了龙骨坡遗址第四阶段的发掘工作。</p>
+<p>2023年8月16日，龙骨坡遗址第五阶段发掘工作正式启动，研究人员将在更多古人类、古生物化石及相关人工制品等方面展开发掘，发掘面积30平方米，发掘时间为2023年8月至11月，由重庆中国三峡博物馆与武汉大学、中国科学院古脊椎动物与古人类研究所、巫山县文物管理所联合申报。</p>
+<p>2023年11月2日，巫山龙骨坡遗址，黄万波等5位中国考古学界大家齐聚，目光锁定在了面前30平方米的土地之上——龙骨坡遗址第五次发掘，有了阶段性成果。</p>
+<p>龙骨坡遗址第五次发掘于8月16日启动，阶段性成果包括以下多个方面：</p>
+<ul>
+<li>本次发掘是龙骨坡遗址自1985年发掘以来，运用现代科技最全面、多学科参与最多的一次发掘工作，对地层层序、遗物埋藏、洞穴成因等有了更清楚的认识；</li>
+<li>发现数量可观的石制品材料，为历年单次发掘数量最多的一次。</li>
+</ul>
+<p>至此，龙骨坡遗址第五次发掘告一段落。接下来，发掘团队将申报进行进一步的发掘工作。</p>
+<h3 id="遗址特点"><a class="header" href="#遗址特点">遗址特点</a></h3>
+<p>龙骨坡遗址分为三大地质文化层，占地面积约1300平方米。</p>
+<p>由上到下，第一层为角砾层，厚度约为8米：第二层为橘黄色细角砾层，厚度约为12米：第三层为黏土层。古人类、动物化石及石器主要分布在第二层，有近20个文化带。</p>
+<p>第二层最上面的化石年代为180万年，最下面的为200万年，文化层跨度为20多万年。</p>
+<p>在龙骨坡遗址顶是一个3平方米左右的化石层，叠堆积着大量动物前、后腿骨化石，主是象、鹿、牛等大型食草动物。</p>
+<p>根据1997年的发掘发现的距今200万年“有清楚的人工打击痕迹”的石器，地质人员进行的稀有金属矿种分析，龙骨坡遗址地区曾经历了连续2000年的火山爆发，故该地区被称为“地球伤痕”。</p>
+<h3 id="文物遗存"><a class="header" href="#文物遗存">文物遗存</a></h3>
+<p>1985—1988年，是发掘的第一阶段，仅发现“凸刃砍砸器”和“砸击石锤”两件石器。</p>
+<p>1997年—1998年为发掘的第二阶段．获得的石器较多，共有25件，石器原料为轻度变质石灰岩，器物有石片、石核、薄刃斧、砍砸器等。</p>
+<p>2003年至2006年，为发掘的第三阶段所获得的石器骤增，共达200多件，石器原料为轻度变质石灰岩。器物包刮石片、手镐、手锛、砍砸器、薄刃斧等。</p>
+<p>除了石器外，还出土了直立人化石、巨猿牙齿，以及大批哺乳动物化石等，包括步氏巨猿、中国乳齿象、先东方剑齿象、剑齿虎、双角犀、小种大熊猫等116种早更新世初期的哺乳动物化石。其中直立人化石为一段左侧残破下颌骨和一个上门齿，分属于两个个体，定为直立人巫山亚种。</p>
+<p>龙骨坡遗址此前四个阶段发掘成果丰硕，采集哺乳动物化石116种，石器1000余件。</p>
+<p>2024年12月，中科院古脊椎动物与古人类所研究员黄万波介绍，经过1985年至2024年的五轮系统发掘，研究人员已从巫山龙骨坡遗址采集到118种哺乳动物化石和超过2000件石制品。</p>
+<h3 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h3>
+<p>1996年11月20日，龙骨坡遗址被国务院公布为第四批全国重点文物保护单位。</p>
+<p>遗址前方矗立了国家明令保护的遗址石碑，巫山县也采取了各种保护措施，先后建起梯道、围墙，大门。</p>
+<h3 id="研究价值"><a class="header" href="#研究价值">研究价值</a></h3>
+<p>龙骨坡遗址出土的遗物代表了一种直立人的新亚种，后被定名为“直立人巫山亚种”（Home erectus wushanensis），一般称之为“巫山人”。“巫山人”化石是中国境内发现最早的人类化石，这一发现揭示了人类发展的进程，填补了中国早期人类化石的空白，这不仅动摇了“人类起源于非洲”的学说，也证实了中国最早的人类就诞生在三峡地区，这对于研究人类的起源和三峡河谷的发育史，具有极为重要的科学价值。同时，“巫山人”化石的发现是中国南方，也是整个东亚地区继云南元谋人之后早更新世人类化石的又一发现，对研究人类的起源具有十分重要的意义。</p>
+<h3 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h3>
+<h4 id="石器工业与文化"><a class="header" href="#石器工业与文化">石器工业与文化</a></h4>
+<p>龙骨坡出土的石器制品似乎比在欧洲发现的石器制品更加早期、原始。它们显得粗糙、原始，简单、随意。石器专家们认为，它们的“原始随意”显示出石器最早阶段的发展时代，并与东非大裂谷相同年代人类所使用过的石器非常相似，它们所代表的是混沌初开的“石器工业与文化”。</p>
+<p>研究发现，龙骨坡遗址的古人类在欧亚地区的众多古人类中，最早开发和利用洞穴资源，当时的龙骨坡古人类已开始主动进入洞穴，并把洞穴作为生产石制品、处理动物资源的生产和休憩场所。</p>
+<h4 id="龙骨坡文化"><a class="header" href="#龙骨坡文化">龙骨坡文化</a></h4>
+<p>1998年6月研究员徐自强在《中国文物报》发表的《巫山人与龙骨坡文化》一文中，就龙骨坡遗址出土的石器“为什么原料多是石灰岩或变质石灰岩”得出结论：“这是因地制宜，就地取材的结果。”他认为，“巫山人”所做石器的特点是，无一定形制，制作粗糙，既不同于猿类偶尔使用的天然石块，也不同于时代较晚的直立人时期打造的石器，这可能正好说明了它的原始性与地域性，这是龙骨坡“石器时代”的惊现。龙骨坡遗址经过多次发掘，出土了巫山人化石以及人猿牙齿和大量石器。这些远古文化遗存被黄万波命名为“龙骨坡文化”。</p>
+<h2 id="欧亚地区古人类最早开发和利用洞穴资源的遗址"><a class="header" href="#欧亚地区古人类最早开发和利用洞穴资源的遗址">欧亚地区古人类最早开发和利用洞穴资源的遗址</a></h2>
+<blockquote>
+<p>原文：<a href="https://www.cq.gov.cn/zwgk/zfxxgkml/zdlyxxgk/shgysy/ggwhty/whly/202406/t20240612_13287835.html">重庆巫山龙骨坡遗址有了新研究成果 是欧亚地区古人类最早开发和利用洞穴资源的遗址</a></p>
+</blockquote>
+<p>位于重庆巫山县的龙骨坡遗址是欧亚地区古人类最早开发和利用洞穴资源的遗址。近日，由重庆师范大学考古学博士陈育芝与导师武仙竹教授联合署名发表的《长江三峡及周边地区早期人类的生存环境与生存行为》一文，在我国古人类学核心期刊《人类学学报》上正式发表，展示龙骨坡遗址有了最新研究成果。</p>
+<p>6月9日，在论文作者之一武仙竹的娓娓讲述中，一幅百万年前长江三峡及周边地区早期人类的生活图卷被缓缓打开。</p>
+<h3 id="两百万年前龙骨坡的气候比现在更湿热"><a class="header" href="#两百万年前龙骨坡的气候比现在更湿热">两百万年前，龙骨坡的气候比现在更湿热</a></h3>
+<p>为了探寻长江三峡及其周边地区早期人类的生存环境与生存行为，武仙竹和他的学生足迹踏遍了重庆龙骨坡遗址、湖北建始人遗址、安徽人字洞遗址、云南元谋人遗址、河北马圈沟遗址、陕西公王岭遗址等古人类遗址。</p>
+<p>在这场对古人类的跨时空探访中，众多的考古发现和动植物遗存，让数百万年前的长江沿岸自然环境一点点显现出来。</p>
+<p>“我们发现，中国目前所见最早的古人类遗址，地理范围在东部季风区，当时的古气候比现在更加温暖湿润，而且同时存在显著气候降温和冷热交替事件，南北动物群过渡带曾发生南移。”武仙竹说，这些优渥的自然环境和自然资源，为古人类的繁衍生息提供了良好的条件。</p>
+<p>以龙骨坡为例，武仙竹描绘出了当时古人类的居住环境：“花园”中植被茂盛，不仅分布有亚热带常绿阔叶乔木、暖温带落叶阔叶乔木等，还有喜干和喜湿的禾本植物和多种喜温暖阴湿的蕨类。琳琅满目的植物群体，为各种各样的动物生存提供了基础食物来源。</p>
+<p>武仙竹说，龙骨坡遗址动物群包括大量华南动物区系动物，还有一些横断山附近的西南区特色哺乳动物和一定数量的华北区动物，“但同时发现，这里还生活着巨猿、湖麂、双齿尖河猪、印度长尾鼩、攀鼠、绒鼠等与印度、越南相同的南亚动物区系。”</p>
+<p>众所周知，印度、越南因为更靠近赤道，所以当地的温湿度更高，因此这些动物的出现，显示龙骨坡遗址古居民生活时期，其生境应与该区域现代三峡峡谷气候相似，但比现在三峡高海拔山地气候湿热，应为温暖湿润的亚热带湿热森林环境。</p>
+<h3 id="龙骨坡古人类率先开发和利用洞穴资源"><a class="header" href="#龙骨坡古人类率先开发和利用洞穴资源">龙骨坡古人类，率先开发和利用洞穴资源</a></h3>
+<p>有了如此丰富的动植物资源，古人类如何开发利用呢？</p>
+<p>武仙竹说，据推测，当时人类的主要生活方式是围绕靠近水源的森林、草原开展狩猎和采集。</p>
+<p>如河北的马圈沟遗址内，发现有古人类猎杀草原猛犸象的活动遗迹，其中清晰保存着石制品穿插在骨骼上的现象，出土石制品中除石核、石片、断块、残片、石锤外，还包括进一步加工修理的刮削器、小型砍砸器等。</p>
+<p>在陕西公王岭遗址及相近其他遗址共同出现的石核、石片、刮削器、钻孔器、尖状器、石锤等石制品组合丰富，显示该地区更新世早期曾有稳定的古人类群体围绕水源充沛区域活动。</p>
+<p>那么龙骨坡的古人类当时又在干什么呢？</p>
+<p>研究发现，龙骨坡遗址的古人类在欧亚地区的众多古人类中，最早开发和利用洞穴资源，“当时的龙骨坡古人类已开始主动进入洞穴，并把洞穴作为生产石制品、处理动物资源的生产和休憩场所。”</p>
+<p>但是，该阶段人类所利用的洞穴，主要为小型“天坑”状垂直溶洞，这类洞穴的共同特点是视线好、活动方便。</p>
+<p>既然要找个洞穴遮风避雨，为啥不找个大一点的？</p>
+<p>武仙竹说，那是因为该阶段中国还没有发现人类用火的证据，所以人类对大型、潮湿或黑暗的洞穴进行开发利用可能还存在困难。</p>
+<p>虽然只能开发利用有条件限制的洞穴，但是在远古原始生境下，人类能够主动进入洞穴、开发利用洞穴资源，对生存空间进行开拓并对生活条件进行改变，充分说明该阶段人类智力和生产力水平已经得以提升。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/prehistory-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/prehistory-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/prehistory-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/prehistory-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
