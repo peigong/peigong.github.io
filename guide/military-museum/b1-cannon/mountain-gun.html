@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>山炮 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-cannon/mountain-gun.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="山炮"><a class="header" href="#山炮">山炮</a></h1>
+<h2 id="日本造四一式75毫米山炮"><a class="header" href="#日本造四一式75毫米山炮">日本造四一式75毫米山炮</a></h2>
+<p>1952年，中国人民志愿军某部8连在上甘岭战役中，用这门炮支援步兵，击溃美军多次进攻，掩护步兵坚守坑道并配合夺回表面阵地，歼灭美军1000余人，荣立集体二等功。</p>
+<p>该型炮是日本大阪炮兵工厂1906年研制，1908年（日本明治41年）完成试制，1911年定型为“四一式山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：343米/秒</li>
+<li>最大射程：6500米</li>
+<li>全重：539千克</li>
+</ul>
+<h2 id="法国造m1906式65毫米山炮"><a class="header" href="#法国造m1906式65毫米山炮">法国造M1906式65毫米山炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是法国施耐德公司1906年研制的轻型山炮，是世界上第一种采用软后座原理的前冲式火炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：65毫米</li>
+<li>高低射界：-9度至+32度</li>
+<li>方向射界：6度</li>
+<li>初速：330米/秒</li>
+<li>最大射程：5500米</li>
+<li>全重：400千克</li>
+</ul>
+<h2 id="法国造施耐德75毫米山炮"><a class="header" href="#法国造施耐德75毫米山炮">法国造施耐德75毫米山炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是法国施耐德公司1919年研制的，精度较好，分解结合方便，适于山地作战。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-12度至+22度（低轴）   0度至+40度（高轴）</li>
+<li>方向射界：左右各5度</li>
+<li>初速：440米/秒</li>
+<li>最大射程：9600米</li>
+<li>全重：667千克</li>
+<li>运动方式：2马挽曳或7马驮载</li>
+</ul>
+<h2 id="瑞典造博福斯m1930式75毫米山炮"><a class="header" href="#瑞典造博福斯m1930式75毫米山炮">瑞典造博福斯M1930式75毫米山炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是瑞典博福斯公司1930年研山炮制，身管长为口径的22倍，中国称其为“三十年式20倍”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-10度至+50度</li>
+<li>方向射界：6度</li>
+<li>初速：450米/秒</li>
+<li>最大射程：9150米</li>
+<li>全重：800千克</li>
+<li>运动方式：2马挽曳或8马驮载</li>
+</ul>
+<h2 id="美国造m1a1式75毫米山炮"><a class="header" href="#美国造m1a1式75毫米山炮">美国造M1A1式75毫米山炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是美国1920年研制，经改进于1934年定型为“M1A1式75毫米榴弹炮”，1940年量产，可拆解为6个部件，由骡马驮载。抗日战争后期，中国获得该型炮，将其归为山炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-5度至+45度</li>
+<li>方向射界：左右各3度</li>
+<li>初速：381米/秒</li>
+<li>射速：3至6发/分</li>
+<li>最大射程：8787米</li>
+<li>全重：576千克</li>
+</ul>
+<h2 id="日本造三十一年式75毫米山炮"><a class="header" href="#日本造三十一年式75毫米山炮">日本造三十一年式75毫米山炮</a></h2>
+<p>该型炮是日本大阪炮兵工厂1898年（日本明治31年）研制，次年定型量产，命名为“三十一年式速射山炮”，分山炮、野炮两种，属架退式火炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-10度至+30度</li>
+<li>方向射界：左右各3度</li>
+<li>初速：262米/秒</li>
+<li>射速：3发/分</li>
+<li>最大射程：4600米</li>
+<li>全重：327千克</li>
+</ul>
+<h2 id="日本造四一式75毫米山炮-1"><a class="header" href="#日本造四一式75毫米山炮-1">日本造四一式75毫米山炮</a></h2>
+<p>该型炮是日本大阪炮兵工厂1906年研制，1908年（日本明治41年）完成试制，1911年定型为“四一式山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：343米/秒</li>
+<li>最大射程：6500米</li>
+<li>全重：539千克</li>
+</ul>
+<h2 id="日本造四一式75毫米山炮-2"><a class="header" href="#日本造四一式75毫米山炮-2">日本造四一式75毫米山炮</a></h2>
+<p>该型炮是日本大阪炮兵工厂1906年研制，1908年（日本明治41年）完成试制，1911年定型为“四一式山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：343米/秒</li>
+<li>最大射程：6500米</li>
+<li>全重：539千克</li>
+</ul>
+<h2 id="日本造六年式75毫米山炮"><a class="header" href="#日本造六年式75毫米山炮">日本造六年式75毫米山炮</a></h2>
+<p>该型炮是日本大阪炮兵工厂1917年（日本大正6年）试制，命名为“六年式山炮”，主要用于出口中国、结构、性能与四一式山炮基本相同。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：334米/秒</li>
+<li>全重：539千克</li>
+</ul>
+<h2 id="日本造九四式75毫米山炮"><a class="header" href="#日本造九四式75毫米山炮">日本造九四式75毫米山炮</a></h2>
+<p>该型炮是日本1931年研制，1934年（日本神武纪年2594年）完成试制，次年命名为“九四式山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-10度至+45度</li>
+<li>方向射界：左右各20度</li>
+<li>初速：392米/秒</li>
+<li>射速：10至12发/分</li>
+<li>最大射程：8300米</li>
+<li>全重：536千克</li>
+</ul>
+<h2 id="日本造一六式105毫米山炮"><a class="header" href="#日本造一六式105毫米山炮">日本造一六式105毫米山炮</a></h2>
+<p>这门炮是人民军队1945年在上党战役中缴获国民党军的。</p>
+<p>该型炮是太原兵工厂1927年（民国16年）仿制德国苏罗通105毫米山炮，命名为“一六式十生半山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：105毫米</li>
+<li>高低射界：-5度至+40度</li>
+<li>方向射界：7度</li>
+<li>初速：300米/秒</li>
+<li>最大射程：5965米</li>
+<li>全重：854千克</li>
+</ul>
+<h2 id="中国仿日本九四式75毫米山炮"><a class="header" href="#中国仿日本九四式75毫米山炮">中国仿日本九四式75毫米山炮</a></h2>
+<p>该型炮是1950至1952年间华东军械总厂仿制日本九四式山炮，因未定型命名，直接称为“仿九四式山炮”，性能与日本九四式山炮基本一致。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>初速：385米/秒</li>
+<li>最大射程：8000米</li>
+<li>全重：537千克</li>
+</ul>
+<h2 id="中国造三七式75毫米山炮"><a class="header" href="#中国造三七式75毫米山炮">中国造三七式75毫米山炮</a></h2>
+<p>该型炮是20世纪40年代后期中国仿制日本四一式山炮，略加改进，命名为“三七式75毫米山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：335米/秒</li>
+<li>最大射程：6450米</li>
+<li>全重：539千克</li>
+</ul>
+<h2 id="日本造一三式75毫米山炮"><a class="header" href="#日本造一三式75毫米山炮">日本造一三式75毫米山炮</a></h2>
+<p>该型炮是山西军人工艺实习厂1924年（民国13年）仿制日本六年式75毫米山炮，命名为“一三式山炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左3.5度  右2.5度</li>
+<li>初速：342米/秒</li>
+<li>最大射程：6000米</li>
+<li>全重：540千克</li>
+</ul>
+<h2 id="中国造十年式75毫米山炮"><a class="header" href="#中国造十年式75毫米山炮">中国造十年式75毫米山炮</a></h2>
+<p>该型炮是汉阳兵工厂1921年仿制日本六年式75毫米山炮，称“汉十年式七五山炮”。采用双轮叉脚式炮架，可通用日本四一式山炮炮弹。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：左右各2.5度</li>
+<li>初速：342米/秒</li>
+<li>最大射程：6000米</li>
+<li>全重：610千克</li>
+</ul>
+<h2 id="中国仿德国克虏伯75毫米山炮"><a class="header" href="#中国仿德国克虏伯75毫米山炮">中国仿德国克虏伯75毫米山炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是1905年江南制造局仿制德国克虏伯M1904式75毫米山炮，称为“克式七生五过山炮”，是近代中国军火工业在20世纪初制造的第一型后膛装填式火炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+15度（垫钢块为23度）</li>
+<li>方向射界：左右各2度</li>
+<li>初速：280米/秒</li>
+<li>最大射程：4300米</li>
+<li>全重：386千克</li>
+</ul>
+<h2 id="中国仿德国克虏伯75毫米山炮-1"><a class="header" href="#中国仿德国克虏伯75毫米山炮-1">中国仿德国克虏伯75毫米山炮</a></h2>
+<p>这门炮是中国四川兵工厂1915年仿制德国克虏伯山炮，是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>初速：280米/秒</li>
+<li>射速：3至6发/分   最大射程：4300米  全重：386千克</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-cannon/field-gun.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-cannon/field-gun.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

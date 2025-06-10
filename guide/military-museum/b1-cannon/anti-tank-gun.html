@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>反坦克炮 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-cannon/anti-tank-gun.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="反坦克炮"><a class="header" href="#反坦克炮">反坦克炮</a></h1>
+<h2 id="加拿大造40毫米反坦克炮"><a class="header" href="#加拿大造40毫米反坦克炮">加拿大造40毫米反坦克炮</a></h2>
+<p>该型炮是英国维克斯-阿姆斯特朗工厂1934年研制的轻型反坦克炮，1936年量产，1938年装备，可安装在多型坦克装甲车辆上使用，是第二次世界大战初期英联邦军队的主要反坦克武器。加拿大1940年起生产该型炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：40毫米</li>
+<li>高低射界：-13度至+15度</li>
+<li>方向射界：360度</li>
+<li>初速：853米/秒</li>
+<li>射速：15发/分</li>
+<li>最大射程：7315米</li>
+<li>穿甲厚度：47.6毫米（915米）</li>
+<li>全重：831.6千克</li>
+</ul>
+<h2 id="加拿大造mkv式57毫米反坦克炮"><a class="header" href="#加拿大造mkv式57毫米反坦克炮">加拿大造MkV式57毫米反坦克炮</a></h2>
+<p>该型炮是英国伍尔维奇工厂1938年研制的反坦克炮，1942年5月装备，先后发展了多种型号，并在英联邦国家生产。加拿大1940年开始生产该型炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：57毫米</li>
+<li>高低射界：-5度至+15度</li>
+<li>方向射界：90度</li>
+<li>初速：899米/秒</li>
+<li>射速：15发/分</li>
+<li>最大射程：9930米</li>
+<li>穿甲厚度：68.6毫米（915米）</li>
+<li>全重：1125千克</li>
+</ul>
+<h2 id="德国造pak38式50毫米反坦克炮"><a class="header" href="#德国造pak38式50毫米反坦克炮">德国造PaK38式50毫米反坦克炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮由德国莱茵金属公司1937年研制，1940年定型装备，命名为“PaK38 L/60 50毫米反坦克炮”,炮闩与扳机有联动装置，实现了半自动连续射击。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：50毫米</li>
+<li>高低射界：-8度至+27度</li>
+<li>方向射界：65度</li>
+<li>初速：1180米/秒</li>
+<li>射速：10至15发/分</li>
+<li>有效射程：2014米</li>
+<li>穿甲厚度：101毫米（740米）</li>
+<li>全重：986千克</li>
+</ul>
+<h2 id="苏联造m19411943式zis-257毫米反坦克炮"><a class="header" href="#苏联造m19411943式zis-257毫米反坦克炮">苏联造M1941/1943式（ZIS-2）57毫米反坦克炮</a></h2>
+<p>该型炮是苏联格拉宾设计局1940年5月研制，1941年定型生产，命名为“M1941式57毫米反坦克炮”，也称“ZIS-2”，同年底停产。1943年6月，为应对德国新型坦克威胁，恢复生产，重新命名为“M1943式57毫米反坦克炮”，仍称“ZIS-2”，是苏联卫国战争时期主要的轻型反坦克武器。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：57毫米</li>
+<li>高低射界：-5度至+25度</li>
+<li>方向射界：左右各27度</li>
+<li>初速：1250米/秒</li>
+<li>射速： 25发/分</li>
+<li>最大射程：8400米</li>
+<li>穿甲厚度：96毫米（1000米）</li>
+<li>全重：1250千克</li>
+</ul>
+<h2 id="美国造m1a3式50毫米战防炮"><a class="header" href="#美国造m1a3式50毫米战防炮">美国造M1A3式50毫米战防炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>M1式57毫米战防炮是美国1941年2月生产的英国6磅反坦克炮，后经多次改进，1943年M1A3式定型，同年5月装备。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：57毫米</li>
+<li>高低射界：-5度至+15度</li>
+<li>方向射界：90度</li>
+<li>初速：899米/秒</li>
+<li>射速： 15发/分</li>
+<li>最大射程：9930米</li>
+<li>全重：1225千克</li>
+</ul>
+<h2 id="日本造一式47毫米战防炮"><a class="header" href="#日本造一式47毫米战防炮">日本造一式47毫米战防炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>这型炮是日本1939年9月研制，1941年（日本神武纪年2601年）完成试制，1942年9月定型，命名为“一式机动四十七毫米速射炮”，使用车辆牵引，主要用于攻击坦克和装甲车辆，摧毁野战或半永久工事。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：47毫米</li>
+<li>高低射界：-11度至+18度</li>
+<li>方向射界：58度</li>
+<li>初速：830米/秒</li>
+<li>射速： 15至20发/分</li>
+<li>最大射程：6900米</li>
+<li>穿甲厚度：51毫米（915米）  全重：800千克</li>
+</ul>
+<h2 id="奥地利造百禄m1935式47毫米战防炮"><a class="header" href="#奥地利造百禄m1935式47毫米战防炮">奥地利造百禄M1935式47毫米战防炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是20世纪30年代奥地利百禄公司研制的，简称“M35加农炮”，主要为步兵提供火力支援，攻击坦克、装甲车辆。中国称这类炮为“小炮”、“平射炮”、“战车防御炮”，1938年正式成为“战车防御炮”，简称“战防炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：47毫米</li>
+<li>高低射界：-12度至+60度</li>
+<li>方向射界：60度</li>
+<li>初速：630米/秒</li>
+<li>最大射程：2000米</li>
+<li>穿甲厚度：47毫米（500米）</li>
+<li>全重：280千克</li>
+</ul>
+<h2 id="日本造九四式37毫米战防炮"><a class="header" href="#日本造九四式37毫米战防炮">日本造九四式37毫米战防炮</a></h2>
+<p>这门炮是八路放军在抗日战争时期缴获日军的。</p>
+<p>该型炮是日本1933年研制的轻型反坦克炮，1934年（日本神武纪年2594年）2月完成试制，1936年2月定型，命名为“九四式三十七毫米速射炮”。主要用于攻击装甲目标，摧毁战场简易工事和火力点。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：37毫米</li>
+<li>高低射界：-10度至+25度</li>
+<li>方向射界：60度</li>
+<li>初速：710米/秒</li>
+<li>最大射程：6600米</li>
+<li>全重：327千克</li>
+</ul>
+<h2 id="中国造三零式37毫米战防炮"><a class="header" href="#中国造三零式37毫米战防炮">中国造三零式37毫米战防炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是中国1938年仿制德国Pak36反坦克炮，1941年试制成功，次年定型。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：37毫米</li>
+<li>高低射界：-8度至+25度</li>
+<li>方向射界：60度</li>
+<li>初速：810米/秒</li>
+<li>最大射程：6000米</li>
+<li>穿甲厚度：50毫米（400米）</li>
+<li>全重：343千克</li>
+</ul>
+<h2 id="美国造m3a1式37毫米战防炮"><a class="header" href="#美国造m3a1式37毫米战防炮">美国造M3A1式37毫米战防炮</a></h2>
+<p>该型炮是美国M3式37毫米战防炮的改进型，1942年3月定型，命名为“M3A1式37毫米战防炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：37毫米</li>
+<li>高低射界：-10度至+15度</li>
+<li>方向射界：左右各30度</li>
+<li>初速：888米/秒</li>
+<li>射速：15至20发/分</li>
+<li>最大射程：6858米</li>
+<li>穿甲厚度：50毫米（900米）</li>
+<li>全重：414千克</li>
+</ul>
+<h2 id="美国造m3式37毫米战防炮"><a class="header" href="#美国造m3式37毫米战防炮">美国造M3式37毫米战防炮</a></h2>
+<p>该型炮是美国1937年以德国Pak36式37毫米反坦克炮为基础研制的第一种野战反坦克炮，1940年装备。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：37毫米</li>
+<li>高低射界：-10度至+15度</li>
+<li>方向射界：左右各30度</li>
+<li>初速：888米/秒</li>
+<li>射速：15至20发/分</li>
+<li>最大射程：6858米</li>
+<li>穿甲厚度：50毫米（900米）</li>
+<li>全重：414千克</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/canna.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-cannon/fortified-artillery.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/canna.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-cannon/fortified-artillery.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

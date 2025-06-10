@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>野炮 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-cannon/field-gun.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="野炮"><a class="header" href="#野炮">野炮</a></h1>
+<h2 id="苏联造m1942式zis-376毫米野炮"><a class="header" href="#苏联造m1942式zis-376毫米野炮">苏联造M1942式（ZIS-3）76毫米野炮</a></h2>
+<p>该型炮是苏联格拉宾设计局1940年研制，1942年2月定型装备，命名为“M1942式76.2毫米师炮”，也称“ZIS-3”，主要用于支援步兵、破坏防御工事、火力压制和反装甲作战。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：76.2毫米</li>
+<li>高低射界：-5度至+37度</li>
+<li>方向射界：54度</li>
+<li>初速：680米/秒</li>
+<li>射速：25发/分</li>
+<li>最大射程：13290米</li>
+<li>直射距离：820米</li>
+<li>全重：3115千克</li>
+</ul>
+<h2 id="中国造一八式88毫米野炮"><a class="header" href="#中国造一八式88毫米野炮">中国造一八式88毫米野炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是1929年（民国18年）中国山西地方兵工厂仿制德国同口径火炮，也称“晋一八式八八野炮”，主要用于步兵野战火力支援。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：85毫米</li>
+<li>高低射界：-5度至+45度</li>
+<li>方向射界：6度</li>
+<li>初速：525米/秒</li>
+<li>最大射程：10500米</li>
+<li>全重：1360千克</li>
+</ul>
+<h2 id="中国造一四式77毫米野炮"><a class="header" href="#中国造一四式77毫米野炮">中国造一四式77毫米野炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是中国仿制奥地利百禄18式77毫米野炮，1921年开始仿制，1925年（民国14年）定型，命名为“辽一四式野炮”，兼有野炮和山炮功能。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：77毫米</li>
+<li>高低射界：-8度至+45度</li>
+<li>方向射界：7度</li>
+<li>初速：529米/秒</li>
+<li>射速：10至12发/分</li>
+<li>最大射程：11400米</li>
+<li>全重：1350千克</li>
+</ul>
+<h2 id="日本造机动九零式75毫米野炮"><a class="header" href="#日本造机动九零式75毫米野炮">日本造机动九零式75毫米野炮</a></h2>
+<p>该型炮是八路军在抗日战争时期缴获侵华日军的。在解放战争太原战役中，人民解放军华北炮兵第2旅第1团第2营5连用包括该炮在内的3门九零式野炮封锁太原2个机场和1个空投场，击毁国民党军飞机9架，全连荣立大功，获得第18兵团的“威震敌胆”和太原前线司令部的“英勇命中，连毁敌机”奖旗各一面。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+43度</li>
+<li>方向射界：左右各25度</li>
+<li>初速：683米/秒</li>
+<li>射速：10至12发/分</li>
+<li>最大射程：13890米</li>
+<li>全重：1600千克</li>
+</ul>
+<h2 id="日本造九五式75毫米野炮"><a class="header" href="#日本造九五式75毫米野炮">日本造九五式75毫米野炮</a></h2>
+<p>该型炮是日本1933年开始研制，1935年（日本神武纪年2595年）以“试制九五式野炮”的名称试制并投入试验，次年定型，命名为“九五式野炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+43度</li>
+<li>方向射界：左右各25度</li>
+<li>初速：520米/秒</li>
+<li>最大射程：10700米</li>
+<li>全重：1108千克</li>
+</ul>
+<h2 id="中日本造机动九零式75毫米野炮"><a class="header" href="#中日本造机动九零式75毫米野炮">（中）日本造机动九零式75毫米野炮</a></h2>
+<p>九零式75毫米野炮是1928年日本引进法国技术，1930年（日本神武纪年2590年）试制成功，1932年定型，命名为“九零式野炮”。该型炮是改进型，主要改进为换装机械化牵引型炮架和悬挂系统，将木轮更换为橡胶轮胎。1935年8月定型，命名为“机动九零式野炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+43度</li>
+<li>方向射界：左右各25度</li>
+<li>初速：683米/秒</li>
+<li>射速：10至12发/分</li>
+<li>最大射程：13890米</li>
+<li>全重：1600千克</li>
+</ul>
+<h2 id="左日本造三八式75毫米野炮"><a class="header" href="#左日本造三八式75毫米野炮">（左）日本造三八式75毫米野炮</a></h2>
+<p>1949年人民解放军炮兵部队使用该型炮参加渡江战役，胜利完成支援步兵渡江作战任务，有2门炮获得“渡江英雄炮”的光荣称号，这是其中的1门。</p>
+<p>该型炮是日本向德国购买，后在日本仿制生产，1905年（日本明治38年）定型，命名为“三八式野炮”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-8度至+16度</li>
+<li>方向射界：7度</li>
+<li>初速：522米/秒</li>
+<li>射速：8至10发/分</li>
+<li>最大射程：7500米</li>
+<li>全重：947千克</li>
+</ul>
+<h2 id="德国造克虏伯75毫米野炮"><a class="header" href="#德国造克虏伯75毫米野炮">德国造克虏伯75毫米野炮</a></h2>
+<p>该型炮是德国克虏伯兵工厂研制，可在短期内根据用户需求进行适应性改进，在两次世界大战中被多国使用。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：75毫米</li>
+<li>高低射界：-9度至+15度</li>
+<li>方向射界：7度</li>
+<li>初速：546米/秒</li>
+<li>射速：8发/分</li>
+<li>最大射程：6000米</li>
+<li>全重：895千克</li>
+</ul>
+<h2 id="美国造m1902式76毫米野炮"><a class="header" href="#美国造m1902式76毫米野炮">美国造M1902式76毫米野炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮是美国纽约沃特夫里特兵工厂1902年研制定型的一种野炮。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：76.2毫米</li>
+<li>高低射界：-5度至+15度</li>
+<li>方向射界：54度</li>
+<li>初速：520米/秒</li>
+<li>射速：15发/分</li>
+<li>最大射程：7800米</li>
+<li>全重：1140千克</li>
+</ul>
+<h2 id="法国造m1897式75毫米野炮"><a class="header" href="#法国造m1897式75毫米野炮">法国造M1897式75毫米野炮</a></h2>
+<p>这门炮是人民解放军在解放战争时期缴获国民党军的。</p>
+<p>该型炮法国1897年研制的，1898年定型，是世界上第一种采用后反坐装置的火炮，被认为是现代火炮的鼻祖。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>口径：76.2毫米</li>
+<li>高低射界：-11度至+18度</li>
+<li>方向射界：6度</li>
+<li>初速：575米/秒</li>
+<li>射速：15发/分</li>
+<li>最大射程：8000米</li>
+<li>全重：1190千克</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/mountain-gun.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-cannon/riding-artillery.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/mountain-gun.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-cannon/riding-artillery.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

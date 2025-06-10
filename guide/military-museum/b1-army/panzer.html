@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>装甲车 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-army/panzer.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="装甲车"><a class="header" href="#装甲车">装甲车</a></h1>
+<h2 id="中国造63式装甲输送车"><a class="header" href="#中国造63式装甲输送车">中国造63式装甲输送车</a></h2>
+<p>该型装甲输送车是中国自行研制生产的第一代装甲输送车，1958年8月研制，1953年定型装备部队。具有较强的装甲防护力和输送能力，可浮渡江河，主要用于输送步兵和物资器材，也可遂行侦察、警戒等任务。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：2人</li>
+<li>武器装备：12.7毫米机枪1挺</li>
+<li>发动机最大功率：192千瓦</li>
+<li>最大速度：陆上60千米/时  水上6千米/时</li>
+<li>最大行程：陆上500千米  水上60千米</li>
+<li>最大爬坡度：32度</li>
+<li>越壕宽：2.2米</li>
+<li>通过垂直墙高：0.6米</li>
+<li>运载能力：步兵13人或物资1500千克</li>
+<li>全重：12.8吨</li>
+</ul>
+<h2 id="美国造m8猎犬轮式装甲车"><a class="header" href="#美国造m8猎犬轮式装甲车">美国造M8“猎犬”轮式装甲车</a></h2>
+<p>这辆装甲车是人民解放军1949年5月解放上海时缴获国民党军的。</p>
+<p>该型装甲车1942年定型，1943年装备，是第二次世界大战期间美军和盟军广泛使用的一种装甲车，主要用于侦察、通信和指挥等任务。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：4人</li>
+<li>武器装备：37毫米火炮1门  7.62毫米机枪1挺  12.7毫米高射机枪1挺</li>
+<li>装甲厚度：20毫米</li>
+<li>发动机最大功率：80.9千瓦</li>
+<li>最大速度：90千米/时</li>
+<li>最大行程：560千米</li>
+<li>最大爬坡度：60度</li>
+<li>涉水深：0.61米</li>
+<li>通过垂直墙高：0.3米</li>
+<li>全重：7.89吨</li>
+</ul>
+<h2 id="日本造九五式公路铁路两用装甲车"><a class="header" href="#日本造九五式公路铁路两用装甲车">日本造九五式公路、铁路两用装甲车</a></h2>
+<p>这辆装甲车是人民解放军在1949年1月解放天津时缴获国民党军的。</p>
+<p>该型装甲车是日本东京电气瓦斯公司研制的巡逻车，可在公路、铁路上行驶，1935年（日本神武纪年2595年）装备，命名为“九五式装甲轨道车”。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：6人</li>
+<li>装甲厚度：8毫米</li>
+<li>最大速度：公路30千米/时  铁路72千米/时</li>
+<li>全重：8.7吨</li>
+</ul>
+<h2 id="美国造lvt-3两栖输送车"><a class="header" href="#美国造lvt-3两栖输送车">美国造LVT-3两栖输送车</a></h2>
+<p>1949年5月，人民解放军解放上海时在虬江码头缴获了一批LVT车辆，以此成立了第一支水陆坦克团，在登陆作战训练中发挥了重要作用，这辆坦克就是其中的一辆。</p>
+<p>该型两栖输送车是美国研制装备的LVT系列车辆中的一型，1943年定型装备美军。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：3人</li>
+<li>武器装备：12.7毫米机枪1挺  7.62毫米机枪2挺</li>
+<li>发动机最大功率：164.1千瓦</li>
+<li>最大速度：陆上27.3千米/时  水上9.7千米/时</li>
+<li>最大行程：陆上241千米  水上120.7千米</li>
+<li>全重：17.5吨</li>
+</ul>
+<h2 id="英国造牛津mki装甲输送车"><a class="header" href="#英国造牛津mki装甲输送车">英国造牛津MKI装甲输送车</a></h2>
+<p>这辆1947年10月生产的装甲输送车，是中国人民志愿军在1950年12月抗美援朝战争第二次战役中缴获的。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：2人</li>
+<li>发动机最大功率：81千瓦</li>
+<li>装甲厚度：7至12毫米</li>
+<li>最大速度：58千米/时</li>
+<li>最大行程：206千米</li>
+<li>全重：6.5吨</li>
+</ul>
+<h2 id="加拿大造黄蜂mkiic喷火型运载车"><a class="header" href="#加拿大造黄蜂mkiic喷火型运载车">加拿大造“黄蜂”MKIIC喷火型运载车</a></h2>
+<p>这辆喷火型通运载车是中国人民志愿军在1951年3月抗美援朝战争第四次战役缴获美军的。</p>
+<p>1942年，英国在通用运载车的基础上研制成功装备火焰喷射器的变形车，命名为“MKI”，后开发出MKII型。加拿大1944年在MKII基础上改进发展处MKIIC型，使其既能执行火焰喷射任务，又可作为普通运载车使用。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：3人</li>
+<li>武器装备：喷火器1具  7.7毫米机枪1挺</li>
+<li>喷火距离：73至91.5米</li>
+<li>装甲厚度：5至10毫米</li>
+<li>发动机最大功率：62千瓦</li>
+<li>全重：4.5吨</li>
+</ul>
+<h2 id="美国造m29c黄鼠狼轻型两栖输送车"><a class="header" href="#美国造m29c黄鼠狼轻型两栖输送车">美国造M29C“黄鼠狼”轻型两栖输送车</a></h2>
+<p>这辆两栖输送车是人民解放军1949年解放上海时在虬江码头缴获国民党军的。</p>
+<p>1943年，美国斯图特贝克公司研制成功M29输送车，后改进发展出两栖型号，命名为“M29C黄鼠狼”，用于水网、沼泽地带的人员和货物运输。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>乘员：4人</li>
+<li>装甲厚度：2至4毫米</li>
+<li>发动机最大功率：55.9千瓦</li>
+<li>最大速度：陆上40千米/时  水上6.5千米/时</li>
+<li>最大爬坡度：45度</li>
+<li>越壕宽：1.52米</li>
+<li>通过垂直墙高：0.5米</li>
+<li>全重：17.5吨</li>
+</ul>
+<h2 id="勇士战地越野车"><a class="header" href="#勇士战地越野车">“勇士”战地越野车</a></h2>
+<p>该型车是中国人民解放军装备的第二代军用轻型越野车，可用于作战指挥、物资运输、通讯指挥及轻武器装载等。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>车长：4.4米</li>
+<li>车宽：1.83米</li>
+<li>车高：1.95米</li>
+<li>载重量：500或750千克</li>
+<li>最大速度：135千米/时</li>
+<li>最大爬坡度：60度</li>
+<li>越壕宽：0.55米</li>
+<li>涉水深：0.6米</li>
+</ul>
+<h2 id="猛士火力突击车"><a class="header" href="#猛士火力突击车">“猛士”火力突击车</a></h2>
+<p>该型车是中国研制的第三代高机动性军用越野车，2006年12月设计定型，是多用途的战术机动平台和武器平台。</p>
+<p>主要战术技术性能：</p>
+<ul>
+<li>车长：4.69米</li>
+<li>车宽：2.18米</li>
+<li>车高：1.91米</li>
+<li>载重量：1500千克</li>
+<li>最大速度：110千米/时</li>
+<li>最大爬坡度：60度</li>
+<li>越壕宽：0.7米</li>
+<li>涉水深：0.75米</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-army/gun-salute.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-army/antiaircraft-machine-gun.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-army/gun-salute.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-army/antiaircraft-machine-gun.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
