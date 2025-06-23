@@ -1,0 +1,12 @@
+{
+  "name": "Tsinghua",
+  "version": "1.0.0",
+  "description": "清华大学",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
