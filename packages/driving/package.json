@@ -1,0 +1,12 @@
+{
+  "name": "driving",
+  "version": "1.0.0",
+  "description": "车讲北京",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
