@@ -37,6 +37,15 @@ title: 导游笔记
 5. [中国科学技术馆](./guide/cstm)
 6. [中国农业博物馆](./guide/ciae)
 
+## 北京的文化
+
+1. [车讲北京](./guide/driving)
+2. [什刹海](./guide/Shichahai)
+3. [南锣鼓巷](./guide/NanluoguLane)
+4. [奥林匹克](./guide/olympics)
+5. [北京大学](./guide/PKU)
+6. [清华大学](./guide/Tsinghua)
+
 ## 外埠景点
 
 1. [敦煌](./guide/Dunhuang)
