@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>锦鲤 - 北京海洋馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/selva/2.cyprinus-carpio.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="锦鲤"><a class="header" href="#锦鲤">锦鲤</a></h1>
+<p>锦鲤是一个网络流行语，也是一种文化现象。锦鲤本是一种高档观赏鱼，富有观赏价值，深受人们喜爱；现代指一切跟好运相关的事物；如：有好运的人，或可带来好运的事情。</p>
+<p>初时爱好观赏鲤鱼的多是贵族，因此锦鲤又称为“贵族鱼”。锦鲤久养有悟性，于是又供奉于寺院神社，故又称为“神鱼”。</p>
+<p>锦鲤，本是一种鲤鱼的种类，原始品种为红色鲤鱼（Cyprinus carpio），红鲤是观赏鱼类。在网络时代之前，鲤鱼在真实的中国历史中其实已被赋予很多内涵。西汉刘向在《列仙传》中记载了鲤鱼驮人升天成仙的传说，将鲤鱼作为仙人的坐骑，东汉《三秦传》已有鲤鱼跃龙门的故事。至唐代，锦鲤二字出现在诗中，“虽惭锦鲤成穿额，忝获骊龙不寐珠。”黄滔《成名后呈同年》。诗句中的锦鲤一般认为指“鳞光闪耀的鲤鱼”，并非我们看到的现代锦鲤。现代锦鲤诞生于19世纪的日本，祖先原是中国鲤鱼。虽然现代锦鲤进入中国的时间不过百年，但由于其独具阳刚特色的美、长寿的特质、旺风水的特质，以及来源于中国的鲤鱼的美好寓意，所以“锦鲤”被现代中国人赋予美好富贵的象征。</p>
+<p>锦鲤是鲤科鲤属鱼类鲤（Cyprinus carpio）经过人工改良后的一类观赏鱼品种的总称，锦鲤个体较大，体长可达0.6~1.5米，重10~45千克。锦鲤的鳞片颜色和类型多样，包括全鳞、少鳞和无鳞等。锦鲤的体色受色素细胞影响，可呈现丰富的色彩变化。因此有“观赏鱼之王”的美称，也被人们称为“活的宝石”，“会游泳的艺术品”。</p>
+<p>锦鲤起源于中国，其祖先是原产中国的红鲤鱼。后传入日本，历经多年的杂交选育，形成了极具特色的绯鲤，“二战”后改称锦鲤。锦鲤的适应能力强、性情温顺，杂食性，喜生活在水流缓慢、水体较深的中下层水域，并在泥沙中觅食。</p>
+<h2 id="引用示例"><a class="header" href="#引用示例">引用示例</a></h2>
+<h3 id="典故类"><a class="header" href="#典故类">典故类</a></h3>
+<p>《史记·周本纪》曰：“武王渡河，中流，白鱼跃入王舟中，武王俯取以祭。既渡，有火自上复于下，至于王屋，流为乌，其色赤，其声魄云。” 周武王渡黄河的时候，有白鱼跳进船里，武王把它捡起来祭天，渡河之后天上又落下一团火到武王的屋顶上，变成一只红鸟，叫声震天。“白鱼赤乌”从此成为天降祥瑞的象征。</p>
+<p>《诗经·小雅·南有嘉鱼》说：“南有嘉鱼，烝然罩罩。君子有酒，嘉宾式燕以乐。”呈现的是一种宾主其乐融融的场面。
+《诗经·陈风·衡门》称：“岂其食鱼，必河之鲂。岂其娶妻，必齐之妻。岂其食鱼，必河之鲤。岂其娶妻，必宋之子。”诗歌表达的是一种安贫乐道的意思，吃鱼不非得吃鲤鱼，娶妻也不非得娶贵族小姐，不过把齐国和宋国的贵族女子同河中的鲂和鲤相比，足见其珍贵。</p>
+<p>辅佐越王勾践的范蠡在弃官从商以后还写过一本水产养殖指南《养鱼经》，在有人采访：“您的商业帝国是怎么打造起来的呀？”陶朱公回答：“当然是搞水产养殖啦！（夫治生之法有五，水畜第一。）”，然后倾囊相授自己的养殖技法。</p>
+<p>孔子的儿子孔鲤出生的时候，鲁昭公特地送了一尾大鲤鱼祝贺，所以孔子给自己的儿子取名“鲤”，字伯鱼。足见鱼在中国历史上从来是一种自带祥瑞的好东西，而鲤鱼又是祥瑞体质里的战斗机。</p>
+<p>群众过年都会做一道带鱼的菜，杨柳青年画里流传的一张也是胖娃娃傍着莲花抱着一条大红鲤鱼，取的就是所谓“年年有余”。中国传统吉祥图案中，常将红鲤莲花一起构图，寓意连年有余。</p>
+<h3 id="诗歌类"><a class="header" href="#诗歌类">诗歌类</a></h3>
+<h2 id="作品名称--作者--相关诗词"><a class="header" href="#作品名称--作者--相关诗词">作品名称 | 作者 | 相关诗词</a></h2>
+<p>《九日登山》 | 李白 | 赤鲤涌琴高，白龟道冯夷。
+《阻戎泸间群盗》 | 岑参 | 愿得随琴高，骑鱼向云烟。
+《浙西李大夫述梦四十韵并浙东元相公酬和斐然继声》 | 刘禹锡 | 羽化如乘鲤，楼居旧冠鳌。
+《琴高图为李勋卫赋》 | 徐渭 | 乍闻弄玉骑青风，又见琴高跨赤鱼。
+《乘鱼桥》 | 高启 | 谁知有飞仙，赤脚踏神鲤。
+《琴高骑鲤》 | 王夫之 | 商芝分烨烨，琴鲤想鳞鳞。</p>
+<h3 id="日本锦鲤文化"><a class="header" href="#日本锦鲤文化">日本锦鲤文化</a></h3>
+<p>锦鲤文化起源于日本，作为一种观赏文化，它最早产生于日本文政时代(1804年~1829年)。受中国民俗文化的影响，将锦鲤视为吉利如意的象征，因为锦鲤色泽优美、体态华丽，深受人们的喜爱，又被称为“活宝石”和“神鱼”。此外日本也受到中国“鲤鱼跃龙门”传说的影响，将鲤鱼视为勇气的象征。</p>
+<p>在每年农历的五月五日，即日本特有的“男孩节”，有男孩的人家都会悬挂起彩旗和红黑两色的鲤鱼旗，表示对孩子健康成长的祈愿与祝福。随着文化语境的变化，尽管日本文化受到中国文化的辐射和影响，但锦鲤在日本文化传统中已经褪去了其他的象征意味，成为兼具“祈福”和“赏玩”意义的对象。在西方世界里，锦鲤已经成为日本人的民族文化身份的象征，是代表日本文化的一个复合体。</p>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<h3 id="起源"><a class="header" href="#起源">起源</a></h3>
+<p>锦鲤属鲤形目，鲤科。自古以来人们就喜爱养鲤鱼，其中红色，金色鲤鱼更为人喜爱。与金鱼不同，锦鲤主要在体色和斑纹上发生变异，体型则保留了鲤鱼的特征。</p>
+<p>锦鲤起源于中国，其祖先是原产中国的红鲤鱼。红鲤鱼作为观赏鱼，在中国已有很久的历史，在明代红鲤鱼的饲养已比较普及。约在200多年前传入日本，经过日本长期选育产生了色变，形成了极具特色的绯鲤，二战后改称锦鲤。</p>
+<p>据《中国钓鱼》记载：一千多年前，称为真鲤的黑色鲤鱼，突然发生变异，成为红、白、青、黄的变色鲤。南宋名将岳飞之孙岳珂，著有一部《程史》，书中写道：“今中都有养鱼者，能变鱼以金色，鯽为上，鲤次之。贵游多凿石为池，置之檐牖间，以供玩。”由此看来，锦鲤在中国已有渊源的历史，而日本培育锦鲤的时间并不长。日本公元720年《日本书记》中，有景行天皇于美浓国泳宫的池里养鲤鱼的记载。</p>
+<h3 id="培育历史"><a class="header" href="#培育历史">培育历史</a></h3>
+<p>日本养殖锦鲤有近200年的历史。早在公元1804~1829年间，日本就就已育成许多品种供上流社会人士放入庭院的水池饲养观赏。后又经过多种选育技术，培育出色彩更加斑斓的品种。自20世纪60年代以来，锦鲤作为国际交往礼品，日本曾几次送给北京、上海、杭州等市的园林单位。随着与世界往来日益增多，一些省市从不同的渠道引进了一些品种，有的还建立了锦鲤养殖场。如黑龙江水产研究所养殖的锦鲤是与日本新瀉县交换的品种。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<h3 id="外形"><a class="header" href="#外形">外形</a></h3>
+<p>锦鲤个体较大，体长可达0.6~1.5米，重10~45千克。锦鲤是一种名贵的大型观赏鱼，以缤纷艳丽的色彩、千变万化的花纹、健美有力的体形、活泼沉稳的游姿，赢得了“观赏鱼之王“的美称。并被人们称为“活的宝石”，“会游泳的艺术品”。</p>
+<h3 id="结构"><a class="header" href="#结构">结构</a></h3>
+<p>锦鲤体形呈纺锤形，体躯侧扁，体表有斑纹，身体分为头、躯干和尾三部分。头部的前端有口，口角生有两对触须，其中吻须较长，颌须较短，主要用于探测水底的食物。中部两侧有眼、眼前上方有鼻，躯干上生有胸鳍、背鳍、腹鳍、臀鳍和尾鳍，背鳍、臀鳍均具硬刺，最后1根硬刺为锯齿状。背鳍条16~19，臀鳍条5，尾鳍叉形。躯体上覆有鱼鳞。</p>
+<h3 id="体色"><a class="header" href="#体色">体色</a></h3>
+<p>不同品种的锦鲤在色彩、斑纹上有较大的差异，体色有红、白、黄、蓝、紫等色彩。有的体表全被光彩夺目的鳞片，也有少鳞甚至无鳞的品种。锦鲤有来源于真皮的色素细胞控制体色，黑色、黄色、红色素细胞的消退或移动都会引起锦鲤色泽产生不规则的微妙变化。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../selva/1.symphysodon-aequifasciata.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../selva/3.amphilophus-citrinellus-x-vieja-melanurus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../selva/1.symphysodon-aequifasciata.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../selva/3.amphilophus-citrinellus-x-vieja-melanurus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

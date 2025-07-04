@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>玉澜堂 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-hall-of-jade-ripples.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="玉澜堂"><a class="header" href="#玉澜堂">玉澜堂</a></h1>
+<p>光绪皇帝从紫禁城来颐和园给慈禧请安、请示懿旨后，如果晚了，或者次日还有事，就住在玉澜堂。光绪皇帝有时，也在玉澜堂接见臣工，接见外国使节，处理政务。</p>
+<h2 id="玉澜堂-1"><a class="header" href="#玉澜堂-1">玉澜堂</a></h2>
+<h3 id="历史变迁"><a class="header" href="#历史变迁">历史变迁</a></h3>
+<p>玉澜堂建于1750年，是乾隆皇帝的书斋，后来被英法联军烧毁，1892年又重新修建，成为光绪皇帝在颐和园的寝宫。</p>
+<h3 id="名字由来"><a class="header" href="#名字由来">名字由来</a></h3>
+<p>“玉澜”二字取自晋代陆机的诗句“芳兰振蕙叶，玉泉涌微澜”，意思是昆明湖的水来自玉泉山，在玉澜堂可以看到昆明湖美丽的湖光山色。</p>
+<h3 id="建筑布局"><a class="header" href="#建筑布局">建筑布局</a></h3>
+<p>玉澜堂是三合院式建筑，正殿玉澜堂坐北朝南，东配殿是霞芬室，西配殿是藕香榭。三个殿堂原先都有后门，东殿能到仁寿殿，西殿可到湖畔码头，正殿后门对着宜芸馆。</p>
+<h3 id="相关历史事件"><a class="header" href="#相关历史事件">相关历史事件</a></h3>
+<p>1898年，光绪皇帝在玉澜堂召见袁世凯，希望他支持戊戌变法。但变法失败后，慈禧太后把光绪皇帝囚禁在这里，为了不让光绪皇帝与外界接触，还命人在东、西、北三面砌了很多砖墙，只留正南面的通道由亲信太监监视。</p>
+<h3 id="内部陈设"><a class="header" href="#内部陈设">内部陈设</a></h3>
+<p>现在玉澜堂殿内正中地平床上的宝座、御案、掌扇、围屏等，都是乾隆时期的物品。用紫檀木和沉香木镶嵌、拼贴、雕造而成的宝座、御案、香几，造型好看，花纹也很细腻，是颐和园家具中的精品。</p>
+<h2 id="戊戌变法"><a class="header" href="#戊戌变法">戊戌变法</a></h2>
+<h2 id="七镇八远辽宁舰"><a class="header" href="#七镇八远辽宁舰">七镇八远辽宁舰</a></h2>
+<h3 id="七镇八远十五舰"><a class="header" href="#七镇八远十五舰">七镇八远十五舰</a></h3>
+<p>七镇是指镇东号、镇西号、镇南号、镇北号、镇中号、镇边号、镇海号，共计七艘炮舰。每条船上大约有五十名船员，配备一门大炮和六门小炮，总共七门炮。均为英国建造，1879年至1881年间陆续服役。这些舰船排水量约440吨，航速10节，主要部署于渤海湾，负责海岸巡逻与防御。每舰配备1门大口径阿姆斯特朗前膛炮（口径约254毫米）和6门小口径速射炮，船员约50人。其设计侧重灵活性，但因吨位和火力有限，难以参与远洋决战。</p>
+<p>八远是主力中的主力，被称为八大远，包括定远号、镇远号（德国造铁甲舰）、济远号、致远号、靖远号、经远号、来远号（英德混造防护巡洋舰）、平远号（国产铁甲舰），共计八艘铁甲战列舰和巡洋舰。其中定远、镇远为北洋水师旗舰，排水量7335吨，装备305毫米克虏伯主炮4门，装甲厚度达356毫米，是当时亚洲最强战舰。致远、靖远等舰航速达18节，配备先进速射炮，兼具火力与机动性。平远作为福州船政局自建舰，标志着中国近代造船技术的突破。</p>
+<p>在甲午战争开战前，北洋海军有大小舰只上百艘，其中作战舰只约三十艘（有些属于兼用），七镇八远是其中的主力战舰，代表了中国近代海军早期的核心战力。</p>
+<p>其中，七镇以近海防御为主，吨位较小；八远则是具备远洋作战能力的铁甲舰，技术更先进。</p>
+<p>定远舰为北洋海军旗舰，致远舰管带为邓世昌。</p>
+<p>镇东、镇西、镇南、镇北均为400吨，镇中、镇边为500吨，镇海为950吨（运输舰）；八远中的定远、镇远均7335吨，经远、来远均2900吨。此外，当时还有超勇、杨威两艘巡洋舰（均为1350吨）；康济、威远、泰安三艘炮舰（吨位分别为1310、1268、1258）；操江、湄云两艘炮舰（吨位为640、578）；隶属于广东水师的广甲、广乙、广丙三艘巡洋舰也参加了甲午战争（广甲属穹甲巡洋舰，排水量1296吨；广乙、广丙为轻型巡洋舰，排水量1030吨）。</p>
+<h3 id="历史作用与局限"><a class="header" href="#历史作用与局限">历史作用与局限</a></h3>
+<p>这些战舰在1884年中法战争至1894年甲午战争期间承担主要作战任务。定远、镇远在黄海海战中重创日本舰队，但整体因战术落后、弹药不足等问题最终战败。其中“七镇”因性能局限，多未直接参与决战，而“八远”的损失（如致远沉没、定远自爆）成为近代海军悲剧的缩影。这一舰队体系虽未能挽救清朝海防，却为近代军事现代化提供了实践经验。</p>
+<h3 id="辽宁舰"><a class="header" href="#辽宁舰">辽宁舰</a></h3>
+<p>有一种观点认为为了传承“七镇八远”的历史意义，中国第一艘航母辽宁舰舷号从16号开始（因为“七镇八远”共15艘战舰），后续的山东舰、福建舰等航母的发展也是一种百年海军传承的体现，如辽宁舰铭记辽宁大东沟海战，山东舰铭记山东威海卫全军覆没，福建舰铭记福建外海马尾海战等。不过也存在其他关于航母舷号为16的解释，如在辽宁舰建造计划之前已经提交了15个航母建造计划但未落实，在海军人心中这15个航母都是存在的，所以辽宁舰舷号为16。</p>
+<h2 id="宜芸馆和隆裕皇后"><a class="header" href="#宜芸馆和隆裕皇后">宜芸馆和隆裕皇后</a></h2>
+<h3 id="名字由来与历史变迁"><a class="header" href="#名字由来与历史变迁">名字由来与历史变迁</a></h3>
+<ul>
+<li>名字由来：“芸”是一种香草，可以防止书中生蛀虫，古人常把它夹在书页里，所以藏书的地方就被称为芸馆等，乾隆皇帝以此命名宜芸馆，寓意“宜于藏书”。</li>
+<li>历史变迁：宜芸馆始建于清乾隆十五年（1750年），原本是乾隆皇帝的书库，用来藏书和读书。1860年，英法联军烧毁了宜芸馆，光绪十二年（1886年）又重新修建，重建后成为光绪皇帝的皇后隆裕皇后在园中的住所。</li>
+</ul>
+<h3 id="建筑布局与特色"><a class="header" href="#建筑布局与特色">建筑布局与特色</a></h3>
+<ul>
+<li>整体布局：宜芸馆是一座小巧的四合院，院门为垂花门，上面题有“宜芸门”。正殿是宜芸馆，面阔五间，由前五间和后三间组成。东西配殿各有五间，东配殿称道存斋，西配殿叫近西轩。 </li>
+<li>内部陈设：殿内家具都是珍品，用宝石、竹丝等镶嵌，拼出各种图案。宜芸门内侧廊壁上还嵌有10块石刻，是乾隆帝摹写的各家法帖，原藏于惠山园内，重建时移到了这里。</li>
+</ul>
+<h3 id="相关历史故事"><a class="header" href="#相关历史故事">相关历史故事</a></h3>
+<p>隆裕皇后是慈禧太后的侄女，她和光绪皇帝的婚姻是慈禧太后安排的。虽然隆裕皇后住在宜芸馆，但她和光绪皇帝的感情并不好。不过，隆裕皇后在中国历史上也有重要的一笔，1912年，她带着溥仪皇帝宣布大清朝退位，结束了中国两千多年的帝制。</p>
+<h2 id="珍妃和西配殿"><a class="header" href="#珍妃和西配殿">珍妃和西配殿</a></h2>
+<h2 id="瑾妃和东配殿"><a class="header" href="#瑾妃和东配殿">瑾妃和东配殿</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-garden-of-virtuous-harmony.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-hall-of-happiness-and-longevity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-garden-of-virtuous-harmony.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-hall-of-happiness-and-longevity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
