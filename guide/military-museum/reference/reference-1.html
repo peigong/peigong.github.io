@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>抗美援朝战争第二次战役 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/reference-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="抗美援朝战争第二次战役"><a class="header" href="#抗美援朝战争第二次战役">抗美援朝战争第二次战役</a></h1>
+<p>抗美援朝战争第二次战役是指，1950年11月7日～12月24日,中国人民志愿军在朝鲜人民军配合下，将美国为首的"联合国军"及其指挥的南朝鲜(韩国)军诱至预定战场后，对其突然发起反击的战役，是扭转朝鲜战局的一次战役。</p>
+<h2 id="战役背景"><a class="header" href="#战役背景">战役背景</a></h2>
+<p>志愿军入朝参战并取得第一次战役的胜利后，美国政府依旧坚持以军事进攻迅速占领全朝鲜的计划。</p>
+<p>“联合国军”总司令D.麦克阿瑟决定在朝鲜战场发动“总攻势”，计划先以地面部队进行试探性进攻，然后以美军第10军在东线、第8集团军在西线，向北发起总攻，在圣诞节（12月25日）前结束朝鲜战争。</p>
+<p>为实现这一计划，“联合国军”将位于二线的美军第25师和土耳其旅、英军第29旅调至西线，将美军第3师调至东线，使在前线的地面作战部队增至5个军共13个师3个旅另1个空降团，计22万余人。</p>
+<p>第一次战役即将结束时，中国人民志愿军司令员兼政治委员彭德怀判断“联合国军”可能重新组织进攻，提出了巩固胜利、克服当前困难、准备再战的方针，如敌再进，让其深入后歼击之。11月5日，人民革命军事委员会主席毛泽东同意彭德怀提出的作战方针，并指出：德川方面甚为重要，志愿军必须争取在元山、顺川铁路线以北区域创造一个战场，在该区域消耗敌人的兵力，把战线推到平壤至元山一线，而以德川、球场、宁边以北以西区域为后方，对长期作战方为有利。9日，毛泽东再次指出：志愿军应争取在一个月内，东西两线各打一两个仗，歼敌七八个团，将战线推进至平壤、元山一线，以利于长期作战。</p>
+<p>据此，志愿军党委决定采取内线作战、诱敌深入、各个击破的方针，计划在西线将“联合国军”诱至大馆洞、温井、妙香山、平南镇一线，在东线将其诱至旧津里、长津一线，然后集中兵力各个歼灭。为增强志愿军作战力量，第9兵团（辖第20、第26、第27军计12个师）奉命入朝，担任东线江界、长津方向的作战任务。志愿军总兵力达到9个军30个师38万余人，在东西两线均形成优势。</p>
+<h2 id="战役经过"><a class="header" href="#战役经过">战役经过</a></h2>
+<p>11月6日，“联合国军”开始试探性进攻。志愿军按预定计划以部分兵力节节抗击，诱敌深入，主力向后转移。在志愿军的迷惑下，“联合国军”全线北进，至21日，西线部队进至嘉山、龙山洞至德川、宁远一线，东线主力美陆战第1师进至长津湖地区，被志愿军诱入预定战场。</p>
+<p>11月24日，“联合国军”发起圣诞节前结束朝鲜战争的“总攻势”。25日黄昏，志愿军首先在西线发起战役反击。第38、第42军向德川、宁远地区的南朝鲜军第2军团第7、第8师发起进攻；第40军向球场以北的新兴洞、苏民洞地区美军第2师进攻；第50、第66、第39军则分别在定州、泰川、云山地区攻击美军第24师、第25师和英军第27旅、南朝鲜军第1师部队。</p>
+<p>26日，第38、第42军歼灭南朝鲜军第7、第8师大部，打开了战役缺口。为发展战役胜利，志愿军领导人决定采取侧后迂回结合正面进攻的战法，力争在清川江南北地区分割歼灭西线“联合国军”部队。至28日，正面突击的第40、第39军分别逼近球场、宁边；第66军进至古城洞、龙山洞；第50军进至五龙洞。担任外层迂回任务的第42军攻占北仓里，继续向假仓里、新仓里方向前进；担任内层迂回任务的第38军主力在嘎日岭、于口站地区击破土耳其旅的阻击，进至裴德站、瓦院地区。该军第113师14小时前进70余千米，于28日8时到达三所里，切断了美军第9军由军隅里经三所里通往顺川的退路。</p>
+<p>28日，志愿军调整部署，继续进攻。第113师在三所里击退美军10余次冲击，又抢占龙源里，切断了美军第9军由军隅里通往顺川的另一条退路。第42军先后在月浦里、假仓里歼灭南朝鲜军和美军各一部，进至新仓里。第38军主力歼灭土耳其旅大部和美军一部，进至凤鸣里。第39、第66军进到宁边以南地区，第40军进至院里地区，第50军进到博川以西地区。美军第9军陷入了志愿军的三面包围。</p>
+<p>29日，美军第8集团军开始全线退却。美军第1军撤至安州地区，准备经肃川向平壤方向撤退；第9军收缩至价川、军隅里地区，企图经龙源里、三所里向顺川突围。</p>
+<p>西线志愿军部队全力进攻，以美军第9军为主要攻击目标，在清川江南北地区对美军第8集团军展开大规模的围歼战。第113师在三所里、龙源里顽强抗击，坚守阵地，粉碎了美军突围与北援的企图；第38军主力迅速向第113师靠拢，从翼侧突入南撤的美军行列，展开激战；第40军攻占军隅里，以一部兵力协同第38军作战，主力继续向安州方向突击；第39、第66军先后渡过清川江，向南攻击前进，协同第38军歼击被围的美军部队；第42军继续在新仓里攻击美骑兵第1师主力；第50军从博川东南逼近安州。</p>
+<p>战至12月1日，美军第9军被迫遗弃大量辎重装备，转道安州会同美军第1军，经肃川退往平壤一线。西线志愿军部队遂于12月2日停止追击，转入休整。</p>
+<p>志愿军在西线发起反击后，东线美军第10军（辖第3、第7师和陆战第1师）并指挥南朝鲜军第1军团（辖首都师、第3师）仍继续向北推进。11月27日，美军陆战第1师主力和第7师1个加强团，进入了长津湖地区。27日晚，志愿军第9兵团（司令员兼政治委员宋时轮）集中第20、第27军在长津湖地区对美军展开反击，激战一夜，将美军第7师和陆战第1师各一部分割包围于下碣隅里、柳潭里、新兴里和古土里地区。美军被围部队为打开通路，连续不断地猛攻志愿军阵地。志愿军部队一面对被围美军展开攻击，一面坚决抗击美军反扑。</p>
+<p>29日，美军陆战第1师猛攻死鹰岭和富盛里阵地。志愿军第58师第172团第3连连长杨根思率领1个排扼守死鹰岭1071.1高地，连续击退美军8次进攻，最后抱起炸药包，冲入敌群，与敌同归于尽，保住了阵地。第60师在富盛里、小民泰里一线阵地击退英美军多次进攻，并乘胜向古土里方向实施反击，毙伤俘敌近千人。</p>
+<p>根据战场情况，第9兵团决定集中力量逐次歼灭被围美军。30日晚，第27军集中第80师和第81师主力对新兴里美军第7师第31团级战斗队（加强团）发起进攻，激战两日，将其全歼。</p>
+<p>此战之后，东线“联合国军”全线动摇，长津湖地区的美军开始向南突围。志愿军以预备队第26军投入战斗，克服天寒地冻、粮弹缺乏、冻伤减员严重等困难，对美陆战第1师展开围追堵截。12月12日，美军陆战第1师余部在美军第3师的接应下撤回五老里。</p>
+<p>“联合国军”在东西两线遭到沉重打击后，麦克阿瑟于12月3日命令部队向“三八线”实施总退却。志愿军乘胜展开战役追击。</p>
+<p>在西线，志愿军和人民军于6日收复朝鲜民主主义人民共和国临时首都平壤，并继续向“三八线”推进。23日，志愿军西线各军进至金川、九化里、朔宁、涟川、铁原、华川等地区，人民军第1军团越过“三八线”，解放延安半岛和瓮津半岛，第2、第5军团各一部进占春川、加平。</p>
+<p>在东线，人民军部队于9日收复元山，切断了美军、南朝鲜军的陆上退路。美军和南朝鲜军遂撤往咸兴、兴南地区。志愿军第26、第27军同人民军第3军团继续追击，17日占领咸兴，19日占领涟浦机场，24日收复兴南地区。</p>
+<p>美军第10军等部在300余艘舰船的接应下从海上撤退。</p>
+<p>第二次战役遂告结束。</p>
+<h2 id="战役结果"><a class="header" href="#战役结果">战役结果</a></h2>
+<p>第二次战役，中国人民志愿军和朝鲜人民军彻底粉碎了“联合国军”占领全朝鲜的企图，解放了朝鲜北半部除襄阳外的全部地区，将战线推至“三八线”，并占领“三八线”以南瓮津半岛和延安半岛，迫使“联合国军”由进攻转入防御，从根本上扭转了朝鲜战局。</p>
+<p>在作战中，志愿军基本歼灭南朝鲜军第7、第8师，歼灭土耳其旅大部和美军第7师1个加强团，给予美军第2师、陆战第1师以歼灭性打击，重创美军第25师、骑兵第1师，共毙伤俘敌3.6万余人，其中美军2.4万余人，美军第8集团军司令W.H.沃克也在撤退中身亡。此外，并缴获与击毁各种炮1000余门、汽车3000余辆、坦克与装甲车200余辆，缴获飞机6架。志愿军在此次战役中伤亡3万余人。</p>
+<h2 id="战役纪念"><a class="header" href="#战役纪念">战役纪念</a></h2>
+<p>作家魏巍将抗美援朝战争第二次战役松骨峰战斗写成了那篇著名的战地通讯：《谁是最可爱的人》。</p>
+<h2 id="战役意义"><a class="header" href="#战役意义">战役意义</a></h2>
+<p>第二次战役历时29天，是抗美援朝战争中战略意义最为重大的一次胜利。这一胜利，大大超过了毛泽东在志愿军入朝时及第二次战役前的预想。</p>
+<p>随着志愿军收复平壤、元山，美军开始大撤退，一直退到了三八线以南地区。志愿军不但彻底粉碎了“联合国军”所发动的“圣诞节攻势”，而且将战线由清川江推至三八线，收复了三八线以北（除襄阳外）的全部领土，解放了三八线以南的瓮津半岛及延安半岛，彻底扭转了朝鲜战局。</p>
+<p>志愿军取得的胜利震惊了世界，在全世界打出了新中国的国威军威。正如美国《纽约先驱论坛报》所称的，这是“美国陆军史上最大的败绩”。它打破了美军不可战胜的神话，在国际舞台上彻底改变了中华民族在近代一直落后挨打的形象。</p>
+<p>至此，再也没有人会认为中国的这支“农民武装”式的军队是一支可以轻易侮辱的力量了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/41-75.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../reference/reference-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/41-75.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../reference/reference-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

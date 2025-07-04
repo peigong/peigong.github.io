@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>长春园 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/chang-chun-yuan/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="长春园"><a class="header" href="#长春园">长春园</a></h1>
+<p>始建于乾隆十年（1745年）前后，位于圆明园东侧，于1751年正式设置管园总领时，园中路和西路各主要景群已基本建成，诸如澹怀堂、含经堂、玉玲珑馆、思永斋、海岳开襟、得全阁、流香渚、法慧寺、宝相寺、爱山楼、转湘帆、丛芳榭等。其后又相继建成茜园和小有天园。而该园东部诸景（映清斋、如园、鉴园、狮子林），是乾隆三十一年至三十七年大规模增建的，包括西洋楼景区，长春园共占地一千亩。悬挂匾额的园林建筑约为200座。</p>
+<p>长春园位于圆明园东侧，始建于1745年（乾隆十年）前后。此地原为康熙大学士明珠自怡园故址，有较好的园林基础，两年后该园中西路诸景基本成型，1751年（乾隆十六年）正式设置管园总领。稍后又在西部增建茜园，北部建成西洋楼景区，并于1766年-1772年（乾隆三十一年至三十七年）间，集中增建了东路诸景。占地70余公顷，有园中园和建筑景群约20处，包括仿苏州的狮子林、南京瞻园的如园和杭州的西湖的小有天园等园林胜景。</p>
+<p>长春园的外环景区，颇值得称道，其中很多建筑是乾隆皇帝南巡游历回来之后仿建的。长春园外环的南部有如园和茜园；北部有转香帆、泽兰堂、宝相寺、法慧寺和狮子林。</p>
+<h2 id="发展历史"><a class="header" href="#发展历史">发展历史</a></h2>
+<p>长春园昔日的园林景观，仅在乾隆年间由宫廷画师绘有一幅大型全景图，1860年英法联军焚园后下落不明。</p>
+<p>1992年12月起，全面整修长春园山形水系，至1994年5月竣工放水。</p>
+<p>长春园不是对圆明园的简单扩展和内部增建，而是在圆明园东侧另辟一所面积约一千亩的新园。与圆明园本园不同的是，长春园是一个事前精心规划设计的作品，是乾隆皇帝御制的园林杰作。《圆明园四十景图咏》完成之后，乾隆皇帝的建筑热情暂时消歇。不过，仅仅过了不到一年的时间，他的造园热情再次勃发。这一回，按照乾隆皇帝自己的说法，他是要给自己兴建一座退位后宴居的所在，尽管这个时候他还只是一个三十四岁的年轻人。因此之故，颐养和休闲就成了长春园最大的主题。不妨这样说，长春园是乾隆皇帝亲手为自己营建的老年活动中心。</p>
+<p>长春园从一七四五年开始兴建到一七五一年基本成型，用了六年左右的时间，之后又屡有兴作，最终成为一个中西合璧、堪称完美的园林。跟圆明园本园相比，长春园更是一个名副其实的水景园，水面面积占到全园面积的三分之二，水域的宽度大约都在一二百米之间，适足观赏远近周遭的景物。在整体布局上，长春园也更为合理，用来分割水面的洲、桥、岛、堤错落有致，安排停匀，套用一句现代的流行语：“处处显示出‘以人为本’”的设计思路和情怀。</p>
+<h2 id="宫门到宫内"><a class="header" href="#宫门到宫内">宫门到宫内</a></h2>
+<p>长春园的前宫门有五楹宽，大门两侧的汉白玉座台上有两只巨大的铜麒麟。宫门两翼各有一排朝房。进到院内，经过一座牌楼，迎面看到的第一座建筑群叫做淡怀堂，淡怀堂主体建筑为九开间，东西各有配殿五间。淡怀堂的北面有南长河流过，通过横跨南长河的十孔石桥——长达四十米的长春桥，便可登上长春园面积最大的岛屿——中央岛。</p>
+<p>中央岛是长春园的中心区域。在这个面积约一百多亩的人工岛上，从南向北，依次是含经堂、淳化轩和蕴真斋三个建筑群。含经堂是一座巨大的复合式建筑，据说是乾隆皇帝打算归政后宁神养心、诵经礼佛的地方，也可以看作是乾隆皇帝给自己修建的又一处豪华寝宫。含经堂的后面是淳化轩，淳化轩以两侧庑廊镶嵌淳化阁法帖而得名，是自命书法家和书法鉴赏家的乾隆心爱之地，他在《题淳化轩》一诗里曾经描述对归政后生活的憧憬：“抚帖虽无暇，翻书则有缘。他日倦勤处，期之以廿年。”中心岛上最北面的建筑是蕴真斋。在含经堂、淳化轩和蕴真斋主建筑的两侧，另外还有两组辅助性的建筑，东边是神心妙远、味腴书屋、大戏台；西边是涵光室、三友轩、理心楼和焚香楼。其中味腴书屋以藏有《四库全书》的浓缩本《四库全书荟要》闻名于世，乾隆皇帝在题味腴书屋的诗中矜夸道：“经史精腴在，真咀味者谁。”得意之情溢于言表。</p>
+<p>长春园中央岛的东西两侧，另有两座对称的小岛，西侧的岛上建有“思永斋”；东侧的岛上建有“玉玲珑馆”。这两个小岛以及岛上的建筑东西相对，卫星般围拱在中央岛的周围，为中央岛平添了几分壮美和威严。</p>
+<p>长春园内最壮观的建筑群是园内西湖里的海岳开襟，海岳开襟位于中央岛西侧开阔的湖泽之中，四面皆有码头，可以凭舟楫往来。主殿高三层，建筑在双层石基之上，周围的水域里植有大片的莲花。论视野，海岳开襟称得上是长春园里的冠军。海岳开襟的西边，经过一个名叫榴香渚的凉亭，就接近了分隔圆明园本园和长春园的大门——明春门。当年，帝后们多是经过明春门往来于圆明园和长春园之间。</p>
+<h2 id="主要景点"><a class="header" href="#主要景点">主要景点</a></h2>
+<p>长春园的外环景区，颇值得称道，其中很多建筑是乾隆皇帝南巡游历回来之后仿建的。长春园外环的南部有如园和茜园；北部有转香帆、泽兰堂、宝相寺、法慧寺和狮子林。这些“园中园”的建造，几乎每一处都有一个耐人寻味的故事，我们将会在后面的章节详细叙述。</p>
+<p>在长春园内还有许多其他的建筑，不少是乾隆多次下江南游历时，将具有魅力的园林和景点绘图仿制。乾隆探访了许多著名的江南园林。他随时都带着工匠和艺术家，他们负责仿制乾隆皇帝喜爱的园林建筑，并计划在长春园内重新建造出来。事实上，乾隆经常要求园林的设计者，尽可能去仿制江南园林。最后，至少有五座完整的江南园林在长春园内仿建。</p>
+<p>坐落在长春园东南角的如园，就是依照南京瞻园的样式来建造的。此园有独特的假山和土石，比原来在瞻园的还要大。如园的胜景位于东边，里面的大池塘把北边的殿堂和南边的楼阁划分开来。在池塘的东边耸起一座七米高的人造山丘，在山脚下的两侧和台阶顶端有多座亭子，在台阶上有一个方向可以看到长春园，而另一面就看到南边墙外的郊野景色，在台阶下是数以百计不同颜色的珍贵牡丹。在池塘的西边有很多石造假山与洞穴，在这座假山的顶端建造了清瑶榭，面对着含碧楼。一座六角形凉亭的后面可见惟绿轩，清瑶榭的北面是七楹宽的延清亭，榭西是含翠轩。从这座殿堂的凉台上北望，可以看到600米外的湖泊和山丘，因此这座小庭园虽然孤立在大范围之内，却进一步善用了“借景”的技巧。</p>
+<h2 id="西洋楼"><a class="header" href="#西洋楼">西洋楼</a></h2>
+<p>长春园的北部是著名的西洋楼，是一组欧式宫苑建筑群，占地约6.7万平方米，设计者是传教士郎世宁、王致诚、蒋友仁等人。这是中国的皇家宫苑中第一次大规模仿建的西洋建筑和园林。它始建于乾隆十二年（1747年），至二十四年（1759年）完成，包括六组西洋式建筑、三组喷泉和无数庭院小品。整个景区呈东西轴线布局，自东向西依次有线法墙、方河、线法山、远瀛观（中轴）、海晏堂、方外观、谐奇趣、养雀笼、蓄水楼、万花阵和大水法、观水法等喷泉。它的建筑、环境和式样采用了巴洛克式风格，而装饰细节上则有具有东方的神韵。</p>
+<p>西洋楼景区从西向东的主要建筑依次为：</p>
+<p>蓄水楼，二层。供应海晏堂及远瀛观喷泉所需用水。楼宽五楹，楼北并有平台三楹，内为养水池。二楼东北角通下方水井，安装轧水机，为谐奇趣、黄花阵、水法台各处喷泉供水。</p>
+<p>蓄水楼南为线法桥，西面贴长春园西墙，另外一面临水。桥有五券，每券上面刻有兽面，向外喷水。桥下有闸五道，联系长春园与圆明园水面。桥中央有西洋座钟式假门一座，上有巨大西洋时辰钟一座。假门两侧障以雕刻花墙。墙外为夹道，夹道西墙内即圆明园方壶胜境和蕊珠宫景区。</p>
+<p>蓄水楼东为广场。广场中为水法台（西洋式石雕喷泉塔），周围环以雕花铜栏，十字甬路用细砖墁地，两旁五色石子砌成花坛。广场之北为黄花阵，南为谐奇趣。</p>
+<p>圆明园大水法铜版画黄花阵，即迷宫，现已经重新复建。黄花阵花园门为西洋座钟形，黄铜雕刻花纹大门两扇。花园迷宫中央为石亭，内设西洋式座椅。亭前左右石狮二个，背驮宝瓶，内有铜管，喷出之水高二丈余。黄花阵最北有洋楼三间。</p>
+<p>谐奇趣，为长春园最早的西洋式建筑，两层，庑殿顶，紫色圆光琉璃瓦，屋脊用蓝色琉璃番草。上层三间，下层七间，楼内设西洋式家具及卧榻，木条拼花打蜡地板。楼柱用汉白玉深雕西洋番花番草花纹，窗户券口有精美砖石雕刻。墙身抹粉红灰，两侧有月式平台抄手游廊，游廊尽头为五色琉璃顶八角形奏乐亭。楼南有月台，两旁有白玉石盘券石磴。月台上二层楼门正中有西洋石狮子二座，及西洋雕刻之玉石栏杆。月台下为巨大的海棠形喷水池，池中央为西洋大翻尾石鱼一尾，口中可立一人，向上喷水高达五丈余，民国初年为燕京大学校友会购买并放置于燕园未名湖，现已无存。喷水池周围有喷水铜雁十八只，喷水铜羊四只。池东西有两个小喷水池，游廊下亦有两个小喷水池。池南有石栏杆，再南即为长春园湖面。</p>
+<p>水法台广场东为养雀笼西门。养雀笼为五间三进建筑。中央一间为过道。西边第一进为敞厅，两侧各摆放海蜇形假山石一座，各高六尺余。中间一进南北两间各用铜丝网挡严，内蓄孔雀各一对。最东边一进为敞厅，南间东墙有郎世宁油画帆船航海图。中间一进之北为西式小院，有房九间，为养雀太监所住。养雀笼东面为西洋式牌坊三间，中央石券有精刻黄铜花门二扇，左右次间为假窗，嵌喷水塔三层，水由上落下，流入地面石孔。养雀笼东门南北连接花墙，东有瓶形花石平桥。过桥之后东行，路北为方外观。</p>
+<p>方外观，两层，上下各三间，两侧有半环形石阶通往二楼。楼为大理石贴面，加刻回文装饰，乾隆朝为容妃礼拜之场所。楼西为八角亭，东为花台树池。方外观之南，路南有五竹亭，游廊环绕，亭瓦柱窗皆为湘妃竹，镶嵌五色珠玉螺钿，烫蜡见光，平时亭子由油布毡里罩子保护，皇帝游幸时方移去。此亭可视为一极大之工艺品。亭北路南之间空地有圆形小喷水池一座，左右为荷花池。</p>
+<p>圆明园海晏堂铜版画方外观之西为海晏堂。海晏堂为西洋楼中最大之建筑，分前后楼。前楼一层，坐落于高台之上，正面十一间，深一间。正门向西。楼身为砖砌，立柱为汉白玉精刻西洋番花石柱，孔雀绿琉璃瓦庑殿顶，屋檐上安露顶石栏杆。屋顶垂脊四角各安翻尾石鱼一条。楼身抹粉红色灰，石券花窗口与汉白玉石柱之间墙面为五色琉璃番花。正门位于二层，门为黄铜西洋雕花，内为飨宴之所，正南为八扇大理石屏风，上为山水花纹，屏风前为宝座。窗为法式铜窗，窗间立柱为大玻璃镜，镜子上方为三角式巴洛克假门楣装饰，镜前摆放景泰蓝及珐琅花盆、凳几、陈设。地面为拼花打蜡木条地板。楼顶为格子天花。门前为平台，平台左右为叠落石跑梯，中央为喷水池。石跑梯为花斑石子嵌地，靠水池侧为导水台。两侧共有导水台六十个，水纹形泄水沟四道。正门前有西洋式石豹两只，口中吐水，沿阶梯旁导水台泄水沟逐级叠落，注入大池中。大喷水池中央为石蚌，其上为转轮水法，再上为喷水石鱼二只。池中央有喷水台一座，两旁有石台二座，沿石跑梯八字展开，上为十二生肖兽兽人身喷水像。右侧（南侧）为鼠、虎、龙、马、猴、狗，左侧（北侧）为牛、兔、蛇、羊、鸡、猪。每一时辰轮流喷水，正午时十二铜像一同喷水。喷水池外，叠落石梯两旁又有西洋八角石鼎各一，高八尺余。</p>
+<p>海晏堂后楼（东楼）亦为两层，与东楼通过平台楼梯相连。后楼中央为蓄水池（锡海），东西长八丈五尺五寸，南北宽一丈八尺五寸，深四尺九寸。二层东西两端各有蓄水楼一座。楼内各有水井，上安轧水机。后楼南北各有西洋八角喷水池二座，西池有二铜猴在树下捅马蜂窝，手中托印，水从印中喷出，向上激树，群蜂飞舞，猴作惊恐状。南面东池内，一铜猴坐假山上，手执雨伞一把，水由伞顶上喷八尺，复落伞上，下流如瀑雨，喷泉名为猴打伞。后楼东立面有四折石楼梯由东蓄水楼下楼，楼梯下有砖砌地沟，内安铜管，直径三尺，最细者亦有寸余，通往海晏堂西门外喷泉群，以及海晏堂之东各处喷泉，为其供水。</p>
+<p>长春园西洋楼海晏堂内景海晏堂东行，过花墙，即为远瀛观、大水法、观水法建筑群。</p>
+<p>远瀛观坐落于高台之上，全部为汉白玉雕刻筑成。主楼五楹，二十五间，乾隆时为寝宫，内设寝具。陈放法国路易式家具、座钟、乾隆三十二年（1767年）法王路易十六所赠送之名贵哥白林挂毯、地毯，又有造办处打造之赤金大澡盆，西洋式金铜床及帐帏，所陈珍宝无数，手工雕品如名师杜士元在象牙与琥珀之极小圆镜上刻五千字之诗赋及其故事之透雕，又如在一尺五寸见方之水晶内又天然华美之动物等。其他西洋镜、珍玩宝物陈设无数。楼为三层庑殿顶，正中之大宝顶用红、紫、孔雀蓝、粉、天青五色琉璃圆光瓦。第二层用鱼鳞金瓦。楼顶为五色琉璃番草卷云花纹屋脊。正门两旁汉白玉石柱刻西洋番花下垂葡萄叶，深雕三寸余。楼门前石狮子一对。远瀛观楼前为大平台，楼台基座东西有弧形石梯两座，环抱台基下面喷水池。楼前平台以精美太湖石及花木填空。</p>
+<p>大水法在远瀛观前平台之南。北为西洋式石龛，石龛紧靠远瀛观平台，正中有铜雕西洋式狮子头，口中喷水，落入下面的半圆形七级水台，七层水台亦层层喷水，落入池旁两岸泄水沟（今石龛狮子头和水台已无存，残存部分形为类似门楼的空心石牌坊）。水池为半圆海棠形，左右岸上，泄水沟尽头各有翻尾石鱼一座，池中左右亦有石鱼各一。西洋牌坊来水自泄水沟自上鱼口中流出，落入下鱼口中，复将水势激回，反射喷入池中。池正中有一铜鹿，南向似跑，其角分为八杈，由各角尖上喷水八道。鹿东西各有铜猎犬五只，水由口喷出，射向铜鹿。池沿岸用白玉石精雕花纹，安放带座石花盆，内植三层线法松（按西洋方式修剪的松树）。此喷泉俗称十犬喷鹿。水池东西石鱼北侧，又有翻尾大海猪各一，水自口中喷出，射出三丈余。大水池外，东西各有十三层方形喷水塔一座，塔在水池中，池底有大喷水管八根，塔身上有小喷水管八十根，水射高六尺。塔顶有铜蒺藜十六角，喷水十六道，落入池中。</p>
+<p>复建的万花阵迷宫观水法坐南朝北，左右列石鼎炉各一台，栏上有石刻花盆四对。台中设宝座，左右列二铜鹤，二鹤头相对，口衔铜横条，条下横布五色玻璃六棱坠子，由宝座靠背拉黄绸顶棚至前方鹤嘴横梁为凉棚。座后有西洋式屏风一座，半圆形，中嵌石刻屏心五件。石屏东西为方形小塔各一，塔两旁有石刻花盆，再东西为西洋座钟式精雕巴洛克角门各一，出角门可至长春园泽兰堂。</p>
+<p>远瀛观、大水法建筑群东西皆为花墙，广场地面用砖石琉璃铺砌。再向东即为线法山正门，门为巴洛克式西洋牌楼，南北为矮松树篱。入门为线法山，四面有盘旋马道，护以黄绿琉璃砖矮墙，可驰马上山。山顶为八角四券石亭。山东为线法山东门，所谓螺丝牌楼。牌楼正门门券上刻蛤蜊、番草、军鼓、交叉军旗浮雕，左右侧门上为石刻花瓶、番花、长蛇。门柱俱刻西洋番花葡萄藤叶，绕柱爬墙，枝叶翻卷，果攒下垂。门内外两侧有月形荷花池，中植白莲，路两旁百花齐放，万紫千红，形成鲜明对比。</p>
+<p>线法山之东为方河、线法墙。线法墙南北平行分列砖墙五道，悬挂油画布景，有谓西洋市街楼房，称为阿克苏十景。</p>
+<p>1992年12月起，国家全面整修长春园山形水系，至1994年5月竣工放水。</p>
+<p>长春园铜麒麟</p>
+<p>长春园铜麒麟原为圆明园的长春园宫门饰物，今有一只存颐和园东门内仁寿殿前。</p>
+<h2 id="开门迎客"><a class="header" href="#开门迎客">开门迎客</a></h2>
+<p>2016年10月18日，为纪念圆明园罹难156周年，10月18日全天圆明园遗址公园向公众免费开放。同时，长春园的正宫门也首次开门迎客，除了绮春园南门、藻园门、东门、正觉寺门之外，市民逛圆明园今后又多了一个入园大门。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../qi-chun-yuan/xian-ren-cheng-lu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../chang-chun-yuan/hai-yue-kai-jin.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../qi-chun-yuan/xian-ren-cheng-lu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../chang-chun-yuan/hai-yue-kai-jin.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

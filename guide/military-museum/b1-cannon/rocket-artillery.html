@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>火箭炮 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-cannon/rocket-artillery.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="火箭炮"><a class="header" href="#火箭炮">火箭炮</a></h1>
+<p>火箭炮是一种发射火箭弹的多发联装发射装置，它发射的火箭弹依靠自身发动机的推力飞行。火箭炮发射速度快，火力猛烈，突袭性好，机动能力强，可在极短的时间里发射大量火箭弹。</p>
+<p>火箭炮向远距离的大面积目标实施突然袭击，用以歼灭、压制有生力量和技术兵器，给敌人精神上以极大的震撼。火箭炮按运动方式可分为自行式、牵引式和便携式三类。自行式又分为履带式和轮式。按射程可分为中近程火箭炮和远程火箭炮。</p>
+<h2 id="火炮概况"><a class="header" href="#火炮概况">火炮概况</a></h2>
+<h3 id="基本作用"><a class="header" href="#基本作用">基本作用</a></h3>
+<p>火箭炮的主要作用是引燃火箭弹的点火具和赋予火箭弹初始飞行方向。由于火箭靠本身发动机的推力飞行，火箭炮不需要有能够承受巨大膛压的笨重炮身和炮闩，也没有后坐装置。火箭炮能多发联射和发射弹径较大的火箭弹，它的发射速度快，火力猛，突袭性好，但射弹散布大，因而多用于对目标实施面积射打击。</p>
+<h3 id="战术用途"><a class="header" href="#战术用途">战术用途</a></h3>
+<p>火箭炮是一种威力大、火力猛、机动性好的高性能武器系统。在作战中，要充分考虑任务、敌情、地形、时间等因素以及火箭炮自身的特点，才能使它的能力得以充分发挥。火箭炮主要担负远距离和纵深作战任务。</p>
+<p>远距离作战火箭炮覆盖面积大，可以打多个瞄准点，最适宜攻击面积大、定位不太精确的目标，但不能用来攻击距离己方部队太近的目标，也不能用于己方部队即将占领或通过的区域。</p>
+<p>纵深作战火箭炮可发射战术导弹以支援纵深作战，此时它的大部分射击任务是预先有计划的。在制定火力计划时应考虑现有火箭炮的数量和位置、导弹库存量和位置、目标侦察手段、c4网络状况等因素。一般来说导弹资源有限，要慎重计划。</p>
+<p>军属火箭炮营和师属火箭炮连通常担负全般支援任务，也可担负全般支援兼加强任务，还可编组完成加强战术任务。</p>
+<p>全般支援任务：担负全般支援任务的多管火箭炮分队为整个部队提供野战炮兵火力支援，对部队指挥官来说，这是最集中控制的任务。多管火箭炮分队主要提供预先计划的火力和打击高性能目标。指挥官可以为多管火箭炮分队制定优先射击顺序，以便对特定战斗地域施加影响。</p>
+<p>全般支援兼加强任务：担负此项任务时，多管火箭炮分队首先要为整个被支援部队提供火力支援，其次是加强另一支炮兵分队的火力。它仍由部队炮兵司令部控制，并优先响应其需求。</p>
+<p>加强任务：担负加强任务时，多管火箭炮分队应加入被加强炮兵营的作战/射击通信网和指挥网，同时仍需保持与部队野战炮兵司令部的通信联络。多管火箭炮营编有联络分排，有助于实施和完成加强任务。多管火箭炮连没有建制的联络能力，可由连长负责。给多管火箭炮分队下达加强任务时，需要特别加以考虑的是弹药消耗量问题。担负加强任务时，弹药消耗量可能会超过分队的补给能力。</p>
+<p>火箭炮分队一般不担负直接支援任务，原因是精度不够高，覆盖面大，可能危及己方部队，在其最大射程上，危险区为2km，弹药保障不易，没有配备直接支援弹药，如照明弹、发烟弹等。并且多管火箭炮不适用于后方作战。多管火箭炮作战强调自主性，可以把战术任务直接下达到连或排一级。连可以脱离营的控制，独立作战，排可在有限时间内单独实施标准或非标准战术任务，即半独立作战。</p>
+<h2 id="发展沿革"><a class="header" href="#发展沿革">发展沿革</a></h2>
+<h3 id="火炮雏形"><a class="header" href="#火炮雏形">火炮雏形</a></h3>
+<p>火箭是中国一大发明，最早的多枚火箭连发装置和齐射装置也是中国发明的。在中国明朝人茅元仪于1621年完成了《武备志》一书中记载的火箭及其发射装置有几十种之多，其中有一次可发射32支和40支火箭的“一窝蜂”和“群豹横奔箭”，有一发百矢的“百虎齐奔箭”和可连续两次齐射的“群鹰逐兔箭”，这些都可看作是现代火箭的原始雏形。</p>
+<p>公元969年，中国宋朝发明了世界上第一支火药火箭。975年，火箭作为武器首次应用于宋灭南唐的战争中。17世纪，欧洲国家相继制造火箭。20世纪初，由于双基推进剂的应用，火箭获得长足发展，逐步形成了现代火箭炮。</p>
+<h3 id="首炮研制"><a class="header" href="#首炮研制">首炮研制</a></h3>
+<p>世界上第一门现代火箭炮是1933年苏联研制成功的BM-13型火箭炮。这种自行式火箭炮安装在载重汽车的底盘上，装有轨式定向器，可联装16枚132毫米尾翼火箭弹，最大射程约8500米，1939年正式装备苏联红军，1941年8月在斯摩棱斯克的奥尔沙地区首次实战应用。当时苏联红军的一个火箭炮连以一次齐射，摧毁了纳粹德国军队的铁路枢纽和大量军用列车。火箭炮齐射时，像火山喷发炽热岩浆，铺天盖地般倾泻在敌目标上，声似雷鸣虎啸，热若排山倒海之势，不仅消灭敌人大量有生力量和军事装备，而且给敌人精神上以巨大的震撼。</p>
+<p>以致德军士兵后来一听到这种炮声，就心胆俱裂。为了保密，当时苏联红军未给火箭炮定名，但在发射架上标有表示沃罗涅日“共产国际”兵工厂的“K”字。可能由于这个缘故，苏联红军战士便把这威力巨大的新式武器亲切地称之为“卡秋莎”。它由汽车部分和发射部分组成。发射部分由滑轨床、炮架、回转盘、底架、瞄准装置、发射装置等组成。在发射前，火箭弹是用定向钮钳在滑轨槽的定向沟内。火箭弹的战斗部分的弹体内是TNT炸药。药筒部分是由七根管状发射药筒组成，汽车驾驶室内装有发射装置的发火转轮。</p>
+<p>主要诸元：弹径132毫米，滑轨长5米，弹长1450毫米，弹重42.5千克，初速70米/秒，高低射界7°～45°，方向射界左右各10°，最大射程7900～8800米。</p>
+<p>严格地说，“卡秋莎”是导轨火箭炮，而不是多管火箭炮。最早的具有炮管式发射装置的多管火箭炮，是德国于1941年正式装备部队的158.5毫米6管牵引式火箭炮和280/320毫米6牵引式火箭炮。</p>
+<h3 id="快速发展"><a class="header" href="#快速发展">快速发展</a></h3>
+<p>在第二次世界大战末期和战后，各国都非常重视火箭炮的发展与应用。进入20世纪70年代以后，火箭炮又有了新的进步，其性能和威力日益提高，已成为现代炮兵的重要组成部分。</p>
+<p>火箭炮出现于第二次世界大战之中，当今的火箭炮基本采用多联装自行式，口径大多在200毫米以上，配用多种战斗部，并已开始配用以计算机为主体的火控系统，射程在20-70公里之间，用于弥补战术地地导弹与身管火炮之间的火力空白。</p>
+<p>精度低、弹药类型单一，一直是火箭炮的弱点。如今，我军一种可发射多种弹药的新型多管火箭炮研制成功。这种被誉为“钢雹”的新型改装远程多管火箭炮已得到多部队、多批次、多弹种、跨昼夜、持续性的实弹射击验证，均取得良好射击成绩。</p>
+<p>二战结束后，“喀秋莎”火箭炮继续在战场上大显神威。1953年夏，中国人民志愿军在金城以南地区发起了朝鲜战争中最后一次进攻战役，这就是“金城战役”。7月13日21时，志愿军集中了1094门火炮对敌军实施猛烈攻击，其中包括5个火箭炮团，拥有近200门“喀秋莎”火箭炮。“喀秋莎”火箭炮火力猛、射速快的优越性再次显露出来。在10秒之内，约3000枚火箭弹射向敌方，形成一片火海，取得了良好的火力突击效果。志愿军官兵在1小时内就全线突破了敌军阵地，迅速取得了此次战役的胜利，为尽快签署朝鲜停战协定赢得了时间，从而结束了近3年的朝鲜战争。</p>
+<p>“喀秋莎”火箭炮在二战和朝鲜战场上的出色表现，使它受到了人们的广泛关注。50年代，苏联把火箭炮的发展推向了高潮，火箭炮的技术战术性能如发射管数、射程、威力和精度有了很大提高。德国、意大利、以色列、西班牙等国也均以“喀秋莎”火箭炮为样板，研制出了各种不同类型的火箭炮。</p>
+<p>1980年代以后，火箭炮进入了高速发展期，世界各国研制出了一批性能更加优越的火箭炮。进入21世纪以后，火箭炮又有了新发展，其性能和威力不断提高，已成为现代炮兵的重要组成部分。</p>
+<h3 id="未来趋势"><a class="header" href="#未来趋势">未来趋势</a></h3>
+<p>火箭炮未来向信息化、数字化、智能化方向发展。加强火箭炮系统对信息的收集和数字化处理能力是火箭炮发展的必然，实现火箭炮战术指挥自动化成为关键。未来，火箭炮将配备性能更好的计算机系统，安装高精度的定向定位系统、卫星定位接收系统和气象雷达系统，使单门火箭炮变成以火箭炮为主体，集侦察、测地、指挥、通信和机动于一体的综合体，火箭炮能自动调平、自动定位定向、自动收发计算诸元、自动装填、自动瞄准、自动发射，操作智能化水平不断提高，使火箭炮真正具有“停下就打，打了就跑”的能力。俄罗斯提出发展新一代“智能化”的武器系统是，一个火箭炮系统分为4个子系统，即信息系统、瞄准系统、控制系统和火力系统，‘实现侦察一火力综合化。</p>
+<p>提高精度，加强通用性。高技术条件下的战争中，火箭炮发射技术必然与制导技术融合，由火箭炮发射末敏制导火箭弹和导弹，以攻击敌高价值目标。通用性也成为当前武器装备发展的一个重要原则，一炮多用使火箭炮既可发射作用不同、射程不同的普通火箭弹，又可发射末敏制导火箭弹和导弹，这样既可使火箭炮的通用性、利用率提高，又可大大节约经费，同时保证了在数字化战场上，弹药系统供应的可靠性和高效性。</p>
+<p>提高战略，战役机动性。未来的火箭炮将轻型化，以适应空运、空投，从而满足数字化战场对火箭炮机动性的基本要求。许多国家都广泛采用非金属复合材料研制新型火箭炮，以减轻火箭炮的重量。俄罗斯研制的BM-21B式122mm轻型火箭炮就是由BM-21式火箭炮改进而成的，可用直升机运输。</p>
+<p>提高射程，增大威力。火箭炮将发展成一个集多种武器于一体的发射平台，同时，还要求火箭炮具有快速反应能力，能在极短的时间内把大量的火箭弹投向目标，收到最佳的作战效果。</p>
+<p>加强防护，提高生存能力。将隐身技术运用于火箭炮，可以降低武器装备的特征信号，使敌人难以发现、识别、跟踪和攻击；采用隔舱技术、三防设备等技术设备，使乘员免受核、生、化和电磁脉冲的伤害。</p>
+<h2 id="技术特点"><a class="header" href="#技术特点">技术特点</a></h2>
+<h3 id="火炮构成"><a class="header" href="#火炮构成">火炮构成</a></h3>
+<p>火箭炮通常为多管联装，是炮兵的主要火力压制武器之一，具有结构简单、火力猛、射速高、反应快和突袭性好的特点，多用于对地面目标实施射击。用于压制有生力量、技术兵器、集群坦克、装甲车辆和待机地段的直升机群。</p>
+<p>多管火箭炮可以分为火箭炮及火箭弹两大部分。</p>
+<p>火箭炮由发射器、高低方向机回转机构、瞄准装置、电源（电池或发电机）、发射点火控制装置及运载车辆组成。火箭弹由战斗部、引信、火箭发动机、电点火装置及尾翼组成（涡轮弹除外）。如今外军装备和将要装备的火箭炮有几管、十几管、几十管，最多的有114管。发射器多装在履带车辆或轮式越野车辆上，比一般自行火炮行驶速度要快。不少火箭炮的发射器，从设计时就考虑了多种用途，因此有些发射器还可装在单翼飞机、直升飞机和水面舰艇上，成为空对地、舰对地或舰对舰的火箭。</p>
+<p>火箭弹为无控式，弹径一般在100～200mm之间，少数在100mm以下和200mm以上。由于装有固体燃料火箭发动机，火箭弹的弹体都比较长，一般为1～3m左右，弹重15～100kg。火箭弹除配有爆破杀伤、燃烧、反装甲战斗部外，外军还装备有子母弹、燃料空气炸药、烟幕、照明、电子干扰及化学毒气等多种战斗部，战斗部可以做到互换。战斗部重量一般为全弹重的30%～40%。引信除触发式外，还配有时间引信和无线电近炸引信。1950年代研制的多为涡轮弹；1960年代以后多为尾翼稳定弹。尾翼稳定弹是在火箭弹的尾部，安装有4～6片对称的固定式或折叠式尾翼，使得火箭弹在飞行中保持稳定。也有的尾翼以一定的斜角安装在弹体上，目的是使火箭弹在整个飞行段有一定的旋转速度，以提高射击精度。折叠式尾翼弹在发射管内呈折叠状态，当火箭弹点火脱离发射器导管时，尾翼靠弹簧力、燃气力和离心力等作用自动张开。</p>
+<p>火箭炮是在有防护装甲的驾驶室或专门的炮塔内进行操纵发射的，有单发发射、双发发射、三发发射或齐射等不同发射方式。有的火箭炮发射操纵装置可以移到车外，在安全距离外或掩体内操纵发射，甚至还可进行遥控发射。</p>
+<h2 id="衍生型号"><a class="header" href="#衍生型号">衍生型号</a></h2>
+<h3 id="中外型号"><a class="header" href="#中外型号">中外型号</a></h3>
+<ul>
+<li>中国81式122mm火箭炮</li>
+<li>中国A100-300mm轮式火箭炮</li>
+<li>中国新90式122mm轮式自行火箭炮</li>
+<li>中国89式122mm履带式自行火箭炮</li>
+<li>中国85式130mm履带式自行火箭炮</li>
+<li>中国107毫米1985式单管火箭炮</li>
+<li>中国83式273mm履带式自行火箭炮</li>
+<li>中国82式130mm轮式自行火箭炮</li>
+<li>中国81式122mm轮式自行火箭炮</li>
+<li>中国81式107mm轮式自行火箭炮</li>
+<li>中国WM-80式273毫米火箭炮</li>
+<li>中国70式130mm履带式自行火箭炮</li>
+<li>中国63式130mm轮式自行火箭炮</li>
+<li>中国63式107mm牵引式火箭炮</li>
+<li>中国WS-2D 425mm轮式火箭炮</li>
+<li>俄罗斯BM-30 300mm龙卷风式轮式火箭炮</li>
+<li>俄罗斯BM-21 122.4mm式轮式火箭炮</li>
+<li>俄罗斯”飓风”220毫米火箭炮</li>
+<li>俄罗斯”旋风”300mm火箭炮</li>
+<li>美国M270式227mm火箭炮</li>
+<li>意大利”菲洛斯”30式122mm火箭炮</li>
+<li>南斯拉夫M77式128mm火箭炮</li>
+<li>巴西SBAT-70式70mm火箭炮</li>
+<li>南非“瓦尔基里”HKII式127mm火箭炮</li>
+</ul>
+<h3 id="中国型号"><a class="header" href="#中国型号">中国型号</a></h3>
+<h4 id="卫士-2d"><a class="header" href="#卫士-2d">卫士-2D</a></h4>
+<p>由中国精密机械进出口总公司和四川航天工业总公司联合开发的“卫士”系列多管火箭炮系统此前主要有“卫士”-1/1B以及“卫士”-2三种型号，而最新改进型号就是世界射程最远的“卫士”-2D多管火箭炮系统。</p>
+<h4 id="神鹰-400sy-400火箭炮系统"><a class="header" href="#神鹰-400sy-400火箭炮系统">“神鹰”-400（SY-400）火箭炮系统</a></h4>
+<p>第十七届珠海航展上，中国首次展出了SY400神鹰远程制导火箭炮系统。这套系统一经摆出立刻引起了很多专业人士以及众多媒体的注意。</p>
+<h4 id="红旗16"><a class="header" href="#红旗16">红旗16</a></h4>
+<p>火箭弹。有人甚至武断地给予“定性”：这个就是红旗16。红旗-16是一种具备多目标攻击能力的舰空导弹，能够有效对抗掠海飞行的反舰导弹等目标。</p>
+<h3 id="他国型号"><a class="header" href="#他国型号">他国型号</a></h3>
+<h4 id="苏俄喀秋莎"><a class="header" href="#苏俄喀秋莎">苏俄“喀秋莎”</a></h4>
+<p>“喀秋莎”火箭炮是苏联在“二战”时期大规模生产和使用的自行火箭炮。相比其他火炮，“喀秋莎”能迅速将大量炸药倾泻于目标地点，并在遭到炮火反攻前迅速离开。</p>
+<p>“喀秋莎”火箭炮是一种多轨道的自行火箭炮，共有8条发射滑轨，一次齐射可发射口径为132毫米的火箭弹16发，最大射程为8.5千米，既可单射，也可以部分连射，或者一次性齐射，装填一次齐射的弹药约需5～10分，一次齐射仅需7～10秒。“喀秋莎”火箭炮由汽车部分和发射部分组成，运载汽车的时速为90千米。该炮射击火力凶猛，杀伤范围大，是一种大面积消灭敌人密集部队、压制敌方火力和摧毁敌防御工事的有效武器，在二战中发挥了重要作用。</p>
+<h4 id="美国m270"><a class="header" href="#美国m270">美国M270</a></h4>
+<p>M270多管火箭炮是美国于二十世纪七十年代研制的自行火箭炮，1983年开始服役。M270多管火箭炮采用模块化技术，机动性和防护性能好，火力密集且精度较高，尤其是还具备发射陆军战术导弹的能力，被西方认为是最好的火力支援系统。这种多管火箭炮系统由发射车和弹药补给车两部分组成，其中发射车采用M2履带式步兵战车底盘改装，车前部为驾驶兼发射控制室，乘员3人。后部为发射装置，使用铰链固定在转盘上。发射装置为箱体式结构，分隔成两个弹舱，每舱装有6个发射管，每管1枚火箭弹。车上装有无线电台、导航定位仪和火控计算机等，可在60s内发射12枚火箭弹对6个以上目标进行瞄准射击。</p>
+<h2 id="服役动态"><a class="header" href="#服役动态">服役动态</a></h2>
+<p>2024年7月22日，俄罗斯国防部发布了一段视频，称俄军摧毁了乌方的“海马斯”高机动性火箭炮系统的发射装置。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/rocket.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-cannon/rocket-BM-13.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/rocket.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-cannon/rocket-BM-13.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

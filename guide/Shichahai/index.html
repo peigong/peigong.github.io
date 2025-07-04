@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 什刹海 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">什刹海 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京什刹海公园"><a class="header" href="#北京什刹海公园">北京什刹海公园</a></h1>
+<p>北京什刹海公园别称十刹海、十汊海、石插海、西涯，位于北京市西城区西北部，由什刹海（又名前海）、后海和西海（积水潭）三个相连的湖泊组成。</p>
+<p>北京什刹海公园总面积46.7公顷，其中水域面积34公顷，与中南海水域一脉相连，是北京内城唯一一处具有开阔水面的开放型景区，也是北京城内面积最大、风貌保存最完整的一片历史街区，在北京城规划建设史上占有独特的地位。什刹海公园风光秀丽，被誉为“北方的水乡”。</p>
+<p>2005年，由中国国家地理杂志社主办的“中国最美的地方”活动中，什刹海被评为中国最美的五大城区之一。2009年2月，北京什刹海公园被评为4A级景区。2014年6月，什刹海作为中国大运河北京段的重要组成部分入选世界文化遗产名录。</p>
+<h2 id="名称由来"><a class="header" href="#名称由来">名称由来</a></h2>
+<p>什刹海在辽金时称白莲潭，可见辽金时什刹海的荷花已盛。元代称什刹海为积水潭或海子。到清代，德胜桥以西的水面仍称积水潭，因北岸有净业寺，故又叫净业湖。德胜桥至银锭桥之间的水面，因其西北岸有古刹什刹海寺，故名什刹海。也有说是因湖水周围有十座寺庙，故名什刹海。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>什刹海的历史可以追溯到辽金时期，当时被称为“白莲潭”或“积水潭”，是北京城的重要水源地。</p>
+<p>元代，什刹海被进一步开发，成为元大都城内的重要水系，被誉为“大都明珠”。</p>
+<p>明清两代，随着北京城的改建，运河终点改到通州，什刹海的水域闲置了，人们开始在这里种荷花、建宫邸、造寺庙，老百姓也拥到这里来讨生活，久而久之，什刹海逐渐演变成了京城内惟一一处具有大面积宽阔水面的开放型景区。</p>
+<p>20世纪30年代起，每年从五月端午到八月金秋，什刹海准时开放“荷花市场”。</p>
+<p>20世纪90年代末，什刹海进行特色经济的恢复和整体布局的改造。</p>
+<p>2018年10月1日，北京什刹海公园正式对外开放。</p>
+<p>2022年开始‌，北京什刹海河道开始改建工程。改建项目主要包括对什刹海西海、后海、前海河道的排查、整治和提升。</p>
+<h2 id="景点布局"><a class="header" href="#景点布局">景点布局</a></h2>
+<p>北京什刹海公园由前海、后海和‌西海三个湖泊组成。前海位于什刹海的东边，后海位于什刹海的西南边。‌ 前海和后海通过‌银锭桥相连，银锭桥是两者的分界线。西海位于最西边，以德胜门内大街（德胜桥）为分界线。前海自古乃盛产荷花之地，在其西、南岸上有赏莲的荷花市场。后海是什刹海的精华所在，如今后海的南沿已成为酒吧聚集地，这里有以前豪门大院，名人居所和具有特色的胡同区。西海有西海湿地公园、汇通祠、三官庙、净业寺、普济寺、德胜门箭楼等历史遗迹。</p>
+<p>公园内有大量典型的老胡同、四合院和名人故居，其中恭王府位于什刹海西南角，烟袋斜街位于什刹海东北角，宋庆龄故居、醇亲王府和广化寺位于后海北岸，郭沫若故居位于什刹海前海西岸。</p>
+<h2 id="主要景点"><a class="header" href="#主要景点">主要景点</a></h2>
+<h3 id="宋庆龄故居"><a class="header" href="#宋庆龄故居">宋庆龄故居</a></h3>
+<p>宋庆龄故居位于后海北沿46号。故居原为清末醇亲王（北）府花园，俗称西花园。当年周恩来总理亲自筹划，在王府花园原来主体建筑迤西，增建一座中西合璧的二层主楼，作为宋庆龄的住所。</p>
+<p>宋庆龄自1963年迁入，至1981年5月29日逝世，在这里工作生活了18个春秋。1981年10月，该地被命名为“中华人民共和国名誉主席宋庆龄同志故居”。次年5月29日宋庆龄逝世一周年之际向社会开放至今。</p>
+<h3 id="醇亲王府"><a class="header" href="#醇亲王府">醇亲王府</a></h3>
+<p>醇亲王府位于后海北沿44号。原为清康熙朝大学士明珠府，清乾隆朝改为成亲王府。</p>
+<p>清光绪十四年（1888年）迁醇亲王府至此，为有别于旧府俗称北府。清宣统帝溥仪即在此府诞生。溥仪即位后，其父载沣被封为监国摄政王，故又称摄政王府。王府坐北朝南，东部为府邸，西部为花园。花园后改建为宋庆龄的居所。府邸建筑有银安殿、宝翰堂、九思堂、思谦堂等建筑。</p>
+<h3 id="梅兰芳故居"><a class="header" href="#梅兰芳故居">梅兰芳故居</a></h3>
+<p>梅兰芳故居坐落在北京市西城区护国寺街9号，原为清末庆亲王奕劻王府的一部分，1951年梅兰芳入住这座幽静、安适的庭院，度过了他生命的最后十年。1961年8月8日梅兰芳去世后，党和政府十分关心爱护这位艺术大师，将这一故居专门辟为梅兰芳纪念馆。梅兰芳故居1984年9月被列为北京市文物保护单位，2013年3月国务院颁布为全国重点文物保护单位。</p>
+<p>故居分为正院和外院两部分。正院保存故居原貌，会客厅、书房、卧室和起居室内的各项陈设均按梅兰芳生前生活起居原状陈列。东、西展室为专题展览。外院设有南展室、临展室、文创空间等，其中南展室为常设展室，以珍贵的图文影像资料介绍梅兰芳一生的艺术成就和社会活动。</p>
+<p>梅兰芳纪念馆藏有梅兰芳生前所藏珍贵戏曲资料、书画、实物以及各类文献等文物，多达三万余件，是国内外保存梅兰芳及相关文物文献最为集中、最为丰富的机构。纪念馆设有博士后工作站，定期组织学术研讨活动，承担和结项的课题项目有《梅兰芳表演艺术体系及相关文献的收集整理和研究》（2018年国家哲社艺术学重大课题）、《梅兰芳藏珍稀戏曲抄本汇刊》（50种）、新版《梅兰芳全集》等，深入推动“梅学”研究。</p>
+<h3 id="郭沫若故居"><a class="header" href="#郭沫若故居">郭沫若故居</a></h3>
+<p>郭沫若故居位于前海西街18号。故居原为清乾隆朝权相和珅府花园，后为恭亲王府的草料场和马厩。</p>
+<p>故居门额上悬挂着邓颖超题写的“郭沫若故居”金字匾额。院内郭沫若和儿女们当年手植的一株“妈妈树”。穿过垂花门，两株西府海棠掩映着宽敞的会客室、办公室和郭老的卧室。郭老在这里写下了百万余字的学术论著和诗歌篇章。故居内至今仍保持着郭老生前的陈设，并保存着郭老大量手稿、图书、文献资料和遗物。</p>
+<p>此地，1949年后曾为蒙古人民共和国驻华使馆。1963年11月郭沫若迁入，至1978年6月12日逝世，在此工作生活了近15个春秋。1988年6月12日，郭沫若逝世10周年之际向社会开放至今。</p>
+<h3 id="广化寺"><a class="header" href="#广化寺">广化寺</a></h3>
+<p>广化寺位于北京市西城区鸦儿胡同31号。整座寺庙建筑布局严谨，分中院、西院和东院三大院落。中院是全寺的主体，正中依次分布着山门殿、天王殿、大雄宝殿、藏经阁等主要殿堂，两侧对称排列着钟楼、鼓楼、伽蓝殿、祖师殿。西院主要殿堂是法堂、方丈室、地藏殿、观音殿，也是北京市佛教协会秘书处办公地点。东院是北京佛教文化研究所、什刹海书院所在地。</p>
+<p>广化寺始建于元至正二年（1342年）前后，明天顺至成化年间重修。清末民初，广化寺一度成为京师图书馆。清朝光绪三十四年（1908年），张之洞将个人藏书存放寺中，奏请成立京师图书馆，不久又恢复为佛教寺庙。民国十六年（1927年），玉山法师任广化寺住持。民国二十二年（1933年）后，抗日后援会在广化寺东院成立了伤兵医院，解决了寺中伤兵五六百人的各种生活需求。民国二十七年‌(1938年)，溥心畲捐资重修了寺院。民国二十八年‌（1939年），创办了广化佛学院，后又创办了广化小学，由当时的住持玉山和尚担任校长。1952年9月，虚云法师来京驻锡广化寺，当时在京的佛教界人士李济深、叶恭绰、陈铭枢、巨赞及佛教徒纷纷前来参礼，平静的广化寺一时称盛。1981年，北京市佛教协会在此成立。1983年，广化寺被列为汉族地区佛教全国重点寺院。1986年，北京佛教音乐团在此成立。1996年正式颁发宗教活动场所登记证。广化寺是北京市文物保护单位。</p>
+<h3 id="郭守敬纪念馆"><a class="header" href="#郭守敬纪念馆">郭守敬纪念馆</a></h3>
+<p>郭守敬纪念馆位于什刹海西海北岸的汇通祠内，占地面积近800平方米，建筑面积400平方米。其前身是明朝永乐年间的法华寺，清朝乾隆二十六年（1761年）重修并改为汇通祠。</p>
+<p>20世纪80年代，西城区政府在此处修建了郭守敬纪念馆，1988年10月1日，郭守敬纪念馆正式对公众开放。2007年8月至2008年8月，西城区政府对郭守敬纪念馆进行修缮，完善基础设施，并将原有的展览内容及形式进行调整更新。改造后的郭守敬纪念馆主题定位为：纪念科学巨星，弘扬民族创新。纪念馆辟有四个展厅，第一展厅“生平大事”，以大事记的形式介绍郭守敬的一生；第二展厅“元代积水潭”，介绍积水潭的形成及积水潭对兴建元大都城的决定性作用；第三展厅“大都治水”，介绍郭守敬治水业绩中最为辉煌的篇章；第四展厅“测天制历”，介绍郭守敬从事天文及历法的研究和实践活动。郭守敬最大的成就是在水利方面，从“郭守敬与大都水利”展览中可窥见一斑。2017年进行了展陈提升。</p>
+<p>该馆2019年参观人数达到了12万人次左右，是重新开放前的4倍。纪念馆还开展了守敬讲坛、馆长接待日、运河书会等形式多样的活动；通过建立成人志愿者讲解团队和小志愿者讲解团队，让更多公众共同参与到公共文化服务的事业中。纪念馆也因此被授予西城区爱国主义教育基地、北京市科普教育基地等称号。</p>
+<h3 id="恭王府花园"><a class="header" href="#恭王府花园">恭王府花园</a></h3>
+<p>恭王府花园位于前海西街17号。恭亲王奕忻的府邸。其前身是乾隆朝大学士和珅的宅第，嘉庆朝将和府籍没转赐给庆僖亲王永璘，咸丰朝再度易主为恭亲王奕忻。恭王府的建筑分为府邸和花园两部分。府邸分为中、东、西三路。中路有府门、狮子院、银安殿等主要建筑，两侧各有多进院落，后面环抱着长160余米的二层后罩楼，楼后为王府花园。花园名萃锦园，集中式古典园林精华于一园。恭王府是保存最完整的清代王府之一。</p>
+<h3 id="关岳庙"><a class="header" href="#关岳庙">关岳庙</a></h3>
+<p>关岳庙位于北京市西城区鼓楼西大街北侧，清代寺庙古建筑，全国重点文物保护单位。</p>
+<p>关岳庙原为清醇亲王宅地依例改建的醇亲王庙，民国三年（1914年）改祀关羽、岳飞，遂称关岳庙，又称武庙。现为西藏自治区人民政府驻京办事处。</p>
+<p>它是北京最大的祠堂建筑，坐北朝南两进院落。前院有宰牲亭、神库、神厨，后院有正殿、后寝殿及东西庑殿。均用黄琉璃绿剪边瓦色。正殿重檐歇山顶，殿前月台宽敞，为晚清上乘建筑。</p>
+<h3 id="烟袋斜街"><a class="header" href="#烟袋斜街">烟袋斜街</a></h3>
+<p>烟袋斜街位于北京市地安门外大街鼓楼前，属西城区厂桥地界。东起地安门外大街，为东北西南走向，全长232米。</p>
+<p>明代建有广福观，现为市级文保单位；三元伏魔宫、烟袋斜街铺面房为西城区登记在册文物，整体保留了传统胡同风貌。光绪年间《顺天府志》即有烟袋斜街的名称，沿用至今。</p>
+<p>据说，当时居住在北城的旗人，大都嗜好抽旱烟或水烟，烟叶装在烟袋中。由于烟袋的需求与日俱增，所以斜街上家家户户开起了烟袋铺。此外，烟袋斜街本身就宛如一只烟袋。细长的街道好似烟袋杆儿，东头入口像烟袋嘴儿，西头入口折向南边，通往银锭桥，看上去活象烟袋锅儿。正是基于这两方面的原因，以“烟袋”命名斜街，真可谓名副其实。</p>
+<p>2010年，烟袋斜街被国家文化和旅游部、国家文物局“中国历史文化名街”。</p>
+<h3 id="银锭桥"><a class="header" href="#银锭桥">银锭桥</a></h3>
+<p>银锭桥是什刹海前海和后海之间的一座单拱白石桥，因桥形似银锭，所以得名银锭桥。</p>
+<p>桥长12米、宽7米、高8米，其形制为单拱石桥，节式石栏杆，两端有八字栏杆与抱鼓石，桥侧两边带有燕翅墙，有镂空云花栏板与翠屏卷花望柱。</p>
+<p>有的资料说此桥先为木桥，关于此桥修建的年代，多数资料说是在明代，但在明代何时修建却没有明确指出。现在的银锭桥是1984年重建的，桥身正面（东面） “银锭桥”三字是文物专家单士元先生（1907年—1998年）所题。</p>
+<h2 id="游园特色"><a class="header" href="#游园特色">游园特色</a></h2>
+<h3 id="赏荷花"><a class="header" href="#赏荷花">赏荷花</a></h3>
+<p>据说自辽金时代起，北京就有大面积的荷花，什刹海、北海当时都是满池荷花，分外妖娆。元明清后，因什刹海的三海地带水源充足，更有历代大力提倡养植荷花，除水面留有船道外，几乎全部被荷花覆盖。荷花素有“和和美美”的寓意，所以历代朝廷都提倡种植荷花，以供养帝后观赏，王府贵族、富贵人家的大宅门，也多讲究养荷花以美化私人花园和庭院。</p>
+<p>清代李静山《北京竹枝词》有诗云:“柳塘莲蒲路迢迢，小憩浑然溽暑消。十里藕花香不断，晚风吹过步粮桥。”《燕京时岁记》也记载:“凡花开时，北岸一带风景最佳，什刹海，古时称为“高梁水”、“三海子”，包括了前海、后海和西海（积水潭）。</p>
+<p>自宋代起至民国时期，在每年的农历六月二十四日曾流行举办“观莲节”，一些文人墨客常登临什刹海附近的楼亭酒肆聚会，赏荷、饮酒、品茗、作诗、纳凉。清人顾禄曾在《清嘉录·荷花荡》中称:“是日，又为荷花生日，旧俗，划船萧鼓，竞于蓟门外荷花荡，观荷纳凉。”那时的什刹海，成为百姓们消夏避暑、观赏自然野趣、游玩购物的胜地。</p>
+<p>二十世纪八十年代后，什刹海重新种植荷花，不几年已是荷满湖面，荷香艳丽，吸引着众多的中外游客汇集于此。</p>
+<h3 id="游胡同"><a class="header" href="#游胡同">游胡同</a></h3>
+<p>依托胡同和四合院，什刹海地区自古以来就有许多富有特色的民裕活动，如放荷灯、泛舟游湖、宴饮赏荷、冰床围酌、大阅冰鞋等。至今，一些有生命力的民俗活动仍然在什刹海地区大量存在。如钓鱼、游泳、划船、赛艇、下棋、弹唱、消夏舞会等。“胡同游”即活跃在这片得天独厚的自然人文环境中。</p>
+<h3 id="泛轻舟"><a class="header" href="#泛轻舟">泛轻舟</a></h3>
+<p>什刹海的摇橹船是仿照“清明上河图”中的船形打造的，古色古香。尤其是夏日的夜晚，在两岸霓虹灯的映照下，游客从码头上船，船首燃起古老的马灯，船头端坐着漂亮的琴师，指间流淌出轻柔动听的丝竹乐曲，船工号子声古朴悠扬和民乐演奏遥相呼应。船影、人影、灯影，琴声、笑声、歌声，虽身处什刹海，却彷佛置身于"浆声灯影中的秦淮河"。橹船穿过北京著名的古老景观"银锭桥"，游客啜饮品茗，两岸丰富的人文景观和民俗生活景象尽收眼底。</p>
+<h3 id="品美食"><a class="header" href="#品美食">品美食</a></h3>
+<p>顺着地安门大街往南走，地安门路口东北角的小吃店是老北京人的常去之地，价格适宜。各种小吃，如艾窝窝、驴打滚、糊塌子、面茶等，可以享受特色美食。</p>
+<h2 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h2>
+<p>1999年，北京什刹海被列为北京市首批25片历史文化保护区之一。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<p>2005年，由中国国家地理杂志社主办的“中国最美的地方”活动中，什刹海被评为中国最美的五大城区之一。</p>
+<p>2009年2月，北京什刹海被评为4A级景区。</p>
+<p>2014年6月, 什刹海作为中国大运河北京段的重要组成部分入选世界文化遗产名录。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

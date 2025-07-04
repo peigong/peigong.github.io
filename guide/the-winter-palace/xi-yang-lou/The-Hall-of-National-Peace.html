@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>海晏堂 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xi-yang-lou/The-Hall-of-National-Peace.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="海晏堂"><a class="header" href="#海晏堂">海晏堂</a></h1>
+<p>圆明园古迹海晏堂“海晏” 一词取意“河清海晏，国泰民安”。《文苑英华》唐郑锡《日中有王字赋》：“河清海晏，时和岁丰”河，黄河；晏，平静。“河清海晏”也作“海晏河清”，意指黄河水流澄清，大海风平浪静。此语用以比喻天下太平，有歌颂世界和平的吉祥涵义。中国皇家园林圆明园中观赏实用性建筑“海晏堂”之名也出于此。此建筑群的精华——十二生肖铜雕以水报时，闻名世界。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>海晏堂由正楼和后工字蓄水楼【锡海】组成，是最大的一处欧式园林景观。海晏堂正楼朝西，上下各十一间，楼门左右有叠落式喷水槽，阶下为一大型喷水池，池左右呈“八”字形排列着我国十二生肖人身兽头铜像（圆明园兽首铜像）。每昼夜十二个时辰，由十二生肖依次轮流喷水，正午时，十二铜像口中同时喷射泉水，这些铜像是西方人设计，在中国制造的，融东西方文化于一身俗称“水力钟”。</p>
+<p>海晏堂所在的西洋楼区域仅占圆明园总面积2%，而圆明园真正的精华部分为经典的中式园林。因此，海晏堂的地位在圆明园中并不高。</p>
+<p>现今圆明园内兀立的几根精雕的异国情调的方石柱，是原“方外观”遗址，它是乾隆帝的宠妃——容妃在圆明园居住时作“礼拜”的地方（容妃信奉伊斯兰教）。由“方外观”东望，三合土高台前有一个3块巨石刻做的蚌壳，游人都愿在上面留影。远望，这个大蚌壳就像一朵硕大无比的莲花，这便是当年“海晏堂”的西门。</p>
+<p>这座洋楼一反中国皇家建筑的传统，坐东朝西，因此西门即为正门。门外平台当年左右对称地修了石阶和扶梯式的流水下坡石槽，槽壁就是扶手墙；墙边的水流分级下泻，形成折叠瀑布，直入下面的水池；水池内有12只铜铸的小动物，按中国地支顺序，铸成12属相的样子，代表12时辰。每到一个时辰，相应的小动物就喷出水来，到午时则12只小动物一齐喷水，这就是十分有意思的“水力钟”，其实，它的原理和我国古代计时器——“铜壶滴漏”的原理一样，不过经由洋人点化，又富于中国味，在皇帝眼里，就成了新奇、合意的动态游娱之物。</p>
+<h2 id="建筑特色"><a class="header" href="#建筑特色">建筑特色</a></h2>
+<p>“海晏堂”的中心建筑是一座11开间的“工”字楼，楼南楼北也各有小型喷泉池。此楼即是附近各喷泉群的供水楼。楼东西两头为提水用的水车房，中段平台楼下边是海墁高台，台上砌蓄水池，俗称锡海，一次可蓄水160余立方米。初建时提水机械是蒋友仁设计的龙凤水车，用人力“蹬攀”；三四年后就改安辘轳，用大罐打水上楼。</p>
+<p>用砖石砌成高台，高台上修有贮水池，供应周围喷泉用水。贮水池周围用锡板包严，防止渗漏，故称“锡海”。“锡海”能储水180吨，贮水是用“龙尾车”（靠机械原理将水位提高的一种水车）向上输送至“锡海”，然后再利用地心引力使水经过铜管流向喷泉。可笑的是，设计“水法”的法国教士蒋友仁，在乾隆三十九年病逝，宫内未留下此技传人，没有人能够修整、使用“龙尾车”。每逢皇帝游园，只好劳累小太监汗流浃背提水上楼，俟皇帝驾临再开水闸放水，皇帝离去，喷泉也就没有了。</p>
+<h2 id="点评"><a class="header" href="#点评">点评</a></h2>
+<p>作为最大规模的欧式建筑，这座建筑物西方巴洛克的成分还是超过百分之六十，其十二生肖喷泉更是成为其象征。很多人都忽视了海晏堂后面的蓄水楼，海晏堂前方的大贝壳以及罗马废墟般林立的第一层大部分石柱也成为了圆明园的象征之一。当然，由于建筑规模比方外观宏大，所以第一层的石柱并不显眼，又因为被大台阶所遮挡，故而过去大多数人看海晏堂都看其第二层，而今天人们也要很费力的绕过前方的大台阶寻找海晏堂的第一层。海晏堂和其他西洋楼建筑一样，被焚烧后只焚烧了屋顶，但是石料遭到军阀盗运，第二层连同第一层天花板被拆光，第一层石柱和墙面多半保存，至于那十二生肖喷泉，恐怕也只能在博物馆里见到部分头部了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xi-yang-lou/xi-hai.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../xi-yang-lou/Bronze-statue.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xi-yang-lou/xi-hai.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../xi-yang-lou/Bronze-statue.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

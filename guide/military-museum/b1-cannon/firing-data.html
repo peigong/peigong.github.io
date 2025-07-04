@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>射击诸元 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-cannon/firing-data.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="射击诸元"><a class="header" href="#射击诸元">射击诸元</a></h1>
+<h2 id="诸元"><a class="header" href="#诸元">诸元</a></h2>
+<p>诸元是为命中目标，射击时须装定于武器上的各种数据。根据战术要求、敌我相对位置、运动状态及气象环境条件等计算确定。</p>
+<p>简单的说：如舰炮射击时的方位角、高低角和引信装定量；鱼雷射击时在鱼雷上装定的方向转角、航行深度、航速及鱼雷发射管的瞄准角、散角等。射击诸元直接影响射击的精确度。</p>
+<p>火炮的射击诸元（标尺、高低、方向等火炮击中目标的必备技术参数）一般分为两种类型。一是直接瞄准，也就是火炮瞄准手用瞄准镜直接瞄准目标，然后对目标实施射击。这类情况大都是目标距离较近，火炮射程短。比如说打坦克、打碉堡、打近距离敌兵等。第二种情况是火炮射程远，有效距离十几、二十几、甚至上百公里的射程，瞄准手根本看不见敌人，这就需要派出炮兵侦察兵通过前沿观察所利用观测仪器标定目标，再经过测量和计算，将射击诸元报告炮阵地，指挥火炮实施射击。</p>
+<p>因为前沿观察所距炮阵地数公里至十几公里，距离敌人目标又有数公里之遥，所以要求侦察兵标定测算距离十分准确。为保证精度，将圆周360度变更为6000密位，原来90度变为1500密位。除去距离以外，射击诸元还应包括气压、高差、风速、风向及炮弹自转等因素，否则，要想消灭敌人将是十分困难的。</p>
+<p>1994年，美国德克萨斯仪器公司试制了127毫米火箭推进增程制导炮弹。1996年开始进行小型化全球定位系统/惯性导航系统（GPS/INS）的研究与试验。1999年12月，型号定为EX---171的远程炮弹进行试射，计划2003年进入海军服役。该炮弹射程116-5公里，精度达到20米，飞行时间7分钟。除美国外，英国也研制射程为76公里的远程炮弹；德国也正在研制射程80公里的炮弹，以满足德国陆军未来作战的需要。</p>
+<p>随着科学技术的发展，炮兵射击诸元也由过去的人工标图测算改为计算机数字化管理，观测手段也被激光、红外线、热成像、雷达和卫星制导等手段所代替。随之而将出现的是更快、更远、更准、更具杀伤力的新型炮兵。</p>
+<h2 id="射击诸元-1"><a class="header" href="#射击诸元-1">射击诸元</a></h2>
+<p>‌‌射击诸元是标尺、高低、方向等火炮击中目标的必备技术参数。</p>
+<p>火炮的射击诸元一般分为两种类型。</p>
+<h3 id="射击原理"><a class="header" href="#射击原理">射击原理</a></h3>
+<p>一是直接瞄准，也就是火炮瞄准手用瞄准镜直接瞄准目标，然后对目标实施射击。这类情况大都是目标距离较近，火炮射程短。比如说打坦克、打碉堡、打近距离敌兵等。</p>
+<p>第二种情况是火炮射程远，有效距离十几、二十几、甚至上百公里的射程，瞄准手根本看不见敌人，这就需要派出炮兵侦察兵通过前沿观察所利用观测仪器标定目标，再经过测量和计算，将射击诸元报告炮阵地，指挥火炮实施射击。 因为前沿观察所距炮阵地数公里至十几公里，距离敌人目标又有数公里之遥，所以要求侦察兵标定测算距离十分准确。为保证精度，将圆周360度变更为6000密位，原来90度变为1500密位。除去距离以外，射击诸元还应包括气压、高差、风速、风向及炮弹自转等因素，否则，要想消灭敌人将是十分困难的。</p>
+<h3 id="发展"><a class="header" href="#发展">发展</a></h3>
+<p>1994年，美国德克萨斯仪器公司试制了127毫米火箭推进增程制导炮弹。</p>
+<p>1996年开始进行小型化全球定位系统/惯性导航系统（GPS/INS）的研究与试验。</p>
+<p>1999年12月，型号定为EX---171的远程炮弹进行试射，计划2003年进入海军服役。该炮弹射程116-5公里，精度达到20米，飞行时间7分钟。除美国外，英国也研制射程为76公里的远程炮弹；德国也正在研制射程80公里的炮弹，以满足德国陆军未来作战的需要。 随着科学技术的发展，炮兵射击诸元也由过去的人工标图测算该为计算机数字化管理，观测手段也被激光、红外线、热成像、雷达和卫星制导等手段所代替。随之而将出现的是更快、更远、更准、更具杀伤力的新型炮兵。</p>
+<h2 id="导弹射击诸元"><a class="header" href="#导弹射击诸元">导弹射击诸元</a></h2>
+<p>射击诸元是指武器（主要是中长射程武器）在射击时，需要在武器上装定的数据的总称，是根据射击时自身武器的特性、目标的距离、目标的方向、风力、风向、目标的运动速度、运动方向、在一些可以移动射击的武器上还要加入自己的移动速度、移动方向、提前量等综合计算而得，在实际中的表现为：方向、距离等等，在一些高端武器上，射击诸元由火控计算机计算而得并自动装定。</p>
+<p>射击诸元这个名词可用于炮弹、导弹、火箭以及其它航天器的发射，字面意思就是有关发射的各种参数。因发射的对象不同所包括的内容自然有很大差别。射击诸元的实施过程称为诸元准备。</p>
+<p>导弹射击诸元的内容射击诸元计算依赖于目标量、制导系统类型、瞄准方式、动力系统特性等。不同型号的弹道导弹，射击诸元的组成也不同。通常，射击诸元计算包括瞄准诸元、制导诸元、控制诸元、导航诸元计算以及射击可能性检查等。</p>
+<p>瞄准诸元瞄准诸元是导弹发射时对导弹实施瞄准的基准参数，取决于发射点坐标、射程、大地方位角等实际射击条件；</p>
+<p>制导诸元制导诸元是导弹飞行中对导弹落点射程大小和横向偏差进行控制的基准参数，与制导方案密切相关；</p>
+<p>控制诸元控制诸元是导弹飞行中对弹道形状和导弹姿态进行控制的基准参数，须根据具体飞行条件设计合理的飞行程序；</p>
+<p>导航诸元导航诸元是导弹飞行中弹上计算机进行导航计算的初始基准参数；</p>
+<p>射击可能性检查射击可能性检查是在给定的射击条件下，计算实际射程是否在导弹的射击能力范围之内。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-cannon/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-cannon/b1-cannon-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-cannon/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-cannon/b1-cannon-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

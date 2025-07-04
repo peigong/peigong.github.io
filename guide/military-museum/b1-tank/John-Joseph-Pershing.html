@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>约翰·约瑟夫·潘兴 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-tank/John-Joseph-Pershing.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="约翰约瑟夫潘兴"><a class="header" href="#约翰约瑟夫潘兴">约翰·约瑟夫·潘兴</a></h1>
+<p>约翰·约瑟夫·潘兴（英语：John Joseph Pershing，1860年9月13日－1948年7月15日），绰号“铁锤将军”“黑桃杰克”，出生于美国密苏里州林思县拉克利德。美国军事家。</p>
+<p>潘兴1886年在西点军校毕业后，曾到美陆军骑兵部队任职。1890年至1891年在新墨西哥州和南达科他州参加征剿印第安人的作战时表现出色，得到美国陆军的嘉奖。1893年获内布拉斯加大学法学士学位。1897年至1898年在西点军校任战术教官。1898年美西战争期间，参加古巴战场作战。1904年日俄战争期间曾任美军观察员。1906年任驻菲律宾美军师长，获准将衔。1916年至1917年率部干涉墨西哥革命，一度侵入墨西哥境内。1917年美国参加第一次世界大战后，担任美国远征军司令，赴欧洲指挥对德作战，进行圣米耶尔战役、默兹—阿尔贡战役，成为大战中的美军英雄。1919年晋升为陆军特级上将（General of the Armies）。1921年起任陆军参谋长，1924年退役。后任战争纪念委员会主席。1948年在华盛顿逝世。</p>
+<p>潘兴是美军唯一一位陆军特级上将。著有《我在世界大战中的经历》，并凭借该书获得1931年度的普利策历史奖。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<p>潘兴于1860年9月13日出生于密苏里州林思县拉克利德。</p>
+<p>1886年毕业于西点军校，以少尉军衔在第6骑兵团服役。</p>
+<p>1880～1891年先后在美国西南部和南达科他州参加"征剿"印第安人的作战，表现出色，得到美国陆军的嘉奖。</p>
+<p>1893年获内布拉斯加大学法学士学位。</p>
+<p>1897～1898年，任西点军校战术教官。美西战争期间，参加入侵古巴的作战。</p>
+<p>1899年在菲律宾服役，参加镇压摩洛族人民的武装起义。</p>
+<p>1904-1905年，任驻日武官兼日俄战争的军事观察员。</p>
+<p>1906年，任驻菲律宾美军师长，得到西奥多·罗斯福总统的赏识，从上尉破格擢升为准将。</p>
+<p>1906～1913年，再度在菲律宾服役，历任要塞司令和省总督。</p>
+<p>1914年任第8旅旅长。</p>
+<p>1916年3月～1917年2月，率1.2万名美军对墨西哥进行武装干涉，镇压墨西哥的农民游击队。</p>
+<p>1917年4月美国宣布参加第一次世界大战后，任美国远征军司令，在法国前线组织指挥美军的训练和作战。9月，指挥美第1集团军独立实施圣米耶勒战役和默兹—阿尔贡战役。10月，任集团军群司令，所辖部队增至200余万人。11月初，率军协同英法联军对德军发动总攻，突破兴登堡防线，迫使德国投降。</p>
+<p>1921年，任美国陆军参谋长。</p>
+<p>1924年退役，任美国战争纪念委员会主席。</p>
+<p>1948年7月15日，潘兴在华盛顿特区的华耳特里德医院逝世。葬于阿灵顿国家公墓。</p>
+<h2 id="历史评价"><a class="header" href="#历史评价">历史评价</a></h2>
+<p>1917年，法军总司令亨利·菲利浦·贝当和英军总司令道格拉斯·黑格听说美国派来的远征军司令是潘兴时，不禁一惊：“恐怖的杰克”，怎么会是他。这可是个很难打交道的家伙。</p>
+<p>“恐怖的杰克”——潘兴这个名扬海外的绰号是敬畏他的部属私下里送给他的，因为他对军容风纪的要求几乎严格到令人忍无可忍的地步。潘兴是一个完美主义者，甚至在退出现役后，他也是以一个正规军人的姿态——腰板笔直，服装挺刮，马靴锃亮，军人礼仪规范，举止一丝不苟——出现在公众面前的，直到去世的那一刻。同时，“严以律己”的潘兴并不“宽以待人”，他要求他的部下也得和他一个样 。他认为，军人和民兵的区别就在于是否有严整的军容，只有有了严整的军容，才能像正规军人那样作战，获得胜利。</p>
+<p>但是，潘兴治军从不搞“花架子”。他特别重视训练工作，强调训练要从实战出发。参加第一次世界大战前，美国陆军主要是按照美国内战时期的作战经验进行训练。参战后潘兴不仅借鉴英、法、德军的经验，要求部队必须进行堑壕战的战术训练，要求参战美军克服英法军队困守堑壕战线的消极思想，加强“火力与机动”的突破战术训练。</p>
+<h2 id="轶事典故"><a class="header" href="#轶事典故">轶事典故</a></h2>
+<h3 id="严谨作风"><a class="header" href="#严谨作风">严谨作风</a></h3>
+<p>在第一次世界大战同盟国与协约国斗得筋疲力尽之时，美军作为有生力量踏上欧洲的土地，他们的使命就是帮助英法军队击败德军。但潘兴却不急于投入战斗，而是认真地进行战前训练，这可把在堑壕里苦战的英国人和法国人急得不得了。就连潘兴的参谋也提醒他：“我们的训练计划需要的时间太长了，会使人们感到德国人的预言是正确的——在英法军队垮台之前，美军到不了前线！”谁知潘兴只冷冷地丢下了一句话：“我不知道德国人的想法，我只知道没有受过训练的士兵打不了仗！”</p>
+<p>潘兴这种严谨的作风，令同他打过交道的美国政治家无不钦佩。潘兴还是个上尉的时候，西奥多·罗斯福总统就想把他提升为少校或中校。当罗斯福总统发现美国法律不允许这样做时，索性利用总统职权，越过882名级别比潘兴高的军官，将他直接升为准将。这在美国历史上可是绝无仅有的事。</p>
+<p>英法两国的政治家和军事家却对潘兴喜欢不起来。当潘兴率领美国远征军边开进、边训练抵达战区后，他的英法同行才真正意识到他的厉害。英法原来打算只将美军作为加强力量使用，不给其独立指挥权，只让美国扮演配角。但潘兴识破了英法的政治意图。在一次联军会议上，他当着英国首相劳合·乔治和法国总理克里孟梭的面，申明美军必须有独立的作战方向，自己必须独立地指挥美军作战。说完，他拂袖而去。在他的积极争取下，英法只得同意美军保持战场上的独立性。</p>
+<p>潘兴的战略意识换取的独立作战指挥地位，为一战后美国在国际事务中建立自身的军事地位奠定了坚实的基础。因此，当他作为一名具有战略家眼光的英雄凯旋归国时，潘兴受到了美国民众的热烈欢迎，并被授予美国开国以来头一个陆军特级上将军衔。</p>
+<h3 id="和巴顿"><a class="header" href="#和巴顿">和巴顿</a></h3>
+<p>如果没有第一次世界大战的话，那么潘兴和巴顿的关系就会更加有趣了，在潘兴奔赴法国统帅美军前，他和巴顿的妹妹尼塔已经准备订婚了，他们相约在第一次世界大战结束之后举行婚礼。如果这个婚礼成了的话，那么按照我们中国人的观念，潘兴就是巴顿的妹夫了。但是很遗憾，由于第一次世界大战的影响，潘兴和尼塔有一年多没有见面，两个人最终没能走到一起，他们在巴顿的安排下举行了一个纪念告别活动，和睦的做了普通朋友，并且都一直单身下去。潘兴遇到尼塔的时候已经55岁了，在这之前潘兴有过妻儿家庭很幸福，但是一场意外的火灾毁掉了潘兴的家庭。</p>
+<p>有一天巴顿找潘兴，他说我要到作战部队去。潘兴对巴顿非常熟，潘兴有一个外号叫“恐怖的杰克”，为什么叫“恐怖的杰克”。因为潘兴非常讲究军容风纪，潘兴不能允许他部下的皮鞋，有一点灰尘的。有一次也就是在对墨西哥的武装干涉中，当部队急行军到达目的地之后，大家累呀，顾不得擦皮鞋就休息。当时潘兴看到了之后，非常生气，就批评值日军官，命令大家立即起来擦皮鞋。那么他一眼就瞄到了巴顿，他看到巴顿的皮鞋锃明瓦亮，潘兴说就照着他这样做，他怎么擦的，你们就怎么擦。所以说潘兴对巴顿非常喜欢，巴顿也非常敬重自己的上司，即使他后来谈起潘兴也充满了敬意。</p>
+<p>潘兴正考虑在美军建立一支坦克部队，他听了巴顿的请求，点了点头说好吧，你要离开这里，我没有意见，有两个岗位让你去选择，一个是指挥一个步兵营，一个是组建坦克部队。巴顿听了之后，心头不免一紧。为什么。因为巴顿不愿当步兵，他觉得步兵不过瘾，巴顿最想去当的是骑兵。他特别喜欢到骑兵部队，可是潘兴恰恰就没有让他到骑兵部队。他知道潘兴是什么人，吐口唾沫就是个钉，不能更改的。巴顿到了美军第一支坦克部队。</p>
+<h3 id="军衔"><a class="header" href="#军衔">军衔</a></h3>
+<p>潘兴于1919年9月被授予了一个特殊的军衔：陆军特级上将（General of the Armies），并且此军衔不再授予潘兴以外的任何人。</p>
+<p>这个军衔最初原本是准备授予美国开国元勋、第一任总统乔治·华盛顿的，但当初他拒绝接受。后来，在1976年，美国国会通过法令，将华盛顿提升为“美利坚合众国特级上将”（General of the Armies of the United States），使其高于任何其它美国将军，并规定只有华盛顿一人独享此殊荣。这也是目前美军的最高军衔。其次便是潘兴的“陆军特级上将”（General of the Armies）以及乔治·杜威的“海军特级上将”（Admiral of the Navy）。再次即是著名的陆军五星上将（General of the Army）、海军五星上将（Fleet Admiral）、空军五星上将（General of the Air Force）。</p>
+<h2 id="主要作品"><a class="header" href="#主要作品">主要作品</a></h2>
+<p>潘兴退休后著有回忆录《我在世界大战中的经历》（1930年出版），该书获得了1931年的普利策历史奖。</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<p>M26“潘兴”坦克。于第二次世界大战末期装备美国陆军，专为对付德国的“虎”式重型坦克而设计。</p>
+<p>美国还研制有“潘兴”中程战术弹道导弹，包括“潘兴”Ⅰ导弹、“潘兴”ⅠA导弹、“潘兴”Ⅱ导弹。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-tank/M26.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-tank/M4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-tank/M26.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-tank/M4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

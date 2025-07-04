@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>烤鸭 - 车讲北京 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">车讲北京 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/food/Roast-Duck.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="烤鸭"><a class="header" href="#烤鸭">烤鸭</a></h1>
+<p>烤鸭是北京和南京的一道特色名菜，属于北京菜或金陵菜，该菜品以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色，被誉为“天下美味”而驰名中外，其色泽略黄，柔软淡香，夹卷其他荤素食物食用，为宴席常用菜点，更是家常风味美食。</p>
+<p>烤鸭历史悠久，起源于中国南北朝时期的建康（南京），当时《食珍录》中已记有炙鸭。北宋时期，烤鸭也称为炙鸭、烧鸭，已是汴京酒楼、市肆中的名肴。朱元璋建都应天（南京）后，明宫御厨便取用南京肥厚多肉的湖鸭制作菜肴。为了增加鸭菜的风味，厨师采用炭火烘烤，成菜后的鸭子吃口酥香，肥而不腻，受到人们称赞，即被宫廷取名为“南京烤鸭”。</p>
+<h2 id="菜品特色"><a class="header" href="#菜品特色">菜品特色</a></h2>
+<p>烤鸭历史悠久，早在南北朝的《食珍录》中已记有“炙鸭”。烤鸭真正进入市民生活是在宋代。《东京梦华录》记载，北宋汴梁的美食有旋炙野鸭肉（现烤现卖的烤野鸭肉）、鹅鸭排蒸、莲花鸭签（将鸭肉切片，摆放成莲花形状）、燠鸭（灰火中烤制的鸭）、盐鸭卵（咸鸭蛋）之类的鸭美食，其中不乏大量烤鸭类的制法。根据吴自牧的《梦粱录》，杭州分茶酒肆里的菜单中就有“假炙鸭”和“炙鸭”，所谓“假炙鸭”是一种做的像烤鸭的素菜，“炙鸭”就是一种烤全鸭。</p>
+<p>元朝天历年间的御医忽思慧所著《饮膳正要》中有“烧鸭子”的记载，烧鸭子就是“叉烧鸭”，是最早的一种烤鸭。明太祖朱元璋建都于应天（南京）后，明宫御厨便取用南京肥厚多肉的湖鸭制作菜肴，为了增加鸭菜的风味，采用炭火烘烤，使鸭子吃口酥香，清末年间广州沫沫烤鸭，肥而不腻，受到人们称赞，即被皇宫取名为“烤鸭”。</p>
+<p>公元15世纪初，明朝迁都于北京，烤鸭技术也由南京带到北京，并被进一步发展，北京烤鸭由此出现。明万历年间的太监刘若遇在其撰的《胆宫史·饮食好尚》中曾写道：“本地则烧鹅、鸡、鸭。”说明那时烤鸭已成为北京风味名菜。早年，在北京经营烤鸭店有便宜坊、全聚德、六合坊、祯源馆等。</p>
+<p>烤鸭有挂炉烤、焖炉烤和叉烧烤。挂炉烤和焖炉烤最普遍。挂炉烤与焖炉烤的不同之处在于：前者一般以枣、桃、杏等质地坚硬的果木为燃料，后者关上炉门用暗火烤，两者有异曲同工之妙。烤鸭选用填鸭，在其养到四斤左右进，强制喂食，经六七十天的填喂，体重即可达3公斤，且具有体躯肥壮，皮薄脯大的特点，特别适于烤炙。北京鸭最初是饲养在玉泉山水纱的河流这中，入冬不冻，喝的是矿泉水，吃的是矿泉鱼虾和水草。</p>
+<p>烤鸭吃法多样，最适合卷在荷叶饼里或夹在空心芝麻烧饼里吃，并根据个人的爱好加上适当的佐料，如葱段、甜面酱、蒜泥等。喜食甜味的，可加白糖吃，还可根据季节的不同，与以黄瓜条和青萝卜条吃，以清口解腻。片过鸭骨架加白菜或冬瓜熬汤，别具有风味。烤后的凉鸭，连骨剁成0.6厘米宽、4.5厘米长的鸭块，再浇全味汁，亦可作凉菜上席。</p>
+<p>烤成的鸭比生鸭重量减轻1/3左右，色呈枣红，油润发亮，皮脆肉嫩。一般成品重4公斤左右，用刀片成柳叶片，以108片为合格，趁热上席，当客片下。</p>
+<h2 id="菜品来源"><a class="header" href="#菜品来源">菜品来源</a></h2>
+<p>明初年间，老百姓爱吃南京板鸭，皇帝也爱吃，据说明太祖朱元璋就“日食烤鸭一只”。宫廷里的御厨们就想方设法研制鸭馔的新吃法来讨好皇帝，于是也就研制出南京烤鸭，分为叉烧烤鸭和焖炉烤鸭两种。</p>
+<p>随着明成祖朱棣迁都北京，带走了不少南京宫廷里烤鸭的高手。在嘉靖年间，烤鸭就从宫廷传到了民间，老“便宜坊”烤鸭店就在菜市口米市胡同挂牌开业，这也是北京第一家烤鸭店。而当时的名称则叫“金陵片皮鸭”，就在老“便宜坊”的市幌上还特别标有一行小字：金陵烤鸭。叉烧烤鸭以“全聚德”为代表，而焖炉烤鸭则以“便宜坊”最著名。金陵烤鸭是选用肥大的草鸭为原料，净重要求在2.5公斤左右。</p>
+<p>在1864年，京城名气最大的“全聚德”烤鸭店也挂牌开业，烤鸭技术又发展到了“挂炉”时代。它是用果木明火烤制并具有特殊的清香味道，不仅使烤鸭香飘万里而且还使得“北京烤鸭”取代了“南京烤鸭”，“金陵片皮鸭”则能在港澳、深圳、广州等南方几个大城市的菜单上见到。</p>
+<p>南京烤鸭讲究皮酥肉嫩，肥而不腻。但是真正的行家，却十分挑剔店里奉送的那一兜红卤。店里鸭子烤得好不好，大抵看看卖相便可以揣测出来，但老卤对不对味，却非得口舌亲尝方知。明炉烤鸭，鸭腔子里面必得灌水。外烤内煮，一旦鸭肉熟了，这一包汁水也鲜透。趁热把酒酿蜜卤倒进汤汁，浇上糖色、米醋、精盐，考究起来加一滴酱油都不算本事，端出去的红汤老卤才叫地道。</p>
+<p>北京鸭是当今世界优质的一种肉食鸭，即用填喂方法育肥的一种白鸭，故名“填鸭”。不仅如此，北京鸭曾在百年以前传至欧美，经繁育一鸣惊人。因而，作为优质品种的北京鸭，成为世界名贵鸭种来源已久。北京烤鸭采用北京特有的果木炭火烤制，味道独特。</p>
+<h2 id="菜品历史"><a class="header" href="#菜品历史">菜品历史</a></h2>
+<p>朱元璋建都应天（南京）后，明宫御厨便取用南京肥厚多肉的湖鸭制作菜肴。为了增加鸭菜的风味，厨师采用炭火烘烤，成菜后鸭子入口酥香，肥而不腻，受到人们称赞，即被宫廷取名为“烤鸭”。</p>
+<p>明成祖朱棣迁都北京后，烤鸭技术也带到北京，并被进一步发展。由于制作时取用玉泉山所产的填鸭，皮薄肉嫩，口味更佳。烤鸭很快就成为全国风味名菜。北京两家有名的烤鸭店“便宜坊”“全聚德”，便是明朝时开业的。“烤鸭”在明朝时成为北京官府人家中的席上珍品。</p>
+<p>到了清朝，官吏们常常收购北京烤鸭，供皇帝及其亲属享用。据《竹叶亭杂记》记载：“亲戚寿日，必以烧鸭相馈遣。”烧就是烤，可见烤鸭还成了当时勋戚贵族间往来的必送礼品。又有《忆京都词》这样写道：“忆京都，填鸭冠寰中。焖烤登盘肥而美，加之炮烙制尤工。”</p>
+<p>北京最早的烤鸭店是金陵“老便宜坊”。又据有关记载，北京便宜坊烤鸭店开业于明永乐十四年（1416年），而全聚德烤鸭店则开业于清同治三年（1864年），比便宜坊晚了400多年。《全聚德史话》追溯北京烤鸭的源头：北京历史上曾有过许多家烤鸭店。字号最老的数宣武门外米市胡同的“老便宜坊”，其匾额上冠有“金陵”二字。“老便宜坊”是明朝时从南京迁来的，当年生意兴隆，名声响亮得很，单是门两旁那副“闻香下马”“知味停车”的对联，便颇能引人垂涎。后来的烤鸭店，有许多家都套用了便宜坊的字号。有的仅改动其中一字，例如“便意坊”，或者“明宜坊”，或者“便宜居”等等。</p>
+<h2 id="制作做法"><a class="header" href="#制作做法">制作做法</a></h2>
+<h3 id="原料配方"><a class="header" href="#原料配方">原料配方</a></h3>
+<p>烤鸭的主料选用填鸭。因为填鸭具有填养时间短，育肥快，肥瘦分明，皮下脂肪厚，鲜嫩适度，不腥不酸。是制作烤鸭的最理想原料。</p>
+<h3 id="宰鸭"><a class="header" href="#宰鸭">宰鸭</a></h3>
+<p>工具：宰刀一把，盛血盆一个。</p>
+<p>方法：</p>
+<p>（1）先用左手攥住两个鸭膀根部，右手将鸭右掌向后搬起，再用左手的小拇指勾紧。用右手捏住鸭嘴，让其脖颈向下弯，用左手的大拇指和食指捏住鸭头的下部，使脖颈皮绷紧。
+（2）右手持刀，轻轻割断食管、气管，随即放下刀，用右手捏住鸭嘴，使刀口对准盛血盆（盆内预先加有适量的水和精盐），左手将鸭体向上移动，把鸭血控净即成。</p>
+<p>注意：操作要稳、准、快，刀口要小，两管（食管、气管）要割断，鸭血要控净。另外宰杀前要让鸭子饮足水，这样，鸭毛容易煺。</p>
+<h3 id="烫毛"><a class="header" href="#烫毛">烫毛</a></h3>
+<p>设备及工具：大灶一具，大锅一个，凉水盆一个，水勺一把，小圆木棍一根。</p>
+<p>方法：
+（1）将锅坐火上，加入清水（八成满），待水烧至55～60℃（没有温度表，可用手试水温。其方法是：将手先在凉水盆里浸泡一下，再下入锅中快速捞搅，如能连续捞搅3～4次，手就烫得不能再捞搅，说明水温适度），即可将鸭下锅烫毛。</p>
+<p>（2）烫毛时，先用左手攥住鸭掌，把鸭头浸入锅中，用手抖动。再把鸭体下入锅中，用小木棍沿鸭体往返拨动，使鸭毛透水均匀。鸭在水中烫3分钟左右（边烫边用手试着拔毛），待鸭毛很容易拔下时，表明鸭毛烫好，要立即将鸭子取出。</p>
+<p>注意：烫毛时，动作要快，水温要适度，烫毛的时间长短要合适。</p>
+<h3 id="煺毛"><a class="header" href="#煺毛">煺毛</a></h3>
+<p>设备及工具：木案板一块，凉水盆一个。</p>
+<p>方法：</p>
+<p>（1）将烫好的鸭子脯面向上，放在案板上，左手按住鸭体，用右手往鸭脯上淋点凉水，再用右手把鸭脯毛煺下（用力要轻）。</p>
+<p>（2）将鸭体翻过来，放在煺下的鸭毛上，再用左手按住鸭体。用右手将鸭背、鸭尾尖的毛煺下。然后，把鸭颈、鸭头的毛煺下。</p>
+<p>注意：操作时动作要快而轻，鸭毛要煺得干净，鸭皮面不破不损。</p>
+<h3 id="择毛"><a class="header" href="#择毛">择毛</a></h3>
+<p>设备及工具：木盆（或铁盆）一个，鸭镊子一把（鸭镊子是一种专用的择鸭毛工具）。</p>
+<p>方法：</p>
+<p>（1）择毛须在水盆中进行（春、夏、秋三个季节用凉水，冬季可用温水）。择毛时，用左手托着鸭体，右手持鸭镊子，将鸭身的残留毛、胎皮择干净。</p>
+<p>（2）择毛时要特别注意不能使鸭体破损，也不要用手指在鸭体的某一处反复触摸，否则鸭体会造成溢油现象，影响质量。</p>
+<p>注意：择毛动作要快而稳，残毛择得干净，鸭皮不溢油，无破损。</p>
+<h3 id="掏膛"><a class="header" href="#掏膛">掏膛</a></h3>
+<p>设备及工具：空气压缩机一台，开生刀一把，凉水盆一个，鸭撑子一个。</p>
+<p>方法：</p>
+<p>（1）将鸭脯向上，鸭头朝外摆好。用左手攥住鸭掌，向上略抬起，使鸭腿肉绷紧，右手持刀将鸭掌从关节处剁下来。然后，将鸭体翻过来，使鸭头朝里，掰开鸭嘴，拉出鸭舌。</p>
+<p>（2）将鸭颈刀口处的鸭皮翻起，用左手拉住食管、气管，右手的大拇指顺着鸭颈皮下的食管、气管，轻轻捅至鸭膀的上边。再把气管拉断，取出。</p>
+<p>（3）用左手捏住鸭头，用右手把空气压缩机的气嘴捅入鸭颈的刀口里，开始充气（气充入皮里肉外的脂肪层）。待气充至八九成满时，拔出气嘴，用左手攥紧鸭颈根部，防止跑气。</p>
+<p>（4）将右手的食指捅入肛门内3～4厘米，把食指向上弯曲，勾住大肠的尾端，拉断大肠与肛门的连接处。然后，将右鸭膀往前搬，用左手卡住，用右手持刀，在其右膀下割开一条3～5厘米的刀口。</p>
+<p>（5）将右手的大拇指和食指从鸭膀下的刀口伸进去。拉出食管及气管头。再把拉出的食管缠绕在左手食指上，拉紧。同时，右手的大拇指和食指伸入鸭腔，从上至下勾断鸭腔与内脏连接的软组织，再勾住鸭胗，左手与右手同时用力，拉出内脏。右食指和中指再伸入鸭腔内。在贴进脊椎的两侧。取出肺叶。</p>
+<p>（6）用右手食指和中指，把鸭撑子由刀口捅入鸭腔内，把鸭撑子的下端放置在脊椎骨上，以立式稍向前倾斜，稳住以后，向后拉，卡入胸骨与三叉骨，使鸭体撑起。</p>
+<p>注意：掏膛的动作要快，刀口要小，鸭体无血染痕迹，鸭体充气要丰满，皮面不能破裂，内脏掏得干净，什件（鸭肝、鸭肠、鸭胗等）要完整不碎。</p>
+<h3 id="涮膛挂钩"><a class="header" href="#涮膛挂钩">涮膛挂钩</a></h3>
+<p>设备及工具：大水盆一个（或水池）。</p>
+<p>方法：</p>
+<p>（1）用左手的大拇指从鸭膀下的刀口伸入，其它四指托住鸭的背部，再将鸭体按入水盆（或水池）中，使鸭腔充满清水。然后，将鸭头向上，托起鸭子。用右手的食指从鸭肛门捅进，勾出回肠头，使水从肛门流出。再将鸭子按入水中，使鸭腔灌满水，将鸭头朝下，使鸭腔内的水由颈皮内及鸭嘴内流出，冲出鸭嘴内和鸭颈内的杂物、粘膜，涮膛结束。</p>
+<p>（2）左手攥住鸭头，将鸭子提起，用右手在鸭头的下端，顺鸭颈向下捋至根部，去其余气。再将右手的大拇指和食指从鸭膀下的刀口伸入，提起鸭子，松开左手，使鸭头垂下。用鸭钩在距离鸭颈根部5～6厘米的鸭颈处下钩，使鸭钩尖从另一端露出即成。</p>
+<p>注意：要把鸭腔、鸭颈、鸭嘴均涮洗干净，把回头肠及鸭腔内的软组织等勾出，鸭的皮面无血染迹，鸭钩挂得端正，钩距要适度。</p>
+<h3 id="烫皮打糖色"><a class="header" href="#烫皮打糖色">烫皮打糖色</a></h3>
+<p>设备及工具：火灶一具，大锅一口，盛糖水的盆一个，水勺一把。</p>
+<p>方法：</p>
+<p>将盛糖水的盆涮洗干净，放入饴糖和清水搅匀。再将锅坐火上，加入清水，烧至滚开。用左手提起鸭钩，将鸭子提至锅的上方（注意不要让鸭头浸入水中），右手持手勺，舀起锅内的开水。从鸭身的刀口处开始，从上至下浇烫鸭皮（浇烫3～4次）。鸭皮烫好后，要迅速把鸭子提至糖水盆的上方，用搅匀的糖水浇淋鸭身3～4次。控去鸭腔内的水即成。</p>
+<p>兑糖水的比例及兑制方法</p>
+<p>枣红色的烤鸭一般为1∶5.6～6（即1公斤饴糖兑入清水5.5～6升）。</p>
+<p>金黄色烤鸭一般为1∶6.5～7.5 （即1公斤饴糖兑入清水6.5～7.5升）。</p>
+<p>兑制时首先将饴糖放入盆中，放入少量的温水泄开，再按照一定的比例，加入清水，用手反复搅拌，使其均匀即成（如用白糖，要先将其加入少量的清水，上火熬煮片刻，再倒入盆中，按一定的比例加入清水，搅匀即成）。</p>
+<p>注意：要用旺火，水要烧得滚开，糖与水的比例要适度，鸭皮面烫得光亮、美观。</p>
+<h3 id="晾坯"><a class="header" href="#晾坯">晾坯</a></h3>
+<p>设备及工具：挑鸭杆一根，挂鸭杆（或挂鸭架）一套。</p>
+<p>方法：将烫皮打糖后的鸭坯挂在挂鸭杆（或挂鸭架）上，置于阴凉、通风的地方，使鸭皮干燥。一般在春秋季节晾24小时左右，夏季晾4～6小时，在冬季要适当增加晾的时间。</p>
+<p>注意：晾鸭坯时要避免阳光晒，也不要用高强度的灯照射。在冬季，室内不要安装取暖设备。晾鸭坯时要随时观察其变化，如发现鸭皮溢油（出现油珠儿）要立即取下，挂入冷库保存。</p>
+<h3 id="贮存"><a class="header" href="#贮存">贮存</a></h3>
+<p>设备及工具：冷库一座，冷库内的挂鸭坯架一套。</p>
+<p>方法：晾好的鸭坯要顺序挂入冷库内的挂鸭坯架上，保持鸭坯不挤、不碰、不压。</p>
+<p>注意：冷库内的温度，宜控制在3～5℃。</p>
+<h3 id="烤制准备"><a class="header" href="#烤制准备">烤制准备</a></h3>
+<ol>
+<li>选柴。</li>
+</ol>
+<p>北京烤鸭（挂炉）的燃料以枣木柴为最好，当枣木柴不能满足供应时，应采取用桃、杏、梨等果树木柴。果树木柴具有烟少火硬。耐燃烧，有清香味等特点。对有异味的松、柏、椿、桐等木柴，应禁止使用。</p>
+<ol start="2">
+<li>清炉烧炉。</li>
+</ol>
+<p>在一般情况下，要提前1小时将烤炉内的残灰清理干净，留足炭底，码上果木柴。点燃30分钟左右，当炉温上升到200℃以上，即可准备烤制了。</p>
+<h3 id="烤制技术"><a class="header" href="#烤制技术">烤制技术</a></h3>
+<ol>
+<li>捅鸭堵塞。</li>
+</ol>
+<p>鸭坯入炉烤制前，要把预先备好的鸭堵塞用巧劲捅入鸭子的肛门内，并使其卡住肛门口，以防止鸭体灌汤后汤水外流。所谓巧劲是指捅入堵塞的动作要准确、迅速。因鸭坯经晾制后表皮已绷紧，捅鸭堵塞，犹豫不决，左转右扭，势必挤破鸭坯表皮，所以必须用巧劲一下子插入卡紧。</p>
+<ol start="2">
+<li>灌汤。</li>
+</ol>
+<p>当鸭坯捅好鸭堵塞后，即可由鸭身的刀口处灌入开水（也可加入适量的花椒水、料酒），称为灌汤。一般灌入鸭体的开水，约占鸭腔的十分之八即成。</p>
+<ol start="3">
+<li>打二遍色。</li>
+</ol>
+<p>鸭坯灌肠后，还须打二遍色（即第二次打糖，与第一次打糖的区别是糖水的含糖量要适当减少）。其方法是：左手提起鸭钩，把鸭坯提到糖水盆的上方，右手持水勺，舀起糖水，浇匀在鸭坯上即成。打二遍色的目的，主要是防止出现上色不匀的情况。</p>
+<ol start="4">
+<li>转烤和撩裆。</li>
+</ol>
+<p>鸭坯打二遍色后，要检查一下挂鸭钩（防止出现松动掉坯及不易转动的现象），然后就可以入炉烤制了。在烤制进行当中，火力是个关键，要根据需要随时调整，一般鸭坯刚入炉时，火要烧得旺一些，随着炉内温度的升高，以及鸭坯上色的情况，火力要逐渐减弱，炉温一般控制在250～300℃之间为好。</p>
+<p>鸭坯入炉后，使鸭体右侧后背向火，约烤12～13分钟。当右侧后背烤至桔黄色时，转动鸭体，使左侧后背向火，约烤7～8分钟。待左侧背与右侧背呈同样颜色时，转动鸭体，烤左侧鸭脯。当同样呈桔黄色时，可将鸭用杆挑起，近火撩其左侧底裆，使腿间着色，然后重新挂入炉内，烤右侧鸭脯，约烤2～3分钟。当右侧鸭脯烤成桔黄色时，再将鸭子挑起，撩右侧底裆。当右侧底裆烤至桔黄色，把鸭挂回炉内，烤其右后背，约烤5分钟，再转烤左后背5分钟左右。鸭身上色已基本均匀。当鸭身刀口处溢出白色而带有油液的汤汁时，挑起鸭子，再次撩裆找色后，即可出炉。一只1500～2000克的鸭坯在炉内烤35～40分钟即可全熟。对于鸭子是否已经烤熟，除了掌握火力、时间、鸭身的颜色外，还可倒出鸭腔内的汤来观察。当倒出的汤呈粉红色时，说明鸭子7～8成熟；当倒出的汤呈浅白色，并带有一定的油液，说明鸭子是9～10成熟。如果倒出的汤呈乳白色，油多汤少时，说明鸭子烤过火了。</p>
+<ol start="5">
+<li>出炉刷油。</li>
+</ol>
+<p>鸭子烤好出炉后，要趁热刷上一层香油，以增加皮面光亮程度。并可去除烟灰，增添香味。</p>
+<h3 id="制备配料"><a class="header" href="#制备配料">制备配料</a></h3>
+<p>食用烤鸭的配料主要是：甜面酱、大葱白段。为了适应不同宾客的生活习惯，也可增加精盐、白糖、花椒油、姜末、米制油、蒜泥、小萝卜、小葱、黄瓜、青萝卜等为配料。</p>
+<p>1.甜面酱：是以面粉为主加工发酵制成的。甜面酱以“天源”、“六必居”两家的为佳。具有色正、味浓，稀稠适度，清香可口的特点。甜面酱购进以后，需要再进行加工，才能与烤鸭一起食用。加工的方法是：把甜面酱放入盆内，按每500克甜面酱加入125克白糖和25克香油的比例兑好，搅拌均匀。上屉蒸25分钟左右，取出晾凉即成。</p>
+<p>2.大葱白段：以选用山东省出产的高白大葱为佳。它具有鲜嫩，甜脆和宜于生食的特点。大葱白段的加工方法是：先将其剥洗干净，切去青绿的部分，再切成6厘米长的段，把中间破开即成。</p>
+<h3 id="简单做法"><a class="header" href="#简单做法">简单做法</a></h3>
+<p>原料：鸭子半只、葱段儿、姜片儿、大料、花椒、料酒、酱油、糖浆（蜂蜜也可以）。</p>
+<p>做法：</p>
+<p>1、鸭子放入大一些的容器。</p>
+<p>2、放入葱段儿、姜片儿、花椒、大料、料酒、酱油，均匀涂抹在鸭子身上， 腌制1－2个小时。</p>
+<p>3、腌制好的鸭子，表面均匀涂抹糖浆。</p>
+<p>4、烤箱180度预热，中层50分钟左右，下层放上盖了锡纸的托盘。</p>
+<p>5、切薄薄的片儿。</p>
+<p>私房话：</p>
+<p>1、鸭子的腌制时间可以根据个人的口味来订，喜欢原汁原味儿的可以缩短腌制的时间。</p>
+<p>2、烤制的时间按照自己的烤箱性能来定就可以了，颜色金黄金即可。传统脆皮水的调制就是蜂蜜和白醋，比例大概是2份蜂蜜兑1份白醋，要注意的是，每一次的涂抹一定要在表皮彻底晾干后进行，特别要仔细涂抹鸭肉皱褶，鸭腿里侧等部位。</p>
+<p>焖炉法：烤炉有门，用秫秸先将炉壁及炉内铁箅子烧热，待无明火时，将处理好的鸭子放在铁箅子上，关闭炉门，故称焖炉。</p>
+<p>挂炉法：炉口拱形，无门，将处理好的鸭挂在炉内铁构上，下面用果木（梨、枣木最佳）火烤，不关门。</p>
+<p>叉烧法：与叉烧肉相似，须逐只手工操作，因产量低，费工时，已逐渐淘汰。</p>
+<p>烤熟之鸭需切片上桌。切片技术要求较高，每只鸭要出120片左右，而且须片片带皮带肉，肥瘦相间。佐料用葱段、黄瓜条，调味料有绵白糖（此为宫廷中吃法，今无）、蒜泥（已少用）和甜面酱（用此者居多）。主食有荷叶饼或空心烧饼。</p>
+<h2 id="烤鸭分类"><a class="header" href="#烤鸭分类">烤鸭分类</a></h2>
+<p>新中国成立后，北京烤鸭的声誉与日俱增，更加闻名世界。据说周总理生前十分欣赏和关注这一名菜，宴请外宾，品尝烤鸭。为了适应社会发展需要，而今鸭店的烤制操作已逾加现代化，风味更加珍美。烤鸭家族中最辉煌的要算是全聚德了，是它确立了烤鸭家族的北京形象大使地位。</p>
+<p>“全聚德”的创始人杨全仁早先是个经营生鸡鸭生意的小商，积累资本后开创了全聚德烤鸭店，聘请了曾在清宫御膳房当差的一位烤鸭师傅，用宫廷的“挂炉烤鸭”技术精致烤鸭，使得“挂炉烤鸭”在民间繁衍开来。</p>
+<p>全聚德采取的是挂炉烤法，不给鸭子开膛。只在鸭子身上开个小洞，把内脏拿出来，然后往鸭肚子里面灌开水，然后再把小洞系上后挂在火上烤。这方法既不让鸭子因被烤而失水又可以让鸭子的皮胀开不被烤软，烤出的鸭子皮很薄很脆，成了烤鸭最好吃的部分。挂炉有炉孔无炉门，以枣木、梨木等果木为燃料，用明火。果木烧制时，无烟、底火旺，燃烧时间长。鸭子入炉后，要用挑杆有规律地调换鸭子的位置，以使鸭子受热均匀，周身都能烤到。烤出的鸭子外观饱满，颜色呈枣红色，皮层酥脆，外焦里嫩，并带有一股果木的清香，细品起来，味道更加美妙。严格地说，只有这种烤法才叫北京烤鸭。</p>
+<p>比起挂炉烤鸭，以便宜坊为代表的焖炉烤鸭似乎在人们的印象中不那么深刻了，好在有着近600年历史的老字号便宜坊，已经以焖炉烤鸭技艺申请了“国家非物质文化遗产保护”。创始于明永乐年间的便宜坊焖炉烤鸭，相对于全聚德的名气，其实历史更早，已近600年历史。所谓“焖炉”，其实是一种地炉，炉身用砖砌成，大小约一米见方左右。其制作方法最早是从南方传入北京的，特点是“鸭子不见明火”，是由炉内炭火和烧热的炉壁焖烤而成。因需用暗火，所以要求具有很高的技术，掌炉人必须掌好炉内的温度，温度过高，鸭子会被烤煳，反之则不熟。焖炉烤鸭外皮油亮酥脆，肉质洁白、细嫩，口味鲜美。焖炉烤鸭是便宜坊的招牌，只是烧秫秸的焖炉早已改成了电焖炉。如今，使用焖炉的烤鸭店很少，大部分的烤鸭店采用的是全聚德挂炉的烤制方法。焖炉烤鸭口感更嫩一些，鸭皮的汁也明显更丰盈饱满些。而挂炉烤鸭带有的果木清香，似乎更能让人体会到人类最早掌握的“烤”的烹饪方法的智慧。大董烤鸭店（比上述两者稍稍不出名一点，但是也是非常好吃的），在京广中心的斜对面，菜式非常讲究，真正用苹果木烤制，味道、口感没得说。大董先生就出身于全聚德。你一定要试试在荷叶饼里加些蒜泥的吃法，异常鲜美，服务员会教你吃的。</p>
+<p>如今挂炉烤鸭和焖炉烤鸭是北京的烤鸭两大流派。就好像当年北京烤鸭扬弃地改良，很多做烤鸭的餐厅，也分别对传统上的这两大流派，做了适合现代口味和消费思想的改进。比如对烤鸭吃皮的重点演绎，比如小王府对鸭子品种的特别精选，甚至包括很多地方将葱丝换成了黄瓜条，这些形变而不失神的改良都不错，至于有的地方搞出的什么金箔烤鸭，就有点故弄玄虚的味道了。</p>
+<h2 id="营养成分"><a class="header" href="#营养成分">营养成分</a></h2>
+<p>烤鸭营养丰富，每百克含蛋白质19.2克，脂肪41克，水分36.2克，维生素B1、B2和钙、磷、铁、铜、锰、锌等微量元素，及18种氨基酸。</p>
+<h2 id="食用指南"><a class="header" href="#食用指南">食用指南</a></h2>
+<p>烤鸭已是名扬世界的美食品，历代美食家吃烤鸭，吃出了许多讲究来，似乎非如此吃食，则不能体现出正宗风味。这些讲究归纳起来，主要有四个：</p>
+<h3 id="讲究季节"><a class="header" href="#讲究季节">讲究季节</a></h3>
+<p>吃烤鸭必须在合适的季节里，季节不好则影响口味。品味者主张在冬、春、秋三季吃烤鸭其味最佳。原因是冬春二季的北京鸭，肉质肥嫩；秋天天高气爽，温度和湿度都特别适宜制作烤鸭，而此时的鸭子也比较肥壮。夏季气候炎热，空气湿度较大，此时的北京鸭肉少膘薄，质量较差，烤制后的鸭皮容易发艮（即不松脆），所以口味相对较差。</p>
+<h3 id="讲究片法"><a class="header" href="#讲究片法">讲究片法</a></h3>
+<p>因为片得好不仅菜肴造型更佳，而且口味更美。烤鸭烤制成后，要在鸭脯凹塌前及时片下皮肉装盘供食。此时的鸭肉吃在嘴里酥香味美。片鸭的方法也有讲究，一是趁热先片下鸭皮吃，酥脆香美；然后再片鸭肉吃。二是片片有皮带肉，薄而不碎。一只4公斤重的鸭子，能片出108余片鸭肉片，而且大小均匀如丁香叶口感则酥香鲜嫩，独具风味。</p>
+<h3 id="讲究佐料"><a class="header" href="#讲究佐料">讲究佐料</a></h3>
+<p>烤鸭为什么不能直接啃着吃？这是因为鸭子较肥，直接啃着吃，会非常油腻。现烤鸭主要有三种吃法，搭配不同的作料。</p>
+<p>第一种：用筷子挑一点甜面酱，抹在荷叶饼上，夹5片烤鸭片盖在上面，放上几根葱条、黄瓜条或萝卜条，将荷叶饼卷起，这是最通常的吃法。</p>
+<p>第二种：蒜泥加酱油，也可配萝卜条等。蒜泥可以解油腻，将片好的烤鸭蘸着蒜泥、酱油吃，在鲜香之中，更增添了一丝辣意，风味更为独特。</p>
+<p>第三种：有些顾客不喜欢吃葱、蒜，却喜欢将又酥又脆的鸭皮，蘸了颗粒比较大的砂糖来吃。这种吃法特别适合女士和儿童。据了解，吃烤鸭其中还大有营养之道。据专业人士介绍，烤鸭常常佐以大葱、大蒜、黄瓜条等共同食用，不仅可以起到平衡酸碱的作用，而且这些食品中的维生素C及膳食纤维等，具有使胆固醇下降和纤维蛋白质溶解活性升高，帮助消化的功能。第一种佐料方式现是最为常用的，其中所用甜面酱讲究用北京“六必居”出产的，不然口味就不能算作正宗。</p>
+<h3 id="讲究佐食"><a class="header" href="#讲究佐食">讲究佐食</a></h3>
+<p>常用的吃烤鸭的佐食品有二种，一为荷叶饼；一为空心芝麻烧饼。荷叶饼可一揭两片，每片抹上甜面酱再放葱段、黄瓜条、（或青萝卜条）、烤鸭片，或者抹上蒜泥、酱油、黄瓜条（或青萝卜条），再夹上烤鸭片卷起来吃。</p>
+<p>早年，全聚德烤鸭店还常年备有一种配以大麦米和红小豆熬制的小米粥。这种小米粥色泽美观，滑润爽口，吃完烤鸭后再喝上一小碗这种特制的小米粥，一定会给你带来无比的舒畅感。</p>
+<p>荷叶饼，又叫白薄饼、面薄饼、卷饼、烙饼、烙馍，有大小之分，大者直径可超过25cm，小者只有巴掌大，是陕西城乡各地民间喜食的传统风味小吃。各宾馆饭店均有供应，自助餐上也能见到。</p>
+<p>荷叶饼是由秦汉时的“白饼”演变发展而来，已经有2000多年的历史。宋代《东京梦华录》中有“荷叶饼”的记载。据清代《调鼎集》记载：“薄饼：秦人制小锡罐，装饼三十张，每客一罐饼，小如柑，罐有盖，可以贮。馅用炒肉丝，其细如发，葱亦如之，猪羊并用，号曰‘西饼’”。由此可见，陕西“秦人”制的薄饼，就是现荷叶饼。一般将中间抹上素油的饼坯，两个叠放在一起上平鏊烙，一次就能烙两张，这样制作速度较快，烙出的荷叶饼更为柔软，同时也减少了火色。从荷叶饼的卷菜看，也是丰富多彩，既可卷素，也可卷荤。素菜有氽、炒豆芽中的黄豆芽、绿豆芽、碗豆苗、土豆丝、油炒酸菜、泡菜、粉丝、韭黄、炸黄豆、摊蛋皮丝；荤菜有熟肚丝、鸡丝、猪、牛、羊肉丝，肺条等。再加上一盘细嫩的鞭杆葱和一盘甜面酱，如果再卷入片皮烤鸭，则更有滋味。</p>
+<p>风味特点：色泽略黄，柔软淡香，夹卷其他荤素食物用，为宴席常用面点，更是家常风味小吃。</p>
+<p>吃法：取适量烤鸭肉片、黄瓜丝、葱丝夹入薄饼皮中，卷成棒状，在其外蘸上甜面酱。</p>
+<h3 id="营养吃法"><a class="header" href="#营养吃法">营养吃法</a></h3>
+<p>鸭肉营养丰富，特别适宜夏秋季节食用，既能补充过度消耗的营养，又可祛除暑热给人体带来的不适。不应久食烟熏和烘烤的鸭肉，因其加工后可产生苯并芘物质，此物有致癌作用。</p>
+<p>烤鸭技艺是经过多次反复改进。如前所述，唐代的烤鸭方法是“明火暗味烤活鸭”，宋时变为“埋鸭于煻（tang）灰中烤而熟之”，元代采取放羊肚、调料于鸭腹内，投入焖炉中，通过炉墙的热度将鸭焖烤而熟。由于这种方法“火力文而不烈”，烤出的鸭子外皮焦黄，肉质鲜嫩，“一咬就流油”，而不觉腻。清代烤鸭技术又有了新的改进，烤制前，鸭子要经过打气、掏膛、洗膛、挂钩、烫皮、打糖、晾皮等八道工序处理。在烤法上，曾出现过用烤乳猪的炉制作“挂炉鸭”，即是以枣、梨等木为燃料，靠炉壁的反射作用将鸭用明火烤制而成。特点是色泽枣红， 外皮光亮，入口即酥，味道香甜。解放后，烤鸭技术又得到了进一步发展，变原来的口吹气为气泵吹气，使之更加符合卫生要求，同时变过去烧秫秸为木炭（或煤气），风味更加突出。</p>
+<p>烤鸭的吃法多种多样，一般是将烤熟的整鸭趁热用刀切成丁香状的薄片，片片有皮，片片有肉，然后蘸甜面酱，加葱白，用荷叶饼卷着吃。如把鸭腰、肫创始烤鸭的古城西安，在本世纪二十年代恢复了烤鸭，先由一家“烧烤店”兼营，后发展到多家经营。近年来，专营烤鸭的“西安烤鸭店”成立后，又变气泵吹气为装水，这样烤出的鸭肉特别鲜嫩。等下水烹制成各色美味，与烤鸭同上宴席，则称“全鸭席”。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../overview/geography.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../food/boiled.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../overview/geography.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../food/boiled.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

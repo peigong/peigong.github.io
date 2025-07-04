@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>万花阵 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xi-yang-lou/yellow-array.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="万花阵"><a class="header" href="#万花阵">万花阵</a></h1>
+<p>万花阵，原名黄花阵，是仿照欧洲的迷宫而建的花园，建于清朝乾隆年间，是圆明园内一座中西结合的迷宫。它的主要特点是：用四尺高的雕花砖墙，中间是一座白色西洋凉亭。方阵南北长89米，东西宽59米，阵墙总长1600余米，墙高约1.2米。它由阵墙、中心圆亭、碧花楼和后花园组成，曾是封建帝王的游乐场所。盛时，每当中秋之夜，清帝坐在阵中心的中式凉亭里，宫女们手持黄色彩绸扎成的莲花灯，寻径飞跑，先到者便可领到皇帝的赏物。所以也叫黄花阵或黄花灯。虽然从入口到中心亭的直径距离不过30余米，但因为此阵易进难出，容易走入死胡同，清帝坐在高处，四望莲花灯东流西奔，引为乐事。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="原址"><a class="header" href="#原址">原址</a></h3>
+<p>万花阵是圆明园内一座大规模的中西结合迷宫，建于清朝乾隆年间。它的主要特点是：用四尺高的雕花砖墙，分隔成若干道迷阵因而称作"万花阵"。它由阵墙、中式凉亭、碧花楼和后花园组成，曾是封建帝王的游乐场所。圆明园盛时，每当八月十五中秋之夜，清帝坐在阵中心的中式凉亭里，宫女们手持黄色彩绸扎成的莲花灯，寻径飞跑，先到者便可领到皇帝的赏物，所以也叫黄花阵或黄花灯。虽然从入口到中心亭的直径距离不过30余米，但因为此阵易进难出，容易走入死胡同，清帝坐在高处，四望莲花灯东流西奔，引为乐事。</p>
+<p>黄花阵是仿建的一处欧式迷宫外砌长方形迷阵，中心筑高台圆基八方西式亭。方阵南北长89米，东西宽59米，阵墙总长1600余延长米，墙高约1.2米，雕花砖墙面，又称“万花阵”。遍筑矮墙，周围植矮松，中央建亭台。皇帝为了取乐，常命太监在黄花阵中做捉迷藏游戏，自己坐在亭台上观赏。</p>
+<p>黄花阵花园门为西洋座钟形，黄铜雕刻花纹大门两扇。花园迷宫中央为石亭，内设西洋式座椅。黄花阵是仿照欧洲的迷宫（仿法国巴黎的凡尔赛迷宫）。建筑建造的花园，用四尺高图案的雕花砖墙，分隔成若干道迷阵。</p>
+<p>黄花阵采用法国整形式园林手法，由一道道复杂多变的植物隔墙组成大规模宫迷配以引人入胜的传统吉祥卡通动物，如蝙蝠（寓意：福）、梅花鹿（寓意：禄）、仙鹤（寓意：寿）、喜鹊（寓意：喜 ），给人以全新的感受。</p>
+<p>1860年10月6日英法联军破坏圆明园，西洋楼景区以及万花阵幸存，1911清朝灭亡，中国人迫不及待进入圆明园把万花阵拆毁了。</p>
+<h3 id="错误重建"><a class="header" href="#错误重建">错误重建</a></h3>
+<p>清朝灭亡后，“黄花阵”也被中国人拆毁，1987年后的“黄花阵”经专家想象，在1987年和1989年，在原址“重建”了，把中式凉亭造成了西式圆亭，且位置方向全部错误。</p>
+<p>这张黄花阵老照片的拍摄时间大概是在1875-1885年之间，从照片中可以看出，黄花阵中的西洋亭为汉白玉底座木结构廊柱覆琉璃顶。此建筑在1860年时并未遭到英法联军焚毁，光绪二十二年(1896年)二至九月，慈禧太后还曾三次游至此阵，时称黄花灯或万花阵。20世纪初叶黄花阵已夷为平地，后惟存中心亭座土墩。</p>
+<p>从老照片上来看，1860年后的黄花阵保存的非常完整，可以清楚的看到木质柱子插在石构柱础之中。从此就可以得知，此亭子绝对不会全部用汉白玉雕拼而成。</p>
+<p>再来看西洋亭的顶部，可以很明显的看出照片上两个部位颜色上的差异，尽管是老照片，但还是可以推测出，导致颜色的差异是因为两部分使用的建筑材料是完全不同的。在中国古代建筑中，屋顶部分通常使用的建筑材料是琉璃，并且在西洋楼景区的其他建筑中，无论是文字记载还是照片资料，都可以看出屋顶部分使用的建筑材料是琉璃，这完全符合中国园林的建筑风格和习惯。</p>
+<h2 id="建筑背景"><a class="header" href="#建筑背景">建筑背景</a></h2>
+<h3 id="名称由来"><a class="header" href="#名称由来">名称由来</a></h3>
+<p>每年中秋节，皇帝坐在花园迷宫中央的亭子里，宫女们手持黄色彩绸扎成的莲花灯从迷宫入口进去，谁先到达亭子，就可以得到赏赐，所以又称“黄花阵”或“黄花灯”。它继承了中国三千多年的优秀造园传统，既有宫廷建筑的雍容华贵，又有江南水乡园林的委婉多姿，同时，又吸取了欧洲的园林建筑形式，把不同风格的园林建筑融为一体，在整体布局上使人感到和谐。</p>
+<h3 id="拆毁经过"><a class="header" href="#拆毁经过">拆毁经过</a></h3>
+<p>1860年英军火烧，为圆明园第一次劫难，也就是火劫，除了木质建筑外，圆明园基本保持完整，西洋楼和部分木质建筑幸存。1900年八国联军入侵北京，中国人趁机纷纷涌向园内破坏残存建筑并大肆砍伐倒卖树木。事后可见东直门内木材堆积如山，大部分源自圆明园。这是木劫。</p>
+<p>1900年以后至民国间，圆明园基本处于无人看管状态，负责看管的太监有的也有近水楼台的意思，有的干脆被偷盗者暴打一顿，所以看管者基本无用，火烧后木头又被砍伐殆尽，就只有盗取石头的份了，可见大量精美的太湖石和西洋楼西洋石材被一车车的运走装饰私人庭院和其他公园。这次是石劫，万花阵就是这时候被中国人拆除的！</p>
+<h2 id="历史解读"><a class="header" href="#历史解读">历史解读</a></h2>
+<p>英法联军火烧圆明园后，对圆明园的木建筑破坏严重，西洋楼都是完整的，当时还有修复的可能，但是清朝倒台，圆明园经过中国人的木劫、石劫和剩余建筑的毁坏，几乎没有重建的可能了。 到新中国成立后至文革间的这次劫难就是土劫也是园内山形水系遭到严重破坏的时期，一座座土山被挖去填湖，老百姓挖掘建筑地基，在园内种田生活，办鸡鸭场，军队用来当基地，导致完全面目全非!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xi-yang-lou/xie-qi-qu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../xi-yang-lou/yang-que-long.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xi-yang-lou/xie-qi-qu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../xi-yang-lou/yang-que-long.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

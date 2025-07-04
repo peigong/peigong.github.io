@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>装甲兵 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-tank/armoured-forces.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="装甲兵"><a class="header" href="#装甲兵">装甲兵</a></h1>
+<p>装甲兵，陆军中以坦克和其他装甲车辆为基本装备的战斗兵种。又称坦克兵。一般包括编入统帅部和军区的独立装甲兵部队，编入军以下部队的队属装甲兵部队、分队 。</p>
+<p>独立装甲兵部队编为坦克（装甲）集团军、师、旅 、团等；队属装甲兵部队、分队编有军属坦克旅 、师属坦克团、旅（团）属坦克营等。在编成上，以坦克部队、装甲步兵部队为主体，还有炮兵、反坦克导弹、防空、防化学、工程及其他保障部队、分队。</p>
+<h2 id="兵种简介"><a class="header" href="#兵种简介">兵种简介</a></h2>
+<p>陆军中以坦克及其他装甲战车、保障车辆为基本装备的兵种。又称坦克兵。设有领导指挥机关，编有部队、院校、科研机构。通常编为集团军（军）属装甲（坦克）师（旅），师属装甲（坦克）团，团属坦克营、连等。装甲师、旅、团编有装甲步兵、炮兵、防空兵、防化兵（化学兵）、工程兵及其他战斗勤务保障部队、分队。为陆军的重要突击力量，具有快速的机动力、强大的火力和较好的防护力，可以减轻常规武器和核武器袭击的损害，有效地利用常规火力突击和核突击的效果，实施快速机动，猛烈突击。在合同作战中，可配属步兵作战，也可在其他兵种、军种协同下作战或独立遂行作战任务。</p>
+<h2 id="发展历史"><a class="header" href="#发展历史">发展历史</a></h2>
+<p>装甲兵最早出现于第一次世界大战。1916年6月，英国建立6个坦克连，每连编配25辆坦克；随后，法、德等国相继组建坦克营、连，主要用于消灭敌方机枪，破坏铁丝网，为步兵突破堑壕和障碍物创造有利条件。</p>
+<p>第一次世界大战至第二次世界大战之间，装甲兵发展成为一个兵种。1923年，英国组建皇家坦克部队，共4个营。1935～1938年，德、苏、法等国分别组建装甲师、坦克军和轻型机械化师。德国装甲师由坦克兵、步兵、炮兵等部队、分队组成，是具有独立作战能力的机动兵团。</p>
+<p>第二次世界大战期间，装甲兵发展成为陆军的一个主要战斗兵种。德国入侵波兰、法国和苏联时，以装甲军和装甲集群（集团军）为主要突击力量，在空军配合下实施突然、快速的战略突击。战争中后期，苏联组建大量坦克兵团和军团，广泛使用于各种作战行动，尤其是在进攻战役中，坦克兵实施连续、深远的突击，对取得作战胜利起了重大作用。整个战争期间，苏联组建24个坦克军和2个坦克师，美国组建16个装甲师，英国组建11个装甲师，德国曾组建33个装甲师。美、英等国的装甲师通常编入步兵军的建制，苏联和德国还分别在坦克军或装甲师的基础上组建坦克集团军和装甲军、装甲集团军。</p>
+<p>战后，装甲兵的发展被视为衡量陆军现代化程度的重要标志之一。一些国家的陆军中，除保持一定数量的坦克师（装甲师）外，还将大量的坦克编入机械化步兵师（摩托化步兵师），坦克营数目占师战斗营总数的1/3～1/2。20世纪70年代后，鉴于各种反坦克武器，特别是反坦克导弹和武装直升机的发展，有的国家在坦克师（装甲师）内增大装甲步兵、炮兵和工程兵的比例，有的国家还增编直升机部队、分队，实现了各种火炮、防空导弹、反坦克导弹的自行化，提高了装甲兵部队独立作战的能力。</p>
+<h2 id="中国装甲兵"><a class="header" href="#中国装甲兵">中国装甲兵</a></h2>
+<p>在中国，国民党军队于1929年组建战车队，共18辆英制坦克；1938年1月，组建第一个装甲师，称陆军第200师；1945年，成立装甲教导总队，编有4个战车团；1948年3月，在陆军总司令部中设立装甲兵司令部。</p>
+<p>中国人民解放军于1937年冬开始在新疆培训装甲兵技术骨干。1945年12月，成立东北人民自治军坦克大队。1946年9月、1947年3月、1948年2月，相继成立晋冀鲁豫军区坦克队、华东军区坦克队和晋察冀军区坦克区队。1949年2月，在东北、天津组建第1战车师，隶属第四野战军特种兵司令部，5月转隶总参谋部，改称中国人民解放军战车第1师；同年11月，在华东又组建了第2战车师，隶属第二野战军特种兵部队。后均改为坦克师。</p>
+<p>中华人民共和国成立后，为统一领导全军装甲兵部队的建设，1950年9月成立装甲兵领导机关――摩托装甲兵司令部（后改称装甲兵司令部），装甲兵成为陆军的一个独立兵种。20世纪50年代，装甲兵得到较大的发展，相继设立军区装甲兵领导机构，组建若干预备坦克师、团，步兵师增编了坦克自行火炮团或水陆坦克团，基本形成预备坦克部队和队属坦克部队并存的体制。</p>
+<p>抗美援朝战争中，装甲兵部队有力地支援了步兵的坚守防御，出色地完成了任务，取得了丰富的经验。</p>
+<p>1958年6月，成立中国人民解放军装甲兵学院。1959年10月，开始列装国产坦克。1969年共组建和扩建了13个坦克师，19个独立坦克团。1962年，步兵师属坦克自行火炮团改为坦克团。1969年，将大部分陆军师属坦克团集中编组为坦克师，一部分改编为军区独立坦克团和步兵军属坦克团。1976年，为加强陆军军的合同训练，提高其作战能力，将独立坦克团改归陆军军建制。1982年9月，装甲兵领导机关改编为总参谋部装甲兵部，作为总参谋部主管装甲兵军事工作的业务部门。1985年，为进一步提高陆军的合同作战能力，将预备坦克部队改为队属坦克部队。1992年9月，总参谋部装甲兵部与炮兵部、工程兵部、防化部合并为总参谋部兵种部，作为全军兵种部队军事工作的业务部门。2003年底，总参谋部兵种与军训部合并为总参谋部军训和兵种部。2011年12月，总参谋部军训和兵种部改编为总参谋部军训部。</p>
+<p>中国人民解放军装甲兵部队自创建后，从小到大，从弱到强，在陆军合成作战部队中的比例进一步提高，已发展成为训练有素、装备精良的陆军的重要突击力量。现代战争中，装甲兵作为陆军的突击力量，其建设越来越受到世界各国的重视。在装备上，将采取各种新技术特别是信息技术，提高坦克及其他装甲车辆的打击能力、防护能力和机动能力；在部队编制上，增大保障兵种部队的比例，加强合成，进一步提高自我保障能力、生存能力和突击能力。</p>
+<p>发布者：中国军事百科全书编审室</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-tank/b1-tank-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-tank/M3A3-568.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-tank/b1-tank-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-tank/M3A3-568.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

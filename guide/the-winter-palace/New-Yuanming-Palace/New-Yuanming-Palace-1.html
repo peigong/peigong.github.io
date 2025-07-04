@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>珠海圆明新园 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/New-Yuanming-Palace/New-Yuanming-Palace-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="珠海圆明新园"><a class="header" href="#珠海圆明新园">珠海圆明新园</a></h1>
+<p>圆明新园（New Yuanming Palace），位于广东省珠海市香洲区兰埔路与白石路交叉路口西侧。1992年10月18日，圆明新园奠基，由清华大学建筑学院资深教授设计，以北京圆明园被焚烧前建筑为原稿，根据特定的地理环境、在不破坏原有生态环境的前提下，按1:1比例选建圆明园四十景中的十八景。1997年春节，圆明新园正式对外开放。</p>
+<p>圆明新园占地1.39平方千米，东、西、北三面环山，南面平坦开阔，圆明新园曾经推出过大型主题演出《圆明沧桑》《东方神珠》，千万巨制大型全景式舞蹈史诗《大清王朝》以及国内首部大型电影实景水上表演《大清海战》以及《淇澳风云》等。主要景点有大宫门、正大光明、九州清晏、蓬岛瑶台等。</p>
+<p>圆明新园是国家首批AAAA旅游景区、广东省爱国主义教育基地、广东省十大旅游景区之一。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>1992年10月18日，圆明新园奠基，由清华大学建筑学院资深教授设计，以北京圆明园被焚烧前建筑为原稿，根据特定的地理环境、在不破坏原有生态环境的前提下，按1:1比例选建圆明园四十景中的十八景。共有来自全国各地2千多名艺术家、历史学家、建筑师为圆明新园建设付出了劳动。</p>
+<p>1997年春节，圆明新园正式对外开放。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>圆明新园占地1.39平方千米，东、西、北三面环山，南面平坦开阔。</p>
+<p>大型情景式水上乐园梦幻水城，位于圆明新园西侧，是圆明新园的互补项目，也是国内唯一的古埃及主题水上乐园。梦幻水城占地11万平方米，以古埃及文化为背景，营造神秘、欢乐而充满情趣的氛围，引进世界先进的水上娱乐设施如欧洲原装引进的国内首条眼镜王蛇滑道、可以造8种浪峰的造浪河，有42种玩法的埃及大水寨、高速滑道、螺旋滑道以及设置了800米长的漂流河、可以造8种浪峰的造浪河等20多个项目。</p>
+<h2 id="主要景点"><a class="header" href="#主要景点">主要景点</a></h2>
+<p>宫门景区包括宫门、门前广场，以及广场东侧的宫廷食街，西侧的买卖街。</p>
+<p>朝寝景区包括有正大光明群组及九州清晏群组。</p>
+<p>福海景区包括有蓬岛瑶台、方壶胜境、平湖秋月、莲溪乐处、涵虚朗鉴、上下天光、麴院风荷、夹镜鸣琴、万方安合。</p>
+<p>西洋楼景区包括有远瀛观、大水法、海晏堂、生肖池、观水台，万花阵。</p>
+<p>白石坑景区包括有汇芳书院、慈云普护、镂月开云，同乐园(后改为露天剧场)。</p>
+<h3 id="大宫门"><a class="header" href="#大宫门">大宫门</a></h3>
+<p>大宫门作为圆明新园的正门，是不可缺少的，但是，圆明园的南门即大宫门是从皇子的赐园发展而来的，且其面对一个狭长的广场，是一座五开间的门殿附带左右如意门，规模不大。而圆明新园与此完全不同，宫门面对宽达140米、深达80米的大广场，因此，将宫门做成三座并列的门殿。为了突出其重要地位，将三门置于1.5米高的须弥座上，同时在其前有金水河流过，河上设3座石拱桥，以通三门。在三门之前用汉白玉栏杆围起一座长100米，宽60米的广场，作为空间上的强化和限定;使三门从东西狭长的空间突现出来。宫门前惯用的石狮、华表皆置于被围合的空间中，宫门与城市道路间的地形高差也通过这个广场得以过渡。在三门两旁还开了两座如意门，可兼作车门。门前各辟一条车路，路旁做叠落式花坛，花坛中除种花草之外还种了大树，以改善广场的小气候。由于这座广场不同于过去封建帝王的宫门广场，通过绿化使肃穆气氛有所缓和。到了节假日三座宫门洞开，很好地满足了数以万计的旅游者迅速人园的需求，如意门则为极少数需乘车入园者提供了方便。</p>
+<h3 id="正大光明"><a class="header" href="#正大光明">正大光明</a></h3>
+<p>正大光明在圆明园中称为“正衙”，“殿七楹、东西配殿各五楹”，即举行朝会活动的场所，“顺时八举兆清旗，正大光明敞正扉，不遍不倚中道立，四明四达五弦挥”是为此景之寓意。在圆明新园中正大光明殿与其规模相同，但建筑群的具体处理有所不同。由于用地在纵深方向受到限制，不得不取消二宫门，索性开门见山，使旅游者人园后便见气势恢宏的正衙，感受到皇家宫苑的气派。于正殿、配殿、宫门之间皆以廊相连;由于这组建筑处于炎热多雨的地区，用连廊以避日挡雨。几段廊子采取了虚实不同的做法：东北，西北的连廊做成空廊，可向人们透露几分后部园林信息;东，西连廊封以灯窗，南部的连廊朝广场的一面封以高墙。这两处的廊子均仅向庭院敞开，这样可遮挡如意门内小广场和大宫门外大广场的嘈杂之声，创造一种安静肃穆的环境氛围。</p>
+<h3 id="九州清晏"><a class="header" href="#九州清晏">九州清晏</a></h3>
+<p>在圆明园中九州清晏是一个大建筑群，当年为帝后游息之所，由于它的称谓寓意美好，可喻今日大好形势，故选择它作为圆明新园的寝宫，置于正大光明之北。并依用地大小对圆明园内的九州清晏群组中的殿宇加以取舍。新园中保留中央三殿，即圆明园殿、奉三无私殿、九州清晏殿，作为这一建筑群的核心，构成前后两进院落，两侧的殿宇比圆明园大大减少，每侧也仅做两进院落，各设三座小殿，这样整个群组中便有九座殿宇。以廊庑将九座殿宇联系起来，由于圆明新园的地段条件限制，难以做出九个州来表达九州清晏之意，故以九殿寓意九州。九州清晏三座主殿的殿名含意深刻，圆明园殿的“圆明”之意象征统治者立身行事合乎时宜。“奉三无私”之意从当年殿内所悬康熙皇帝圣训，可知其意在于告诫统治者“政令之设必当远虑深谋，以防后悔，周详筹度，机及长久。不可为近名邀利之举，不可用一己偏执之见。采群言以广益，合众志以成城。”“九州清晏”则象征普天之下河清海晏。</p>
+<h3 id="蓬岛瑶台"><a class="header" href="#蓬岛瑶台">蓬岛瑶台</a></h3>
+<p>在圆明园的福海中，“为仿李思训画意，”以3个小岛构成，彼此以桥相连，三岛东西总宽约120米，南北总宽约60米。其上厅堂、亭榭、廊庑、大大小小各种建筑多达十四五幢，“望之若金堂五所，玉楼十二也。”这在东西宽400多米，南北长约450米的福海中，体量不算大，确有虚无缥缈之意。但圆明新园的福海面积缩小了，东西宽不过200米，南北长290米，蓬岛瑶台不可能做得像圆明园那样大，在这样的水面空间中，就原地段上的一块小片鱼塘间的高地，在挖湖时保留下来一个东西宽仅35米、南北长仅25米，面积不过800多平方米的小岛，其上建筑也必须随之减少;仅设一殿一亭，并于两者之间叠起一座假山(内实为卫生间)，使这两座殿、亭彼此掩样，不露全貌。建筑的尺度也尽量压缩，小殿仅三间四架，通面宽10.8米，通进深6.4米。小亭作六角，每面宽2.0米。只有这样尺度的建筑才能很好地与湖面尺度匹配。</p>
+<h3 id="方壶胜境"><a class="header" href="#方壶胜境">方壶胜境</a></h3>
+<p>“方壶”为古代传说中的仙山，《列子·汤问》中有：“渤海之东，不知几万里，有大壑焉……其中有五山，一曰岱屿，二曰员峤，三曰方壶，四曰瀛洲，五曰蓬莱。”这个景点的寓意为海上仙境，是圆明园中体量最大的建筑群组，位于福海的西北方，而与福海间有土山相隔，仅面临一小池，从其寓意来看颇有几分遗憾。在圆明新园中将其放在福海北岸，直接面临福海，这样与“方壶胜境”之涵义更加贴切。由于它的体量宏伟，色彩绚丽，又位于圆明新园的中轴线的北端，成为园内最主要的景点。这个建筑群前后共两进院落，3座主要殿宇方壶胜境殿、啰鸾殿、琼华楼前后依次顺山坡地形排列，进入景点的主路放在第一进院落的两侧。邻湖的方壶胜境殿、翡翠、锦绮楼原皆为二层，在设计中考虑到新园福海尺度和景点处于山脚的地貌特征，将其改为一层，且去掉了伸入湖中的迎熏亭。第一进院落的主殿啰鸾殿也做成一层，并将其两侧的碧云、紫霞楼调整成配殿格局。第二进院落的主要建筑琼华楼及两侧朵殿皆随地段地形置于7.9米的高台上，中央通过数十级台阶可登琼华楼，两侧则堆起两座大假山，用作通往朵殿的蹬道。琼华楼的背面，则仅高出室外地平1米多了，出琼华楼北门便见山石林立的小庭院，显出几分超凡脱俗的意趣。东西两厢位置以叠落廊与前排建筑连成一体。经过这样的处理使这个群组具有很强的整体感和向心感。此外在邻湖的建筑前面，中央做成船码头，其余皆以汉白玉栏杆环绕，远远望去整个建筑群的三重殿、堂、亭、台被白玉盘从福海中托起，那琼华楼与那白玉盘真是名副其实的琼楼玉宇，胜似神仙境界。</p>
+<h3 id="涵虚朗鉴"><a class="header" href="#涵虚朗鉴">涵虚朗鉴</a></h3>
+<p>乾隆御制诗曾写道：“涵虚斯朗鉴，朗鉴在虚涵，即此契元理，悠然对碧潭。”据唐·无名氏《水镜赋》称：“利济者水，涵虚者镜，怀朗鉴，遇物无心，处下流，通而不竟。”标榜着一种“虚堂悬镜”，为人处事容而不竞，虚怀若谷的道德观。在北京的其他皇家园林中的景点也曾用过类似的题名，如玉泉山静明园中有“镜影涵虚”，香山静宜园中有“虚朗斋”，这些正是中国传统文化所倡导的修身养性准则。在圆明园中这个景点位于福海东北角，有雷峰夕照、惠如春、贻兰庭等，建筑成散点布置，平淡无奇，但其得景不凡，被描写为“左右云堤纡委，千章层青。面前巨侵空澄，一泓净碧。日月出入，云霞卷舒，远山烟岚，近水楼阁。”在圆明新园中，涵虚朗鉴位置.得景与此皆同，但建筑高低起伏追求变化;将雷峰夕照与惠如春间连以斜廊，过惠如春右折置贻兰庭，三者围成一内院，游人在此西望确实可见一泓净碧，远山烟岚，得烟波浩淼。东望则悬崖蹬道，溪涧潺潺，赏园林小品。一开阔一收敛，一静一动，兼得双重境界。</p>
+<h3 id="莲溪乐处"><a class="header" href="#莲溪乐处">莲溪乐处</a></h3>
+<p>莲溪乐处本在圆明园西北，其建筑群组合异常丰富，且景点寓意深奥，故被选入新园并将其置于圆明新园福海东岸。对圆明园莲溪乐处，乾隆诗云“香风湖面来，炎夏方秋冷。时披莲溪书，乐处惟自省。”濂溪是宋代哲学家周敦颐的别号，他提出“人以中正律己，以仁义治人，以修养而成圣人。”颇得统治者的赏识。今天看来提高民众的思想修养仍然是必要的，当然不一定再采用“时披莲溪书”的方式，因此在这里设计成小型演唱厅，通过演员歌颂品德高尚的人，以提高广大群众的道德修养。此景点布局分成南北两院，北侧由邻湖榭、云霞舒卷、莲溪乐处围成大庭院，南侧以厅、堂、亭、廊围成小水院，院内种满莲花，名菱荷深处，这里便是“春风湖面来”“香风”之源。莲溪乐处主厅为九开间前后出抱厦，有时也在抱厦前架设的小舞台上演出，菱荷深处、临湖榭、云霞舒卷所围合的院落自然成了观众席所在。主厅后原有的云香清胜小室因用地局促，只好革舍。</p>
+<h3 id="上下天光"><a class="header" href="#上下天光">上下天光</a></h3>
+<p>上下天光原处圆明园后湖北岸，在圆明新园中改置于福海西岸北端，在此人们可感受到那“上下水天一色，水天上下相连”的绝妙景色。</p>
+<h3 id="万方安和"><a class="header" href="#万方安和">万方安和</a></h3>
+<p>万方安和是圆明园中最有代表性的景点，不仅因其寓意美好，更因其建筑造型独特，为业内人士所熟知。但在圆明新园中并未复建起这座万字殿，而仅将一座遗址形式的石台飘浮于福海西南角的湖面，使人不忘圆明园被毁之惨痛教训，同时也为了使福海周围建筑密度不要太大，故采用这种形式。这样的处理比完全复建起来反而可使园内景观有所变化。</p>
+<h3 id="平湖秋月"><a class="header" href="#平湖秋月">平湖秋月</a></h3>
+<p>平湖秋月本是杭州西湖的著名景点，曾被移植于圆明园福海。现取其原形的布局骨架，错落有致地将亭、廊、榭置于圆明新园福海的东南角，并于其东南侧相思林前掇土山。</p>
+<h3 id="麴qū院风荷"><a class="header" href="#麴qū院风荷">麴（qū）院风荷</a></h3>
+<p>麴院风荷亦为西湖名胜，西湖麴院为宋代造酒作坊，因湖中多荷花而得名，在圆明园它位于后湖与福海之间;两湖湖边景点的背后，未邻湖，似与杭州麴院位于西子湖畔者环境迥异。在圆明新园中将其置于福海西岸中段，作一水院，院内植荷，四周设厅堂供游人品酒赏荷。麴院风荷与福海仅以一桥相隔，此即夹镜鸣琴桥。</p>
+<h3 id="夹镜鸣琴"><a class="header" href="#夹镜鸣琴">夹镜鸣琴</a></h3>
+<p>夹镜鸣琴本取李青莲两水夹明镜诗意，置于圆明园福海南岸，“鸣琴”是指其“旁崖悬瀑，水冲激石罅，峥综自鸣，”在圆明新园中福海南岸无石山，故将其置于福海西岸，麴院风荷水院前，这不仅可具两水夹明镜诗意，同时也可得鸣琴之乐趣。因在麴院风荷南北两侧山石嶙峋，每逢雨天，水激石罅之音悦耳。这样的环境正合其原意。</p>
+<h3 id="西洋楼景区"><a class="header" href="#西洋楼景区">西洋楼景区</a></h3>
+<p>远瀛观、大水法、海晏堂、生肖池构成圆明新园西洋楼景区的骨架，在圆明园中西洋楼景区置于长春园的最北边，地段狭长，建筑成一字排开，一幢幢并列，规划布局较呆板。由于西洋楼在圆明园全园景点中的分量只不过是其几十分之一，因此在圆明新园中只能选择几个最有代表性的建筑，即远瀛观和海晏堂，以及与其相配的大水法和生肖池。重新将其规划成彼此呼应的一区，置于全园西南部，并设直接对外的大门。远瀛观与海晏堂一南一北，其前各放自己的水法，两组建筑之间设小广场，广场正中央设观水台，台面四周以水渠环绕，中心放一组带喷泉的雕像。在圆明园中本无观水台，只是在大水法前有一低低的平台，名曰观水法，是为帝后等少数人使用的。圆明新园改成广场式的观水台，可为广大游客服务。远瀛观和海晏堂原由意大利画师郎世宁，法国传教士蒋友仁、王志诚等设计，建筑为罗可可风格，但建筑的屋顶采用了琉璃瓦的坡顶，可算是最早的中西合璧式的建筑。在圆明新园中照原样重建了远瀛观，但对海晏堂，结合规划进行了改造，吸取了谐奇趣的曲廊形式，以便与远瀛观南北呼应，同时使这幢建筑造型变得更加活泼，使这组建筑群具有一种整体感。西洋楼景区不但有自成一体的南北轴线，而且其东西贯穿了一条直通正大光明群组的轴线，其与全园的主要建筑群取得了有机的联系。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<p>圆明新园是国家首批AAAA旅游景区、广东省爱国主义教育基地、广东省十大旅游景区之一。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xi-yang-lou/guan-shui-fa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../New-Yuanming-Palace/New-Yuanming-Palace-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xi-yang-lou/guan-shui-fa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../New-Yuanming-Palace/New-Yuanming-Palace-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

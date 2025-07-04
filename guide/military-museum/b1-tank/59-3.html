@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>如何分辨中国59式坦克及其改进型号 - 中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民革命军事博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/b1-tank/59-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="如何分辨中国59式坦克及其改进型号"><a class="header" href="#如何分辨中国59式坦克及其改进型号">如何分辨中国59式坦克及其改进型号</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1823645454189049816&amp;wfr=spider&amp;for=pc">如何分辨中国59式坦克及其改进型号：从59-1到69-IIMA的识别指南</a></p>
+</blockquote>
+<p>中国59式坦克（仿制自苏联T-54A）是解放军装备时间最长、改进型号最复杂的中型坦克之一。其改进型横跨59系、69系和79系，衍生出数十种变体，部分型号外观相似但技术代差显著。以下通过关键特征梳理各型号的识别要点，帮助爱好者快速区分。</p>
+<h2 id="一基础型号59式1959年定型"><a class="header" href="#一基础型号59式1959年定型">一、基础型号：59式（1959年定型）</a></h2>
+<p>核心特征：圆形铸造炮塔、100mm D-10T线膛炮（有抽烟装置）、红外大灯位于炮管左侧、车体前装甲无附加结构。</p>
+<p>识别标志：炮塔顶部无高射机枪固定架，车体首上装甲呈光滑弧面，发动机舱散热格栅为横向排列。</p>
+<h2 id="二59系改进型"><a class="header" href="#二59系改进型">二、59系改进型</a></h2>
+<h3 id="59-11979年改进"><a class="header" href="#59-11979年改进">59-1（1979年改进）</a></h3>
+<p>改进点：战损经验驱动，提升战场生存性。</p>
+<p>识别特征：</p>
+<ul>
+<li>炮塔两侧焊有储物箱（早期为帆布筐）。</li>
+<li>炮管上方安装外置激光测距仪。</li>
+<li>车体首下加装牵引钢缆挂钩，首上有备用履带板。</li>
+<li>炮管加装抽烟装置（炮管中部鼓包）。</li>
+<li>车体左侧翼子板上部加装红外大灯。</li>
+</ul>
+<h3 id="59-21980年代初期"><a class="header" href="#59-21980年代初期">59-2（1980年代初期）</a></h3>
+<p>改进点：火力升级，适配北约标准。</p>
+<p>识别特征：</p>
+<ul>
+<li>换装105mm线膛炮（炮管更粗，抽烟装置位于炮口后1/3处）。</li>
+<li>炮管取消加装激光测距仪（部分59-II坦克炮管上方加装电视火控）。</li>
+<li>车体首上附加倾斜装甲板（增强防破甲弹能力）。</li>
+</ul>
+<h3 id="59-2a坦克1984年11月1985年4月"><a class="header" href="#59-2a坦克1984年11月1985年4月">59-2A坦克（1984年11月～1985年4月）</a></h3>
+<p>改进点：车体和炮塔的外形更为流畅。</p>
+<p>识别特征：</p>
+<ul>
+<li>炮塔两侧各加装4联装烟雾弹发射器。</li>
+<li>车体前部大灯移至车体两侧翼子板上部。</li>
+</ul>
+<h3 id="59-d1990年末1995年底"><a class="header" href="#59-d1990年末1995年底">59-D（1990年末～1995年底）</a></h3>
+<p>改进点：具备集体三防能力。</p>
+<p>识别特征：</p>
+<ul>
+<li>车体和炮塔前部安装有爆反装甲，车体前部大灯移至右侧翼子板上部，</li>
+<li>备用履带板减少到2块，位置回归至左侧翼子板上部。</li>
+</ul>
+<h2 id="三69系家族基于59底盘的技术升级"><a class="header" href="#三69系家族基于59底盘的技术升级">三、69系家族（基于59底盘的技术升级）</a></h2>
+<h3 id="69-ii1982年定型主供出口"><a class="header" href="#69-ii1982年定型主供出口">69-II（1982年定型，主供出口）</a></h3>
+<p>改进点：首次整合国产火控系统。</p>
+<p>识别特征：</p>
+<ul>
+<li>100mm滑膛炮（炮管无抽烟装置，炮口呈喇叭形）。</li>
+<li>炮塔两侧加装4联装烟雾弹发射器（方形发射管，左右各两组）。</li>
+<li>车长指挥塔加装红外探照灯（炮塔右后侧独立圆柱体）。</li>
+</ul>
+<h3 id="69-iia夜战强化型"><a class="header" href="#69-iia夜战强化型">69-IIA（夜战强化型）</a></h3>
+<p>识别特征：</p>
+<ul>
+<li>炮塔左侧增加微光夜视仪护罩（矩形盒状结构）。</li>
+<li>驾驶员配备独立夜视潜望镜（车体前部左侧凸起）。</li>
+</ul>
+<h3 id="69-iim1985年出口型"><a class="header" href="#69-iim1985年出口型">69-IIM（1985年出口型）</a></h3>
+<p>改进点：适配热带作战需求。</p>
+<p>识别特征：</p>
+<ul>
+<li>发动机舱加高（散热格栅改为纵向排列）。</li>
+<li>车体两侧加装裙板（橡胶材质，覆盖前半段履带）。</li>
+</ul>
+<h3 id="69-iimp反应装甲型"><a class="header" href="#69-iimp反应装甲型">69-IIMP（反应装甲型）</a></h3>
+<p>识别特征：</p>
+<ul>
+<li>炮塔及车体正面挂装方形爆炸反应装甲（ERA）（块状凸起明显）。</li>
+<li>取消烟雾弹发射器，改为激光告警装置（炮塔顶部小型传感器）。</li>
+</ul>
+<h3 id="69-iima终极改进型"><a class="header" href="#69-iima终极改进型">69-IIMA（终极改进型）</a></h3>
+<p>识别特征：</p>
+<ul>
+<li>车体首上附加复合装甲（楔形结构，类似早期96式）。</li>
+<li>炮塔后部加装栅栏式储物篮（取代焊接储物箱）。</li>
+</ul>
+<h2 id="四过渡型号69-379原型车"><a class="header" href="#四过渡型号69-379原型车">四、过渡型号：69-3/79原型车</a></h2>
+<p>历史定位：79式坦克的原型，融合西方技术。</p>
+<p>识别特征：</p>
+<ul>
+<li>配备105mm线膛炮（带热护套，炮管中部有加强环）。</li>
+<li>炮塔顶部集成双向稳定仪（方形设备盒）。</li>
+<li>车体侧面加装侧裙板（金属材质，覆盖全段履带）。</li>
+</ul>
+<h2 id="五79系改进型"><a class="header" href="#五79系改进型">五、79系改进型</a></h2>
+<h3 id="79-ii1984年定型"><a class="header" href="#79-ii1984年定型">79-II（1984年定型）</a></h3>
+<p>改进点：全面西方化火控。</p>
+<p>识别特征：</p>
+<ul>
+<li>炮塔顶部安装TSFCS型火控系统（炮长镜与车长镜独立，炮塔左侧有横风传感器）。</li>
+<li>车体首上装甲改为焊接复合结构（棱角分明，类似59D）。</li>
+</ul>
+<h2 id="快速区分口诀"><a class="header" href="#快速区分口诀">快速区分口诀</a></h2>
+<h3 id="看火炮"><a class="header" href="#看火炮">看火炮：</a></h3>
+<ul>
+<li>100mm滑膛炮69-II系列；</li>
+<li>105mm线膛炮59-2/79系。</li>
+</ul>
+<h3 id="看炮塔"><a class="header" href="#看炮塔">看炮塔：</a></h3>
+<ul>
+<li>烟雾弹发射器69-II；</li>
+<li>反应装甲69-IIMP；</li>
+<li>激光测距仪59-2。</li>
+</ul>
+<h3 id="看车体"><a class="header" href="#看车体">看车体：</a></h3>
+<ul>
+<li>首上附加装甲59-2/69-IIMA；</li>
+<li>纵向散热格栅69-IIM。</li>
+</ul>
+<h3 id="易混淆点提醒"><a class="header" href="#易混淆点提醒">易混淆点提醒</a></h3>
+<ul>
+<li>69-II与59-2：69-II使用滑膛炮且炮口无抽烟装置，59-2为105mm线膛炮。</li>
+<li>69-IIMA与59D：59D炮塔加装FY系列反应装甲，69-IIMA仍保留基础铸造炮塔。</li>
+</ul>
+<p>通过以上特征，可快速锁定具体型号，结合生产时间（如59系多用于国内，69系主供出口），进一步缩小识别范围。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../b1-tank/59-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../b1-tank/T-62.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../b1-tank/59-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../b1-tank/T-62.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
