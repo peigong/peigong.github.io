@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>奥林匹克塔 - 奥林匹克公园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">奥林匹克公园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Olympic-Tower.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京奥林匹克塔"><a class="header" href="#北京奥林匹克塔">北京奥林匹克塔</a></h1>
+<p>北京奥林匹克塔（Beijing Olympic Tower），曾被称作“生命之树”，位于北京市朝阳区北辰东路15号，为中国第六高塔，被网友称为”大钉子”，占地面积约7000平方米，始建于2011年，于2015年8月8日正式对外开放。</p>
+<p>北京奥林匹克塔包括塔基大厅和五个独立的塔冠，塔体由五座186米至246.8米高的独立塔组合而成，是世界上唯一一个由五个塔独立组成的观光塔，建筑总面积18687平方米。其中，塔冠面积5257平方米，塔座面积13430平方米。塔基大厅为覆土建筑，通过绿坡与地面自然相接。塔冠顶部则有五个独立的观景平台和功能厅。</p>
+<p>2017年11月6日，北京奥林匹克塔被评为2016年度鲁班奖。2019年4月12日，北京奥林匹克塔获得第16届中国土木工程詹天佑奖。</p>
+<h2 id="建设沿革"><a class="header" href="#建设沿革">建设沿革</a></h2>
+<p>2011年，北京奥林匹克塔开工建设。</p>
+<p>2012年7月，北京奥林匹克塔结构封顶。</p>
+<p>2015年8月8日，北京奥林匹克塔对外开放，国际奥委会主席巴赫参观并同意将其命名为“北京奥林匹克塔”。</p>
+<p>2016年1月，国际奥委会正式批准命名为“北京奥林匹克塔”。</p>
+<p>2016年6月12日，被正式命名为“北京奥林匹克塔”，并永久性悬挂奥运五环标志。</p>
+<h2 id="升级改造"><a class="header" href="#升级改造">升级改造</a></h2>
+<p>2025年1月7日消息，朝阳区2025年将启动奥塔的升级改造，改造后1-5号塔将拥有不同的特色和定位。1号塔定位为“天空之境”，作为北京中轴线的最佳观景体验和打卡空间，持续优化246.8米高空观光体验。2号塔、3号塔分别定位为“云端盛宴”和“流光溢彩”，打造北京最具氛围感的空中美食花园和最具国际范儿的SkyBar夜景打卡地。4号塔定位为“云端对话”，是北京首个政务、商务与文化交流的空中会客厅。5号塔定位为“未来之光”，打造北京首个高空沉浸式光影体验空间。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>北京奥林匹克塔的塔体由五座186米至246.8米高的独立塔组合而成，建筑总面积18687平方米。其中，塔冠面积5257平方米，塔座面积13430平方米。北京奥林匹克塔包括塔基大厅和五个独立的塔冠。塔基大厅为覆土建筑，通过绿坡与地面自然相接。塔冠顶部则有五个独立的观景平台和功能厅。</p>
+<p>经国际奥委会批准，北京奥林匹克塔1号塔的最高点和塔西侧主门口处分别设置奥运五环标识巨型雕塑。其中，1号塔的安装位置位于塔顶246.8米处，雕塑形式为一座高达18米的可旋转发光的奥运五环标识，每个单环直径为5米，地面可视距离约600米；塔西侧主门口的安装位置位于门外拱顶上方，雕塑形式为一座固定型奥运五环标识，每个单环直径为3.5米，五环总体高度为5.1米。北京奥林匹克塔整体高度因此由246.8米升高至264.8米。</p>
+<h2 id="建筑特色"><a class="header" href="#建筑特色">建筑特色</a></h2>
+<p>北京奥林匹克塔以“生命之树”为设计理念，寓意为大地隆起开裂，生命之树从地壳破土而出、自然生长，在塔的顶部逐渐向四周延展，形成树冠形态，似一束鲜花，似礼花绽放，似清泉喷涌。五个高低不同的塔身在空中似合似分，造型独特。蕴含着奥运五环蓬勃向上的精神风貌。设计汲取中国传统文化的圆形元素，同时从植物形态中寻求灵感，体现了人文特色和生态理念。</p>
+<p>为方便残疾人登顶参观，1号塔上增加无障碍设施，引进无底坑电梯。这种电梯不需要底坑、自带井道，使用螺杆驱动技术，安全可靠，运行平稳，方便乘坐轮椅的残疾人登顶观光。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<p>2017年3月，北京奥林匹克塔举办奥运村街道首届“奥林匹克塔垂直马拉松赛”。</p>
+<p>2020年11月，北京奥林匹克塔举办庆祝中华人民共和国成立70周年主题彩车模型展。</p>
+<p>2020年11月24日，《中埃建交50周年》纪念邮票首发仪式在北京奥林匹克塔举办。</p>
+<p>2021年10月23日至2022年3月20日，北京2022年冬奥会火种和冬奥会火炬接力主题展在北京奥林匹克塔展出。</p>
+<p>2022年3月4日—3月13日，北京奥林匹克塔开启冬残奥会主题灯光秀。</p>
+<p>2022年6月23日，北京奥林匹克塔举办“奥运藏品全球征集活动” 奥运藏品捐赠仪式。</p>
+<p>2022年8月18日，由北京奥运城市发展促进会、北京市朝阳区人民政府联合主办的北京冬奥精神主题展览，在北京奥林匹克塔开幕。</p>
+<p>2022年12月31日，北京奥林匹克塔举办2023新年倒计时光影秀活动。</p>
+<h2 id="价值意义"><a class="header" href="#价值意义">价值意义</a></h2>
+<p>北京奥林匹克塔承担城市标志景观、旅游观光、文化展示、环保监测和大型活动监测等多重功能。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<p>2017年11月6日，北京奥林匹克塔被评为2016年度鲁班奖。</p>
+<p>2019年4月12日，北京奥林匹克塔获得第16届中国土木工程詹天佑奖。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ling-long-ta.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="pan-gu-da-guan.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ling-long-ta.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="pan-gu-da-guan.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

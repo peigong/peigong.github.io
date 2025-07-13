@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>盘古大观 - 奥林匹克公园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">奥林匹克公园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/pan-gu-da-guan.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="盘古大观"><a class="header" href="#盘古大观">盘古大观</a></h1>
+<p>盘古大观，位于北京市朝阳区北辰桥，紧临“鸟巢”、水立方西侧，整体项目由写字楼、国际公寓、七星酒店和商业龙廊组成，总建筑面积42万平方米。2014年其在电影《变形金刚4：绝迹重生》中亮相，引得名气大增。</p>
+<p>2019年8月20日，根据淘宝拍卖的消息，盘古大观“龙首”被北京钰珵置业有限公司以最高应价胜出。结果显示，网络拍卖成交价格为51.87亿元。</p>
+<p>2020年4月20日，拍卖平台上架盘古大观8处房地产，起拍价总值约为4.4亿元。</p>
+<p>2021年，盘古大观开始进行改造，去除“龙头”造型，该改造项目于2023年完工。</p>
+<h2 id="建筑介绍"><a class="header" href="#建筑介绍">建筑介绍</a></h2>
+<h3 id="地理位置"><a class="header" href="#地理位置">地理位置</a></h3>
+<p>盘古大观，位于北四环中路、亚奥核心区，距离水立方仅180米，距离鸟巢500米，是千顷奥林匹克公园中心区的地标性城市综合体。</p>
+<h3 id="占地面积"><a class="header" href="#占地面积">占地面积</a></h3>
+<p>项目总占地面积39360平方米，总建筑面积418484.70平方米，由一幢超5A级写字楼、三幢国际公寓、一座盘古七星酒店以及全长411米的世界第一商业长廊——龙廊综合组成。</p>
+<h3 id="建筑理念"><a class="header" href="#建筑理念">建筑理念</a></h3>
+<p>本着打造“讲中国语言的世界级建筑”这一理念，开发商力邀世界著名华人建筑大师李祖原先生亲手设计。李祖原大师将华夏五千年龙图腾与中国传统文化精髓有效地融于一体，以高192米的写字楼为龙首，三栋国际公寓、一栋七星酒店由南向北依次延伸近700米，令整座建筑体形如一条通体雪白的巨龙。</p>
+<h3 id="东魂西技"><a class="header" href="#东魂西技">东魂西技</a></h3>
+<p>本着“东魂西技”的建筑理念，投资商——北京盘古氏投资有限公司立意将盘古大观打造成一座能够承载历史、经得起时间检验的建筑。因此，项目不仅大量采用世界领先建筑技术，更注重发掘传统建筑工艺的复兴与创新。</p>
+<h3 id="建筑外观"><a class="header" href="#建筑外观">建筑外观</a></h3>
+<p>盘古大观外立面采用的是最坚硬、耐腐蚀的花岗岩。为了确保石材的品质，北京盘古氏投资有限公司聘请了十余位专家，在全国范围内经过了为期一年的考察和论证，最终选择了产自山东牟平、有“中国白麻”美誉的白色花岗岩，并且包下了1号老矿，保证了项目采用的石料无色差。</p>
+<p>盘古大观420米龙廊之上，共有66根龙柱和66颗“龙头”。其中“龙头”全部是用重达50吨的整块花岗岩，由工匠按照传统工艺手工雕刻而成。龙柱的基座，通体无接缝，同样是以整石雕刻，这是古代皇家建筑中才会采用的形式。在外立面的施工上，则是吸取了中国古代木结构建筑通常采用的“榫铆”工艺的精华，大胆运用在了石材的拼接组合上，从而令建筑的外立面更加坚固。</p>
+<h2 id="写字楼"><a class="header" href="#写字楼">写字楼</a></h2>
+<p>盘古大观A座为国际标准的超5A级写字楼，192米的俊拔高度成就非凡视野。挺拔辉煌的外形配以4.65米超高室内空间，气宇轩昂，所有细节设计非常好，建筑材质选自世界各地最精良的品牌产品，达到智能化与舒适性的顶级享受，堪称先进科技与国际商务的融合，匹配世界领袖级企业的大家风范。</p>
+<p>A座是盘古大观最高的标志性建筑，采用坚实现代的内筒——框架结构体系，外墙为单元式空防紫外线全玻璃帷幕墙。大厦共有地上39层，地下5层，总建筑面积约14.1万平方米。其中地上部分约10.9万平方米，地下部分约3万平方米，标准层建筑面积将近2800平方米，标准办公层层高4.6米，大堂内空间挑高15米，打造殿堂级超高视觉空间。
+鸟巢西侧著名的“盘古大观”，在部分楼栋的顶层，建设了12座空中四合院，这些四合院距离地平面的高度都超过了85米，在四合院的中厅下方可以种草、养鱼。房间的装修风格也极度奢华，不仅有一个可开合的透明的天幕，连上楼的步行梯选材都是从非洲进口的加蓬红木，房间内部还配备了一个小型电梯，可以方便地上下。</p>
+<h2 id="四合院"><a class="header" href="#四合院">四合院</a></h2>
+<h3 id="传言"><a class="header" href="#传言">传言</a></h3>
+<p>据报道，售楼人员称“空中四合院”只租不售，租金为一天一百万，一年一个亿。2008年奥运会时，有不少媒体报道称比尔·盖茨为了看奥运，花1亿元租下了一座空中四合院，后被证实为假新闻。</p>
+<p>于近百米的空中，建设京味十足的四合院，凭栏远眺，便可尽收京城景色，按说是个不错的创意，在奥运后经济的创意相对贫乏的时期，这种匠心独运的空中四合院，如果申报一个国际建筑创意大奖，也并非没有可能。但谁曾想，它居然是一个没有合法身份的“私生子”。</p>
+<h3 id="违章建筑"><a class="header" href="#违章建筑">违章建筑</a></h3>
+<p>北京市规划委2010年2月22日公布的信息显示，北京盘古氏投资有限公司在朝阳区建设B座等项工程时，未经规划许可，擅自在公寓、酒店、商业3座楼顶部加建2层坡屋顶复合式四合院建筑12组。共增加违法建筑面积11297.62平方米。</p>
+<h2 id="功能分区"><a class="header" href="#功能分区">功能分区</a></h2>
+<p>大厦2层主要用做商务中心；3层与4层为国外银行及领事馆的签证处等办事机构。5层至36层分低、中、中高、高共计四个办公区域，入驻其中的主要为金融、证券投资等领域的跨国大公司。</p>
+<p>地下二层为职工餐厅，充分满足大厦内各公司员工的就餐需求。</p>
+<p>满足跨国金融机构的业务要求。</p>
+<p>35层为高档正餐厅，可举办各类商务宴请。</p>
+<p>顶层39层部分挑高达7米，集休闲餐饮(咖啡厅、酒吧、舞厅等)、商务宴请(正式餐饮包间)和会务功能于一体。</p>
+<p>大厦顶部设有直升机停机坪。</p>
+<h2 id="远景定位"><a class="header" href="#远景定位">远景定位</a></h2>
+<p>亚奥商圈的未来之星：2008年奥运会的申办成功为中国带来难得的历史机遇，它将激发中国经济发展的旺盛活力，并且带动整座城市的繁荣与社会进步。盘古大观是一个位于亚奥商圈、结合办公、住宅、酒店、商业的顶级综合开发项目，旨在为中国铺建一个世界顶级商务精英 的平台，一个真正将中国与世界联结起来的金融平台。</p>
+<p>展现21世纪都市建筑的地标文化：建筑的初衷是有感于21世纪中国伟大机遇下强烈的历史使命感。在商业运作之外，更想为中国为北京留下一座与众不同的标志建筑，让它成为中国当代建筑史上的新长城以及新世纪盛世中国的新标志。</p>
+<p>商业及发展潜力：盘古大观拥有无可取代的优势，将成为奥运最壮观的一道风景线，奥运为它带来了绝佳商机，不仅在2008年将吸引数十亿人次的巨大消费力量，在奥运之后，由于政府巨资投入的奥运村城市建设，将使亚奥商圈成为未来之星。对于写字楼、住宅、酒店、商场都提供了国际顶尖水准的盘古大观而言，无疑是世界商业领袖及精英们驻足的宝地。</p>
+<h2 id="七星酒店"><a class="header" href="#七星酒店">七星酒店</a></h2>
+<p>盘古七星酒店，融东方文化精粹与西方成熟服务管理理念于一体，力邀世界顶尖酒店管理者，专为各国元首、世界名流、商界首脑、全球政要等尊贵人士提供超白金七星级酒店服务，亦是盘古国际公寓的至尊配套。</p>
+<h3 id="龙廊世界第一商业长廊"><a class="header" href="#龙廊世界第一商业长廊">龙廊——世界第一商业长廊</a></h3>
+<p>盘古大观龙廊，全长411米，进深13米，净高15米，世界第一商业长廊，汇集世界顶级品牌旗舰店的购物广场，全球同步上市的商业交流平台。</p>
+<h2 id="相关单位"><a class="header" href="#相关单位">相关单位</a></h2>
+<ul>
+<li>盘古大观酒店监理单位</li>
+<li>北京津京建设工程监理公司（除A座）</li>
+<li>北京塞瑞斯国际工程监理有限公司（A座）</li>
+<li>盘古大观酒店承建单位</li>
+<li>北京首钢建设集团有限公司（地面以上）</li>
+<li>北京建工集团有限责任公司（基础）</li>
+<li>盘古大观酒店设计公司</li>
+<li>李祖原建筑师事务所</li>
+<li>盘古大观酒店物业公司</li>
+<li>北京世邦魏理仕物业管理服务有限公司</li>
+</ul>
+<h2 id="投资商"><a class="header" href="#投资商">投资商</a></h2>
+<p>北京盘古氏投资有限公司经营范围涵盖投资咨询及管理、地产开发及销售、文化艺术活动交流等。公司未来将致力于动产和金融投资领域，旨在通过“盘古大观”，把北京盘古氏投资有限公司打造成一个真正能把中国同美国、欧洲等国家联系起来的世界金融中心，使其成为中国对外融资的平台和东西方金融联系的桥梁， 贯通古今、连接东西。投资建设的项目北京盘古大观，为北京市在建的大型工程项目之一，它南临北四环中路，东临奥林匹克体育公园，全部建筑包括5A智能化写字楼、高档酒店、高档公寓和精品商区，弥补了北京市无超高档写字楼、酒店和顶级精品区的缺陷。在地理位置上不仅具有优越性和独特性，而且在设计方面也可谓倾力打造，无不体现了建筑、人文、艺术和都市的完美结合，同时结合奥林匹克村的功能，将成为北京市的城中之城。随着北京奥运会的申办成功，项目的地理位置和建设意义将更为举足轻重。北京盘古大观寄托着盘古氏人对中华文化传承的历史责任感将传统文化与世界级建筑巧妙的融为一体，展现给世人。作为国内唯一的以国人心中信奉的文化图腾为外形的建筑，将成为一种新的标准被世人认可，这也进一步体现出北京盘古氏投资有限公司对建筑业乃至中华文明弘扬上的使命心和社会责任心。她不只是简简单单的一座建筑，她将成为一种精神，一种中国龙腾飞的精神载着盘古氏人的梦想翱翔天际。北京盘古氏投资有限公司将秉承这种将龙文化弘扬于世的精神，使这条融合东魂西技的中国龙成为具有深远意义的建筑，将她所体现出的建筑价值和其散发的龙文化魅力闪耀于世界建筑之林。</p>
+<h2 id="楼层状况"><a class="header" href="#楼层状况">楼层状况</a></h2>
+<h3 id="楼层"><a class="header" href="#楼层">楼层</a></h3>
+<p>A座写字楼；B、C、D座国际公寓；E座为酒店。其中三栋国际公寓共192套，一层一户配备两部迅达电梯，户均面积618平方米</p>
+<h3 id="国际公寓"><a class="header" href="#国际公寓">国际公寓</a></h3>
+<p>盘古大观国际公寓，618平米景观主力大户型，从容宽阔，纵览世界级中央公园的盛世美景，终极诠释豪华公寓独一无二的不凡品质。</p>
+<p>祖原堂，盘古国际公寓会所，盘古七星酒店，三大主题会所，集精英沙龙、休闲健身、餐饮娱乐等多重功能于一体，更可提供管家外派、宴饮承办、私人保镖、会所包场等个性化定制服务，充分满足盘古业主的一切需求。</p>
+<h2 id="内部装修"><a class="header" href="#内部装修">内部装修</a></h2>
+<p>盘古大观大堂、电梯厅、公共走廊与楼梯间为精装，采用高档石材。</p>
+<p>盘古大观外部：国际公寓高 80.3米，地上 19 层，地下3层。外立面采用产自山东牟平1号老矿的白色花岗岩外墙；外保温共有五层，包括：挤塑聚苯板+空气层+铝板+空气层+白色花岗岩外立面，保温性能卓越，更可有效节约能源；门窗系统采用世界顶级的铝合金门窗断热桥设计；</p>
+<p>盘古大观室内：每套公寓套房都采用了低碳环保、灵活、舒适的日立水源变频多联式中央空调，住户根据需要可选择不同使用方式，恒久享受清新空气与舒爽温度；采暖为大市政供暖，提前预留散热器及地暖两套设备接口；主卧和客厅均为朝东方向，面向奥运会主会场，窗体为2.4*4.8的突破性尺度，视野开阔、通透明亮； “鸟巢”和“水立方”美景盛况一览无余；玻璃采用法国圣戈班L ow-e玻璃幕墙窗，三层中空、内充惰性气体，高性能隔音、隔热、低辐射，经检测室内噪音不足35分贝，远远低于国家标准；户门采用世界顶级品牌德国Biffar安全户门，防盗、防火、防弹，安全性能卓越；房间层高3.75米，顶层更达到5米，为世界顶极成功人士营造匹配非凡身份的第一居所。</p>
+<h2 id="龙廊"><a class="header" href="#龙廊">龙廊</a></h2>
+<p>盘古超5A级写字楼，龙头傲视东方。</p>
+<p>盘古大观超5A级写字楼，191.65米标志性建筑，龙头所在，以视觉与科技的双重震撼，缔造领先的世界金融中心。</p>
+<p>大厦共有31部电梯及6部扶梯，按客、货、VIP、员工等功能分开运行，服务周到、搭乘便捷。电梯分高、中高、中、低四区高速运行，每一组电梯服务层数约为8~9层，候梯时间创北京市新低.同时还有6座扶梯连接1至4层，令通行快捷便利。</p>
+<p>办公区层高4.6米，堪比商业建筑；顶层设有直升飞机停机坪，为全球商业首脑提供最私密快捷的出入方式；地下5层，按世界银行海外结算中心标准设有2800平方米专业金库，满足跨国金融机构的业务要求……智能化与舒适性兼备的顶极享受，足以匹配世界领袖级企业的大家风范。</p>
+<h2 id="媒体曝光"><a class="header" href="#媒体曝光">媒体曝光</a></h2>
+<p>盘古大观空中四合院曾盛传奥运期间1亿元租给比尔·盖茨，后虽被证实为假新闻，但其豪华配置一时广为传播。据报道，这些空中四合院只租不售，租金为一天一百万，一年一个亿。然而市规划委公布的信息显示，该12组空中四合院均为违法建筑，面积达11297.62平方米，也是13家曝光企业中违法面积最多的一例。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Olympic-Tower.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="Beiding-Goddess-Temple.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Olympic-Tower.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="Beiding-Goddess-Temple.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>寻迹老北京的五顶八庙 - 奥林匹克公园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">奥林匹克公园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/olympics-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="寻迹老北京的五顶八庙"><a class="header" href="#寻迹老北京的五顶八庙">寻迹老北京的五顶八庙</a></h1>
+<blockquote>
+<p>原文：<a href="https://baijiahao.baidu.com/s?id=1792436995196518980&amp;wfr=spider&amp;for=pc">寻迹老北京的五顶八庙</a></p>
+</blockquote>
+<h2 id="五顶庙"><a class="header" href="#五顶庙">五顶庙</a></h2>
+<p>五顶庙是北京最著名的五座泰山神庙，亦称碧霞元君庙，分别为东顶、西顶、南顶、北顶、中顶。</p>
+<p>东顶，在东直门外，俗呼东顶。因庙侧有一株数百年的老榆树，顺义、通县一带人又称为孤榆树庙，位于东城区东直门外今华都饭店南，现已无存寻无迹。</p>
+<p>南顶，位于丰台区大红门外南顶村，建于明代，清乾隆三十八年重修，民国年间倾记，现已无存寻无迹。</p>
+<p>西顶也称广仁宫，位于海淀区四季青镇蓝靛厂，旧址为明正德朝创建的嘉祥观。</p>
+<h3 id="北顶娘娘庙"><a class="header" href="#北顶娘娘庙">北顶娘娘庙</a></h3>
+<p>北顶娘娘庙，现在已经是北京北城一个重要的地标性建筑，在北京人眼里，它的重要性和神秘性，甚至超过了旁边的水立方和鸟巢。这是因为在北京建设水立方时，曾经发生了著名的“北顶娘娘庙”事件，此事件涉及的神秘力量之大，堪称百年之最。此事件一出，震惊中外，使得此庙重修之后，引来众多海外人士前来朝拜，甚至成为了北京奥运之后，接待外国人参观最多的庙宇之一。而北顶娘娘作为中国土生土长的民俗神、道教神，确实也证明了自己的实力。</p>
+<p>在中国的民俗信仰中，五岳分别由五位山神掌管，其中掌管五岳之首泰山的，被称作是“北顶娘娘碧霞元君”，也被称作是“泰山娘娘”，别看她只是个民俗神中的山神，在传统文化的“神国世界”中，不过是个“处级干部”。但据说她可是“东岳大帝”的女儿，“东岳大帝”在北京东岳庙里有供奉，是掌管阴阳两界的道教神，地位非常之高，不是一般的神明可以达到的。现代人“拼爹”，神仙也一样，有一个这么地位高的老爹罩着，自然也是得到万人敬仰。所以，在北京的民俗信仰中，北顶娘娘有着很高的地位，人称“老娘娘”，是北京“五顶”中，地位最高的，其庙宇建于明朝，是北京中轴线的最北端。</p>
+<p>自建庙之后，香火一直很旺，清朝乾隆年间得以重修扩建，占地近万平米。建国后，北顶娘娘庙被改为北顶小学，后来又被大屯铸造厂占用。1986年，北顶娘娘庙作为古建，由北京文物局接管。后来北京申奥成功，计划几个重要的奥运设施和场馆，都在北中轴线一带，其中著名的“水立方”最早的选址，就在北顶娘庙的位置。事件发生在2004年8月27日下午3点，在未得到“老娘娘”许可的情况下，水立方施工方，开始对北顶娘娘庙实施拆除，结果刚刚卸下庙门，便遭遇了“神秘力量”。登时乌云遮日，天昏地暗，一阵狂风顿时刮起，而且居然刮成了平地龙卷风，要知道，在城市里，在没有任何预兆，平地起龙卷风的机会几乎是没有的……</p>
+<p>一阵龙卷风之后，刮出了北京乃至全国拆迁史上，“第一钉子户”的威名。据可靠消息透露，北顶娘娘庙门前的龙卷风，造成四十四名工人受伤，两名工人死亡。工地施工现场被夷为平地，所有设施毁于一旦。但蹊跷的是，北顶娘娘庙无一砖一瓦的损失。工程当即叫停，上报有关部门等待进一步指示。在北京久了，遇到“神秘力量”已经有些见怪不怪了，相关部门立即请来北京著名的“民俗专家”，希望能够给出建议。“民俗专家”次日到达现场后，叫工人在北顶娘娘庙前挖坑，结果挖出一个明朝的大鼎，说这是北京城重要的镇物之一，要埋回去，此地不能动。又讲明了北顶娘娘的地位和重要性，建议不要拆除北顶娘娘庙。相关部门听取了“民俗专家”的建议，并上报有关部门部门，在得到批准后，决定修改整个施工方案。原址恢复北顶娘娘庙，水立方后撤三百米建造……自此之后，北顶娘娘庙的香火更加繁盛，曾经去朝拜过的，有头有脸的人，多的不胜枚举。</p>
+<h3 id="中顶普济宫"><a class="header" href="#中顶普济宫">中顶普济宫</a></h3>
+<p>中顶在右安门外十里草桥，乾隆三十五年曾修缮，民国时又重修，现存有山门、大殿以及石狮和前人书写的篆字匾额、撰文石碑。</p>
+<h2 id="八庙"><a class="header" href="#八庙">八庙</a></h2>
+<p>八庙是指太庙、奉先殿、传心殿、寿皇殿、雍和宫、堂子、文庙和历代帝王庙。</p>
+<p>太庙，在今劳动人民文化宫内，明永乐十八年(1420年)兴建，是明清两代封建帝王供奉祖先的场所，即皇帝家庙。</p>
+<p>奉先殿，在故宫内，殿内原安有神龛，以祭祀皇帝的先祖。始建于明初。清沿明制，于清顺治十四年（1657年）重建，后又多次修缮。</p>
+<p>传心殿，位于故宫文华殿东侧，原为供奉帝王、先师牌位的地方。</p>
+<p>寿皇殿，在景山公园内北侧，是供奉清代帝后、祖先神像之处，同时也是帝后死后葬前的停灵之所。</p>
+<p>雍和宫，原为清雍正皇帝胤祯即位前的府邸，乾隆皇帝出生于此，后改为喇嘛教的庙宇。该庙建筑豪华，文物极丰，为北京著名的旅游胜地之一。</p>
+<p>文庙，又称孔庙，在雍和宫西侧的国子监街内(成贤街)，建于1306年，是元、明、清三代祭祀孔夫子的地方，现为首都博物馆。</p>
+<p>历代帝王庙，坐落于阜内大街，明嘉靖十年(1531年)兴建，主要祭祀我国历代的11龛供历代帝王牌位和79位历代贤相名将的牌位。其中，关羽单独建庙，成为奇特的庙中庙。。</p>
+<h3 id="堂子"><a class="header" href="#堂子">堂子</a></h3>
+<p>堂子，位于南河沿南口路北、北京饭店贵宾楼所在地。堂子始建于1644年。原在长安左门外御河桥东，即台基厂大街北口路西一带。堂子为满洲神庙的称呼。供奉清入关前战死的4位祖先的遗物，清朝廷建立政权后，凡有重大的政治、军事行动，就在庙内举行祭把、誓师，当时称"谒庙"。入关后，乾隆时期将"谒庙"改成"谒堂子"。</p>
+<p>堂子的主要建筑有祭神殿、圜殿及尚神殿。圜殿前有一个皇帝致祭时的神杆石座。"堂子祭天"被列为清王朝的吉礼之一。在堂子举行的祭祀分为两种情况：一是国家大事，诸如元旦拜天、出征、凯旋等；另一种是属于一般的祭祀如月祭、浴佛祭、马祭等。在元旦祭祀和出征祭祀时，一般都是皇帝亲自前往，但也有特殊情况派有关官吏代祭的。堂子内神殿供的是释迦牟尼、观音菩萨及关帝。</p>
+<p>圜殿为祭主神的地方，主神是纽欢台吉和武笃本贝子。每次祭祀行礼前，皇帝先朝东坐在享殿檐下的两间坐褥上，各王公贝勒按职位依次坐于丹陛上下。由内监弹奏三弦琵琶，满洲神巫"萨吗"献酒，并擎神刀祷祝，赞礼者一边拍板，一边唱满洲神歌。皇帝和王公贝勒一起拍板抚掌唱。然后进享殿、圆殿分别行礼。礼毕，皇帝坐在西间正中，面朝南，王公等各就原处列坐，吃祭品炸糕，喝完茶后各散。光绪二十七年(1901)由于《辛丑条约》规定东交民巷为使馆区，堂子也在使馆区范围内。清帝碍于面子，不得已，将堂子移建于南河沿。祭堂子的习俗一直到博仪逊位才结束。南河沿处的堂子已拆除。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="park.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="park.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
