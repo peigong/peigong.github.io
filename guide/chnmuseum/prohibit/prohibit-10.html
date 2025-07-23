@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2-2 商后母戊鼎（旧称司母戊鼎） - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prohibit/prohibit-10.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="商后母戊鼎旧称司母戊鼎"><a class="header" href="#商后母戊鼎旧称司母戊鼎">商后母戊鼎（旧称司母戊鼎）</a></h1>
+<p>商后母戊鼎，又称司母戊鼎、司母戊大方鼎，是商后期（约前十四世纪至前十一世纪）铸品，于1939年出土于河南省安阳市武官村，现藏于中国国家博物馆《古代中国》基本陈列展厅内。</p>
+<p>商后母戊鼎高133厘米、口长110厘米、口宽79厘米，重832.84千克；器厚立耳，折沿，腹部呈长方形，下承四柱足。器腹四转角、上下缘中部、足上部均置扉棱。商后母戊鼎器身与四足为整体铸造，鼎耳则是在鼎身铸成之后再装范浇铸而成。商后母戊鼎，形制巨大，雄伟庄严，工艺精巧；鼎身四周铸有精巧的盘龙纹和饕餮纹，增加了文物本身的威武凝重之感。足上铸的蝉纹，图案表现蝉体，线条清晰。腹内壁铸有“后母戊”三字，字体笔势雄健，形体丰腴，笔划的起止多显峰露芒，间用肥笔。</p>
+<p>商后母戊鼎是已知中国古代最重的青铜器；商后母戊鼎的铸造，充分说明商代后期的青铜铸造不仅规模宏大，而且组织严密，分工细致，足以代表高度发达的商代青铜文化；2002年1月18日，被国家文物局作为国家一级文物被列入《首批禁止出境展览文物目录》。</p>
+<h2 id="大事记"><a class="header" href="#大事记">大事记</a></h2>
+<ul>
+<li>1939年 - 文物出土 - 河南省安阳市武官村出土商后母戊鼎，消息被日军获悉，村民担心被日军发现，重新埋入地下</li>
+<li>1946年6月 - 重新挖出 - 商后母戊鼎被重新挖出，运送南京并拨交中央博物院筹备处保存</li>
+<li>1959年 - 调往北京 - 中国历史博物馆建成，商后母戊鼎从南京调往北京，存于国家博物馆</li>
+<li>1963年 - 发行邮票 - 中国邮政发行商后母戊鼎图样的邮票</li>
+<li>2002年 - 文物禁令 - 国家文物局将商后母戊鼎列入《首批禁止出国（境）展览文物目录》</li>
+<li>2005年 - 展出 - 商后母戊鼎在殷墟博物馆展出</li>
+<li>2011年3月 - 文物更名 - 学术界对商后母戊鼎的铭文提出了新的考释：将“司”改释为“后”</li>
+<li>2012年7月8日 - 发行图样印章 - 中国邮政发行“商后母戊鼎”图样印章</li>
+<li>2013年 - 英国时任首相参观 - 时任英国首相卡梅伦在时任中国总理李克强的陪同下参观了国家博物馆内商后母戊鼎等文物</li>
+<li>2019年 - 意大利时任总理参观- 中意文化遗产合作活动中意大利时任总理朱塞佩·孔特参观并点评了“古代中国基本陈列”商后母戊鼎等文物精品</li>
+</ul>
+<h2 id="文物历史"><a class="header" href="#文物历史">文物历史</a></h2>
+<p>商后期（约前十四世纪至前十一世纪），商王祖庚或祖甲为祭祀母亲（即商王武丁之妻）铸鼎。</p>
+<p>1939年，商后母戊鼎在河南省安阳市武官村出土，消息被日军获悉，村民担心被日军发现，重新埋入地下。</p>
+<p>1946年6月，商后母戊鼎被重新挖出，运送南京并拨交中央博物院筹备处保存。</p>
+<p>1959年，中国历史博物馆建成，商后母戊鼎从南京调往北京，存于国家博物馆。</p>
+<p>20世纪70年代，学术界对商后母戊鼎的铭文提出了新的考释：将“司”改释为“后”。</p>
+<p>2011年3月底，商后母戊鼎的标牌和解说词进行改名。</p>
+<h2 id="文物特征"><a class="header" href="#文物特征">文物特征</a></h2>
+<p>商后母戊鼎高133厘米、口长110厘米、口宽79厘米，重832.84千克；器厚立耳，折沿，腹部呈长方形，下承四柱足。器腹四转角、上下缘中部、足上部均置扉棱。以云雷纹为地，器耳上饰一列浮雕式鱼纹，耳外侧饰浮雕式双虎食人首纹，腹部周缘饰饕餮纹，柱足上部饰浮雕式饕餮纹，下部饰两周凸弦纹。器腹部内壁铸铭“后母戊"，是商王母亲的庙号。“商后母戊鼎器身与四足为整体铸造，鼎耳则是在鼎身铸成之后再装范浇铸而成。铸造此鼎，所需金属原料超过1000千克。</p>
+<h2 id="文物鉴赏"><a class="header" href="#文物鉴赏">文物鉴赏</a></h2>
+<p>商后母戊鼎，形制巨大，雄伟庄严，工艺精巧；鼎身四周铸有精巧的盘龙纹和饕餮纹，增加了文物本身的威武凝重之感。饕餮是传说中喜欢吃各种食物的神兽，把它铸在青铜器上，表示吉祥、丰年足食。耳廓纹饰俗称虎咬人头纹，这种纹饰是在耳的左右作虎形，虎头绕到耳的上部张口相向，虎的中间有一人头，好像被虎所吞噬。耳的上面还有两尾鱼形。足上铸的蝉纹，图案表现蝉体，线条清晰。腹内壁铸有“后母戊”三字，字体笔势雄健，形体丰腴，笔划的起止多显峰露芒，间用肥笔。</p>
+<h2 id="出土环境"><a class="header" href="#出土环境">出土环境</a></h2>
+<p>商后母戊鼎出土于河南省安阳市武官村，武官村位于安阳市西北3千米的江河北岸、殷城宫殿宗庙区和王陵区之间，属于殷墟遗址重点保护区，武官村区域先后发掘出了上千座墓葬，还有十几座王公大墓。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>商后母戊鼎是已知中国古代最重的青铜器；商后母戊鼎在塑造泥模、翻利陶范、合范灌注等环节中，存在一系列复杂的技术问题。商后母戊鼎的铸造，充分说明商代后期的青铜铸造不仅规模宏大，而且组织严密，分工细致，足以代表高度发达的商代青铜文化。此外，经光谱定性分析与化学分析的沉淀法所进行的定量分析，“后母戊”青铜鼎含铜84.77%、锡11.64%、铅2.79%，与战国时期成书的《考工记筑氏》所记鼎的铜锡比例基本相符，从中可见中国古代青铜文明的内在传承。</p>
+<h2 id="重要展览"><a class="header" href="#重要展览">重要展览</a></h2>
+<p>2005年，商后母戊鼎在殷墟博物馆展出。</p>
+<p>2013年，时任英国首相卡梅伦在时任中国总理李克强的陪同下参观了国家博物馆内商后母戊鼎等文物。</p>
+<p>2019年，中意文化遗产合作活动中意大利时任总理朱塞佩·孔特参观并点评了“古代中国基本陈列”商后母戊鼎等文物精品。</p>
+<h2 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h2>
+<p>2002年1月18日，商后母戊鼎被国家文物局作为国家一级文物被列入《首批禁止出境展览文物目录》。</p>
+<h2 id="文物争议"><a class="header" href="#文物争议">文物争议</a></h2>
+<h3 id="由来"><a class="header" href="#由来">由来</a></h3>
+<p>商后母戊鼎的由来有2种说法：一说为，“司”读“祀”，“母戊”是商王文丁之母的庙号，鼎是文丁为祭祀母亲所铸；另一说为“司”意为“后”，表明墓主生前乃商王之“后”。</p>
+<h3 id="名称"><a class="header" href="#名称">名称</a></h3>
+<p>1976年，安阳殷墟妇好墓发掘出后母辛鼎，对比发现后母辛鼎的形制、纹饰和铭文的风格均和商后母戊鼎一致，而历史记载妇好是商王武丁的一个王后，专家由此断定出土后母戊鼎的墓的主人也是武丁之妻。商后母戊鼎是商王祖庚或祖甲为祭祀母亲戊而作的祭器。这样反推，“司”应当是“后”的意思。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prohibit/prohibit-9.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prohibit/prohibit-11.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prohibit/prohibit-9.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prohibit/prohibit-11.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

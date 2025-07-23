@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>半坡遗址 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/BanpoSite.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="半坡遗址"><a class="header" href="#半坡遗址">半坡遗址</a></h1>
+<p>半坡遗址（Banpo Site），位于陕西省西安市浐河东岸的半坡村，是黄河流域一个典型的母系氏族公社村落遗址，属仰韶文化的一种早期类型，距今约6000年。</p>
+<p>半坡遗址主要是大型聚落，外围有宽约6~8米的大围壕，内为居住区，遗址总面积约5万平方米，分为居住区、制陶区和墓葬区。1953年春，西安市在建设纺织城时发现，发掘面积1万平方米，获得了丰富的文化遗存。计有房屋遗址45座，圈栏2座，窖穴200座，制陶窑址6座，墓葬250座，生产工具及生活用具约万件。半坡遗址首次揭露了中国境内以环壕聚落为特征的新石器时代闭合式聚落形态及其布局特征，同时，展示了仰韶文化不同阶段的文化面貌和社会结构特征，从而为仰韶文化的研究树立了半坡类型、半坡晚期类型两个阶段的标杆，为构建中国新石器时代文化编年标尺提供了标志性参照系。此外，遗址内出土的遗迹遗物，为研究新石器时代的环境、生业形态、建筑材料与建筑技术、埋葬制度与社会结构、彩陶雕塑与早期宗教乃至社会治理方式等重大问题，提供了前所未有的实物资料和开创性的研究成果。</p>
+<p>1961年3月4日，半坡遗址被中华人民共和国国务院公布为第一批全国重点文物保护单位。2021年10月，半坡遗址被国家文物局评为“百年百大考古发现”。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>半坡遗址是新石器时代仰韶文化聚落遗址，年代为中国原始社会母系氏族繁荣时期遗留下的村落遗址，已有6000~6700多年历史。</p>
+<p>1953年春，西北文物清理队在西安东部浐河东岸的二级阶地上发现了半坡遗址；同年9月，中科院考古研究所进行了较深入的调查。</p>
+<p>1954年~1957年，由考古学家石兴邦先生主持，先后对半坡遗址进行了5次较大规模的发掘，先后参加发掘工作的有将近200人，总计发掘面积1万平方米。</p>
+<p>2002年~2005年，配合半坡遗址保护大厅改造工程建设的随工清理中，发现了祭祀等重要遗迹和石砚等重要遗物。</p>
+<h2 id="遗址特点"><a class="header" href="#遗址特点">遗址特点</a></h2>
+<p>半坡遗址分为居住区、墓葬区和制陶作坊区。居住区由一条大的人工壕沟围绕，区内被1条小沟分为2片，每片中心有1座大房子，周围是小居室。房屋形制有半地穴式和地面建筑2种，房子之间有储藏东西的窖穴。房子周围还发现长方形家畜圈栏、小孩瓮棺葬和幼儿土坑墓。大沟外北边是公共墓地，东边是窑区。从出土的石斧、石锛、石铲、石刀、石碾等生产工具和陶罐、陶盆、小口尖底瓶等生活用具来看，半坡人过着以农业为主，渔猎为辅的生活。他们具有较强的审美观念，在彩陶上绘着人面、鱼、鹿、植物等象生性花纹和三角形、圆点等几何图案，还用石、骨、陶、蚌制成耳饰、发饰等装饰品。</p>
+<p>半坡人的生产工具以石、骨为原料。石器有斧、锛、凿、刀、铲、砍伐器、磨棒、磨盘、箭头、网坠和纺轮。骨器有骨针和鱼钩，有的鱼钩还有倒刺。生活用具主要是红底黑彩陶器。陶器以圆底钵为主，纹饰以条纹、三角纹、细绳纹、弦纹为主，彩绘以黑彩鱼纹为主，还有与鱼有关的网纹。半坡人创制的尖底瓶，是最早的汲水容器，在设计上有着极不寻常的科学内涵。半坡彩陶还有笔划简单、形态规范的刻划符号，似是原始的中国文字雏形。资料表明，半坡人已从事原始农耕，兼有鱼猎、家畜饲养和陶器制作等生产活动。</p>
+<h2 id="文物遗存"><a class="header" href="#文物遗存">文物遗存</a></h2>
+<h3 id="综述"><a class="header" href="#综述">综述</a></h3>
+<p>1954年~1957年，考古工作者先后对半坡遗址进行了5次较大规模的发掘，发掘面积1万平方米，共发掘出房屋45座、圈栏2处、200多个窖穴、陶窑遗址6座、墓葬250座（其中成人墓葬174座、幼儿瓮棺73座），出土生产工具和生活用品约1万件。生产工具主要有石斧、石锛、石铲、石锄、矛头、箭头、鱼叉、鱼钩、纺轮、骨针等。还有石制研磨器（包括磨臼和磨石，是研磨颜料的工具），还发现了粟类等粮食作物。生活用具主要为彩陶器，种类有钵、碗、盆、盂、盘、杯、罐、缸、甑、釜、鼎、瓮等。在1只陶罐里还保存着炭化了的菜籽，系属于白菜、芥菜一类的种子。在彩陶器上多绘有各种图形，器物表面多饰有绳纹、线纹，还绘有人面、鱼、鹿、植物等花纹，红底黑纹。在一些陶钵的口沿上还刻有各种符号，有20~30种之多，这些符号可能是中国文字的起源。</p>
+<h3 id="人面鱼纹陶盆"><a class="header" href="#人面鱼纹陶盆">人面鱼纹陶盆</a></h3>
+<p>人面鱼纹陶盆是半坡遗址出土的半坡彩色陶器的典型作品。人面鱼纹的生动形象反映了半坡人丰富的艺术想象力，其线条明快，人头像的头顶有三角形的发髻，两嘴角边各衔一条小鱼，反映了半坡人和鱼之间的密切关系和特殊的感情，也可能是半坡氏族崇奉的图腾。</p>
+<h3 id="尖底瓶"><a class="header" href="#尖底瓶">尖底瓶</a></h3>
+<p>尖底瓶是半坡出土的最具特点的陶器之一，它是巧妙运用重心原理的一种汲水器。具体方法是在双耳上系上绳子，由于水的浮力，瓶子一接触水面就自动倾斜，灌满水后又因为重心移动而自然竖起。用它盛水还有两大特点，一是便于手提与肩背，二是口小，灌满水后从河边到居住区的路上水不容易漫出。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>因半坡遗址的发掘，而有仰韶文化半坡类型之名，与同时期确立的庙底沟类型并驾齐驱，推动了中国新石器时代考古学的研究与发展，大面积揭露出半坡史前聚落的局部面貌，建立了遗址博物馆，对聚落形态和中国原始社会历史研究有着重要的科学价值。</p>
+<p>半坡遗址是中国第一次以大面积揭露古遗址的聚落考古方式开展的考古工作和研究，开创了中国聚落考古学先河。《西安半坡》考古发掘报告将半坡遗址新石器时代的遗存划分为早晚两期：早期遗存是遗址的主体遗存，保存较好，遗存丰富，年代为距今约六七千年，以人面鱼纹彩陶为标志性要素，属于仰韶文化早期，有人工挖设的内外两重围沟环绕；晚期遗存以喇叭口尖底瓶和简化彩陶为代表，属于仰韶文化晚期，被称为仰韶文化半坡晚期类型。</p>
+<p>半坡遗址首次揭露了中国境内以环壕聚落为特征的新石器时代闭合式聚落形态及其布局特征，同时，展示了仰韶文化不同阶段的文化面貌和社会结构特征，从而为仰韶文化的研究树立了半坡类型、半坡晚期类型两个阶段的标杆，为构建中国新石器时代文化编年标尺提供了标志性参照系。此外，遗址内出土的遗迹遗物，为研究新石器时代的环境、生业形态、建筑材料与建筑技术、埋葬制度与社会结构、彩陶雕塑与早期宗教乃至社会治理方式等重大问题，提供了前所未有的实物资料和开创性的研究成果。</p>
+<p>半坡遗址是黄河流域规模最大、保存最完整的母系氏族村落遗址，在中国新石器时代考古中确立了一个新的文化类型——仰韶文化半坡类型，它为研究仰留文化提供了相对完整的资料，是史前考古的重要宝库。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<p>1958年4月28日，半坡遗址博物馆建成开放，陈列展览面积约4500平方米。</p>
+<p>1961年3月4日，半坡遗址被中华人民共和国国务院公布为第一批全国重点文物保护单位。</p>
+<p>2006年6月9日，半坡遗址新保护大厅落成并正式向游人开放，建筑面积4600平方米。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="仰韶文化"><a class="header" href="#仰韶文化">仰韶文化</a></h3>
+<p>半坡遗址为新石器时代仰韶文化的聚落遗址，是一处母系氏族公社聚落。遗址发掘的房屋有平面呈圆形或正方形、长方形等几种形制。方形房屋一般面积较小。圆形或长方形房屋的面积一般在20平方米左右，个别小的仅10平方米。在居住处的中心地点有1座面积相当大的长方形房屋，面积达160平方米左右，是氏族成员公共活动的场所。发掘约有200余座，说明半坡氏族公社已是一个相当大的集体和聚落。</p>
+<p>仰韶文化（又称彩陶文化），因最早发现于仰韶村遗址而得名。共发现遗址1000余处，经较大规模发掘的有10余处，其年代约为其年代为新石器时代（前4800年~前3000年）间。</p>
+<h2 id="荣誉称号"><a class="header" href="#荣誉称号">荣誉称号</a></h2>
+<p>2021年10月，半坡遗址被国家文物局评为“百年百大考古发现”。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/HemuduCulture.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-1/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/HemuduCulture.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-1/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

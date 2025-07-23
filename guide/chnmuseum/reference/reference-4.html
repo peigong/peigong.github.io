@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>九大镇国之宝 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/reference-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="九大镇国之宝"><a class="header" href="#九大镇国之宝">九大镇国之宝</a></h1>
+<p>《国家人文历史》（原《文史参考》杂志）独家邀请九位考古、文博方面的专家，在国宝中做取舍之间的思量、权衡，盘点出中国文物中的九大“镇国之宝”。</p>
+<p>何物能“镇国”？这一点官方没有说法。故宫博物院前院长郑欣淼曾表示，北京故宫馆藏珍品众多，如果把中国各大博物馆馆藏文物拿出来PK，按照文物门类每种选出十大国宝，再从中挑出一件作为“镇国之宝”，难度很高，争议也必定很大。</p>
+<h2 id="基本内容"><a class="header" href="#基本内容">基本内容</a></h2>
+<p>一、金银器：太阳神鸟金饰。</p>
+<p>二、青铜器：西周利簋。</p>
+<p>三、石刻壁画：秦石鼓文</p>
+<p>四、文献书简：《孙子兵法》竹简</p>
+<p>五、书法：《平复帖》</p>
+<p>六、绘画：《五牛图》</p>
+<p>七、工艺品：真珠舍利宝幢。</p>
+<p>八、陶瓷：定窑孩儿枕</p>
+<p>九、玉器：渎山大玉海</p>
+<h2 id="详细介绍"><a class="header" href="#详细介绍">详细介绍</a></h2>
+<h3 id="太阳神鸟金饰三千年前的飞天梦"><a class="header" href="#太阳神鸟金饰三千年前的飞天梦">太阳神鸟金饰：三千年前的飞天梦</a></h3>
+<p>太阳神鸟金饰，作为中国文化遗产的标志，象征着中华民族追求光明、奋发向上的精神风貌；太阳神鸟金饰又随神舟六号飞船遨游太空，象征着中华民族如神鸟一样，实现了千年飞天梦。</p>
+<p>太阳神鸟图案反映了人类早期朴素的世界观和宇宙观。阳光是生命的源泉，因此成为人们最早崇拜的神；中华先民把太阳和在天空中飞翔的神鸟联系在一起，认为是神鸟在驮着太阳飞行。太阳神鸟是古蜀人早期部落的图腾，“神鸟绕日”表达了中华先民向往太阳、崇尚光明的飞天梦想。</p>
+<h3 id="西周利簋武王伐纣亲历记"><a class="header" href="#西周利簋武王伐纣亲历记">西周利簋：武王伐纣亲历记</a></h3>
+<p>1976年在陕西临潼出土的利簋，内壁铭文明确记载“武王征商”之役发生在某年“甲子”日的早晨，“岁”星正当中天。在“夏商周断代工程”实施过程中，碳14测年专家用西周初年遗存中出土的炭样作了测年，给出武王伐纣之役发生在公元前1050——前1020年的年代范围；天文学家依据铭中所记“甲子”日“岁”（木）星在中天的天象，参照《国语·周语下》记载的天象记录，计算出武王伐纣的时间在公元前1046年1月20日。由此，古代史上这一著名的战役有了一个绝对年代；它为商周两代的划分，提供了重要的年代依据。一件不大的铜器，以它不多的文字，为破解上古史中一个重要的疑案作出贡献，足见其弥足珍贵。利簋无疑是一件国宝重器！</p>
+<h3 id="秦石鼓文大秦帝国的东方红"><a class="header" href="#秦石鼓文大秦帝国的东方红">秦石鼓文：大秦帝国的“东方红”</a></h3>
+<p>关于石鼓文的确切年代，几千年来学者讨论不断，提出各种看法，至今还没有一个能够被大家都赞同的确定的结论。现有多位学者认为它是秦景公时的作品。前不久，高明先生又对这一问题加以讨论，提出了新的见解。他根据石鼓文字形体、刻制工具与秦君称谓这三方面的证据认为石鼓文的时间应该在战国晚期，秦惠文王是唯一可以既称公又称嗣王的，比较符合石鼓文的内容，文字特征与刻制工具也属于这一时期。唐兰先生曾指出诅楚文和始皇刻石皆晚出，认为石鼓应在前四世纪（献公时）。Gilbert L Mattos （马几道）在研究秦石鼓时也认为刻石的风气在中国出现较晚，所以石鼓应该是前五世纪的作品。这种见解与高明的看法结合，可以为石鼓文产生于战国晚期的说法提供比较合理的解释。</p>
+<h3 id="西汉孙子兵法竹简为孙武孙膑正名"><a class="header" href="#西汉孙子兵法竹简为孙武孙膑正名">西汉《孙子兵法》竹简：为孙武、孙膑正名</a></h3>
+<p>《孙子兵法》是世界上最早的军事著作，其作者孙武是春秋时期的军事家，有“兵圣”的美誉，他留下来的唯一著作——《孙子兵法》，不但成为其后中国历代研习兵法者必读之书，而且较早就有十余种文字的译本发行海外，因此在世界上也产生了极为深远的影响：叱咤风云的拿破仑在作战中经常阅读；上世纪七十年代，美国战略专家根据《孙子兵法》，提出改善美苏关系的“孙子核战略”；其后更出版孙子的语录供军人阅读。《孙子兵法》还成为美国、日本等国企业家进行商战的必读之书。</p>
+<h3 id="平复帖见证汉字流变"><a class="header" href="#平复帖见证汉字流变">《平复帖》：见证汉字流变</a></h3>
+<p>现存的《平复帖》是孤本，没有其他作品可供比对，所以无法判定其究竟是不是出自陆机之手，但这都已经不是很重要了。从武周时期王方庆临摹先人王羲之、王献之等而成的《万岁通天帖》看，东晋时楷书已经成形，再证以西晋写经，可以肯定有隶书特点的章草《平复帖》是西晋真迹，它一方面是隶书发展过程中的标本，同时更是汉字由隶书向楷书过渡的重要佐证。陆机《平复帖》是历史上第一件流传有序的法帖墨迹，其上盖有历代名家的藏书章，帮后人层层把关。所以在书法国宝中，《平复帖》是堪称“镇国之宝”的。</p>
+<h3 id="五牛图重金购回的神妙绝品"><a class="header" href="#五牛图重金购回的神妙绝品">五牛图：重金购回的神妙绝品</a></h3>
+<p>韩滉《五牛图》卷是少数几件唐代传世纸绢画作品真迹之一，也是现存最古的纸本中国画，因而受到广泛重视，堪称“镇国之宝”。《五牛图》画在一张窄而长的桑皮纸上，五牛姿态各异、身形逼肖，全图除了一丛荆棘之外，不设任何背景，着重突出牛的既倔强又温顺的性格。韩用粗壮雄健而富于变化的线描，表现牛的骨骼和筋骨，以赭、黄、青、白等色彩表现五牛毛色的不同，且根据牛体的凹凸施以不同颜色，具有立体感。“点睛”是牵动全局的关键，画家将牛眼适当夸大，着意刻画，使五牛瞳眸炯炯有神，达到了形神兼备的艺术境界，所以元代大画家赵孟頫题道：“五牛神气磊落，希世名笔也。”韩由于画艺高超，又对牛的生活习性熟悉，才能留下如此神妙绝品。</p>
+<h3 id="真珠舍利宝幢-北宋苏州工艺集锦"><a class="header" href="#真珠舍利宝幢-北宋苏州工艺集锦">真珠舍利宝幢 ：北宋苏州工艺集锦</a></h3>
+<p>选择这件北宋真珠舍利宝幢，一是因为它有具体的出土时间。这件宝幢制造于北宋年间，时代很早，在同类木刻作品中是少数保存这么完好的。二是工艺极为精湛，使用了镂雕的技术，分作三层，刻画了各种飘逸生动的仙人形象。塔顶嵌了一颗水晶珠，作为顶部的装饰，全身上下用了大小相等的四万颗色彩斑斓的珍珠，玲珑剔透，装饰极为珍贵。运用了玉石雕刻、金银丝编制、金银皮雕刻、檀香木雕等十多种特种工艺。整座宝幢造型优美、工艺之精巧举世罕见，代表了整个北宋时期苏州工艺的集锦。</p>
+<h3 id="定窑孩儿枕观音赐子栩栩如生"><a class="header" href="#定窑孩儿枕观音赐子栩栩如生">定窑孩儿枕：观音赐子，栩栩如生</a></h3>
+<p>瓷枕的烧制最早出现于隋代，唐以后日渐增多，为古代寝具，古书记载“瓷枕能明目益睛，至老可读细书。”定窑瓷器以白瓷为主，大都为实用的瓶、罐、碗等，孩儿枕是难得一见的器型。现藏于故宫博物院的这件定窑孩儿枕，釉色牙黄，工艺精巧，先使用模具烧制成型，再加以精细的雕工，活泼可爱的孩童侧卧于榻上，双臂紧抱置于头下，两脚叠压稍稍抬起，孩儿神态栩栩如生，是中国陶瓷史上的经典之作。这件定窑孩儿枕不仅是宋代风俗的见证，也是研究宋代文化和陶瓷艺术的珍贵实物资料。</p>
+<h3 id="渎山大玉海酒瓮里的改朝换代"><a class="header" href="#渎山大玉海酒瓮里的改朝换代">渎山大玉海：酒瓮里的改朝换代</a></h3>
+<p>玉器是最早从古代文明中产生的文物，它的制作和使用也从未在中华文明进程中被中断，历朝历代都有玉器文物珍品流传。玉器文物还没有类似碳14追踪年代的技术，其价值的判断主要还是靠鉴定者的丰富经验和细致的考证。大致来讲，古代玉器主要是从历史价值、艺术价值和科技价值几个方面来确定其价值。元代的渎山大玉海是现存最早的大型玉器，鲜有出其右者，且在历史上流传有序，元明清三代都有历史记叙，承载的历史记忆非常丰富。大玉海从广寒殿到团城，也间接反映了北京的历史变迁，综合考虑，可以作为镇国玉器之首。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/reference-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/reference-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

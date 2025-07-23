@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2-1 西周利青铜簋 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prohibit/prohibit-9.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="西周利青铜簋"><a class="header" href="#西周利青铜簋">西周利青铜簋</a></h1>
+<p>利簋（Guǐ），又名“武王征商簋”、“周代天灭簋”、“檀公簋”，西周早期青铜器，1976年出土于陕西临潼县（今西安市临潼区）零口镇，现收藏于中国国家博物馆。</p>
+<p>利簋为圆形两耳方座，通高28厘米，口径22厘米，重7.95千克。利簋器侈口，兽首双耳垂珥，垂腹，圈足下连铸方座。器身、方座饰饕餮纹，方座平面四角饰蝉纹。器内底铸铭文4行33字，记载了甲子日清晨武王伐纣这一重大历史事件。</p>
+<p>利簋采用上圆下方的形制，是西周初期铜簋的典型造型，同时也是中国古人对天圆地方这种古老观念的体现。利簋铭文内容与中国古代文献记载完全一致。作器者名“利”，他随周武王参加战争，胜利后受到奖赏，铸造这件铜器以记功并用来祭奠祖先。利簋是迄今能确知的最早的西周青铜器。</p>
+<h2 id="大事记"><a class="header" href="#大事记">大事记</a></h2>
+<ul>
+<li>1976年 - 文物出土 - 陕西临潼县零口镇出土。</li>
+<li>2002年 - 文物禁令 - 西周利簋被列为首批禁止出国（境）展览的文物。</li>
+</ul>
+<h2 id="名称来源"><a class="header" href="#名称来源">名称来源</a></h2>
+<p>铭文中所提到的有司，是当时中国古代的官职，在中国商周时期，青铜被称为“金”，是只有王族才能使用的贵重金属，商军溃败之后，身为有司的利得到周武王赏赐给他的青铜，并铸造了一件铜簋，作为永世的纪念。由于这件青铜簋是利所铸造，所以人们就称它为利簋。</p>
+<p>因为利簋铭文中所记载的武王伐纣在甲子日晨，并逢岁星当空，印证了《尚书·牧誓》中所记载的“时甲子日昧爽，王至于商郊牧野”。所以，利簋也被称作“武王征商簋”。</p>
+<h2 id="簋内铭文"><a class="header" href="#簋内铭文">簋内铭文</a></h2>
+<h3 id="正文释义"><a class="header" href="#正文释义">正文释义</a></h3>
+<p>簋腹内底铸铭文4行33字如下：</p>
+<p>武王征商，唯甲子朝，岁鼎，克昏夙有商，辛未，王在阑师，赐有（右）事（史）利金，用作檀公宝尊彝。</p>
+<p>释文译文大意是：</p>
+<p>①周武王征伐商纣王。一夜之间就将商灭亡，在岁星当空的甲子日早晨，占领了朝歌。在第八天后的辛未日，武王在阑师论功行赏，赐给右史利许多铜、锡等金属，右史利用其为祖先檀公作此祭器，以纪念先祖檀公。（该释文为张政烺先生所做的释文）</p>
+<p>②武王向商都发起最后的攻击，是在甲子日的黎明，当时岁星中天，直到天黑，占有了商都。在第八天后的辛未日，武王在阑师论功行赏，赐给右史利许多铜、锡等金属，右史利用其为祖先檀公作此祭器，以纪念先祖檀公。（ 黄怀信先生所作释文）</p>
+<p>③周武王征伐商国，在甲子日的早上举行岁祭，并进行贞卜，得到能克商的吉卜，把这一消息传闻官兵，士气大振。在第二天乙丑早上占有了商，辛未那天，武王在管师赏赐右史利铜，利就用这些铜做檀公宝尊彝。</p>
+<h3 id="释义争议"><a class="header" href="#释义争议">释义争议</a></h3>
+<p>利簋自出土以来，唐兰、于省吾、张政琅、徐中舒等都作过考释，但该器铭文中“岁鼎”一辞，各家分歧较大。有将“岁鼎”与卜辞“岁卜”相联系，认为“岁鼎”是“指贞问一岁之大事而言”；有认为应解释作“岁祭时进行贞问”；也有一些学者主张“岁鼎”与卜辞“岁卜”毫无关联，“岁”指的是岁星，即木星；此外，还有学者认为应该将“岁鼎”解释为“越鼎”，意思为“夺得了鼎”的人。</p>
+<p>张政琅释“岁”为岁星（木星），释“鼎”为“丁”，转训作“当”，意为“岁星当前”。</p>
+<p>徐中舒认为鼎当读为则。根据为郭忠恕在《佩觽》说的“古文以贞为鼎，籒文以鼎为则”。徐中舒先生和张政琅先生一样认为“岁”是岁星。</p>
+<p>唐兰先生则认为这两个字应当是“越鼎”，即指夺取了鼎。</p>
+<p>锤凤年同样人这两个字不是岁鼎，他认为这两个字应当是戍晃，即驻征商之师于此。</p>
+<p>戚桂宴认为“岁鼎”是岁星当空，表示吉兆，“岁”即岁星，“鼎”训为当。</p>
+<p>于省吾、赵诚、黄盛璋、王宇信等认为这两字应为“岁贞”，即岁祭时进行贞问。赵诚认为“岁为一岁之大事”也说的通。</p>
+<h2 id="文物鉴赏"><a class="header" href="#文物鉴赏">文物鉴赏</a></h2>
+<h3 id="纹饰"><a class="header" href="#纹饰">纹饰</a></h3>
+<p>利簋的腹部和方座座壁的纹饰是以饕餮纹为主题；两侧加饰倒夔纹；圈足饰夔纹带；方座面四隅加饰蝉纹；都用云雷纹为底来衬托主题。方座上的兽面造型与利簋腹部的主体兽纹相仿，兽面巨目凝视，森严恐怖。仔细观察，在利簋的圈足部位还装饰有夔龙纹，呈二方连续图案绕利簋一周，方座四隅饰以蝉纹。兽面纹、夔龙纹和云雷纹三种纹饰共同装饰在青铜利簋上，线条流畅清晰，给这只肃穆庄严的西周铜簋平添了几分凝重和神秘。</p>
+<p>利簋的主要部位腹上用饕餮纹来装饰。饕餮纹与夔纹、龙纹、凤纹等一样，都属于幻想的神话动物。从艺术的角度来看，饕餮纹的形象被刻划为以鼻梁为中心，眉、眼、耳、角分别以对称形式排列在左右两侧。</p>
+<p>饕餮纹所呈现出的狰狞恐怖具有一种神秘的威严感，体现了奴隶主上升阶段时的历史必然力量，是一种“狞厉之美”；但也体现了兽性的残忍，即美中有丑。饕餮纹一方面是统治阶级为了张扬其威严的权利，以之镇慑邪魔和愚弄平民；另一方面是为了告诫自己的子孙臣仆们不可过于贪暴。</p>
+<p>夔纹的形象是头大嘴长，张口，身细尾尖作卷曲状，均为一足，一角。夔纹和饕餮纹具有同样的装饰作用，所以夔纹也常被饰于器物上。</p>
+<p>云雷纹是青铜器上的一种最常见的典型纹饰。基本特征是以连续的回旋形线条构成的几何图形。有的作圆形的连续构图，也单称为云纹；有的作方形的连续构图，也单称雷纹。云雷纹常装饰在青铜器纹饰的空白处作为底纹，用以烘托主题纹饰，如利簋上的云雷纹被用来烘托饕餮纹。</p>
+<p>利簋器身所饰的花纹，具备了特有的历史面貌和时代风格，它一定程度上反映了商周时期的工艺美术特征。这些装饰花纹是和盛行青铜器的商周时代的社会生产、生活、思想意识紧密联系的，是奴隶制社会上层建筑领域中的组成部分之一。</p>
+<h3 id="文字"><a class="header" href="#文字">文字</a></h3>
+<p>利簋铭文字体和商甲骨文、金文的形体结构是一致的。其铭文字体扁长，字迹凝重稳健，并保留有商代铭文字体首尾尖中间粗的特征，是西周早期金文的代表作之一。</p>
+<h2 id="价值地位"><a class="header" href="#价值地位">价值地位</a></h2>
+<h3 id="价值"><a class="header" href="#价值">价值</a></h3>
+<p>该簋最为重要，也最有价值的是该器腹内底部所铸4行33字铭文，虽很简略，却记录了一次重大历史事件，即武王伐商的“牧野大战”，因此，也有人称其为“武王征商簋”。</p>
+<p>利簋内壁铭文明确记载“武王征商”之役发生在某年“甲子”日的早晨，“岁”星正当中天。之前，由于缺乏实物资料，关于牧野之战的具体日期，千百年来，史学界多有纷争，历代学者根据有关记载推算出的年代就有数十种之多。在“夏商周断代工程”实施过程中，碳14测年专家用西周初年遗存中出土的炭样作了测年，给出武王伐纣之役发生在公元前1050-前1020年的年代范围；天文学家依据铭中所记“甲子”日“岁”（木）星在中天的天象，参照《国语·周语下》记载的天象记录，计算出武王伐纣的时间在公元前1046年1月20日。由此，古代史上这一著名的战役有了一个绝对年代；它为商周两代的划分，提供了重要的年代依据。</p>
+<p>利簋的发现，除澄清了以往关于武王伐纣具体日期疑惑外，还证实了《尚书·牧誓》、《逸周书·世俘》等文献记载的某些具体史实。例如武王伐纣在甲子日晨，并逢岁（木）星当空，这印证了《尚书·牧誓》中“时甲子日昧爽，王至于商郊牧野”的记录，也与《淮南子·兵略训》等古代文献所记相合；又如，利簋铭文证实了古籍中所载的“战一日而破纣之国”的正确记载。总之，利簋铭文具有非常重要的史料价值。</p>
+<h3 id="地位"><a class="header" href="#地位">地位</a></h3>
+<p>2003年，利簋随34件组档案文献列入第二批中国档案文献遗产名录。2002年1月18日， 利簋被确定为首批禁止出国（境）展览的文物。</p>
+<p>2012年，《国家人文历史》（原《文史参考》杂志）独家邀请九位考古、文博方面的专家，在国宝中做取舍之间的思量、权衡，盘点出中国文物中的九大“镇国之宝”。利簋为镇国青铜器。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prohibit/prohibit-8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prohibit/prohibit-10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prohibit/prohibit-8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prohibit/prohibit-10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

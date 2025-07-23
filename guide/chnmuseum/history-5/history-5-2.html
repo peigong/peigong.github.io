@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>李静训 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-5/history-5-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="李静训"><a class="header" href="#李静训">李静训</a></h1>
+<p>李静训（600年－608年），字小孩，陇西成纪（今甘肃秦安县）人，北周大将军李贤曾孙女，光禄大夫李敏之女。</p>
+<p>自幼深受外祖母北周太后杨丽华的溺爱，一直在宫中抚养。隋炀帝大业四年（608年），殁于宫中，时年九岁。杨丽华十分悲痛，以厚礼葬之。1957年，在西安城西发现了保存最完整，等级规格最高的隋代墓葬——李静训墓。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<p>根据墓志和有关文献得知，李静训家世显赫，她的曾祖父李贤是北周骠骑大将军、河西郡公。祖父李崇，是一代名将，年轻随从北周武帝平齐，又与隋文帝杨坚一起打天下，官至上柱国。开皇三年（583年），在抗拒突厥侵犯的战争中，以身殉国，终年才48岁。追赠豫、鄎（息阝）、申、永、浍、亳六州诸军事、豫州刺史。</p>
+<p>李崇之子李敏，即李静训的父亲。隋文帝杨坚念李崇为国捐躯的赫赫战功，对李敏也倍加恩宠，自幼养于宫中，李敏多才多艺，《隋书》中说他“美姿仪，善骑射，歌舞管弦，无不通解”。开皇初，北周宣帝宇文赟和皇后杨丽华（即隋文帝杨坚的长女）的独女宇文娥英亲自选婿，数百人中就选中了李敏，并封为上柱国，后官至光禄大夫。</p>
+<p>据墓志记载，李静训自幼深受外祖母北周太后杨丽华的溺爱，一直在宫中抚养，“训承长乐，独见慈抚之恩，教习深宫，弥遵柔顺之德”。然而“繁霜昼下，英苕春落，未登弄玉之台，便悲泽兰之天”。大业四年（608年）六月一日，李静训殁于宫中，年方九岁。杨丽华十分悲痛，厚礼葬之。</p>
+<h2 id="亲属成员"><a class="header" href="#亲属成员">亲属成员</a></h2>
+<ul>
+<li>曾祖父：李贤（北周骠骑大将军、河西郡公）。</li>
+<li>外曾外祖父：杨坚（隋文帝）。</li>
+<li>外曾外祖母：独孤伽罗（文献皇后）。</li>
+<li>祖父：李崇（隋朝上柱国、豫州刺史、广宗郡公）。</li>
+<li>外祖父：宇文赟（北周宣帝）。</li>
+<li>外祖母：杨丽华（北周宣帝皇后，隋朝乐平公主）。</li>
+<li>父亲：李敏（光禄大夫、岐州刺史、澧国公）。</li>
+<li>母亲：宇文娥英（北周公主）。</li>
+</ul>
+<h2 id="李静训墓"><a class="header" href="#李静训墓">李静训墓</a></h2>
+<p>李静训墓位于陕西省西安市梁家庄附近，于1957年发掘，墓主人李静训是隋朝乐平公主杨丽华的外孙女，隋代大业四年(608)离世时年仅9岁，家世显赫，曾祖父是北周时期赫赫有名的骠骑大将军李贤。李静训墓中，石椁石棺雕制精美，随葬大量金银玉器和瓷器、玻璃器等。其中有一条镶嵌珍珠和鸡血石、雕大角鹿的青金石的金项链，是考古发现的项链中最为精美的一件。还有一对镶珠金手镯和两枚金戒指以及金质发饰、衣饰，手指上都戴着银指甲套。这些饰物把她浑身上下装扮得珠光宝气，灿烂辉煌，正如其墓志铭上所说：“戒珠共明并曜，意花与香佩俱芬。”</p>
+<h3 id="墓葬发掘"><a class="header" href="#墓葬发掘">墓葬发掘</a></h3>
+<p>1957年，中国社科院考古研究所的考古工作者们在西安城西的梁家庄附近，意外的发现了保存最完整，等级规格最高的隋代墓葬——李静训墓。</p>
+<p>李静训墓位于今西安市玉祥门外西大街南约50米处。该墓墓室为长方形竖井坑，就是从地面向下挖一个平面为长方形的土坑作为墓室，墓室深度可达2.9米。在墓室的南边有一斜坡型墓道，长6.85米。盛放墓主人的石棺就在此墓室中。石棺之上便是墓葬的填土，夯土的夯层致密。</p>
+<p>清理夯土后，除棺前的墓志铭外，墓室正中放置着一个造型逼真的殿堂式的石棺。</p>
+<p>轻轻打开棺板，眼前出现一块早已残朽的丝麻织品，长约70厘米宽26厘米~35厘米，厚约3厘米。这件丝麻织品应当是盖在墓主人身上的被子。轻轻揭去丝麻织品，散乱的人骨和随葬品便出现了。数量繁多的陶俑，镶嵌玉石的项链，结构精巧的手镯，形式多样的日用器具，洁白晶莹的邢窑瓷器，来自波斯的金银器皿……琳琅满目，宛如微缩的人间繁华。</p>
+<h3 id="墓中葬具"><a class="header" href="#墓中葬具">墓中葬具</a></h3>
+<p>墓中葬具是一具石棺和一具石椁，两件石质葬具皆为青石制成。椁长2.63米，高1.61米，宽1.1米，由17块青石板拼接而成。揭开石椁，一具雕刻精美，堪称石雕艺术品的仿殿堂石棺跃入眼帘。石棺平面呈长方形，石棺长1.92米，宽0.89米，高1.22米。就是这样一座看起来仅能容身的石棺，竟被技艺高超的石匠雕刻成了殿堂的模样。</p>
+<p>这座石质的小殿堂为“面阔三间”的九脊形式，棺底基石恰恰就是殿堂的基座。仿殿堂石棺正面间隔3间殿堂的是4根方形门柱。石棺的西壁是这三间面阔殿堂的正面，中心一间被雕成门的形象，门板，门框，门额，门槛一应俱全。在这精致的石门上甚至还有排列整齐的门钉，五横五纵分布。两扇门板中间部雕刻出了门环。门的两侧相对阴刻了两名身材清瘦，姿态万方的侍女，右边侍女手中捧一件长条形的物品;左边侍女略将脸偏向门侧，一手扶着下垂的裙带。石棺正面的两间面阔上同样采用阴刻方式雕刻出有九根直棂的窗户。</p>
+<p>石棺的棺盖被雕刻成殿堂的屋顶，整个屋顶被精巧地以浮雕的方式雕刻出瓦片，板瓦，筒瓦，甚至檐头的瓦当上也阴刻出当时最流行的莲花纹。</p>
+<h3 id="随葬品"><a class="header" href="#随葬品">随葬品</a></h3>
+<p>同所有未被盗掘的高级墓葬一样，李静训墓出土了大量世人为之惊叹的随葬品。</p>
+<p>俑是魏晋以来墓葬中常见的随葬品。该墓中共出土俑84件，分人物俑，兽俑两大类，它们或置于棺上，或置于棺椁之间。人物俑主要有凤帽俑，执箕俑，武士俑，文官俑，男侍俑，女侍俑等，俑上或多或少涂有白粉，也施了一些颜色，这样看起来就更加生动了。兽俑主要有马，羊，牛，狗，鸡，猪等，造型相对于人物俑而言较小，一般长度在10厘米左右。</p>
+<p>墓中出土瓷器17件，制作精良，白瓷洁如雪，青瓷莹如玉，皆是隋代瓷器中的上上之品。有白瓷螭首双把双身壶，等。</p>
+<p>墓中最著名的随葬品是一件通体华光闪烁，异彩纷呈的项链。这条项链1957年陕西省西安市西郊出土，当时震撼考古界，更让人不可思议的是，这件精美之物出土时，戴在一名9岁的小女孩李静训尸骨的颈项上。这条价值不菲的项链戴在小女孩颈上，可见是她生前常佩戴的一件心爱饰物。</p>
+<p>大概由于墓主人是女性的缘故，该墓中出土了大量贵重精美的首饰，如金手镯，金戒指，衣饰上的金花，银指甲套，玉钗，水晶头钗，以及琥珀，玛瑙，水晶，玉石等不同质地的饰品。除此之外，随葬品中还有波斯风格的金银杯和波斯萨珊王朝的银币等来自西方的物品。</p>
+<h4 id="嵌珍珠宝石金项链"><a class="header" href="#嵌珍珠宝石金项链">嵌珍珠宝石金项链</a></h4>
+<p>项链由28个金质球形链珠组成，每个球形链珠均由12个小金环焊接而成，每个小环外又有小焊珠一圈和大焊珠5颗，其上再各嵌珍珠10颗，珠光闪闪，璀璨夺目，28个金质球形链珠由金线穿起。</p>
+<p>项链的下端，居中为一个大圆金饰，上面镶嵌一块晶莹的鸡血石，在鸡血石四周嵌有24颗珍珠。这块鸡血石纯净晶莹，虽在地下埋了千余年仍然鲜艳如新，光洁明亮。最下挂一心形金饰，上面镶嵌一块长3．1厘米，极为罕见的青金石。鲜红的鸡血石、宝蓝的青金石、洁白的珍珠，在纯金的烘托下，交相辉映、雍容华贵。</p>
+<h4 id="金手镯"><a class="header" href="#金手镯">金手镯</a></h4>
+<p>长径7、短径5.5厘米</p>
+<p>这对精巧的纯金椭圆形手镯，每个分4节，节两端嵌珠，半球形，透明无色。各节以方形嵌青绿色玻璃珠的小节相连。开口为钮饰，一端花瓣形扣环，上嵌小珠6个，另一端一钩，钩端亦嵌一珠。钩及环端为活轴，可自由开合。</p>
+<h4 id="椭圆形玻璃瓶"><a class="header" href="#椭圆形玻璃瓶">椭圆形玻璃瓶</a></h4>
+<p>1957年陕西省西安市李静训墓出土 高12.5厘米</p>
+<p>这件玻璃瓶的瓶口和腹部的俯视面均为椭圆形，是用吹制法制成的，器壁极薄，形态为中国传统造型。经化验，其质地为高铅玻璃和碱玻璃，是中国自己制造的玻璃器，反映了隋代玻璃吹制技术的水平。</p>
+<h4 id="白瓷双腹龙柄传瓶"><a class="header" href="#白瓷双腹龙柄传瓶">白瓷双腹龙柄传瓶</a></h4>
+<p>1957年陕西省西安市李静训墓出土</p>
+<p>高18.6厘米、口径4.5厘米、腹径6.3厘米</p>
+<p>此器两瓶身相联，联接处上伸一杯式口，颈部有凹弦纹三周。釉施及于腹部弦纹以下，有冰裂纹细开片，近底部分及底部露胎。高岭土（瓷土）含铁量较高，经过1300℃高温只能烧成青瓷器，经过控制而降低瓷土中的含铁量，克服铁的呈色干扰，即能烧制成白瓷。中国在北齐时已开始烧制白瓷，但当时烧成的白瓷普遍泛青，说明含铁量偏高，烧制温度偏低，烧制工艺还不够成熟。这件隋代白瓷器，胎、釉已完全不见白中泛青现象。</p>
+<h4 id="隋镶金口玉杯"><a class="header" href="#隋镶金口玉杯">隋镶金口玉杯</a></h4>
+<p>尺寸：高4.1厘米，口径5.6厘米，足径2.9厘米</p>
+<p>隋镶金口玉杯呈白色。直口，深腹，腹下部微收，平底实足。镶金口，卷唇。通体光素无纹，造型简练，抛光细润，制作精美。是隋代发现不多的玉器珍品</p>
+<h3 id="微缩的人间繁华"><a class="header" href="#微缩的人间繁华">微缩的人间繁华</a></h3>
+<p>1957年，中国社科院考古研究所的考古工作者们在西安城西的梁家庄附近，意外的发现了保存最完整，等级规格最高的隋代墓葬——李静训墓。</p>
+<p>李静训墓位于今西安市玉祥门外西大街南约50米处。该墓墓室为长方形竖井坑，即从地面向下挖一个平面为长方形的土坑作为墓室，墓室深度可达2.9米。在墓室的南边有一斜坡型墓道，长6.85米。盛放墓主人的石棺就在此墓室中。石棺之上便是墓葬的填土，夯土的夯层致密。</p>
+<p>清理夯土后，除棺前的墓志铭外，墓室正中放置着一个造型逼真的殿堂式的石棺。</p>
+<p>轻轻打开棺板，眼前出现一块早已残朽的丝麻织品，长约70厘米，宽26-35厘米，厚约3厘米，应当是盖在墓主人身上的被子。轻轻揭去丝麻织品，散乱的人骨和随葬品便显现。数量繁多的陶俑，镶嵌玉石的项链，结构精巧的手镯，形式多样的日用器具，洁白晶莹的邢窑瓷器，来自波斯的金银器皿……琳琅满目，宛如微缩的人间繁华。</p>
+<h3 id="石椁中的宫殿"><a class="header" href="#石椁中的宫殿">石椁中的宫殿</a></h3>
+<p>墓中葬具是一具石棺和一具石椁，两件石质葬具皆为青石制成。椁长2.63米，高1.61米，宽1.1米，由17块青石板拼接而成。揭开石椁，一具雕刻精美，堪称石雕艺术品的仿殿堂石棺跃入眼帘。石棺平面呈长方形，长1.92米，宽0.89米，高1.22米。就是这样一座看起来仅能容身的石棺，竟被技艺高超的石匠雕刻成了殿堂的模样。</p>
+<p>这座石质的小殿堂为“面阔三间”的九脊形式，棺底基石恰恰就是殿堂的基座。仿殿堂石棺正面间隔3间殿堂的是4根方形门柱。石棺的西壁是这三间面阔殿堂的正面，中心一间被雕成门的形象，门板、门框、门额、门槛一应俱全。在这精致的石门上甚至还有排列整齐的门钉，五横五纵分布。两扇门板中间部雕刻出了门环。门的两侧相对阴刻了两名身材清瘦，姿态万方的侍女，右边侍女手中捧着一件长条形的物品；左边侍女略将脸偏向门侧，一手扶着下垂的裙带。</p>
+<p>石棺正面的两间面阔上，同样采用阴刻方式雕刻出有九根直棂的窗户。石棺的棺盖则被雕刻成殿堂的屋顶，整个屋顶被精巧地以浮雕的方式雕刻出瓦片、板瓦、筒瓦，甚至檐头的瓦当上也阴刻出当时最流行的莲花纹。</p>
+<h3 id="随葬品-1"><a class="header" href="#随葬品-1">随葬品</a></h3>
+<p>累计230余件的随葬物品皆置于石椁、石棺中间不足3平方米的狭窄空间内，除一般常见的陶俑及少数陶器外，还出土了大批珍宝，如金器，有嵌珠宝金项链、嵌珠宝金翎、金戒指、金杯、金钗饰品等，以及玻璃器、玉石器、钢铁器、骨、木漆器和丝织品等。其中，金项链和金镯是波斯的制品，玻璃瓶和所盛香水也来自国外。从这些随葬品中可以看出：陶俑和陶器属于仪仗类的殉葬品。陶、瓷、铜、铁、骨、木、漆器是日常服御器，种类齐全，几乎是把死者生前所需的日常物品一件不漏地都殉葬了。</p>
+<h2 id="墓志铭隋左光禄大夫歧州刺史李公第四女石志铭并序"><a class="header" href="#墓志铭隋左光禄大夫歧州刺史李公第四女石志铭并序">墓志铭《隋左光禄大夫歧州刺史李公第四女石志铭并序》</a></h2>
+<p>女郎讳静训，字小孩，陇西成纪人。上柱国、幽州总管壮公之孙，左光禄大夫敏之第四女也。族纂厉乡，得神仙之妙；家荣戚里，被日月之晖。况复淑慧生知，芝兰天挺，誉华髫发，芳流肇悦。幼为外祖母周皇太后所养，训承长乐，独见慈抚之恩；教习深宫，弥遵柔顺之德。于是摄心八解，归依六度，戒珠共明珰并曜，意花与香佩俱芬。既而繁霜昼下，英苕春落，未登弄玉之台，便悲泽兰之夭。大业四年六月一日遇疾，终于汾源之宫，时年九岁。</p>
+<p>皇情轸悼，撤县辍膳，频蒙诏旨，礼送还京，賵赙有加。以其年龙集戊辰十二月己亥朔廿二日庚申，瘗于京兆长安县休祥里面万善道场之内。即于坟上构造重阁。遥追宝塔，欲髣髴于花童；永藏金地，庶留连于法子。乃铭曰：</p>
+<p>光分婺女，庆合天孙，荣苕比秀，采璧同温。先标令淑，早习工言，生长宫闱，恩勤抚育。法水成性，戒香增馥，金牒旦窥，银函霄读。往从舆跸，言届河汾，珠涓润岸，镜掩轻云。魂归秪阁，迹异吴坟，月殿回风，霜锺候晓。砌凝阴雪，檐悲春鸟，共知泡幻，和嗟寿夭。</p>
+<h2 id="隋书卷三十七列传第二"><a class="header" href="#隋书卷三十七列传第二">《隋书·卷三十七·列传第二》</a></h2>
+<p>敏字树生。高祖以其父死王事，养宫中者久之。及长，袭爵广宗公，起家左千牛。美姿仪，善骑射，歌舞管弦，无不通解。开皇初，周宣帝后封乐平公主，有女娥英，妙择婚对，敕贵公子弟集弘圣宫者，日以百数。公主亲在帷中，并令自序，并试技艺。选不中者，辄引出之。至敏而合意，竟为姻媾。敏假一品羽仪，礼如尚帝之女。后将侍宴，公主谓敏曰：“我以四海与至尊，唯一女夫，当为汝求柱国。若授余官，汝慎无谢。”及进见上，上亲御琵琶，遣敏歌舞。既而大悦，谓公主曰：“李敏何官？”对曰：“一白丁耳。”上因谓敏曰：“今授汝仪同。”敏不答。上曰：“不满尔意邪？今授汝开府。”敏又不谢。上曰：“公主有大功于我，我何得向其女婿而惜官乎！今授卿柱国。”敏乃拜而蹈舞。遂于坐发诏授柱国，以本官宿卫。后避讳，改封经城县公，邑一千户。历蒲、豳、金、华、敷州刺史，多不莅职，常留京师，往来宫内，侍从游宴，赏赐超于功臣。后幸仁寿宫，以为岐州刺史。 大业初，转卫尉卿。乐平公主之将薨也，遗言于炀帝曰：“妾无子息，唯有一女。不自忧死，但深怜之。今汤沐邑，乞回与敏。”帝从之。竟食五千户，摄屯卫将军。杨玄感反后城大兴，敏之策也。转将作监，从征高丽，领新城道军将，加光禄大夫。十年，帝复征辽东，遣敏于黎阳督运。时或言敏一名洪儿，帝疑“洪”字当谶，尝面告之，冀其引决。敏由是大惧，数与金才、善衡等屏人私语。宇文述知而奏之，竟与浑同诛，年三十九。其妻宇文氏，后数月亦赐鸩而终。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-5/history-5-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-6/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-5/history-5-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-6/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

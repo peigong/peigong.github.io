@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>7-辽宋夏金元时期 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-6/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="辽宋夏金元时期"><a class="header" href="#辽宋夏金元时期">辽宋夏金元时期</a></h1>
+<blockquote>
+<p>原文：<a href="https://m.chnmuseum.cn/portals/0/web/zt/gudai/detail7.html">辽宋夏金元时期（公元916年-1368年）</a></p>
+</blockquote>
+<p>辽宋夏金元时期，中国从多民族政权的并立走向统一。农业和手工业的重大发展，商品经济的活跃，城市生活的丰富多彩和文化的高度发展是这一时期的特色。宋元海外贸易繁盛，与各国经济文化交流频繁。</p>
+<h2 id="第一单元-多民族政权的并立与统一"><a class="header" href="#第一单元-多民族政权的并立与统一">第一单元　多民族政权的并立与统一</a></h2>
+<p>从公元10世纪开始，中国逐渐形成了新的格局。汉族建立的宋统治了从黄河中下游流域直至南海的地区，后被迫退缩到江淮以南，但始终在经济、文化方面居于核心地位。北方的契丹、党项、女真等族先后建立了自己的政权，西南有吐蕃和大理，形成了多民族格局。13世纪蒙古族兴起后，结束了多政权并立、对峙的局面，实现了大统一。西藏等地区成为中国版图中新的组成部分。四百余年间，虽然战乱不绝，但各民族间的交流持续不断，中国与世界其他地区的交流也非常密切。</p>
+<h2 id="第二单元-辽宋夏金元时期的经济"><a class="header" href="#第二单元-辽宋夏金元时期的经济">第二单元　辽宋夏金元时期的经济</a></h2>
+<p>两宋时期，经济重心转向南方。租佃契约关系在城乡普遍推行，佃农和独立工商业者迅速增多，商品经济空前活跃，大城市增多，草市遍及乡镇，并出现了世界上最早的纸币。元朝的统一结束了以往各地区的经济分隔，农业得到恢复，工商业日趋繁荣。</p>
+<h3 id="第一组-种植业和纺织业的进步"><a class="header" href="#第一组-种植业和纺织业的进步">第一组 种植业和纺织业的进步</a></h3>
+<p>这一时期的农学取得较大成就，出现了一批总结生产经验的农书。农业科技知识得到普及和提高，种植业和纺织业取得进步，垦田面积显著增长，先进农具得到推广，南北农作物品种得到交流，提高了单位面积产量。</p>
+<h3 id="第二组-制瓷业的发展"><a class="header" href="#第二组-制瓷业的发展">第二组 制瓷业的发展</a></h3>
+<p>这一时期，名窑名瓷驰名中外，生产技术和产量都超过前代。宋代的五大名窑、元代的青花和釉里红代表了当时制瓷业的发展水平。</p>
+<h3 id="第三组-纸币的广泛使用"><a class="header" href="#第三组-纸币的广泛使用">第三组 纸币的广泛使用</a></h3>
+<p>中国是世界上最早使用纸币的国家。10世纪末，民间已经出现了最早的纸币——交子。两宋先后发行过钱引、会子、关子等纸币，金朝也发行过交钞。元朝统一以后，政府发行的宝钞成为唯一合法货币。宝钞先后以丝和白银为本，形成了一套完善的纸币制度。</p>
+<h3 id="第四组-度量衡"><a class="header" href="#第四组-度量衡">第四组 度量衡</a></h3>
+<p>为了避免使用上的混乱，宋、元政府都严格控制度量衡的制定，严禁民间私造。宋代由中央直接制作和管理度量衡器，元代则是由中央颁发标准器，省级行政单位负责制作和管理。</p>
+<h2 id="第三单元-辽宋夏金元时期的社会生活"><a class="header" href="#第三单元-辽宋夏金元时期的社会生活">第三单元　辽宋夏金元时期的社会生活</a></h2>
+<p>城市的发展对这一时期的社会生活产生重大影响，市民阶层逐渐壮大，带动了商品市场和城市文化的繁荣发展。人们对生活消费提出了更高要求，衣食住行与市场形成了前所未有的紧密关系，日常用品趋于精致华美，种类十分丰富。在精神生活领域，娱乐活动逐渐走向商业化、平民化，宗教信仰呈现多元化的局面。</p>
+<h3 id="第一组-重要城市"><a class="header" href="#第一组-重要城市">第一组 重要城市</a></h3>
+<p>入宋以后，城市人口大增，以各政权的都城为代表，出现一批人口十万以上的城市。在城市中，由于突破了坊和市的界限，店铺临街而立，商品交易繁盛。北方游牧民族政权纷纷效仿汉文化形制营建城市是这个时期的一个特色。</p>
+<h3 id="第二组-商业标识的应用"><a class="header" href="#第二组-商业标识的应用">第二组 商业标识的应用</a></h3>
+<p>商品经济的日趋繁荣导致市场竞争更为激烈，促使中国现存最早的广告和商标的产生。商业标识在商业活动中被广泛应用，标志着社会经济发展进入了新的阶段。</p>
+<h3 id="第三组-日常用具"><a class="header" href="#第三组-日常用具">第三组 日常用具</a></h3>
+<p>在城市中，商品经济的繁盛刺激和影响了社会风尚，人们普遍追求更为精致和奢华的生活方式，因而带动了手工业的发展，日常用品种类丰富，工艺日益精湛。</p>
+<h3 id="第四组-饮食文化"><a class="header" href="#第四组-饮食文化">第四组 饮食文化</a></h3>
+<p>经济的进步、城市的兴起和教育的普及促进了饮食文化的发展，国内各民族的饮食风俗互相交流，发达的中外交通又带来了其他国家和地区的影响。</p>
+<h3 id="第五组-娱乐生活"><a class="header" href="#第五组-娱乐生活">第五组 娱乐生活</a></h3>
+<p>在这一时期的都市中，出现了表演戏曲、曲艺、杂技等艺术形式的地方——瓦舍、勾栏。从宋杂剧和金院本发展而来的元杂剧是中国第一种成熟的戏剧形式，是中国戏剧史上的里程碑。</p>
+<h3 id="第六组-宗教活动"><a class="header" href="#第六组-宗教活动">第六组 宗教活动</a></h3>
+<p>这一时期，各种宗教都非常活跃，尤其在进入元代后，由于统治者采取兼容并蓄政策，推动了各种宗教的发展。汉传佛教和道教仍然在中原和南方地区占据主要地位，藏传佛教得到统治者的大力弘扬，伊斯兰教逐渐趋于本地化，基督教也得到推广。</p>
+<h2 id="第四单元-中外交通与海外贸易"><a class="header" href="#第四单元-中外交通与海外贸易">第四单元　中外交通与海外贸易</a></h2>
+<p>这一时期，海外贸易和中外交通得到空前发展，加强了我国与亚、欧、非各国的经济、文化交流，增进了各国人民间的友谊。</p>
+<h3 id="第一组-交通与地理学的发展"><a class="header" href="#第一组-交通与地理学的发展">第一组 交通与地理学的发展</a></h3>
+<p>海外贸易推动了对航路的探索，中国海船远航亚欧数十个国家和地区。元代在国内水陆交通要道遍设驿站，又修整京杭大运河，沟通了南北水路。发达的交通带来地理学的进步，根据现存史料，中国是最早在地图上画出好望角的国家。</p>
+<h3 id="第二组-海上丝绸之路与中外贸易"><a class="header" href="#第二组-海上丝绸之路与中外贸易">第二组 海上丝绸之路与中外贸易</a></h3>
+<p>以农业、手工业和国内商品经济为基础，加之指南针在航海上的应用，这一时期的海外贸易通过官办和私营两种途径大大扩展，史称海上丝绸之路。广州、泉州、明州（今浙江宁波）等地成为对外贸易的主要港口，并设有官方管理机构。当时的对外贸易，东达朝鲜、日本，西至非洲东岸、北岸各国。中外文化交流也随之更为密切。</p>
+<h2 id="第五单元-辽宋夏金元时期的文化"><a class="header" href="#第五单元-辽宋夏金元时期的文化">第五单元　辽宋夏金元时期的文化</a></h2>
+<p>宋代是文化高度繁荣的时期，元代文化则体现出多元性。这一时期，哲学、文学、史学、艺术诸领域涌现出众多的名家和名作，多个民族创制了自己的文字，天文、数学、医药学、火药、印刷术、指南针、造船技术等都居于世界前列，并通过丝绸之路远播海外，对世界科学技术的发展做出了巨大贡献。</p>
+<h3 id="第一组-理学的发端"><a class="header" href="#第一组-理学的发端">第一组 理学的发端</a></h3>
+<p>理学是由北宋的周敦颐、邵雍及张载在传统儒学基础上发展出来的新思想体系，到了南宋时期由朱熹发扬光大，从元代开始成为官方正统思想，对后世产生了极大的影响。</p>
+<h3 id="第二组-史学"><a class="header" href="#第二组-史学">第二组 史学</a></h3>
+<p>这一时期是中国史学的又一个高峰，官方、民间修史都很活跃，对当代史的研究发达，出现了编年体和纪事本末体等新的历史编纂体例以及我国考古学的前身金石学。</p>
+<h3 id="第三组-宋词与元曲"><a class="header" href="#第三组-宋词与元曲">第三组 宋词与元曲</a></h3>
+<p>这一时期的文学也呈现出繁荣景象，宋词和元曲是其中最具代表性的文学形式，涌现了大批优秀作家和经典作品，在文学史上占有重要地位。</p>
+<h3 id="第四组-各民族创制的文字"><a class="header" href="#第四组-各民族创制的文字">第四组 各民族创制的文字</a></h3>
+<p>这一时期，少数民族在建立政权后创制了文字。这些文字虽然随着政权的衰亡而逐渐消失，但对当时文化的传播和交流发挥了重要的作用。</p>
+<h3 id="第五组-书法和绘画"><a class="header" href="#第五组-书法和绘画">第五组 书法和绘画</a></h3>
+<p>这一时期，中国书法和绘画名家辈出、流派纷呈。文人画的兴起改变了中国传统观念中对于绘画的“成教化、助人伦”的功用性认识，绘画开始成为一种文人间的游戏，并一直影响到今天对于中国画的理解。元代还涌现了许多具有相当成就的少数民族艺术家。</p>
+<h3 id="第六组-天文与算学"><a class="header" href="#第六组-天文与算学">第六组 天文与算学</a></h3>
+<p>宋代曾进行过五次天文观测，并绘制成星图。水运仪象台集观测、记录、报时为一体，遥遥领先于世界。元代天文学的规模和学术性都超越前代，阿拉伯天文学在元代也有一定影响。这一时期出现了众多知名的数学家，其成果为后世所景仰。</p>
+<h3 id="第七组-建筑"><a class="header" href="#第七组-建筑">第七组 建筑</a></h3>
+<p>这一时期，中国的木结构建筑日臻完美，建筑形式丰富，技术高超，而且吸收了一些外来建筑的技术和风格。</p>
+<h3 id="第八组-医学"><a class="header" href="#第八组-医学">第八组 医学</a></h3>
+<p>宋代有比较完备的医药管理组织，官、私编修的医书、药书流传至今的多达30部。针灸学和针灸铜人的铸造是医学上的另一突出成就。元朝政府非常重视医学，来自阿拉伯地区和其他少数民族的理论和知识丰富了元朝的医学。</p>
+<h3 id="第九组-印刷术的普及与火药指南针的应用"><a class="header" href="#第九组-印刷术的普及与火药指南针的应用">第九组 印刷术的普及与火药、指南针的应用</a></h3>
+<p>北宋时期雕版印刷得到普及，同时出现了活字印刷；火药、指南针在这一时期被广泛应用。这些发明先后传入亚、欧各国，对世界科学文化的发展起了巨大的推进作用。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-5/history-5-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-6/chiwen.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-5/history-5-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-6/chiwen.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
