@@ -25,8 +25,9 @@ title: 导游笔记
 9. [明十三陵](./guide/ming-tombs)
 10. [北京动物园](./guide/zoo)
 11. [北京海洋馆](./guide/aquarium)
-12. [国家植物园](./guide/chnbg)
-13. [雁栖湖](./guide/YanqiLake)
+12. [香山](./guide/fragrant-hills)
+13. [国家植物园](./guide/chnbg)
+14. [雁栖湖](./guide/YanqiLake)
 
 ## 北京博物馆
 
