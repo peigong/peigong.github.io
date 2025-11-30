@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>碧云寺 - 香山 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">香山 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/FragrantHillsPark/BiyunTemple.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="碧云寺"><a class="header" href="#碧云寺">碧云寺</a></h1>
+<p>碧云寺始建于元至顺二年（1331年），原名碧云庵。位于香山公园内的北面，全寺依山而建，坐西朝东，整个布局是以排列在中轴线上的六进院落为主体，南北各配一组院落，占地4万余平方米。第一进院落是山门殿，殿内两尊金刚力士塑像是佛教守护寺门的神将，俗称哼哈二将。殿外两侧分列着钟楼和鼓楼。第二进院落是弥勒佛殿，存有明代铜铸弥勒佛像。第三进院落是大雄宝殿，是碧云寺的正殿。殿内的塑像群反映的是佛祖释迦牟尼讲经说法的场景。</p>
+<p>碧云寺（Biyun Temple），位于北京市海淀区买卖街40号香山公园内，始建于元至顺二年（1331年）。</p>
+<p>碧云寺坐西朝东，占地面积40000平方米，建筑呈南北对称轴线式布局，分为中路主要建筑、水泉院建筑和罗汉堂建筑三大部分。中路主要建筑有山门、山门殿、弥勒殿、大雄宝殿、菩萨殿、孙中山纪念堂、金刚宝座塔；罗汉堂建筑有禅堂、罗汉堂、藏经阁；水泉院建筑为乾隆帝行宫，有涵碧斋、含青斋、洗心亭、清净心、试泉悦性山房、龙王庙等。碧云寺是集中明、清两代文物的地方，对研究明、清两朝的建筑提供了实物资料。</p>
+<p>1957年10月28日，碧云寺被北京市人民政府公布为北京市第一批市级文物保护单位。</p>
+<p>2001年6月25日，碧云寺被中华人民共和国国务院公布为第五批全国重点文物保护单位。</p>
+<p>2022年12月27日，碧云寺（孙中山先生纪念堂）被北京市文物局公布为北京市第二批不可移动革命文物。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>元至顺二年（1331年），耶律楚材后裔耶律阿吉将府邸改建为一座供佛小舍，称碧云庵。</p>
+<p>明正德年间，御马监太监对碧云庵进行扩建，改称碧云寺，并在碧云庵后为自己修建坟墓，后因在明嘉靖年间获罪，不能葬身此处。</p>
+<p>明天启三年（1623年），魏忠贤扩建碧云寺，并修建坟墓，后因在明崇祯年间自缢后戮尸，不能葬身此处。</p>
+<p>清顺治元年（1644年），魏忠贤的党羽葛九思随清军入京，将魏忠贤之衣冠葬在墓中，成为魏忠贤的衣冠冢。</p>
+<p>清康熙四十年（1701年），江南道监察御史奉命巡视西山时，初以为这里是前朝皇帝陵寝，后来知道是魏忠贤衣冠冢，遂于五月十二日上奏此事，二十二日康熙帝诏平其坟。</p>
+<p>清乾隆十三年（1748年），碧云寺重加修葺，并按寺僧所贡奉的图样，新建金刚宝座塔，同时增建行宫和罗汉堂。</p>
+<p>民国十四年（1925年），孙中山先生在北京逝世，曾在碧云寺后殿停灵，因此后殿改名为孙中山纪念堂，金刚宝座塔成为孙中山先生衣冠冢。</p>
+<p>1983年，颐和园东门外拓宽马路，将路旁的孙中山画像纪念碑移建至碧云寺金刚宝座塔前空地上。</p>
+<p>2023年11月20日，碧云寺关闭进行保护修缮。作为西山永定河文化带建设折子工程之一，此次共对罗汉堂、菩萨殿等7处文物建筑进行修缮，修缮面积2837.13平方米，约占全寺建筑总量的三分之一。</p>
+<p>2024年9月26日起，碧云寺完成修缮工作恢复对外开放，每周一闭馆（法定节假日除外）。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>碧云寺坐西朝东，占地面积40000平方米，依山势而层层叠起，其建筑呈明显南北对称轴线式布局，分为中路主要建筑、水泉院建筑和罗汉堂建筑三大部分。中路主要建筑有山门、山门殿、弥勒殿、大雄宝殿、菩萨殿、孙中山纪念堂、金刚宝座塔；罗汉堂建筑有禅堂、罗汉堂、藏经阁；水泉院建筑为乾隆帝行宫，有涵碧斋、含青斋、洗心亭、清净心、试泉悦性山房、龙王庙等。</p>
+<h2 id="主要建筑"><a class="header" href="#主要建筑">主要建筑</a></h2>
+<h3 id="中路建筑"><a class="header" href="#中路建筑">中路建筑</a></h3>
+<ul>
+<li>山门：山门位于桥后，是入寺院的第一道门，为无梁殿形式，硬山顶调大脊，简瓦屋面。其山面各连一座碉楼式建筑，两层，歇山顶，筒瓦屋面，虎皮石墙面。</li>
+<li>山门殿：山门殿面阔三间，为第一进院正殿，庑殿顶，筒瓦屋面，额枋绘旋子彩画，殿内供奉哼哈二将。左右为随墙门。</li>
+<li>弥勒殿：弥勒殿为第二进院正殿，面阔三间，歇山顶，筒瓦屋面，额枋绘旋子彩画，殿内供奉弥勒佛。院内鼓楼、钟楼各一座。</li>
+<li>大雄宝殿：大雄宝殿位于弥勒殿后，面阔三间，庑殿顶，筒瓦屋面，带回廊，额枋绘旋子彩画，后檐明间出抱厦一间，额绘旋子彩画，殿内主佛供奉释迦牟尼坐像，左有迦叶尊者和文殊菩萨，右有阿难尊者和普贤菩萨。殿前月台上南北经幢各一座。南北配殿各三间。</li>
+<li>菩萨殿：菩萨殿位于大雄宝殿后面，面阔五间，四周回廊，殿内供奉菩萨像殿前月台上六角碑亭一座，二层，攒尖宝顶。</li>
+<li>孙中山纪念堂：孙中山纪念堂位于菩萨殿后，面阔五间，歇山顶，筒瓦屋面，额枋绘旋子彩画，孙中山先生的灵柩曾在此停放。南北配殿各三间，现此院辟为孙中山先生生平展室。</li>
+<li>金刚宝座塔：金刚宝座塔位于中路建筑最后，塔前建木牌楼石牌楼、砖石牌楼作为前导，牌坊两侧各有八字形石雕照壁，照壁正面刻八个历史人物浮雕，并有题名，左有蔺相如为节，李密为孝，诸葛孔明为忠，陶渊明为廉；右有狄仁杰为孝，文天祥为忠，赵壁为廉，谢玄为节，照壁小额枋刻有八个大字，左为“精诚贯日”，右为“节义凌霄”。塔通高34.7米，下部砌两层虎皮石基座，其上建塔。塔全部用华丽的汉白玉砌成，分上下两部分，下为金刚宝座，正面正中开券洞，孙中山先生的衣冠即封葬于此。塔座出口处置一方亭，左右各有一藏式覆钵塔，后为五座13层密檐方塔一一中央为主塔，四隅各建子塔。</li>
+</ul>
+<h3 id="水泉院"><a class="header" href="#水泉院">水泉院</a></h3>
+<p>水泉院位于碧云寺北跨院，是一座融园林景观和居住殿堂于一体的皇家行宫建筑。整个院落坐西朝东，前三进院为含青斋建筑群，后两进院为水泉院。</p>
+<h3 id="罗汉堂"><a class="header" href="#罗汉堂">罗汉堂</a></h3>
+<p>罗汉堂仿杭州净慈寺罗汉堂而建，位于碧云寺南路，坐西朝东，面阔九间，庑殿顶，简瓦屋面，正吻装饰一座小型覆钵塔。前檐出三间歇山顶抱厦，明间檐下金字卧赢书“罗汉堂”正门内供奉四大天王，室内有罗汉像508尊罗汉。殿中心为三世佛像，四面通道上各立一尊佛，东面为护法金刚韦驮，北面为疯僧，西面是地藏菩萨，南面为接引佛。另外，北面房梁上有济公活佛。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>碧云寺是集中明、清两代文物的地方，代表着两个时代的建筑艺术的特色，正殿仍保有明代风格，大石牌坊是明末清初雕制艺术的例证，它和金刚宝座塔的雕制迥然不同。金刚宝座塔是清代极盛时期的代表作品。对研究明、清两朝的建筑提供了实物资料。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<p>1957年10月28日，碧云寺被北京市人民政府公布为北京市第一批市级文物保护单位。</p>
+<p>2001年6月25日，碧云寺被中华人民共和国国务院公布为第五批全国重点文物保护单位。</p>
+<p>2022年12月27日，碧云寺（孙中山先生纪念堂）被北京市文物局公布为北京市第二批不可移动革命文物。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../FragrantHillsPark/FragrantHillsPark-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../FragrantHillsPark/FragrantHillsPark-6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../FragrantHillsPark/FragrantHillsPark-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../FragrantHillsPark/FragrantHillsPark-6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
