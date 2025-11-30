@@ -1,0 +1,12 @@
+{
+  "name": "The-Journey-to-the-West",
+  "version": "1.0.0",
+  "description": "The Journey to the West",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

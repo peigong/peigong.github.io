@@ -53,3 +53,7 @@ title: 导游笔记
 1. [敦煌](./guide/Dunhuang)
 2. [只有红楼梦·戏剧幻城](./guide/Unique-Dream-of-Red-Mansion)
 3. [天津泰达航母主题公园](./guide/TEDA-aircraft)
+
+## English
+
+1. [The Journey to the West](./guide/The-Journey-to-the-West)
