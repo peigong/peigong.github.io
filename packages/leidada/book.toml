@@ -1,0 +1,16 @@
+[book]
+authors = ["VET.PG"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Engilsh Guide - VET.PG(https://pg.js.cn)"
+
+[build]
+build-dir = "../../public/guide/leidada"
+
+[output.html]
+default-theme = "rust"
+git-repository-url = "https://github.com/peigong/peigong.github.io"
+edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
+site-url = "/guide/leidada/"
+cname = "pg.js.cn"
