@@ -1,0 +1,12 @@
+{
+  "name": "english-tour-guiding-in-beijing",
+  "version": "1.0.0",
+  "description": "English Tour Guiding in Beijing",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
