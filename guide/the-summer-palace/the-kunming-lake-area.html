@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>昆明湖景区 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-kunming-lake-area.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="昆明湖景区"><a class="header" href="#昆明湖景区">昆明湖景区</a></h1>
+<h2 id="西湖和颐和园的堤"><a class="header" href="#西湖和颐和园的堤">西湖和颐和园的堤</a></h2>
+<h3 id="西湖的堤"><a class="header" href="#西湖的堤">西湖的堤</a></h3>
+<ul>
+<li>苏堤：是北宋诗人苏东坡任杭州知府时主持修建的，所以叫苏堤。它纵贯西湖西部，全长2.8公里，从北向南，北岸连着保俶山，南岸连着雷峰塔和净寺。堤上有映波、跨桥等6座古朴美观的桥，两侧种了很多花木，春天的时候桃红柳绿，“苏堤春晓”可是“西湖十景”之首呢。 </li>
+<li>白堤：原名叫白沙堤，是唐代诗人白居易在杭州时主持修建的，位于西湖的北部，连接湖岸与孤山，长约1公里，像一条纽带把杭州市区和西湖风景区连起来。白堤东头是断桥，西头是西泠桥，“断桥残雪”的美景就在这里。 </li>
+<li>杨公堤：由明代杭州郡守杨孟瑛主持修建，位于西湖西岸，现名叫环湖西路，与苏堤平行，也有6座桥，和苏堤的6桥合称为“西湖12桥”。这里比较寂静隐秀，能看到西线湖水与栖霞岭、丁家山相环绕。 </li>
+</ul>
+<h3 id="颐和园的堤"><a class="header" href="#颐和园的堤">颐和园的堤</a></h3>
+<ul>
+<li>西堤：在颐和园昆明湖的西部，是乾隆皇帝仿照杭州西湖的苏堤建造的。从北向南依次建有界湖桥、豳风桥、玉带桥、镜桥、练桥、柳桥6座风格各异的桥亭，在柳桥和练桥之间还有景明楼。西堤景色很美，种了桃树和柳树，春天柳绿桃红，就像“北国江南”。而且西堤是蜿蜒曲折的，能把园外玉泉山秀丽的西山山形与玉峰塔、妙高塔等景色都引入园中，让园内外的景色浑然一体。 </li>
+<li>东堤：是由康熙时为防卫畅春园修筑的“西堤”，在昆明湖往东拓展后加固、改造而成的湖东岸大堤。东堤的北段建了二孔水闸“二龙闸”，可以控制昆明湖往东流泄的水量，让堤以东、畅春园西墙以西的低洼地能得到灌溉，开辟成水田。</li>
+</ul>
+<h2 id="廓如亭"><a class="header" href="#廓如亭">廓如亭</a></h2>
+<p>颐和园里的廓如亭，还有个名字叫“八方亭”。</p>
+<h3 id="历史故事"><a class="header" href="#历史故事">历史故事</a></h3>
+<p>廓如亭修建于很久很久以前的乾隆十七年，也就是1752年，后来在光绪的时候又重新修过。那个时候呀，东堤还没有围墙，它就像一个守护者一样，守护着美丽的颐和园。</p>
+<h3 id="建筑特色"><a class="header" href="#建筑特色">建筑特色</a></h3>
+<ul>
+<li>巨大的八角形建筑：廓如亭是个八角形的亭子，有八个角，从上面看下去就像一个大大的八角星。它的建筑面积可有384.95平方米呢，是中国现存古亭中面积最大的亭式建筑，被称为“华夏第一亭”。 </li>
+<li>独特的屋顶：它的屋顶是重檐八脊攒尖圆宝顶，就像一个漂亮的大帽子盖在亭子上，而且还有十六吻兽装饰，看起来特别威风。</li>
+<li>坚固的结构：为了撑起这么大的亭子，设计师用了内外三圈共40根柱子来支撑，其中24根是圆柱形的柱子，16根是方形的柱子。</li>
+</ul>
+<h3 id="文化内涵"><a class="header" href="#文化内涵">文化内涵</a></h3>
+<ul>
+<li>观景作用：以前没有围墙的时候，站在廓如亭里，四面八方的景色都能看得清清楚楚，昆明湖的湖水、十七孔桥、南湖岛，还有远处的万寿山佛香阁，全都能收入眼中。</li>
+<li>守护寓意：它坐落在东堤上，就像一个忠诚的卫士，守护着颐和园，保护着里面的美景和文物。</li>
+<li>牌匾文化：亭子里每面都有一块木匾，一共有8块，其中有两块是乾隆皇帝亲手写的诗句，另外六块是光绪时期的大臣们写的，内容摘自《文心雕龙》，都是用来赞美这里的景色和当时的国家政事的。</li>
+</ul>
+<h2 id="十七孔桥"><a class="header" href="#十七孔桥">十七孔桥</a></h2>
+<h3 id="基本概况"><a class="header" href="#基本概况">基本概况</a></h3>
+<ul>
+<li>十七孔桥位于北京颐和园的昆明湖东侧水域，它东连廓如亭，西接南湖岛，就像一条巨龙横卧在水面上。</li>
+<li>它建于乾隆年间，到现在已经有200多年历史了，是中国皇家园林中现存最长的桥，全长有150多米。</li>
+</ul>
+<h3 id="建筑特色-1"><a class="header" href="#建筑特色-1">建筑特色</a></h3>
+<ul>
+<li>独特的桥洞设计：这座桥一共有17个桥洞，所以叫十七孔桥。桥中间的孔最大，从中间向两边的桥洞依次变小，排列得非常整齐对称。</li>
+<li>精美的雕刻艺术：桥两边的白石栏杆上，共有128根望柱，每根望柱上都雕刻着一只石狮，一共有544只呢，比卢沟桥的狮子还多59只。这些狮子形态各异，有的母子相抱，有的玩耍嬉闹，特别可爱。 </li>
+</ul>
+<h4 id="文化意义"><a class="header" href="#文化意义">文化意义</a></h4>
+<ul>
+<li>象征意义：在古代，数字“9”被看作是极阳数，是皇帝喜欢的吉利数字。十七孔桥从两边数中间都是第9个桥洞，正好迎合了皇帝对“9”的喜爱。</li>
+<li>交通意义：它是前往南湖岛的唯一通道，把昆明湖东边的陆地和南湖岛连接了起来，让人们可以方便地走到南湖岛上游玩。</li>
+</ul>
+<h4 id="神奇景观"><a class="header" href="#神奇景观">神奇景观</a></h4>
+<p>每年冬至前后的下午4点左右，如果天气好，站在南湖岛那边朝东南方向看十七孔桥，会看到神奇的“金光穿洞”景象。这时夕阳的光会正好照进桥洞，每个桥洞都好像被金色填满，特别壮观。</p>
+<h2 id="南湖岛"><a class="header" href="#南湖岛">南湖岛</a></h2>
+<h3 id="基本概况-1"><a class="header" href="#基本概况-1">基本概况</a></h3>
+<p>南湖岛位于颐和园昆明湖的东南侧，在西堤以东、万寿山以南的湖水之中，整个岛屿是圆形的，占地一公顷多。它四面环水，就像一颗璀璨的宝石镶嵌在昆明湖上，与万寿山遥相呼应，还通过十七孔桥与东岸相连。 </p>
+<h3 id="历史由来"><a class="header" href="#历史由来">历史由来</a></h3>
+<p>南湖岛是乾隆时期扩建清漪园时建造的，乾隆皇帝仿照神话中东海“蓬莱、方丈、瀛洲”三座仙山的布局，把南湖岛设计成了象征蓬莱的仙岛。咸丰十年，岛上建筑在大火中焚毁殆尽，光绪年间又按原样恢复了全部建筑。</p>
+<h3 id="主要景点"><a class="header" href="#主要景点">主要景点</a></h3>
+<ul>
+<li>涵虚堂：它是岛中的主体建筑，前身为乾隆年间的望蟾阁，嘉庆时改建为涵虚堂。这是一座两卷殿，南面有露台，绕以石造雕栏，站在这里可以很好地欣赏昆明湖和万寿山的美景。 </li>
+<li>龙王庙：又叫广润祠，原是西湖东界长堤上的龙神祠，乾隆时期掘堤拓湖时留下四周土地，形成了南湖岛，并重修龙神祠。这里是皇家祈雨的地方，里面供奉着西海龙王。 </li>
+<li>南湖庭院：位于广润灵雨祠以西，主要由鉴远堂、澹会轩、云香阁、月波楼以及西尽院组成。鉴远堂是皇帝用膳或处理政事以及祭祀龙王后休憩之所；澹会轩则体现了乾隆皇帝认为水中蕴涵动、静、物、理的四者合一的理念。 </li>
+<li>十七孔桥：岛东南处的十七孔桥非常有名，它像一条长虹卧波，桥栏上雕刻着544只形态各异的石狮，是中国古典桥梁艺术的杰作。</li>
+</ul>
+<h2 id="铜牛"><a class="header" href="#铜牛">铜牛</a></h2>
+<ul>
+<li>基本信息：颐和园铜牛也叫金牛，在昆明湖东堤岸边，十七孔桥桥头不远处。它铸造于1755年，也就是乾隆二十年，到现在已经有两百多年的历史啦。铜牛是用青铜铸造的，高1.14米，长1.75米，宽0.84米，卧伏在雕花石座上，牛头微微向右，双耳竖起，眼睛望着昆明湖水，就像真牛一样，特别逼真。 </li>
+<li>文化寓意：传说大禹治水时，每治好一处水患，就铸造一头铁牛沉入河底，因为牛识水性，可以防止河水泛滥。后来到了唐朝，人们就不再把铁牛沉到水里了，而是放在河岸边用来镇水。乾隆皇帝就是根据这个传说，让人铸造了颐和园的铜牛，希望它能“永镇悠水”，让昆明湖的水不会泛滥成灾，给周围的百姓带来福气。</li>
+<li>神话传说：乾隆皇帝把昆明湖比作天河，在湖的东西两侧分别建造了象征牛郎和织女的建筑，东侧的铜牛象征“牛郎”，西侧的耕织图象征“织女”，它们隔着昆明湖遥遥相望，就像天上的牛郎织女一样。</li>
+<li>艺术价值：这只铜牛采用了写实的雕刻手法，把牛的神态、肌肉等都刻画得非常细致，仿佛下一秒它就会站起来走动一样，充分展现了当时高超的铸造艺术水平，是我国现存最精美的古代铜牛之一。</li>
+<li>历史故事：1900年，八国联军入侵北京，这些侵略者听说昆明湖东岸有只金牛，就想来把它抢走。他们费了好大的力气也没能抬起铜牛，有个士兵就用刺刀砍向铜牛，结果发现铜牛不是金子做的，才骂骂咧咧地走了，铜牛这才躲过了一劫。还有，在同治元年的时候，有个内务府的人把铜牛的尾巴割掉拿去卖废铜了，后来到了1888年慈禧太后重修颐和园时才把尾巴接上。</li>
+</ul>
+<h3 id="金牛铭"><a class="header" href="#金牛铭">金牛铭</a></h3>
+<p>夏禹治河，铁牛传颂。</p>
+<p>义重安澜，后人景从。</p>
+<p>制寓刚戊，象取厚坤。</p>
+<p>蛟龙远避，讵数鼍鼋。</p>
+<p>潫此昆明，潴流万顷。</p>
+<p>金写神牛，用镇悠永。</p>
+<p>巴邱淮水，共贯同条。</p>
+<p>人称汉武，我慕唐尧。</p>
+<p>瑞应之符，逮于西海。</p>
+<p>敬兹降祥，乾隆乙亥。</p>
+<h2 id="昆仑石碑"><a class="header" href="#昆仑石碑">昆仑石碑</a></h2>
+<h2 id="二龙闸"><a class="header" href="#二龙闸">二龙闸</a></h2>
+<ul>
+<li>基本概况：二龙闸位于颐和园东堤北端，文昌阁南约100多米处，也被称为“二孔闸”，因有两个出水闸口而得名。它原在颐和园东大墙之外，1984年颐和园东墙外移，此桥被圈在了墙里。 </li>
+<li>历史渊源：二龙闸始建于乾隆年间，当时乾隆皇帝将畅春园的西堤改为昆明湖东堤，为了将西山诸泉之水引入海淀、万泉河灌溉粮田，沿堤设置了十来座水闸，二龙闸便是其中之一。</li>
+<li>建筑特色：闸上是桥，方便颐和园内的通行。桥洞东边还有座南北走向的石桥。新砌的园墙将原有的两尊石雕龙头按原样放在墙基处，龙首向东俯视水面，张口做吐水状，而园墙外的拱形水门两侧也有新雕的龙头，拱门上写有“荷花池”三字。</li>
+<li>功能作用：二龙闸是昆明湖东堤上唯一的一座泄水闸，主要用于调节昆明湖东部地区的用水，可用于泄洪、调节水位，还能灌溉园外农田，接济圆明园、畅春园等园林用水。</li>
+</ul>
+<h2 id="文昌阁"><a class="header" href="#文昌阁">文昌阁</a></h2>
+<h3 id="历史渊源"><a class="header" href="#历史渊源">历史渊源</a></h3>
+<p>文昌阁始建于乾隆十五年（1750年），原来是清漪园的园门之一，1860年被英法联军烧毁，光绪年间又进行了重建。</p>
+<h3 id="建筑特色-2"><a class="header" href="#建筑特色-2">建筑特色</a></h3>
+<p>文昌阁是一座城关式建筑，也是颐和园六座城关中最大的一座。城基上原本是三层楼阁，光绪时期改建为二层。城头四隅角廊平呈“人”字形，整体建筑坐北朝南，气势磅礴。 </p>
+<h3 id="文化内涵-1"><a class="header" href="#文化内涵-1">文化内涵</a></h3>
+<ul>
+<li>供奉神像：文昌阁内供奉着文昌帝君铜像，还有两个小侍童铜像和一匹铜骡。文昌帝君是道教中主掌功名利禄、文运的神，在古代，读书人都很尊崇他，希望能得到他的庇佑，考取功名。</li>
+<li>象征意义：颐和园西边的宿云檐城关供奉着武圣关羽，东边的文昌阁供奉文昌帝君，形成了“文东武西”的格局，象征着文武辅政，共同保卫皇家园林。</li>
+</ul>
+<h2 id="知春岛"><a class="header" href="#知春岛">知春岛</a></h2>
+<h3 id="名字的由来"><a class="header" href="#名字的由来">名字的由来</a></h3>
+<p>知春岛位于昆明湖东岸北端，靠近东宫门和文昌阁。这里地势开阔、阳光充足，而且有万寿山为它遮挡寒风，所以冬天过后，春天来临的时候，这里周围的湖水总是最先融化，岛上的柳树也比其他地方的树早发芽，就像它最先知道春天来了一样，所以叫知春岛。</p>
+<h3 id="有趣的历史故事"><a class="header" href="#有趣的历史故事">有趣的历史故事</a></h3>
+<p>知春岛始建于乾隆二十五年（1760年），原本是四面环水、与岸隔绝的。后来清漪园被英法联军焚毁，光绪十四年（1888年）重建，光绪十九年（1893年）重修知春亭时，为了方便慈禧太后上岛游览，特意在亭的东面添建了一座平桥，使湖心小岛与东岸相连。</p>
+<h3 id="美丽的风景和建筑"><a class="header" href="#美丽的风景和建筑">美丽的风景和建筑</a></h3>
+<ul>
+<li>知春亭：知春岛上坐落着一座漂亮的重檐四角攒尖顶的彩绘木构方亭，叫知春亭。它建筑通高11.273米，建筑面积76.5平方米，绘有苏式彩画，井字牡丹天花。从知春亭向远处看，北面是郁郁葱葱的万寿山和雄伟的佛香阁，西面能看到长堤以及玉泉山、西山，南面则是龙王庙和十七孔桥。</li>
+<li>周边景色：岛上种满了柳树，春天的时候，柳树发芽，嫩绿的柳枝随风飘动，搭配着波光粼粼的湖水，还有在水中嬉戏的野鸭，风景美极了。而且这里还是摄影爱好者拍摄落日和晚霞的好地方，每到傍晚，太阳慢慢落下，晚霞把天空染成了橙红色，和湖面上的倒影相互映衬，就像一幅美丽的画。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-back-hill-area.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="Kunlun-Monument.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-back-hill-area.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="Kunlun-Monument.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
