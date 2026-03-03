@@ -1,0 +1,12 @@
+{
+  "name": "the-temple-of-successive-emperors",
+  "version": "1.0.0",
+  "description": "历代帝王庙",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

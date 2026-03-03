@@ -1,5 +1,5 @@
 ---
-title: 历史上女主权势的五个等级
+title: 历史上女主的五个权势等级
 categories:
   - essay
   - travel
