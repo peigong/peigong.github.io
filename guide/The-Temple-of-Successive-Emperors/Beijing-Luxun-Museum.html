@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北京鲁迅博物馆 - 历代帝王庙 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">历代帝王庙 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Beijing-Luxun-Museum.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京鲁迅博物馆"><a class="header" href="#北京鲁迅博物馆">北京鲁迅博物馆</a></h1>
+<p>北京鲁迅博物馆（Beijing Luxun Museum）是由原北京鲁迅博物馆和北京新文化运动纪念馆于2014年7月合并组建而成，包括北京鲁迅博物馆馆区和新文化运动纪念馆馆区，为国家文物局直属正局级公益一类事业单位，是首批中国国家一级博物馆。主要负责鲁迅和新文化运动时期著名人物、重大事件有关实物、资料的征集、保管、研究和宣传展示等工作。</p>
+<p>北京鲁迅博物馆馆区位于北京市西城区阜成门内大街宫门口二条19号，馆区内包括鲁迅故居以及鲁迅生平陈列馆，鲁迅故居为全国重点文物保护单位。北京鲁迅博物馆是为了纪念和学习中华民族的思想文化巨人鲁迅先生而建立的社会科学类人物博物馆。1955年12月，鲁迅博物馆开工建设。于1956年10月19日正式开馆。1996年10月，北京鲁迅博物馆基本陈列“鲁迅生平展”正式对外开放。2014年7月11日，北京鲁迅博物馆和北京新文化运动纪念馆合并为北京鲁迅博物馆（北京新文化运动纪念馆）。馆藏文物、图书等藏品7万余件，其中国家一级文物759件。主要有鲁迅的手稿、藏书、藏画、藏碑拓片、藏友人信札等。</p>
+<p>新文化运动纪念馆馆区位于北京市东城区五四大街29号，是依托原北京大学红楼建立的旧址类博物馆，是全国唯一一家全面展示五四新文化运动历史的综合性博物馆，作为新文化运动的大本营，五四运动的发源地，中国共产党早期重要活动地，于1961年3月被公布为第一批全国重点文物保护单位。于2002年4月28日正式对外开放。2025年4月25日，鲁迅文学花园正式对外开放。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="北京鲁迅博物馆-1"><a class="header" href="#北京鲁迅博物馆-1">北京鲁迅博物馆</a></h3>
+<p>民国12年（1923年）10月30日，鲁迅买下位于宫门口三条21号的6间旧屋的小宅院，议价800元。</p>
+<p>民国13年（1924年），鲁迅自己设计改建小宅院。</p>
+<p>民国35年（1946年），鲁迅原配夫人朱安通过地方法院办理了《赠与契约》，将鲁迅故居转赠给鲁迅之子周海婴。</p>
+<p>民国36年（1947年）6月，朱安病逝，中共地下党组织通过北平高等法院查封了故居，将其暗地保护起来。</p>
+<p>1949年2月，中国人民解放军北平市军事管制委员会文化接管委员会文物部副部长王冶秋等派人查看阜成门内宫门口西三条胡同21号鲁迅故居，并筹备恢复鲁迅故居原状的有关事宜。</p>
+<p>1949年9月20日，北平市人民政府安排人员看管鲁迅故居，在许广平的指导下恢复故居陈设。</p>
+<p>1949年10月19日，正值鲁迅逝世十三周年，鲁迅故居正式对外开放。</p>
+<p>1954年，文化部决定建立鲁迅博物馆，在鲁迅故居旁增建陈列室。</p>
+<p>1955年12月，鲁迅博物馆开工建设。</p>
+<p>1956年10月19日，正值鲁迅逝世二十周年，北京鲁迅博物馆正式开放。</p>
+<p>1996年10月19日，正值鲁迅逝世六十周年，北京鲁迅博物馆基本陈列“鲁迅生平展”正式对外开放。</p>
+<h3 id="北京新文化运动纪念馆"><a class="header" href="#北京新文化运动纪念馆">北京新文化运动纪念馆</a></h3>
+<p>1916年，北京大学红楼（原北京大学第一院）始建，用做学生宿舍。</p>
+<p>1918年8月，北京大学红楼落成后，改用作北京大学校部、图书馆和文科教室，组成北大文学院，全楼因以红砖红瓦建成而得名。</p>
+<p>1952年，燕京大学撤销，北京大学搬迁到燕园。</p>
+<p>2002年4月28日，北京新文化运动纪念馆在北京大学红楼的基础上建成并正式对外开放。</p>
+<h3 id="北京鲁迅博物馆北京新文化运动纪念馆"><a class="header" href="#北京鲁迅博物馆北京新文化运动纪念馆">北京鲁迅博物馆（北京新文化运动纪念馆）</a></h3>
+<p>2014年7月11日，北京鲁迅博物馆和北京新文化运动纪念馆合并为北京鲁迅博物馆（北京新文化运动纪念馆）。</p>
+<p>2025年4月3日，历经近4个月的提升改造，北京鲁迅博物馆（北京新文化运动纪念馆）重新开放。4月25日，鲁迅文学花园正式对外开放。</p>
+<h2 id="方位布局"><a class="header" href="#方位布局">方位布局</a></h2>
+<h3 id="场馆设计"><a class="header" href="#场馆设计">场馆设计</a></h3>
+<p>新文化运动纪念馆是旧址类博物馆，馆内可参观区包括北京大学红楼旧址一层和院内平房展厅。</p>
+<p>北京大学红楼是一座五层高平面呈工字形的砖木结构楼房，占地面积10000平方米。因楼的主体用的是红砖，故有“红楼”之称。</p>
+<h3 id="馆内布局"><a class="header" href="#馆内布局">馆内布局</a></h3>
+<p>北京鲁迅博物馆馆区是历史人物纪念馆，馆内包括鲁迅故居以及鲁迅生平陈列馆。</p>
+<p>鲁迅故居面积约400平方米，有北房三间，南房三间，东西厢房各两间，院中保存着鲁迅当年手植的两棵丁香花。鲁迅生平陈列馆位于鲁迅故居东侧，1956年10月建，占地1000平方米。</p>
+<h2 id="陈列展览"><a class="header" href="#陈列展览">陈列展览</a></h2>
+<h3 id="综述"><a class="header" href="#综述">综述</a></h3>
+<p>北京鲁迅博物馆（北京新文化运动纪念馆）馆藏文物、图书等藏品7万余件，其中国家一级文物759件。主要有鲁迅的手稿、生平史料、藏书、藏画、藏碑拓片、藏友人信札等文物藏品；有许广平、周作人、周建人、章太炎、钱玄同、许寿裳、胡风、江绍原、魏建功、瞿秋白、冯雪峰、萧军、萧红、叶紫、柔石、冯铿等新文化运动时期历史人物的遗存；有大量的鲁迅著、译、辑、编著作版本和鲁迅研究著作版本、现代文学丛刊与新旧期刊；还有吴冠中、李可染、蒋兆和等一批作品。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<h3 id="社会活动"><a class="header" href="#社会活动">社会活动</a></h3>
+<p>1996年8月3日，在北京鲁迅博物馆的支持和帮助下，新成立的日本福冈市综合图书馆作为开馆纪念，举办“竹内实文库·鲁迅展”，并邀请北京鲁迅博物馆代表赴日参加展览开幕式。福冈市桑原敬一市长会见北京鲁迅博物馆代表并向鲁迅博物馆赠送当地画家的绘画作品。</p>
+<p>1999年9月25日，“北京鲁迅博物馆珍藏书画展”在北京鲁迅博物馆多功能厅展出。</p>
+<p>2004年4月17日，为配合“李何林先生诞辰100周年学术研讨会”制作的“李何林先生生平展”，在北京鲁迅博物馆多功能厅展出，同年10月该展览被邀请到天津南开大学文学院展出。</p>
+<p>2006年2月12日，“中国印 生肖魂 ——陈冠英、张维萍刻石书画展”在北京鲁迅博物馆多功能厅开幕。</p>
+<p>2010年，北京新文化运动纪念馆举办的“新时代的先声——五四新文化运动展览”相继在山东聊城傅斯年陈列馆、新疆乌鲁木齐市博物馆、首都图书馆、延庆博物馆巡回展出。</p>
+<p>2010年6月11，北京新文化运动纪念馆与中国文化遗产研究院合作，从文化遗产研究院收藏的50余件中国古代建筑经典模型中精选出18件，联合举办“中国古代建筑经典模型展”。</p>
+<p>2015年4月29日，“旧邦新命——新文化运动百年纪念展”在北京鲁迅博物馆开幕。</p>
+<p>2015年7月3日，“中国战斗——抗日战争时期木刻版画展”在北京新文化运动纪念馆北大红楼开幕。</p>
+<p>2015年8月11日，由北京鲁迅博物馆（北京新文化运动纪念馆）与福建民俗博物馆主办的“木影流光——福建金漆木雕展”在北京鲁迅博物馆多功能厅开幕。</p>
+<p>2019年3月16日，匈牙利驻华大使白思谛、大使馆副馆长朱佩杰、大使馆文化教育参赞宋妮雅博士及使馆人员到北京鲁迅博物馆举行向裴多菲铜像献花仪式暨纪念1848-1849年匈牙利自由革命171周年活动。</p>
+<p>2021年6月，中国共产党早期北京革命活动纪念馆、北京新文化运动纪念馆开展举办的庆祝中国共产党成立100周年精品展览——光辉伟业 红色序章——北大红楼与中国共产党早期北京革命活动主题展。</p>
+<p>2022年1月10日，首都图书馆与北京鲁迅博物馆达成战略合作，将联手打造鲁迅主题特色文化空间。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Miaoying-Temple.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="xin-wen-hua-yun-dong.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Miaoying-Temple.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="xin-wen-hua-yun-dong.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
