@@ -122,6 +122,7 @@
     - [日本造九二式70毫米步兵炮](./b1-cannon/92-70.md)
     - [日本造四一式75毫米骑炮](./b1-cannon/41-75.md)
 - [参考资料]()
+    - [军徽](./reference/Emblem.md)
     - [抗美援朝战争第二次战役](./reference/reference-1.md)
     - [上甘岭战役](./reference/reference-2.md)
     - [金城战役](./reference/reference-3.md)
