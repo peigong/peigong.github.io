@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>珍宝馆 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-exhibition-of-treasures/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="故宫珍宝馆"><a class="header" href="#故宫珍宝馆">故宫珍宝馆</a></h1>
+<p>故宫珍宝馆位于北京市故宫博物院东部宁寿宫建筑群内，1958年开馆，是故宫博物院常设专题陈列馆。展区涵盖皇极殿西庑、养性殿、乐寿堂及颐和轩，展陈面积约220平方米，陈列清代宫廷文物400余件，包括珠宝、金银、玉石、盆景等类别，其中养性殿、乐寿堂、颐和轩恢复原状陈设，展出金编钟、龙袍、玉石仙台等文物。馆内重点文物有金瓯永固杯、翠白菜式花插等，旺季开放时间为4月1日至10月31日，淡季为11月1日至次年3月31日，门票价格10元。故宫展览APP提供珍宝馆线上全景展示及展品细节放大功能，观众可通过《志愿讲国宝》线上宣讲项目观看文物讲解，该项目截至2025年7月已发布117条视频，点击量超3400万次。</p>
+<p>宁寿宫建筑群始建于康熙二十八年，乾隆三十七年扩建为太上皇宫殿，光绪时期为慈禧太后修缮使用。展厅由皇极殿迁至西庑区域，并提升展柜密封与采光条件。2019年完成二期改陈项目，新增皇极殿西庑南、北展厅，分别展示像生盆景类文物及玉、彩石类文物，包含铜镀金嵌珐琅海棠式盆红珊瑚盆景、田黄三连印等展品。皇极殿西庑南展厅面积约220平方米，北展厅面积约340平方米，均配备现代化展柜照明设施。</p>
+<h2 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h2>
+<h3 id="馆舍信息"><a class="header" href="#馆舍信息">馆舍信息</a></h3>
+<p>北京故宫珍宝馆1958年开馆。是故宫博物院重要的常年开馆的陈列馆之一。与钟表馆一道以展示清代宫廷文物珍玩为主，并同书画、陶瓷、青铜、珍玩为主，并同书画、陶瓷、青铜、工艺等各馆共同组成故宫陈列体系，等各馆共同组成故宫陈列体系，与古建筑原状群展示相互辉映。故宫珍宝馆位于北京故宫博物院东部，设在故宫东北角的皇极殿西庑、养性殿、乐寿堂和颐和轩里。珍宝馆是一座宝库，有各色宝石，闪闪发光的金银器皿，珍珠翡翠，还有金丝凤冠、象牙玉雕，各类珍宝举世无双；最为突出的是有一座镐多塔，重达5000公斤的大型玉雕。</p>
+<p>故宫博物院宫廷部的负责人介绍，故宫珍宝馆自1958年开馆以来曾经进行过四次大规模整修，这次修整前，馆内设施陈旧、采光不足，展柜密封不够，尘土对展览的效果和文物保护都造成严重危害。 据介绍，新的珍宝馆，从皇极殿和宁寿宫搬迁到了皇极殿西庑、养性殿、乐寿堂和颐和轩，但和原来的珍宝馆同在一个大院子里，观众们很容易找到。</p>
+<p>新馆面积大约220平方米，展出了440多件文物，其中有221件文物是老馆没有展出过的。</p>
+<h3 id="历史由来"><a class="header" href="#历史由来">历史由来</a></h3>
+<p>在紫禁城的东北部有一处独立建筑群,是乾隆建筑群，是乾隆皇帝建造的太上皇宫殿——宁寿全宫。 明代时这里只建有不多的几座宫殿,是供太后、太妃养老的宫区。</p>
+<p>清代康熙二十八年（1689年）初建宁寿宫区。康熙皇帝修建宁寿宫是为皇太后颐养天年。到乾隆年间，乾隆皇帝为表示对自己非常崇拜的祖父康熙皇帝的敬仰，多次表示自己作皇帝的时间决不超过祖父的61年。当乾隆过60岁以后，就开始着手为自己将来作太上皇准备一个舒适的养老之所。从乾隆三十七年（1772年）花了5年的时间，扩建宁寿宫建筑群，共耗银143万余两。改造后的宁寿宫建筑群从格局与体制可说是紫禁城的缩影，分为前后两部分。前部是以皇极殿、宁寿宫为主体的前朝，规制分别仿中路的太和殿、乾清宫和坤宁宫。后部又分为中、 西三路。中路有养性殿、部又分为中、东、西三路。中路有养性殿、乐寿堂、颐和轩、景祺阁，东路有畅音阁、阅是楼等，西路就是俗称“乾隆花园” 阅是楼等，西路就是俗称“乾隆花园”的宁寿宫花园。</p>
+<p>在乾隆六十年（1795年） 在乾隆六十年（1795年）时，便让皇位给自己的儿子颙即嘉庆帝。自己的儿子颙琰，即嘉庆帝。但乾隆归政后并没有从养心殿搬到宁寿宫，可以说徒有归政之名，而无归政之实。光绪年间对宁寿宫重加修饰，是为慈禧太后入住服务，慈禧晚年居住在这里，共计十九年。在珍宝馆的最后，是光绪宠妃珍妃的葬身之地珍妃井，八国联军侵华时期，慈禧太后携光绪帝西逃，临行前处死珍妃，现在我们看到的珍妃井是后期重建的。</p>
+<h2 id="设计分布"><a class="header" href="#设计分布">设计分布</a></h2>
+<p>珍宝馆分设于养性殿（第一室）、乐寿堂（第二室）、颐和轩（第三室）。</p>
+<p>主要是清宫收藏的金银玉翠、奇珍异宝制成的礼器、祭器、冠服、装饰品、生活用品以及宫室内的陈设品。</p>
+<p>第一室 主要陈列：①金编钟。②碧玉特磬。③金印。④金册。⑤如意。⑥金发塔。⑦金提炉、金罐。⑧餐具、茶具。</p>
+<p>第二室 主要陈列有：①龙袍。②盔甲。③凤冠。④大金塔。⑤七珍、八宝。⑥朝珠。⑦象牙席。⑧大玉山。</p>
+<p>第三室 陈列玉石仙台、天球仪等宫室陈设品。</p>
+<h2 id="主要展品介绍"><a class="header" href="#主要展品介绍">主要展品介绍</a></h2>
+<p>金胎掐丝珐琅嵌画珐琅执壶：通高39厘米，宽 39厘米 25.5厘米</p>
+<p>金嵌珠杯盘：通高7.3厘米， 杯口径 7.1厘米 ，盘高2.2 厘米，盘径18厘米。</p>
+<p>玛瑙葵花式托碗：通高8.5厘米 ，碗高4.7厘米，口 径11.3 厘米， 足径5.4 厘米。 盘高2.7厘米，直 径16厘米，足 径9.7厘米。</p>
+<p>红珊瑚狮子</p>
+<p>翠白菜式花插</p>
+<p>翠卧牛</p>
+<p>东珠朝珠： 周长137厘米，由 108颗东珠穿成。</p>
+<p>金瓯永固杯</p>
+<p>天球仪</p>
+<p>金嵌珍珠宝石塔</p>
+<p>金嵌珠立佛</p>
+<p>金宗喀巴像</p>
+<p>金累丝嵌松石坛城</p>
+<p>禊赏亭， 轩西为凿有流杯渠的禊赏亭，亭座西面东， 轩西为凿有流杯渠的禊赏亭，亭座西面东，坐落于须弥座平台上，禊赏亭抱厦内地面凿石为渠，渠长27m 27m， 弥座平台上，禊赏亭抱厦内地面凿石为渠，渠长27m， 盘折， 曲水流觞”之意， 流杯渠” 曲廻盘折，取“曲水流觞”之意，称“流杯渠”。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../the-Palace-of-Tranquil-Longevity/Lady-Pearls-Well.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../treasures/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../the-Palace-of-Tranquil-Longevity/Lady-Pearls-Well.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../treasures/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

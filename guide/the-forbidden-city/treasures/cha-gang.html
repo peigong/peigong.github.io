@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>茶缸 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/treasures/cha-gang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="茶缸"><a class="header" href="#茶缸">茶缸</a></h1>
+<p>茶缸是20世纪广泛使用的搪瓷或陶瓷材质饮水器具，具有大口无颈、容量大的特点。在计划经济时期，茶缸不仅用作饮水容器，还承担盛装食物、洗漱等多项功能，尤其作为单位奖励品具有特殊纪念意义。</p>
+<p>军用茶缸自1950年代开始配发，被官兵称作"军缸"，其中1943年岱崮保卫战使用的茶缸经国家文物局鉴定为国家一级文物，1959年解放军赠予藏民的茶缸保留"为人民服务"红字标识。搪瓷茶缸采用铁胚搪瓷工艺经冲压成型、釉料喷涂和高温烧制而成，军用版本在不同历史时期印有部队标识或慰问文字。随着生活水平提升，茶缸逐渐被现代器皿替代，但金华市家居日用公司仍延续传统工艺生产特厚型号茶缸。</p>
+<p>现代文创设计中，上海玖申文化创意有限公司推出文艺清新风格茶缸。</p>
+<h2 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h2>
+<p>茶缸的使用可追溯至更早时期，例如红军和新四军时期军队已开始使用被称为“洋瓷碗”“洋瓷缸”的搪瓷制品。1949年后，为恢复生产，上海市政府曾预付定金订购军用搪瓷饭碗。抗日战争时期，1943年的岱崮保卫战中，八路军战士的茶缸已成为重要战场用品，战后被保存的茶缸经国家文物局鉴定为国家一级文物。</p>
+<p>搪瓷茶缸在20世纪70年代成为家庭标配生活用品，常印有单位名称或奖励字样。1978年青岛光学仪器厂定制的400只茶缸单价约2元，作为“百日生产大会战”奖品发放，表面带有红色厂名标识，印证了计划经济时期的工业生产奖励制度。一只搪瓷茶缸的制造需经过制胎、酸洗、施釉、高温烧成等多道工序。军用茶缸自1950年代开始配发，被官兵称作“军缸”。在部队中，其正式名称常为“军用口杯”，也常被称作“牙缸”。自上世纪五十年代起，中国人民赴朝慰问团曾向抗美援朝官兵赠送印有“抗美援朝、保家卫国”及“赠给最可爱的人”字样的茶缸。作为“兵之初”最早配发的物品之一，因其用途广泛、使用频繁，成为连接不同年代军人记忆的独特符号。例如，1970年参军入伍的战士会配发草绿色的军用茶缸；后期亦有配发给武警部队、印有“中国武警”字样的淡橄榄绿色茶缸。退役老兵王以广自1970年参军起使用同一只部队配发的草绿色茶缸长达50年，期间茶缸底部多次锈蚀漏水，均由其亲手修补。早期版本印有“赠给最可爱的人”等慰问文字。进入21世纪，随着不锈钢、塑料等材质制品的普及，搪瓷茶缸逐渐退出日常生活的必备品行列。如今，它更多作为一种承载时代记忆的复古符号出现，常见于怀旧主题的餐饮场所，或作为具有纪念意义的定制礼品。</p>
+<h2 id="材质与工艺"><a class="header" href="#材质与工艺">材质与工艺</a></h2>
+<p>搪瓷茶缸采用铁胚搪瓷工艺，经冲压成型、釉料喷涂和高温烧制而成，具有耐摔耐磨特性。一只搪瓷茶缸需经过制胎、酸洗、施釉、烧成、检验等多道工序。70年代瓷茶缸采用优质瓷土制作，需经过胚胎成型、彩绘装饰等12道工序，表面常绘有山水花鸟等传统图案。现代搪瓷茶缸延续传统工艺，金华市家居日用公司生产的特厚型号可达12厘米高度，提供素白蓝边等怀旧设计。</p>
+<h2 id="功能演变"><a class="header" href="#功能演变">功能演变</a></h2>
+<p>在物质匮乏年代，茶缸承担多功能用途：</p>
+<ul>
+<li>食堂打饭容器（可装半斤米饭）</li>
+<li>野战环境下用作泡面器具</li>
+<li>学生军训时配套生活用具</li>
+<li>临时储物容器（存放食盐、白糖等）</li>
+</ul>
+<p>90年代武警部队配发的淡橄榄绿口杯容积500毫升，印有"中国武警"字样，相较于早期军绿色版本更注重标识性。</p>
+<h2 id="文化象征"><a class="header" href="#文化象征">文化象征</a></h2>
+<p>茶缸作为时代记忆载体具有特殊意义：</p>
+<p>开封市民罗景新收藏800余个茶缸，包含抗美援朝纪念款等20余种类型。茶缸还记录了特定年代的文化信息，如抗美援朝、学雷锋、单位福利、结婚‘小配套’等，成为时代的记忆切片。青岛市王新捐赠的1978年茶缸保存近50年，体现器物承载的集体记忆。诗歌中"遍体鳞伤的军绿色茶缸"成为军旅生活的经典意象。此外，茶缸在现实生活中成为连接不同年代军人记忆的符号，许多退役老兵将其视为军旅情结的载体，延续个人与集体的记忆。</p>
+<p>茶缸作为历史文物具有重要影响。例如，山东博物馆收藏的一只抗战时期茶缸被定为国家一级文物，它见证了1943年的岱崮保卫战，体现了战士们的战场智慧。</p>
+<p>在当代复古怀旧风潮中，茶缸被赋予新角色，常作为复古饭店装饰或纪念品出现，延续其文化影响。</p>
+<h2 id="现代状况"><a class="header" href="#现代状况">现代状况</a></h2>
+<p>搪瓷茶缸在现代呈现新特征：</p>
+<p>2000年前后，搪瓷产业因不锈钢、塑料等替代品的竞争而逐渐衰落，茶缸从生活必需品转变为复古纪念品。怀旧风格产品占据主流，义乌购平台有相关商品销售；收藏市场注重品相，完整无缺损的70年代茶缸价格可达普通品的3倍，此外，与重大历史事件相关的茶缸（如抗战时期或抗美援朝慰问品）因具有特殊历史价值，进一步提升了收藏市场的内涵；企业定制茶缸作为促销礼品，支持logo印制服务，企业定制茶缸也常用于特定群体的纪念活动，例如面向退役军人的定制礼品；2024年，茶缸类老物件在民俗博物馆中的陈列占比达17%；传统搪瓷生产工艺在部分地区仍有延续，以满足复古市场和特定需求。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>红军和新四军时期军队人手一只的穿绳“洋瓷碗”“洋瓷缸”，1949年后上海市政府为恢复生产而预付定金订购军用搪瓷饭碗。</p>
+<p>西安人民搪瓷厂的生产工序包括制胎、酸洗、施釉、烧成（1200℃左右）、检验等关键步骤，1958年程十发、唐云等上海中国画院画师为搪瓷厂设计画稿推动产品装饰发展。</p>
+<p>茶缸上的标语与图案如“抗美援朝，保家卫国”、“向雷锋同志学习”、“劳动模范”等反映了知识青年上山下乡、学习英雄人物等时代背景，其常被作为奖品、礼品或单位福利发放，并作为结婚“小配套”，山东博物馆藏“岱崮保卫战”相关茶缸被定为国家一级文物，是其作为革命文物和战场智慧见证的研究价值体现。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../treasures/Cloisonne.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../treasures/Cloisonne.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
