@@ -1,0 +1,12 @@
+{
+  "name": "beijing-luxun-museum",
+  "version": "1.0.0",
+  "description": "北京鲁迅博物馆",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

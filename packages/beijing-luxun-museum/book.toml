@@ -1,16 +1,16 @@
 [book]
-authors = ["VET.PG"]
+authors = ["VET. 周培公"]
 language = "en"
 multilingual = false
 src = "src"
-title = "English Tour Guiding in Beijing - VET.PG(https://pg.js.cn)"
+title = "北京鲁迅博物馆 - VET.周培公(https://pg.js.cn)"
 
 [build]
-build-dir = "../../public/guide/english-tour-guiding-in-beijing"
+build-dir = "../../public/guide/beijing-luxun-museum"
 
 [output.html]
 default-theme = "rust"
 git-repository-url = "https://github.com/peigong/peigong.github.io"
 edit-url-template = "https://github.com/peigong/peigong.github.io/edit/master/guide/{path}"
-site-url = "/guide/english-tour-guiding-in-beijing/"
+site-url = "/guide/beijing-luxun-museum/"
 cname = "pg.js.cn"
