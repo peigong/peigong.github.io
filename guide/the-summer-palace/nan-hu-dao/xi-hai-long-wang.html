@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>西海龙王 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/nan-hu-dao/xi-hai-long-wang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="西海龙王"><a class="header" href="#西海龙王">西海龙王</a></h1>
+<p>西海龙王原名敖闰（亦有称敖顺，敖钦），中国神话传说中角色，是“四海龙王”之一。西海龙王一词首次出现于《道藏·太上洞渊神咒经》卷一三·制三·龙王品。据《道藏·太上洞渊神咒经》记载可知西海龙王有吐水万石，扫除不祥的能力本领。据《李元吴江救朱蛇》的记载：“见数十人，皆锦衣，簇拥一老者出殿上。其人蟾冠、大袖、朱履、长裙，手执玉圭，进前迎讶。”可知西海龙王形象为一锦衣玉服的老者形象。</p>
+<p>龙王一词最早出自于佛教典籍，后被道教按照方位敕封为西方西海龙王，为五龙神之一。至唐朝时被官方认可其身份，并予以祭祀。到宋朝微宗大观二年十，诏天下五龙神皆封王爵，青龙神封广仁王，赤龙神封嘉泽王，黄龙神封孚应王，白龙神封义济王，黑龙神封灵济王。西海龙王由此拥有王爵身份，被官方正式册封为义济王，其身份由龙神转变为龙王。</p>
+<p>西海龙王作为神话人物，他虽然法术低微，神仙世界中不受尊崇，但集雨神与海神身份于一身，独霸海洋世界。</p>
+<h2 id="人物设定"><a class="header" href="#人物设定">人物设定</a></h2>
+<h3 id="外貌特征"><a class="header" href="#外貌特征">外貌特征</a></h3>
+<p>据《李元吴江救朱蛇》的记载：“见数十人，皆锦衣，簇拥一老者出殿上。其人蟾冠、大袖、朱履、长裙，手执玉圭，进前迎讶。《李元吴江救朱蛇》中的老者为西海龙王，其形象为头上佩戴蟾冠，穿着长裙朱履，手执玉圭。</p>
+<h3 id="人物本领"><a class="header" href="#人物本领">人物本领</a></h3>
+<p>据唐朝时期《全唐文》记载：建广润龙王庙盖闻四表，则功济于生者：百成，则水旱事件于阴鹭。而况浙阳重镇，自古吴都，襟带溪湖，接连江海，赋舆甚广，田亩至多，须资灌溉之功，用奏耕桑之业。…固有神龙居止，水府司存，降景佑於生灵，兴旱涸之风雨。可知西海龙王有降景佑於生灵，兴旱涸之风雨的能力和本领。</p>
+<h2 id="形象演变"><a class="header" href="#形象演变">形象演变</a></h2>
+<h3 id="形象起源"><a class="header" href="#形象起源">形象起源</a></h3>
+<p>龙王一词最早出自于佛教典籍，如《增壹阿含经》卷四十四：“城中有龙王名水光。”《菩萨本行经》卷下：“时海龙王名波留尼，王有夫人名摩那斯。”《悲华经》卷九：“有一龙王名曰马坚。（注：佛教典籍中的龙王为单独个体，与四海龙王之间关联不大，此时龙王并未与中国龙王进行融合和本土化，是四海龙王信仰形成的背景）</p>
+<h3 id="形象变迁"><a class="header" href="#形象变迁">形象变迁</a></h3>
+<p>至晋朝时期，被道教《道藏·太上洞渊神咒经》卷一三·制三·龙王品按照方位敕封为东方东海龙王、西方西海龙王、北方北海龙王、北方北海龙王等职，为五龙神之一。（注：晋朝时期道教对龙王进行敕封，按照东、南、西、北、中分为五方龙神，也是西海龙王一词最早的出处）</p>
+<p>至唐朝时期，据唐朝时期史籍记载：至开元修理五岳四渎，皇帝无亲祭礼仪，其祝文皆云：‘嗣天子某，谨遣某官，敢昭告于某岳某续之神。”读讫，皆申再拜。祭五龙神，但云：‘献官再拜。’…皱纹六年六月，复祭五龙坛。”（注：此时五龙神的身份得到官方的认可，并予以祭祀）</p>
+<p>唐朝时期，据《全唐文》记载：建广润龙王庙盖闻四表，则功济于生者：百成，则水旱事件于阴鹭。而况浙阳重镇，自古吴都，襟带溪湖，接连江海，赋舆甚广，田亩至多，须资灌溉之功，用奏耕桑之业。…固有神龙居止，水府司存，降景佑於生灵，兴旱涸之风雨。（注：由《全唐文》可知龙神有降景佑於生灵，兴旱涸之风雨的神通和能力）</p>
+<p>至宋朝时期，据宋朝时期史籍记载：京城东春明坊五龙祠，太祖建隆三年自元武门徙于此。国朝缘唐祭五龙之制，春、秋常行其祀。先是熙宁十年八月信州有五龙庙，祷雨有应，赐额曰“会应”。自是五龙庙皆以此名额云。微宗大观二年十，诏天下五龙神皆封王爵，青龙神封广仁王，赤龙神封嘉泽王，黄龙神封孚应王，白龙神封义济王，黑龙神封灵济王。（注：西海龙王被正式册封为义济王，其身份由龙神转变为龙王。）</p>
+<p>至元朝时期，据《新元史》卷八七记载：其封号至元二十八年春二月，如上东岳为天齐大生仁圣帝，西岳金天大利顺圣帝，北岳安天大贞元圣帝，中岳中天大宁崇圣帝。加封江渎为广元顺济王，河渎灵源宏济王，淮渎长源溥济王，济渎清源善济王，东海广德灵会王，南海广利灵孚王，西海广润灵通王，北海广泽灵佑王。（注：西海龙王在元朝时期封号转变为灵通王）</p>
+<p>据元杂剧《争玉板八仙过沧海》记载：记白云仙请八仙苑赏牡丹花。各回仙境。行至东洋岸边。乘著酒兴。各显神通渡海。不许腾云。蓝采和蹦玉板过海。被东海龙王之子摩揭龙毒抢去玉板。擒住采和。吕纯阳往救之。放还采和。不还玉板。以致纯阳与二龙战斗。斩死摩揭。斫去龙毒一臂。龙毒愬知其父。于是四海龙王与八仙大战。损害无数生命。终不能胜。释迦佛悯之。乃劝两家罢兵。龙王交出八扇玉板。除下二扇与龙王。以偿其爱子之命。契子：”（东海大王云）：....我如今响铁鸣。聚集四海龙王。……（南海王云）...小圣乃南海敖闰龙王是也。这二位一个是西海敖钦龙王，这一个是北海敖顺龙王......（注：由《争玉板八仙过沧海》记载可知，四海龙王法力高强，且兄弟几人十分团结，同时首次引出四海龙王的姓名，分别为“敖广、敖闰、敖钦和敖顺”，西海龙王为敖钦，此处西海龙王名称有争议，后世尚无统一定论）</p>
+<p>据明朝时期《三宝太监西洋记》第一回记载：说经台下听讲的，恰有四个异样的人，头上尽有双角，项下俱有逆鳞，只是面貌迥然不同。第一个青衣青脸，数甲道乙；第二个红脸朱衣，指丙蹑丁；第三个白脸素衣，呼庚吸辛；第四个黑脸玄衣，顶壬礼癸。惠岸近前去打一看，原来不是别的，却是四海龙王。面青的是东海龙王敖广，面红的是南海龙王敖钦，面白的是西海龙王敖顺，面黑的是北海龙王敖润。（注：此处对西海龙王的外貌进行描写，为头上有双角，项下俱有逆鳞，白脸素衣，呼庚吸辛）</p>
+<p>据明朝吴承恩所撰《西游记》第四十五回记载：那道士愈加着忙，又添香、烧符、念咒、打下令牌。半空中，又有四海龙王，一齐拥至。.....行者道：“不是打你们，但看我这棍子往上一指，就要刮风。”那风婆婆、巽二郎没口的答应道：“就吹风！”“棍子第二指，就要布云。”那子，布公子道：“就布，就布！”“棍子第三指，就要雷鸣电灼。”那雷公，电母道：“恩承，恩承！”“棍子第四指，就要下雨。”那天王道：“革命，革命！”“棍子第五指，就要大日晴天。却莫违误。”……那大圣仰面朝空，厉声高叫：“敖广何在？咱们都现身来看看！”那龙王听唤，即忙现了本身。四条龙，在半空中度雾穿云，飞舞向金銮殿上。（注：由此可知四海龙王主要的职责为行云布雨）</p>
+<h2 id="人物经历"><a class="header" href="#人物经历">人物经历</a></h2>
+<h3 id="八仙过海"><a class="header" href="#八仙过海">八仙过海</a></h3>
+<p>据元杂剧《争玉板八仙过沧海》记载：记白云仙请八仙苑赏牡丹花。各回仙境。行至东洋岸边。乘著酒兴。各显神通渡海。不许腾云。蓝采和蹦玉板过海。被东海龙王之子摩揭龙毒抢去玉板。擒住采和。吕纯阳往救之。放还采和。不还玉板。以致纯阳与二龙战斗。斩死摩揭。斫去龙毒一臂。龙毒愬知其父。于是四海龙王与八仙大战。损害无数生命。终不能胜。释迦佛悯之。乃劝两家罢兵。龙王交出八扇玉板。除下二扇与龙王。以偿其爱子之命。</p>
+<p>《争玉板八仙过沧海》契子：”（东海大王云）：....我如今响铁鸣。聚集四海龙王。……（南海王云）.....小圣乃南海敖闰龙王是也。这二位一个是西海敖钦龙王，这一个是北海敖顺龙王......</p>
+<h3 id="车迟国斗法"><a class="header" href="#车迟国斗法">车迟国斗法</a></h3>
+<p>据明朝吴承恩所撰《西游记》第四十五回记载：那道士愈加着忙，又添香、烧符、念咒、打下令牌。半空中，又有四海龙王，一齐拥至。.....行者道：“不是打你们，但看我这棍子往上一指，就要刮风。”那风婆婆、巽二郎没口的答应道：“就吹风！”“棍子第二指，就要布云。”那子，布公子道：“就布，就布！”“棍子第三指，就要雷鸣电灼。”那雷公，电母道：“恩承，恩承！”“棍子第四指，就要下雨。”那天王道：“革命，革命！”“棍子第五指，就要大日晴天。却莫违误。”……那大圣仰面朝空，厉声高叫：“敖广何在？咱们都现身来看看！”那龙王听唤，即忙现了本身。四条龙，在半空中度雾穿云，飞舞向金銮殿上。</p>
+<h3 id="合力降鼋"><a class="header" href="#合力降鼋">合力降鼋</a></h3>
+<p>相传在八仙为百姓修建“八角海”以后，突然来了一只巨鼋霸占“八角海”，巨鼋身体硕大，状如扇车。它爬进了南海，在海中扑腾翻泳，吃尽鱼虾，没几天便将南海泉眼堵死，水塘干涸。它又爬进西海，西海很快干涸，它又爬进东海，仅两天东海也水枯塘干。它又爬进七星海，仅四五天功夫，七泉封死，泉干海枯，最后它爬进了八卦池中，那里尽管泉眼很大，却池塘狭小，巨鼋爬进，将整个池塘堵死，不久便也泉干水枯。善财童子与巨鼋相斗之时，四方百姓都聚拢来看，眼见龙王将巨鼋降服，百姓们都跪在龙王面前，请龙王将泉水疏通，使海塘溢满，让百姓生活得到保证，龙王欣然答应。于是，他取出随身带的一根火龙棒，在五海十一泉中挨个地捅了一下，顿时泉水喷涌，海塘溢满，而且水汽蒸腾，水温很高，百姓齐声欢呼，尽谢龙王。</p>
+<h2 id="内涵分析"><a class="header" href="#内涵分析">内涵分析</a></h2>
+<p>在众多文学作品中四海龙王都是以反面角色出场的，其形象更像是受着皇帝宠爱的地方大员，而不是威猛正气的一方神圣。龙太子就是公子衙内，夜叉就是随从爪牙。仗着玉帝信任，在地方上横行无忌。但是又欺软怕硬，明里不行就使阴招，但是却有着不可替代的地位。作为一种民间信仰，从沿海的求保平安，到内陆的求雨救旱，不仅历史悠久，而且影响深远。</p>
+<h2 id="人物评价"><a class="header" href="#人物评价">人物评价</a></h2>
+<p>西海龙王有独霸一方的身份和欺软怕硬的性格特点，正好对应了民间故事中的地主恶霸形象，容易引起大众的共鸣，一方面促进了四海龙王故事的流播，另一方面也使得民间对龙王都没有太好的印象。（论文《四海龙王考论》作者张星 评）</p>
+<p>龙王是中国神话中的重要角色，分别掌管东海、南海、西海和北海。传统神话故事中，四海龙王大多以男性形象出现，性格特征也较为模式化。其中西海龙王敖闰掌管风源与气候，知名度也许仅次于东海龙王敖广，因为他的三儿子就是《西游记》中，驮着唐三藏去西天取经的白龙马。（青海省人民政府网 评）</p>
+<h2 id="民间影响"><a class="header" href="#民间影响">民间影响</a></h2>
+<h3 id="庙宇"><a class="header" href="#庙宇">庙宇</a></h3>
+<p>西海龙王庙位于史村镇西海村，占地面积3570平方米，始建于唐代，屡毁屡建，现存建筑为清道光八年(1828)重建。当年，陈赓将军曾驻守于此，指挥解放了曲沃乃至运城的几大战役。解放后，因为无人看管，加上年久失修，大殿频遭盗窃，殿顶洞穿，庙内杂草丛生，一片荒芜。2011年我县开启了鼓励社会资金对县境内古建筑进行修缮保护和合理利用的探索实践，西海龙王庙得到热心企业家的认领，现已修葺一新。如今形成了以龙王庙为载体，集红色文化、民俗文化为一体的综合文化旅游目的地，同时也是群众文化活动开展的主阵地之一。</p>
+<p>据曲沃西海龙王庙内元至顺三年（1332年）五月五日立《温泉龙王庙塑画碑》记载：夫龙王者，治水之神也，威灵至大，变化无穷，能幽能明，能小能大，无所不在。…曲沃东北石堆，有温泉龙王庙，其地贵矣。本庙自大元始祖之时，住持谭景舜、杨天用等嗣续守祭，常年享于清明，各村社社首于此行香、进礼、作乐、岁无间断。至大德葵卯仲秋上旬六日甚遭地震，神殿倾颓，龙祥观主杨道诫不忍观废，复与大殿，绝胜其初。碑文介绍了元代西海龙王庙重葺的前因后果。碑刻第一部分叙述了龙王对于祈雨的作用，祭祀的时间和程序，描述了寺院住持在时龙王庙的盛况，后因元大德年间地震几乎废弃，龙祥观观主不忍其废弃故重修大殿，重现旧日胜景并作碑纪念。</p>
+<h3 id="庙会"><a class="header" href="#庙会">庙会</a></h3>
+<p>农历二月初二龙抬头，是我国一个传统节日。民间传说，这一天是天上主管云雨的龙王抬头的日子，人们会在二月二祈福龙王驱凶纳吉、赐福人间、人畜平安、五谷丰登！因此举行庙会活动。</p>
+<h2 id="相关事件"><a class="header" href="#相关事件">相关事件</a></h2>
+<p>2013年，中美研究人员在中国新疆维吾尔自治区五彩湾发现一种生活在1.61亿年前的晚侏罗纪恐龙化石，是一种新型肉食恐龙，为其取名为敖闰。</p>
+<h2 id="广润灵雨祠"><a class="header" href="#广润灵雨祠">广润灵雨祠</a></h2>
+<p>广润灵雨祠，俗称龙王庙，位于北京颐和园内昆明湖景区，原是西湖东界长堤上的龙神祠，乾隆时期掘堤拓湖时留下四周土地，形成了南湖岛，并重修龙神祠，改名“广润祠”，作为园中的祈雨之所。</p>
+<p>后因在此求雨“灵验”，遂亲笔改题祠额为“广润灵雨祠”。光绪时，慈禧由水路入园，在祠前码头下船，入祠烧香，然后再登船去乐寿堂寝宫。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nan-hu-dao/ci-xi-shui-dao.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nan-hu-dao/kuo-ru-ting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nan-hu-dao/ci-xi-shui-dao.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nan-hu-dao/kuo-ru-ting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

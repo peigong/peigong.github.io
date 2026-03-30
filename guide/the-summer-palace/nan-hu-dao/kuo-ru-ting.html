@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>廓如亭 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/nan-hu-dao/kuo-ru-ting.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="廓如亭"><a class="header" href="#廓如亭">廓如亭</a></h1>
+<p>廓如亭，俗称八方亭，位于北京市颐和园东堤新建宫门以南，始建于清乾隆十七年（1752年），光绪年间重修。该亭坐北朝南，建筑面积384.95平方米，平面呈八边形，由内外三圈共40根柱子支撑（24圆柱、16方柱），顶部为重檐八脊攒尖圆宝顶结构，亭内悬挂乾隆御制诗文木匾8块。</p>
+<p>历史上廓如亭历经多次修缮，包括1951年整修、1963年加装避雷设备及后期油饰维护。其与十七孔桥、南湖岛构成颐和园标志性景观组合，清漪园时期更与望蟾阁形成高低错落的建筑群。2019年3月至10月，为保护北京雨燕繁殖栖息，颐和园首次实施亭内暂时封闭措施，游客可通过外围参观。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>廓如亭始建于乾隆十七年（1752年），当时的东堤尚无园墙，廓如亭不仅能四面观景，还有守护园林的作用。</p>
+<p>光绪十四年（1888年），重修廓如亭，沿用了清漪园时的旧名。</p>
+<p>光绪二十九年（1903年）三月，粘修重檐廓如八方亭一座，补齐间有无存装修。八方月台一座并东西南面踏跺两座，周围押面上宇墙粘修补安棚，木装修找补画活。内檐细装修除新做其余水磨光亮具新。</p>
+<p>1951年整修。1955年油饰，为节约大赤金，金线大点金改为墨线大点金。</p>
+<p>1963年安装避雷设备。19世纪80年代及90年代多次整修油饰。</p>
+<h2 id="地理位置"><a class="header" href="#地理位置">地理位置</a></h2>
+<p>廓如亭位于颐和园新建宫门以南的东堤上，在十七孔桥东端。建筑形态舒展稳重，气势雄浑，与十七孔桥及南湖岛在空间上互相映衬，搭配得天衣无缝。清漪园时期，南湖岛上建有三层的望蟾楼阁，望蟾楼阁与东堤上的廓如亭、水面上的十七孔桥共同构成了高楼、长桥、巨亭，起伏有序，颇为壮观的巨型风景。</p>
+<p>每年的3月到8月，是北京雨燕飞抵北京繁育的时间。雨燕栖息在适宜建巢的古建筑或仿古建筑横梁的缝隙中。非常适合北京雨燕栖息筑巢繁殖。颐和园的廓如亭每年都吸引大量雨燕在此筑巢、繁殖，是园内雨燕最集中的区域。</p>
+<h2 id="环境保护"><a class="header" href="#环境保护">环境保护</a></h2>
+<p>2019年6月30日，为保护雨燕在颐和园的生存环境，从2019年3月雨燕繁殖的高峰期起，颐和园首次对廓如亭内部采取暂时关闭措施，暂时关闭措施将持续至10月份。</p>
+<p>廓如亭四个出入通道设置围栏，游客暂时无法进入亭内，但可在四周参观，通过这种方式为雨燕繁殖营造一个宁静的环境。</p>
+<h2 id="建筑结构"><a class="header" href="#建筑结构">建筑结构</a></h2>
+<p>面积约130平方米的廓如亭，由内外三圈共40根柱子支承，其中24根为圆柱，16根为方柱，顶部重檐八脊攒尖圆宝顶。</p>
+<p>廓如亭有八角重檐，坐北朝南，建筑面积384.95平方米，柱高4.29米，周围有:八方重檐八脊攒尖顶，笼花板，下檐周围雀替。藻井天花，有十六吻兽，平面呈八方形，每面显三间，大木六凛，斗拱上檐周围廉仿凛上 全部饰以旋子大点金彩画。一层面东外檐下悬挂匾额:廓如亭。亭内金砖地面，内外由三圈24根圆柱和16根方柱支承，青石柱础，圆柱下为八角形。前后檐八面相同，外围有坐凳。亭四周建有八方形的月台，边长11.1米。环绕月台砌着1米多高的宇墙，宇墙四面各建一座木栅栏门。虎皮石台明石角柱台基，垂带式台阶。亭内仿梁上现挂八块木匾，其中两块为乾隆皇帝的手书诗句，六块是光绪时期大臣为廓如亭童身度作的，其内容摘自《文心雕龙》中的部分辞句，用来歌咏景色，赞美时政。</p>
+<h2 id="传说故事"><a class="header" href="#传说故事">传说故事</a></h2>
+<p>站在佛香阁上瞧昆明湖，绿汪汪的湖中有一座小岛，岛的模样象个乌龟壳，连着东堤的十七孔桥象龟的脖子，廓如亭就象乌龟的头。</p>
+<p>据说，乾隆修颐和园时建十七孔桥和廓如亭，为的就是要困住龙王。</p>
+<p>有一年，乾隆扩展“瓮山泊”，改名为昆明湖。到了来年六月，不知为什么一下子就闹开了大水，眼瞧着水就要漫过湖堤。这龙王不知道该走哪条水路，就上报了玉皇大帝，玉帝降旨让龙王出长河往南进永定河，再朝东入海。</p>
+<p>龙王嫌这条老道走腻了，一高兴就往北下去了，过了安河桥，沿着清河就奔了东北方向。龙王穿过清河大石桥，一路上都觉得挺新鲜，就想出水观观景。走到龙滩，龙王驾着水头一下就上了岸，它这一上岸可了不得，大水一下淹了几百亩良田。看龙王不服管教，玉帝大怒，就把它关在耶律楚材墓北边的延年井里。</p>
+<p>没过一年，乾隆建勤政殿，往南搬了耶律楚材墓。延年井里的龙王没规矩几个月，一看墓旁的石人都活动了活动，我干什么傻呆在井里不出去乐一乐？就这么着，龙王钻出延年井，隐了真身，跑到大戏楼里看了一场戏。</p>
+<p>龙王看完戏，又进了长廊，游了游留佳亭，寄澜亭，穿过排云门一直上到佛香阁和众香界。从人间上到天界，龙王又想看看野景，就下山到了苏州街，神不知鬼不觉地绕到了西堤。龙王憋了几个月，这一逍遥可不要紧，又困又乏就躺倒下来，隐了隐真身，变成了树形，不一会儿就睡着了。</p>
+<p>有两个巡夜的，巡查到了此地就靠在树旁抽烟，抽完一袋烟，顺手磕了磕烟灰。这一磕正敲在龙爪子上，一下把龙王惊醒了，龙王一翻身，都把他们掀翻在地。</p>
+<p>两个巡夜的一看，吓得失魂落魄，滚着爬着跑了回去，赶忙向乾隆报了此事。乾隆大吃一惊，这才想到龙王还没个住处。把龙王安在哪呢？乾隆想了想，南湖岛象个乌龟，一刮东南风这龟总象是朝东堤跑，就派龙王骑在南湖岛上，镇压着乌龟。乾隆怕龙王不安稳，到处乱跑，吓着娘娘、妃子，就盖了个龙王庙，用泥给龙王塑了个金身。</p>
+<p>龙王住在南湖岛上，一连几十天不走动，就发了愁，泥塑的真身不能沽水，它就给乾隆托了个梦。</p>
+<p>乾隆在梦中遇见了龙王。龙王对乾隆说:“南湖岛太小，我得活动活动。”乾隆怕龙王变脸闹事就答应龙王给它建一座桥。龙王怕镇海铜牛，不敢过桥，还嫌地方小。乾隆一琢磨说:“朕给你地方，四面八方都给你里”，龙王一听高兴了。</p>
+<p>乾隆在桥头南边建了一个廓如亭，意在廓四方，折八极。一下就把龙王困住了。</p>
+<p>这廓如亭也就是八方亭。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nan-hu-dao/xi-hai-long-wang.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nan-hu-dao/Seventeen-Arch-Bridge.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nan-hu-dao/xi-hai-long-wang.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nan-hu-dao/Seventeen-Arch-Bridge.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

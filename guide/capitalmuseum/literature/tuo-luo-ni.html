@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>佛顶尊胜陀罗尼经 - 首都博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">首都博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/literature/tuo-luo-ni.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="佛顶尊胜陀罗尼经"><a class="header" href="#佛顶尊胜陀罗尼经">佛顶尊胜陀罗尼经</a></h1>
+<p>《佛顶尊胜陀罗尼经》为唐代密教经典，又称《尊胜陀罗尼经》《尊胜陀罗尼》，简称《尊胜经》，全一卷。由中印度僧人地婆诃罗与沙门彦琮于高宗永淳元年（682年）在长安弘福寺译出，是《尊胜陀罗尼经》的第二个汉译本。经文源于佛陀应帝释天之请，为解救堕入畜生道的善住天子而宣说陀罗尼咒，强调持诵此咒可消灾延寿、净化恶道。</p>
+<p>经文主体包含陀罗尼咒语及持诵功德，唐代另有佛陀波利、义净等多种译本，其中佛陀波利的译本最为流行。后世多镌刻于经幢传播，敦煌藏经洞所出该经写卷中佛陀波利译本计有120多件。密教将其纳入胎藏界曼荼罗释迦院五佛顶体系，用于息灾修行。敦煌莫高窟壁画中存有该经经变画，目前共发现8铺，分布于第23、31、103、217、156、55、169、454等窟。该经自宋至明持续传承，明永乐九年（1411年）有御制序文推崇。2019年杭州保俶塔保养时发现塔刹刻有此经，2021年相关文创产品获奖；河北涿州有刻立于辽乾统二年（1102年）的佛顶尊胜陀罗尼经幢。河北卢龙的大佛顶尊胜陀罗尼经幢为全国重点文物保护单位。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>佛顶尊胜陀罗尼，尊胜佛顶尊之陀罗尼也。帝释天，悯善住天子有从今受七度畜生恶道身之业因，诣祇园精舍请佛救济之法，佛为说此陀罗尼，令诵之。（中略）佛告天帝：此佛顶尊胜陀罗尼，若有人闻一经于耳，先世所造一切地狱恶业皆悉消灭。”该经又称《尊胜陀罗尼经》《尊胜陀罗尼》，简称《尊胜经》，全一卷。</p>
+<p>《佛顶最胜陀罗尼经》，一卷，唐地婆诃罗译，是《佛顶尊胜陀罗尼经》的异译本之一。高宗永淳元年五月二十二日，地婆诃罗在弘福寺与沙门彦琮一起译出这部经。《尊胜陀罗尼经》全名《佛顶尊胜陀罗尼经》，简称是《尊胜经》，一卷，唐佛陀波利译。《尊胜陀罗尼经》讲述善住天子命终之后，将受七度畜生恶道之苦，帝释天怜悯其业因，于是到佛陀那，恳请佛陀救济善住天子，佛陀就他们宣说尊胜陀罗尼及持诵功德。</p>
+<p>《尊胜陀罗尼经》异译本比较多，除去唐代佛陀波利翻译的《佛顶尊胜陀罗尼经》外，另有后周智称翻译的《尊胜陀罗尼并念诵功能法》（该译本已亡佚），唐代杜行顗翻译的《佛顶尊胜陀罗尼经》一卷、地婆诃罗翻译的《最胜佛顶陀罗尼净除业障经》一卷、义净翻译的《佛顶尊胜陀罗尼经》一卷，宋代施护翻译的《尊胜大明王经》一卷、法天翻译的《最胜佛顶陀罗尼经》一卷等等。其中佛陀波利的译本在唐代最为流行。</p>
+<p>至于《佛顶最胜陀罗尼经》，则是高宗永淳元年五月二十二日，地婆诃罗在弘福寺与沙门彦琮一起译出这部经。经名中所说的“佛顶尊胜”，是密教胎藏界曼荼罗释迦院的五佛顶之一。释迦院的五佛顶中以释迦牟尼佛顶显现的轮王形佛顶尊最为殊胜，因此密教以佛顶尊作为本尊，修持息灾除病之法，称之为尊胜法。佛顶尊胜陀罗尼就是说佛顶尊胜功德，自古以来，颇多灵验。</p>
+<p>《佛顶最胜陀罗尼经》译者地婆诃罗（613～687），意译日照，原是中印度人，婆罗门种，幼年出家，居摩诃菩提寺、那兰陀寺。地婆诃罗风仪温雅，神机朗俊，通达三藏，博晓五明，尤其精于咒术。他知道玄奘法师学成要归国，也有远游中土之志，于唐高宗仪凤初年抵达长安，当时已经六十多岁。永隆元年，高宗下诏参照玄奘法师旧例，安置别院，命“十大德”协助地婆诃罗，在两京东西太原寺及西京弘福寺从事译经，从永隆元年到垂拱元年，这六年间，译出《大乘显识经》等经论，共十八部三十四卷。睿宗文明元年，法藏大师前来参谒，得《华严经入法界品》，将《华严经》原来缺失部分补齐。地婆诃罗常想报答母恩，想要返回天竺，屡次上表请辞，终于获得皇帝许可，可惜并未启程就已患病，垂拱三年示寂，最终未能返回天竺，世寿七十有五，武后下令安葬于洛阳龙门香山寺。</p>
+<h2 id="内容介绍"><a class="header" href="#内容介绍">内容介绍</a></h2>
+<p>经文叙述善住天子听闻七日后将命终，堕入畜生道受七返身，帝释天遂求助佛陀。</p>
+<p>佛陀为此宣说“佛顶尊胜陀罗尼”，并阐明持诵此陀罗尼能净除一切恶道、破地狱业、增寿净身等功德。</p>
+<p>此陀罗尼咒语由八十七句组成，经中强调书写安置于高幢、高山或楼上可得解脱。</p>
+<h2 id="创作过程"><a class="header" href="#创作过程">创作过程</a></h2>
+<p>根据《佛顶尊胜陀罗尼经序》记载，北印度罽宾国僧人佛陀波利于唐高宗仪凤元年（676年）来华，至五台山礼拜时，感遇文殊菩萨化现的老人点化，告知此经能救拔幽显，遂返国取经。</p>
+<p>佛陀波利于永淳二年（683年）将梵本携至长安进献。唐高宗敕令日照法师与杜行顗共同译出初译本，但该译本起初仅在宫内流传。后佛陀波利请回梵本，与顺贞等大德于西明寺重新翻译，此版成为后世广为流通的译本。</p>
+<p>除佛陀波利译本外，唐代尚有地婆诃罗、义净等多位译师的异译本。这些译本中以佛陀波利的译本最为流行。</p>
+<h2 id="译本情况"><a class="header" href="#译本情况">译本情况</a></h2>
+<p>《佛顶尊胜陀罗尼经》在汉传佛教历史上有多个译本，主要包括唐代佛陀波利、地婆诃罗、义净等人的译本，以及后周、宋代的译本，其中以佛陀波利的译本最为流行。
+唐代的译本主要有佛陀波利译《佛顶尊胜陀罗尼经》一卷、地婆诃罗译《最胜佛顶陀罗尼净除业障经》一卷及重译《佛顶最胜陀罗尼经》一卷、义净译《佛顶尊胜陀罗尼经》一卷。据记载，佛陀波利于唐高宗仪凤元年（676年）来华，永淳二年（683年）到长安进献梵本，唐高宗命日照法师与杜行顗译出初译本，后佛陀波利与顺贞等重新翻译成流通本。</p>
+<p>后周有智称译《尊胜陀罗尼并念诵功能法》，但已佚失。宋代有施护译《尊胜大明王经》一卷、法天译《最胜佛顶陀罗尼经》一卷。</p>
+<p>在众多译本中，以佛陀波利译本最为流行。唐代不空弟子法崇所著《尊胜陀罗尼经疏》二卷即依据此本。唐代明佺《大周刊定众经目录》记载了佛陀波利和地婆诃罗两个译本。宋、明本及高丽本大藏经均有收录。敦煌藏经洞所出写卷中，佛陀波利译本多达120多件，其中有明确纪年的两件均在开元五年（717年）。此经译出后，将经文刻于石幢（尊胜幢）之风盛行。唐代宗曾下令天下僧尼每日诵此陀罗尼二十一遍。</p>
+<h2 id="传播与影响"><a class="header" href="#传播与影响">传播与影响</a></h2>
+<p>《佛顶尊胜陀罗尼经》在唐宋时期非常流行，其传播体现在物质载体、地域分布和社会文化等方面。</p>
+<p>经文译出后，将《佛顶尊胜陀罗尼经》刻在石幢上成为一种风尚。经幢的建立与破地狱的观念有密切的联系。信众为建造经幢而形成的团体称为“尊胜宝幢会”、“尊胜会”、“十王邑”或“佛顶邑”。河北卢龙县的“大佛顶尊胜陀罗尼经幢”始建于唐仪凤年间，历经金、明重修，现为全国重点文物保护单位。河北涿州亦有刻立于辽乾统二年（1102年）的经幢存世。此外，经文亦被刻于佛塔构件上，如杭州保俶塔塔刹便刻有此经，其图文衍生出的文创产品曾获文化传承奖。</p>
+<p>敦煌藏经洞所出《佛顶尊胜陀罗尼经》写卷中以佛陀波利译本最多，计有120多件，其中有明确纪年的两件均在开元五年（717）。敦煌壁画中目前发现《佛顶尊胜陀罗尼经变》共8铺，分布于盛唐（莫高窟第23、31、103、217窟）、晚唐（第156窟）及宋代（第55、169、454窟）的洞窟中。这些经变画以图像形式演绎经文内容，如莫高窟第103窟的经变以青绿山水画描绘佛陀波利朝拜五台山的故事。</p>
+<p>该经的流传影响了佛教修行与民间信仰，以其为核心发展出称为“尊胜法”的密教修行法门，用于息灾、除病。唐代宗曾下令天下僧尼每日诵持《佛顶尊胜陀罗尼》二十一遍。明代永乐年间，皇室亦推崇此经，明成祖曾于永乐九年（1411年）为之御制序文。经文宣扬的灭罪、增寿、净除恶道等功德，促进了其信仰实践。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../literature/huang-du-pian.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../literature/hua-fang-mu-zhi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../literature/huang-du-pian.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../literature/hua-fang-mu-zhi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
