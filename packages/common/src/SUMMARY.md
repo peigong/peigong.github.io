@@ -1,7 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
-- [原始人类](./prehistory/README.md)
+- [原始人类]()
     - [建始人](./prehistory/jian-shi-ren.md)
     - [西侯度文化](./prehistory/xi-hou-du.md)
     - [河姆渡文化](./prehistory/HemuduCulture.md)
@@ -38,5 +38,3 @@
     - [烫样](./style/tang-yang.md)
     - [雷思起](./style/lei-si-qi.md)
     - [雷廷昌](./style/lei-ting-chang.md)
-    - []()
-    - []()
