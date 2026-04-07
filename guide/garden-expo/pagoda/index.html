@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>佛塔 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/pagoda/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="佛塔"><a class="header" href="#佛塔">佛塔</a></h1>
+<p>佛塔，又名浮屠（梵语“佛陀”的音译），藏语称“曲登”，起源于印度，是用以藏舍利(遗骨)和佛经等法物，建筑类型有楼阁式塔、密檐塔、金刚宝座塔、喇嘛塔和墓塔等，形状又可分为四角方塔、六角形塔、八角形塔、圆形塔等。</p>
+<p>公元一世纪始随佛教传入中国，历汉化而形成汉传佛教，佛塔样式也由覆钵式塔汉化为亭阁式塔、楼阁式塔，又由楼阁式塔衍生出密檐式塔。</p>
+<h2 id="名称由来"><a class="header" href="#名称由来">名称由来</a></h2>
+<p>佛塔起源于印度，后传入我中国时，曾被音译为“塔婆”、“佛图”、“浮屠”等，由于佛塔用于珍藏佛的舍利或供奉佛像、佛经，故也被意译为“方坟”、“圆冢”。直到隋唐时，才以“塔”作为统一的译名，沿用至当代。</p>
+<p>佛塔一般由地宫、基座、塔身、塔刹组成，塔的平面以方形、八角形为多，也有六角形、十二角形、圆形等形状。塔的层数一般为单数，如三、五、七、九、十一、十三层，所谓救人一命，胜造七级浮屠，七级浮屠指的就是七层塔。塔有实心、空心，单塔、双塔，登塔眺望是我国佛塔的功能之一。</p>
+<h2 id="佛塔种类"><a class="header" href="#佛塔种类">佛塔种类</a></h2>
+<p>按层级分：三十七重塔﹑十七重塔﹑十五重塔﹑十三重塔﹑九重塔﹑七重塔﹑五重塔﹑三重塔等。</p>
+<p>按形状分：方塔﹑圆塔﹑六角形塔﹑八角形塔等，另有大塔﹑多宝塔﹑瑜祗塔﹑宝箧印塔﹑五轮塔﹑卵塔﹑无缝塔﹑楼阁式塔﹑密檐塔﹑金刚宝座塔﹑墓塔﹑板塔婆﹑角塔婆。</p>
+<p>按所纳藏之物分：舍利塔﹑发塔﹑爪塔﹑牙塔﹑衣塔﹑钵塔﹑真身塔﹑灰身塔﹑碎身塔﹑瓶塔﹑海会塔﹑三界万灵塔﹑一字一石塔﹑籾塔等。</p>
+<p>按建筑材料分：砖塔﹑石塔﹑玉塔﹑沙塔﹑泥塔﹑土塔﹑粪塔﹑铁塔﹑铜塔﹑金塔﹑银塔﹑水晶塔﹑玻璃塔﹑琉璃塔﹑宝塔﹑香塔。</p>
+<p>按性质意义分：祈福塔﹑报恩塔﹑法身塔﹑寿塔。</p>
+<p>按塔排列位置之样态分：孤立塔﹑对立式塔﹑排立式塔﹑方立式塔﹑拱立式塔﹑分立式塔。</p>
+<p>按样式分：覆钵式塔﹑龛塔﹑柱塔﹑雁塔﹑屋塔﹑无壁塔﹑喇嘛塔等。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="起源发展"><a class="header" href="#起源发展">起源发展</a></h3>
+<p>根据佛教文献记载，佛陀释迦牟尼涅槃后火化形成舍利，被当地八个国王收取，分别建塔加以供奉。</p>
+<p>另外，还在释迦牟尼一生中有纪念意义的八个地点，如诞生处的兰毗尼花园、成道处的尼连禅河、首次说法处的鹿野苑、安居处的祗陀园，从忉利天下处的桑迦尸国曲女城，化度分别僧处的王舍城、将入涅盘处的毗耶离城，涅盘处的拘尸那城，建造了八大灵塔，依次称作聚莲塔、菩提塔、吉祥塔、神变塔、天降塔、和平塔、胜利塔、涅槃塔，这些塔都是有纪念意义的。</p>
+<p>印度阿育王统治时期，佛教被列为国教，塔的建立达到了空前的高潮，在孔雀王朝所统领的小邦国内分建了八万四千座佛塔，这时期始造覆钵式的塔。</p>
+<h3 id="传入中国"><a class="header" href="#传入中国">传入中国</a></h3>
+<p>公元一世纪，佛教传入中国，历经汉化而形成汉传佛教，佛塔由原本的覆钵式塔汉化为楼阁式塔、亭阁式塔，又由楼阁式塔衍生出密檐式塔。据《后汉书》记载，汉末三国时期，丹阳人笮融“大起浮屠，上累金盘，下为重楼，有堂阁周回，可容三千许人”，这些描述真实地记载了当时佛塔建筑的宏大与华丽。</p>
+<p>松赞干布时期（公元七世纪中叶），印度佛教正式传入西藏，松赞干布迎请印度、尼泊尔、克什米尔、汉地等大量高僧，翻译佛经，兴建佛寺。根据《汉藏史集》，当时西藏共创建佛寺一百零八座，但具体记载的只有十八座。由于佛教建筑物在西藏的大量出现，随之佛塔也在西藏诞生了。据载西藏第一座自建的一座五顶的佛塔在昌珠寺内。</p>
+<p>赤松德赞时期（公元八世纪中叶），佛教在西藏得到很大发展，建桑耶寺，组七觉士，并在静命寂护大师主持下雕造松嘎尔五塔。</p>
+<h2 id="历代佛塔"><a class="header" href="#历代佛塔">历代佛塔</a></h2>
+<h3 id="北魏"><a class="header" href="#北魏">北魏</a></h3>
+<h4 id="嵩岳寺塔"><a class="header" href="#嵩岳寺塔">嵩岳寺塔</a></h4>
+<p>嵩岳寺塔位于郑州登封市城西北5公里处中岳嵩山南麓峻极峰下嵩岳寺内。该塔历经1400多年风雨侵蚀，仍巍然屹立，是中国现存最早的砖塔，也是全国古塔中的孤例。嵩岳寺塔为砖筑密檐式塔，也是仅见的一座十二边形塔，其近于圆形的平面，分为上下两段的塔身，与印度“stupa”相当接近，是密檐塔的早期形态。</p>
+<h3 id="唐朝"><a class="header" href="#唐朝">唐朝</a></h3>
+<h4 id="大雁塔"><a class="header" href="#大雁塔">大雁塔</a></h4>
+<p>大雁塔又名大慈恩寺塔，位于陕西省西安市南郊大慈恩寺内，原称慈恩寺西院浮屠（浮屠即塔的意思），是中国唐朝佛教建筑艺术杰作。大雁塔是楼阁式砖塔，塔通高64.5米，塔身为七层，塔体呈方形锥体，由仿木结构形成开间，由下而上按比例递减。塔内有木梯可盘登而上。每层的四面各有一个拱券门洞，可以凭栏远眺。整个建筑气魄宏大，造型简洁稳重，比例协调适度，格调庄严古朴，是保存比较完好的楼阁式塔。在塔内可俯视西安古城。大雁塔在1719年就发现塔身倾斜，到1996年达到最大程度，古塔向西北方向倾斜1010．5毫米，也就是一米多。</p>
+<h4 id="高邮镇国寺塔"><a class="header" href="#高邮镇国寺塔">高邮镇国寺塔</a></h4>
+<p>高邮镇国寺塔亦称西塔，建于唐僖宗时期，2014年被列为世界遗产（是我国第46个世界遗产的京杭大运河重要组成部分），被人们誉为“南方的大雁塔”。为全国重点文物保护单位、国家3A级旅游景区。地处江苏省高邮市京杭大运河中间。</p>
+<p>镇国寺塔始原为江苏省文物保护单位，是一座方形七层楼阁式砖塔，塔高35.36米，顶端塔刹为一青铜铸葫芦，葫芦表面刻有“风调雨顺、国泰民安”八字。镇国寺塔虽历经几次修葺，但仍基本保留了唐骨明风的建筑特色。 1956年大运河拓宽时，为保塔运河改道，留下了河心岛上的古塔，使古塔成为大运河上一颗璀璨的明珠。如今岛上已重新恢复了镇国寺供游人观光。</p>
+<h4 id="九顶塔"><a class="header" href="#九顶塔">九顶塔</a></h4>
+<p>九顶塔位于济南灵鹫山九塔寺内，建于唐代，高13.3米，基呈八角形，单层砖塔，为水磨对缝砌筑而成。檐叠涩向外挑出17层，又叠收进16层，基、身、檐均呈凹形曲线，异常柔和。塔的刹部结构处理奇异，在塔檐上端各隅角处，筑有方形3层小塔8座，高2.84米，中央筑有中心塔，高5.33米，形塔林式塔顶，故名九顶塔。塔身南面距地高3.1米处，辟一拱门，内为佛室，室内雕一佛工罗汉，并有残存壁画。</p>
+<h3 id="辽朝"><a class="header" href="#辽朝">辽朝</a></h3>
+<h4 id="辽阳白塔"><a class="header" href="#辽阳白塔">辽阳白塔</a></h4>
+<p>该塔位于于辽阳中华大街北侧，塔高71米，八角十三层密檐式结构，是东北地区最高的砖塔。建于金代大定年间（1161-1189年），是金世宗完颜雍为其母贞懿皇后李氏所建的垂庆寺塔的俗称，至当代已有800多年的历史。基座塔身都以砖雕的佛教图案为饰。塔身八面都建有佛龛，龛内砖雕坐佛。塔顶有铁刹杆、宝珠、相轮等。因塔身、塔檐的砖瓦上涂抹白灰，俗称白塔。</p>
+<h4 id="天宁寺塔"><a class="header" href="#天宁寺塔">天宁寺塔</a></h4>
+<p>该塔位于北京广安门外天宁寺内，天宁寺塔塔高57.8米， 为八角十三层檐密檐式实心砖塔。整体结构自下而上为：基座、平座、仰莲座、塔身、十三层塔檐、塔顶、宝珠、塔刹。基座呈八角形，分为上下两层。下层基座各面以短柱隔成6 个壶门形龛，内雕狮头。上层略内收，每面为5个壶门形龛，内浮雕坐佛，上下层转角处均浮雕金刚力士像。仰莲座共3 层，上承塔身，塔身四面设有半圆形券门，门两边雕有金刚力士、菩萨、云龙等，雕像造型生动、栩栩如生。十三层塔檐逐层收减，呈现出丰富有力的卷刹。</p>
+<h4 id="天津蓟县白塔"><a class="header" href="#天津蓟县白塔">天津蓟县白塔</a></h4>
+<p>天津蓟县白塔在蓟县城西南隅，旧称渔阳郡塔，辽清宁四年建。塔平面八角形，通高30.6米。塔基下部砌花岗石条，上部筑仿木砖雕须弥座，其壶门内浮雕舞乐伎，刻工精细，栩栩如生。塔身南面设门，内置佛龛；东、西、北三面设砖雕假门；四个侧面凸雕碑形，上书佛教偈语。八个转角处作重层小塔。塔身上出三层砖檐，檐角系铜铎。檐上置塔座承覆钵形圆肚、十三天和铜刹。此塔下部为密檐塔型，上部砌作覆钵式，是中国辽塔造型奇特之一例。</p>
+<h4 id="佛宫寺释迦塔"><a class="header" href="#佛宫寺释迦塔">佛宫寺释迦塔</a></h4>
+<p>中国现存最大的木塔是佛宫寺释迦塔，因为塔在山西应县，所以通称为应县木塔。此木塔建于辽代清宁二年（1056年），距当代已有九百多年了。木塔位于佛宫寺中轴线的中部，塔的后面是大殿，构成了以塔为中心的寺院布局。木塔总高度是67.31米，其中塔刹高达10米。塔的底层平面是八角形，直径30.27米，是古塔中直径最大的。塔建在一个外包砖石的夯土高台上，台子高4米多，分上、下两层，下层方形上层是八角形。在高台上建木结构塔身。塔的第一层南面开塔门，进门迎面有一尊高约10米的释迦像，顶部是精美的藻井。门洞两壁，门额和内槽壁上都绘制了壁画。</p>
+<h4 id="戒坛山常乐寺自来塔"><a class="header" href="#戒坛山常乐寺自来塔">戒坛山常乐寺自来塔</a></h4>
+<p>在北京房山区西北20公里戒坛山前有三组石头城，常乐寺建在南城，寺院北部原有石塔一座，名曰“自来塔”。自来塔已于百年前被当地人拆除，但塔的位置尚十分明显。据明代成化十六年、成化十七年石碑考证，认为此塔十分重要，它是一座阿育王塔，建塔年代在辽或辽以前，塔为11层。笔者根据碑文记载和对石塔多年的研究，对石塔进行了复原，可以作为常乐寺重建的重要依据。</p>
+<h4 id="昌黎古塔寺塔"><a class="header" href="#昌黎古塔寺塔">昌黎古塔寺塔</a></h4>
+<p>在河北省昌黎县城西北端，有一座古塔寺，寺院里有一座古塔寺塔，又称源影塔。百多年来不断的变迁，至当代古塔寺的房屋面目全非，只保留下来这一座塔。塔的四周近些年已经建设了民居房屋，十分密集，仅有一条小巷可以通至塔旁。昌黎县城大部分是老式平房，没有高楼遮挡，所以从全城都可望见古塔，非常壮观。这座塔是辽代建造的，据民国二十二年《续修昌黎县志》记载：这座塔在明代嘉靖、万历时期屡次进行重修；清代顺治、乾隆、嘉庆、道光、同治各个时期亦都进行重修，但是塔的式样尚未改观。</p>
+<h4 id="朝阳南塔"><a class="header" href="#朝阳南塔">朝阳南塔</a></h4>
+<p>朝阳南塔位于辽宁省朝阳市，与朝阳北塔分别位于慕容街南北两端。朝阳南塔建于辽代，为方形空心十三级密檐式砖塔，高约45米，南向。由塔基、须弥座、塔身、塔檐和塔刹构成。塔基方形，素面，以砖迭砌而成。须弥座设束腰两周，线层束腰的每面各设壶门五个，内雕云龙等。束腰上部为砖碉仰莲，承托塔身。塔身南面正中设券门，其它三面设假门，门两侧砖雕卷云，门顶浮雕华盖。华盖两侧各嵌一石雕塔铭，上刻八大灵塔名称。塔身四角各有一砖雕圆形倚柱，顶部承托半拱，补间铺作七朵。半拱之上为砖砌塔檐，塔檐逐层内收。檐角挂风铎。现风铎和塔刹早已不存。</p>
+<p>此外还有房山云居寺法舍利塔、良乡辽代法象寺佛塔、懿州城塔、成州城塔（红帽子塔）、顺州城塔（十家子塔）等辽代佛塔。</p>
+<h3 id="宋朝"><a class="header" href="#宋朝">宋朝</a></h3>
+<h4 id="虎丘塔"><a class="header" href="#虎丘塔">虎丘塔</a></h4>
+<p>虎丘塔位于苏州城西北郊，距市中心5公里。相传春秋时吴王夫差就葬其父（阖闾）于此，葬后3日，便有白虎踞于其上，故名虎丘山，简称虎丘。虎丘塔始建于五代后周显德六年（959年），落成于北宋建隆二年（961年）。塔七级八面，内外两层枋柱半拱，砖身木檐，是10世纪长江流域砖塔的代表作。由于宋代到清末曾遭到多次火灾，故顶部的木檐均遭毁坏，现塔身高47.5米。虎丘塔是座斜塔，塔尖倾斜2.34米，塔身最大倾斜度为3度59分，虎丘斜塔也被称为“中国的比萨斜塔”。</p>
+<h4 id="杭州六和塔"><a class="header" href="#杭州六和塔">杭州六和塔</a></h4>
+<p>杭州六和塔位于钱塘江畔月轮山上，是北宋时吴越王为镇钱塘潮而建。现存的六和塔塔身重建于南宋。取佛教“六和敬”之义，命名为六和塔。六和塔又名六合塔，取“天地四方”之意。现存六和塔，外观八面十三层，内分七级。高59.89米，占地888平方米。</p>
+<h4 id="开封铁色琉璃砖塔"><a class="header" href="#开封铁色琉璃砖塔">开封铁色琉璃砖塔</a></h4>
+<p>开封铁色琉璃砖塔建于北宋皇佑元年，就是公元1049年。因当年建在开宝寺内，称开宝寺塔。又因其外表全以褐色琉璃砖镶嵌，远看近似铁色，加之本身坚固异常，犹如铁铸，故从元代起民间称之为“铁塔”。铁塔是因其卓绝的建筑艺术闻名遐迩的。铁塔现高55.88米，平面作八角形，十三层楼阁式，底层每面阔4米多，向上逐层递减，层层开设明窗，一层向北，二层向南，三层向西，四层向东，以此类推，其余皆为盲窗。明代嘉靖、万历年间，又在塔心柱正对明窗之处，镶嵌了琉璃佛砖，保护塔心柱免受风力侵蚀。 远看近观，铁塔仿佛是一座木塔，玲珑剔透。向南一门匾曰：“天下第一塔”，是宋代书法家米芾的墨迹。</p>
+<h4 id="玉泉寺铁塔"><a class="header" href="#玉泉寺铁塔">玉泉寺铁塔</a></h4>
+<p>玉泉寺铁塔在湖北省当阳县城西15公里的覆船山东麓玉泉寺门前，全称“如来舍利宝塔”,又称当阳铁塔。始建于北宋嘉祐六年（公元1061年），由玉泉寺僧务本禅师领工铸建，它是我国最高（七丈十三层）、最重（十万六千六百斤）和保存最完整的铁塔。铁塔上铸有2279尊栩栩如生的佛像。地宫中有大批珍贵文物，除佛牙舍利和舍利子外，还发现了唐代鎏金菩萨、大石函、影青莲瓣高足供养瓷炉及宋代小石函、水晶珠、铁锁链等。</p>
+<h4 id="开元寺双石塔"><a class="header" href="#开元寺双石塔">开元寺双石塔</a></h4>
+<p>开元寺双石塔位于福建省泉州市开元寺内寺南向,塔在大殿前分列东西,西塔名仁寿塔,南宋嘉熙元年(1237)建；东塔名镇国塔，南宋淳十年(1250)建。双塔相距约200米，对峙在大殿前，与大殿鼎足而立。双塔全部用石材建造,仿木构楼阁式,皆八角5层,形式几乎完全相同,仅高度和斗拱略有不同。西塔高44.06米，东塔高48.24米。</p>
+<h3 id="元朝"><a class="header" href="#元朝">元朝</a></h3>
+<h4 id="妙应寺白塔"><a class="header" href="#妙应寺白塔">妙应寺白塔</a></h4>
+<p>该塔位于北京阜城门内大街路北的妙应寺内，因寺内有通体涂以白垩的塔，故俗称“白塔寺”。台基高9米，塔高50．9米，底座面积1422平方米，台基分三层，最下层呈方形，台前有一通道，前设台阶，可直登塔基，上、中二层是亚字形的须弥座。台基上砌基座，将塔身、基座连接在一起。莲座上又有5条环带，承托塔身。塔身俗称“宝瓶”，形似覆钵，上安7条铁箍，其上又有亚字形小型须弥座，再上就是13天相轮，顶端为一直径9．7米的华盖，华盖以厚木作底，上置铜板瓦并做成40条放射形的筒脊，华盖四周悬挂着36副铜质透雕的流苏和风铃，微风吹动，铃声悦耳。华盖中心处，还有一座高约5米的鎏金宝顶，以8条粗壮的铁链将宝顶固定在铜盘之上。</p>
+<h3 id="明清"><a class="header" href="#明清">明清</a></h3>
+<h4 id="净土寺塔"><a class="header" href="#净土寺塔">净土寺塔</a></h4>
+<p>江苏省高邮市净土寺塔，又称东门宝塔。该塔建于明朝神宗万历三十四年（1606年）。1906年（清光绪年间），曾大修过一次。民国34年因战争被炮火损坏一角，次年修复。1963年高邮中学学生朱广荣等攀上塔顶，从宝刹中取出文物若干交文化馆。其中有明代万历年间的大方广佛华严经，金刚般若波罗密经等40余卷，现存南京博物院。塔内原有楼板和扶梯可以攀等，后渐毁坏。1957年江苏省人民政府公布此塔为江苏省文物保护单位。高47.46米，砖砌，呈八角形。一九五七年列为省级文物保护单位。</p>
+<h4 id="海宝塔"><a class="header" href="#海宝塔">海宝塔</a></h4>
+<p>银川海宝塔又名赫宝塔、黑宝塔，相传为公元五世纪初夏国王赫连勃重修，今存之塔为乾隆四十三年（1778年）重建。塔身为砖砌楼阁式建筑，塔身为方形，九层十一级，高53.9米。塔室为方开，门向东，内有四道拱券道通向四面。空间以楼板铺隔，有木梯可盘旋而登至顶层。极目远眺，巍巍贺兰山，绵绵黄河水，塞上江南景色尽收眼底。1963年董必武登此塔，并为其赋诗曰：“银川郊外赫连塔，高势孤危欲出云。直以方形风格异，只缘本色火砖分。”</p>
+<h4 id="镇国塔"><a class="header" href="#镇国塔">镇国塔</a></h4>
+<p>河南卫辉市镇国塔，又名灵庄塔，由明代卫辉府知府周思宸于万历十三年（1585年）修建，是豫北仅见的佛道合一的楼阁式塔。塔为七级六角形砖塔，高33米，形体成锥状，外部每层檐下施砖雕仿木结构的额杨、斗拱、四层迭涩砖层、俯莲砌出腰檐。第一层南北各辟一券门，供游人上下，门楣上各镶嵌石碣一方，南门书“灵庄塔”，北门书“护国保民”，均为篆书。其余四面各镶无字石碣一方。从第二层至第七层每面各辟一望窗。塔内由下而上设塔心室、穹窿顶，门均北向。其余设佛龛。绕塔心室砌螺旋式台阶，可登至塔顶，塔顶内部用青砖砌青“八卦图”。外部用孔雀兰琉璃瓦覆盖，施六脊，镇兽为麒麟，造型优美，栩栩如生。</p>
+<h4 id="珐琅塔"><a class="header" href="#珐琅塔">珐琅塔</a></h4>
+<p>河北承德须弥福寿庙陈列着一座造型别致、工艺高超的紫檀木座珐琅塔，通高315厘米，重约1500公斤。塔分紫檀木雕花须弥座和珐琅塔两部。而珐琅塔自下而上又分为正方形重檐、八角形重檐、圆形三重檐三层阁各异的塔身及宝瓶，金刚杵塔刹，是由大小1400余部件组装而成。塔层为奇数，奇数为阳数，含吉祥之意。根据佛教理论，第一层正方形重檐阁象征“地”，第二层八角形重檐阁象征“世间”，第三层图形三重檐阁象征“三界”。</p>
+<p>此塔图案采用汉族传统龙纹与藏传佛教常用“轮、螺、伞、盖、花、缸鱼、长吉祥”八宝纹等相配合的艺术形式，自然生动，此塔把上述几种中国传统的楼阁、密檐等形式及喇嘛塔的风格融为一体，表现了我国古代建筑艺术之精华。</p>
+<h4 id="真觉寺金刚宝座塔"><a class="header" href="#真觉寺金刚宝座塔">真觉寺金刚宝座塔</a></h4>
+<p>真觉寺金刚宝座塔位于北京海淀区西直门外白石桥以东的长河北岸。因其形式是在一个高台上建有五座小型石塔，俗称五塔寺塔。整座塔分为塔座和五塔两部分。塔下部为长方形砖砌拱券结构塔座，即金刚宝座。南北长18.6米，东西宽15.73米，高7.7米，总高17米，分为6层，最下一层为须弥座，逐层由下而上往内收进0.5米。每层四壁挑短檐，共挑出五层，短檐下四周均雕有密集排列的佛龛，每个佛龛内刻有坐佛一尊。塔座的南北正中辟券门，正门上有“敕建金刚宝座塔”的匾额。塔的内部用砖砌筑而成，外表以汉白玉石铺设。塔座内部为回廊式塔室，内有四十四级石阶，盘旋而上通往顶部平台。宝座顶上平台，建有分别为四小一大共五座的石塔。用青石砌成方形密檐式小塔，均由上千块凿刻好的石块拼装筑成。中央大塔十三层，高约八米，四角小塔各十一层，高约七米许，五塔所象征的佛称”五方佛”，五塔下面均有须弥座，檐下四周刻有佛龛及佛像。</p>
+<h4 id="慈灯寺金刚宝座塔"><a class="header" href="#慈灯寺金刚宝座塔">慈灯寺金刚宝座塔</a></h4>
+<p>慈灯寺金刚宝座塔位于呼和浩特市旧城东南部慈灯寺内，原名“金刚座舍利宝塔”，因塔座上有五座方形舍利塔，故名为五塔寺。五塔仿印度的佛陀伽耶精舍（释迦牟尼得道处迦耶山寺所建的纪念塔）形式的佛塔建造。金刚座舍利宝塔，建于清朝雍正五年（1727年），由塔基、金刚座、塔顶三部分组成，为砖石结构，通高16.5米，塔顶是由五座舍利玲珑小塔构成。金刚座舍利宝塔的基座高约1米；金刚座为束腰须弥座，其束腰部雕刻有狮、象、法轮、金翅鸟和金刚杵等图案，束腰的上面为七层短挑檐，第一层的檐下为三种文字（蒙、藏、梵）雕刻的金刚经全文，从第二层到第七层的檐下为各种姿态的镏金佛像，共计1119尊；五座舍利小塔位于亭子的北边，最中间的舍利小塔为七层出檐，四隅的舍利小塔为五层出檐，五座塔身上均镶嵌有佛像、菩提树、景云等砖雕。在金刚座舍利宝塔背面（即北面）的山墙上嵌有三幅雕刻，以“蒙古天文图石刻”最为珍贵。天文图直径144.5厘米，天球圆面以北天极为圆心，画出二十八宿赤经位置的经线，还有五个同心圆，由里向外为天北极圈、夏至圈、天赤道圈、冬至圈、天南极圈。</p>
+<h3 id="现代"><a class="header" href="#现代">现代</a></h3>
+<h4 id="法门寺合十舍利塔"><a class="header" href="#法门寺合十舍利塔">法门寺合十舍利塔</a></h4>
+<p>历时3年建成的法门寺合十舍利塔高148米，造型如同合十的双手，中间镂空部分是一座传统形式的唐塔,是世界最高的佛塔。塔前铺设了一条长达1230米、宽108米的佛光大道，一些源于佛教经典题材的景观小品及金色菩萨像点缀在大道两侧。大道两头分别是可容十万人的朝圣广场与山门广场。。</p>
+<h2 id="藏区佛塔"><a class="header" href="#藏区佛塔">藏区佛塔</a></h2>
+<p>藏族地区是当今世界上拥有佛塔最多的一大佛教圣地。长期以来，由于藏族佛教徒以造塔作为一种修德积福的途径，无论僧俗都热衷于建造佛塔。因为“一座窣堵波、一尊雕像、一部经书、高声诵经，所有这一切都会自动地产生大量功德”（图齐《西藏和蒙古的宗教》）。这样，在藏区这块广裹的土地上立起了无数座佛塔。这类佛塔无论形式、内在含义、功能利益等方面都带有自己的地方特色。 至于佛塔何时传入西藏本土，据《西藏王臣记》和《青史》记载，最早的佛塔是在吐蕃王朝第二十七代赞普拉托托日年赞时（约公元四世纪）作为佛教礼品是由印度佛教徒带到西藏的。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ChinaGardenMuseum/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ChinaGardenMuseum/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>福建园·闽园 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/BeijingGardenExpo/fu-jiang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="福建园闽园"><a class="header" href="#福建园闽园">福建园·闽园</a></h1>
+<p>北京园博园内的闽园（即福建园）是传统展园区的“四大金刚”之一（与北京园、江苏园、广东园并列）。它不仅是北方地区规模最大的闽南红砖建筑群，更是一座将闽南、客家、妈祖文化浓缩于一体的“福建文化会客厅”。</p>
+<h2 id="基础档案"><a class="header" href="#基础档案">基础档案</a></h2>
+<ul>
+<li>身份：省级展园（福建园），非城市园。</li>
+<li>位置：传统展园核心区，紧邻5号门（进门左手边即是），与江苏园（忆江南）隔路相望。</li>
+<li>规模：占地约1.5万平方米，是园内单体面积最大的展园之一。</li>
+</ul>
+<h2 id="建筑特色红砖古厝cuò的教科书"><a class="header" href="#建筑特色红砖古厝cuò的教科书">建筑特色：红砖古厝(cuò‌)的“教科书”</a></h2>
+<p>闽园避开了大众熟知的土楼，选择展示更具生活气息的闽南红砖大厝(cuò‌)（民居）。</p>
+<ul>
+<li>视觉符号：红砖白石、燕尾脊。屋顶两端像燕子尾巴一样高高翘起，极具辨识度。</li>
+<li>核心建筑：和福居。这是一座占地680平方米的典型闽南古厝，采用“一埕(chéng)两进两护”布局。内部“光厅暗屋”（天井明亮、居室幽暗）的设计，以及梁枋上“添丁进财”的彩绘，都严格遵循了泉州、厦门地区的传统规制。</li>
+</ul>
+<h2 id="空间布局前宅后园"><a class="header" href="#空间布局前宅后园">空间布局：前宅后园</a></h2>
+<p>全园严格遵循闽南传统“前庭后院”的格局，移步换景：</p>
+<h3 id="前庭建筑区"><a class="header" href="#前庭建筑区">前庭（建筑区）</a></h3>
+<ul>
+<li>和福居：主厝，展示闽南人家生活场景。</li>
+<li>戏台：位于古厝后院，曾是表演布袋戏、歌仔戏的民俗舞台。</li>
+</ul>
+<h3 id="后园山水区"><a class="header" href="#后园山水区">后园（山水区）</a></h3>
+<ul>
+<li>方鉴池：中心大水池，池中矗立妈祖雕像，体现福建海洋文化信仰。</li>
+<li>环池景观：包括南熏楼（仿厦门集美地标，展示茶文化）、风雨廊桥、闽山第一亭等。</li>
+</ul>
+<h2 id="文化拼图不止闽南"><a class="header" href="#文化拼图不止闽南">文化拼图：不止闽南</a></h2>
+<p>虽然以闽南文化为主调（红砖厝、歌仔戏），但园内也巧妙融入了福建其他地域元素：</p>
+<ul>
+<li>闽都文化：通过福州马头墙等细节体现。</li>
+<li>客家文化：入口处的进士石旗杆广场，是客家崇文重教传统的象征。</li>
+</ul>
+<h2 id="与厦门园的区别"><a class="header" href="#与厦门园的区别">与“厦门园”的区别</a></h2>
+<p>园博园内另有独立的厦门园（城市展园），切勿混淆：</p>
+<ul>
+<li>闽园（福建园）：省级集锦园，融合全省文化，规模宏大，位于5号门传统展园区。</li>
+<li>厦门园：市级主题园，通常侧重鼓浪屿或滨海风情，规模较小，位于城市展园区域。</li>
+</ul>
+<h2 id="游览攻略"><a class="header" href="#游览攻略">游览攻略</a></h2>
+<ul>
+<li>最佳动线：从5号门入园，按江苏园（忆江南）→ 闽园 → 北京园 → 济南园的顺序游览，这是传统展园最顺路的精华路线。</li>
+<li>最佳季节：四季皆宜。春季有樱花海棠，夏季池中荷花盛开，秋季南熏楼旁的银杏变黄，红砖配黄叶极为出片。</li>
+<li>门票：园博园已免费，预约大门票即可进入，无需单独购票。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../BeijingGardenExpo/jiang-su.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../BeijingGardenExpo/guang-dong.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../BeijingGardenExpo/jiang-su.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../BeijingGardenExpo/guang-dong.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北大红楼布展 - 北京鲁迅博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京鲁迅博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xin-wen-hua-yun-dong/layout.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北大红楼布展"><a class="header" href="#北大红楼布展">北大红楼布展</a></h1>
+<h2 id="旧址复原"><a class="header" href="#旧址复原">旧址复原</a></h2>
+<ul>
+<li>【一层】五四运动筹备室</li>
+<li>【一层】登录室</li>
+<li>【一层】李大钊图书馆主任室</li>
+<li>【二层】文科学长室</li>
+<li>【二层】大教室</li>
+<li>【一层】第二阅览室</li>
+</ul>
+<h2 id="光辉伟业-红色序章北大红楼与中国共产党早期北京革命活动主题展"><a class="header" href="#光辉伟业-红色序章北大红楼与中国共产党早期北京革命活动主题展">【光辉伟业 红色序章】北大红楼与中国共产党早期北京革命活动主题展</a></h2>
+<h3 id="第一部分经历近代以来救亡图存探索的失败"><a class="header" href="#第一部分经历近代以来救亡图存探索的失败">第一部分：经历近代以来救亡图存探索的失败</a></h3>
+<ul>
+<li>【一层】【1厅】工人阶级登上历史舞台</li>
+<li>【一层】【1厅】中国成为半殖民地半封建社会</li>
+<li>【一层】【1厅】农民阶级的探索方案：太平天国运动、义和团运动</li>
+<li>【一层】【1厅】地主阶级的探索方案：洋务运动、清末新政</li>
+<li>【一层】【2厅】资产阶级的探索方案：戊戌变法、辛亥革命</li>
+<li>【一层】【3厅】民族资本主义发展</li>
+<li>【一层】【3厅】工人阶级队伍壮大</li>
+</ul>
+<h3 id="第二部分唤起民族觉醒构筑新文化运动的中心"><a class="header" href="#第二部分唤起民族觉醒构筑新文化运动的中心">第二部分：唤起民族觉醒，构筑新文化运动的中心</a></h3>
+<h4 id="第一单元新文化运动发端"><a class="header" href="#第一单元新文化运动发端">第一单元：新文化运动发端</a></h4>
+<ul>
+<li>【一层】【4厅】《新青年杂志》创刊，陈独秀《爱国心与自觉心》，李大钊《厌世心与自觉心》《青春》</li>
+<li>【一层】【5厅】微缩景观：北京大学二院、北京大学红楼全自息影像、北大沙滩地区鸟瞰图</li>
+<li>【一层】【6厅】蔡元培任北大校长</li>
+<li>【一层】【6厅】陈独秀任北大文科学长</li>
+<li>【一层】【7厅】《新青年》总辑</li>
+<li>【一层】【7厅】《新青年》“八大同人编辑”</li>
+<li>【二层】【8厅】《每周评论》创刊</li>
+<li>【二层】【9厅】提倡民主、反对独裁专制</li>
+<li>【二层】【9厅】提倡科学、反对迷信盲从</li>
+<li>【二层】【10厅】提倡新道德</li>
+<li>【二层】【10厅】反对旧道德</li>
+<li>【二层】【11厅】提倡新文学</li>
+<li>【二层】【11厅】反对旧文学</li>
+<li>【二层】【11厅】实行文学革命</li>
+</ul>
+<h4 id="第二单元新旧文化交锋"><a class="header" href="#第二单元新旧文化交锋">第二单元：新旧文化交锋</a></h4>
+<ul>
+<li>【二层】【12厅】“林蔡之争”</li>
+<li>【二层】【12厅】《每周评论》开辟专栏</li>
+<li>【二层】【12厅】李大钊发表《新旧思潮之激战》回应旧学派</li>
+</ul>
+<h4 id="第三单元北京进步社团涌现"><a class="header" href="#第三单元北京进步社团涌现">第三单元：北京进步社团涌现</a></h4>
+<ul>
+<li>【二层】【13厅】北京大学国民杂志社、平民教育讲演团、新闻学研会、互助社、新民学会、觉悟社</li>
+<li>【二层】【14厅】组织留法</li>
+<li>【二层】【14厅】勤工俭学</li>
+</ul>
+<h3 id="第三部分高举爱国旗帜形成五四运动的策源地"><a class="header" href="#第三部分高举爱国旗帜形成五四运动的策源地">第三部分：高举爱国旗帜，形成五四运动的策源地</a></h3>
+<h4 id="第一单元巴黎和会与中国外交失败"><a class="header" href="#第一单元巴黎和会与中国外交失败">第一单元：巴黎和会与中国外交失败</a></h4>
+<ul>
+<li>【二层】【15厅】一战爆发</li>
+<li>【二层】【15厅】巴黎和会</li>
+<li>【二层】【15厅】外交失败</li>
+</ul>
+<h4 id="第二单元北京爱国学生运动"><a class="header" href="#第二单元北京爱国学生运动">第二单元：北京爱国学生运动</a></h4>
+<ul>
+<li>【二层】【16厅】五四前夜</li>
+<li>【二层】【16厅】游行路线图</li>
+<li>【二层】【16厅】递交说帖</li>
+<li>【二层】【16厅】参加游行的北京学生</li>
+<li>【三层】【17厅】五四运动全息影像</li>
+<li>【三层】【17厅】游行传单及标语</li>
+<li>【三层】【17厅】全国声援北京学生</li>
+<li>【三层】【17厅】被捕学生获释</li>
+<li>【三层】【18厅】6月3日北京学生运动</li>
+<li>【三层】【18厅】五四时期的李大钊</li>
+</ul>
+<h4 id="第三单元五四运动的总司令"><a class="header" href="#第三单元五四运动的总司令">第三单元：“五四运动的总司令”</a></h4>
+<ul>
+<li>【三层】【19厅】陈独秀</li>
+<li>【三层】【19厅】陈独秀雕像</li>
+<li>【三层】【19厅】陈独秀在《每周评论》上发表的文章、随感录</li>
+<li>【三层】【20厅】陈独秀被捕</li>
+<li>【三层】【20厅】营救陈独秀</li>
+</ul>
+<h4 id="第四单元中国工人阶级登上政治舞台"><a class="header" href="#第四单元中国工人阶级登上政治舞台">第四单元：中国工人阶级登上政治舞台</a></h4>
+<ul>
+<li>【三层】【21厅】工人罢工</li>
+<li>【三层】【21厅】北京长辛店救国十人团</li>
+<li>【三层】【22厅】学生罢课</li>
+<li>【三层】【23厅】商人罢市</li>
+<li>【三层】【24厅】拒签和约</li>
+<li>【三层】【25厅】纪念五四运动</li>
+<li>【三层】【25厅】毛泽东对五四运动的评价</li>
+</ul>
+<h3 id="第四部分播撒革命火种打造马克思主义传播的主阵地"><a class="header" href="#第四部分播撒革命火种打造马克思主义传播的主阵地">第四部分：播撒革命火种，打造马克思主义传播的主阵地</a></h3>
+<h4 id="第一单元十月革命对中国的影响"><a class="header" href="#第一单元十月革命对中国的影响">第一单元：十月革命对中国的影响</a></h4>
+<ul>
+<li>【三层】【26厅】十月革命爆发</li>
+<li>【三层】【26厅】十月革命胜利消息传入国内</li>
+</ul>
+<h4 id="第二单元-播火者李大钊"><a class="header" href="#第二单元-播火者李大钊">第二单元： “播火者”李大钊</a></h4>
+<ul>
+<li>【三层】【27-28厅】考入天津北洋法政专门学校</li>
+<li>【三层】【27-28厅】吊圆明园故址</li>
+<li>【三层】【27-28厅】赴日求学</li>
+<li>【三层】【27-28厅】回国创立晨钟报与甲寅日刊</li>
+<li>【三层】【29厅】发表《庶民的胜利》与《Bolshevism的胜利》</li>
+<li>【三层】【29厅】李大钊在《新青年》《每周评论》《晨报》及《晨报》副刊发表文章一览</li>
+<li>【三层】【30厅】我的马克思主义观</li>
+<li>【三层】【30厅】李大钊担任北京图书馆主任</li>
+<li>【三层】【30厅】创建指导进步社团</li>
+<li>【三层】【30厅】引导进步青年走向</li>
+<li>【三层】【30厅】马克思主义道路</li>
+<li>【三层】【31-32厅】党成立后革命运动的重要领导者</li>
+<li>【三层】【31-32厅】李大钊出席共产国际第五次代表大会</li>
+</ul>
+<h4 id="第三单元北京大学马克思学说研究会"><a class="header" href="#第三单元北京大学马克思学说研究会">第三单元：北京大学马克思学说研究会</a></h4>
+<ul>
+<li>【三层】【33厅】“亢慕义斋”对马克思主义的早期介绍</li>
+</ul>
+<h4 id="第四单元青年毛泽东在京确立马克思主义信仰"><a class="header" href="#第四单元青年毛泽东在京确立马克思主义信仰">第四单元：青年毛泽东在京确立马克思主义信仰</a></h4>
+<ul>
+<li>【三层】【34厅】毛泽东第一次来京</li>
+<li>【三层】【35厅】毛泽东在北大图书馆任管理员工作</li>
+<li>【三层】【35厅】毛泽东和《京报馆》社长邵飘萍</li>
+<li>【三层】【36厅】毛泽东来到长辛店组织湖南青年赴法勤工俭学准备工作</li>
+<li>【三层】【37厅】毛泽东在长沙创办《湘江评论》</li>
+<li>【三层】【38厅】毛泽东第二次来京</li>
+<li>【三层】【38厅】创办平民通讯社、开展驱张运动</li>
+<li>【三层】【38厅】毛泽东对两次来京的回忆</li>
+</ul>
+<h4 id="第五单元马克思主义广泛传播"><a class="header" href="#第五单元马克思主义广泛传播">第五单元：马克思主义广泛传播</a></h4>
+<ul>
+<li>【三层】【39厅】马克思主义传到中国的三条途径</li>
+<li>【三层】【39厅】《共产党宣言》专题</li>
+<li>【三层】【40厅】《马克思主义》著作专题厅</li>
+<li>【三层】【41厅】“问题与主义”之争，与基尔特社会主义者论争，同无政府主义者论战</li>
+</ul>
+<h4 id="第六单元与劳工阶级打成一气"><a class="header" href="#第六单元与劳工阶级打成一气">第六单元：“与劳工阶级打成一气”</a></h4>
+<ul>
+<li>【三层】【42厅】北京早期共产主义者关注国内劳工状况</li>
+<li>【三层】【42厅】邓中夏与平民教育讲演团</li>
+<li>【三层】【43厅】北京第一次纪念国际劳动节</li>
+</ul>
+<h3 id="第五部分酝酿和筹建中国共产党铸就党的主要孕育地之一"><a class="header" href="#第五部分酝酿和筹建中国共产党铸就党的主要孕育地之一">第五部分：酝酿和筹建中国共产党，铸就党的主要孕育地之一</a></h3>
+<h4 id="第一单元南陈北李相约建党"><a class="header" href="#第一单元南陈北李相约建党">第一单元：“南陈北李”相约建党</a></h4>
+<ul>
+<li>【三层】【44厅】陈独秀和李大钊积极推动在中国建立共产党组织</li>
+</ul>
+<h4 id="第二单元共产国际代表来中国"><a class="header" href="#第二单元共产国际代表来中国">第二单元：共产国际代表来中国</a></h4>
+<ul>
+<li>【三层】【45厅】俄共（布）、共产国际派俄国共产党员波波夫、维经斯基等人来华，促进中国共产党的创建。</li>
+</ul>
+<h4 id="第三单元北京的共产党早期组织的建立三层46厅"><a class="header" href="#第三单元北京的共产党早期组织的建立三层46厅">第三单元：北京的共产党早期组织的建立【三层】【46厅】</a></h4>
+<h4 id="第四单元北方各地党团组织的建立"><a class="header" href="#第四单元北方各地党团组织的建立">第四单元：北方各地党团组织的建立</a></h4>
+<ul>
+<li>【二层】【47厅】北京的共产党早期组织指导北方各地建立党团组织，推动北方革命力量发展壮大。</li>
+<li>【二层】【48厅】北京的共产党早期组织指导北方各地建立党团组织，推动北方革命力量发展壮大。</li>
+</ul>
+<h4 id="第五单元中国共产党的涎生与北京早期党组织"><a class="header" href="#第五单元中国共产党的涎生与北京早期党组织">第五单元：中国共产党的涎生与北京早期党组织</a></h4>
+<ul>
+<li>【二层】【49厅】北京早期党组织积极筹备和参加了中国共产党第一次全国代表大会。</li>
+<li>【二层】【50厅】中国共产党第二、三次全国代表大会召开</li>
+</ul>
+<h4 id="第六单元北方革命事业的蓬勃兴起"><a class="header" href="#第六单元北方革命事业的蓬勃兴起">第六单元：北方革命事业的蓬勃兴起</a></h4>
+<ul>
+<li>【二层】【51厅】中国共产党北京地方委员会介绍</li>
+<li>【二层】【52厅】北方分部推动工人运动</li>
+<li>【二层】【52厅】扩大马克思主义宣传</li>
+<li>【二层】【52厅】长辛店劳动补习学校</li>
+<li>【二层】【53厅】长辛店二七大罢工</li>
+<li>【二层】【54厅】李大钊英勇就义</li>
+<li>【二层】【54厅】北方早期革命运动中牺牲的部分党员</li>
+</ul>
+<h3 id="第六部分不忘初心牢记使命"><a class="header" href="#第六部分不忘初心牢记使命">第六部分：不忘初心，牢记使命</a></h3>
+<ul>
+<li>【一层】【55厅】新民主主义革命、社会主义革命和建设时期关于马克思、李大钊的纪念活动。</li>
+<li>【一层】【56厅】改革开放和社会主义现代化建设时期关于马克思、李大钊、毛泽东、中国共产党成立的纪念活动。</li>
+<li>【一层】【57厅】新时期关于马克思、李大钊、毛泽东、中国共产党成立的纪念活动。</li>
+<li>【一层】【58厅】新时期关于马克思、李大钊、毛泽东、中国共产党成立的纪念活动。</li>
+<li>【一层】【59厅】新时期关于马克思、李大钊、毛泽东、中国共产党成立的纪念活动。</li>
+<li>【一层】中国共产党早期北京革命活动旧址（31处）</li>
+<li>【一层】中国共产党早期北京革命活动旧址（31处）</li>
+</ul>
+<h2 id="平房展厅时代强音中国左翼文化运动文物史料展"><a class="header" href="#平房展厅时代强音中国左翼文化运动文物史料展">【平房展厅】时代强音：中国左翼文化运动文物史料展</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xin-wen-hua-yun-dong/Red-Building-of-Peking-University.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../xin-wen-hua-yun-dong/mi-yan-gong-kuan.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xin-wen-hua-yun-dong/Red-Building-of-Peking-University.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../xin-wen-hua-yun-dong/mi-yan-gong-kuan.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
