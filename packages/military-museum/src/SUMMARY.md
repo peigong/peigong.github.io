@@ -1,6 +1,9 @@
 # 目录
 
 - [概况简介](./README.md)
+- [室外展区]()
+    - [中国造24型导弹快艇]()
+    - [上游一号反舰导弹]()
 - [一层 空军展区]()
     - [中国造轰-6轰炸机](./f1-air-force/h6.md)
     - [功勋喷气式歼击机](./f1-air-force/wang-hai-079.md)
@@ -56,6 +59,7 @@
     - [1960年东风一号发射](./f1-rocket-force/f1-rocket-force-4.md)
     - [东风1号发射，震撼世界，打破西方霸权](./f1-rocket-force/f1-rocket-force-5.md)
     - [从苏联援助到中国突破的历史见证](./f1-rocket-force/f1-rocket-force-6.md)
+    - [霹雳2空空导弹]()
 - [一层 海军展区]()
     - [镇远舰铁锚](./f1-navy/zhen-yuan-anchor.md)
     - [人民海军的鱼雷艇和导弹艇](./f1-navy/f1-navy-1.md)
@@ -127,3 +131,5 @@
     - [上甘岭战役](./reference/reference-2.md)
     - [金城战役](./reference/reference-3.md)
     - [金城战役——抗美援朝战争收局之战](./reference/reference-4.md)
+    - [苏联米高扬设计局]()
+    - [苏联图波列夫设计局]()

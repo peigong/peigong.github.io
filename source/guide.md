@@ -25,6 +25,7 @@ title: 导游笔记
 - [北京海洋馆](./guide/aquarium)
 - [香山](./guide/fragrant-hills)
 - [国家植物园](./guide/chnbg)
+- [园博园](./guide/garden-expo)
 - [雁栖湖](./guide/YanqiLake)
 
 ## 北京博物馆
@@ -59,3 +60,4 @@ title: 导游笔记
 ## English
 
 - [The Journey to the West](./guide/The-Journey-to-the-West)
+- [English Tour Guiding in Beijing](./guide/english-tour-guiding-in-beijing)
