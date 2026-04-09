@@ -9,6 +9,7 @@
 - [玉澜堂](./the-hall-of-jade-ripples.md)
 - [乐寿堂](./the-hall-of-happiness-and-longevity.md)
 - [长廊](./long-corridor/README.md)
+    - [长廊彩画故事](./long-corridor/gallery.md)
     - [苏式彩绘]()
 - [排云殿](./the-hall-of-dispelling-clouds.md)
 - [佛香阁](./the-tower-of-buddhist-incense/README.md)
