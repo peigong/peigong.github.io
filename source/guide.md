@@ -33,6 +33,8 @@ title: 导游笔记
 - [中国国家博物馆](./guide/chnmuseum)
 - [跟着周导看军博](https://pg.js.cn/jb/html/)
 - [中国人民革命军事博物馆](./guide/military-museum)
+- [国家自然博物馆](./guide/nnhm)
+- [中国园林博物馆](./guide/ChinaGardenMuseum)
 - [首都博物馆](./guide/capitalmuseum)
 - [北京大运河博物馆](./guide/canalmuseum)
 - [历代帝王庙](./guide/The-Temple-of-Successive-Emperors)
