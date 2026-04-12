@@ -1,6 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
+- [讲解提纲](./note.md)
 - [万寿山昆明湖石碑](./wan-shou-shan-kun-ming-hu-shi-bei.md)
 - [万寿山清漪园记](./wan-shou-shan-qing-yi-yuan-ji.md)
 - [东宫门](./the-east-palace-gate.md)
