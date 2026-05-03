@@ -13,7 +13,7 @@
     - [《青年杂志》]()
     - [湖南米盐公款](./xin-wen-hua-yun-dong/mi-yan-gong-kuan.md)
 - [名人录]()
-    - [贡桑诺尔布]()
+    - [贡桑诺尔布](./celebrities/Gunsennorob.md)
     - [乌兰夫]()
     - [荣耀先]()
     - [章嘉活佛]()
