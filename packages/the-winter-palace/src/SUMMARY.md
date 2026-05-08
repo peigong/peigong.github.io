@@ -60,6 +60,7 @@
     - [远瀛观]()
     - [大水法](./xi-yang-lou/Dashuifa-Site.md)
     - [观水法](./xi-yang-lou/guan-shui-fa.md)
+    - [大水法石鱼](./xi-yang-lou/shi-yu.md)
     - [方河]()
 - [容妃](./rong-fei/README.md)
     - [方外观](./rong-fei/fang-wai-guan.md)
