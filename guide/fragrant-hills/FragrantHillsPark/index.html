@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>香山公园 - 香山 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">香山 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/FragrantHillsPark/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="香山公园"><a class="header" href="#香山公园">香山公园</a></h1>
+<p>香山公园（Fragrant Hills Park），位于北京市海淀区买卖街40号，北京市区西北郊，占地188公顷，是一座具有山林特色的皇家园林。早在元、明、清时，皇家就在香山营建离宫别院，每逢夏秋时节皇帝都要到此狩猎纳凉。咸丰十年（1860年）和光绪二十六年（1900年）先后两次被英法联军、八国联军焚毁，1956年开辟为人民公园。</p>
+<p>香山公园地处西山东坡之腹心，也是西山山梁东端的枢纽，峰峦层叠、涧壑交错。有香山寺、洪光寺、双清别墅等著名旅游景点。景区内主峰香炉峰俗称“鬼见愁”，海拔575米。公园树木繁多，森林覆盖率高达96%，具有独特的“山川、名泉、古树、红叶”丰富的园林内涵。</p>
+<p>香山公园1986年就被评为“新北京十六景”之一，成为京城最浓的秋色。1993年被评为首都文明单位，2001年被国家旅游局评为AAAA景区，2002年被评为首批北京市精品公园。2020年被评为全国文明单位。</p>
+<h2 id="命名"><a class="header" href="#命名">命名</a></h2>
+<p>“香山”的得名，历史文献中有两种说法。其中第一种说法来自于民间，据说早年间香山上曾栽种有大面积的杏花，每年花期一到，这里便花香浓郁，故而得名。其二则是来自《香山永安寺记》，这里面讲到山中有一块大石头，其形状和寺庙里烧香的香炉很像，因此这座山便因香炉形状的石头而得名。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="唐朝时期"><a class="header" href="#唐朝时期">唐朝时期</a></h3>
+<p>关于香山寺的记载可追溯到唐代，据明代成书的《宛署杂记》：“妙高堂（香山寺中的一座建筑），在宛平县西四十里香山寺右，唐以来有之。”</p>
+<h3 id="金朝时期"><a class="header" href="#金朝时期">金朝时期</a></h3>
+<p>大定二十六年（1186年），在金世宗完颜雍的提议下，将原有的香山寺和吉安寺合二为一，并重新命名为“大永安寺”，《金史·世宗纪》载：给田二千亩，栗七十株，钱二万贯。后来金世宗的孙子金章宗继续在这里大兴土木，并经常到此游赏。《顺天府志》曾这样描写当时的永安寺：“上院则因山之高，前后建大阁，复道相属，阻以栏槛，俯而不危。其北曰翠华殿，以待临达，下瞰众山，田畴绮错。……下院之前树三门，中起佛殿，后为丈室、云堂、禅寮、客舍，旁则廊庑、厨库之属，靡不毕兴。……庄严如入众香之国。”</p>
+<h3 id="元朝时期"><a class="header" href="#元朝时期">元朝时期</a></h3>
+<p>元世祖忽必烈曾到永安寺游览，到了元仁宗在位时，将永安寺更名为“甘露寺”。文宗至顺二年（1331年），耶律楚材的后裔耶律阿勒弥创建碧云庵。</p>
+<h3 id="明朝时期"><a class="header" href="#明朝时期">明朝时期</a></h3>
+<p>明代时香山及大西山一带被划定为皇家陵寝区域，专门埋葬早殇皇子、公主以及部分皇帝的妃嫔。正统六年（1441年），司礼太监范宏出资七十余万，“捐赀市材，命工重建，殿堂、楼阁、廊庑、像设，焕然一新，规制宏丽，蔚为巨刹。事闻，乃赐额永安禅寺。”明世宗嘉靖皇帝曾至此游览，并称西山一带，香山独有翠色。神宗万历皇帝曾至此登高远望，并题写“来青”二字，为香山寺旁的来青轩。</p>
+<h3 id="清朝时期"><a class="header" href="#清朝时期">清朝时期</a></h3>
+<p>清乾隆十年（1745年），香山的园林营建工程正式展开，而香山寺的扩建工程也在同一时期进行。经过扩建后的香山寺与其周边的宗镜大昭之庙、碧云寺、卧佛寺共同构成了清代西山一带的佛教寺庙建筑群。而香山寺也形成了“前街、中寺、后苑”的格局。</p>
+<p>其中乾隆帝钦题并赋诗二十八处，被称为静宜园二十八景，乾隆帝赐名“静宜园”。香山、静宜园占京西“三山五园”中一山一园。咸丰十年（1860年），英法联军将包括静宜园在内的三山五园内的大量珍物劫掠一空，建筑几乎全部焚毁。光绪二十六年（1900年），八国联军再度劫掠，一代名园瓦砾遍山，几近荒废。</p>
+<h3 id="中华民国时期"><a class="header" href="#中华民国时期">中华民国时期</a></h3>
+<p>在北洋军阀和国民党反动派统治时期，香山的大部分风景区被“达官贵人”、“军阀巨商”建为私人别墅，多处名胜封闭。</p>
+<p>民国六年（1917年），因顺直（河北省）水灾，在香山开办了慈幼局，收养男女灾童千余人，水灾过后，由清室内务府拨借香山静宜园。</p>
+<p>民国九年（1920年）10月3日，成立香山慈幼院，收养无家可归的灾童，熊希龄任院长。</p>
+<p>民国十四年（1925年）3月12日，民主革命先行者孙中山在京逝世后，曾在香山碧云寺内停灵长达四年之久。移灵南京紫金山后，在这里设孙中山的纪念堂和衣冠冢，供人瞻仰。</p>
+<h3 id="中华人民共和国成立后"><a class="header" href="#中华人民共和国成立后">中华人民共和国成立后</a></h3>
+<p>1949年3月，中共中央从西柏坡进京，第一站就进驻的香山双清别墅，毛泽东主席、周恩来总理等老一辈革命家在香山指挥了解放全中国，并筹建了中央人民政府。</p>
+<p>1956年，香山公园作为人民公园向公众开放游览。</p>
+<p>20世纪90年代开始，香山静宜园二十八景修缮保护工程陆续启动，翠微亭、玉乳泉、玉华岫、隔云钟、璎珞岩、香雾窟等陆续修复完成。</p>
+<p>2002年7月，作为静宜园二十八景首景的勤政殿主殿及南北配殿完成修复，对游客开放。</p>
+<p>2019年9月13日，中共中央北京香山革命纪念地（包含香山革命旧址和香山革命纪念馆两个部分）正式对外开放。其中，香山革命旧址位于香山公园内，由双清别墅、来青轩等中共中央在香山的8处革命旧址组成。</p>
+<h2 id="地理环境"><a class="header" href="#地理环境">地理环境</a></h2>
+<h3 id="地形地貌"><a class="header" href="#地形地貌">地形地貌</a></h3>
+<p>香山公园位于北京西北郊西山东麓，距京城约20千米，全园占地面积为188公顷。园内香山地处西山东坡之腹心，也是西山山梁东端的枢纽，其峰峦层叠，涧壑交错。主峰香炉峰海拔575米，南北两面均有侧岭向东延伸，南向侧岭伸展直达红山头，北面侧岭至青龙桥头。</p>
+<h3 id="气候"><a class="header" href="#气候">气候</a></h3>
+<p>香山公园的春季较长，约3个半月；一般自3月初到6月中旬这段时间的平均气温均低于22℃，高于10℃。夏季较短，约2个半月左右，一般从6月中旬至8月下旬，平均气温均在22℃以上，但最高气温也不超过35℃。秋季约2个半月左右，一般8月底入秋至11月初，月均气温只在22℃以下，10℃以上。冬季较长，约有3个半月，一般从11月初入冬到次年3月初。</p>
+<h3 id="水文"><a class="header" href="#水文">水文</a></h3>
+<p>香山公园遍布山间的引水石渠将山泉引至山下，最终汇入昆明湖。“香山的古水系，最早能追溯到清乾隆年间。” 香山公园景区向南麓方向前往双清别墅的主干道旁，有一条浅浅的石质水槽，水槽呈 U 形，宽约60-70厘米，清澈的水如小溪般在槽中缓缓流淌，顺着地势朝山下流去。这就是始建于清代乾隆年间的引水石渠。香山自古泉水充沛，有50多处泉眼。</p>
+<p>香山公园有三条古水系，既有明渠，也有铺着石板的暗渠。北线起点为卓锡泉，分两路流入静翠湖和东宫门外方河；中线起点为玉乳泉，终点为静翠湖附近排洪沟；南线起点为双清泉，终点为静翠湖。</p>
+<p>三条水系流经主要景点：</p>
+<ol>
+<li>双清泉(1544.35米）：双清别墅 —— 香山寺知乐濠 —— 璎珞岩 —— 翠微亭 —— 静翠湖。</li>
+<li>玉乳泉(1122.85米）：南山玉乳泉一线，至静翠湖附近排洪沟。</li>
+<li>卓锡泉(1975.5米）：碧云寺水泉院 —— 含青斋 —— 大雄宝殿前放生池。</li>
+</ol>
+<p>出碧云寺至眼镜湖分流成两路：一路流入眼镜湖。另一路至见心斋 —— 宗镜大昭之庙前方河 —— 致远斋 —— 勤政殿南山石上形成瀑布流入下池 —— 勤政殿前月牙河 —— 出园流入东宫门外方河。</p>
+<h3 id="生物多样性"><a class="header" href="#生物多样性">生物多样性</a></h3>
+<p>截至2010年，香山公园共有391种植物，其中野生种类占多数并且大面积分布。数量最多的主要有黄栌（香山红叶）、侧柏等。公园内的建筑、寺庙周围分布着大量的栽培植物，如银杏、油松等，栽植时间长，古树数量众多。其中，一、二级古树共计5800余株，约占北京市城区古树的约1/4，一级古树就有300余株。树种有侧柏、油松、圆柏、白皮松、槐树、银杏、楸树、麻栎、榆树、元宝枫、栾树、七叶树、皂荚等十三种。</p>
+<p>香山传统的观赏花木也已成规模，如牡丹、玉兰、西府海棠、山杏、山桃、月季、紫薇、连翘、梅花、丁香等等，形成了一些集中的观赏区，如杏花林、梅花谷、丁香路、椴树路，特别是椴树，在市内其他园林比较少见，是香山优良的芳香植物和秋色叶植物。</p>
+<p>香山野生植物中，也有许多观赏价值高的种类，如归化植物二月兰、花木兰、萎陵菜、三裂绣线菊、各种沙参、狗哇花、甘野菊、小红菊等。一些观果的树种，如山里红、西府海棠、海棠果、金银木、柿树、紫珠，林区大量的构树、酸枣、孩儿拳等，吸引了鸟类前来栖息，在香山生态系统中起重要的作用。</p>
+<p>香山的森林覆盖率达到了96%。古树名木众多，其中一、二级古树就有5800余株，占北京近郊古树总数的1/4。知松园景区内一、二级古松柏100余株。</p>
+<h2 id="方位布局"><a class="header" href="#方位布局">方位布局</a></h2>
+<p>香山与东面平原上的玉泉山、万寿山、昆明湖约略在一条东西轴线之上。香山、玉泉山两山布之湖上，卓锡、丹泉吐之山坳，山中有水，水中有山，古迹甚多，近在几席。</p>
+<h3 id="游览路线"><a class="header" href="#游览路线">游览路线</a></h3>
+<p>南线：勤政殿--静翠湖--翠微亭--双清别墅--欢喜园--香山寺。
+北线：勤政殿--知松园--昭庙--见心斋--眼镜湖--索道--碧云寺。</p>
+<p>每年10月中旬到11月上旬是观赏红叶的最好季节，红叶延续时间通常为1个月左右。</p>
+<h2 id="重要景点"><a class="header" href="#重要景点">重要景点</a></h2>
+<p>香山静宜园是清代时著名的“三山五园”之中的一山一园，但后来被英法联军烧毁，其修复工程主要参考清代宫廷画家张若澄的《静宜园二十八景图》。其二十八景为：勤政殿、丽瞩楼、绿云舫、虚朗斋、璎珞岩、翠微亭、青未了、驯鹿坡、蟾蜍峰、栖云楼、知乐濠、香山寺、听法松、来青轩、唳霜臬、香岩室、霞标蹬、玉乳泉、绚秋林、雨香馆、芙蓉坪、晞阳阿、栖月崖、重翠崦、香雾窟、玉华岫、森玉笏、隔云钟。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<h3 id="山花展"><a class="header" href="#山花展">山花展</a></h3>
+<p>自2003年起每年的4月~5月，香山公园都会举办的山花展（又称：山花佳卉观赏节、山花观赏季）。首届展览花卉以花毛茛为主，兼用小菊等花卉植物7万盆，品种20余个。在园内主要景区设立科普宣传展板75块，设计制作了吉祥物“陶陶”形象简体雕塑。</p>
+<p>2018年，第十六届山花观赏季中，布展面积达到2500平米，设有“春韵香山”“梦幻曲”“蝶恋花”“春天奏鸣曲”“春之华尔兹”“古琴禅修”六大展区来展示花卉。</p>
+<h3 id="红叶文化节"><a class="header" href="#红叶文化节">红叶文化节</a></h3>
+<p>自1989年起，每年都举办以观红叶为主题的红叶文化节。展览的红叶主要有五角枫、三角枫、鸡爪枫、柿树等，面积最大的红叶树种是黄栌，有近10万株。这些红叶树种叶子里含有大量的叶绿素、叶黄素、类胡萝卜、胡萝卜素、花青素，春夏两季叶绿素进行光合作用，并使叶子呈现绿色；霜秋季节，天气变冷，昼夜温差变化增大，叶绿素合成受阻，逐渐破坏消失，而类胡萝卜、胡萝卜素、花青素成份增多，使叶子呈现红黄、橙红等色彩。</p>
+<p>2024年10月，第36届“北京晚报·香山红叶节”拉开序幕。</p>
+<h2 id="相关文化"><a class="header" href="#相关文化">相关文化</a></h2>
+<h3 id="梦感泉"><a class="header" href="#梦感泉">梦感泉</a></h3>
+<p>相传在七百多年以前，香山有一只金鹿，金章宗得知此事亲自上山捕捉。转了半天未见金鹿踪迹。时值正午，他又累又渴，依着一棵树合眼便睡。睡梦中见到一只金鹿突然出现在眼前，他急忙拉弓连射两箭，都射到了地上。而金鹿也不见了踪迹。章宗恼怒之余拔起地上的两只箭。箭刚拔出，两股清泉便从箭孔中涌出。这时一阵凉风吹过，章宗从梦中醒来，于是命人在地上挖，果然挖出两股清泉。章宗大悦赐名梦感泉。</p>
+<h3 id="香山梅石"><a class="header" href="#香山梅石">香山“梅石”</a></h3>
+<p>梅兰芳酷爱香山，每次来香山，均下榻在雨香馆。1922年春，梅兰芳住香山雨香馆期间，一日，他与几位好友在山间游玩时发现一块没有刻字的大石头，一时兴起，即在巨石上写下一“梅”字，此字高1.95米，宽1.9米，下方署名“兰芳”，右下放刻有李释戡的题记，全文为：“壬戌三月二十有四日，肃紫亭、齐如山、梅兰芳、王幼卿、李释戡同来，兰芳写梅，释戡题记。香山游者虽多，未必遂登此石，亦足以自豪矣。”题记下方有“齐如山监制”五个小字。人称“五君子刻石”，也叫“梅石”。</p>
+<p>梅兰芳写下“梅石”之后，还“换来”了露天义演。因为当年熊希龄利用香山的房舍开办慈幼院，收养了河北水灾中无家可归的儿童，为办学经费短缺而发愁时闻知此事，便借题发挥要惩罚梅兰芳在香山搞一场义演。梅兰芳欣然同意，上演了《宇宙锋》，并把全部收入都捐给了慈幼院。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../FragrantHillsPark/FragrantHillsPark-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../FragrantHillsPark/FragrantHillsPark-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

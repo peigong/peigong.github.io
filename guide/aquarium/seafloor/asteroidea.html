@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>海星 - 北京海洋馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/seafloor/asteroidea.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="海星"><a class="header" href="#海星">海星</a></h1>
+<p>海星背部微隆，腹部平坦，嘴巴生长在腹部，肛门在背上。海星腕上长着数目众多的管足，他靠这些运动器官在沙地上爬行。</p>
+<p>海星主要分布于世界各地的浅海底沙地或礁石上。海星看上去，很不像是动物。从其外观和缓慢动作来看，很难想象出海星竟然是一种贪婪的食肉动物。当他发现猎物以后，就把触手搭在猎物的身上，先用腕和管足把食物抓牢，避免猎物逃跑，但并不送到嘴里吃。然后用触手打开壳，伸出位于底盘的胃，将猎物消化。消化后，再把胃吸回到体内。</p>
+<p>海星表面上温文尔雅，却有个绝招，分身术。只要留一厘米的腕，就能生长出一个完整的新海星。所以，断肢残臂对海星来说，根本微不足道。</p>
+<p>海星（学名：Asteroidea）属于棘皮动物门海星纲动物，又称海盘车、星鱼。有43个科、430个属以及1972个种。体扁，星形，具中空的腕。颜色鲜艳。成体多为五辐射对称（有5条腕）；口位于基底下侧中部，与腕腹部共同构成口面；每条腕的中部都有步带沟，从沟中伸出细小的管状附属物，称为管足；表皮下有钙质骨片和肌肉层，可使腕足活动。一般为雌雄异体，也有部分为雌雄同体。寿命可达35年之久。</p>
+<p>海星分布在世界各个海域，其中，北太平洋分布最多。在中国渤海、黄海等沿岸也能见到其身影。喜欢群居，常栖息在有沙、岩石或珊瑚的海底。在软泥底较为少见。肉食动物，它们的食物来源主要是贝类、海胆、螃蟹和海葵等行动较为缓慢的海洋生物，甚至也包括美丽缤纷的珊瑚。繁殖能力很强，一般在夏季繁殖后代，卵和精子在海水中受精，形成新的生命。大多数海星都不会进行无性繁殖。医学价值方面，海星含有的成分对高血脂症及心脑血管疾病具有很好的疗效。海星体内还能提炼出制作胶囊的胶质。生态价值方面，对维持生态平衡具有重要作用。经济价值方面，具有较高的营养价值，其含有丰富的脂肪和蛋白质。在生产领域上，可以用来沤肥。在工业上，常用来加工成粉状饲料。</p>
+<p>海星在国内外均不属于保护动物，且部分地区海星泛滥造成危害。中国曾爆发海星泛滥，海星疯狂地摄食鲍鱼、菲律宾蛤仔、扇贝等养殖经济贝类，一个海星1天能吃掉十几只扇贝，食量惊人，给贝类养殖业造成巨大的经济损失。</p>
+<h2 id="物种学史"><a class="header" href="#物种学史">物种学史</a></h2>
+<h3 id="11化石记录"><a class="header" href="#11化石记录">1.1化石记录</a></h3>
+<p>最早的海星出现在奥陶纪。由于海星化石记录的局限性，古生代海星之间以及古生代与现存海星之间的关系很难确定。海星化石很少见，因为海星死亡后骨骼元素迅速解离；海星通常有一个大的体腔，随着器官的恶化而塌陷；海星通常生活在不利于化石形成的坚硬基质上。尽管海星化石记录很少，但也有助于我们理解古生代和后古生代群体中的海星演化。已知最古老的Neoasteroids海星化石是已灭绝的三叠纪Trichasteropsis属。Blake发现到一个新的目Trichasteropsida，包含这个分类单元。稍年轻的三叠纪Noriaster barberoi属，被分为现存的Poraniidae目（Valvatida），是属于现存的最古老的已知化石物种。从现有的化石证据中，可知自奥陶纪以来，海星的基本特征一直保持不变。海星化石记录的标志是泥盆纪末和二叠纪末大灭绝的两个主要更替时期。与其他棘皮动物类群如海胆一样，二叠纪末的灭绝导致了海星动物群的巨大变化。</p>
+<p>有研究将系统发育分析与祖先地理区域相结合，可以为海星的早期地理起源提供新的见解。祖先地理区域重建提供了证据，表明海星的最近共同祖先可能在热带西太平洋，而西太平洋祖先形成了入侵温带西太平洋、热带西大西洋和北极地区的七个不同谱系。</p>
+<p>海星的化石记录可以追溯到后古生代。化石记录和当前的记录表明，大部分海星的多样化发生在二叠纪-三叠纪过渡时期。海星的最近共同祖先起源于泥盆纪和石炭纪，支持了古生代海星演化中晚泥盆纪的第一次重要动物群转移。二叠纪-三叠纪间期是棘皮动物进化史上的一个转折点。古生代的星状动物和早期海星谱系在此间期灭绝，随后至少有一个存活谱系重新多样化，现代海星动物群主要从这几个分类群进化而来，形成了独特的古生代和后古生代动物群。</p>
+<p>深海和浅水海星之间的分歧大约与三叠纪-侏罗纪过渡期相吻合，这一时期以大规模灭绝事件为标志。广泛的灭绝为海洋动物群创造了新机遇，并促成了深海和浅水分类群迅速多样化。</p>
+<h3 id="12发育争论"><a class="header" href="#12发育争论">1.2发育争论</a></h3>
+<p>1987年，基于形态特征的分析，Blake与Gale提出了两种不同的阶级关系假设。两位作者都强调了海星分类中行走特征的重要性，并认识到古生代和后古生代形式之间的区别。</p>
+<p>然而，Gale专注于柱体目 （Paxillosida ）中缺乏吸盘管足，认为它们是原始的。因此，他的系统发育反映了两个主要类群：柱体目和其它，它们都有吸盘管足，他称之为超目Surculifera。Blake认为吸盘管足是祖先的特征。他的系统发育反映了两个主要的海星群：超目Forcipulata（Forcipulatida + Brisingida）和超目Valvatacea + Spinulosacea（Valvatida，Notomyotida，Paxillosida，Spinulosida和Velatida）的分支。为了解决系统发育争论，人们将分子数据与形态学数据相结合。然而这些研究在阐明海星系统发育关系方面几乎没有什么作用，反而会加强争议。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<h3 id="21外形特征"><a class="header" href="#21外形特征">2.1外形特征</a></h3>
+<p>海星与海参、海胆等同属棘皮动物。它们通常有五个腕，但也有四六个，体扁平，多呈星形。整个身体由许多钙质骨板借结缔组织结合而成，体表有突出的棘、瘤或疣等附属物。有的多达50条腕，在这些腕下侧并排长有4列密密的管足。用管足既能捕获猎物，又能让自己攀附岩礁，大个的海星有好几千管足。海星的嘴在其身体下侧中部，可与海星爬过 的物体表面直接接触。海星的体型大小不一，小到2.5厘米、大到90厘米，体色也不尽相同，几乎每只都有差别，最多的颜色有桔黄色、红色、紫色、黄色和青色等。</p>
+<p>海星纲动物身体的直径一般在12-24厘米左右，但大小在不同种变化很大、直径的变化幅度在1-80厘米之间。多数体表黄褐色，但也有的种具明亮红、桔、蓝、紫等色，或几种颜色的混合色。身体呈五星形，例如海盘车，由中央盘向外伸出五个腕。太阳海星的腕可多达40个。多数种类的腕靠近中央盘处较宽，末端渐细，少数相近。腕的长度一般为中央盘直径的1-3倍，但也有的腕达4-5倍。</p>
+<p>有的种类腕很短，以致使身体呈五角形，如面包海星（Culcita）。由腕到中央盘的中心区称步带区（bulacral area），也称辐射区（radii）。步带区之间的部位称间步带区（intera bulacral area），也称间辐射区（interradii）。生活时，海盘车向下的一面，中央盘的中央有口，口的周围为膜质的围口部，这一面称为口面。相对的一面，即上表面称为反口面。口面从口到各腕的末端伸出一条很宽的沟称为步带沟，沟内有2-4列管足。步带沟的两侧边缘有可动的长棘，可随时关闭及保护步带沟。腕的末端具一小丛触手，末端的一个触手下具红色眼点。反口面中央盘的中央部位有肛门，但一般不易看到。在中央盘靠边缘某两腕之间有一圆形小板，称筛板，它是水管系与外界相通的门户。由于由体表向外伸出许多刺和棘，所以整个身体的表面，特别是反口面通常是很粗糙的。也有的种类体表的刺和棘呈扁平状，而使体表略光滑。口面与反口面的位置在棘皮动物各纲中并不完全相同。由于生活方式的改变，或使口面向上（海百合类），或使口面与反口面的区分不明显（海参纲）。</p>
+<h3 id="22体壁骨骼"><a class="header" href="#22体壁骨骼">2.2体壁骨骼</a></h3>
+<p>棘皮动物的体壁由表皮及真皮组成。体壁的最表面是一层很薄的角质层，其内为一层单纤毛的柱状上皮细胞。在上皮细胞中夹杂有神经感觉细胞及粘液腺细胞，腺细胞的分泌物可以粘着落于体表的沉渣，再由纤毛扫走。表皮之下是一层神经细胞及纤维层，构成棘皮动物的表皮下神经丛。随后是真皮层，包括一层很厚的结缔组织及肌肉层。肌肉可分为外层环肌和内层纵肌，反口面的纵肌发达，收缩可使腕弯曲。肌肉层之内即为一层体腔膜（peritoneu）。</p>
+<p>棘皮动物的骨骼由中胚层形成，属内骨骼，位于体壁的结缔组织内。它是由许多分离的不同形状的小骨片在结缔组织的连接下形成的网格状骨骼，由掺有10%碳酸镁的钙盐组成。小骨片上有穿孔，这样既可减轻重量，又可增加强度。每个小骨片是由真皮中一个细胞先分泌一个晶体，围绕晶体再由周围的细胞分泌及积累钙盐形成，因此骨片可随动物的生长而增大。骨片的大小、形状及网格的排列都决定于真皮细胞的结构与排列。</p>
+<p>除了骨片之外，还有一些刺（spine）、叉棘（pedi-cellaria）及棘突束（paxilla）等骨骼成分散布于体表，用以防卫及消除体表的沉积物。其中叉棘有的无柄，有的有柄。叉棘在海盘车及棘钳目是很普遍的，它们由小骨板组成，呈钳状或剪刀状，借助于基部的一对对抗肌牵引、控制开闭。有的叉棘在刺的四周成圈排列。显带目海星的反口面有分离的伞状骨片，伞面上有许多可动的刺，这就是棘突束，适用于沙面穴居生活。表皮上除刺、棘之外，还有大量的皮鳃，它的结构与功能将在呼吸部分叙述。</p>
+<h3 id="23水管系统"><a class="header" href="#23水管系统">2.3水管系统</a></h3>
+<p>水维管系统（water vascular syste）是棘皮动物所特有的一个管状系统，它全部来自体腔，因此管内壁裹有体腔上皮，并充满液体，它的主要机能在于运动。水管系统通过筛板与外界相通。筛板是一石灰质圆板，上面盖有一层具纤毛的上皮，表面具有许多沟道，沟底部有许多小孔及管道，并进入下面的一个囊内，由囊再连到下面的石管（stone canal）。</p>
+<p>石管是由于管壁有钙质沉积而得名，壁管有突起伸入管腔，而将管腔不完全地隔开，以允许管内液体向口面及向反口面同时流动。石管由反口面垂直向下，到达口面后与口周围的环水管（circular canal）相连。环水管位于口面骨板的内面，管壁也常褶皱，将管腔也分成许多小管道，其作用可能有利于液体在其中的流动。在间辐区的环管上有4-5对褶皱形成的囊状结称，称贴氏体（Tiedemann's bodies），它的作用可能是产生体腔细胞。另外相当多的海星类环管上还有1-5个具管的囊，称波里氏囊（Polianvesicles），囊壁上有肌肉，用以贮存环管中的液体。海盘车没有波里氏囊。</p>
+<p>由环管向每个腕伸出一辐射管（radial canal）直达腕的末端，辐水管位于步带沟中腕骨板外面，辐管沿途向两侧伸出成对的侧管（lateral canal），左右交替排列。侧管末端膨大，穿过腕骨片向内进入体腔形成坛囊（pulla）。坛囊的末端成为管足进入步带沟内。</p>
+<p>许多种类管足末端扁平形成吸盘。管足的结构与体壁相似，外有纤毛上皮，内有体腔上皮，中间有肌肉及结缔组织，肌肉的收缩控制管足弯曲或延伸。由辐水管向两侧伸出的侧水管如果等长，则管足在步带沟内表现出两行；如果侧水管长短交替，则管足在步带沟内表现出4列。海盘车则表现出4列状。水管系统中充满液体，其体液与海水等渗，其中含有体腔细胞、少量蛋白质及很高的钾离子，在运动中相当于一个液压系统。当坛囊收缩时，它与侧管交界处的瓣膜关闭，囊内的液体进入管足，管足延伸，与地面接触，管足末端的吸盘产生真空以附着地面。当管足的肌肉收缩时，管足缩短，液体又流回坛囊。棘皮动物就是这样靠管足的协调收缩以完成运动，而水管系统的其他部分可能仅用以维持管内的压力平衡。</p>
+<p>有实验证明管内的液体并不与外界交换。海星运动时常以1-2个腕为领导腕，该腕内的管足同步向相同方向伸出及缩回。但实际上5个腕的管足并不总是向相同方向伸出或完全协调的，因此，海星的运动是很缓慢的。由于意外身体翻转时，它用1-2个腕扭转恢复到正常位置，并吸附在地面，然后身体由腕下面翻过，以恢复正常运动。柱体目海星如槭海星（Astropecten）、砂海星等生活在软质海底，其管足无吸盘，在步带沟中排成两列，这些特征有利于它们在泥沙穴居或爬行。</p>
+<h3 id="24围血系统"><a class="header" href="#24围血系统">2.4围血系统</a></h3>
+<p>棘皮动物没有专门的循环器官，可能由体腔液执行循环机能。中央盘及腕中都有发达的体腔，围绕在器官周围，其中充满体腔液，靠体腔膜细胞的纤毛摆动造成体腔液的流动，以完成营养物质的输送。体腔液中的体腔细胞可能是来自体腔膜，也有人说来自贴氏体，具吞噬机能。由于体腔液与海水等渗，很少具调节能力，因此棘皮动物只能生存在海水中，很少侵入河口。仅有个别种可以在低盐水中（8-18‰）生活，其余均生活在标准海水中（盐度35‰）。棘皮动物具有一特殊的围血系统（perihe alsyste）。</p>
+<p>血系统包括一系列与水管系统相应的管道，其中充满液体，液体中也有体腔细胞。在口面环水管的下面有环血管，向各腕也伸出辐血管，也位于辐水管之下。由环血管向反口面伸出一深褐色海绵状组织的腺体与石管伴行，称轴腺（axialgland），它可能具有一定的博动能力。在接近反口面处伸出胃血环（gastric hemalring），并分支到幽门盲囊，到达反口面时形成反口面血环，并分支到生殖腺。在靠近筛板处有一背囊，也有搏动能力，可推动液体的流动。血系统的功能尚不能确定，可能与物质的输送有关。包围在血系统之外的并与之伴行的是围血系统，除了没有胃围血环之外，其余完全相伴而行。实际上它是体腔的一部分，包在血系统之外形成一套窦隙。关于它的作用很少了解。</p>
+<p>海星类的呼吸及排泄主要由皮鳃、管足及体表进行。皮鳃是体壁的内、外两层上皮细胞向外突出的瘤状物，体腔液也流入其中。皮鳃内的体腔上皮的纤毛作用使体腔液在其中流动，皮鳃外层的纤毛上皮造成体表的水流动，这样不停地进行着气体交换。在显带类皮鳃顶端呈分支状，位于棘突束之间的缝隙内。管足在气体交换中也起着重要作用，特别是在皮鳃不发达的种类。有实验证明，在关闭步带沟、管足不能进行呼吸时，氧的消耗量减少60%。海星类的含氮废物也是由皮鳃及管足排出，用活体染料注射体腔表明，代谢废物由体脑细胞摄取，满载后移到皮鳃，并聚集在其顶端，以后当皮鳃收缩时，这些体腔细胞被排出体外。也有的满载代谢物的体腔细胞进入管足末端的吸盘处，以后从吸盘处排出。还有的代谢物来自幽门盲囊，以后随未被消化的食物残渣由口吐出。</p>
+<h3 id="25神经系统"><a class="header" href="#25神经系统">2.5神经系统</a></h3>
+<p>海星类及所有棘皮动物的神经系统都是分散的，不形成神经节或神经中枢，且都与上皮细胞紧密相连。一般认为海星类包括三个互不相连的神经结构：</p>
+<ol>
+<li>
+<p>外神经系统（ectoneural nervoussystem），位于口面体壁的表皮细胞之下，在口面围口膜周围形成一口神经环，由它分出神经支配食道及口周围，并向各腕分出辐神经（radial nerve）。辐神经断面呈“V”字形，沿步带沟底部中央直达腕的末端，沿途发出神经到管足、坛囊。除了这些可见的神经索以外，它们与上皮下的神经纤维丛也相互连接。外神经系统是感觉神经，起源于外胚层，是最重要的神经结构。</p>
+</li>
+<li>
+<p>内神经系统（entoneuralnervoussystem），是由上皮下神经丛在步带沟外边缘加厚形成的一对边缘神经索（arginalnervecord），由它发出神经到成对的步带骨板的肌肉上，并在体腔膜下面形成神经丛，支配体壁的肌肉层。</p>
+</li>
+<li>
+<p>下神经系统（hyponeural nervous system），位于围血系统的管壁上（即体腔膜下），也称体腔神经，也是由一个围口神经环及5个间辐区神经加厚组成。内神经与下神经均是运动神经，由中胚层起源，这在动物界是唯一的例外。</p>
+</li>
+</ol>
+<p>神经系统对运动起着重要的作用。有实验证明，切断一个腕的辐神经，则所有腕的管足协调运动消失。如在两腕之间切断环神经，则抑制了所有的运动，这说明在辐神经与环神经之间存在着一个神经中心，而这个中心一般是存在于起主导作用的腕上，由它控制着其他腕的协调一致。大多数种类五个腕都可临时性的作为主导腕，也有少数种只有一个腕是永久性的主导腕。每个腕的末端、触手的下面有一红色的眼点，是其唯一的感官，由80-200个色素杯小眼组成。每个小眼由上皮细胞组成杯状，其中有红色色素颗粒，盖在其外面的角质层加厚处作为晶体作用，即使把眼点都盖住，它也能对光产生反应。表皮中含有大量的神经感觉细胞，这些细胞具有长的突起，最后加入到上皮神经丛，它们构成感受器，对光、触觉及化学刺激均有反应。这些感觉细胞分布在整个体表，在管足、触手、步带沟边缘特别丰富。</p>
+<h3 id="26生殖系统"><a class="header" href="#26生殖系统">2.6生殖系统</a></h3>
+<p>绝大多数的海星类为雌雄异体，共有10个生殖腺，每个生殖腺由一丛葡萄状管组成。在非成熟期腺体很小，位于五个腕的基部。在生殖期，腺体很大，几乎充满了整个的腕。生殖腺雄性常白色，雌性多橙色，每个生殖腺有一个生殖孔位于反口面腕基部中央盘上。槭海星类（Astropectinidae）每个腕有许多生殖腺，排列成行，生殖孔开口在口面。少数种类为雌雄同体，例如一种海燕（Asterina gibbose），但雄性先熟，即年幼时产生雄性生殖细胞，年龄较大后变成雌性个体，产生卵。</p>
+<h3 id="27消化系统"><a class="header" href="#27消化系统">2.7消化系统</a></h3>
+<p>海星类的消化道也呈五辐排列，口位于口面中央，周围有围口膜，膜上有环肌及括约肌，调节口的扩大与缩小。口后为食道，很短，随后进入膨大的胃。胃壁上有水平方向的紧缩，使胃被分隔成近口面的贲门胃（cardiac stomach）和近反口面的较小的幽门胃（pyloric stomach）。取食时贲门胃常外翻，包裹食物后再一同缩回体内。胃壁上有2-10条体腔膜起源的胃带（gastric ligaents），将之连接到骨板上。由幽门胃向各腕伸出一幽门管，进入腕后立刻分为两支，直达腕的末端。幽门管沿途向两侧分出例管，其周围有大量腺细胞包围形成幽门盲囊（pyloriccecv），它实际上是消化腺，也称肝脏，具分泌消化酶、吸收及贮藏营养物质的功能。幽门胃后为很短的肠，肠末端直肠周围有5个直肠盲囊（rectal cecvm），最后以很小的肛门开口在反口面中央。有的种甚至没有肠，不能消化的食物通常仍由口吐出。消化道的内壁均裹有纤毛上皮，在贲门胃壁上有发达的腺细胞以分泌消化酶，特别是幽门盲囊可以分泌蛋白酶、淀粉酶及脂肪酶。食物可进行部分的体外消化，在胃内主要进行胞外消化，在幽门盲囊中可进行胞内消化。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>海星生活在潮汐池、珊瑚礁、沙滩和海藻森林或各种底质上，但软泥底上很少见。海盘车属对底质要求不高，常随所摄食的双壳类的多少而移动。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>海星分布于世界各海域，以印度太平洋和热带大西洋地区种类最多，垂直分布于潮间带到深海带（约6000米 ）。其中Ophidiasteridae科是整个热带浅水大西洋和印度太平洋地区最大的家族；正海星科（Zoroasteridae）是深海动物群的重要成员，仅出现在大西洋、太平洋和印度洋盆地的深海至深海栖息地（约200-6000 m）。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<p>海星主要以缓慢移动的无脊椎动物，主要是双壳类动物和腹足类动物为食，例如一些牡蛎、蜗牛和蛤蜊，也采食鲸鱼和其他大型脊索动物的腐烂尸体。 海星是机会主义猎食者，它们不会主动寻找猎物。一些物种能够采食悬浮在水中的颗粒，包括浮游动物、细菌和其他碎屑。有些物种则是食腐的。</p>
+<p>海星的取食方式有三种。大多数海星类具长可弯曲的腕，管足上具吸盘，多以双壳类为食，取食时身体位于贝壳上，以两腕在贝壳两侧吸着，由于管足末端吸盘的真空作用，其拉力足以拉开双壳类的壳口，海星立刻翻出贲门胃插入壳口内，并分泌消化酶，直到闭壳肌及内脏部分地被消化，贝壳完全张开，再用胃包围吞嚥食物一同进入口内。一些具短腕、管足上无吸盘的种类，是以较小的动物如小的甲壳类等为食，取食时是整个将食物吞嚥，消化在胃内而不在体外进行。一旦海星附着在它想要摄取的猎物上，它就会通过嘴将它的胃向外伸展。胃产生能够降解猎物的酶，直到它们被完全摄入。 这有助于食物直接进入胃部，并且可以轻松而完全地消化。深海生活的种类以纤毛过滤取食，靠纤毛作用将落入体表的沉渣有机物等扫入步带沟，形成食物索，再送入口内，例如槭海星。又如鸡爪海星（Henricia），胃盲囊内有纤毛，靠纤毛的运动帮助抽吸食物入胃。</p>
+<h2 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h2>
+<h3 id="61生长繁殖"><a class="header" href="#61生长繁殖">6.1生长繁殖</a></h3>
+<p>大多数的种还要经过一自由游泳的幼虫期。由受精卵经辐射卵裂、形成囊胚，当发育到原肠胚期后，开始自由游泳。起初整个表面有纤毛，随着发育纤毛被限制在一定的纤毛带上，前端起自口，后端到肛门前，幼体靠纤毛带游泳与取食。以后口前的纤毛带形成一环状，同时体内出现三分体腔，称为双羽幼虫。它是两侧对称的。大约经历数周时间才能发育到双羽幼虫阶段。双羽幼虫经过取食、游泳一段时间之后，在前端出现三个附属的短腕，其顶端具粘着细胞，腕的基部也有粘细胞形成的吸盘，这时称短腕幼虫（brachiolaria）。</p>
+<p>随后它用粘细胞及吸盘固着在基底上（显带类不形成短腕幼虫），然后开始变态。幼虫的前端前口叶特化成一固着柄，由幼虫的后端部分发生成体结构，幼虫的左侧变成了口面，右侧变成了反口面，成虫出现腕。幼虫的消化道退化，成虫的消化道按辐射对称发生。幼虫的后体腔变成了成体的躯体腔，后体腔的一部分也变成了围血系统。左侧的前、中体腔（即轴腔、水腔）发育成水管系统，右侧的前、中体腔退化，同时左侧的水腔发生5对突起，每对进入发育中的腕。这5对突起分别代表第一对管足。随着更多管足的形成，则用管足附着，原来固着的前端游离，并不断形成骨板。大约经历了二个月的时间发育成幼体海星，这时直径大约仅1毫米左右，身体由两侧对称变成了辐射对称，完成了变态。</p>
+<p>幼体的生长速率及寿命因种而不同，一般1-2年后、少数4-5年后达到性成熟。生长可持续数年，寿命可达数年至10多年，个别种可达30多年。一些海星可以行无性生殖，即通过中心盘的分裂，一个海星可以变成两个。一般地说海星类都有很强的再生能力，一个腕只要带有部分中央盘都可以再生成一个整体，特别是带有筛板时更易于再生。甚至一种指海星，一个被切下的腕，也可以再生出中央盘及其他腕，但再生部分较正常的小。</p>
+<h3 id="62繁殖方式"><a class="header" href="#62繁殖方式">6.2繁殖方式</a></h3>
+<p>海星有很强的繁殖能力，寿命可达35年。大部分的海星，是通过体外受精繁殖的，不需要交配。雄性海星的每个腕上都有一对睾丸，它们将大量精子排到水中，雌性也同样通过长在腕两侧的卵巢排出成千上万的卵子。精子和卵子在水中相遇，完成受精，形成新的生命。从受精的卵子中生出幼体，也就是小海星。所以要让他们的卵子不能繁殖。</p>
+<p>生殖细胞均来自体腔上皮，产卵及受精均在海水中进行。一般雌性生殖细胞的存在可以刺激其他个体也排卵或雄性排精，或是精子的存在刺激雌性排卵。实验证明卵的成熟与排放是由辐神经的神经分泌细胞的分泌物所刺激。大多数种类个体产卵量很大，可达250万粒，卵小，少黄卵，间接发育。少数种产卵数目较少，卵亦大，卵黄亦多，为直接发育，但卵经母体的孵育。孵育的方法因种而不同，例如翼海星类（Pterasteridae）的一些种，卵在口面孵育；还有的种卵产于反口面中央盘上，腕基部长出长刺以保护卵，并在其中孵育。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../seafloor/chelonia-mydas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../seafloor/amphiprion-actiniaria.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../seafloor/chelonia-mydas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../seafloor/amphiprion-actiniaria.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

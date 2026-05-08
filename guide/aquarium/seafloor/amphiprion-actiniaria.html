@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>小丑鱼和海葵 - 北京海洋馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/seafloor/amphiprion-actiniaria.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="小丑鱼和海葵"><a class="header" href="#小丑鱼和海葵">小丑鱼和海葵</a></h1>
+<p>小丑鱼是一种身体为暗红色，并且带有白色条纹的小鱼。小丑鱼和海葵是好朋友，喜欢依偎在海葵身旁，伴海葵而居，所以又被称为海葵鱼。</p>
+<p>海底总动员里的主人公就是小丑鱼。海葵是因为他的外壳像葵花，上面长有触手。根据品种的不同，触手的数量从十几到几千个不等，他的触手是有毒的，不过小丑鱼对这种毒素有免疫性。由于海葵移动缓慢，不易捕捉到食物，而小丑鱼为他吸引猎物，他为小丑鱼提供保护。他们两个是互利共生的关系。一旦遇到危险，小丑鱼就会从容的身到海葵的触手丛中。作为回报，小丑鱼经常为海葵清除皮肤上的寄生物，并把别的小鱼引诱到海葵的触手间。这样，海葵得到了食物，小丑鱼也可以分享一份美餐。</p>
+<h2 id="小丑鱼"><a class="header" href="#小丑鱼">小丑鱼</a></h2>
+<p>小丑鱼（学名：Amphiprion）是双锯鱼属鱼类的俗称。体长仅5-6厘米。身体色彩艳丽，多为红色、橘红色；除透明的胸鳍与软背鳍鳍条外部，其余鳍均为黑色。体形怪异，体色多变，通常体侧有白色条纹。成鱼的颜色可能因地理环境和行为的变化而改变。因身体上有两条或三条白色条纹似京剧中的丑角而得名。</p>
+<p>小丑鱼原生于印度洋和太平洋较温暖的水中。其栖息于珊瑚礁与岩礁，幼鱼时常与大的海葵、海胆或小的珊瑚顶部共生、形成小到大群鱼群。以藻类、桡脚类动物和浮游性甲壳动物为食。小丑鱼身上有一种黏液可以避开海葵刺细胞的伤害。与海葵的关系有一些“共生”的意味，当受到凶猛鱼类攻击时，会钻入海葵中躲避敌害，而进食时不免留下一些残饵，可以引诱其他鱼类靠近海葵，帮助海葵捕捉猎物。成鱼在配对后，会先选择一只海葵或石块等物体作为产卵床。产卵过程大约持续1.5小时，一次能产150-300枚卵。</p>
+<p>小丑鱼作为热带珊瑚礁海域的一种小型鱼类，对天然海域珊瑚礁生态环境的修复起着至关重要的作用，是中国国内水族馆的重要展示品种之一。27种列入《世界自然保护联盟濒危物种红色名录》（IUCN）；其中，易危（VU）1种，无危（LC）25种，数据缺乏（DD）1种。</p>
+<h3 id="物种学史"><a class="header" href="#物种学史">物种学史</a></h3>
+<p>小丑鱼的属名来自希腊语“ambi”（=左右两侧）和“priön”（=“saw”），指的是小丑鱼物种的深锯齿状亚骨和前盖骨（鳃盖的一部分）。因身体上有两条或三条白色条纹似京剧中的丑角而得名。</p>
+<h3 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h3>
+<p>小丑鱼通常体长不超过15厘米。背棘总数10-12；背的软条总数4-16；臀棘总数2；臀鳍软条总数14-15，通常稚鱼身体黑色，有蓝色的鳞片；在前额与上侧面上有白色斑块；除胸鳍透明与软背鳍鳍条外部的部分外，其他鳍都是黑色；成鱼体一般呈椭圆形而侧扁，吻短而钝；成鱼的颜色可能因地理环境和行为的变化而改变。</p>
+<h3 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h3>
+<p>小丑鱼属于小型的珊瑚礁鱼类，喜欢栖息于珊瑚礁与岩礁，与海葵，海胆或小的珊瑚等形成一种互利共生的关系。，较适宜的海水盐度为29‰-31‰，水温为26-28℃，pH为8.1-8.4；同时需要维持水硬度1.25-1.97摩尔/升、碱度为2.5-4meq/升、溶解氧含量为5-6毫克/升时，才能促进其健康生长发育。</p>
+<h3 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h3>
+<p>小丑鱼广泛分布在印度-太平洋地区。</p>
+<h3 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h3>
+<h4 id="群居行为"><a class="header" href="#群居行为">群居行为</a></h4>
+<p>小丑鱼喜群体生活，几十尾鱼儿组成一个大家族，其中也分“长幼尊卑”。如果有的小鱼犯了错误，就会被其他鱼儿冷落；如果有的鱼受了伤，大家会一同照顾它。可爱的小丑鱼就这样互亲互爱、自由自在地生活在一起。</p>
+<h4 id="摄食行为"><a class="header" href="#摄食行为">摄食行为</a></h4>
+<p>小丑鱼主要摄取浮游生物、小型甲壳类、藻类为食物。</p>
+<h4 id="共生关系"><a class="header" href="#共生关系">共生关系</a></h4>
+<p>小丑鱼身体表面拥有特殊的体表粘液，可保护它不受海葵的影响而安全自在地生活在里面。因为海葵的保护，使小丑鱼免受其它大鱼的攻击，同时海葵吃剩的食物也可供给小丑鱼，而小丑鱼亦可利用海葵的触手丛安心地筑巢、产卵。对海葵而言，可借着小丑鱼的自由进出，吸引其它的鱼类靠近，增加捕食的机会；小丑鱼亦可除去海葵的坏死组织及寄生虫，同时因为小丑鱼的游动可减少残屑沉淀至海葵丛中。小丑鱼也可以借着身体在海葵触手间的摩擦，除去身体上的寄生虫或霉菌等。</p>
+<p>小丑鱼把海葵当作是具有防御功能的居住地，但是它们第一次搬进来的时候，也会遭到海葵的螯咬。首先，小丑鱼必须在触手之间小心地起舞。这样小丑鱼的身上就沾满了海葵的黏液，最大程度地阻止被蛰刺的袭击。小丑鱼把卵产在海葵的触手中，孵化后，幼鱼会在水中生活一段时间，才开始选择适合它们生长的海葵群，经过适应后，才能共同生活。值得注意的是，小丑鱼并不能生活在任意一种海葵中，只可以在特定的对象中生活。在没有海葵的环境下，小丑鱼依然可以生存，只不过缺少保护罢了。</p>
+<p>小丑鱼是极具领域观念的，通常一对雌雄鱼会占据一个海葵，阻止其他同类进入。如果是一个大型海葵，它们也会允许其他一些幼鱼加入进来。在这样一个大家庭里，体格最强壮是雌鱼，她和她的配偶雄鱼占主导地位，其他的成员都是雄鱼和尚未显现特征的幼鱼。雌鱼会追逐、压迫其他的成员，让它们只能在海葵周边不重要的角落里活动。如果当家的雌鱼不见了，原来那一对儿夫妻中的雄鱼会在几星期内转变为雌鱼，完全具有雌性的生理机能，然后再花更长的时间来改变外部特征，如体形和颜色，最后完全转变为雌鱼，而其他的雄鱼中又会产生一尾最强壮的成为她的配偶。</p>
+<h3 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h3>
+<h4 id="繁殖习性"><a class="header" href="#繁殖习性">繁殖习性</a></h4>
+<p>繁殖方式为置卵型，产卵期接近时，亲鱼会勤于在海葵附近整理爱巢环境，用口扫除藻类、砂砾等，小丑鱼有强烈好斗习性，有明显的地域性和攻击性等特性。在成熟过程中有性转变的现象，在族群中雌性为优势种。在产卵期，公鱼和母鱼有护巢、护卵的领域行为，而小丑鱼宝宝出生前，公鱼表现得十分积极主动，几乎都是由公鱼负责护卵，公鱼会不时地用自己的胸鰭去亲抚鱼卵，清理污物，提供水流与氧气。</p>
+<h4 id="性别转变"><a class="header" href="#性别转变">性别转变</a></h4>
+<p>从鱼卵、鱼苗、鱼宝宝到成鱼，小丑鱼的成长过程需要半年多时间，而其寿命至少可以维持10年，约半个月产1次卵。小丑鱼必须经过12-24个月的生理成熟期，性别的改变必须在适当的环境下促成。在生存环境中没有雌性小丑鱼的条件下有可能转变为雌性。变成雄性的条件是生存环境中已经有一条性腺成熟并占统治地位的雌性小丑鱼，同时环境中缺少雄性小丑鱼。当环境中有配对的且占主导地位的小丑鱼时，其他小丑鱼会暂时保持无性别状态。</p>
+<p>它们的繁殖也非常具有特色。孵化后的小丑鱼是无性别的，既不是雄性也不是雌性。它们必须经历一个从无性别状态转变到雄性再转变到雌性的不可逆过程。从无性别到雄性，而不能变回无性别，从雄性变成雌性，也不能再变回雄性。有的小丑鱼可能一生都是无性别状态，这一切取决于营养与环境。</p>
+<h4 id="产卵"><a class="header" href="#产卵">产卵</a></h4>
+<p>产卵前，亲鱼会在鱼巢周围用嘴清理出一片光滑干净的有石块的区域以供卵附着。母鱼产卵当天食量会明显减少，产卵管明显伸出。通常产卵发生在日落前，持续50分钟左右，产卵量在100-1000粒左右，雄鱼紧随雌鱼产卵其后为卵受精。其卵的一端会有细丝固定在石块上。营养好的小丑鱼产的卵是金黄色或橙色的，呈长椭圆形，受精卵长径为2.6-3.0毫米，短径为0.9-1.0毫米。产卵水温以26-27℃，盐度为30‰-31‰，溶解氧在5毫克/升以上。</p>
+<h4 id="孵化"><a class="header" href="#孵化">孵化</a></h4>
+<p>小丑鱼的卵属于沉性卵，雄鱼护卵习性比雌鱼显得更加积极主动。为确保受精卵的孵化率，尽量安排在亲鱼培育池中进行孵化，因为在亲鱼的看护下胚胎能正常发育，直到破膜前1天再将鱼卵移到裸池孵化，破膜形成仔鱼。孵化水温以26.5℃为宜，卵经8-13天就可以孵化出来。</p>
+<h3 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h3>
+<h4 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h4>
+<p>27种列入《世界自然保护联盟濒危物种红色名录》（IUCN）；其中，易危（VU）1种，无危（LC）25种，数据缺乏（DD）1种。</p>
+<h3 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h3>
+<p>小丑鱼作为热带珊瑚礁海域的一种小型鱼类，对天然海域珊瑚礁生态环境的修复起着至关重要的作用，是中国国内水族馆的重要展示品种之一。</p>
+<h2 id="海葵"><a class="header" href="#海葵">海葵</a></h2>
+<p>海葵为珊瑚纲海葵目（学名：Actiniaria）的统称，截止2024年12月，根据《全球生物物种名录（COL）》所示，该目共有66科320属1176种；中国共分布21科41属70种。海葵是一种固着的水螅体，底部通过一个称为基盘或足盘的粘性结构附着在底面上，身体呈柱状，顶部有一个口盘，体长在1.5厘米~1米之间。柱体或干体通常呈大致圆柱形，表面光滑平整或具乳突。口盘中央有一个通常呈裂缝状的口，周围环绕着一圈或多圈触手，触手的数量和形态因种而异。此外，海葵的颜色众多，有淡奶油色、绿色、橘黄色等。</p>
+<p>海葵分布于全球各大海域，如紫点海葵在地中海沿岸，美国海葵在美国沿岸。它们生活在深海和浅海，也有适应冷水环境的。海葵主要捕食无脊椎动物，大型海葵也会捕食螃蟹等生物，也有某些海葵通过悬浮物摄食浮游生物。海葵主要附着在硬质表面，但也能缓慢移动或从基底上脱落漂移，部分种类能行走和游泳。海葵常与其他生物共生。棘颊雀鲷和双锯鱼生活在有毒海葵触手间，但也可能被其他海葵刺伤和捕食。</p>
+<p>截止2024年，根据《世界自然保护联盟（IUCN）濒危物种红色名录》所示，该目共有11种被列入，其中极危（CR）、濒危（EN）、易危（VU）各一种。海葵具有一定的药用价值，如黄海葵味咸、性平、有毒，具有强心、收敛固涩等作用，主要用于治疗痔疮、脱肛等。纵条肌海葵还有镇静、镇痛、镇咳及降压的作用。海葵也可食用，只需去掉黏液即可烹制出海葵酸辣汤等菜肴，但需注意有些海葵毒性很强，食用时需谨慎。</p>
+<h3 id="形态特征-1"><a class="header" href="#形态特征-1">形态特征</a></h3>
+<p>典型的海葵是一种固着的水螅体，底部通过一个称为基盘或足盘的粘性结构附着在底面上，身体呈柱状，顶部有一个口盘。大多数海葵直径在1到5厘米之间，长度在1.5到10厘米之间，但它们的触手可以伸缩或膨胀，尺寸变化很大。有些海葵非常大，如Urticina columbiana和地毯海葵（Stichodactyla mertensii）直径都可以超过1米，而Metridium farcimen的长度可达1米。</p>
+<p>柱体或干体通常呈大致圆柱形，表面可能是光滑平整的，也可能有特化的结构，如实心乳突（肉质突起）、粘附乳突、环状裂缝和小突出囊泡。在一些物种中，口盘下方的部分会收缩，形成一个称为头盘的结构。当动物收缩时，口盘、触手和头盘会折叠进食道内，并由沿着柱体中部的强力括约肌固定在原位。在这一点上，身体壁可能会形成一个称为护墙的褶皱结构，这个护墙在海葵收缩时覆盖并保护它。</p>
+<p>口盘中央有一个通常呈裂缝状的口，周围环绕着一圈或多圈触手。裂缝的两端通向食道壁上的沟槽，称为虹管沟，通常有两条这样的沟槽，但某些种类只有一条。触手通常呈锥形，末端常有一个孔，但在一些物种中，触手呈分叉状、棒状，或者缩短为低矮的突起。触手上布满刺细胞，这些细胞既用于防御，也用于捕捉猎物。刺细胞内含有刺丝囊，一种能突然翻出的囊状细胞器，因此称为刺胞动物门。每个刺丝囊包含一个充满毒素的小囊、一个内丝和一个外部感觉毛。触碰感觉毛会机械性地触发细胞爆炸，射出类似鱼叉的结构附着在触发它的生物上，并将毒液注入攻击者或猎物的体内。</p>
+<h4 id="消化系统"><a class="header" href="#消化系统">消化系统</a></h4>
+<p>海葵的消化系统主要包括以下几个部分：</p>
+<ol>
+<li>
+<p>食道或胃道：口部通向一个管状的食道。食道的两侧有纤毛沟槽，称为虹管沟。具有两条虹管沟的个体称为双虹管沟，而有些种类只有一条虹管沟，称为单虹管沟。具有一条虹管沟的海葵被认为是两侧对称的，而有两条虹管沟的则为双辐射对称。除了虹管沟外，食道的其他部分也有纤毛。虹管沟的纤毛通过打击水流，使水通过口部进入体腔，确保持续的氧气供应。食道其他部分的纤毛则将食物带入体内并将废物排出。</p>
+</li>
+<li>
+<p>胃腔：食道向下延伸约三分之二进入内腔，称为胃腔。胃腔被身体壁的垂直隔板分隔成辐射状的腔室，这些隔板称为隔膜或肠膜。</p>
+</li>
+<li>
+<p>肠膜：海葵的肠膜分为完全肠膜和不完全肠膜两种。完全肠膜有6对，从身体壁垂直延伸到食道壁。在虹管沟两侧的两对完全肠膜称为导向肠膜。在食道区域，完全肠膜有开口或小孔，以便水从一个腔室流到另一个腔室。食道以下，完全肠膜的边缘是自由的，向身体壁弯曲。6对完全肠膜构成主要肠膜，它们之间的空间称为外腔。外腔中还有次级和三级肠膜，它们是不完全的，只连接到身体壁而不延伸到食道。每对肠膜之间的空间称为内腔。</p>
+</li>
+</ol>
+<p>在食道以下，自由的肠膜边缘称为肠膜丝，外观上呈三叶状。肠膜的基部附着着线状的刺丝，这些刺丝带有刺细胞和腺细胞，可以通过口部或身体壁上的小孔伸出，用来制服猎物。在日常生活中，刺丝还用于杀死胃腔中仍然活着的食物。</p>
+<h4 id="神经系统"><a class="header" href="#神经系统">神经系统</a></h4>
+<p>海葵没有特定的感觉器官，其神经系统非常简单，基本上与其他腔肠动物相似，呈现出典型的扩散神经网。这个神经网包含表皮层神经丛（位于表皮和肌肉层之间）和消化腔神经丛（主要在隔膜中），两者通过中胶层连接。每个神经丛由细微的神经纤维和大脑神经节细胞组成，主要分布在触手、口盘和食道处。由于缺乏集中化的神经系统，海葵的反射行为相对较差。</p>
+<h3 id="分布范围-1"><a class="header" href="#分布范围-1">分布范围</a></h3>
+<p>海葵分布于各大海域中，例如紫点海葵（Heteractis crispa）主要分布于地中海沿岸海域，美国海葵（Phymanthus crucifer）主要分布于美国沿岸。</p>
+<h3 id="栖息环境-1"><a class="header" href="#栖息环境-1">栖息环境</a></h3>
+<p>海葵生活在深海和浅海的各类环境中，它们在热带地区最为多样化，但也有很多适应冷水环境的种类。大部分海葵会附着在岩石、贝壳或者沉木上，常常藏在缝隙里或海藻下面，也有一些海葵在沙子和泥土中钻洞，少数则生活在海洋的浮游层中。</p>
+<h3 id="生活习性-1"><a class="header" href="#生活习性-1">生活习性</a></h3>
+<h4 id="觅食习性"><a class="header" href="#觅食习性">觅食习性</a></h4>
+<p>海葵主要捕食各种无脊椎动物，但大型的海葵会捕食螃蟹、被海浪冲开的蛤蜊，甚至是鱼。它们用触手抓住猎物，通过刺细胞麻痹或固定猎物，然后将其送入口中。海葵的嘴唇可以充气，有助于捕捉猎物。像细指海葵属 （Metridium）、辐花海葵属 （Radianthus） 和列指海葵属（Stichodactyla）这些有很多触手的海葵是通过悬浮物摄食，而Stichodactyla helianthus据说会用肌肉质的口盘包裹海胆来捕食。悬浮物摄食的海葵通过柱体和触手表面的粘液捕捉浮游生物，柱体和触手上的纤毛会把食物送入口中。</p>
+<h4 id="运动模式"><a class="header" href="#运动模式">运动模式</a></h4>
+<p>海葵能够显著改变其形状。它们的柱体和触手具有纵向、横向和斜向的肌肉层，可以伸长、收缩、弯曲和扭曲。食道和隔膜可以外翻（翻到外面），或者口盘和触手可以缩回食道，括约肌关闭开口；在这个过程中，食道横向折叠，水通过口排出。尽管一些海葵种类会在软沉积物中打洞，大多数海葵主要是固着生物，通过足盘附着在硬质表面上，通常会在同一个地方停留数周或数月。它们也能够移动，可以在基底上缓慢地爬行；这种滑动可以通过延时摄影观察到，但肉眼几乎无法察觉到这种缓慢的运动，这个过程类似于腹足类软体动物的运动，收缩波从足的后部向前移动，前缘松开并向前移动。</p>
+<p>海葵还可以从基底上脱落，漂流到新位置。Gonactinia prolifera比较特别，因为它既能行走又能游泳；行走时像毛毛虫一样做一系列短暂的环形步伐，将触手附着在基底上，并将基部拉近；游泳是通过快速同步拍动触手，像桨一样划动。猩红膨大海葵（Stomphia coccinea） 通过弯曲其柱体来游泳，海葱海葵则通过充气并脱离基底，变成球形，让自己随波逐流。</p>
+<h4 id="共生"><a class="header" href="#共生">共生</a></h4>
+<p>海葵和寄居蟹是海洋中常见的一种互惠共生关系。通常，每只寄居蟹上会有一个或多个海葵。海葵从中受益，获得一个附着的壳，并得到食物源，包括寄居蟹进食时掉落的食物碎片，还可免受捕食者的攻击，而寄居蟹也可免受章鱼和其他寄居蟹捕食者的攻击，这些捕食者会被海葵驱赶。当寄居蟹长大到需要换更大的壳时，它会帮助海葵转移到新壳上。为此，寄居蟹会抚摸海葵的柱体，让海葵释放其附着的足盘，然后将海葵转移到新壳上。在某些种类中，海葵自己会通过翻跟斗从旧壳转移到新壳上。</p>
+<p>随着成长，大多数寄居蟹会寻找并转移到越来越大的蜗牛壳中。新的蜗牛壳对寄居蟹来说存在风险，例如暴露于捕食者的攻击和与其他寄居蟹争夺有限的壳资源。Slylobafes海葵属具有扩展的足盘，能分泌一种甲壳质的替代“蜗牛”壳，供其寄居蟹使用，寄居蟹也避免了壳转移的风险，二者之间的共生使寄居蟹不仅可以吓退海葵的敌人，并无意中与海葵分享食物。</p>
+<p>此外，小丑鱼（Amphiprion）也会和海葵共生，小丑鱼会吃掉对海葵有威胁的无脊椎动物，小丑鱼也是唯一能够在海葵中生活且不会被其触须刺伤的鱼类，这为小丑鱼提供了免受其他鱼类捕食者攻击的保护。另一方面，小丑鱼的粪便为海葵提供了一些必需的营养物质。</p>
+<h3 id="生长繁殖-1"><a class="header" href="#生长繁殖-1">生长繁殖</a></h3>
+<p>海葵物种可能是雌雄异体或雌雄同体。每个隔膜生殖腺是位于隔膜丝和收缩肌之间的纵向、枕状生殖带。卵子可能在体腔内受精并发育，也可能在海水中进行外部受精。海葵的繁殖方式可分为有性繁殖和无性繁殖。</p>
+<h4 id="有性繁殖"><a class="header" href="#有性繁殖">有性繁殖</a></h4>
+<p>海葵也可能是雌雄异体的生物，例如羽状海葵，具有独立的雄性和雌性个体。性细胞起源于胃皮层的间质细胞，并在隔膜的中胶层中成熟。性腺（睾丸或卵巢）形成纵向带，位于隔膜丝的后面。成熟的卵子和精子从性腺中释放出来，通过口离开，在海水中进行体外受精。受精卵或合子发育成细长、两侧对称、自由游动并带有纤毛的浮浪幼虫。它的原口成为口部，浮浪幼虫以微小的有机物为食。它在底部爬行，最终在某个岩石裂缝中定居，用其身体的无口端附着。随着触手、隔膜和中胶层的生长，它蜕变成一个微小的海葵。咽部是由柱体壁的口腔凹陷形成的，隔膜逐渐发育。其生命周期简单，不表现出世代交替。</p>
+<h4 id="无性繁殖"><a class="header" href="#无性繁殖">无性繁殖</a></h4>
+<p>海葵常见无性繁殖方式为分裂生殖。美丽固边海葵（Aiptasia pallida）、纵条肌海葵（Haliplanella luciae）和须毛高龄细指海葵（Metridium senile）等物种有一种叫做足部撕裂的专门断裂形式。海葵在移动时，足盘边缘的小块会脱落并留在后面，或者这些小块会从静止的海葵移开，形成环绕在亲本柱基部的“仙女环”。无论哪种情况，脱落的碎片都会很快发育成小海葵。许多海葵通过纵裂生殖进行无性繁殖，少数物种如Gonactinia prolifera和Nematostella vectensis则通过横裂繁殖。</p>
+<h3 id="物种保护"><a class="header" href="#物种保护">物种保护</a></h3>
+<h4 id="保护级别-1"><a class="header" href="#保护级别-1">保护级别</a></h4>
+<p>截止2024年，根据《世界自然保护联盟（IUCN）濒危物种红色名录》所示，该目共有11种被列入，其中极危（CR）、濒危（EN）、易危（VU）各一种，分别为Edwardsia ivelli、Paranemonia vouliagmeniensis、Nematostella vectensis；2种为无危（LC），为Cribrinopsis crassa、Condylactis aurantiaca；剩余6种为数据不足。</p>
+<h4 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h4>
+<p>海葵物种数量极多，仅有约27%的物种处于威胁状态。</p>
+<h4 id="主要威胁"><a class="header" href="#主要威胁">主要威胁</a></h4>
+<p>对于Segonzactis hartogi，底栖渔业是该物种在整个分布范围内的主要威胁；城市化及工业、生活废水的排入，使潟湖环境恶化，Paranemonia cinerea的生存因栖息地退化而受到威胁；金色瘤葵海葵（Condylactis aurantiaca）的数量下降主要受到环境污染和沙底拖网捕捞等因素的影响。</p>
+<h4 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h4>
+<p>截止到2024年12月，对于该目物种还没有具体的保护措施。</p>
+<h3 id="主要价值-1"><a class="header" href="#主要价值-1">主要价值</a></h3>
+<h4 id="药用价值"><a class="header" href="#药用价值">药用价值</a></h4>
+<p>海葵具有一定的药用价值，例如黄海葵（Anthopleura xanthogrammica）味咸、性平、有毒，具有强心、收敛固涩、祛湿杀虫的作用，主治痔疮、脱肛，白带过多及蛲虫，此外，纵条肌海葵还具有镇静、镇痛、镇咳及降压作用。</p>
+<h4 id="食用价值"><a class="header" href="#食用价值">食用价值</a></h4>
+<p>海葵还可食用，食用海葵时，只需去掉黏液，就可以烹制出受欢迎的海葵菜肴，如海葵酸辣汤、干锅海葵和红烧海葵等。但是，并不是所有的海葵都可以食用，有些海葵毒性很强，食用时需要谨慎。</p>
+<h4 id="观赏价值"><a class="header" href="#观赏价值">观赏价值</a></h4>
+<p>部分海葵还具有观赏价值，例如公主海葵（Heteractis magnifica）是海葵中最常被摄影师捕捉的品种之一，因其鲜艳的颜色和优美的形态而成为水下摄影的热门主题。它不仅受到潜水爱好者的青睐，也是水族箱中备受欢迎的宠物。由于它能与小丑鱼等鱼类形成共生关系，其独特的生态价值和观赏性使其在水族行业中广受欢迎。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../seafloor/asteroidea.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../seafloor/spheniscidae.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../seafloor/asteroidea.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../seafloor/spheniscidae.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
