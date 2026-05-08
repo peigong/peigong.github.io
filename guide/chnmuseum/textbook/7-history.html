@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>人教版七年级中国历史 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/textbook/7-history.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="人教版七年级中国历史"><a class="header" href="#人教版七年级中国历史">人教版七年级中国历史</a></h1>
+<h2 id="第一单元-史前时期原始社会与中华文明的起源"><a class="header" href="#第一单元-史前时期原始社会与中华文明的起源">第一单元 史前时期：原始社会与中华文明的起源</a></h2>
+<h3 id="第1课远古时期的人类活动"><a class="header" href="#第1课远古时期的人类活动">第1课：远古时期的人类活动</a></h3>
+<ul>
+<li>北京人背羊</li>
+<li>元谋人上门齿化石</li>
+<li>北京人牙齿化石</li>
+<li>北京人头盖骨化石</li>
+<li>北京人复原头像</li>
+<li>北京人使用的石器</li>
+<li>北京人用火场景</li>
+<li>山顶洞人复原头像</li>
+<li>山顶洞人使用的骨针和装饰品</li>
+</ul>
+<h3 id="第2课原始农业与史前社会"><a class="header" href="#第2课原始农业与史前社会">第2课：原始农业与史前社会</a></h3>
+<ul>
+<li>原始农作场景想象图</li>
+<li>浙江义乌桥头遗址出土的炭化稻粒</li>
+<li>北京门头沟东胡林遗址出土的炭化粟粒和黍粒</li>
+<li>河姆渡人干栏式建筑复原想象图</li>
+<li>河姆渡遗址出土的带藤条残木柄骨耜</li>
+<li>河姆渡遗址出土的双鸟纹象牙雕刻器及线描图</li>
+<li>贾湖遗址出土的刻符龟甲和骨笛</li>
+<li>半坡人半地穴式房屋复原想图</li>
+<li>半坡遗址出土的器具</li>
+<li>山东章丘焦家遗址的大汶口文化墓葬出去的随葬品</li>
+<li>山东日照东海峪遗址出土的蛋壳黑陶杯</li>
+<li>甘肃甘谷出土的鲵鱼纹陶瓶</li>
+<li>陕西半坡出土的人面鱼纹陶盆</li>
+<li>陕西华州出土的鸟纹陶钵</li>
+<li>山西临汾出土的回旋勾连纹陶盆</li>
+<li>河南三门峡出土的花瓣纹陶钵</li>
+<li>河南巩义出土的六角星纹陶罐</li>
+</ul>
+<h3 id="第3课中华文明的起源"><a class="header" href="#第3课中华文明的起源">第3课：中华文明的起源</a></h3>
+<ul>
+<li>位于河南郑州的炎帝黄帝雕像</li>
+<li>牛河梁遗址出土的玉猪龙</li>
+<li>牛河梁遗址的积石冢、祭坛</li>
+<li>良渚古城及外围水利系统结构示意图</li>
+<li>良渚古城遗址出土的玉器及神人兽面纹线描图</li>
+<li>陶寺古城遗址出土的器物</li>
+<li>大禹治水画像石拓片</li>
+<li>黄帝陵</li>
+</ul>
+<h2 id="第二单元-夏商周时期奴隶制王朝的更替和向封建社会的过渡"><a class="header" href="#第二单元-夏商周时期奴隶制王朝的更替和向封建社会的过渡">第二单元 夏商周时期：奴隶制王朝的更替和向封建社会的过渡</a></h2>
+<h3 id="第4课夏商西周王朝的更替"><a class="header" href="#第4课夏商西周王朝的更替">第4课：夏商西周王朝的更替</a></h3>
+<ul>
+<li>《史记·夏本纪》书影</li>
+<li>二里头遗址一号宫殿复原想象图</li>
+<li>二里头遗址出土的青铜爵</li>
+<li>二里头遗址出土的绿松石龙形器</li>
+<li>商朝形势图</li>
+<li>利簋及铭文拓片</li>
+<li>西周主要诸侯国示意图</li>
+<li>妇好墓出土的玉凤</li>
+<li>妇好墓出土的青铜钺</li>
+<li>殷墟出土的记载妇好征战的甲骨（残片）</li>
+</ul>
+<h3 id="第5课动荡变化中的春秋战国"><a class="header" href="#第5课动荡变化中的春秋战国">第5课：动荡变化中的春秋战国</a></h3>
+<ul>
+<li>春秋时期青铜牺尊</li>
+<li>春秋时期郑国的九鼎八簋</li>
+<li>春秋时期青铜胄</li>
+<li>春秋时期青铜戈</li>
+<li>春秋争霸形势图</li>
+<li>勾践剑与夫差矛</li>
+</ul>
+<h3 id="第6课战国时期的社会变革"><a class="header" href="#第6课战国时期的社会变革">第6课：战国时期的社会变革</a></h3>
+<ul>
+<li>《战国策》书影</li>
+<li>战国铜壶及纹饰展开图</li>
+<li>战国形势图</li>
+<li>商鞅方升</li>
+<li>战国时期双镰铁范</li>
+<li>战国时期青铜冰鉴</li>
+<li>战国时期楚国龙凤虎纹丝织物</li>
+<li>李冰石像</li>
+</ul>
+<h3 id="第7课百家争鸣"><a class="header" href="#第7课百家争鸣">第7课：百家争鸣</a></h3>
+<ul>
+<li>孔子见老子画像石拓片</li>
+<li>马王堆汉墓出土的帛书《老子》</li>
+<li>西汉海昏侯刘贺墓出土的《论语》竹简</li>
+<li>《韩非子》书影</li>
+</ul>
+<h3 id="第8课夏商周时期的科技与文化"><a class="header" href="#第8课夏商周时期的科技与文化">第8课：夏商周时期的科技与文化</a></h3>
+<ul>
+<li>太阳神鸟金饰</li>
+<li>记载日食的商朝牛骨</li>
+<li>扁鹊行医画像石拓片</li>
+<li>刻有文字的商朝牛骨</li>
+<li>四羊方尊</li>
+<li>司母戊鼎及铭文拓片</li>
+<li>何尊及铭文拓片</li>
+<li>三星堆遗址出土的戴金面罩青铜人头像</li>
+<li>三星堆遗址出土的玉璋</li>
+<li>《屈子行吟图》</li>
+</ul>
+<h2 id="第三单-秦汉时期统一多民族封建国家的建立和巩固"><a class="header" href="#第三单-秦汉时期统一多民族封建国家的建立和巩固">第三单 秦汉时期：统一多民族封建国家的建立和巩固</a></h2>
+<h3 id="第9课秦统一中国"><a class="header" href="#第9课秦统一中国">第9课：秦统一中国</a></h3>
+<ul>
+<li>秦始皇陵兵马俑考古发掘现场</li>
+<li>秦灭六国形势图</li>
+<li>统一货币示意图</li>
+<li>铜量</li>
+<li>铜权</li>
+<li>秦朝形势图</li>
+</ul>
+<h3 id="第10课秦末农民大起义"><a class="header" href="#第10课秦末农民大起义">第10课：秦末农民大起义</a></h3>
+<ul>
+<li>秦坑儒谷碑</li>
+<li>秦朝刑具</li>
+<li>《陈胜吴广起义》</li>
+<li>秦末起义形势图</li>
+</ul>
+<h3 id="第11课西汉建立和文景之治"><a class="header" href="#第11课西汉建立和文景之治">第11课：西汉建立和“文景之治”</a></h3>
+<ul>
+<li>“与天久长”瓦当</li>
+<li>“汉并天下”瓦当</li>
+<li>马王堆汉墓出土的漆器</li>
+<li>汉景帝阳陵陪葬墓园出土的陶仓</li>
+<li>素纱单衣</li>
+<li>帛画</li>
+</ul>
+<h3 id="第12课大一统王朝的巩固"><a class="header" href="#第12课大一统王朝的巩固">第12课：大一统王朝的巩固</a></h3>
+<ul>
+<li>《史记 平准书》书影</li>
+<li>汉朝耧车</li>
+<li>满城汉墓出土的长信宫灯</li>
+<li>五铢钱</li>
+<li>卫青墓</li>
+<li>霍去病墓</li>
+<li>西汉形势图</li>
+</ul>
+<h3 id="第13课东汉的兴衰"><a class="header" href="#第13课东汉的兴衰">第13课：东汉的兴衰</a></h3>
+<ul>
+<li>东汉宅院画像砖</li>
+<li>东汉牛耕画像石拓片</li>
+<li>东汉形势图</li>
+<li>东汉绿釉陶水亭</li>
+<li>东汉车马出行壁画</li>
+<li>东汉击鼓说唱俑</li>
+</ul>
+<h3 id="第14课丝绸之路的开通与经营西域"><a class="header" href="#第14课丝绸之路的开通与经营西域">第14课：丝绸之路的开通与经营西域</a></h3>
+<ul>
+<li>玉门关遗址</li>
+<li>张骞出使西域图</li>
+<li>张骞第一次出使西域路线图</li>
+<li>西汉鎏金铜马</li>
+<li>东汉锦袜</li>
+<li>丝绸之路图</li>
+<li>汉朝海上航路图</li>
+</ul>
+<h3 id="第15课秦汉时期的科技与文化"><a class="header" href="#第15课秦汉时期的科技与文化">第15课：秦汉时期的科技与文化</a></h3>
+<ul>
+<li>悬泉置遗址出土的西汉简牍</li>
+<li>马王堆汉墓出土的帛书</li>
+<li>天水放马滩汉墓出土的西汉纸地图</li>
+<li>汉朝造纸工艺流程想象图</li>
+<li>河南南阳医圣祠</li>
+<li>西汉经穴漆人</li>
+<li>秦简九九表</li>
+<li>陕西韩城司马迁祠</li>
+<li>四川成都青城山</li>
+<li>河南洛阳白马寺</li>
+<li>《论衡》书影</li>
+</ul>
+<h2 id="第四单元-三国两晋南北朝时期政权分立与民族交融"><a class="header" href="#第四单元-三国两晋南北朝时期政权分立与民族交融">第四单元 三国两晋南北朝时期：政权分立与民族交融</a></h2>
+<h3 id="第16课三国鼎立"><a class="header" href="#第16课三国鼎立">第16课：三国鼎立</a></h3>
+<ul>
+<li>京剧《捉放曹》中曹操的扮相</li>
+<li>官渡之战示意图</li>
+<li>《三顾茅庐图》</li>
+<li>赤壁之战示意图</li>
+<li>《柳龙骨车》中的牛转翻车</li>
+<li>三国鼎立形势图</li>
+</ul>
+<h3 id="第17课西晋的短暂统一和北方各族的内迁"><a class="header" href="#第17课西晋的短暂统一和北方各族的内迁">第17课：西晋的短暂统一和北方各族的内迁</a></h3>
+<ul>
+<li>“晋鲜卑归义侯”印</li>
+<li>甘肃嘉峪关魏晋墓砖画《牧马图》</li>
+<li>西晋北方各族内迁分布图</li>
+</ul>
+<h3 id="第18课东晋南朝政治和江南地区开发"><a class="header" href="#第18课东晋南朝政治和江南地区开发">第18课：东晋南朝政治和江南地区开发</a></h3>
+<ul>
+<li>南京六朝博物馆的条幅</li>
+<li>东晋形势图</li>
+<li>东晋黑釉鸡首瓷壶</li>
+<li>南朝青瓷莲花尊</li>
+</ul>
+<h3 id="第19课北朝政治和北方民族大交融"><a class="header" href="#第19课北朝政治和北方民族大交融">第19课：北朝政治和北方民族大交融</a></h3>
+<ul>
+<li>嘎仙洞遗址</li>
+<li>淝水之战示意图</li>
+<li>甘肃嘉峪关魏晋墓砖画《采桑图》</li>
+<li>《北齐校书图》</li>
+</ul>
+<h3 id="第20课三国两晋南北朝时期的科技与文化"><a class="header" href="#第20课三国两晋南北朝时期的科技与文化">第20课：三国两晋南北朝时期的科技与文化</a></h3>
+<ul>
+<li>北魏星象图</li>
+<li>《齐民要术》书影</li>
+<li>锺繇楷书《宣示表》刻石</li>
+<li>《兰亭集序》</li>
+<li>《张猛龙碑》拓片</li>
+<li>《女史箴图》</li>
+<li>《洛神赋图》</li>
+<li>云冈石窟第20窟的造像</li>
+<li>龙门石窟宾阳中洞的造像</li>
+<li>祖冲之纪念邮票</li>
+<li>《水经注》书影</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-7/history-7-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../reference/reference-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-7/history-7-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../reference/reference-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

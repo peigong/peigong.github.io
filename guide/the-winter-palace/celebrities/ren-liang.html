@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>任亮 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/ren-liang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="任亮"><a class="header" href="#任亮">任亮</a></h1>
+<p>任亮，字明亭，直隶河间（今属河北）人，出身穷苦，自幼净身入宫为监。其人生平正直，当差谨慎，又遇此大节，实堪景慕。</p>
+<h2 id="任亮碑文"><a class="header" href="#任亮碑文">任亮碑文</a></h2>
+<p>咸丰十年八月二十二日，明亭公在出入贤良门内遇敌人接仗殉难身故，技勇三学公中之人，念其生平正直，当差谨慎，又遇此大节，实堪景慕，因建立碑文记其名氏，以期永垂不朽云。</p>
+<p>勇哉！明亭念食厚禄，奋力直前，殉难身故，遇难不恐，必要作忠寡弗敌众，忠勇可风！</p>
+<p>咸丰辛酉四月河间王云祥撰并书技勇三学</p>
+<h2 id="技勇太监"><a class="header" href="#技勇太监">技勇太监</a></h2>
+<p>技勇太监是清朝雍正初年设立的专职宫廷护卫的太监类别。其成员需通过严格武艺考核，主要职责为保卫皇帝安全并承担皇家园林守卫工作。</p>
+<p>1860年英法联军攻入圆明园时，首领任亮率领二十余名技勇太监在贤良门与法军激战殉难，其墓碑于1983年在清华大学工地出土成为重要物证，碑文记载"咸丰十年八月二十二日，清圆明园技勇八品首领任亮"。该群体虽职级较低（最高为八品首领），但作为清代宦官体系中特殊武装力量延续至咸丰年间。咸丰十年（1860年）英法联军进攻圆明园时，八品首领任亮率领二十余名技勇太监在贤良门与法军交战殉难。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>雍正帝于1723年即位后正式设立技勇太监制度，该制度可能源于康熙年间通过训练太监擒拿权臣鳌拜的经验。作为清代宦官官制创新，其延续至咸丰十年（1860年）仍有活动记载，前后存续超过130年。</p>
+<h2 id="职责与选拔"><a class="header" href="#职责与选拔">职责与选拔</a></h2>
+<p>技勇太监核心职责包括：</p>
+<ul>
+<li>日常随侍皇帝并负责其人身安全</li>
+<li>值守皇家重要场所（如圆明园各宫门）</li>
+<li>参与宫廷特殊防卫任务</li>
+</ul>
+<p>选拔标准为：</p>
+<ul>
+<li>年龄要求15-20岁且体格强壮</li>
+<li>需接受系统武术训练（含刀法、枪械等）</li>
+<li>通过定期武艺考核方能获得"御前上差"资格</li>
+</ul>
+<h2 id="圆明园保卫战"><a class="header" href="#圆明园保卫战">圆明园保卫战</a></h2>
+<p>1860年10月6日（农历八月二十二日），英法联军攻入圆明园时：</p>
+<ul>
+<li>八品首领任亮率二十余名技勇太监据守贤良门</li>
+<li>使用冷兵器与装备先进火器的法军展开殊死搏斗</li>
+<li>全体成员在交战中殉职，法军随军日记记载称此战为"壮举"</li>
+</ul>
+<p>1983年出土的任亮墓碑详载："清圆明园技勇八品首领任亮，咸丰十年八月二十二日"殉职，该石碑现存于圆明园遗址公园，是考证技勇太监制度的重要实物。</p>
+<h2 id="职级制度"><a class="header" href="#职级制度">职级制度</a></h2>
+<p>技勇太监属清代宦官官制中的底层职级：</p>
+<ul>
+<li>最高官职为八品首领（约相当于正处级）</li>
+<li>首领下设普通技勇太监无正式品级</li>
+<li>日常归内务府管辖，执行任务时受侍卫处调配</li>
+</ul>
+<h2 id="相关人物"><a class="header" href="#相关人物">相关人物</a></h2>
+<p>董海川（1797-1882）作为清代知名武术家，虽在王府担任过太监职务，但其武术造诣系入宫前习得。此案例反映清代存在具备武艺背景的太监群体，但需注意其与技勇太监存在职能区分：</p>
+<ul>
+<li>技勇太监属制度化的专职护卫</li>
+<li>董海川类太监的武艺属个人技能</li>
+</ul>
+<p>该群体的历史记载多散见于碑刻、外国军官回忆录等非官方史料，正史中鲜有提及。现代研究认为这与清代统治者刻意弱化太监军事职能的史观有关。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/Victor-Hugo.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/zai-yuan.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/Victor-Hugo.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/zai-yuan.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

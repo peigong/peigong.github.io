@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>狄安娜 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/Diana.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="狄安娜"><a class="header" href="#狄安娜">狄安娜</a></h1>
+<p>狄安娜（拉丁语：Dĭāna、英语：Diana），是罗马神话中的月亮与橡树女神，罗马十二主神之一。她对应希腊神话中的阿尔忒弥斯、赫卡忒等女神，也对应腓尼基神话的刻勒斯塔女神。</p>
+<p>她的词源可能与“光”有关系。罗马的月神很多，瓦罗记载，月女神露娜同时也与其他12女神（包括狄安娜）有联系。因此，狄安娜与朱诺、密涅瓦后来一样被罗马确定为月亮女神。</p>
+<p>罗马人喜欢用罗马神吞并神职相近的外族神。约公元前五六世纪，狄安娜崇拜与古希腊人有所接触。直到罗马时代，狄安娜吞并了希腊女神阿尔忒弥斯，因此又被当成狩猎女神，植物和野兽的女神。同时狄安娜也吞并了希腊女神赫卡忒，代表狄安娜有天、地、冥三种领域。</p>
+<p>在吸收希腊神后，狄安娜神话添加了更多改编的文学。在罗马后期艺术的描述里，狄安娜热爱户外生活，在林莽和山野间，手持弓箭，由众犬伴随，与众女仙侍从一起以狩猎为戏，有时乘坐两圣鹿所曳之银车出行。狄安娜和手工与记忆女神弥涅尔瓦一样终身保持着贞洁，是一位严厉的处女神，她反对男女婚姻，因此，在英语中to be a Diana可用来表示“终生不嫁”。</p>
+<h2 id="由来"><a class="header" href="#由来">由来</a></h2>
+<p>在罗马神话中，狄安娜原本是一位受拉丁人崇拜，居住在地面上的山林女神。后期吞并希腊女神阿尔忒弥斯后，狄安娜的神话添加了一些希腊晚期文学的改编，成为万神之王朱庇特和女神拉托娜的女儿，并成为阿波罗的孪生姐妹。欧鲁塔斯河是斯巴达城外的河流；辛莎斯是爱琴海小岛德洛斯的山名，阿波罗与狄安娜在此出生。</p>
+<h2 id="经历"><a class="header" href="#经历">经历</a></h2>
+<p>在罗马神话中，狄安娜是一位神圣的月亮、狩猎和分娩、动物、植物女神，并具有控制动物说话的权力。她是起源于意大利内米地区的女神，后来吞并了希腊神话中的女神阿尔忒弥斯、赫卡忒等女神，同时也吞并了迦太基的天之女神刻勒斯塔。</p>
+<p>赫卡忒的别名特里俄狄提斯被罗马译为拉丁语特里维亚，而在罗马，特里维亚是狄安娜的一个别名，即赫卡忒在罗马对应的是狄安娜。因吸收了赫卡忒的原因，狄安娜在古罗马中后期以及中世纪被作为巫术的女神。</p>
+<p>对于她名字的命名，狄安娜被称为是处女、分娩和妇女女神。她和其她三名处女女神：弥涅尔瓦和维斯塔发誓终生不嫁。</p>
+<p>狄安娜是拉丁联盟的女神。罗马在这一联盟中逐渐成为霸主。罗马国王塞尔维乌斯·图利乌斯在阿文廷冈建了狄安娜神庙，这一神庙成了当时的平民、拉丁新移民、奴隶崇拜狄安娜的中心。因此狄安娜也成了拉丁底层社会的女神。</p>
+<p>橡树园是特别神圣的地方。根据神话，狄安娜原本是拉丁地区的山林女神，橡树是她的圣树（见《金枝》）。传说，橡树林里住着狄安娜的祭司，每当有人砍下橡树的枝条，祭司就会感到非常惶恐。因为按照规定，狄安娜的祭司继任的方式就是杀死前一任祭司，橡树枝条被折断，说明折断枝条的人可以来杀死前任祭司了。</p>
+<p>狄安娜最初只是罗马的一个山林女神，但是她后来吞并罗马另一位月神露娜，因而成为了罗马最主要的月亮女神，又在农村主司分娩。卡图卢斯写了一首诗，诗中记载狄安娜有多个别名：Latonia、Lucina、Iuno、Trivia、Luna。</p>
+<h2 id="神职"><a class="header" href="#神职">神职</a></h2>
+<p>月亮女神——狄安娜本身词源可能与光有关。同时罗马人又用月神露娜关联其他的女神。于是罗马后来也确认狄安娜为月亮女神。在晚上，狄安娜以庄重的姿态飞越夜空，坐在乳白色牛驱动的空中牛车中，这位“广阔天空的王后”向沉睡的大地散发出银色的光芒。</p>
+<p>山林之神——狄安娜本身便是一位意大利的内米地区的山林女神，她不仅是森林和动物的保护神，而且还是罗马乡村中植物和家畜的女神，是乡野的女神。</p>
+<p>狩猎女神——因为狄安娜本身的山林属性，以及后期阿尔忒弥斯的影响，狄安娜后来也被当成狩猎神，手持弓箭，身穿兽皮做的无袖束腰长裙，在仙女侍从的簇拥下，穿行于丛林中狩猎。伯罗奔尼撒的塔伊盖托斯山和埃累马索斯山区是她常来往的地方。</p>
+<p>丰产与孕育女神——在著名的古代七大奇迹之一的阿尔忒弥斯神殿中，以百乳女神亚底米的形象供奉。此外她还能使妇女多生子女，并能减轻她们生育时的痛苦，保护刚出生的婴儿。</p>
+<p>健康之神——与其兄弟阿波罗一样，狄安娜带来健康，治疗疾病，与其带来死亡，瘟疫的作用相互抵消。</p>
+<p>赫卡忒——狄安娜有时被描绘为持着火炬或火把。因罗马人用她吸收了赫卡忒，所以也有了持火把的形象。</p>
+<p>保护处女之神——狄安娜喜爱不嫁的处女，对她的仙女侍从的贞洁要求非常严格。狄安娜是三大处女神之一。</p>
+<p>死亡女神——狄安娜拥有带给人们瘟疫，疾病，还有突然死亡的能力。</p>
+<p>净化女神——狄安娜和很多神一样，是净化仪式的女神，净化不纯的，有污点的杀人者。</p>
+<p>光明与生命之神——古罗马人用她吞并了阿尔忒弥斯，因此，她拥有希腊晚期文学中赋予她的所有特点。</p>
+<h2 id="神话故事"><a class="header" href="#神话故事">神话故事</a></h2>
+<p>猎人阿克特翁因偷看狄安娜与仙女们沐浴，被狄安娜变成一只鹿，最终被自己的猎犬撕碎。此故事记载于古罗马诗人奥维德的《变形记》中，文艺复兴时期画家提香曾以此为主题创作了画作《狄安娜与阿克特翁》。</p>
+<p>狄安娜曾与海洋之神波塞冬的儿子奥利温相爱，但其孪生兄弟阿波罗设计，导致狄安娜误用箭射杀了奥利温，此后狄安娜与阿波罗决裂，月亮见到太阳便会躲藏。</p>
+<p>狄安娜性格具有多面性，她心胸狭隘、报复心强，会严厉惩罚冒犯者。例如，卡吕冬国王俄纽斯因忘记向她献祭，她便派遣野猪践踏其国土。但她也有温柔善良的一面，曾帮助英雄希波吕托斯复活。</p>
+<h2 id="形象特征"><a class="header" href="#形象特征">形象特征</a></h2>
+<p>狄安娜被描绘为美丽、青春的少女，其美艳是未经修饰的天然的美，是纯洁美的象征，蕴含着纯净的气质、冷艳的风范，娇俏的身姿、妩媚的情态、秀美的脸庞以及作为女猎人所特有的飒爽英姿和自由自在的心灵，与爱神维纳斯的美不同。</p>
+<p>既是狩猎女神又是月神的狄安娜脸上稚气未脱，经常穿戴束腰的短裙和猎靴，手拿弓箭。在罗马艺术中，她有时佩戴新月冠，这与希腊的阿尔忒弥斯不同。</p>
+<p>狄安娜身边伴随着鹿或者猎犬，有时乘坐两圣鹿所曳之银车出行，弓箭和箭囊是其标志性的象征。</p>
+<h2 id="艺术形象"><a class="header" href="#艺术形象">艺术形象</a></h2>
+<p>文艺复兴及以后时期，狄安娜是西方艺术中流行的主题，常与阿克特翁等神话故事一同出现。狄安娜一直是最流行的艺术主题之一，像画家提香，彼得·保罗·鲁本斯，弗朗索瓦·布歇，尼古拉斯·普桑利用她的神话作为一个重要主题。</p>
+<p>提香创作了描绘阿克特翁故事的《狄安娜与阿克特翁》，该作品于2009年被伦敦国家美术馆和苏格兰国家美术馆联合购藏。18世纪法国洛可可大师弗朗索瓦·布歇的《浴后的狄安娜》展现了女神纯净优雅的特质。法国枫丹白露画派的代表作《猎神狄安娜》表现了其冷艳的风范。意大利画家彼埃特罗·安东尼奥·罗塔里的《靠在树上的猎神狄安娜》着重表现了女神娇柔可爱的一面。19世纪法国画家保罗·波德利的《斜倚的狄安娜》描绘了狄安娜妩媚灵动的身姿。安东·拉斐尔·门斯的《飞凌于夜空的狄安娜》用色鲜艳，生动表现了女神自由飞翔的形象。瑞士画家约瑟夫·维尔纳的《狄安娜》则将女神描绘为中世纪骑士形象，风格独特。</p>
+<h2 id="对比"><a class="header" href="#对比">对比</a></h2>
+<p>狄安娜所扮演的角色是复杂的。</p>
+<p>既是月神又是狩猎女神的狄安娜脸上稚气未脱，经常穿戴束腰的短裙和猎靴，手拿弓箭，身边伴随着鹿或者猎犬。</p>
+<p>和维纳斯一样，她经常被描绘成美丽、青春的少女，她有时佩戴新月冠。</p>
+<p>狄安娜是罗马神话中对希腊女神阿尔忒弥斯的吸收与改造，继承了其狩猎女神、月亮女神及处女神的核心神职。与希腊女神阿尔忒弥斯不同。阿尔忒弥斯通常高高地在脑后挽起发髻，便于狩猎，有时会戴希腊女神常用的金冠，并不会头顶一个月亮标志。而在罗马神话里，狄安娜才会头顶一个月亮。根据研究，新月冠或月亮标志并非希腊时期阿尔忒弥斯的典型象征，而是在罗马时期才被添加到狄安娜的艺术形象之中。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../literature/yuan-ming-yuan-hou-ji.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/Actaeon.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../literature/yuan-ming-yuan-hou-ji.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/Actaeon.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>水力钟喷泉 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xi-yang-lou/shui-li-zhong.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="水力钟喷泉"><a class="header" href="#水力钟喷泉">水力钟喷泉</a></h1>
+<p>水力钟喷泉，是清代圆明园西洋楼景区海晏堂前的一组报时喷泉装置，其正式名称为“圆明园海晏堂御制十二生肖报时喷泉”，因以十二生肖兽首按十二时辰依次喷水报时的功能而被时人俗称为“水力钟”或“水力钟喷泉”。该喷泉建成于乾隆二十四年（1759年），由传教士郎世宁、王致诚、蒋友仁设计，中国工匠建造完成。海晏堂是西洋楼景区最大的园林景观，水力钟喷泉是其核心组成部分。其核心为十二尊人身兽首青铜坐像，呈八字形排列于喷水池两侧，能按对应十二时辰依次喷水报时，正午时分则十二兽首一同喷水。</p>
+<p>1860年，英法联军焚毁圆明园，十二生肖兽首铜像自此流失海外。20世纪80年代起，部分兽首通过拍卖、捐赠等方式陆续回归中国。截至2025年，牛首、虎首、猴首、猪首、马首、鼠首、兔首等七尊兽首已回归祖国，其余五尊仍下落不明。2023年，牛首、虎首、猴首、猪首、马首五件兽首铜像在圆明园遗址首次重聚展出。2026年，基于《圆明园长春园图》铜版画等史料，百度百科联合相关学会对十二生肖铜像进行了高精度3D数字复原。</p>
+<h2 id="命名"><a class="header" href="#命名">命名</a></h2>
+<p>该喷泉的正式名称为“圆明园海晏堂御制十二生肖报时喷泉”，因其以十二生肖兽首按十二时辰依次喷水报时的功能，而被时人俗称为“水力钟”或“水力钟喷泉”。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>水力钟喷泉所在的海晏堂建成于乾隆二十四年（1759年）。海晏堂是由郎世宁、王致诚、蒋友仁3位传教士设计，由中国工匠建造完成的。</p>
+<p>1860年，英法联军劫掠圆明园，水力钟喷泉的十二生肖兽首铜像自此流失海外。</p>
+<p>20世纪80年代起，部分兽首通过拍卖、捐赠等方式陆续回归中国。截至2025年，牛首、虎首、猴首、猪首、马首、鼠首、兔首等七尊兽首已回归祖国，其余五尊仍下落不明。
+2026年3月3日，百度百科联合中国圆明园学会数字影像科技分会，首次基于《圆明园长春园图》铜版画等珍贵史料，高精度3D复原了水力钟喷泉十二生肖喷水铜像的完整兽首人身像全貌，并为每尊铜像建立了可360度观察的数字档案。</p>
+<h2 id="方位"><a class="header" href="#方位">方位</a></h2>
+<p>水力钟喷泉位于北京市海淀区清华西路28号圆明园遗址公园北侧。海晏堂位于方外观东侧，是长春园西洋楼景区最大的园林景观，水力钟喷泉是海晏堂前喷泉装置的一部分。海晏堂正楼朝西，楼前设有一蝙蝠形大喷水池，水力钟喷泉（即十二生肖铜像）便呈八字形排列于该水池左右。</p>
+<h2 id="结构原理"><a class="header" href="#结构原理">结构原理</a></h2>
+<p>喷泉系统主要由海晏堂前的生肖池、堂后的蓄水楼（工字形平台楼）及东西水车房构成。蓄水楼顶设有大型蓄水池，该水池用锡板焊接而成，俗称“锡海”，是为喷泉供水的水源。</p>
+<p>水通过地下埋设的铜质水管输送至喷泉。近代考古探查已发现部分保存完好的铜水管遗存。</p>
+<p>东西水车房内设有提水装置，其动力来源于毛驴牵引。具体机械结构为：由毛驴牵引水平放置的齿轮，带动竖向的齿轮，通过传动装置使三个凸齿轮不间断转动，从而带动提水斗，将水提升并注入蓄水楼顶部的“锡海”。</p>
+<h2 id="设计与工艺"><a class="header" href="#设计与工艺">设计与工艺</a></h2>
+<p>十二生肖动物铜像人身兽首，以盘坐之态作双半月形分列喷泉之左右。设计者考虑传统中国的民俗文化，以十二生肖的坐像取代了西方喷泉设计中常用的人体雕塑。生肖铜像身躯为石雕，穿着袍服的造型，头部为写实风格造型，铸工精细，兽首上的褶皱和绒毛细微之处都清晰逼真。铸兽首所选用的材料为当时清廷精炼的青铜，外表色泽深沉，内蕴厚重，历经百年而不锈蚀。</p>
+<p>海晏堂本身坐西朝东，堂前为生肖池，堂后有蓄水楼，从其他地方把水供应到水池里，然后再从这个地方流到十二生肖每个兽首的口再喷出来。西洋楼地下有水管，是铜水管，历经近300年仍然保存完好。水车房动力装置由水平放置的齿轮，在毛驴的牵引下带动竖向的齿轮，利用传动装置，使三个凸齿轮不间断转动，带动提水斗，将水注入蓄水楼水池。</p>
+<h2 id="开发与保护"><a class="header" href="#开发与保护">开发与保护</a></h2>
+<p>1860年，英法联军火烧圆明园，十二生肖兽首铜像自此流失海外。</p>
+<p>自2000年以来，通过官方与民间多方努力，部分兽首通过拍卖、捐赠等方式回归祖国。</p>
+<p>截至2025年，牛、虎、猴、猪、马、鼠、兔共七尊兽首已回归中国。已回归兽首分别收藏于保利艺术博物馆、中国国家博物馆等处。龙、蛇、羊、鸡、狗五尊兽首目前仍下落不明。</p>
+<p>先进的数字技术已被用于复原和展示水力钟喷泉原貌，让观众得以见证其数字重生。</p>
+<p>2026年，百度百科联合中国圆明园学会数字影像科技分会，首次高精度3D复原了圆明园海晏堂十二生肖喷水铜像全貌。</p>
+<h2 id="相关文化"><a class="header" href="#相关文化">相关文化</a></h2>
+<p>水力钟喷泉将东方的十二生肖、时辰计时与西方的喷泉技术、建筑艺术相结合，是中西文化交融的产物。十二生肖铜兽首以人身兽首、身着袍服的造型，取代了西方喷泉常用的人体雕塑。该组喷泉是艺术与科技的结合，亦体现了中西方文化的交融。</p>
+<p>水力钟喷泉精选材质、妙设结构、巧施工艺。兽首采用特殊的红铜材料，铸工精细，兽首上的褶皱和绒毛细微之处都清晰逼真。其制作工艺和结构设计，不论在当时还是一百多年后的今天，都具有重要的文化内涵、艺术造诣、审美价值和科技意义。十二生肖铜像是中西合璧的艺术结晶，在清朝雕塑史上占有重要地位，代表了当时雕刻工艺的水平，是一套重要的艺术作品。</p>
+<p>1860年，英法联军火烧圆明园，包括十二兽首在内的众多珍贵文物被烧毁、非法掠夺，自此流失海外。水力钟喷泉及其构件因此成为近代中国历史创伤的见证。</p>
+<p>2026年，百度百科联合中国圆明园学会，基于《圆明园长春园图》铜版画等史料，首次高精度3D复原了圆明园海晏堂十二生肖喷水铜像全貌，并推出《国珍数字重圆》线上数字特展。此举通过建立永久数字档案、提供360度观察与互动体验，使得文物在数字世界得以“重聚”。</p>
+<h2 id="重要事件"><a class="header" href="#重要事件">重要事件</a></h2>
+<p>2026年3月3日，百度百科联合中国圆明园学会数字影像科技分会，基于全球仅存的《圆明园长春园图》铜版画等珍贵史料，首次高精度3D复原了圆明园海晏堂十二生肖喷水铜像的全貌。该项目在学者郭晓光、刘阳等的学术支持下，对铜像的历史背景与造型细节进行了严谨考证，数字复原了包括衣纹褶皱、手持器物在内的完整兽首人身形象。</p>
+<p>同日，百度百科上线《国珍数字重圆——十二生肖铜像数字特展》永久专题，公众可通过百度百科搜索“海晏堂十二生肖喷水铜兽”进入专题页，360度交互式查看每一尊铜像的3D模型，查阅其数字档案与历史故事，并可参与“拍同款”生成合影、学习知识完成“兽首人身匹配”等线上互动活动。</p>
+<h2 id="旅游信息"><a class="header" href="#旅游信息">旅游信息</a></h2>
+<p>水力钟喷泉遗址位于北京市海淀区清华西路28号圆明园遗址公园北侧。该喷泉是圆明园西洋楼景区海晏堂遗址的核心组成部分。海晏堂位于方外观东侧，是长春园西洋楼景区最大的园林景观。</p>
+<p>目前，遗址处的蕃花石雕贝壳、水力钟基座、水池等遗迹保存较好。原十二生肖兽首铜像已流失，现遗址处所见为复制品。部分真品（如牛、虎、猴、猪、马、鼠、兔首）已通过不同途径回归并收藏于保利艺术博物馆、国家博物馆等地。</p>
+<p>该喷泉是一组精妙的水力钟，其供水系统源自后方的蓄水楼（俗称“锡海”），通过地下铜质管道将水引至十二兽首口中依次喷水报时。近年来的考古探查已发现了部分保存完好的清代铜水管。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xi-yang-lou/The-Hall-of-National-Peace.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../xi-yang-lou/Bronze-statue.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xi-yang-lou/The-Hall-of-National-Peace.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../xi-yang-lou/Bronze-statue.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

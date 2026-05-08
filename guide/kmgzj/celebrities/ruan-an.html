@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>阮安 - 孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/ruan-an.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="阮安"><a class="header" href="#阮安">阮安</a></h1>
+<p>阮安（1381—1453），字阿留，明朝宦官，交趾（今属越南）人。明永乐初年，英国公张辅以交趾童美秀者，带回京城，选为阉童。初得成祖宠爱，教令读书，学习经史，善于笔札。及长，成为宫史太监。精通数学、建筑学。正统二年（1437），代替蔡信负责修建北京城九门城楼。同时，加深护城河。次年，奉命整修通济河。竣工后英宗命杨士奇撰《通济河碑记》，立碑纪念他的功绩。后参与皇城三大殿重建及杨村河治理，均立有大功。十年（1445），与成国公朱勇、修武伯沈荣等督工修筑北京城墙，改墙体内土外砖为内外皆用砖石。景泰三年（1452）与工部尚书石璞筑成沙湾堤。次年，奉令治理张秋河，在赴任途中病逝，身上不足十两银子。刻有《营建绩纪成诗》和《营建纪》。</p>
+<h2 id="古文记载"><a class="header" href="#古文记载">古文记载</a></h2>
+<p>永乐时太监，有巧思，奉明成祖命营北京城池、宫殿及百司府廨。目量意营，悉中规制，工部奉行而已。正统（一四三六－一四四九）时重建三殿，洽杨村河并有功。景泰（一四五o－一四五七）中洽张秋河道卒，囊无十金。除营建外，兼称著名之水利工程师。《明史、文物参考资料·一九五三年十期》</p>
+<h2 id="人生经历"><a class="header" href="#人生经历">人生经历</a></h2>
+<p>正统元年（1436年），明英宗决定完成城池建设，开始所选的人是蔡信，然而蔡信提出的建设方案耗资太大，所需工力众多，最后改由阮安负责修建京城九门城楼。在此之前北京的城墙上所开九门只有城门洞，没有瓮城、城楼等建筑，有的城门连官军值班所用的铺舍也未建。</p>
+<p>阮安施工调度中，北京城九门是依次营建，其施工人员主要取自在京师训练的军卒，将其中的1万多人操练停止，增加其月粮，安排好班次，每人增加月粮一斗，盐每月一斤；建筑费用和材料不再另外佥派，只使用官府积存的，永乐时营建北京剩余了大量建筑材料，此次均被派上用场。</p>
+<p>正统二年（1437年）正月，西直门和平则门（平则门不久改称阜成门）开始营建；第二年营建的是东直门、朝阳门、德胜门等，最后完成的是正阳门等，时间是正统四年（1439年）四月。</p>
+<p>整个工程包括门楼、城濠、桥闸三部分，具体为：正阳门正楼一座，月城楼中左右各一座，崇文、宣武、朝阳、阜成、东直、西直、安定、德胜八门各正楼一座，月城楼一座。城墙四角各立角楼一座。所谓正楼就是城门楼，今日可见者如正阳门楼（前门楼）；月城楼就是俗称的箭楼，如幸存的德胜门的箭楼；角楼今日可见者只有内城东南角楼，在今北京东站附近。护城濠的整治包括河道疏浚、河岸的修整、砌筑。另外，九门外原来都是木桥，此次全部改为石桥，同时设置了九道水闸。</p>
+<p>随着整个工程的完工，北京的面貌发生重大改变，当时的大学士杨荣、杨溥带领其他翰林学士“登正阳门之楼而纵览”，只见“高山长川之环固，平原广甸之衍迤，泰坛清庙之崇严，宫阙楼观之壮丽，官府居民之鳞次，廛市衢道之棋布，朝觐会同之麇至，车骑往来之坌集。粲然明云霞，滃然含烟雾”。他们在观赏的同时，不约而同地想到了阮安，对他善于谋划的能力，奉公尽责的精神大加赞颂。</p>
+<p>阮安在随后的几年中，又先后主持了：皇宫三大殿（奉天、华盖、谨身）的重建工程，通济河的疏浚工程，固安河河堤加固工程，北京城墙的包砖改造工程。其中，北京城墙的改造工程，开始于正统十年（1445年）六月，完工于正统十二年（1447年），这项工程不仅使城墙愈加坚固，更美化了其外观。</p>
+<h2 id="评价"><a class="header" href="#评价">评价</a></h2>
+<p>明代200多年京城建设中，工程管理者众多，而廉洁者少。然而据《明史》记载，阮安接受的最后一项工程是张秋河的治理工程，但他在前往张秋的途中去世，他去世的时候“囊无十金”（即行李中的银子不足十两）。对于一个主持过许多重大工程的太监来说，如此廉洁，实为少见！</p>
+<p>《七修类稿》卷十四对阮安的评价是：“清介善谋，尤长于工作之事。北京城池、九门、两宫、三殿、五府、六部及塞杨村驿诸河，凡语诸役，一受成算而已。后为治张秋河道卒，平生赐予，悉上之。”</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/wang-yi-rong.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/li-shi-mian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/wang-yi-rong.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/li-shi-mian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

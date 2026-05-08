@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>王懿荣 - 孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">孔庙和国子监博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/wang-yi-rong.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="王懿荣"><a class="header" href="#王懿荣">王懿荣</a></h1>
+<p>王懿荣（1845年7月12日－1900年），原名王贻榘，字正儒，号廉生，晚号养潜居士、直庐花衣，原籍云南，山东福山（今烟台市福山区）人，晚清官员、金石学家。光绪六年（1880年）进士，授翰林院编修，三任国子监祭酒，曾主管清代最高学府。1899年发现甲骨文并确认为商代文字，开创甲骨学研究先河，被誉为“甲骨文之父”。出身官宦世家，性情耿介有“东怪”之号，六岁入家塾，十五岁随父进京求学，师从崔清如、周孟伯等学者。中进士后多次上疏建议吏治与水利改革，甲午战争期间返乡办团练御敌。1900年任京师团练大臣抗击八国联军，东直门失守后携妻谢云鹤、媳张允淑投井殉国，谥号“文敏”。精研金石文字，收藏青铜器、碑版等文物，著有《汉石存目》《福山金石志》等，书法作品受慈禧赏识，与翁同龢、潘祖荫等学者交流密切。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<p>道光二十五年六月初八（1845年7月12日），王懿荣出生于福山古现镇东村（现划归烟台经济技术开发区古现街道办事处）。出身仕宦世家。祖父王兆琛，嘉庆二十二年(1817)进士，官至山西巡抚。父王祖源，官至四川成绵龙茂道。</p>
+<p>王懿荣幼承家学，6岁入古现村王氏家塾，先后受业于母舅谢琴南、谢虞臣，表伯张恩煦（墨林）等人。15岁随父进京，拜翰林院编修崔清如、礼部主事周孟伯等人为师。他聪颖勤奋，泛涉书史，有过目不忘之誉。青年时代，王懿荣性“笃好旧椠本书、古彝器、碑版图画之属”，尤潜心于金石文字之学。为搜求文物古籍，足迹遍及山东、河北、陕西、河南、四川等地，“凡书籍字画、三代以来之铜器印章、泉货残石片瓦无不珍藏而秘玩之”。自同治元年至光绪七年（1862～1881），曾先后拜访当时著名的收藏家、金石文字学者潘祖荫、吴大澂、巨鹤泉、陈介祺、缪荃孙、王孝禹等，同他们考订违合，剔抉幽隐，历时19年，撰成《汉石存目》、《南北朝存石目》等书，成为当时著名的金石文字专家。</p>
+<p>咸丰十年（1860年），王懿荣的父亲奉旨回籍团练，王懿荣随侍至济南。</p>
+<p>同治元年（1862年），17岁的王懿荣首应秋闱落榜，到光绪元年（1875年），13年间凡7次报罢。曾中副贡第一名，但因其“性本不善综核，又素无人事于外”，而与中举擦肩而过。</p>
+<p>同治三年（1864年），王懿荣岳父黄宗敬任直隶任邱县知县，捐办天津海防，部议给奖，黄宗敬以奖励与王懿荣，王懿荣得出任户部候补主事。王懿荣开始京曹小吏生涯。王懿荣虽官职低微，但在京城的鉴藏界已很有一定的影响，潘祖荫、李慈铭、吴大澂、赵之谦等与之过从往来甚密。</p>
+<p>同治十二年（1873年）秋，王懿荣应顺天府乡试，中式副贡第一名。</p>
+<p>光绪元年（1875年），王懿荣的妹妹王懿娴受聘于张之洞，成为张的继配夫人。</p>
+<p>光绪三年（1877年），王懿荣夫人黄兰病逝，享年三十七岁。</p>
+<p>光绪五年（1879年），王懿荣第8次参加乙卯科顺天府乡试，中式第三十一名举人，考官为徐桐，房师为缪荃孙，复试钦定第一等第七名。</p>
+<p>光绪六年（1880年），王懿荣参加庚辰科会试联捷，中式第一百五十六名贡士。覆试得一等第三十五名，钦点殿试传胪二甲第十七名，赐进士出身，朝考得一等第三名，授翰林院庶吉士。</p>
+<p>光绪九年（1883年），王懿荣在翰林院庶吉士教习馆肄业3年期满，散馆考试，取得一等第26名成绩，授予翰林院编修。年末被任命为国史馆修官。翌年，充会典馆纂修帮总纂官。</p>
+<p>光绪十年（1884年），王懿荣给朝廷上了第一道奏疏《更定京员津贴银两名目疏》，认为官员津贴关系到维护士风，端正政体，要严格控制，以达到吏治清廉之目的。之后不到一个月，王懿荣又奏上《醇亲王位分尊崇请恪尊御论收回成命疏》，表达了醇亲王不易参与军务的意见。同时，还奏上了《请速开马颊分减黄流东患而卫畿辅疏》，从国计民生的高度提出治理黄河之计。</p>
+<p>光绪十五年（1889年），王懿荣任乙丑恩科顺天府乡试磨勘试卷官，同年他参加御史考核，钦取第一名，记名御史，晋侍讲衔。先后任乙丑科和庚寅科庶吉士教习。</p>
+<p>光绪十八年（1892年），任壬辰科会试磨勘试卷官。</p>
+<p>光绪十九年（1893年），王懿荣奉旨任河南省乡试正考官。</p>
+<p>光绪二十年（1894年），大考一等，升迁侍读。次年，入值南书房，任国子监祭酒。中日甲午战争爆发，日军占据威海，分陷荣城，登州大震，王懿荣请归，回乡办团练御敌获准，又请调记名提督、堂弟王鸿发驰援威海。和议成，还都，特旨补祭酒。光绪二十四年（1898年），母忧，解职。守丧期满，复国子监祭酒。王懿荣七年间三为国子监祭酒，“诸生得其指授，皆相勉为实学”，时人称其为“太学师”。</p>
+<p>光绪二十五年（1899年），王懿荣因通晓医术在鹤年堂抓药时，买到一种叫龙骨的药材，对其上面的图形文字进行研究，并通过山东古董商人范维卿大量收购，王懿荣首次发现甲骨文，并将其断为商代。该发现轰动中外学术界，把汉字的历史推到公元前1700多年的殷商时代，成为甲骨文研究的奠基人。</p>
+<p>光绪二十六年（1900年），义和团攻掠京津，侍郎李端遇与王懿荣被任命为京师团练大臣，“参与京城防守事宜”。八国联军攻入北京，李鸿章与八国议和，皇帝与慈禧出逃。王懿荣遂书绝命词，东直门被攻破失守后，回到北京东城区锡拉胡同的自宅，偕继室夫人谢氏与长媳张氏，先服毒投井以殉，年五十五。</p>
+<p>同年九月，清廷予殉难祭酒王懿荣世职，谥号文敏。</p>
+<h2 id="主要成就"><a class="header" href="#主要成就">主要成就</a></h2>
+<h3 id="收藏成就"><a class="header" href="#收藏成就">收藏成就</a></h3>
+<p>《清史稿》云“懿荣泛涉书史，嗜金石，翁同龢、潘祖荫并称其学”。凡书籍字画、金石印章、钱币瓦当，无不珍藏。感叹收藏之艰，王懿荣作诗云：“典衣还惹群书债，折券时蒙小贾羞。”</p>
+<p>王懿荣常与同僚鉴藏家翁同龢、徐郙等切磋交流。徐郙购得宋拓虞书《庙堂碑》，王懿荣作《为徐颂阁尚书题所藏宋拓虞书〈庙堂碑〉长安本》一诗：</p>
+<p>兰亭秘妙覃溪通，千两黄金说涪翁。</p>
+<p>城武长安合买本，从来唐拓总朦胧。（《王懿荣集》）</p>
+<p>王懿荣建有“天壤阁”、“海上精舍”、“天绘阁”等藏书处，其制式与规模堪与宁波“天一阁”藏书楼相媲美。藏书中不乏宋元刊本，以宋刻《汉书》为最珍贵。所藏稿本甚多，如《王渔洋诗稿》、《池北偶谈》原稿等。</p>
+<p>藏书印有十数枚：翰林供奉、国子监祭酒王懿荣印、廉生登来、慈圣御赐多受福祉、海上精舍藏本、小莲花室、天绘阁、湛华阁藏书印，等。</p>
+<p>金石学家与收藏家叶昌炽曾观其所藏，叹其“鉴别之精，近时收藏家无以过矣”。</p>
+<h3 id="著述与书法"><a class="header" href="#著述与书法">著述与书法</a></h3>
+<p>著有《汉石存目》二卷、《南北朝存石目》八卷、《天壤阁杂记》一卷、《古泉选》、《翠墨园语》、《福山金石志》等书。王氏富藏古玺印，其后人辑录复刊本《福山王氏劫余印存》一册，殆庚子之役藏印散失后仅存者。胡厚宣所著《五十年甲骨文发现的总结》一书说，王懿荣于1899年首先发现甲骨刻辞，并断为是古代文字，是中国第一代甲骨学家。</p>
+<p>王懿荣又以精研古币见称，与钱币名家鲍康（鲍子年）、李佐贤（李竹朋）、杨继震（杨幼云）、潘祖荫（潘伯寅）、胡义赞（胡石查）、吴大澄（吴清卿），以及稍后之刘鹗（刘铁云）、罗振玉（罗叔蕴）诸人多有交游。据罗振玉《俑庐日札》称，王氏殁后，所藏钱币为刘鹗所得。其钱币学方面著述，已刊行的仅有神州国光社版《古泉精选》一卷。</p>
+<p>王懿荣入值南书房，其书法深得慈禧赏识。慈禧作画，时命徐郙、陆润庠、李文田、王懿荣等题志。慈禧曾赏赐过王氏一只精美的雕花翡翠烟壶，现藏于烟台博物馆。</p>
+<p>王懿荣善书法，楷、行、篆书皆有成就，清末四书家之一。传世作品多为信札和对联，为收藏者所珍。</p>
+<h2 id="轶事典故"><a class="header" href="#轶事典故">轶事典故</a></h2>
+<h3 id="三任国子祭酒"><a class="header" href="#三任国子祭酒">三任国子祭酒</a></h3>
+<p>光绪二十年（1894），京察一等，以道府记名。五月初七奉上谕“翰林院王懿荣着在南书房行走”，开始进入清廷决策高层，成为皇帝身边的机要近臣。17天后朝廷要从翰林院选一补署汉日讲起注官，翰林院选出三人供光绪帝挑选，并带领引进，光绪帝单单圈定了王懿荣。当年六月，刚刚升任翰林院侍读和日讲起注官不到一个月，王懿荣又奉上谕：“现任国子监祭酒出试差，国子监祭酒着王懿荣署理，钦此。”是为王懿荣第一次任国子监祭酒一职。王懿荣任国子监祭酒时正逢中日甲午战争，刚刚任职半年的他请缨奉旨回家乡登州办团练。</p>
+<p>光绪二十一年（1895），甲午战争结束，王懿荣请假两个月，滞留家乡处理停办团练的善后诸事。这年五月十八日，又奉上谕：“王懿荣着补国子监祭酒。钦此。”时为他二任国子监祭酒。王懿荣二任国子监祭酒也是半年的时间，光绪二十二年（1896）年正月，他的母亲谢老夫人病逝于家乡福山县城里新宅（新二宅），王懿荣在京接到讣告，连夜回乡奔丧，在家乡办理了母亲后事。守制期间，他还在登州书院讲学，又应福山县令孙光普邀请，主持修撰《福山县志》。更多的时间是搜求文物，进行金石学研究。</p>
+<p>光绪二十四年（1898）二月二十二日，因为王懿荣编纂会典出力甚多，光绪帝降旨：王懿荣赏加二品顶戴，这年他53岁。王懿荣在家乡具疏谢恩。四月，王懿荣守制期满，回京后，王懿荣向光绪帝请圣安并蒙召见，光绪帝仍命他在南书房行走。光绪二十五年（1899）五月二十九日，王懿荣再次被任命为国子监祭酒，此为三任。王懿荣在五年内能连续三次担任，实属学识渊博，德高望重之缘故，打破了多年惯例。</p>
+<h3 id="发现甲骨文"><a class="header" href="#发现甲骨文">发现甲骨文</a></h3>
+<p>光绪二十五年（1899年），王懿荣因病在北京一家叫做鹤年堂的药店抓药，其中有一味药材，名为龙骨。但是药包里的“龙骨”拿回来时已经破碎，王懿荣翻拣了几下，发现一片“龙骨”上有着似篆非篆的清晰刻划。凭着自己的金石学功底，王懿荣马上意识到，这刻划绝非寻常。王懿荣命仆人到药店将“龙骨”多抓些来。但新抓来“龙骨”都捣得太碎，收获不大。</p>
+<p>翌日，王懿荣亲临药店，再三嘱咐药店掌柜说，以后新购“龙骨”万不可再捣碎，并一定将送药者引荐到他府上。</p>
+<p>1900年春，山东古董商人范维清又带来了八百余片“龙骨”，其中有一片刻有52个字，王懿荣照例全数购下。</p>
+<p>后又有叫赵执斋的古董商携来数百片，片片有字，王懿荣亦全数购下。于是古董商知道此骨可以赚钱，纷纷携之登门，时不多久，王懿荣收“龙骨”达一千五百余片。</p>
+<p>接下来，王懿荣对“龙骨”进行了反复推敲、排比、拼合 “细为考订，始知为商代卜骨，至其文字，则确在篆籀之前。”</p>
+<p>最后，王懿荣确认这些甲骨上所刻的符号确属一种文字，是我们祖先创造的早期的、而且是早于篆籀的文字，即是早于先秦时代青铜器上的文字。</p>
+<h3 id="为国捐躯"><a class="header" href="#为国捐躯">为国捐躯</a></h3>
+<p>甲午战争爆发，慈禧太后筹备六十大寿庆典。王懿荣上折请求“暂停点景，但行朝贺”。慈禧虽未加责罚，但王懿荣因之失宠，成为导致王氏绝望殉节的根源之一。</p>
+<p>1898年夏，慈禧废除光绪新政，梁启超与康有为等逃亡国外。慈禧将光绪幽禁并欲废黜。各国反对废黜光绪皇帝，要求镇压反洋人洋教的“义和团”。</p>
+<p>庚子年（1900年），义和团攻掠天津，屠杀基督徒，坊市流血。慈禧对义和团态度暧昧，诏命李鸿章、袁世凯入卫京城，荣禄以武卫中军护各国使馆，命李端遇、王懿荣为京师团练大臣。接到诏命，王懿荣叹曰：“此天与我以死所也。”同被任命为团练大臣的李端遇则郁郁休于家，次年病逝。王懿荣因武器缺乏，写信与妹夫张之洞，自称“看街老兵”，感叹“即有钱也无处购买”，并向张之洞“暂乞军械”。</p>
+<p>大臣分裂为主战与主和两派。主战派纵容数万义和团涌进北京城，各国公使威逼清廷镇压义和团，慈禧同意各国派遣卫队进入北京，各国使馆卫队近千人，全副武装，开进北京。中外敌对情绪高涨。</p>
+<p>五月，义和团焚烧北京正阳门城楼，闾市灰烬，又焚烧教堂和部分洋行。清兵击毙德国使节克林德于崇文门内。慈禧令清军与义和团攻打东交民巷外国使馆，并敦促身在广州的李鸿章北上勤王，李鸿章回电"此乱命也，粤不奉诏"。王懿荣面陈：“拳民不可恃，当联商民备守御。”</p>
+<p>六月，八国联军攻陷天津，联军部队向北京挺进。在北京外围，直隶总督裕禄战败自杀，水师大臣李秉衡也兵败自尽。王懿荣自知京城“必不能久”。其北京寓所庭院里有井一口，宽且深，井口放一横石，并有石井栏。王懿荣令人启开横石，加大井口，暗作必死的准备。</p>
+<p>七月，八国联军炮攻北京，慈禧携皇帝改装出逃。北京陷落，军机大臣荣禄逃往保定，大学士徐桐与户部尚书崇绮上吊自尽。王懿荣深感绝望，遂书绝命词：“主忧臣辱，主辱臣死。于止之其所止，此为近之。”联军攻打东便门，王懿荣还在坚持抵抗，不久溃不成军，乃归语家人曰：“吾义不可苟生！”。东直门被攻破失守后，王懿荣回到北京东城区锡拉胡同的自宅，携继室夫人谢云鹤、长媳张允淑，先服毒投井以殉，年五十五。</p>
+<p>八月，清廷为被杀的德国公使克林德举行追悼会，并建立克林德大牌坊。</p>
+<p>九月，清廷表彰王懿荣殉节，谥号文敏，并旌其妻谢氏、儿媳张氏。</p>
+<p>随后，迫于各国压力，慈禧发布惩办祸首和镇压义和团的旨谕，惩处载漪、载勋等支持义和团的王公大臣，连续处死一大批主战官员，史称“主拳诸臣，兵败被诛”。八国联军擅自斩杀“未按职分保护外国人”的清朝官员数名。同时，都统衙门大规模地捕杀义和团团民及被怀疑是团民的人。</p>
+<p>1901年，李鸿章、奕劻代表清政府与十一国代表正式签订《辛丑条约》。李鸿章病逝。1902年年初，流亡西部的慈禧太后和光绪皇帝回到北京，紫禁城恢复了盛世景象，但大清王朝的末日也即将来临。</p>
+<p>王懿荣死后，其子王崇烈来北京，变卖家产，偿还王懿荣生前债务，把王懿荣收集的千余块甲骨卖给另外一位甲骨文研究先驱、《老残游记》作者刘鹗。</p>
+<p>光绪27年（1901年）春，王崇烈扶父亲王懿荣、继母谢氏、寡嫂张氏的灵柩回乡，安葬于福山县古现村。1919年，王崇烈去世，享年49岁。慈禧赏赐的翡翠烟壶成为其陪葬品。农业学大寨时，王氏墓地被毁，这件翡翠烟壶因此出土。后为烟台博物馆收藏，定为国家一级文物。</p>
+<h2 id="史料记载"><a class="header" href="#史料记载">史料记载</a></h2>
+<blockquote>
+<p>《清史稿·卷四百六十八·列传第二百五十五》</p>
+</blockquote>
+<p>王懿荣，字正孺，山东福山人。祖兆琛，山西巡抚。父祖源，四川成绵龙茂道。懿荣少劬学，不屑治经生艺，以议叙铨户部主事。光绪六年成进士，选庶吉士，授编修，益详练经世之务，数上书言事。十二年，父忧，解职。服阕，出典河南乡试。二十年，大考一等，迁侍读。明年，入直南书房，署国子监祭酒。会中东战事起，日军据威海，分陷荣城，登州大震，懿荣请归练乡团。和议成，还都，特旨补祭酒。越二年，遭母忧，终丧，起故官。盖至是三为祭酒矣，前后凡七年，诸生翕服。</p>
+<p>二十六年，联军入寇，与侍郎李端遇同拜命充团练大臣。懿荣面陈：“拳民不可恃，当联商民备守御。”然事已不可为。七月，联军攻东便门，犹率勇拒之。俄众溃不复成军，乃归语家人曰：“吾义不可苟生！”家人环跽泣劝，厉斥之。仰药未即死，题绝命词壁上曰：“主忧臣辱，主辱臣死。於止知其所止，此为近之。”掷笔赴井死。先是懿荣命浚井，或问之，笑曰：“此吾之止水也！”至是果与妻谢氏、寡媳张氏同殉焉。诸生王杜松等醵金瘗之。事闻，赠侍郎，谥文敏。懿荣泛涉书史，嗜金石，翁同龢、潘祖荫并称其博学。</p>
+<h2 id="学术影响"><a class="header" href="#学术影响">学术影响</a></h2>
+<p>王懿荣是发现、收集和研究甲骨文第一人，国际上把他发现“龙骨”刻辞的1899年作为甲骨文研究的起始年。</p>
+<p>王懿荣对甲骨文字的最初判断，被后来的研究所证实。王懿荣对我国古代文物有着精深的研究，殷墟甲骨文经他之手，从“龙骨”变成了珍贵的古代文化研究资料，避免了被继续当作“药材”而遭毁灭的厄运。王懿荣对保护和发扬我国古代文化遗产和甲骨学的建立做出了不可磨灭的贡献。</p>
+<p>甲骨文的发现，不仅标志着中国有了将近四千年有文字可考的历史，而且为研究商朝历史提供了极其宝贵的资料。甲骨文的发现，直接导致了对安阳殷墟的发掘，其重要性可以同古希腊的特洛伊遗址的发现相媲美，并形成了甲骨学和殷商考古这两门全新的学科。</p>
+<p>甲骨文与明清档案、敦煌文书、流沙坠简并称中国近代史上史学领域的“四大发现”。安阳殷墟出土的甲骨文，先后流散到十二个国家和地区，世界上许多博物馆都以收藏有中国的甲骨文为荣。甲骨学已成为国际上一门新兴学科，它不仅是中国的学问，也是世界性的学问。</p>
+<p>王懿荣还是一位文物古迹的保护者。他看到不少古墓葬、古遗址或遭破坏，或被盗掘，曾上《请重申旧章封禁天下古墓疏》，建议清廷加强对古墓葬与古代文物的保护。其保护范围包括历代帝王陵寝及先王、先贤、忠臣、烈士墓葬以及方志所记著名古墓或无名墓等，而对那些私挖古墓、开棺盗宝者，一经查获，严刑治罪。</p>
+<p>王懿荣一生搜集和研究了大量古代文物，经常与当时著名的金石学家一起切磋学术，其丰富的收藏和研究，推动了传统金石学研究向“古器物学”阶段的转变，为中国近代考古学的形成积累了大量资料。其主要著作有《汉石存目》、《六朝石存目》、《王文敏公遗集》(八卷)等。《天壤阁丛书》是王祖源、王懿荣父子历时几十年共同编辑刊行的一套大型训诂学丛书，共二十函四十余卷百余万字。</p>
+<p>(张岂之主编：《中国近代史学学术史》，中国社会科学出版社，1996年)</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<p>王懿荣纪念馆位于烟台市福山区城里街中心古建筑群里，共有三进院落，55间房屋，占地799平方米。其前身为清末福山画家李程九的画室“听松斋”，是当时文人墨客集会的场所。1927年，李程九将其捐给世界红十字会作为福山分会会址。1984年，被烟台市列为市级重点文物保护单位，现为山东省重点文物保护单位。</p>
+<p>1989年10月中国发现甲骨文90周年之际，为纪念第一个发现甲骨文的爱国学者王懿荣，山东省文物局、福山区人民政府利用该建筑群建立了“王懿荣纪念馆”。</p>
+<p>纪念馆分7个展室，展示了王懿荣的遗物，包括手札、书信、著作、书法、甲骨文片等300余件。馆内还收藏了国家领导人、国内外著名历史学家、甲骨文学者、书画家的佳作珍品200余幅。</p>
+<p>2009年，为纪念王懿荣发现甲骨文110周年，中国殷商文化学会、山东省大舜文化研究会设立了“王懿荣甲骨学研究奖”，旨在推动甲骨文字考释、促进甲骨学发展。
+该馆现为山东省优秀社会教育基地，烟台市爱国主义教育基地。</p>
+<h2 id="史料索引"><a class="header" href="#史料索引">史料索引</a></h2>
+<p>见《清史稿》、王崇焕辑《王文敏公年谱》《王懿荣文集》、吕伟达著《甲骨文之父--王懿荣》等。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/xu-heng.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/ruan-an.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/xu-heng.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/ruan-an.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>圆明园四劫 - 圆明园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">圆明园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/outline/four-disaster.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="圆明园四劫"><a class="header" href="#圆明园四劫">圆明园四劫</a></h1>
+<p>“圆明园四劫”并非单指1860年的那场大火，而是史学界对圆明园从1860年至20世纪中叶，近百年间遭受的四次系统性毁灭的统称。这四劫分别是火劫、木劫、石劫、土劫，它们层层递进，最终将“万园之园”彻底化为废墟。</p>
+<h2 id="一火劫1860年帝国的丧钟"><a class="header" href="#一火劫1860年帝国的丧钟">一、火劫（1860年）：帝国的丧钟</a></h2>
+<p>这是圆明园毁灭的起点，由英法联军直接造成。</p>
+<ul>
+<li>时间：1860年10月6日至10月18日。</li>
+<li>施暴者：英法联军。</li>
+<li>破坏方式：纵火焚烧。大火持续三天三夜，不仅焚毁了木质建筑，更将园内珍藏的典籍（如 《四库全书》底本）、书画、瓷器等文化瑰宝付之一炬。</li>
+<li>结果：圆明园从金碧辉煌的皇家园林沦为断壁残垣，这是文化意义上的毁灭。</li>
+</ul>
+<h2 id="二木劫1900年庚子事变后最后的骨架被拆"><a class="header" href="#二木劫1900年庚子事变后最后的骨架被拆">二、木劫（1900年庚子事变后）：最后的骨架被拆</a></h2>
+<p>火劫后，圆明园尚存山形水系及部分石质建筑骨架。但1900年八国联军侵华后，清政府对园区的控制力彻底崩盘。</p>
+<ul>
+<li>时间：约1900年至1911年清帝退位前后。</li>
+<li>施暴者：八旗兵丁、太监、土匪及周边百姓。</li>
+<li>破坏方式：盗伐林木、拆毁残存木构。人们将园内古树名木砍伐殆尽，连建筑残留的梁柱、门窗都被拆走变卖或当柴烧。</li>
+<li>结果：圆明园失去了最后的植被覆盖和建筑残骸，彻底“秃”了，沦为真正的荒地。</li>
+</ul>
+<h2 id="三石劫民国北洋时期军阀的采石场"><a class="header" href="#三石劫民国北洋时期军阀的采石场">三、石劫（民国北洋时期）：军阀的“采石场”</a></h2>
+<p>这是对西洋楼等石质建筑遗存的系统性掠夺。</p>
+<ul>
+<li>时间：1910年代至1930年代（北洋军阀统治时期）。</li>
+<li>施暴者：军阀、官僚、富商（如张勋、王怀庆）。</li>
+<li>破坏方式：盗运石料。西洋楼的汉白玉石柱、雕花构件、台阶等被大量运走，用于修建私宅、陵墓或公共场所（如中山公园、香山慈幼院）。</li>
+<li>结果：连最坚固的石质建筑（如西洋楼）也被肢解，遗址的立体结构被彻底夷平。</li>
+</ul>
+<h2 id="四土劫民国后期至建国初最后的覆灭"><a class="header" href="#四土劫民国后期至建国初最后的覆灭">四、土劫（民国后期至建国初）：最后的覆灭</a></h2>
+<p>这是对遗址地基的彻底破坏。</p>
+<ul>
+<li>时间：1930年代至1960年代（尤以“大跃进”时期为甚）。</li>
+<li>施暴者：农民、生产队、单位。</li>
+<li>破坏方式：平山填湖、开荒种地。为了获取耕地，人们推平山丘，填埋湖泊，将园内的假山石运走用于烧石灰或基建。</li>
+<li>结果：圆明园的地形地貌（中国园林的灵魂）被彻底改变，遗址被掩埋在土层之下。</li>
+</ul>
+<h2 id="总结为何是四劫"><a class="header" href="#总结为何是四劫">总结：为何是“四劫”？</a></h2>
+<p>这四劫是一个完整的毁灭链条：</p>
+<ol>
+<li>火劫毁其表（文化珍藏）；</li>
+<li>木劫毁其骨（建筑结构）；</li>
+<li>石劫毁其形（硬质景观）；</li>
+<li>土劫毁其根（地理脉络）。</li>
+</ol>
+<p>我们今天看到的圆明园遗址，实际上是历经这四次浩劫后的最终形态。它不仅是帝国主义侵略的见证，也是近代中国动荡与愚昧对自身文化遗产的慢性自杀。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../outline/zhang-xun-and-the-winter-palace.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../outline/zhang-xun-and-the-winter-palace.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
