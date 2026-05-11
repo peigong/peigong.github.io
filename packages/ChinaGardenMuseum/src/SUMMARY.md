@@ -134,3 +134,6 @@
     - [兰亭集序](./literature/lan-ting-ji-xu.md)
     - [九成宫醴泉铭](./literature/jiu-cheng-gong-li-quan-ming.md)
     - [池上篇](./literature/chi-shang-pian.md)
+    - [绛守居园池记](./literature/jiang-shou-ju-yuan-chi-ji.md)
+    - [绛守园池](./literature/jiang-shou-yuan-chi.md)
+    - [请施庄为寺表](./literature/qing-shi-zhuang-wei-si-biao.md)

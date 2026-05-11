@@ -38,7 +38,7 @@ title: 导游笔记
 - [首都博物馆](./guide/capitalmuseum)
 - [北京大运河博物馆](./guide/canalmuseum)
 - [历代帝王庙](./guide/The-Temple-of-Successive-Emperors)
-- [孔庙和国子监博物馆](./guide/kmgzj)
+- [孔庙和国子监博物馆](./guide/kmgzj) - [给小朋友讲论语](https://pg.js.cn/articles/essay-read-2025-04-06-analects-for-children.html) - [两小儿辩日](https://pg.js.cn/articles/essay-read-2025-04-18-debate-of-children.html)
 - [北京鲁迅博物馆](./guide/beijing-luxun-museum)
 - [中国科学技术馆](./guide/cstm)
 - [中国农业博物馆](./guide/ciae)
