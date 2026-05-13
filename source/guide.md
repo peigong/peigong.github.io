@@ -25,6 +25,7 @@ title: 导游笔记
 - [北京海洋馆](./guide/aquarium)
 - [香山](./guide/fragrant-hills)
 - [国家植物园](./guide/chnbg)
+- [陶然亭公园](./guide/taoranting-park)
 - [园博园](./guide/garden-expo)
 - [雁栖湖](./guide/YanqiLake)
 
@@ -39,6 +40,7 @@ title: 导游笔记
 - [北京大运河博物馆](./guide/canalmuseum)
 - [历代帝王庙](./guide/The-Temple-of-Successive-Emperors)
 - [孔庙和国子监博物馆](./guide/kmgzj) - [给小朋友讲论语](https://pg.js.cn/articles/essay-read-2025-04-06-analects-for-children.html) - [两小儿辩日](https://pg.js.cn/articles/essay-read-2025-04-18-debate-of-children.html)
+- [先农坛（北京古代建筑博物馆）](./guide/xiannong-altar)
 - [北京鲁迅博物馆](./guide/beijing-luxun-museum)
 - [中国科学技术馆](./guide/cstm)
 - [中国农业博物馆](./guide/ciae)

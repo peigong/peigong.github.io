@@ -1,0 +1,12 @@
+{
+  "name": "xiannong-altar",
+  "version": "1.0.0",
+  "description": "先农坛（北京古代建筑博物馆）",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
