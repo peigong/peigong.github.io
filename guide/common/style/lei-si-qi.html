@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>雷思起 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/style/lei-si-qi.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="雷思起"><a class="header" href="#雷思起">雷思起</a></h1>
+<p>雷思起（1826-1876），字永荣，号禹门，祖籍江西永修，生于北京，清代建筑世家样式雷第六代传人，雷景修第三子。历任清内务府样式房掌案，官至二品顶戴，主持皇家陵寝与园林营造。</p>
+<p>早年随父参与咸丰帝定陵建造，同治四年（1865）因建陵有功以监生赏五品盐大使衔。同治十二年（1873）十月起受内务府多次催促，率长子雷廷昌及样式房昼夜赶办重修圆明园烫样，绘制安佑宫、天地一家春等建筑群设计图，使用拆卸旧木料充用并提前完成供梁工序。同年主持定东陵选址设计，完成普祥峪、菩陀峪吉地勘察，获慈禧五次召见及二品衔赏赐。重修圆明园工程中止后，其图样成为研究清代园林的重要史料。后主持惠陵、盛京永陵等工程，因慈禧要求数次更改定东陵设计，1876年病逝于工程期间，未竟事业由雷廷昌续建完成。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<p>早年随父参与咸丰帝定陵建造，学习营造知识。1866年，雷景修病逝，40岁的雷思起接任样式房掌案。咸丰九年（1859年）起，雷思起主持设计营造咸丰帝的定陵，同治四年（1865年）因建陵有功以监生赏五品盐大使衔。</p>
+<p>同治十二年（1873年），雷思起主持为慈安、慈禧两位太后勘察普祥峪、菩陀峪吉地，设计定东陵。最初设计为两位太后共用一套祭殿，但因两太后不满，雷思起重新设计为两座各自独立、配殿和祭殿齐全的陵寝。定东陵完工后，慈禧太后要求对已建好的陵墓内部进行改造，雷思起数次更改设计以满足其要求。因长期劳累，雷思起于光绪二年（1876年）病逝，终年50岁。</p>
+<p>同治十二年（1873年）十月起，内务府多次催促样式房“赶紧烫样”。雷思起与儿子雷廷昌带领样式房匠人夜以继日赶制画样、烫样，涉及安佑宫、正大光明殿、天地一家春等殿宇。仅图样烫样工本费即耗银5800余两。为赶工期，曾拆卸京西各园旧木料充用，并提前举行供梁仪式。在此期间，因进呈图样，雷思起与儿子雷廷昌被同治帝秘密召见五次。除定陵、定东陵、圆明园外，雷思起还参与或主持了惠陵、盛京永陵、西苑（三海）等工程。</p>
+<h2 id="个人生活"><a class="header" href="#个人生活">个人生活</a></h2>
+<p>雷思起是雷景修的第三子。雷思起不仅常到巨山村上坟祭祖，还十分关注祖茔的维修和保护，在家信中多次关照五弟、七弟要及时修补宝顶和泊岸。因长期主持皇家工程，操劳过度，雷思起积劳成疾，于光绪二年（1876年）去世，后葬于巨山村雷氏墓地。雷思起秉持慎微慎初的诚德家风，曾言：“一毫一厘都要清清楚楚，不能侵犯。”</p>
+<h2 id="主要成就"><a class="header" href="#主要成就">主要成就</a></h2>
+<p>第六代样式雷雷思起劫后中兴、鞠躬尽瘁，其执掌样式房时，“样式雷”家族的职业活动达到了巅峰。</p>
+<p>雷思起主持设计营造了清东陵咸丰帝的定陵，该陵建筑层层叠落，形成了跌宕起伏的豪华气势，堪称其旷世之作。因建陵有功，雷思起以监生钦赏盐场大使，被钦封五品职衔。</p>
+<p>雷思起主持了定东陵的选址与设计，完成了普祥峪、菩陀峪吉地的勘察。最初，雷思起按照规制设计两位太后各用一个地宫，共用一套祭殿，但因慈安、慈禧两位太后均不接受，后重新设计了两个各自独立、配殿和祭殿齐全的陵寝。工程完工后，慈禧太后掌权，为体现更高地位，要求改造陵墓内部，雷思起为此数次更改设计图，耗尽心血。</p>
+<p>同治十二年（1873年），雷思起受命主持重修圆明园工程，需在极短时间内完成庞大建筑群的画样与烫样制作。内务府多次催促“赶紧烫样”进呈，雷思起率样式房匠人昼夜赶办，最终完成安佑宫、天地一家春等建筑群的设计图与烫样，并提前完成了供梁工序。重修圆明园工程中，样式雷的工作涵盖了建筑设计、指导施工、内部装修乃至木料采办，相当于现代设计院的工作，在建筑艺术和造园艺术方面有所创新和发展。工程虽中止，但其赶制的数千张画样和烫样得以保留。</p>
+<p>因进呈重修圆明园工程图样，雷思起获皇帝赏赐二品顶戴，其子雷廷昌获三品顶戴。光绪元年，雷思起的父母、祖父母亦获封赠。雷思起后还参与了惠陵、盛京永陵等工程。
+雷思起留下的海量建筑图档，成为研究圆明园和清代建筑工艺与造园艺术的重要参考。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../style/tang-yang.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../style/lei-ting-chang.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../style/tang-yang.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../style/lei-ting-chang.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>大隆福寺 - 先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/referrence/long-fu-si.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="大隆福寺"><a class="header" href="#大隆福寺">大隆福寺</a></h1>
+<p>大隆福寺，又称“隆福寺”，隆福寺位于东四十字路口的西北角。始建于明代景泰三年（1452年），清朝雍正九年重修。占地20000平方米，隆福寺在明代是京城唯一的番（喇嘛）、禅（和尚）同驻的寺院，清代成为完全的喇嘛庙。</p>
+<h2 id="结构"><a class="header" href="#结构">结构</a></h2>
+<p>三世佛、三大士，处殿二层三层。左殿藏经，右殿转轮，中经毗卢殿，至第五层，乃大法堂。白石台栏，周围殿堂，上下阶陛，旋绕窗栊，践不藉地，曙不因天，盖取用南内翔凤等殿石栏干也。殿中藻井，制本西来，八部天龙，一华藏界具。景泰四年，寺成，皇帝择日临幸，已夙驾除道，国子监监生杨浩疏言，不可事夷狄之鬼。礼部仪制司郎中章纶疏言，不可临非圣之地。皇帝览疏，即日罢幸，敕都民观。缁素集次。忽一西番回回蹒跚舞上殿，斧二僧，伤傍四人，执得，下法司，鞫所繇，曰：轮藏殿中，三四缠头像，眉棱鼻梁，是我国人，嗟同类苦辛，恨僧匠讥诮，因仇杀之。狱上，回回抵罪。考西竺转轮藏法，人诵经檀施，德福满一藏，为转一轮。一贫女不能诵经，又不能施，内愧自悲，因置一钱轮上，轮为转转不休。今寺众哗而推轮，轮转，呀呀如鼓吹初作.</p>
+<h2 id="景观"><a class="header" href="#景观">景观</a></h2>
+<p>从化黎民表隆福寺○绀宇开驰道，天人此给孤。宫罗裁宝胜，粉壁俨椒涂。有乳飞区别，无心感菀枯。石栏辞禁地，轮藏转嵩呼。法自拜时竟，凉生病者躯。出门如堕劫，车马共尘途。
+吴县蔡羽九日隆福寺○寻秋隆福寺，丹碧拥黄花。闲并都门日，酒为贫士家。銮回思往事，轮转和群哗。桥口东西路，斜阳望翠华。</p>
+<h2 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h2>
+<p>顺天释性柔过隆福寺○金碧先朝寺，香镫出内家。松杉留古籁，栏楯落天花。爽入西山影，晴飞北阙霞。翠华行复驻，望望暮云遮。</p>
+<h2 id="焕新蝶变"><a class="header" href="#焕新蝶变">焕新蝶变</a></h2>
+<p>如今的隆福寺，书香愈发浓郁，多家特色书店在此扎根，成为传承文脉、连接读者的重要载体，各自以独特定位滋养着城市文化生态。</p>
+<p>生活·读书·新知三联书店自1996年便立足隆福寺地区，以“生活·读书·新知”为核心理念，坚守书店、书籍与读书的本真模样。
+2026年北京书市“书福悦读 隆福潮集”主题文化市集落地隆福大厦一层，将书香与市集烟火完美融合，成为隆福寺文化传播的又一重要载体。市集围绕“书香+文创+花香+咖啡香”四大元素，打造沉浸式文化消费新场景，深度联动第十六届北京国际电影节等资源，推出“书香+光影”沉浸式体验。</p>
+<p>在深耕书香文化的同时，隆福寺着力打造戏剧演艺集聚区，以多元演艺业态丰富文化供给，让古老街区焕发新的活力。</p>
+<p>以隆福寺为中心，多元文化业态在此交汇，共同构建起一个充满活力的文化生态圈。</p>
+<h2 id="隆福寺简史一座皇家寺庙的变形记"><a class="header" href="#隆福寺简史一座皇家寺庙的变形记">隆福寺简史：一座皇家寺庙的“变形记”</a></h2>
+<blockquote>
+<p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MzI1NzAzNDM0Mg==&amp;mid=2650438117&amp;idx=1&amp;sn=e5c4fb6e17fca19b3d9a9c7ffbb43054&amp;chksm=f30349042037a671472c08537fa9ebc8acfec1d761784e066102be07b141397143fbc4754710&amp;scene=27">隆福寺简史：一座皇家寺庙的“变形记”</a></p>
+</blockquote>
+<p>隆福寺，这座建于570多年前的北京东城大庙，如今已成为崭新的文化艺术街区，文艺青年的打卡圣地。今天，我们就来说说这座大庙的历史。</p>
+<p>这座“戏多”的明代皇家寺庙，从诞生那天起，就自带“热搜特征”，不仅见证了皇权争夺、朝代更替，甚至还经历了从皇家巨刹、平民市集到文化艺术街区的魔幻变形。它的故事剧情堪比宫斗剧，精彩而离奇！</p>
+<h3 id="皇家恩怨一座寺庙的精彩开局"><a class="header" href="#皇家恩怨一座寺庙的精彩开局">皇家恩怨：一座寺庙的“精彩”开局</a></h3>
+<p>景泰四年（1453），北京东城现东四牌楼附近，一座气势恢宏的皇家寺院平地而起。东城的百姓为此欢呼雀跃，因为相较于此时西城的护国寺，东城在当时并没有与之比肩的寺庙建筑。这座能和护国寺“掰手腕”的东城巨刹，就是后来几百年广为北京城居民所熟知的隆福寺。</p>
+<p>隆福寺的建设隐藏着不为人知的宫廷秘闻。在这普天同庆的时刻，有一个人却气得牙痒痒——被软禁的太上皇明英宗朱祁镇，一位传奇的明代帝王。正统十四年（1449），他在“土木堡之变”中被瓦剌俘虏，其弟弟朱祁钰也就是景泰帝随后继承大统。一年后，朱祁镇被放回，一山不容二虎，景泰帝将哥哥软禁在南内的崇质宫，称太上皇。</p>
+<p>隆福寺的修建令朱祁镇极为恼火，这是为什么呢？</p>
+<p>原来，修建隆福寺的一些材料，竟然是从他的崇质宫“偷”来的！为了节省开支（当然，也有可能是有意无意不把他哥当回事），景泰皇帝派太监陈谨带人拆了崇质宫的白玉雕栏、砍伐了古树，去修隆福寺。在软禁中的朱祁镇本就郁郁不得志，眼睁睁看着自己的“家当”被搬，心里有一万个不痛快！不知是不是从这时起，复仇的种子在他心里暗暗萌芽。景泰八年（1457），朱祁镇在石亨、徐有贞、曹吉祥等人帮助下发动“夺门之变”重登皇位。重新上位后的朱祁镇，首先就把当初拆他家的太监陈谨抓了起来，狠狠收拾了一顿。</p>
+<p>而这位病重中的景泰皇帝，还没来得及亲眼看一下自己打造的隆福寺，就被废为郕王，黯然离场，之后不久便病故了。</p>
+<h3 id="东城第一巨刹景泰皇帝的面子工程"><a class="header" href="#东城第一巨刹景泰皇帝的面子工程">东城第一巨刹：景泰皇帝的“面子工程”</a></h3>
+<p>隆福寺是景泰皇帝主导修建的，其实这是一个“面子工程”。景泰皇帝在《大隆福寺敕谕碑》里说得很明确：京城西城有大兴隆寺、大慈恩寺、大隆善护国寺那么多大型寺庙，怎么到了东城却连一座像样的寺庙都没有，这怎么行？于是，这才诞生了隆福寺，而且在距离紫禁城不远的地方。</p>
+<p>事情真的就那么简单吗？修建隆福寺就是为了弥补东城无巨刹的遗憾吗？其实，明眼人都知道景泰皇帝当时的处境。他自己仓促上位后不久，又把上一任皇帝、自己的哥哥明英宗软禁，不管是在大臣心里，还是在皇家内部，包括他自己都正心虚着呢，生怕别人说他得位不正。他在这个时候修寺庙，除了“护国佑民”，恐怕更多的是给自己“攒功德”，彰显权威。</p>
+<p>刚刚修建好的隆福寺，规模也确实够气派。山门五间，正殿七间，重檐庑殿顶，彩绘绚丽，汉白玉台基，雕栏环绕，只有大型皇家寺庙才有这样的气派！</p>
+<h3 id="从皇家寺庙到平民市集隆福寺的变形记"><a class="header" href="#从皇家寺庙到平民市集隆福寺的变形记">从皇家寺庙到平民市集：隆福寺的“变形记”</a></h3>
+<p>“面子工程”即将完工，作为总策划的景泰皇帝本想亲自参加落成典礼，结果被太学生怼了回去：佛教是外国传来的宗教，皇帝怎么能去呢？景泰皇帝一听便认怂了，听从了建议。没过多久，这位没有主见的皇帝又听从大臣建议，以影响风水的名义，把隆福寺前的大牌坊拆除，甚至还规定僧人不能鸣钟、击鼓。</p>
+<p>自景泰帝还在世的时候起，隆福寺的“皇家光环”已经开始逐渐黯淡。景泰皇帝被废后，加上继任者对他及其“面子工程”的“恨”，隆福寺彻底失去了靠山，面向公众开放，成了京城居民的公共空间。到了嘉靖朝，皇帝信奉道教，对佛教不“感冒”，隆福寺更处于“靠边站”尴尬局面。</p>
+<p>落寞的隆福寺在清朝雍正皇帝手里重焕生机。雍正皇帝崇信藏传佛教，这时隆福寺得以修缮，还摇身一变成了藏传佛教寺院，誓要回归皇家的地位。到了乾隆年间，隆福寺被划归雍和宫的下院，成了北京城里的“顶流”寺庙之一。</p>
+<p>伴随着宗教地位，隆福寺摇身一变，还成了京城最热闹的庙会市集之一。隆福寺庙会定在“逢九逢十”开市，每逢庙会，隆福寺人山人海，热闹非凡，京味小吃、民间戏曲、杂耍杂技、古董文玩，应有尽有。《北京竹枝词》中描绘了当时的盛况，说全盛时期的隆福寺庙会“一日能消百万钱”，妥妥的经济增长点。</p>
+<p>隆福寺的转型真是太绝了！</p>
+<h3 id="粗心的喇嘛隆福寺的覆灭与重生"><a class="header" href="#粗心的喇嘛隆福寺的覆灭与重生">粗心的喇嘛：隆福寺的“覆灭”与“重生”</a></h3>
+<p>1901年，一位在大殿中值夜班的喇嘛不小心打翻了油灯，瞬间燃起熊熊大火，一夕之间，慈天广厦、天王殿、钟鼓楼化为灰烬，雕栏玉砌散落一地，隆福寺满目疮痍。但庙会的繁荣却丝毫未减，商贩的摊位甚至占领了殿宇的废墟，热闹依旧。</p>
+<p>到了1952年，隆福寺庙会被改造成“东四人民市场”，虽然名字变了，但烟火气依旧。 然而，1976年的大地震让隆福寺北段建筑彻底垮塌，从此再也没能站起来。1985年，隆福大厦拔地而起，庙会的辉煌在这里延续了一段时间，直到1993年的又一场大火，隆福寺再次失去了它的繁华。新版的隆福寺大厦从1998年建成，一直矗立到2016年。</p>
+<p>除了商业的功能，隆福寺似乎已经被它身边的人们逐渐遗忘，只能从它的名称遥想它曾经是一座寺院。</p>
+<p>隆福寺的“重生”要从2016年算起。这一年的6月，它作为人声鼎沸的市集的历史走到了尽头，也暂时告别了曾经的喧嚣。与之同时，隆福寺开始了漫长的改造更新。按照新的规划，隆福寺成为一处新的文化艺术街区。2019年，这一聚集了艺术馆、酒吧、时尚潮店的艺术街区初见雏形。如今随着改造的成熟，隆福寺街区吸引了大量文艺青年打卡，彻底完成了它的“涅槃重生”。</p>
+<h3 id="尾声隆福寺的真身还在吗"><a class="header" href="#尾声隆福寺的真身还在吗">尾声：隆福寺的“真身”还在吗？</a></h3>
+<p>如今的隆福寺街区已焕然一新，除了大厦顶部仿建的隆福寺模型，人们已看不到丝毫隆福寺的遗痕。所幸的是，我们并非完全看不到它的真身，它的“心脏”如今还静静地躺在距此不远的地方。1976年地震之后，隆福寺部分建筑肢解，构件下架，其中就包括万善正觉殿、毗卢殿那两件精彩绝伦的金丝楠木藻井。这两组藻井在下架后曾被分散保存在城北的黄寺中，直到90年代才被拼补成形，挪到城南先农坛的北京古代建筑博物馆中保存展览，向观众诉说昔日的辉煌。尤其是万善正觉殿的星空藻井，天宫楼阁、金霞彩云，简直美到让人窒息！</p>
+<p>隆福寺的故事，就像一场“永不停歇的变形记”（李纬文语）。从皇家寺庙到庙会顶流，从火灾废墟到现代大厦，它的每一次变迁，都承载着北京城的记忆。</p>
+<h2 id="藻井星图一个可以看到满天星斗的博物馆观展"><a class="header" href="#藻井星图一个可以看到满天星斗的博物馆观展">藻井星图：一个可以看到满天星斗的博物馆｜观展</a></h2>
+<blockquote>
+<p>参考：<a href="https://baijiahao.baidu.com/s?id=1777071471330459537&amp;wfr=spider&amp;for=pc">藻井星图：一个可以看到满天星斗的博物馆｜观展</a></p>
+</blockquote>
+<p>【文博时空 作者 王琛】修缮长达半年之久的北京古代建筑博物馆已重新开馆。作为全国首座建筑类专题性博物馆，这里以丰富多彩的文物、图片、模型展现了中国古代建筑从茅茨土阶的原始状态发展到城墙楼宇的漫长历程，既有古人的智慧，又有历史的变迁。</p>
+<p>中国古代建筑与伊斯兰古代建筑、欧洲古代建筑并称世界三大古代建筑，其悠久的历史与深远影响，让所有建筑门派都难以望其项背。漫步古建馆，你可以身临其境地体会到中国建筑文化与艺术气韵，何况周边又有古树映衬，置身其中仿佛拥有了整个世界的安静，可以放宽心与悠久的历史对话，聆听耳边的远古回响。</p>
+<h3 id="造价昂贵的镇殿之宝"><a class="header" href="#造价昂贵的镇殿之宝">造价昂贵的镇殿之宝</a></h3>
+<p>皇家宫殿御座之上，庙宇佛堂神佛像座之上，将穹顶向上凹进如井状，四壁饰有藻饰花纹，为的是突出主体空间，这就是“藻井”。谈到藻井，或许很多人都会想到我们生活所用的地下取水井。而藻井的位置与此恰恰相反，它是古代建筑室内顶棚的独特装饰部分。“藻”即水藻，代表水；“井”为天文中所称的“东井”，为贮水之所，因此藻井蕴含着古人避火的美好祈愿，同时也是传统建筑等级的一种体现。随着建筑技艺的不断提高，藻井结构日趋繁复，雕刻日益富丽精巧，极具观赏性。</p>
+<p>馆内陈展的藻井，并非古建馆建筑自身的原装构件，而是源于北京隆福寺。始建于明景泰三年（1452 年）的隆福寺地处故宫东北，曾是京城唯一的番（喇嘛）禅（和尚）同驻的寺院。</p>
+<p>清光绪二十七年（1901 年），隆福寺里的喇嘛用火不慎，将隆福寺部分建筑烧毁。1976 年唐山大地震时波及北京，隆福寺仅存的几间殿宇也几近倾覆。而后隆福寺被拆，藻井等木构件装饰被置于筐中转移至西黄寺，丢在厕所旁无人问津。直到 1989 年先农坛筹建古建馆，隆福寺的藻井才有幸绝处逢生，被修缮后在此与观众见面。</p>
+<p>先农坛拜殿的这个藻井叫明镜，是当初悬挂在隆福寺毗卢殿殿顶的。作为一口方形藻井，里面又巧妙设计了八角形、三角形、菱形和圆形结构。藻井四角雕刻有翱翔的凤凰，周围的拱花簇拥着中心的蟠龙。整个藻井设计精美，雕工细腻，而最难能可贵的是，藻井通身为金丝楠木制成。井芯上的雕龙腾云驾雾，蓄势待发。龙的下垂姿态与这圆形明镜连成一体，同为金丝楠木雕刻，其工艺精湛，材质名贵，价值非凡，被称为“镇殿之宝”。</p>
+<h3 id="藻井中的满天星河"><a class="header" href="#藻井中的满天星河">藻井中的满天星河</a></h3>
+<p>穿过拜殿走进庭院，就到了太岁殿。被誉为“稀世国宝”的隆福寺正觉殿明间藻井正收藏在太岁殿里。这个堪称明清建筑孤例的藻井是一座天宫藻井，一眼望去便让人为之一震。</p>
+<p>这个藻井在地震中损坏的最为严重，定下来要重装修复时，一众专家和技术人员也一筹莫展。在梁思成营造学社的帮助下，根据隆福寺藻井的老照片对照实物，然后逐个比较，一点点将其拼接起来，历时五年才基本恢复了它的原貌。</p>
+<p>这是个外圆内方的藻井，向上隆起6层。它的精致到了“井身无处不雕刻，每层无层不精彩”的地步。藻井每层均细雕云纹图案，同时又采用圆雕的形式，雕琢了精致华丽的亭台楼阁。其建筑样式十分丰富，仅屋面形式就有重檐歇山、重檐十字歇山、重檐圆攒尖、四角攒尖等。68座建筑均由廊贯通，或平廊，或爬山廊，而各廊制作手法又有不同，如爬山廊大斗直接坐在柱头上，不用普柏枋，属早期木构规制。建筑的排列组合方式为下层密集，越往上层数量越少，同时在各建筑及廊内置放神像，从下仰望，如神仙境界一般的空中楼阁好似近在眼前。</p>
+<p>藻井原来悬挂于隆福寺的万善正觉殿明间，它的下方矗立的是一尊释迦牟尼佛像。从正下方仰视，藻井呈现内方外圆，这在佛界称为坛城，第五层的方形框架之上开了四道门，均为金银贵寿的福门，可称为佛教的神圣境界。如果从侧面看藻井，定是须弥山无疑。佛界有三千世界之说，小、中、大各一千，须弥山则是世界的中心。眼前是虚幻又真实的须弥山，彷佛触手可得。闭上双眼，双手合十，顿时有种漂浮的感觉，灯光一照，星河闪耀，仿佛时空轮转，令人目眩神迷。这种独具匠心的设计让人拍案叫绝！</p>
+<p>琼楼玉宇四周的画作是彩绘的二十八星宿神仙出行图，而这座藻井与其他藻井相比最特殊之处莫过于它顶部的星空图。一般藻井中心或浮雕或绘画，而以星空图作为顶部中心前所未闻，当世仅此一份。</p>
+<p>星图板为厚 4 厘米、边长 75.5 厘米的正八角形，在类似古星图中，这图幅相当大，仅次于杭州吴越古墓石刻星图。其表面裱以粗布为衬，并涂有深蓝色漆作为天空的背景，再在其上用沥粉堆金手法描绘出星象来，星星之间由金线相连，星象和文字不仅准确工整且完美传神，并有八谷、造父等星座的象形联法等等，值得深入研究。</p>
+<p>十分可惜的是，在寺庙长期香火熏燎下，天文图画面已变黑，星象难认。长期的雨水渗透和木板伸缩变形也使星图局部有剥蚀残损，好在沥粉形成的浮雕状凸起线条为临摹工作带来一些便利。描摹本是用薄纸覆盖原图板，以手抚摸突起的星点与线条描绘而成，从摹本中我们可以更清晰地对星图做出解读。</p>
+<p>整个星图的布局采用了传统的盖图画法，星图圆心处是北极星官中的天枢（也叫纽星，天之枢纽之意），以北天极为圆心绘有六个半径不等的同心圆。第一个圆是图上最小圆圈，表示范围内的星象绕天球北极旋转时不没入地平，也即内规；第二个圆为天球赤道。从摹本可见，虽未绘黄道，但有二十八宿宿度与十二次分野，显然是据实测绘制，很可能是一份历代传承的古星图，但是唐代还是宋代绘制，尚有争议。</p>
+<p>最为神奇的是，1420 多颗繁星与今日的观测结果相比，位置竟然相当准确，在那个科技并不发达的时代，很难想象古人是如何创造出如此巧夺天工之物。</p>
+<h3 id="始皇伟构点江山"><a class="header" href="#始皇伟构点江山">始皇伟构点江山</a></h3>
+<p>古建博物馆为我们展示了中国建筑的发展历程。古人在用火的过程中发现，泥土被火烘干具有变硬的性能，这为以后瓦的发明奠定了基础。我们常说“秦砖汉瓦”，但其实秦朝的制瓦技术已十分发达。2013 年考古工作者在陕西发现了栎阳古都遗址，是先秦时期秦献公迁都的旧址。刚开始发掘就出土了大型的筒瓦以及罕见的槽瓦。见微知著，这些瓦构件足以使我们对秦朝的恢弘建筑产生联想。</p>
+<p>谈到秦朝建筑，绕不开咸阳宫。时间回到公元前 350 年，秦孝公迁都咸阳，在列国纷争的乱世，从某种程度上讲，建筑也是国家强盛的标志，各国都在展示自己建筑的庞大雄奇，秦国自然也不甘示弱。随着秦国国力日益强盛，咸阳宫也一直在添砖加瓦不停扩建，这一建竟然断断续续走过了 130 年。直到秦始皇统一中国，咸阳宫再次迎来新的增建。彼时的嬴政刚好 38 岁，血气方刚。大好的年岁任凭他“守土开疆，扫平四夷”。因此他每收复一个国家，就把这个国家最华美的建筑移往咸阳宫，或拆走运回，或仿照重建，使咸阳宫聚拢了全国最经典的建筑，各种形态和技术得以充分融会贯通。《史记》记载：“咸阳之旁二百里内，宫观二百七十。”</p>
+<p>万分可惜的是，楚汉战争爆发后，项羽杀入城中，“遂屠咸阳”，满城烈焰燃起，三月而不熄。正所谓“楚人一炬，可怜焦土！”。但是从秦陵中出土的硕大“遮朽”（也称筒瓦，用于大型建筑主脊的两端）可以推断，咸阳宫建筑体量庞大无比，在当时可称得上是华夏之最，雄伟而奇绝。杜牧赞之“覆压三百余里，隔离天日”绝不夸张。</p>
+<h3 id="从高颐阙看铜雀台"><a class="header" href="#从高颐阙看铜雀台">从高颐阙看铜雀台</a></h3>
+<p>杜牧在《赤壁》中写道：“折戟沉沙铁未销，自将磨洗认前朝。东风不与周郎便，铜雀春深锁二乔。”铜雀台于建安十五年（公元 210 年）筹建，历时三年建成。抛开曹丞相“锁二乔”的浪漫，至少在建造目的中，最不能排除的就是曹操在为自己一统天下做准备。只可惜铜雀台早就化作了荒草萋萋的夯土，招惹了无数史学家和文人骚客妄自猜测。其实，他们只要仔细地端详一次高颐阙，便会有足够的空间令他们心驰神往，去构建自己心中的铜雀台。</p>
+<p>石阙是汉代盛行的一种建筑方式，一般设立在城门两侧为门阙，设在公路两侧为路阙，设在寺庙两侧为庙阙，设立于墓地神道起首的叫墓阙。阙是以建筑的形态出现的，由木结构演变而来，是象征尊贵和等级的标志。</p>
+<p>我们把目光聚焦馆中的这尊石阙：高颐阙（原件现存四川雅安）。顾名思义，高颐阙即为高颐所建。史料记载，高颐者姓高名颐字贯方，曾任东汉四川益州太守。墓前立阙，是始于汉代朝律，规定年俸 2000 石以上的官员死后可以建阙。高颐正属于这个级别的官员（相当于现在的正厅级官员），所以公元 209 年高颐辞世后，皇帝诏令为其建阙以示纪念。现存东西两阙，西阙保存完整，馆里陈展的即是西阙的复制品。</p>
+<p>阙分主阙和子阙，单檐和双檐，高颐阙不但是双檐，还是子母阙，这在墓阙中可谓是尊贵的上品了。阙顶仿汉代木结构，有角柱和坊斗，是非常逼真的石仿木实物。阙身雕刻精美，马车出行图、饕餮和奇兽、张良椎秦皇、高祖斩蛇等历史故事雕于其上，文化含量厚重。全国发现遗留的汉阙共 47 处，其中保留完整的有 29 处。高颐阙是全国唯一碑、阙、墓、神道、石兽保存最为完整的汉代葬制实体。</p>
+<h3 id="割据逢乱世-塔寺独一帜"><a class="header" href="#割据逢乱世-塔寺独一帜">割据逢乱世 塔寺独一帜</a></h3>
+<p>汉朝的统治并未像石阙一样屹立千年，南北朝时期战乱纷争，游牧民族从西南、西北大量涌入，佛教开始盛行。也是在这个历史转折时期，人们对佛教寺塔建筑热情空前高涨。建于公元 484 年的南京栖霞寺，因南齐隐士明僧绍退隐论教，继而建寺，因栖霞山得名。寺院依山而建，三进的院落，殿堂雄伟壮观，依山势层层拔高，湖光山色美不胜收。观赏栖霞寺的构建，使我们可以联想当时佛教建筑的一派繁盛景象。</p>
+<p>杜牧在《江南春绝句》中写道“南朝四百八十寺，多少楼台烟雨中。”据史料记载，南北朝时期北魏有寺塔 30000 座，南朝仅建康城就有 500 座。这一时期开始在建筑上使用琉璃瓦，绿黄为最突出的颜色；发明和娴熟地运用反宇飞檐，使建筑形态更加优美。</p>
+<h3 id="竣极神工的释迦塔"><a class="header" href="#竣极神工的释迦塔">竣极神工的释迦塔</a></h3>
+<p>辽代在建筑中使用了“减柱法”，又称“移柱法”，通过受力的科学测算和设计，减少屋内的立柱或移动位置，使室内的空间更加开阔，采光更好。宋代李诫编著的《营造法式》（我国有史以来第一部建筑著书）已经将“减柱法”收录其中。展馆内展示的这座塔模是建于公元 1056 年的山西佛宫寺释迦塔，俗称应县木塔。它是辽代继承和创新汉唐以来传统模式建造的，是文化相融的建筑精品。</p>
+<p>木塔设计为富有民族特点的重楼形式，全部使用木结构，依靠斗拱连接，67 米高的塔身上下榫卯紧密咬合而无一钉。塔底层为重檐，内部 5 明 4 暗为 9 层，有斜向支撑牢固塔壁。第一层内的 56 根木柱平均每根负重 110 千克，建成至今已挺立千年！</p>
+<p>斗拱是中国古代建筑中最具特色的支撑构件，用于承托建筑物檐宇，在横梁和立柱之间挑出以承重，将屋檐的荷载经斗拱传递到立柱。斗拱对屋檐有支撑和减震作用，也有较强的装饰性，因此多用于较高等级建筑上。木塔因结构复杂，专门设计运用了 54 种不同类型的斗拱，总数达 480 个，有“中国古代建筑斗拱博物馆”之称。</p>
+<p>“斗”是方形木块，因形状似古代量米的斗而得名。“拱”是一种矩形截面的短枋木，外形略似弓而得名。两者经多重交叉组合形成“斗拱”。在《营造法式》中，斗拱被称为“铺作”。展馆中“中国古代建筑营造技艺”部分对斗拱有着详细介绍。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../di-qi/The-Five-Sacred-Mountains.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../di-qi/The-Five-Sacred-Mountains.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

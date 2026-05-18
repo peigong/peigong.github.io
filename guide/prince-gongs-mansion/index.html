@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 恭王府 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">恭王府 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="恭王府"><a class="header" href="#恭王府">恭王府</a></h1>
+<p>恭王府，由府邸和花园两部分组成，是国家5A级景区，始建于清朝的乾隆四十一年（1776年）。南北长约330米，东西宽180余米，占地面积约61120平方米，其中府邸占地32260平方米，花园占地28860平方米，拥有各式建筑群落30多处。</p>
+<p>恭王府，位于前海西沿、什刹海南岸，是清代规模最大的一座王府，是现在王府中保存最完整的。恭王府的前身，原为乾隆朝权臣和珅的宅第和嘉庆皇帝的弟弟庆王永璘的府邸。清朝咸丰元年（1851年）恭亲王奕訢成为宅子的主人，恭王府的名称也因此得来。恭王府及花园历经了清王朝由鼎盛而至衰亡的历史进程，故有一座恭王府，半部清代史的说法。</p>
+<p>花园位于王府后，又名萃锦园，建于清乾隆四十二年（1777年），据考证是在明代旧园上重修的。园区建筑分东、中、西三路，每路由南自北以严格的中轴线贯穿着的多进四合院落组成。</p>
+<h2 id="府邸"><a class="header" href="#府邸">府邸</a></h2>
+<p>府邸建筑为乾隆时期最高规制，明显的标志是门脸和房屋数量。亲王府有门脸五间，正殿七间，后殿五间，后寝七间，左右有配殿。低于亲王等级的王公府邸决不能多于这些数字。</p>
+<h3 id="中路"><a class="header" href="#中路">中路</a></h3>
+<p>王府中路主要为银安殿和嘉乐堂。</p>
+<p>银安殿俗称银銮殿，是恭王府最主要的建筑，用于举办重大庆典。最初的银安殿连同东西配殿在内的整个院落于民国十年（1921年）元宵节夜因烧香失火被毁。修缮后的银安殿，呈现出恢弘的气势，殿顶铺设绿色琉璃瓦，飞檐之下彩绘金龙。</p>
+<p>嘉乐堂是和珅时期之建筑。因悬挂嘉乐堂匾额得名，该匾疑是乾隆帝赐给和珅的，但匾额无署款，无钤记，故无由证实，但和珅留有《嘉乐堂诗集》，说明是和珅之室名。主要作为王府的祭祀场所，内供有祖先、诸神等牌位，以萨满教为主。</p>
+<h3 id="东路"><a class="header" href="#东路">东路</a></h3>
+<p>王府东路主要为多福轩和乐道堂。</p>
+<p>多福轩是府邸东路的主要建筑之一。恭亲王时期称之谓“多福轩”，因其殿内悬挂的许多“福寿”匾而得名。恭亲王奕䜣在此居住期间，是王府的穿堂客厅，主要用于主人日常接待来客、亲友或前来回禀公事的下属，兼用作存放皇帝送来的礼物。院内有一架古藤萝，据考证已生长200多年，在北京实属罕见。因此这个院又被称为藤萝院。</p>
+<p>“多福轩”此匾为咸丰皇帝所题。意为幸福很多的殿堂。殿内正中悬挂“同德延禧”匾额，意在告诫主人：你与皇帝同德才能延禧（禧：吉祥如意、福寿绵长）。殿内四壁靠近天花板的地方皆悬挂福寿字匾，这些福寿字均写于红色方纸之上（即“斗方”）呈梭形摆放，一福一寿成对制成匾额。</p>
+<p>乐道堂位于府邸东路第四进院落，清代按照以东为尊的习俗，宅院里最主要的人物住在东路，恭亲王奕訢以此为起居处后，改名“乐道堂”，并自称“乐道堂主人”。“乐道堂”原名为道光皇帝亲笔，是奕訢大婚前移居圆明园阿哥所时所题，奕訢为铭记父亲，将自己在阿哥所、海淀旧居、恭王府的居处、陵寝的正堂均命名为“乐道堂”，道光皇帝题匾悬挂在陵寝正堂，其余处是复制的匾额。</p>
+<p>2005年修缮时，在乐道堂北卷正梁上发现了贴金凤凰捧牡丹的彩画。主图案为两只展翅的金凤凰簇拥着一朵盛开的牡丹花，周围环绕着五彩祥云，两侧衬托图案的均以牡丹、金凤、祥云为题材，一派富贵堂皇。</p>
+<h3 id="西路"><a class="header" href="#西路">西路</a></h3>
+<p>西路的四合院落较为小巧精致，主体建筑为葆光室和锡晋斋。</p>
+<p>锡晋斋在和珅居住期间叫做“庆颐堂”，殿名缘自乾隆皇帝御赐的“庆颐良辅”的匾额。房屋因全部采用楠木装修，故又称为楠木厅。</p>
+<p>葆光室位于府邸西路，在和珅与庆王时期为客厅，在恭亲王时期，是秘密客厅，接待王爷至亲所用。“葆光室”的匾额为咸丰帝临幸恭王府时，御题给恭亲王奕訢的，其意味深长。“葆光”一词源于《庄子·齐物论》：“注焉而不满，酌焉而不竭，而不知其所由来，此之谓葆光”。咸丰皇帝之意是让奕訢收敛其光，暗含着告诫之意。恭亲王奕訢为此撰写了一篇《葆光室铭》，表示明白咸丰的意思。</p>
+<h3 id="后罩楼"><a class="header" href="#后罩楼">后罩楼</a></h3>
+<p>府邸最深处建有两层的后罩楼，又称藏宝楼，其后墙一共有44个什锦窗，相传和珅可以根据窗户的形状，来对应宝物的种类。后罩楼位于府邸和花园的衔接处，全长150多米，是一座两层楼阁式建筑。东部为瞻霁楼，西部为宝约楼。后罩楼俗称99间半，蕴含着满则亏的中国古代哲学思想。</p>
+<h2 id="花园"><a class="header" href="#花园">花园</a></h2>
+<p>园区内“西洋门”、“福字碑”、“大戏楼”合称恭王府三绝。</p>
+<h3 id="西洋门"><a class="header" href="#西洋门">西洋门</a></h3>
+<p>西洋门坐落在中轴线上，位于花园中路最南端，是花园的正门，称“静含太古”，为奕訢所建。门由汉白玉石雕砌，形制仿圆明园中大法海园门所建，西洋拱式风格。门额外刻“静含太古”，内刻“秀挹恒春”，西洋门也是园内唯一的西式建筑，可以体现出主人希望通过学习西方文化和技术来挽救清朝统治之意。这也是恭王府的三绝之一，另两绝是大戏楼和后罩楼。</p>
+<h3 id="独乐峰"><a class="header" href="#独乐峰">独乐峰</a></h3>
+<p>独乐峰位于西洋门北部，是高约5米的北太湖石之孤赏石，有点缀园林，不使园内美色尽览之功效。园林专家认为它可同时起到影壁和屏风的作用。石之命名“独乐峰”，或许套用司马光“独乐园”之意。“独乐峰”由于多年风化已经形成一种自然美，像软水漩涡，像淡云舒卷，古朴典雅而又富有诗情画意。</p>
+<h3 id="沁秋亭流杯亭"><a class="header" href="#沁秋亭流杯亭">沁秋亭（流杯亭）</a></h3>
+<p>沁秋亭位于独乐峰的东北方向，是一座八角形的小亭子。沁秋亭是主人在初春、盛夏、深秋时节邀文人雅士们饮酒作诗的地方，又名流杯亭，取东晋大书法家王羲之的《兰亭集序》中“曲水流觞，修禊赏乐”之意。沁秋亭的看点是亭内奇趣的“曲水流觞”，亭后假山中老井的水流入小亭内蜿蜒的沟渠。清水潺潺流入小亭内，园主人常在此接待客人，饮酒作诗。亭内彩绘有二十四孝、白蛇传等故事。</p>
+<h3 id="安善堂"><a class="header" href="#安善堂">安善堂</a></h3>
+<p>安善堂一座宏伟庄重的五开间厅堂，也是萃锦园中路最主要的建筑。其前出抱厦，后带平台，两侧有游廊通向东西两庑。东西配房各三间，东配房为明道堂，西配房为棣花轩。安善堂在蝠池、邀月台、水榭、大戏楼的簇拥下，显得富贵堂皇，景致优美。这里原是主人游园时吟诗、作画的地方，也曾是恭亲王奕訢宴请重要宾客的处所。</p>
+<h3 id="滴翠岩"><a class="header" href="#滴翠岩">滴翠岩</a></h3>
+<p>安善堂北有一座假山，名叫滴翠岩。藏有康熙福字碑的秘云洞，就位于“滴翠岩”中心腹部。假山顶是整个花园的制高点，顶上的建筑叫“绿天小隐”；建筑前面的平台为“邀月台”，是赏月的地方。滴翠岩为一座由太湖石叠成的宝嵦，为恭王府花园所独有。东西各有一条通向假山顶的曲径小道，小道顶端各卧有一带孔的水缸。仆人把水蓄入缸内，夏、秋高温潮湿，石壁间便生出翠绿的苔藓，石黄苔绿，黄绿相间，苍翠欲滴，故名“滴翠岩”。岩下长方形小池中有三组叠石，意为蓬莱、方丈、瀛洲三个仙岛。</p>
+<h3 id="福字碑"><a class="header" href="#福字碑">福字碑</a></h3>
+<p>福字碑位于花园中路滴翠岩下的秘云洞内，是由清圣祖康熙皇帝的御笔刻成。此福字苍劲有力、颇具气势，可分解为多田、多子、多才、多寿，构思巧妙，堪称天下第一“福”。福字碑碑石长7.9米，贯穿整座假山。碑前的地上有一副用碎石子摆成的中国象棋棋盘，方方正正，清晰可见。</p>
+<p>康熙帝很少题字，所以此“福”字极其珍贵。</p>
+<p>府内满园“福”字。多达一万多个，与康熙“福字碑”共同组建恭王府“福”文化。</p>
+<h3 id="蝠厅"><a class="header" href="#蝠厅">蝠厅</a></h3>
+<p>蝠厅又称蝠殿、蝠房子，位于花园中路最北端，也是中路最后一座建筑。建筑正厅五间，前后出抱厦三间。两侧又出耳房，四面出廊，形制多变，如蝙蝠两翼。耳房比正厅略前，形成曲折对称类似蝙蝠的平面，故名蝠厅。其建筑彩绘上的斑竹，全部是由油工一笔一笔画上的。该建筑的造型和彩画被誉为“古建筑中只此一例”。因其特殊形状与较高的地势，此厅自早至暮皆有日照，被誉为北京古建筑只此一例。</p>
+<p>在花园主山和府墙的蔽护下，幽静而秀美，恭亲王奕訢经常在此和大臣们谋划军国大事。这里也是个消夏纳凉的好地方。后成为恭亲王之孙、著名书法家溥儒（溥心畬）的书房。</p>
+<h3 id="邀月台"><a class="header" href="#邀月台">邀月台</a></h3>
+<p>邀月台是恭王府花园中的最高点。两侧的上山路在最下面有两级台阶，再往上都是没有台阶的斜廊。走的时候，游客要一步跨过这两级台阶，这其中是另有道理的。传说古时候人们把台阶看做是坎坷，和珅希望自己在跨过早年的艰辛后，能够一生再也没有那么多的坎坷，仕途顺利，所以修建了这条“平步青云路”。上下“邀月台”走升官发财路是很有讲究的：要使劲地跨过两级“坎坷”，然后平步青云的一直走到山顶，不能从另一边往下走，而只能从旁边的小路下山才不会坏了运气。邀月台是全园的最高处，居高俯览园中，美景尽收眼底。台上三间小室，名“绿天小隐”，现称“福神庙”。每年中秋节，在此摆上点心、水果，是主人与家人或亲朋好友共同赏月的好地方。</p>
+<h3 id="蝠池"><a class="header" href="#蝠池">蝠池</a></h3>
+<p>蝠池因形似蝙蝠而得名，有祈福的寓意。池四周种植榆树，每年春末，榆钱纷落蝠池。“福”和“财”共佑主人吉祥富贵。在清代的北京，往私宅中引入活水，是要经皇帝特批的，恭王府是少数几个获此殊荣的王府之一。这个用青石围砌成的蝙蝠形大水池，旧名为“蝠河”，后称“蝠池”，又因形状像元宝，也称元宝池。水池的周围种满了榆树，每到春夏之交，榆荚飘落，状似铜钱的“榆钱儿”落满蝠池，谐音“福钱”满盈，寓意是福贵双全。</p>
+<h3 id="艺蔬圃"><a class="header" href="#艺蔬圃">艺蔬圃</a></h3>
+<p>艺蔬圃为王府的菜园。主人在种植杂蔬之时，即能体会天地生机、农耕的野趣。</p>
+<h3 id="竹子院"><a class="header" href="#竹子院">竹子院</a></h3>
+<p>与“蓺蔬圃”一街之隔的正北部是一套清幽雅致的院落。恭王府三绝之一的大戏楼就坐落在院中央。穿过垂花门进入第一进院落——竹子院。院东侧的雅舍名为“香雪坞”，是恭亲王的福晋、侧福晋们游园观戏的小憩之处。据说嫡福晋十分喜欢摇曳的翠竹，所以小院四角种的都是竹子。</p>
+<h3 id="明道斋"><a class="header" href="#明道斋">明道斋</a></h3>
+<p>明道斋又名怡神所，位于垂花门内院西侧，为两卷过厅。所说厅内悬挂着当年康熙皇帝御笔“怡神所”匾额一方，因此得名。</p>
+<h3 id="大戏楼"><a class="header" href="#大戏楼">大戏楼</a></h3>
+<p>恭王府大戏楼是花园东路的主要建筑，建于同治年间（1862-1874年），是恭亲王及其亲友看戏的场所。这座戏楼是我国现存独一无二的全封闭式大戏楼。在清廷档案中，戏楼均称为“大戏房”。建筑面积685平方米，其建筑形式采用三卷勾连搭全封闭式结构，据说整个大戏楼虽为砖木结构建筑却没有用一根铁钉。尤其值得一提的是大戏楼的声音效果。大戏楼为了保证声音逼真，将戏台底下掏空后放置了若干口大缸，巧妙特殊的构造增大了共鸣混响空间，使观众身处戏楼里的任何位置，都能清晰地听到不借助任何传声工具的演员的演唱。</p>
+<p>南部后台为演员化妆室，前为舞台，北部为看戏与休息的地方。大戏楼是典型的中国传统大戏楼。1936年，著名画家溥儒为其母祝寿，在此举办了一场盛大的堂会。京剧界的名角齐聚大戏楼，相继登台献艺。这是恭王府大戏楼的最后一次堂会戏。</p>
+<h3 id="榆关"><a class="header" href="#榆关">榆关</a></h3>
+<p>榆关，花园西路的门，是一段二十多米长的城墙。城墙上有垛口，门洞石额上书写着榆关二字。站在榆关的城墙上向北看，有遥望、怀念故土之意。也有的园林专家认为是“移天缩地在君怀”的园林艺术。</p>
+<h3 id="方塘水榭"><a class="header" href="#方塘水榭">方塘水榭</a></h3>
+<p>恭王府花园西路的主要景观，由面积约200平方米的长方形池塘和水中央的湖心亭组成，山中凿泉引水，自池塘三个不同方位的石刻龙头流入池内。</p>
+<h3 id="湖心亭"><a class="header" href="#湖心亭">湖心亭</a></h3>
+<p>花园西路以水景为主，建有一方形水池，水池中间仿造古人画舫之意而建湖心亭。湖心亭又称诗画舫。碧水之上，赏花垂钓，吟诗作画，颇有江南山水的意境。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<h3 id="清朝和孝公主府和珅宅时期"><a class="header" href="#清朝和孝公主府和珅宅时期">清朝和孝公主府（和珅宅）时期</a></h3>
+<p>乾隆四十五年（1780年）五月二十日，乾隆将和珅儿子丰绅殷德指为和孝公主（十公主）额驸。</p>
+<p>同年六月二十一日，乾隆下旨“所有李侍尧入官中一所房屋着赏给和珅作为十公主府第”。</p>
+<p>乾隆四十九年（1784年），和珅建造此府，用时至少超过四年。</p>
+<p>乾隆五十四年十一月（1790年1月），和孝公主（十公主）下嫁丰绅殷德，正式入住此府。</p>
+<p>嘉庆四年（1799年）正月，和珅获罪赐死抄家，宅邸赐予庆王永璘，和孝公主奉旨迁出。</p>
+<h3 id="清朝庆王府时期"><a class="header" href="#清朝庆王府时期">清朝庆王府时期</a></h3>
+<p>嘉庆四年（1799年）三月，庆郡王永璘得到和珅宅邸，宅邸开始称为“庆王府”。</p>
+<p>嘉庆二十五年（1820年）三月，庆亲王永璘病逝，其爵位由三子绵慜继承，降袭郡王，成为庆王府的第二位主人。</p>
+<p>道光十六年（1836年）绵慜病逝，郡王爵位由仪亲王永璇之孙、绵志之子奕彩继承，是庆王府的第三位主人。</p>
+<p>道光二十二年（1842年），奕彩被爆出在其母丧服期间纳妾生子，后又查出奕彩向宗人府书办贿赂三千钱，奕彩被革爵，退回本支。永璘五子绵悌革不入八分镇国公爵位，降一级授镇国将军，承袭永璘祀事，是为庆王府的第四位主人。</p>
+<p>道光二十九年（1849年），绵悌病死，无嗣，其弟绵性之子奕劻承嗣绵悌，降袭辅国将军，成为庆王府的第五位主人。奕劻承袭不久，即奉旨迁到府第西侧不远的琦善旧宅。</p>
+<p>道光三十年（1850年），奕訢奉旨分府，获赐原庆王永璘旧第、辅国将军奕劻府。</p>
+<h3 id="清朝恭王府时期"><a class="header" href="#清朝恭王府时期">清朝恭王府时期</a></h3>
+<p>咸丰二年四月（1852年6月），奕訢正式移居此府，府名史称恭王府。</p>
+<p>在奕訢住进来半年后，咸丰二年十月二十三日（1852年12月4日），咸丰皇帝陪着奕訢的母亲皇贵太妃驾临恭王府，咸丰皇帝还为奕訢府第的殿堂题写了多福轩、葆光室匾额。</p>
+<p>同治初年，奕訢还重新对府邸后花园进行了大规模的修缮，并命名“朗润园”。</p>
+<p>光绪二十四年四月初十日（1898年5月29日），奕訢在恭王府病逝。</p>
+<p>奕訢之孙溥伟奉慈禧皇太后懿旨，承袭恭亲王爵位。</p>
+<h3 id="民国时期"><a class="header" href="#民国时期">民国时期</a></h3>
+<p>1912年1月，溥伟从恭王府出逃。2月清帝退位，恭王府第一次成为王公可以随意处置的私产。</p>
+<p>1924年，隐居西山的溥伟之弟溥儒、溥僡及母回到恭王府花园居住。</p>
+<p>1936年，溥伟病逝后，包士杰于1937年向北平地方法院起诉，法院将恭王府进行拍卖，被辅仁大学买去。溥儒于1938年初离开恭王府。</p>
+<p>1937年，受圣言会委托，圣言会牧师张维笃出面，以19.9万元依法购得恭王府位于地安门外三座桥路，东至府夹道、南至什刹河，西至什刹海河，北至西煤厂街的房屋五百六十九间，廊六十间，以及花园地亩，合计四十九亩三分产权，用于辅仁大学添办女院。</p>
+<p>1939年9月，辅仁大学开始大范围招收女生，恭王府随改称辅仁女院，女院由圣神修女会管理。</p>
+<h2 id="相关人物"><a class="header" href="#相关人物">相关人物</a></h2>
+<h3 id="和珅"><a class="header" href="#和珅">和珅</a></h3>
+<p>和珅，1750年5月28日 ~ 1799年2月22日（即乾隆十五年 ~ 嘉庆四年），原名善保，字致斋，钮祜禄氏，满洲正红旗二甲喇人，自号嘉乐堂、十笏园、绿野亭主人。和珅曾担任和兼任了清王朝中央政府的众多关键要职，封一等忠襄公，官拜文华殿大学士，其职务主要包括内阁首席大学士、领班军机大臣，兼管吏部、户部、刑部、理藩院、户部三库，还兼任翰林完学院学士、《四库全书》正总裁官、领侍卫内大臣、步军统领等数十个重要职务。</p>
+<p>为皇上宠信之极，官阶之高，管事之广，兼职之多，权势之大，清朝罕有。乾隆四十一年（1776年），和珅开始在东依前海，背靠后海的位置修建豪华宅第，时称“和第”。也就是后来的恭王府。</p>
+<p>嘉庆四年（1799年），嘉庆帝即下旨将和珅革职下狱。和珅所聚敛的财富，约值八亿两至十一亿两白银，所拥有的黄金和白银加上其他古玩、珍宝，超过了清朝政府十五年财政收入的总和。乾隆帝死后十五天，和珅以二十大罪被赐白练一条，自尽而死，和珅死时年仅四十九岁。</p>
+<h3 id="李侍尧"><a class="header" href="#李侍尧">李侍尧</a></h3>
+<h3 id="庆王永璘"><a class="header" href="#庆王永璘">庆王永璘</a></h3>
+<h3 id="恭亲王奕訢"><a class="header" href="#恭亲王奕訢">恭亲王奕訢</a></h3>
+<p>爱新觉罗·奕訢（1833年1月11日－1898年5月29日），号乐道堂主人，清末政治家、洋务运动主要领导者，清朝十二家铁帽子王之一。道光帝第六子，咸丰帝异母弟，生母为孝静成皇后博尔济吉特氏，道光帝遗诏封“恭亲王”。咸丰年间，奕訢于咸丰三年（1853年）到咸丰五年（1855年）之间担任领班军机大臣。在第二次鸦片战争中，奕訢授命为全权钦差大臣，负责与英、法、俄谈判，并且签订了《北京条约》。咸丰十一年（1861年），咸丰帝驾崩，奕訢与两宫太后联合发动辛酉政变，成功夺取了政权，被授予议政王之衔。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="he-shen.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="he-shen.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

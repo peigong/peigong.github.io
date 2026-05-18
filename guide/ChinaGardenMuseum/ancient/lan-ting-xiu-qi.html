@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>兰亭修禊 - 中国园林博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国园林博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/ancient/lan-ting-xiu-qi.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="兰亭修禊"><a class="header" href="#兰亭修禊">兰亭修禊</a></h1>
+<p>兰亭修禊：修禊（xiū xì），源于周代的一种古老习俗，即农历三月上旬“巳日”这一天，（魏以后始固定为三月三日），到水边嬉游，以消除不祥，叫做“修褉”。人们相约到水边沐浴、洗濯，借以除灾去邪，古俗称之为：“祓禊”。后文人饮酒赋诗的集会，也称为修禊。春日踏青有“春禊”，秋日秋高气爽，文人怎能辜负这大好时光，自然会有“秋禊”，时间一般是在农历七月十四。历史上最为有名的修禊当数兰亭修禊和红桥修禊。王羲之《兰亭集序》：“暮春之初，会于会稽山阴之兰亭，修褉事也。”</p>
+<h2 id="基本含义"><a class="header" href="#基本含义">基本含义</a></h2>
+<p>修禊，亦称祓禊，是中国古代一种在水边举行的祭祀活动。其核心是“祓”（除恶的祭礼）和“禊”（用水清洁洗涤），目的是祓除不祥、去灾祈福。古人在水边戒浴以除不祥的一种祭祀。</p>
+<p>此习俗源远流长，可追溯至先秦时代。《周礼·春官·宗伯》中有“女巫掌岁时祓除、衅浴”的记载。汉代将上巳（三月上旬的巳日）定为举行“祓禊”仪式的节日，《后汉书·礼仪志上》明确记载“是月上巳，官民皆洁于东流水上，曰洗濯祓除，去宿垢病，为大洁”。《韩诗外传》也记载了郑国“三月上巳之日”在水边“执兰祓除”的习俗。</p>
+<p>魏晋以后，上巳节的日期固定为农历三月初三，即“但用三日，不以上巳也”。节俗内容也从早期以沐浴、招魂、祈福为主的宗教仪式，逐渐演变为临水宴饮、郊游踏青等娱乐活动。其中，文人雅士发展出的“曲水流觞”（即“流杯曲水之饮”）成为最具代表性的雅集形式。</p>
+<p>历史上最著名的修禊活动是东晋永和九年（353年）王羲之在会稽山阴兰亭组织的雅集，后世常以“兰亭修禊”代指此类风雅盛会。此次雅集虽为“修禊”而举办，但其“曲水流觞，一觞一咏”的形式极大地丰富了修禊活动的文化内涵，使之成为文人雅集的经典范式。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<p>兰亭修禊指东晋永和九年（公元353年）暮春三月初三（上巳节），王羲之在会稽山阴（今浙江绍兴）兰亭召集的修禊雅集。参与者包括谢安、孙绰等名士，共41人（一说42人）。活动核心为“曲水流觞”，众人列坐溪水两侧，酒杯顺流而下，停于谁前谁即赋诗，否则罚酒。此次雅集共得诗37首，其中11人各成诗两篇，15人各成诗一篇，16人诗不成被罚酒。事后众人将诗作结为《兰亭诗集》，推举王羲之作序，其即兴挥毫写下《兰亭集序》（又称《禊帖》），成为书法和文学经典。</p>
+<p>兰亭修禊源于先秦上巳节的祓禊习俗，汉代固定为三月三日，魏晋后演变为文人临水宴饮、曲水流觞的雅集活动。王羲之组织的兰亭雅集是上巳节修禊的高峰，使曲水流觞成为文人士大夫效法的雅事。</p>
+<h2 id="基本特征"><a class="header" href="#基本特征">基本特征</a></h2>
+<p>修禊活动按季节可分为‘春禊’与‘秋禊’，兰亭修禊于农历三月初三举行，属‘春禊’。活动通常选择风景优美的水边，如‘崇山峻岭，茂林修竹’之处。</p>
+<p>兰亭修禊融合了民俗仪式与文人雅趣，包括祓禊（洗濯祈福）和‘曲水流觞’（饮酒赋诗）。兰亭修禊开创了文人雅集的经典范式。</p>
+<h2 id="应用"><a class="header" href="#应用">应用</a></h2>
+<p>兰亭修禊以其独特的文化内涵和艺术形式，成为后世文人雅集效仿的典范。</p>
+<p>清代扬州的“红桥修禊”声名堪比“兰亭修禊”。</p>
+<p>后世常在不同地域的园林中通过复现曲水景观或承续雅集精神来体验“兰亭”意境，如明代文徵明重修兰亭故址、米万钟在北京建“勺园”（被誉为“北地兰亭”）、范允临在苏州天平山修筑“小兰亭”。清末广州文人的修禊交游亦体现了“兰亭”作为一种流动的文化体验在不同园林中的转换。</p>
+<p>1913年（癸丑年）上巳节，梁启超在北京万生园发起“癸丑修禊雅集”，有意模仿兰亭雅集的规模与形式，是其流亡返国后的首次重要文化活动。</p>
+<h2 id="影响"><a class="header" href="#影响">影响</a></h2>
+<p>兰亭集会与《兰亭集序》对当时和后世的中国文人都产生了深远的影响。</p>
+<p>王羲之为《兰亭集》作序，即被誉为“天下第一行书”的《兰亭集序》。其书法“遒媚飘逸、圆转流美、劲健婀娜”，被历代书界奉作极品。《兰亭集序》在中国书法史上具有无法替代的地位，为后世树立了书法领域的丰碑，自梁唐后成为“终古之独绝，百代之楷式”。
+《兰亭集序》不仅是书法瑰宝，亦为流传千古的文学名篇。其文“俯仰感慨，实际之语，千载若新”，文中对生死、时空的哲学感慨引发了后世文人的广泛共鸣。文史大家周汝昌将其列为中华文化的三大国宝之一。</p>
+<p>兰亭雅集被视为魏晋风度的集中体现，是“魏晋风度最杰出的代表作之一”。它留下了文人雅集的经典范式，成为后世文人精神向往的典范，象征着一种审美化、超越功利的人生态度。</p>
+<p>此次集会汇聚了王、谢、庾、桓等东晋南北士族名流，“体现了黄河文化、长江文化以及钱塘江文化的对话”。兰亭修禊被视为民族文化融合与江南文化开发的一个历史见证，为后世的文化认同与统一埋下了伏笔。</p>
+<p>兰亭修禊开创的文人雅集范式被后世不断模仿和追慕。历代文士雅集常以之为比拟，如刘禹锡赞“洛下今修禊，群贤胜会稽”。后世产生了诸如清代红桥修禊、梁启超1913年万生园癸丑修禊等致敬活动，并在园林设计（如“北地兰亭”勺园）和绘画创作（兰亭修禊图）中持续激发灵感，形成了流动的文化体验。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>关于兰亭雅集的参与人数，历史记载存在41人与42人两种说法，具体人名也存在不同考证。《兰亭集序》存在不同版本，如《临河叙》《三日兰亭诗序》等，文本内容略有差异，反映了早期的不同文本流传。明清时期有兰亭修禊图的研究，如明代文徵明的《兰亭修禊图》，体现了对雅集的文化想象与艺术再现。现代学术研究关注“兰亭”作为文化符号在不同时代、地域的流动与转换，以及修禊活动中的园林体验与交游网络。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ancient/yue-ren-shou-you-che.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ancient/wang-chuan-bie-ye.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ancient/yue-ren-shou-you-che.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ancient/wang-chuan-bie-ye.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>东胡林人 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/Dong-Hu-Lin-people.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="东胡林人"><a class="header" href="#东胡林人">东胡林人</a></h1>
+<h2 id="东胡林人-1"><a class="header" href="#东胡林人-1">东胡林人</a></h2>
+<p>东胡林人是距今约1万年的新石器时代早期人类遗存，遗址位于北京市门头沟区斋堂镇东胡林村西侧清水河北岸的马兰黄土台地。1966年4月由北京大学地质地理系学生郝守刚发现。出土包含少女骨骼、螺壳项链、牛肋骨骨镯等遗存，属北京地区继周口店遗址后的重要考古发现，因发现地得名。墓葬位于全新世黄土底部，被定为新石器时代早期。该遗址于1985年被公布为门头沟区文物保护单位，1995年被划定为地下文物埋藏区，并于2021年成为北京市文物保护单位。</p>
+<p>遗址包含灰坑、石器制作场及火塘遗迹，2001年、2003年及2005年进行了三次正式考古发掘，陆续发现墓葬、陶片、磨制石器等文化堆积。2003年出土完整人骨及玉石制品，证实处于旧石器向新石器过渡阶段。出土文物涵盖打制石器、磨制石斧、夹砂陶片及鹿类动物骨骼，其中发现了14粒炭化粟粒和1粒炭化黍粒，是中国最早的栽培粟和黍实物。遗址地层堆积厚达2米，包含更新世晚期至全新世中期堆积。该遗址曾入选“2005年中国六大考古新发现”，并已举办多届“东胡林人”学术论坛。2025年3月，东胡林人陈列室正式对外开放，该陈列室是集文化展示、科普教育、休闲旅游于一体的综合性文化场馆。</p>
+<h3 id="简介"><a class="header" href="#简介">简介</a></h3>
+<p>东胡林人生活在距今大约1万年。遗址位于门头沟区军饷乡东胡林村西侧，遗址地处更新世马兰黄土台地间。</p>
+<p>该遗址是新石器时代早期的人类文化遗址。于1966年被发现的。文化遗址内出土物品人骨化石，经鉴定属两个成年男性和一个少女个体。在少女遗骸的颈部位置有用小螺壳串制的项链，腕部佩戴有牛胁骨制成的骨镯。</p>
+<h4 id="出土记"><a class="header" href="#出土记">出土记</a></h4>
+<p>1966年4月，北京大学地质地理系学生郝守刚发现了一具较完整的少女骨骼和作为“项链”用的螺壳及两具成年男性的零星体骨等材料。这些尸骨后经中国科学院古脊椎动物与古人类研究所周国兴和尤玉柱两位研究员研究。</p>
+<p>1996年，为了建立剖面的时间框架，系统地采集了黄土剖面上的碳14样品，随后也采集了热释光样品。为了分析先民们生活的环境，我们对保留有遗址的东胡林黄土剖面进行了分层、系统地取样，包括了岩性、物性、化学分析和孢粉分析的样品，还从黄土剖面上系统地筛洗了蜗牛的样品。</p>
+<p>东胡林人，因1万年前生活在北京西郊的东胡林村而得名的古代人类，作为生活在旧石器晚期向新石器早期过渡期间的古代人类，东胡林人甚至被有些专家看作是北京地区新石器文化的创造者和革命者，是北京地区创造新石器文化的鼻祖。</p>
+<p>考古工作者在发掘北京西郊的东胡林人遗址时发现1具古人类尸骨，后来被专家认定正是东胡林人遗骨。</p>
+<p>2003年9月24日，东胡林人考古发掘队开始对东胡林人遗址进行最新一次的科学发掘。</p>
+<p>最初发掘出的是一些石器、陶器、骨器和几处用火遗迹，在东胡林人的“火塘”中还发现一些烧焦的兽骨和木炭。但在发掘工作进入尾声时的10月19日，在发掘区的东部偶然挖到一具完整的尸骨。后被专家认定是东胡林人尸骨。</p>
+<p>为什么就认定这具尸骨属东胡林人？东胡林考古发掘队领队、北京大学考古文博学院教授赵朝洪教授对此解释说，先前已有研究证实北京地区早期东胡林人活动的地质构层为紫褐色土层，此次出土尸骨的墓葬地层明显位于紫褐色土层以下，而且墓葬的开口在早期东胡林人的活动地层——紫褐色土层内，这就有力地证明了出土的尸骨属于东胡林人。</p>
+<h4 id="东胡林人运回北京大学"><a class="header" href="#东胡林人运回北京大学">东胡林人运回北京大学</a></h4>
+<p>10月30日，东胡林人尸骨被安全运抵北京大学。考古人员表示，对东胡林人更深入的研究将在北京大学考古文博学院的实验室进行。</p>
+<p>东胡林人考古队副领队、北京市文物研究所研究员郁金城告诉记者，尸骨整体搬运，必须保证其完整性，所以要“套箱”搬运。所谓“套箱”就是将尸骨连同它身下附着的土层一起挖出来，然后整体打包装箱搬运。估计整个土块长约190厘米，宽约70厘米，厚约40厘米。</p>
+<p>由于遗骸目前已经非常脆弱，为了确保安全，考古人员首先在尸骨上覆盖了一层宣纸，并在上面喷水，以防干裂，同时在尸骨的头部及骨盆等容易移位和断裂处用石膏进行了加固。</p>
+<p>在尸骨套箱搬运之前，考古工作者对古人类尸骨做了最后的整理工作：拍照片、画草图，将考古挖掘过程中每一个细节如实记录下来。</p>
+<h4 id="遗址介绍"><a class="header" href="#遗址介绍">遗址介绍</a></h4>
+<p>发掘的遗迹有灰坑3个，灰堆8处，石器制作场1处。8处灰堆遗迹堆积状况大致相似，位于T3的东北部，范围约为80×60平方厘米。中心区域有大量的黑色灰烬，包含物中数量较多的是有烧烤痕迹的砾石块、有打制疤痕的石核和动物骨骼（可辨识的主要是鹿骨）等。该遗迹自上至下都发现有石块，上部的石块堆积较乱，底部的石块则大致堆如环状，排列比较整齐。遗址的发现是考古史上的一个重大发现，也让世人更加意识到北京地区的远古时代还有很多可探究的地方。1966年在清水河西岸的第二级黄土台地上出土人骨3具，未发现有墓圹。正中一具为16岁左右的少女，是一次葬，有颅骨、椎骨、股骨、髌骨、胫骨和耻骨，还有若干指（趾）骨。两侧各为男性成人骨骼1具，是二次葬，仅残存一些体骨和头骨碎片，其中比较完整的有左侧股骨、腔骨和骸骨。在少女骨骼颈部周围发现由50余枚小螺壳制成的项链，最大者长18毫米，宽16毫米，厚11毫米；最小者长11.5毫米，宽8毫米，厚6毫米。在少女骨骼的腕部周围发现由7枚骨管制成的骨镯，骨管是由牛肋截断磨制而成。骨管形状稍偏，最长的约39毫米，宽17毫米，厚9.5毫米；短的长29毫米，宽22毫米，厚10毫米。另外，在其胸部还发现蚌类的壳制品2件，一件扁平，另一件为扁平长棒，上端均有穿孔。在人骨附近发现灰色石英岩石片8件，其中6件有明显的人工打击痕迹。1995年春，在遗址断面发现人骨1具，并采集有螺壳项链和石制品等，但未发现有墓圹。2001年在T1东隔梁外发现比较集中的一堆人骨，但明显经过扰动，未发现有墓圹。2003年在T8第8层下发现1座保存完好的墓葬，墓圹清楚。墓向北偏西70°，墓口距地表150厘米，墓坑长220厘米，宽42-48厘米，深52-76厘米。墓内有保存完整的人骨1具，仰身直肢，人骨长约1.6米。随葬磨制而成棍状玉石制品（初步鉴定为方解石类）1件，该随葬品位于人骨鼻与口间。</p>
+<h3 id="遗址概况"><a class="header" href="#遗址概况">遗址概况</a></h3>
+<p>东胡林人遗址位于北京市门头沟区斋堂镇东胡林村西，永定河支流清水河北岸的二级阶地上。遗址现存面积约3000平方米。文化遗存年代为距今11000年至9000年，属新石器时代早期。该遗址于1985年公布为门头沟区区级文物保护单位，1995年公布为北京市地下文物埋藏区，2021年成为北京市文物保护单位。</p>
+<h3 id="考古发掘"><a class="header" href="#考古发掘">考古发掘</a></h3>
+<p>东胡林人遗址位于北京市门头沟区斋堂镇东胡林村西，永定河支流清水河北岸的二级阶地上，现存面积约3000平方米。该遗址于1985年被公布为门头沟区区级文物保护单位，1995年被划定为北京市地下文物埋藏区，并于2021年成为北京市文物保护单位。东胡林人生活在距今约11000至9000年前（或距今约1万年前后）。</p>
+<p>1966年4月，北京大学地质地理系学生郝守刚发现了该遗址。2001年、2003年、2005年，经国家文物局批准，由北京大学考古文博学院与北京市文物研究所（现北京市考古研究院）联合组成的东胡林考古队，对遗址进行了三次正式考古发掘，揭露面积累计数百平方米。发掘发现了墓葬、火塘、灰坑、石器制作场等遗迹，出土了包括打制石器、磨制石器、细石器、陶片、骨器、蚌器以及大量动植物遗骸在内的丰富文化遗物。2016年，在原遗址东侧垮塌的黄土断面上新发现了一具“东胡林人”遗骸，随后北京市文物研究所对其进行了抢救性清理和考古调查。</p>
+<h3 id="出土文物"><a class="header" href="#出土文物">出土文物</a></h3>
+<p>遗址中出土文物主要有石制品、骨制品、陶片、动物骨骼和果壳等。石制品包括有打制的石核、石片、砍砸器、石锤、刮削器、尖状器和细石叶、石片、石屑等，还有琢磨而成的石磨盘、石磨棒等。按照制作技术划分，石器可分为打制、磨制和细石器三大类。此外，遗址中还有石臼和用于研磨赤铁矿颜料的石研磨器。骨制品有尖状器、骨锥、骨笄等。此外，还有骨鱼镖和骨柄石刃刀等。其中骨柄石刃刀的加工较为精细，骨柄上刻有花纹。陶器仅见少量残片，多为器物腹片及底片，偶有口沿残片。</p>
+<p>陶片多为红褐色，均为夹砂陶，质地疏松，火候不均，有的陶片外表红褐色，内壁则为黑色。除个别有附加堆纹外，均为素面陶。从断面观察，有的陶片内外成片脱落，似为泥片贴筑法制成。整体来看，多为罐类器物残片。器型主要为平底直腹盆（或称盂）。陶器烧成温度不高，约在500℃，陶质较为疏松，颜色并不均匀，表面多呈现斑驳的红褐色或黑褐色。纹饰方面，除素面外，少数饰有附加堆纹和压印纹。动物骨骼数量较多，以鹿类居多，同时有猪和獾等哺乳动物。另发现大量的蚌壳、螺壳和蜗牛等。</p>
+<p>经过科学系统的浮选工作，遗址中还发现了炭化木屑、种子、果核和果实等植物遗存。尤为重要的是，发现了14粒炭化粟粒和1粒炭化黍粒。经鉴定，粟粒在形态上已具备栽培粟的基本特征，是迄今发现最早的栽培粟实物证据。</p>
+<p>装饰品除有钻孔和磨痕的蚌饰外，还包括由牛肋骨截断磨制而成的骨镯，以及用穿孔螺壳串制而成的项链。螺壳经鉴定为紫游螺。</p>
+<h3 id="文化特征"><a class="header" href="#文化特征">文化特征</a></h3>
+<p>东胡林人的文化特征鲜明，体现了旧石器时代向新石器时代过渡的关键阶段。东胡林人过着一种半定居的采集狩猎生活，兼有早期的农业生产活动，栽培粟和黍。生活设施包括十余座形状多呈不规则圆形的火塘，用于取暖和加工食物，推测为季节性活动使用。墓葬均为土坑竖穴墓，葬式包括仰身直肢葬和仰身屈肢葬，随葬品较为丰富，常见螺壳项链、磨光小石斧、骨镯、磨制的棍状玉石制品等。</p>
+<p>手工业方面，石器技术呈现过渡特征，打制石器（如砍砸器、刮削器）、磨制石器（局部磨光的石斧、石锛）与加工精细的细石器（燧石石核、石片）并存。陶器制作处于初级阶段，烧成温度不高（约500℃），陶质疏松，器型简单，主要为平底直腹盆（或称盂），纹饰有附加堆纹和压印纹。骨器加工技术成熟，可制作骨锥、骨笄、骨鱼镖和刻有花纹的骨柄石刃刀。装饰艺术发达，螺壳项链（由紫游螺等制成）和骨镯等饰品，不仅展现了工艺水平，也反映了先民的审美意识。</p>
+<h3 id="意义"><a class="header" href="#意义">意义</a></h3>
+<p>在位于北京市门头沟区斋堂镇东胡林村村西的东胡林人遗址考古挖掘中，发现了中国最早的新石器早期完整人类骨架，据北京大学考古文博学院吕遵谔教授介绍，这么完整的墓葬在中国仅此一处。同时，还挖掘出一批新石器早期的陶器、石器、骨器、装饰品和烧火遗迹等重要文化遗存。此次发现找到了北京创造新石器文化的鼻祖，东胡林人是新石器文化的创造者、革命者，是新文化的迎接者。被挖掘出来的东胡林人，目测身高在1.60m以上，由于骨架还没有完全从地里取出，具体身高还要等骨架完全取出之后才能确定。</p>
+<p>从表面看东胡林人骨架保存完好，鼻部有类似玉石的覆盖物，据专家考证可能是陪葬物。在考古学上被挖掘出来的骨架是男是女对考证人类社会制度及陪葬制度都有重要意义，因此，专家对此都持慎重态度，虽然对骨架的性别进行了较为细致的考证，但是男是女，骨架的性别要在实验室内进行详细研究及经过DNA检测后才能确定。</p>
+<p>东胡林人类骨架的发现对考古学、人类学、环境地理学等多学科的研究都具有重要意义。从考古学上说，东胡林人骨架的发现对研究北京地区乃至华北地区的地层，对研究距今一万年左右的新石器时代早期墓葬，对发现东胡林人与北京周口店人、山顶洞人的历史渊源等有重要学术价值。</p>
+<p>中科院院士吴新智认为，东胡林人所处的考古阶段正是新旧石器交替时期，能发现这么早期的新石器人类骨架，而且保存的如此完整，填补了自山顶洞人（距今约3万年）以来至距今一万年左右人类发展链条中的空白。根据碳十四测年，东胡林人生活的年代在距今约11000~9000年之间。东胡林人与山顶洞人在体质特征、石器制作技术、葬制葬俗和审美观念等方面显示出一定的传承关系。吕遵谔教授认为这个遗址很重要，在旧石器晚期到新石器早期这个历史环节上缺乏必要的材料，东胡林人的发现是很关键的环节，将旧石器晚期到新石器早期的人类链条联接起来了。东胡林人所处的考古阶段正好是从冰期向冰后期转变的时期，这一时期地球上自然环境发生巨变，人类如何适应这种突变，一直是国际上学者们研究的重点课题，此次考古发现对研究北京地区特别是山区气候的变化，研究环境变化与人类早期文化发展的关系具有重要的意义。</p>
+<p>人类为什么会改变狩猎、采集的生活习惯，为什么开始从事农业生产，一直是考古学界争论的热点，一般认为早期农业产生在一万年左右，但国际、国内对这个时期缺乏必要的考古发现，遗址、遗物很少。地层没有东胡林这么完整，更没有人类骨架的发现。东胡林遗址发现了早期栽培粟和黍的实物证据，为研究中国北方旱作农业起源提供了关键材料。东胡林人遗址是十分难得的考古研究基地，对研究华北地区环境的变迁，中国早期农业、早期陶器的出现及其人地关系具有重要意义。该遗址的发掘为研究华北地区乃至整个中国新石器时代早期人类及其文化提供了重要依据。</p>
+<p>2022年11月初，民盟北京市委落实“8+1”行动，赴门头沟区政府召开了推进东胡林人遗址申报国家文物保护单位座谈会。会议针对如何推动东胡林人遗址由市级文保单位向国家级文保单位迈进展开讨论，并围绕遗址的保护现状、未来规划建言献策。</p>
+<h3 id="陈列开放"><a class="header" href="#陈列开放">陈列开放</a></h3>
+<p>2025年3月，北京市门头沟区斋堂镇东胡林村内的“东胡林人”陈列室正式开放。</p>
+<h2 id="东胡林人遗址"><a class="header" href="#东胡林人遗址">东胡林人遗址</a></h2>
+<p>东胡林人遗址，位于北京市门头沟区斋堂镇东胡林村，发现于1966年，是一座新石器时代早期的墓葬。</p>
+<p>东胡林人遗址是北京地区重要的新石器时代古人类文化遗址，对于研究古代人类生产生活方式及聚落形态具有重要意义，填补了自山顶洞人以来华北地区人类发展史的空白。不仅如此，东胡林人遗址的发掘还对考古学、第四纪地质学、古环境学、人类学等诸多学科的研究提供了重要的新资料。</p>
+<p>1985年，东胡林遗址被北京市门头沟区人民政府公布为北京市门头沟区第二批区级文物保护单位。2006年1月10日，北京门头沟区东胡林史前遗址被中国社会科学院考古论坛公布为2005年中国六大考古新发现。2021年8月19日，东胡林人遗址被北京市人民政府公布为北京市第九批市级文物保护单位。</p>
+<h3 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h3>
+<p>1966年4月，北京大学地质地理系学生郝守刚在门头沟区实习期间发现遗址，后由中国科学院古脊椎动物与古人类研究所进行调查和发掘，并命名为东胡林人遗址。</p>
+<p>1995年，北京大学地质系师生在调查时在东胡林人遗址断面发现一具人骨，并采集有螺壳项链和石制品等。</p>
+<p>2001年7月，经国家文物局批准，北京大学考古文博学院与北京市文物研究所联合组成东胡林考古发掘队，对东胡林人遗址进行发掘。</p>
+<p>2003年9月18日，东胡林考古发掘队第二次对东胡林遗址进行发掘。</p>
+<p>2005年，东胡林考古发掘队第三次对东胡林遗址开展考古工作。</p>
+<p>2006年，东胡林考古发掘队第四次对东胡林遗址开展考古工作。</p>
+<h3 id="遗址特点"><a class="header" href="#遗址特点">遗址特点</a></h3>
+<p>东胡林人遗址位于永定河支流清水河北岸二级阶地的马兰黄土上，高出清水河河床约29米，现存面积约为3000平方米，墓葬均为土坑竖穴墓，埋葬方式有两种，仰身直肢与仰身屈肢。墓葬内共发现7具东胡林人骸骨。</p>
+<h3 id="文物遗存"><a class="header" href="#文物遗存">文物遗存</a></h3>
+<p>东胡林人遗址出土的文物主要有石制品、骨制品、陶片、动物骨骼和果壳等。其中石制品为大宗，包括有打制的石核、石片、砍砸器、石锤、刮削器和尖状器和细石叶、石片、石屑等，还有琢磨而成的石磨盘、石磨棒等；骨制品有尖状器、骨锥、骨笄等；陶器仅见少量残片，多为器物腹片及底片，偶有口沿残片，似为泥片贴筑法制成。动物骨骼数量较多。多为鹿类动物的肢骨及颚骨、牙齿等，也发现有猪的遗骸。另发现大量的蚌壳、螺壳和蜗牛等。其中极少蚌壳有钻孔和磨痕，应为装饰品。</p>
+<h3 id="学术研究"><a class="header" href="#学术研究">学术研究</a></h3>
+<h4 id="东胡林人-2"><a class="header" href="#东胡林人-2">东胡林人</a></h4>
+<p>对东胡林人遗址出土的人骨进行体质人类学研究之后，与山顶洞人、北阴阳营、侯家庄、小屯和绣球山的标本进行对比，认为东胡林人属于蒙古人种，具有较多的原始性。</p>
+<p>中国科学院古脊椎动物与古人类研究所付巧妹研究员团队联合东胡林考古队与北京大学、首都师范大学合作者，最近对东胡林遗址出土的距今约1.1万年至9000年三例人骨遗存开展古DNA研究。他们从全基因组、线粒体基因组、Y染色体等多个角度系统分析，发现了此前未知的、深度分化的东亚北方支系，并揭示了东亚北方旧新石器时代过渡时期的人群动态变化、跨区域交流及遗传多样性。遗传学分析显示，距今约1.1万年的东胡林M1女性个体代表了一支此前未被识别的、深度分化的东亚北方支系，其分化时间与目前已知最古老的东亚北方人群——黑龙江流域距今约1.9万年的AR19K人群相近。这表明，部分更新世晚期深度分化的东亚北方支系成功跨越冰期，存续至全新世并开始了具有新石器时代特征的实践。研究发现，东胡林M2男性个体与同一遗址较早期的东胡林M1相比发生了遗传成分的变化，这与遗址上下层陶器器型变化、人骨形态学差异等证据高度吻合，说明在全新世早期升温过程中，东胡林遗址内部发生了人群更替，这一模式与万年前后同时期的黑龙江流域及山东地区人群表现出的遗传连续性不同。此项研究观察到东胡林遗址人群和外界人群存在跨区域交流，并给出遗传学证据，如东胡林M1相关遗传成分对黑龙江流域距今1.4万年以来的人群(ARpost14K)存在基因交流；东胡林M2与内蒙古新石器时代早期裕民文化人群的遗传联系。同时，遗址内发现的可能为外来的紫游螺壳项链、鸵鸟蛋壳等装饰品，也支持了这一观点。本项研究还观察到，旧新石器时代过渡时期东亚北方地区人群在遗传上具有较高的多样性，并发现局部地区人群具有不稳定性，这一模式与近东向欧洲农业驱动的人群扩张的模式不同，说明东亚北方地区在过渡时期存在不同的人群动态与过渡模式。</p>
+<h4 id="年代测定"><a class="header" href="#年代测定">年代测定</a></h4>
+<p>对东胡林人遗址地层中采集的木炭、人骨、贝壳、蜗牛及陶片样品进行测定。从测年结果看，东胡林人遗址的年代为距今11500—9000年间，属于新石器时代早期。较晚文化层中的样品年代也大致为距今10300—9000年间，属于新时期时代早期的偏晚阶段。</p>
+<h4 id="气候研究"><a class="header" href="#气候研究">气候研究</a></h4>
+<p>根据东胡林人遗址中采集的孢粉分析，全新世早期（约10.0—8.2KaBP），木本植物花粉明显增多，高达55%，包括喜温的松、杉、云杉、铁杉有个别发现（现生活在亚热带）、栎属、胡桃等，与晚更新世相比，草本植物明显减少；组合表明气温大幅上升，环境有了明显改变，人类活动明显。依草本植物组合的变化及木本植物组合的特征，大体可分为上下两段：下段（约10.09.0KaBP），喜干的蒿属占有较高的比例，个别样品可达30%；另外，藜科、莎草、豆科，木本中杉和桦属含量较高。上段（9.0—8.2KaBP），蒿属及莎草在组合中的比例明显减少，禾本科有所上升，木本中出现个别铁杉。下段的孢粉特征显示了温暖偏干的气候，上段为温暖湿润。</p>
+<p>另外，对东胡林人遗址内采集到的蜗牛和紫游螺进行动物考古学研究，发现在早全新世（约10.0—8.2kaBP）东胡林人生活地域内蜗牛突然繁盛，在文化层中采集到丰富的蜗牛个体，经鉴定共包括11种。基本上以北方广适性类型为主；代表暖湿的类型仅为条纹钻螺，该种自下而上逐渐增多；代表较为冷干的类型可能为灰巴蜗牛，该种发现的数量很少。</p>
+<h4 id="葡萄属种子"><a class="header" href="#葡萄属种子">葡萄属种子</a></h4>
+<p>考古专家通过对全国20多处考古遗址出土的葡萄属种子，包括内蒙古赤峰辽上京遗址、河南洛阳二里头遗址、安徽蚌埠禹会遗址、北京东胡林遗址出土的葡萄属种子，分别距今约800年、3000多年、6000多年、1万年，进行系统研究后发现，早在西方葡萄传入我国之前，中国本土就已经存在持续了数千年的葡萄属植物资源利用史，欧亚种葡萄传入后，并没有完全取代本土葡萄属植物，二者经历了长期的共存。</p>
+<h3 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h3>
+<p>东胡林人遗址是北京地区重要的新石器时代古人类文化遗址，对于研究古代人类生产生活方式及聚落形态具有重要意义，填补了自山顶洞人以来华北地区人类发展史的空白。不仅如此，东胡林人遗址的发掘还对考古学、第四纪地质学、古环境学、人类学等诸多学科的研究提供了重要的新资料。</p>
+<p>东胡林人遗址的发现，为永定河文化带注入了最古老的文明基因，丰富了其“山水相依、文明共生”的核心内涵。永定河作为“北京的母亲河”，孕育了从史前到近现代的多元文明，而东胡林人正是这条文明长河中已知最早的居民。</p>
+<h3 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h3>
+<p>1985年，东胡林遗址被北京市门头沟区人民政府公布为北京市门头沟区第二批区级文物保护单位。</p>
+<p>2006年1月10日，北京门头沟区东胡林史前遗址被中国社会科学院考古论坛公布为2005年中国六大考古新发现。</p>
+<p>2021年8月19日，东胡林人遗址被北京市人民政府公布为北京市第九批市级文物保护单位。</p>
+<h3 id="旅游信息"><a class="header" href="#旅游信息">旅游信息</a></h3>
+<p>东胡林人遗址位于北京市门头沟区斋堂镇东胡林村。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/shan-ding-dong-ren.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/long-gu-po.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/shan-ding-dong-ren.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/long-gu-po.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

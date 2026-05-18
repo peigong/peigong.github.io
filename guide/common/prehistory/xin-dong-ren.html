@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>新洞人 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/xin-dong-ren.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="新洞人"><a class="header" href="#新洞人">新洞人</a></h1>
+<h2 id="新洞人-1"><a class="header" href="#新洞人-1">新洞人</a></h2>
+<p>新洞人是1973年在周口店第四地点"新洞"中发现的人类牙齿化石所代表的古人类群体，其齿冠形态特征介于北京猿人与山顶洞人之间。该发现填补了周口店遗址北京猿人（距今约70万-20万年）与山顶洞人（距今约3万年）之间的演化缺环，展现了直立人向早期智人过渡的连续性。遗址中同时出土石英石器、用火遗迹及40种哺乳动物化石，证实该群体具备制作工具和控制火源的能力。</p>
+<h3 id="发现与命名"><a class="header" href="#发现与命名">发现与命名</a></h3>
+<p>1967年在周口店第四地点北端发现新洞穴，1973年正式发掘时在堆积层中发现一枚人类左上第一前臼齿化石。该牙齿比北京猿人同类牙齿短小，齿根近中、远中径较现代人粗壮，齿冠咬合面纹路呈现北京猿人向现代人过渡特征。经中科院古脊椎动物与古人类研究所研究，1976年被正式命名为"新洞人"。</p>
+<h3 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h3>
+<p>牙齿化石测量数据显示：</p>
+<p>齿冠颊舌径9.2毫米，小于北京猿人（10.5毫米）而大于山顶洞人（8.1毫米）</p>
+<p>咬合面副脊结构复杂程度介于两者之间</p>
+<p>牙根长度17.8毫米，保持原始特征但较北京猿人缩短11%</p>
+<p>具有典型的铲形门齿演化特征，与北京猿人、山顶洞人构成蒙古人种演化序列</p>
+<h3 id="遗址与遗存"><a class="header" href="#遗址与遗存">遗址与遗存</a></h3>
+<p>新洞位于龙骨山东南角，距猿人洞70米，洞内文化层厚3米，包含：</p>
+<ul>
+<li>石器：采用锤击法和砸击法制作的刮削器、尖状器，原料为脉石英</li>
+<li>用火证据：底部0.5米厚的灰烬层，含烧骨与炭屑</li>
+<li>动物化石：包含变种狼、最后剑齿虎等33属40种，显示温带森林生态环境</li>
+<li>共存物种：扁角肿骨大角鹿证明其与北京猿人早期文化存在关联</li>
+</ul>
+<h3 id="学术价值"><a class="header" href="#学术价值">学术价值</a></h3>
+<p>新洞人距今约10万-17万年的测年数据，确立其在东亚人类演化谱系中的关键地位：</p>
+<ul>
+<li>体质特征填补直立人与智人形态差异的40%演化缺环</li>
+<li>石器技术延续北京猿人传统，未见明显技术跃升</li>
+<li>为研究古人类适应冰期间冰期气候波动提供地层证据</li>
+<li>与田园洞人、山顶洞人共同构成周口店连续50万年的人类活动证据链</li>
+</ul>
+<h2 id="新洞人遗址"><a class="header" href="#新洞人遗址">新洞人遗址</a></h2>
+<p>新洞人遗址位于北京市房山区周口店遗址东南端，距离“猿人洞”约70米，是一处南北向的裂隙堆积洞穴。该地点在1967年被发现，并于1973年进行了正式发掘。其地质时代为中更新世末期，堆积物主要为黄色沙质粘土。</p>
+<p>遗址中出土了一枚早期智人牙齿化石、石器以及大量哺乳动物化石。根据热发光测年等技术测定，其年代存在约10万年、13.5万至17.5万年、20万至10万年等不同数据。所发现的人类牙齿实际出自周口店第4地点的堆积物，而非“新洞”内，“新洞人”的命名也曾被指出不确切。该遗址的发现为研究周口店地区古人类演化提供了材料。</p>
+<h3 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h3>
+<p>周口店遗址第四地点于1927年发现，并于1937年至1938年进行了正式发掘。1967年，几名中学生红卫兵在参观周口店猿人遗址时，于第四地点北侧发现一个裂口，其通向一个被堆积物封堵的小山洞，此洞后来被称为“新洞”。</p>
+<p>1973年3月，中国科学院古脊椎动物与古人类研究所组织人员对第四地点及新洞进行了正式发掘，在发掘过程中发现了一枚古人类左上第一臼齿化石及大量哺乳动物化石。此次发掘后，该洞被正式命名为“新洞”，并依据出土的人类化石将这一时期在此居住的人类命名为“新洞人”。</p>
+<p>有学术观点指出，1973年发现的人类牙齿化石实际出土于第四地点的堆积物中，而非新洞内部，但“新洞人”的名称已被广泛使用。</p>
+<h3 id="地理位置与地质特征"><a class="header" href="#地理位置与地质特征">地理位置与地质特征</a></h3>
+<p>新洞人遗址位于北京市房山区周口店龙骨山东南角，在遗址东南端，距离著名的“猿人洞”（第1地点）约70米，在第4地点以东约12米处。洞穴整体呈现南北走向，新洞本身是一个呈弧形的裂隙堆积洞穴，宽10米以上，堆积物厚2米多。该遗址属于裂隙堆积类型，主要堆积物为黄色沙质粘土。具体而言，堆积物自下而上为黄色砂质粘土和角砾，其中夹有3~4层石灰华，底部可见条带状灰烬。值得注意的是，根据后续研究厘清，被命名为“新洞人”的人类左上第一臼齿化石实际出土于第4地点的堆积物中，而非新洞内部。新洞内部的堆积物具有水平层理，属静水沉积，这与第4地点堆积物在沉积过程中突入洞内形成的、上表面倾斜的堆积物在物质构成和层理上完全不同。地质年代测定为中更新世末期，其地层结构与北京人遗址上部堆积层具有相似性。</p>
+<h3 id="遗址特点"><a class="header" href="#遗址特点">遗址特点</a></h3>
+<p>新洞人遗址位于周口店龙骨山东南角，是周口店遗址群中的第4地点的一部分，距离猿人洞（第1地点）约70米，是一个南北向的洞穴-裂隙。遗址堆积物主要为黄色砂质粘土，厚2米以上，宽10米以上，自下而上为黄色砂质黏土和角砾，其中夹有3~4层石灰华，底部有条带状灰烬层。</p>
+<p>需要注意的是，根据最新研究澄清，新洞本身的堆积物是静水沉积，未发现化石和人类遗物；而通常所说的“新洞人”牙齿化石实际出土于第4地点的堆积物中。洞内环境冬暖夏凉，温度适宜。</p>
+<p>遗址堆积中发现了较厚的灰烬层，其中有被火烧过的石块、骨头和朴树籽，表明古人类曾在此长期用火，同时也出土了石器。根据出土的40多种哺乳动物化石分析，包括肿骨鹿、葛氏斑鹿、马鹿、东北狍、披毛犀、象类、棕熊及多种啮齿类动物，新洞人时期周口店一带的环境以森林为主，间有小片草地，气候相对温暖湿润，但比第1地点（猿人洞）时期稍偏凉。</p>
+<h3 id="考古发现与测年数据"><a class="header" href="#考古发现与测年数据">考古发现与测年数据</a></h3>
+<p>遗址考古发掘中出土早期智人牙齿化石及大量哺乳动物化石，包含38种动物物种，其中以食肉类和啮齿类为主。热发光测年技术对灰烬层样本的分析结果显示，该遗址人类活动时间跨度在13.5万至17.5万年前，属于晚更新世早期阶段。</p>
+<h3 id="遗址文化价值"><a class="header" href="#遗址文化价值">遗址文化价值</a></h3>
+<p>作为周口店古人类遗址群的重要组成部分，新洞人遗址填补了北京猿人与山顶洞人之间的的人类活动空白。其堆积层中灰烬遗迹的发现，为研究早期智人用火技术及生存方式提供了直接证据。哺乳动物群组合的研究成果，对重建华北地区晚更新世早期生态环境具有关键参考价值。</p>
+<h3 id="遗址保护与学术地位"><a class="header" href="#遗址保护与学术地位">遗址保护与学术地位</a></h3>
+<p>新洞人遗址是周口店北京人遗址的重要组成部分。其考古发现被系统展示于周口店遗址博物馆中，与北京人、山顶洞人等共同构成完整的展览序列。新洞遗址的堆积序列和动物群研究，为建立华北地区晚更新世早期地层年代标尺提供了关键材料。遗址出土的人类化石具有铲形门齿特征，与北京猿人、山顶洞人一脉相承，为东亚地区人类连续演化提供了重要证据。成为国际旧石器时代考古的重要参照点。</p>
+<h3 id="旅游信息"><a class="header" href="#旅游信息">旅游信息</a></h3>
+<p>周口店北京人遗址是50万年前北京猿人、10—20万年前新洞人、1—3万年前山顶洞人生活的地方，地址在周口店龙骨山东南角。周口店遗址博物馆系统地向我们介绍了60万年前的“北京人”、10万年前的“新洞人”、18000年前的“山顶洞人”的生活环境、生活状况。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/Homo-erectus-pekinensis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/tian-yuan-dong-ren.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/Homo-erectus-pekinensis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/tian-yuan-dong-ren.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

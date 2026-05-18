@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>建筑模数 - 先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/technique/construction-module.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="建筑模数"><a class="header" href="#建筑模数">建筑模数</a></h1>
+<p>建筑模数（construction module） ，建筑设计中，为了实现建筑工业化大规模生产，使不同材料、不同形式和不同制造方法的建筑构配件、组合件具有一定的通用性和互换性，统一选定的协调建筑尺度的增值单位。建筑模数是指选定的尺寸单位，作为尺度协调中的增值单位，也是建筑设计、建筑施工、建筑材料与制品、建筑设备、建筑组合件等各部门进行尺度协调的基础，其目的是使构配件安装吻合，并有互换性。我国建筑设计和施工中，必须遵循《建筑模数协调标准》（GB50002-2013）。</p>
+<h2 id="定义"><a class="header" href="#定义">定义</a></h2>
+<p>建筑工业化指用现代工业的生产方式来建造房屋，它的内容包括四个方面：建筑设计标准化、构件生产工厂化、施工机械化和管理科学化。 为保证建筑设计标准化和构件生产工厂化，建筑物及其各组成的尺寸必须统一协调，为此我国制定了《建筑模数协调统一标准》（GBJ2-86）作为建筑设计的依据。</p>
+<h2 id="分类"><a class="header" href="#分类">分类</a></h2>
+<p>1、基本模数：基本模数的数值规定为100mm，表示符号为M，即1M等于100mm，整个建筑物或其中一部分以及建筑组合件的模数化尺寸均应是基本模数的倍数。</p>
+<p>2、扩大模数：指基本模数的整倍数。扩大模数的基数应符合下列规定：</p>
+<p>1）水平扩大模数为3M、6M、12M、15M、30M、60M等6个，其相应的尺寸分别为300mm、600mm、1200mm、1500mm、3000mm、6000mm。</p>
+<p>2）竖向扩大模数的基数为3M、6M两个，其相应的尺寸为300mm、600mm。</p>
+<p>3、分模数：指整数除基本模数的数值。分模数的基数为M/10、M/5、M/2等3个，其相应的尺寸为10mm、20mm、50mm。</p>
+<p>4、模数数列：指由基本模数、扩大模数、分模数为基础扩展成的一系列尺寸（模数数列的幅度及适用范围如下）。</p>
+<p>1）水平基本模数的数列幅度为（1~20）M。主要适用于门窗洞口和构配件断面尺寸。</p>
+<p>2）竖向基本模数的数列幅度为（1~36）M。主要适用于建筑物的层高、门窗洞口、构配件等尺寸。</p>
+<p>3）水平扩大模数数列的幅度：3M为（3~75）M；6M为（6~96）M；12M为（12~120）M；15M为（15~120）M；30M为（30~360）M；60M为（60~360）M，必要时幅度不限。主要适用于建筑物的开间或柱距、进深或跨度、构配件尺寸和门窗洞口尺寸。</p>
+<p>4）竖向扩大模数数列的幅度不受限制。主要适用于建筑物的高度、层高、门窗洞口尺寸。</p>
+<p>5）分模数数列的幅度。M/10为（1/10~2）M，M/5为（1/5~4）M；M/2为（1/2~10）M。主要适用于缝隙、构造节点、构配件断面尺寸。</p>
+<h2 id="使用"><a class="header" href="#使用">使用</a></h2>
+<p>建筑物及其构配件（或组合件）选定的标准尺寸单位，并作为尺寸协调中的增值单位，称为建筑模数单位。在建筑模数协调中选用的基本尺寸单位，其数值为100mm，符号为M，即1M=100mm，当前世界上大部分国家均以此为基本模数。基本模数的整数值称为扩大模数。整数除基本模数的数值称为分模数。模数是一种度量单位，这个度量单位的数值扩展成一个系列就构成了模数系列。模数系列可由基本模数M的倍数得出。模数系列在建筑工业化生产中有重要的作用，因为借助于它才可能分割某些部件或半成品不剩零头，并把它们的尺寸准确地送进机器中去。模数可以作为建筑设计依据的度量，它决定每个建筑构件的精确尺寸，它决定体系中和建筑物本身内建筑构件的位置。模数在建筑设计上表现是模数化网格。网格的尺寸单位是基本模数或扩大模数。在建筑设计中，每个建筑构件都应与网格线建立一定的关系，一般常以建筑构件的中心线、偏中线或边线位于网格线上。建筑设计中的主要建筑构件如承重墙、柱、梁、门窗洞口都应符合模数化的要求，严格遵守模数协调规则，以利于建筑构配件的工业化生产和装配化施工。</p>
+<h2 id="数列幅度"><a class="header" href="#数列幅度">数列幅度</a></h2>
+<p>第2.2.1条 水平基本模数应为1M。1M数列应按100mm进级，其幅度应由1M至20M。</p>
+<p>第2.2.2条 竖向基本模数应为1M。1M数列应按100mm进级，其幅度应由1M至36M。</p>
+<p>第2.2.3条 水平扩大模数的幅度，应符合下列规定：</p>
+<p>一、3M数列按300mm进级，其幅度应由3M至75M；</p>
+<p>二、6M数列按600mm进级，其幅度应由6M至96M；</p>
+<p>三、12M数列按1200mm进级，其幅度应由12M至120M；</p>
+<p>四、15M数列按1500mm进级，其幅度应由15M至120M；</p>
+<p>五、30M数列按3000mm进级，其幅度应由30M至360M；</p>
+<p>六、60M数列按6000mm进级，其幅度应由60M至360M等，必要时幅度不限制。</p>
+<p>第2.2.4条 竖向扩大模数的幅度，应符合下列规定：</p>
+<p>一、3M数列按300mm进级，幅度不限制；</p>
+<p>二、6M数列按600mm进级，幅度不限制。</p>
+<p>第2.2.5条 分模数的幅度，应符合下列规定：</p>
+<p>一、1/10M数列按10mm进级，其幅度应由1/10M至2M；</p>
+<p>二、1/5M数列按20mm进级，其幅度应由1/5M至4M；</p>
+<p>三、1/2M数列按50mm进级，其幅度应由1/2M至10M。</p>
+<p>第三节　模数数列的适用范围</p>
+<p>第2.3.1条 水平基本模数1M至20M的数列，应主要用于门窗洞口和构配件截面等处。</p>
+<p>第2.3.2条 竖向基本模数1M至36M的数列，应主要用于建筑物的层高、门窗洞口和构配件截面等处。</p>
+<p>第2.3.3条 水平扩大模数3M、6M、12M、15M、30M、60M的数列，应主要用于建筑物的开间或柱距、进深或跨度、构配件尺寸和门窗洞口等处。</p>
+<p>第2.3.4条 竖向扩大模数3M数列，应主要用于建筑物的高度、层高和门窗洞口等处。</p>
+<p>第2.3.5条 分模数1/10M、1/5M、1/2M的数列，应主用于缝隙、构造节点、构配件截面等处。</p>
+<p>分模数不应用于确定模数化网格的距离，但根据设计需要分模数可用于确定模数化网格平移的距离。</p>
+<h2 id="尺寸"><a class="header" href="#尺寸">尺寸</a></h2>
+<p>为了保证建筑制品、构配件等有关尺寸的统一协调，《建筑模数协调统一标准》规定了标志尺寸、构造尺寸、实际尺寸及其相互间的关系。</p>
+<p>1.标志尺寸：用以标注建筑物定位轴线间的距离（如开间或柱距、进深或跨度、层高等）以及建筑构配件、建筑组合件、建筑制品、有关设备位置界限之间的尺寸。标志尺寸应符合模数数列的规定。</p>
+<p>2.构造尺寸：是建筑构配件、建筑组合件、建筑制品等的设计尺寸，一般情况下标志尺寸减去缝隙为构造尺寸。缝隙尺寸应符合模数数列的规定。</p>
+<p>3.实际尺寸：是建筑构配件、建筑组合件、建筑制品等生产制作后的实际尺寸。这一尺寸因生产误差造成与设计的构造尺寸有差值，这个差值应符合施工验收规范的规定。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xiannong-altar/tai-sui-dian.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../technique/bracket-system.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xiannong-altar/tai-sui-dian.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../technique/bracket-system.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
