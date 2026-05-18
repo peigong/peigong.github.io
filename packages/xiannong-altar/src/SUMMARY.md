@@ -67,4 +67,3 @@
     - [五大镇山](./di-qi/The-Five-Sacred-Mountains.md)
 - [参考资料]()
     - [大隆福寺](./referrence/long-fu-si.md)
-    - [中国古建筑中的只是（九）:古建筑“三分”之中分（斗拱篇）](https://www.douban.com/group/topic/315623939/?_i=9088607Iwuve2Q)
