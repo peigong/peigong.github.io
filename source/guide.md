@@ -25,6 +25,7 @@ title: 导游笔记
 - [北京海洋馆](./guide/aquarium)
 - [香山](./guide/fragrant-hills)
 - [国家植物园](./guide/chnbg)
+- [北海公园](./guide/beihaipark)
 - [陶然亭公园](./guide/taoranting-park)
 - [园博园](./guide/garden-expo)
 - [雁栖湖](./guide/YanqiLake)
