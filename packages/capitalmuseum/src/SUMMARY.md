@@ -79,6 +79,8 @@
     - [景德镇窑粉彩观音菩萨像]()
     - [景德镇窑青花缠枝牡丹纹盖罐]()
     - [西洋珐琅双鸟鸣钟]()
+- [参考资料]()
+    - [拼雕](./referrence/pin-diao.md)
 - [文献资料]()
     - [杜甫 - 春望](./literature/chun-wang.md)
     - [杜甫 - 石壕吏](./literature/shi-hao-li.md)
