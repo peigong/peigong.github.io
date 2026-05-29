@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 概况简介</a></li><li class="chapter-item expanded "><a href="note.html"><strong aria-hidden="true">2.</strong> 讲解提纲</a></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> 概况简介</a></li><li class="chapter-item expanded "><a href="note.html"><strong aria-hidden="true">2.</strong> 讲解提纲</a></li><li class="chapter-item expanded "><a href="luo-han-18.html"><strong aria-hidden="true">3.</strong> 十八罗汉</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 文献</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> 圣旨特建释迦舍利灵通之塔碑文</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 七佛塔碑记</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> 画舫斋记</div></li></ol></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split("#")[0];
         if (current_page.endsWith("/")) {

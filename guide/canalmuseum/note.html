@@ -1,0 +1,684 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>讲解提纲 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="讲解提纲"><a class="header" href="#讲解提纲">讲解提纲</a></h1>
+<h2 id="北京湾"><a class="header" href="#北京湾">北京湾</a></h2>
+<ul>
+<li>燕山运动在中生代侏罗纪晚期至白垩纪，八达岭花岗石，房山汉白玉。</li>
+<li>元末开凿金口新河，引卢沟河水至通州，因水量过大，威胁城池而废弃。</li>
+</ul>
+<h2 id="大运河"><a class="header" href="#大运河">大运河</a></h2>
+<ul>
+<li>大运河包括京杭大运河、浙东大运河和隋唐大运河三个部分，跨越2500多年，全长3200公里，通达海河、黄河、淮河、长江、钱塘江五大水系，是世界上距离最长、规模最大的运河。</li>
+<li>春秋末期，公元前486年，吴王夫差调集民工开凿邗沟，运兵运粮，北上伐齐。因途经邗城，故得名“邗沟”。</li>
+<li>清中叶后，因南北海运兴起，津浦铁路通车，其作用逐渐减弱。</li>
+<li>“南水北调”东线工程主要通道之一。</li>
+<li>大运河漂来的北京城。</li>
+</ul>
+<h2 id="馆外环境"><a class="header" href="#馆外环境">馆外环境</a></h2>
+<ul>
+<li>北京艺术中心</li>
+<li>北京城市图书馆</li>
+<li>运河故道</li>
+<li>小圣庙，河伯冯夷</li>
+</ul>
+<h2 id="基本陈列"><a class="header" href="#基本陈列">基本陈列</a></h2>
+<h3 id="第一单元-江河道渠-水运初兴"><a class="header" href="#第一单元-江河道渠-水运初兴">第一单元 江河道渠 水运初兴</a></h3>
+<ul>
+<li>宫廷乐舞人物画像石，曹操</li>
+</ul>
+<h4 id="作册奂鼎"><a class="header" href="#作册奂鼎">作册奂鼎</a></h4>
+<ul>
+<li>"太保墉燕"铭文，意为"太保召公来到燕地建设都城"。</li>
+<li>作册奂可能是当时的史官或书记员，太保召公筑城后，在燕侯宫举行祭礼，赏赐贝币给作册奂，作册奂用这些贝币铸造了礼器。</li>
+<li>作册奂器作为西周燕国的宫廷礼器，其艺术风格也体现了周文化与地方特色的融合。</li>
+<li>掌握准确的合金配比、高温熔炼技术和精密的浇铸工艺。</li>
+<li>在青铜器上铸出清晰规整的长篇铭文，需要在陶范上精细刻写文字，并控制好浇铸时的温度和速度。</li>
+</ul>
+<h4 id="吴邗hán沟"><a class="header" href="#吴邗hán沟">吴，邗（hán）沟</a></h4>
+<ul>
+<li>邗沟南起扬州以南的长江，北至淮安以北的淮河，是最早有明确记载的运河。</li>
+<li>春秋末期（公元前486年），吴王夫差为了北上伐齐，开凿邗沟。</li>
+<li>邗沟，邗城，扬州，广陵。</li>
+<li>扬州、淮安两座历史文化名城因邗沟的开凿而诞生。</li>
+</ul>
+<h4 id="魏鸿沟"><a class="header" href="#魏鸿沟">魏，鸿沟</a></h4>
+<ul>
+<li>战国时魏惠王十年（前361年），为了战争需要，曾两次兴工，开挖了鸿沟。</li>
+<li>鸿沟是中国古代最早沟通黄河和淮河的人工运河，以魏都大梁为中心。</li>
+<li>鸿沟西自荥阳以下引黄河水为源，向东流经中牟、开封，折而南下，入颍河通淮河，把黄河与淮河之间的济、濮、汴、睢、颍、涡、汝、泗、菏等主要河道连接起来，构成鸿沟水系。</li>
+<li>《史记·项羽本纪》：项王乃与汉约，中分天下，割鸿沟以西者为汉，鸿沟而东者为楚。</li>
+</ul>
+<h4 id="秦灵渠"><a class="header" href="#秦灵渠">秦，灵渠</a></h4>
+<ul>
+<li>灵渠联接了长江和珠江两大水系，构成了遍布华东华南的水运网。</li>
+<li>灵渠流向由东向西，将兴安县东面的海洋河（湘江源头，流向由南向北）和兴安县西面的大溶江（漓江源头，流向由北向南）相连。</li>
+<li>湘江水在分水塘经铧嘴分流和大小天坪坝引流后，约7分水流入北渠，在高塘村与湘江故道相会，约3分水流入南渠入漓江。</li>
+<li>灵渠的凿通，沟通了湘江、漓江，打通了南北水上通道，为秦王朝统一岭南提供了重要的保证，大批粮草经水路运往岭南，有了充足的物资供应。</li>
+<li>公元前214年，即灵渠凿成通航的当年，秦兵就攻克岭南，随即设立桂林、象郡、南海3郡，将岭南正式纳入秦王朝的版图。</li>
+</ul>
+<h4 id="汉漕渠"><a class="header" href="#汉漕渠">汉，漕渠</a></h4>
+<ul>
+<li>汉漕渠，是汉武帝于元光六年(公元前129年)采纳大司农郑当时的建议，渭河之南开凿一条从长安至黄河专门运输粮食的漕渠，命齐人水工徐伯率领万人历时三年修筑而成。</li>
+</ul>
+<h4 id="三国曹操白沟"><a class="header" href="#三国曹操白沟">三国，曹操，白沟</a></h4>
+<ul>
+<li>曹操开白沟，兴建了沟通黄河和海河的第一条区间运河。</li>
+<li>《三国志·武帝纪》载：“九年春正月，济河，遏淇水入白沟以通粮道。”</li>
+<li>白沟开凿于东汉建安九年（204年），在淇水入黄河处下大枋木使成堰，遏淇水入春秋战国时期的黄河古道以成渠，以淇水、荡水、洹水为上源，利用纵贯河北平原的清河故道至今青县附近，注入滹沱河。</li>
+<li>《三国志·武帝纪》中：“公将征之，凿渠，自呼沲入泒水，名平虏渠。又从泃河口凿，入潞河，名泉州渠，以通海。”</li>
+<li>平虏渠开凿于建安十一年（206年），从今青县东北引滹沱河水北入泒(gū)水。</li>
+<li>泉州渠也开凿于建安十一年，南起泉州县（今天津市武清西南），上承潞河，下入鲍丘水，还从沟河口向东凿渠入濡水，称为新河。</li>
+<li>在曹操得胜回师，途经碣石山时，写下了充满宏伟抱负和浪漫主义情怀的不朽诗篇《观沧海》。</li>
+</ul>
+<h3 id="第二单元-渠通幽州-多元融合"><a class="header" href="#第二单元-渠通幽州-多元融合">第二单元 渠通幽州 多元融合</a></h3>
+<ul>
+<li>
+<p>含嘉仓：位于洛河中下游的隋唐洛阳城，是唐朝时期国家大型皇家粮仓，是用作盛纳京都以东州县所交租米的皇家粮仓。</p>
+</li>
+<li>
+<p>回洛仓、黎阳仓和瓦岗山，凭险设关，沿河建仓。</p>
+</li>
+<li>
+<p>韦坚，刘晏</p>
+</li>
+<li>
+<p>周世宗柴荣平淮南，疏通运河</p>
+</li>
+<li>
+<p>盐粮所系，后唐幽州刺史赵德均，开凿东南河</p>
+</li>
+<li>
+<p>白釉侍从甬</p>
+</li>
+<li>
+<p>隋五铢，开元通宝，唐高宗武德四年，欧阳询</p>
+</li>
+<li>
+<p>民族竞汇，关陇贵族和拓拔皇后</p>
+</li>
+<li>
+<p>民族竞汇，晋王李克用</p>
+</li>
+</ul>
+<h4 id="隋唐大运河"><a class="header" href="#隋唐大运河">隋唐大运河</a></h4>
+<ul>
+<li>汴河怀古（唐，皮日休）尽道隋亡为此河，至今千里赖通波。若无水殿龙舟事，共禹论功不较多。</li>
+<li>隋唐大运河以洛阳为中心，北至涿郡（今北京），南至余杭（今杭州）。</li>
+<li>隋炀帝要到扬州看琼花，为什么运河要修的北至涿郡，南至余杭？</li>
+<li>隋朝大运河，其工程分为四个部分：通济渠、邗沟、永济渠、江南运河。</li>
+<li>大业元年（605年），隋炀帝征发“河南、淮北诸郡民前后百余万”开通济渠。</li>
+<li>邗沟沟通了长江、淮河两大河流，成为隋唐大运河最早修建的一段。</li>
+<li>大业四年（608年），隋炀帝诏发河北诸郡男女百余万开永济渠，引沁水，南达于河，北通涿郡。</li>
+<li>大业六年（610年），隋炀帝下令开江南运河（即江南河），从京口（今江苏镇江）至余杭（今浙江杭州）</li>
+</ul>
+<h4 id="高句gōu丽lí"><a class="header" href="#高句gōu丽lí">高句(gōu)丽(lí)</a></h4>
+<ul>
+<li>高句丽（公元前37年－公元668年），是汉唐时期活跃于东北亚地区的重要民族政权，国祚七世纪有余。</li>
+<li>高句丽灭国前的常备军队在60万人左右，军事装备相当精良，兵器与中国略同。</li>
+<li>开皇十八年（598年），隋文帝命汉王杨谅、上柱国王世积为行军元帅，周罗喉为水军总管，率大军30万，分水陆两路进攻高句丽。粮草匮乏、疫病、海难，水陆两军死亡十之八九，隋军撤退。婴阳王高元上表称“辽东粪土臣元”，隋文帝罢兵，待之如初。</li>
+<li>高句丽王高元不遵籓礼，隋炀帝决定征讨高句丽。大业八年正月（612年），出征的隋朝士兵全部集中于涿郡，有军人一百一十三万三千八百，此外为其运输物资的民夫是军人数量的两倍。第一次攻高句丽之战遂以惨败而告终。</li>
+<li>大业九年（613年），二次亲征高句丽时，杨玄感造反。隋炀帝密召诸将，密令撤军。</li>
+<li>大业十年（614年），三次亲征高句丽，国内已经大乱。高句丽也困弊，遣使请降。</li>
+<li>贞观十八年（644年），唐太宗以张亮为平壤道行军大总管，率兵四万走海路。以李世勣（李勣）为辽东道行军大总管，率军六万向辽东。获胜后从容班师。以后，唐军采取了对高句丽发动骚扰性攻击的策略。</li>
+<li>唐高宗总章元年（668年），高句丽被唐朝攻灭，其遗民主要融入汉族及朝鲜半岛民族。</li>
+</ul>
+<h4 id="铁细腰"><a class="header" href="#铁细腰">铁细腰</a></h4>
+<ul>
+<li>（唐）河堤石、铁细腰</li>
+<li>（清）钦工铭文铁细腰</li>
+<li>尾燕铁，就是腰铁，因形状象两个对着的燕子尾巴，故叫燕尾铁，也称铁细腰，铁锭榫，燕尾榫、铁锁。</li>
+<li>形状是中间细，两头粗大呈三角，用白矾粘于石间，起加固作用。</li>
+<li>传说是鲁班发明的，是万榫之母。</li>
+<li>最早使用这种技术的，是隋朝的赵州桥。</li>
+</ul>
+<h4 id="裴耀卿"><a class="header" href="#裴耀卿">裴耀卿</a></h4>
+<ul>
+<li>开元二十一年（733年），裴耀卿擢黄门侍郎、同平章事，充江淮、河南转运使。</li>
+<li>关中地狭民稠，自江淮运送粮食物资困难，裴耀卿改进漕运，沿河置仓，逐级运粮，傍河凿山，开车道数十里，以避三门之险。</li>
+<li>改革漕运的成功，使得关东和江淮地区的粮食大量运抵关中，保障了关中的粮食需要，充实了关中仓储，对京城稳定，乃至全国的经济繁荣与政治稳定起到了重要作用。</li>
+</ul>
+<h4 id="苏州宝带桥"><a class="header" href="#苏州宝带桥">苏州宝带桥</a></h4>
+<ul>
+<li>宝带桥别名长桥，南北横卧于大运河和澹（dàn）台湖之间的玳玳河口，与古运河平行，是中国古代十大名桥之一，也是中国现存的古代桥梁中，最长的一座多孔石桥，是中国现存最长、保存最完整的一座大型古代连拱石桥。</li>
+<li>唐元和十一年（公元816年），宝带桥由刺史王仲舒主持建造，筹措建桥资金，王仲舒带头将自己身上的宝带捐出来，宝带桥之名由此而来，又有说因桥似宝带浮于水上而得名。</li>
+<li>清同治二年（公元1863年），英军戈登驾舰攻打苏州，拆去宝带桥桥中间大孔，酿成南面26孔连续倒塌之惨状。抗战时期，南端6孔被日军炸毁。</li>
+<li>1956年，宝带桥修葺恢复旧观，桥拱照原式样用花岗石砌成，桥面和两端桥堍也照原式样进行了修缮，并把坠入河中的4只石狮打捞出来，安装就位。</li>
+</ul>
+<h4 id="法源寺"><a class="header" href="#法源寺">法源寺</a></h4>
+<ul>
+<li>悯忠寺，法源寺。事实上，唐太宗只提了个动议，直到武则天时期才真正完成。</li>
+<li>唐太宗贞观十九年（645）及高宗上元二年（675）东征还，深悯忠义之士殁于戎事，卜斯地将建寺为之荐福。（武）则天万岁通天元年（696），追感二帝先志，起是道场，以‘悯忠’为额。《元一统志》</li>
+<li>法源寺悯忠阁。悯忠高阁，去天一握。</li>
+</ul>
+<h4 id="唐无垢净光宝塔颂史思明"><a class="header" href="#唐无垢净光宝塔颂史思明">唐《无垢净光宝塔颂》，史思明</a></h4>
+<ul>
+<li>文字虽竖排，但从左至右，而非常见的从右至左。明末清初的著名学者顾炎武认为，这可能是安禄山临时定的规矩。</li>
+<li>《无垢净光宝塔颂》仅七百六十六字，涂改的字至少达四十九字之多，有些字磨掉后，想不出新字填补，干脆留白，多达十八处。</li>
+<li>《无垢净光宝塔颂》本是用来讨好安禄山的，因安禄山初期屡战屡胜，史思明不得不表忠心。没想到安禄山死得太快，史思明只好在碑上乱涂乱改，将所有僭越的词都删去，转而吹捧唐朝。只是活儿干得太糙，一块好碑，生生被弄成千疮百孔的“百衲衣”。</li>
+</ul>
+<h4 id="茶"><a class="header" href="#茶">茶</a></h4>
+<ul>
+<li>荼和茶，陆羽之前的时代，茶写作荼，有着药的属性。</li>
+<li>斗茶、煎茶、点茶</li>
+<li>渣斗，执壶，盏，鍑(fù)，则，碾</li>
+<li>陆羽，茶风北渐，铜则，渣斗，产业文化一条龙</li>
+<li>唐代宗，竟陵积公和尚（智积和尚）</li>
+<li>唐上元初年（760年），陆羽隐居苕溪（今浙江湖州），撰《茶经》三卷，对茶的性状、品质、产地、种植、采制、烹饮、器具等皆有论述，并首次提出了“精行俭德”的茶道精神，使饮茶从物质层面升华到精神层面，该书为世界上第一部茶叶专著。</li>
+<li>陆羽以著《茶经》而闻名于世，对世界茶业发展作出了卓越贡献，被誉为“茶仙”，尊为“茶圣”，祀为“茶神”。</li>
+<li>州刺史李季卿在扬子江畔，遇见了在此考察茶事的陆羽，便相邀同船而行。李季卿闻说附近扬子江中心的南零水煮茶极佳，即令士卒驾小舟前去汲水。不料士卒于半路上将一瓶水泼洒过半，偷偷舀了岸边的江水充兑。陆羽舀尝一口，立即指出“此为近岸江中之水，非南零水。”李季卿令士卒再去取水，陆羽品尝后，才微笑道：“此乃江中心南零水也。”</li>
+</ul>
+<h3 id="第三单元-辽金建都-漕运通济"><a class="header" href="#第三单元-辽金建都-漕运通济">第三单元 辽金建都 漕运通济</a></h3>
+<ul>
+<li>938年，辽太宗升幽州为南京。改革官制，划分南北二面，实行胡汉分治。北面官以契丹旧制治契丹人，南面官以汉制治汉人。</li>
+<li>萧太后运粮河，通州张家湾汇入北运河</li>
+<li>㶟(lěi)，上游即今桑干河，中游即今永定河，下游即今海河。</li>
+<li>战国蓟城到唐幽州，辽南京到金中都。永定河及其故道形成的莲花池水系，作为主要水源。</li>
+<li>中都园林：琼岛春阴，金山行宫</li>
+<li>卢沟桥，广利桥</li>
+<li>石宗璧墓。以大定十七年四月四日，葬于通州潞县台头村之新茔。第一次在北京地区发现“通州”字样的实物。</li>
+<li>马蹬壶</li>
+<li>通过运河茶风北传</li>
+<li>耀州窑，磁州窑</li>
+<li>北方瓷器，运河运输南方瓷器</li>
+<li>黄釉马蹬壶</li>
+<li>大梁，汴梁，汴河之梁</li>
+<li>北宋御河，隋唐永济渠故道。</li>
+<li>塘泺（luò）防线。深不可以舟行，浅不可以徒步。</li>
+<li>南宋建炎二年（1128年），东京守将杜充决黄河阻金兵。黄河改道，经泗水入淮河。</li>
+<li>坐龙。蹲龙。金都城、皇陵、行宫。</li>
+</ul>
+<h4 id="海陵王完颜亮"><a class="header" href="#海陵王完颜亮">海陵王完颜亮</a></h4>
+<ul>
+<li>升潞县为通州。南通州北通州。利用北宋御河。</li>
+<li>贞元元年（1153年），将都城从上京会宁府迁至燕京，改称中都。</li>
+<li>正隆元年（1156年），迁葬始祖以下诸帝至大房山。</li>
+<li>正隆二年（1157年），毁上京旧宫殿和贵族府第及储庆寺。</li>
+</ul>
+<h4 id="湖州石家铜镜和湖州真石家铜镜"><a class="header" href="#湖州石家铜镜和湖州真石家铜镜">湖州石家铜镜和湖州真石家铜镜</a></h4>
+<ul>
+<li>
+<p>宋代因避宋太祖祖父赵敬的名讳，将“镜”字改为“照”或“鉴”，故称铜镜为“照子”或“铜鉴”。</p>
+</li>
+<li>
+<p>宋代铸镜业由于受到政府连年用兵，推行铜禁制度，以及多种手工业新发展的冲击，铜镜大都质地轻薄，更注重实用。</p>
+</li>
+<li>
+<p>湖州镜是宋代最具特点的铜镜类型，始铸于北宋，兴盛于南宋，元代中衰，明代复兴。</p>
+</li>
+<li>
+<p>湖州镜制品大多专注实用，不尚花纹，多为素背，镜背铸有长方形印章式的商标性质铭记，标明铸镜作坊字号或工匠名，形制多作葵花形，亦有圆形和方形亚字形、桃型。</p>
+</li>
+<li>
+<p>湖州镜铭文详细记录产地、商号、铸造者，兼具广告与防伪功能。其铸造分官铸和私铸两大类，私铸工坊中以石家影响最大。</p>
+</li>
+<li>
+<p>石家是宋代著名的铸镜世家，以其世代相承、家族经营的特色闻名。</p>
+</li>
+<li>
+<p>铭文牌记常位于镜钮左侧或右侧，阳文楷书。</p>
+</li>
+<li>
+<p>铭文的内容主要是铜镜的生产地点、生产商、材质等，这是宋代宣传广告的方式在铜镜上的一种体现。</p>
+</li>
+<li>
+<p>类似的牌记在宋代瓷器、刻本等文物中都有出现，可以看出宋代各行各业都有私家作坊，生产品种单一，专业性很强。</p>
+</li>
+<li>
+<p>自主产权意识高，自己生产的东西要打上自家名号，为防止伪冒，甚至打上“真”、“真正”等字样。</p>
+</li>
+<li>
+<p>牌记在铜镜上的出现，改变了铜镜铭文的性质，也成为湖州镜的特征之一。</p>
+</li>
+</ul>
+<h3 id="第四单元-大都既定-一脉贯通"><a class="header" href="#第四单元-大都既定-一脉贯通">第四单元 大都既定 一脉贯通</a></h3>
+<ul>
+<li>
+<p>裁弯取直。京杭大运河的基本形态。</p>
+</li>
+<li>
+<p>河运与海运并行</p>
+</li>
+<li>
+<p>刘秉忠，太保兼领中书省事，城市规划、建筑设计。海云禅师。</p>
+</li>
+<li>
+<p>郭守敬，都水少监、知太史院事，水利、天文。</p>
+</li>
+<li>
+<p>阿尼哥，诸色人匠总管、领将作院事，造藏式佛塔、西天梵像。</p>
+</li>
+<li>
+<p>高表，圭表，量天尺。</p>
+</li>
+<li>
+<p>简仪，赤道坐标体系，赤道坐标、地平坐标。</p>
+</li>
+<li>
+<p>量水平</p>
+</li>
+<li>
+<p>正方案，定南北。</p>
+</li>
+<li>
+<p>水准测量仪，量水平</p>
+</li>
+<li>
+<p>白浮泉，瓮山泊，水源和引水工程。</p>
+</li>
+<li>
+<p>瓮山泊及沿途水柜，蓄水工程</p>
+</li>
+<li>
+<p>长河，高粱河故道，输水工程。</p>
+</li>
+<li>
+<p>节水行舟，通惠河24闸，水道节制工程。</p>
+</li>
+<li>
+<p>张家湾，通惠河，北运河。</p>
+</li>
+<li>
+<p>清水口，荆笆编笼，溢流坝，自溃坝。</p>
+</li>
+<li>
+<p>元：石狮，铁狮。</p>
+</li>
+<li>
+<p>汉代博山炉。琉璃三彩龙凤纹熏炉。</p>
+</li>
+<li>
+<p>实用功能，区分等级功能，装饰功能。</p>
+</li>
+<li>
+<p>陶瓷、琉璃、玻璃。文明分岔路。</p>
+</li>
+<li>
+<p>都漕运使司同知赵公去思碑</p>
+</li>
+<li>
+<p>元太中大夫京畿都漕运使王公去思碑</p>
+</li>
+<li>
+<p>《马可·波罗游记》</p>
+</li>
+<li>
+<p>赵孟𫖯(fǔ)和法华经</p>
+</li>
+<li>
+<p>中峰明本禅师</p>
+</li>
+<li>
+<p>铜镜</p>
+</li>
+<li>
+<p>广寒宫螺钿漆器</p>
+</li>
+<li>
+<p>景德镇窑釉里红花卉纹玉壶春瓶</p>
+</li>
+<li>
+<p>磁州窑白地黑花扁壶</p>
+</li>
+</ul>
+<h4 id="周礼考工记"><a class="header" href="#周礼考工记">周礼考工记</a></h4>
+<ul>
+<li>因水营城。莲花池水系，改为高粱河水系。</li>
+<li>正南正北，经纬分明。</li>
+<li>《考工记》出于《周礼》，是春秋战国时期记述官营手工业各工种规范和制造工艺的文献，记述了齐国关于手工业各个工种的设计规范和制造工艺。</li>
+<li>《周礼》原名《周官》，由"天官"、"地官"、"春官"、"夏官"、"秋官"、"冬官"六篇组成。</li>
+<li>西汉时，"冬官"篇佚缺，河间献王刘德便取《考工记》补入。</li>
+<li>刘歆校书编排时改《周官》为《周礼》，故《考工记》又称《周礼·考工记》（或《周礼·冬官考工记》）。</li>
+</ul>
+<h4 id="白浮泉"><a class="header" href="#白浮泉">白浮泉</a></h4>
+<ul>
+<li>按今天的测量，白浮泉的海拔为55米，瓮山泊的海拔为40米。</li>
+<li>白浮泉遗址，位于北京市昌平区龙山山顶，始建于元朝时期，是通惠河的水源地，建有北京历史上唯一一座以“都”字冠名的敕建龙王庙。</li>
+<li>元至元二十九年（1292年），郭守敬筑堰障水，汇西山诸水，引白浮泉水济漕，白浮泉成为通惠河上游水源，新运河被赐名通惠河。</li>
+<li>元朝时期，引白浮泉水济漕工程完成后，在龙山之巅兴建都龙王庙，并在其源头处修建九龙池。</li>
+</ul>
+<h4 id="积水潭"><a class="header" href="#积水潭">积水潭</a></h4>
+<ul>
+<li>积水潭源于古代永定河故道留下的坑洼，地下水汇集后成为水塘。</li>
+<li>积水潭曾是漕运的总码头，也是皇家的洗象池。</li>
+<li>从元代起，来自暹罗、缅甸的大象，就作为运输工具和宫廷仪仗队使用，在夏伏之日，驯养员会带领大象到积水潭洗浴。</li>
+</ul>
+<h3 id="第五单元-京师繁会-帆樯络绎"><a class="header" href="#第五单元-京师繁会-帆樯络绎">第五单元 京师繁会 帆樯络绎</a></h3>
+<ul>
+<li>漕运图</li>
+<li>制度和工程</li>
+<li>黄运分离、湖漕分离</li>
+<li>地形高差，水源控制，水深控制，会淮穿黄，防洪减灾，系统管理</li>
+<li>支运，兑运，长运</li>
+<li>乾隆南巡阅视黄淮河工</li>
+<li>运河驿站</li>
+<li>通州，京畿左辅，左右东西。</li>
+<li>天庾(yǔ)正供，舳舻(zhú lú)连翩</li>
+<li>金砖，银锭</li>
+<li>玉卮，玉带</li>
+<li>回省限照，批回</li>
+<li>水路即戏路</li>
+<li>嘉禾，朗世宁《瑞谷图》</li>
+<li>关税</li>
+<li>江南织造曹𫖯(fǔ)奏折，铁保奏稿</li>
+<li>青花花果山石纹盖罐</li>
+<li>龙泉窑</li>
+<li>德化窑</li>
+<li>明龙纹青玉带板</li>
+<li>关公像</li>
+<li>崔溥行程</li>
+<li>马戛尔尼使团</li>
+<li>国子监琉球学馆</li>
+<li>军粮经纪密符扇，验粮盘</li>
+<li>景德镇窑青花御窑厂图圆瓷板</li>
+<li>石权，杆称</li>
+</ul>
+<h4 id="河督漕督"><a class="header" href="#河督漕督">河督，漕督</a></h4>
+<ul>
+<li>清置河道总督专官，掌管黄河、京杭大运河及永定河堤防、疏浚等事，治所在山东济宁。</li>
+<li>漕运总督品级为从一品或正二品，驻节淮安府城，全称：都察院右督御史，总督漕运，兼提督军务、巡抚凤阳等处，兼管河道，兼理海防</li>
+<li>漕运总督权威重，有亲辖武装部队，还有水师营。仿地方总督、巡抚之“督标”、“抚标”，而称之为“漕标”。</li>
+<li>漕运总督设衙门，不称“总督衙门”，而称“总漕部院衙门”，衙址设于江苏淮安。</li>
+</ul>
+<h4 id="乾隆粉彩六方套瓶"><a class="header" href="#乾隆粉彩六方套瓶">乾隆粉彩六方套瓶</a></h4>
+<ul>
+<li>清乾隆款景德镇窑外粉彩内青花镂空花果纹六方套瓶。</li>
+<li>原为一对，一只收藏于北京首都博物馆，另一只收藏于台北鸿禧美术馆。</li>
+<li>乾隆八年，督窑官唐英和助手们研制成夹层玲珑瓶九种，呈献给乾隆皇帝。六方套瓶是其中一种。</li>
+<li>1860年英法联军入侵中国期间，这件陶瓷瓶被洛克爵士掠得，后来卖给了大收藏家莫里逊氏。</li>
+<li>2000年5月2日下午2点20分，在香港苏富比，拍卖师以420万港币的底价开始叫拍，在经历了40多次的竟拍之后，北京市文物公司最终以1900万港币的价格拍得。</li>
+<li>遗憾的是，花费心血抢救国宝的秦公先生，没能亲眼看一眼国宝，在拍卖会圆满成功8天之后，因积劳成疾突发心脏病病逝。</li>
+</ul>
+<p>瓷瓶的试制三难：</p>
+<ul>
+<li>由于瓷瓶是六方瓶，所以不能上圆盘拉坯，成型极为困难，此为一难；</li>
+<li>瓷瓶雕刻后的瓷胎由于应力改变，烧制中极易变形，此为二难；</li>
+<li>瓷瓶为内青花外粉彩套瓶，即镂空瓶中再套一瓶，其工艺极其复杂，须两次入窑烧成，成品率极低，此为三难。</li>
+</ul>
+<h4 id="缂丝十二章龙袍"><a class="header" href="#缂丝十二章龙袍">缂丝十二章龙袍</a></h4>
+<ul>
+<li>十二章纹，又称十二章、十二纹章，是中国帝制时代的服饰等级标志。</li>
+<li>龙袍十二章纹包括：日、月、星辰、山、龙、华虫、宗彝、藻、火、粉米、黼、黻。</li>
+</ul>
+<h4 id="碧霞元君"><a class="header" href="#碧霞元君">碧霞元君</a></h4>
+<ul>
+<li>五顶庙是北京最著名的五座泰山神庙，亦称碧霞元君庙，分别为东顶、西顶、南顶、北顶、中顶。</li>
+<li>在中国的民俗信仰中，五岳分别由五位山神掌管，其中掌管五岳之首泰山的，被称作是“北顶娘娘碧霞元君”，也被称作是“泰山娘娘”。</li>
+<li>据说，碧霞元君是“东岳大帝”的女儿，“东岳大帝”在北京东岳庙里有供奉，是掌管阴阳两界的道教神。</li>
+</ul>
+<h4 id="建国方略"><a class="header" href="#建国方略">建国方略</a></h4>
+<ul>
+<li>《建国方略》为孙中山的三大著作之一，主要包括《孙文学说》《实业计划》和《民权初步》三个部分。</li>
+<li>《建国方略》被称为近代中国谋求现代化的第一份蓝图。</li>
+<li>2020年10月，在广东考察的习近平总书记走进汕头开埠文化陈列馆，在《建国方略》相关规划图前驻足凝视，感慨地说：“只有我们中国共产党人实现了。”</li>
+</ul>
+<h3 id="第六单元-漕运转型-曲折探索"><a class="header" href="#第六单元-漕运转型-曲折探索">第六单元 漕运转型 曲折探索</a></h3>
+<ul>
+<li>清末停漕，官用到民用，国家漕运变内河航运</li>
+<li>大运河，京汉铁路，津浦铁路</li>
+<li>解放战争中，支援物资运送</li>
+</ul>
+<h3 id="第七单元-运河新生-造福京城"><a class="header" href="#第七单元-运河新生-造福京城">第七单元 运河新生 造福京城</a></h3>
+<ul>
+<li>综合施治：灌溉、输水、排水、防洪、排涝、观光、航运</li>
+<li>十八勇士突击队</li>
+<li>永定河引水渠</li>
+<li>京密引水渠</li>
+<li>南水北调中线工程</li>
+<li>一定要根治海河</li>
+</ul>
+<h4 id="十三陵水库"><a class="header" href="#十三陵水库">十三陵水库</a></h4>
+<ul>
+<li>十三陵水库的设想和修建规划。工程原定在第三个五年计划期间，由国家投资一千九百万元建设。</li>
+<li>1957年农村社会主义改造任务基本完成，广大农民建设社会主义的积极性普遍高涨。昌平区委根据群众呼声，提出了修建十三陵水库的计划。</li>
+<li>1958年1月21日，十三陵水库修建工程破土动工，最初参加建设的人员有昌平民工8000余人和义务劳动大军约2000人。虽然人们劳动热情高涨，但施工进度缓慢。</li>
+<li>为赶在汛期到来之前完成筑坝任务，1958年4月，水利电力部和北京市委决定再次增加施工力量，动员全市工、农、商、学、兵各行各业参加义务劳动，施工劳动力增至5万人。</li>
+<li>4月28日，国务院副总理贺龙、聂荣臻和北京军区司令员杨成武亲自到工地视察后提出，动员驻京部队和院校力量支持水库建设。</li>
+<li>1958年5月8日，北京市委批准水库党委由市委直接领导，指挥部按部队形式组织，从此施工人数猛增至10万。</li>
+<li>1958年5月25日下午，毛泽东、刘少奇、周恩来、朱德等中央领导人，到十三陵水库工地参加义务劳动。</li>
+<li>1958年6月30日，经过160天的修建，十三陵水库竣工。</li>
+</ul>
+<h3 id="第八单元-城河共生-交相辉映"><a class="header" href="#第八单元-城河共生-交相辉映">第八单元 城河共生 交相辉映</a></h3>
+<h4 id="世界遗产名录审批标准"><a class="header" href="#世界遗产名录审批标准">世界遗产名录审批标准</a></h4>
+<p>条件凡提名列入《世界遗产名录》的文化遗产项目，必须符合下列一项或几项标准方可获得批准：</p>
+<ol>
+<li>代表一种独特的艺术成就，一种创造性的天才杰作。</li>
+<li>能在一定时期内或世界某一文化区域内，对建筑艺术、纪念物艺术、城镇规划或景观设计方面的发展产生过大影响。</li>
+<li>能为一种已消逝的文明或文化传统提供一种独特的至少是特殊的见证。</li>
+<li>可作为一种建筑或建筑群或景观的杰出范例，展示出人类历史上一个(或几个)重要阶段。</li>
+<li>可作为传统的人类居住地或使用地的杰出范例，代表一种(或几种)文化，尤其在不可逆转之变化的影响下变得易于损坏。</li>
+<li>与具有特殊普遍意义的事件或现行传统或思想或信仰或文学艺术作品有直接或实质的联系。</li>
+</ol>
+<h4 id="大运河符合的世界遗产标准"><a class="header" href="#大运河符合的世界遗产标准">大运河符合的世界遗产标准</a></h4>
+<ul>
+<li>标准I：代表人类创造精神的杰作。</li>
+<li>标准III：能为现存的或已消逝的文明或文化传统提供独特的或至少是特殊的见证。</li>
+<li>标准IV：是一种建筑、建筑群、技术整体或景观的杰出范例，展现历史上一个（或几个）重要发展阶段。</li>
+<li>标准VI：与具有突出的普遍意义的事件、文化传统、观点、信仰、艺术作品或文学作品有直接或实质的联系。</li>
+</ul>
+<h4 id="赓续文脉"><a class="header" href="#赓续文脉">赓续文脉</a></h4>
+<ul>
+<li>泥人张，妈祖文化，拴娃娃。</li>
+<li>草编窦尔敦</li>
+<li>万宁桥镇水兽</li>
+</ul>
+<h4 id="曲阜楷木雕如意"><a class="header" href="#曲阜楷木雕如意">曲阜楷木雕如意</a></h4>
+<ul>
+<li>曲阜楷雕是国家级非遗，艺人用楷木雕刻孔子像、如意、手杖等，木头纹理细密，越放越润。</li>
+<li>‌楷木（jiē mù）其实就是黄连木，主要长在曲阜孔林，是“楷模”这个词的源头‌。
+-‌ 楷木不仅木头能用来雕刻和做毛笔杆，还因为孔子弟子子贡守墓的传说，成了尊师重道的象征。‌‌</li>
+<li>孔子冢上生楷，周公冢上生模。“楷模”就成了模范的代称。</li>
+<li>相传孔子去世后，弟子子贡在墓旁守了六年，亲手种下楷树并雕刻了孔子像。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="BeijingBay.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="BeijingBay.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

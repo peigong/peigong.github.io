@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>曹操治水 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/basic/basic-1-cao-cao-zhi-shui.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="曹操治水"><a class="header" href="#曹操治水">曹操治水</a></h1>
+<blockquote>
+<p>参见：<a href="https://history.sohu.com/a/450713288_99960016">牛志奇|曹操治水</a></p>
+</blockquote>
+<p>东汉末年，曹操以汉天子的名义征讨四方，统一了中国北方，开始实行政治、经济、社会改革的一系列措施。这期间曹操大举军事屯田，得以在人民流离失所的动荡时期，集合起有限的人力和物力开凿运河，兴建灌溉工程，使经济得以恢复，社会得以稳定。曹魏时期大兴水利，为隋唐大运河奠基，也是开创了后来海河、黄河、淮河流域诸多灌溉工程的先河，不仅对历史影响深远，更是中国水利史的重要篇章。</p>
+<h2 id="开挖运渠为南北运河奠基"><a class="header" href="#开挖运渠为南北运河奠基">开挖运渠，为南北运河奠基</a></h2>
+<p>曹操（公元155—220年），字孟德，沛国谯县（今安徽亳州）人，是为三国曹魏政权的奠基人。东汉建安元年（公元196年），曹操立东行的汉献帝于许昌，开始“奉天子以令不臣”。</p>
+<p>建安五年（公元200年）官渡之战，曹操大败袁绍，为扫除袁绍在河北的势力，建安八年，曹操向袁绍之子袁尚、袁谭固守的邺城发动进攻，这期间曹操开白沟，兴建了沟通黄河和海河的第一条区间运河。《三国志·武帝纪》载：“九年春正月，济河，遏淇水入白沟以通粮道。”曹操“遏淇水入白沟”的具体做法是，在淇水口（今淇县东西卫贤镇东一里）作堰横拦淇水，引淇水东流入白沟，使漕船由黄河登岸后陆运数十里后转白沟，水运至邺。《水经注·淇水》对白沟的描述更为详细：“汉建安九年，魏武王于水口下大枋木以成堰，遏淇水东入白沟以通漕运，故时人号其处为枋头。是以卢谌《征艰赋》曰：后背洪枋巨堰，深渠高堤者也。”从《水经注·淇水》的记载中可以看到，曹操的白沟运口工程设施相当完善。《征艰赋》的“洪枋巨堰”和“深渠高堤”可见工程规模浩大，动用了大量的人力物力。“建安七子”王粲在《从军行》描写了白沟通运的情景：“朝发邺都桥，暮济白马津。逍遥河堤上，左右望我军。连舫逾万艘，带甲千万人。”从中可以领略两千年前舳舻千里、大军浩荡的宏大场景。这一水利工程为曹操打通了向华北运送军队、粮草的水路，使得曹操很快就夺取邺城，为后来控制和统一北方打下了基础。</p>
+<p>袁绍病亡后，其子袁尚、袁熙投奔居今冀东、辽宁一带的乌桓族，希望借助外族的力量夺回冀州，以图再起，纵容乌桓的骑兵多次深入幽州腹地进行掠夺，据《三国志·武帝纪》：“三郡乌丸承天下乱，破幽州，略有汉民合十余万户。”乌桓不断骚扰曹操的北部边境，曹操为彻底消灭袁氏残余势力，解决三郡乌桓（乌丸）之患，平定北方局势，曹操决心北征乌桓。“兵马未动、粮草先行”，曹操于建安十一年，动用大批民众开凿了平虏、泉州两渠。《三国志·武帝纪》中：“公将征之，凿渠，自呼沲入泒水，名平虏渠。又从泃河口凿，入潞河，名泉州渠，以通海。”平虏、泉州两渠沟通了海河南系，粮草充足，使得曹操在军事上迅速取得主动权，建安十二年九月曹操就大破乌桓，取得北征之战的全胜。征伐乌桓的胜利，奠定了曹操次年挥戈南下的基础，以实现他统一中国的愿望。也正是在曹操得胜回师，途经碣石山时，写下了充满宏伟抱负和浪漫主义情怀的不朽诗篇《观沧海》。</p>
+<p>曹操修复了黄河和淮河之间的运河。据《三国志·武帝纪》：“（曹操）遂至浚仪，治睢阳渠。”建安七年（公元202年），曹操修浚仪（今开封市）睢阳渠，这应该是从浚仪到睢阳（今商丘市南）的汴渠的一段，汴渠连接黄河与淮河，漕运可以由淮入泗，到彭城（今徐州）后可转入汴渠，西通黄河，这样将黄河与淮河水系连通起来。</p>
+<p>曹操击败袁绍占领邺城后，将统治中心从许昌转移到邺城。《水经注·浊漳水》这样描述：“长安为汉之所居、洛阳为西京之遗迹、邺为王业之本基。”所以，曹操非常重视邺城的营建，进行了大规模营建工程，其中为改善邺城通向外界的交通，曹操下令开凿一条西起漳水东至白沟的运河，以补充白沟的水量，打通了邺城通向白沟，乃至北上的水上运道。据《三国志·武帝纪》记载：“九月，作金虎台，凿渠引漳水入白沟以通河。”这个渠在《三国志》中没有说明是什么渠，但从《水经注·浊漳水》中可以得到印证为“利漕渠”，记载：“汉献帝建安十八年，魏太祖凿渠，引漳水东入清、洹，以通河漕，名曰利漕渠”。利漕渠连通了漳水和白沟，由此，邺都水运可由漳水经利漕渠入白沟。曹魏时期还修建了白马渠，将漳水与滹沱河连通，修建的鲁口渠将滹沱河与泒水连通，再北上与前文所说的平虏渠、泉州渠以及新渠连通。这是一个规模宏大、通江达海的水系连通工程，以邺城为中心，北上可以至海河、滦河各水系并直达大海，南可以通过黄河抵达江淮各地，邺城也因此成为黄河下游大平原上的南北水运交通的枢纽，得到了繁荣和发展。西晋左思所作《魏都赋》，描写邺城的景象不禁让人感受到邺城的繁华与巍峨：“层甍反宇，飞檐拂云，图以丹青，色以轻素。当其全盛之时，去邺六七十里，远望苕亭，巍若仙居”。</p>
+<p>在黄河与海河、黄河与淮河、淮河与长江各水系之间的运河工程多从三国时期开始，以白沟和汴渠为骨干，曹魏时期初步形成了沟通江、淮、黄、海四大水系的运河体系。这些运渠，有的是军事进军的需要，如白沟、平虏、泉州渠，有的兼有灌溉效益，如广漕渠、利漕渠、白马渠等。三国时期运渠的开凿无论是从规模上，还是从成效上，都是空前规模的。曹魏时期运渠的开凿，用于发展漕运，对维系曹魏政权的统治地位起到了重要的保障作用，更是为隋唐南北大运河的沟通奠定了基础。</p>
+<h2 id="大举军事屯田发展水利奠定千年根基"><a class="header" href="#大举军事屯田发展水利奠定千年根基">大举军事屯田，发展水利，奠定千年根基</a></h2>
+<p>东汉末年数十年的军阀混战，土地荒芜、民不聊生。据《三国志·武帝纪》记载：兴平元年（公元194年）“是岁谷一斛五十余万钱，人相食，……”曹操在《蒿里行》中写道“白骨露于野，千里无鸡鸣”。曹操为有效地解决粮食问题，恢复农业生产，采纳枣祗等人的建议，推行屯田制度。屯田制祗源于西汉，至曹魏时期得以发展完善，形成了一套完整的制度。《三国志·武帝纪》记载建安元年（公元196年）：“是岁，用枣祗、韩浩等议，始兴屯田。”这是曹操开始实施屯田措施之始，在裴松之注《三国志》中有比较详细的描述：“《魏书》：公曰：‘夫定国之术，在于强兵足食，秦人以急农兼天下，孝武以屯田定西域，此先代之良式也。’是岁，乃募民屯田许下，得谷百万斛。于是州郡例置田官。”从中可以看出曹操列举了秦人发展农业和汉朝实施屯田的做法，对屯田高度重视，这样才能“征伐四方，无运粮之劳，遂兼灭群贼，克平天下”。</p>
+<p>曹操推行屯田制，集中了人力和物力，有了大兴水利的条件，曹魏时期水利工程建设呈现出大发展的局面。《三国志·夏侯惇传》：“惇乃断太寿水作陂，身自负土，率将士劝种稻，民赖其利。”《三国志·武帝纪》记载曹操在建安十四年（公元209年）：“置扬州郡县长吏，开芍陂屯田。”芍陂是由春秋时楚相孙叔敖主持修建的我国最早蓄水灌溉水利工程，位于今安徽寿县南，是利用地形，将流下来的溪水汇集于低洼的芍陂之中，修建五个水门，以石质闸门控制水量，“水涨则开门以疏之，水消则闭门以蓄之”，不仅天旱有水灌田，又避免水多洪涝成灾。曹操为了南征伐吴的需要，在淮河流域大规模屯田，修复了废弃多年的芍陂，据《三国志·刘馥传》记载，刘馥在建安五年任扬州刺史时，“广屯田，兴治芍陂及茹陂、七门、吴塘诸堨以溉稻田，官民有畜”。此后尚书郎邓艾也大修芍陂，更有成效，在芍陂附近修建大小陂塘50余处，大大增加了芍陂的蓄水能力和灌溉面积。邓艾还开广漕渠，由汴引水到颍水各陂塘，既可以蓄水灌溉，又可以通漕运。曹操和他的后继者持续开发芍陂和两淮地区的灌溉工程，对这个地区的农业生产大为促进，东晋人称这个地区“龙泉之陂，良畴万顷”。持续不断地修建陂塘，扩大了屯田规模，大兴了水利，使得农业生产得以恢复与发展，“数年中所在积粟，仓廪皆满”。使这一地区“农官兵田，鸡犬之声，阡陌相属”，为曹魏政权的建立和巩固奠定了坚实的物质基础，也实现了曹操“强兵足食”“克平天下”的夙愿。这一地区的很多水利工程多是曹魏时期重建或创始的，如芍陂，又名“安丰塘”，至唐代芍陂仍“陂径百里，灌田万顷”，是唐王朝的重要粮食基地。元代芍陂支撑淮南屯田，为全国主要屯区之一。明代自明乐十二年始对芍陂进行了扩建。清乾隆十四年对芍陂进行了大规模的修建。今天，芍陂是淠史杭灌区的调节水库，仍在发挥巨大的作用。（作者：牛志奇，单位：水利部财务司）</p>
+<p>本文来源：《学习时报》2021年2月12日第七版。</p>
+<h2 id="三国魏曹操衮雪书法作品陕西汉中市博物馆收藏"><a class="header" href="#三国魏曹操衮雪书法作品陕西汉中市博物馆收藏">三国·魏曹操“衮雪”书法作品（陕西汉中市博物馆收藏）</a></h2>
+<p>传说建安十二年(公元207年)仲秋的一日，天高云淡，曹操带着文武百官，来到汉中石门栈道的褒谷之地。这里山清水秀，野花飘香，明净的褒水从山谷飞泻而下，撞在河心的一块巨石上，溅起朵朵水花，如雪浪排空。曹操被这美好的大自然景色陶醉了，书兴大作，题写了“衮雪”二字。</p>
+<p>字写好后，大家对魏王的书法赞叹不已，不过对“衮”字没有三点水的问题谁也不敢提。有一人壮着胆子问道:“丞相大人，你的书法如此之好，只是'衮’字缺了三点水。”曹操听后仰天大笑。他用手一指滚滚的褒水说:“'衮’在水边，何以缺水?”这时大家才如梦初醒。</p>
+<p>1969年，因石门修筑水库，刻石将没水中，于是人们连同“衮雪”在内的汉魏 13件刻石精品馨山刻石，移置汉中市博物馆内陈列，以供海内外游人参观。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basic/basic-1-han-cao-qu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../basic/basic-2-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basic/basic-1-han-cao-qu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../basic/basic-2-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

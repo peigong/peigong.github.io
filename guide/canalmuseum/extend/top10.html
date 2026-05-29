@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>十大重点展品 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/extend/top10.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="十大重点展品"><a class="header" href="#十大重点展品">十大重点展品</a></h1>
+<blockquote>
+<p>参见：<a href="https://www.bjnews.com.cn/detail/1703853886129955.html">元旦假期参观北京大运河博物馆，这十大重点展品不要错过</a></p>
+</blockquote>
+<p>新京报讯（记者张璐）元旦假期来临，北京城市副中心三大文化建筑将成为市民假日享受文化生活的打卡地。其中，北京大运河博物馆的展览异彩纷呈，从多个难得一见的重量级展品中，观众可以了解大运河悠久的历史文化。</p>
+<p>基本陈列展“京华通惠 运河永济——北京与大运河历史文化陈列”分为“江河道渠 水运初兴”“渠通幽州 多元融合”“辽金建都 漕运通济”“大都既定 一脉贯通”“京师繁会 帆樯络绎”“漕运转型 曲折探索”“运河新生 造福京城”和“城河共生 交相辉映”八个部分，展出曾藏于圆明园的清乾隆款景德镇窑六方套瓶等1000余件（套）展品，辅以巨型沙盘、多段纪录影片和互动项目，系统展示大运河的开凿演变历史，着重展示大运河与北京的密切关系，表现运河沿线人文历史价值内涵。</p>
+<p>1000余件（套）展品中，有首都博物馆藏与大运河文化相关的系列文物，如代表唐代最精湛越窑工艺的青釉刻牡丹纹盒，可以作证通州地处水陆要津的石宗璧墓志，记录了元代江南士人于运河上、江河间旅居交游的《郭畀客杭日记残稿》等难得一见的重量级展品。</p>
+<p>除了基本陈列展，北京大运河博物馆专题展览与临时展览也值得关注。专题展“北京大运河揽胜图卷”上，观众可以跟随艺术家的视角，体验大运河沿途的历史文化遗产和北京的标志性建筑。专题展“不止运河——沉浸式体验展”采用目前国内博物馆规模最大的三维衍射系统装置，观众可穿越时空，畅游大运河。临时展“北京画院藏花鸟画精品展”展出吴昌硕、齐白石等多位名家的48件作品，营造出一派鸾翔凤集、百花齐放的盛景。</p>
+<h2 id="1带木柄铁锸"><a class="header" href="#1带木柄铁锸">1、带木柄铁锸</a></h2>
+<ul>
+<li>隋（581-618年）</li>
+<li>通柄长91.0厘米，头长21.0厘米，宽16.8厘米</li>
+<li>北京市海淀区紫竹院高梁河出土</li>
+</ul>
+<p>锸头为长方形，带有木柄，木柄截面为椭圆形。与当下使用的铁制铁锹不同，这件文物的下部采用了“铁包木”的材质。隋代百姓就是使用这样的简陋工具在短时间内开凿了大运河，付出巨大代价。</p>
+<h2 id="2越窑青釉刻牡丹纹盒"><a class="header" href="#2越窑青釉刻牡丹纹盒">2、越窑青釉刻牡丹纹盒</a></h2>
+<ul>
+<li>唐（618-907年）</li>
+<li>通高6.5厘米，口径17.2厘米</li>
+</ul>
+<p>盒扁圆形，子母口，盖微隆起，直壁，圜底。底面满釉，有十多个支烧痕。盖缘刻凹弦纹一周，盖面满刻牡丹纹。胎色灰白，胎质细腻，釉色青中泛黄，为越窑青釉的精品。盒为唐代最流行的梳妆用品盛具。越窑所在地主要在越州境内（今浙江省宁波市和绍兴市），唐代越窑工艺最为精湛。</p>
+<p>越窑青瓷明彻如冰，温润似玉，陆龟蒙有诗赞曰“九秋风露越窑开，夺得千峰翠色来”。水运是瓷器运输的最佳方式，得益于大运河和海上丝绸之路，越窑瓷器实现了通江达海。</p>
+<h2 id="3石宗璧墓志"><a class="header" href="#3石宗璧墓志">3、石宗璧墓志</a></h2>
+<ul>
+<li>金（1115-1234年）</li>
+<li>长70厘米，宽70厘米</li>
+<li>北京市通州区石宗璧墓出土</li>
+</ul>
+<p>石宗璧墓位于北京市通州区梨园镇三间房村，石宗璧墓志是通州建置得名的重要证据。据墓志记载，石宗璧墓“以大定十七年四月四日，葬于通州潞县台头村之新茔”。这是第一次在北京地区发现“通州”字样的实物。《元史·地理志》载：“金改通州，取漕运通济之义，有丰备、通济、太仓，以供京师。”石宗璧墓志与史料记载相互印证，说明通州地处水陆要津，是漕粮进京的重要枢纽和物资转运基地。</p>
+<h2 id="4龙泉窑青釉刻花牡丹纹凤尾瓶"><a class="header" href="#4龙泉窑青釉刻花牡丹纹凤尾瓶">4、龙泉窑青釉刻花牡丹纹凤尾瓶</a></h2>
+<ul>
+<li>元（1271-1368年）</li>
+<li>高46厘米，口径21厘米，底径13.5厘米</li>
+<li>北京元大都遗址出土</li>
+</ul>
+<p>元代龙泉窑创烧并流行一类喇叭口、长颈、鼓腹、敛足的大型瓶器，后世因其优美的长颈喇叭口造型，称其“凤尾瓶”。该瓶丰盈高大，饰有缠枝牡丹花纹样，是元代龙泉窑的典型产品。宋元时期，龙泉窑生产规模扩大，其窑场分布于瓯江上游，产品顺瓯江而下，直达温州，通过河运或海运行销国内外市场。</p>
+<p>元代，北方草原民族的用瓷审美与江南文化传统相互濡染，龙泉窑产品一改南宋时期精致文雅、小件器物居多的风格，转变为流行凤尾瓶等装饰繁复的大型器物。这件凤尾瓶正是元代南北文化交融下新式审美理念的物证。</p>
+<h2 id="5郭畀bì客杭日记残稿"><a class="header" href="#5郭畀bì客杭日记残稿">5、《郭畀(bì)客杭日记残稿》</a></h2>
+<ul>
+<li>元（1271-1368年）</li>
+<li>纵23.8厘米，横13厘米</li>
+</ul>
+<p>郭畀（1280-1335年），字天锡，号思退，镇江人。能诗擅画，书学赵孟頫，得其神髓而自成一格。他的日记手稿《云山日记》记录了从至大元年（1308年）八月二十七日开始至至大二年（1309年）十月三十一日止的日常书画活动和交往交游。</p>
+<p>这一年多的时光里，他的生活轨迹遍及镇江、杭州、长兴、金坛、兴化、扬州、高邮、常州。这部日记手稿印证了元代江南士人于运河上、江河间，南上北下、旅居交游。水路沿途的自然风光往往能激发文人的创作灵感，留下了众多璀璨的诗词书画作品。运河不仅带来了出行的便捷，亦给文人墨客带来了无尽的思绪和遐想。</p>
+<h2 id="6苏州府吴江县万历十三年五十两金花银铭文银锭"><a class="header" href="#6苏州府吴江县万历十三年五十两金花银铭文银锭">6、苏州府吴江县万历十三年五十两金花银铭文银锭</a></h2>
+<ul>
+<li>明万历十三年（1585年）</li>
+<li>高8厘米，长14.5厘米，宽8厘米</li>
+<li>1977年北京市海淀区八里庄靶坊李伟墓出土</li>
+</ul>
+<p>银锭船形，束腰，两端圆弧状并起高翅，随着明代中期的赋税改革，逐步演绎成田赋折银的化身。金花银制度在正统元年被正式确立，征收的范围最初是在江南诸省产粮区，米麦和白银的折价是一石比二钱五分，金花银征解直接入藏皇室内库。</p>
+<p>李伟是明万历皇帝生母李太后的父亲。李伟夫妇墓出土了4枚五十两金花银铭文银锭，其中这两枚银锭的铭文分别为“吴江县万历十三年米折五十两金花银知县江钟廉吏冯应祥银匠沈伯”“吴江县十三年分京库五十两金花银知县江钟廉吏冯应祥银匠顾德”，标识银锭铸造的来源和用途。金花银主要供后宫使用和赏赐。据《大明会典》，每年多达一百〇一万两千七百二十九两金花银，经由大运河运送进京。</p>
+<h2 id="7清景德镇窑青花御窑厂图圆瓷板"><a class="header" href="#7清景德镇窑青花御窑厂图圆瓷板">7、清景德镇窑青花御窑厂图圆瓷板</a></h2>
+<ul>
+<li>清同治（1862-1875年）</li>
+<li>径72.5厘米</li>
+</ul>
+<p>景德镇御窑厂是明清两代宫廷瓷器的专门制造场所。明清时期御瓷运输有水路和陆路两种方式。其中，水运是主要解送方式，景德镇御瓷至饶州府河装载，经鄱阳湖、长江，在扬州转京杭大运河直达京师。</p>
+<p>瓷板采用青花料绘制景德镇图，画面以景德镇珠山御窑厂建筑群为中心，运用中国传统绘画的平远法，将御窑厂及其以北的街市巧妙地浓缩在圆形画面中。画面中昌江上船只来往，运输繁忙，泊岸桅杆林立，呈现“舟帆日日蔽江来”的盛况。</p>
+<h2 id="8清乾隆款景德镇窑外粉彩内青花镂空花果纹六方套瓶"><a class="header" href="#8清乾隆款景德镇窑外粉彩内青花镂空花果纹六方套瓶">8、清乾隆款景德镇窑外粉彩内青花镂空花果纹六方套瓶</a></h2>
+<ul>
+<li>清乾隆（1736-1795年）</li>
+<li>高40.6厘米，口径11.4厘米，腹径21.0厘米，底径12.4厘米</li>
+<li>北京市文物公司捐赠</li>
+</ul>
+<p>套瓶分内外两层，内层青花，外层粉彩。瓶颈绘粉青地粉彩缠枝花卉及如意云头装饰带，其他部分施紫金釉，上绘黑彩及金彩缠枝花卉。外层腹部六面各有一镂空粉彩花果纹开光，绘灵芝、佛手、桃、枇杷等瑞果，镂空处可见内层青花缠枝花卉。底书青花“大清乾隆年制”六字三行篆书款。套瓶为景德镇督陶官唐英于乾隆八年创烧，制作工艺极为复杂，须多次施釉加彩入窑烧制而成。</p>
+<p>此瓶原为清代圆明园遗物，1860年英法联军攻占北京占据圆明园，洛克爵士掠得后售与莫里逊氏。2000年5月，北京市文物商店总店从香港拍卖公司购回，捐赠给首都博物馆。</p>
+<h2 id="9光绪十四年成造细料二尺见方铭文金砖"><a class="header" href="#9光绪十四年成造细料二尺见方铭文金砖">9、“光绪十四年成造细料二尺见方”铭文金砖</a></h2>
+<ul>
+<li>清光绪十四年（1888年）</li>
+<li>长66厘米，宽66厘米，厚9厘米</li>
+</ul>
+<p>金砖，亦称细料方砖，是明清两代由皇家指定于苏州立窑烧造的一种高规格御用地砖。其烧造工艺讲究，成品挑选标准为“颜色纯青、声音响亮、端正完全、毫无斑驳”。金砖物勒工名，侧边刻有烧造时间、尺寸、督造官员、监造官员姓名，有的还有制砖工匠的姓名等款识。</p>
+<p>此块金砖刻“光绪十四年成造细料二尺见方金砖”“督造官江南苏州府知府魁元”“监造官苏州府照磨杨锡□”“德记”等款识。金砖从苏州解运至京，通常由粮船搭载，运至通州后，转送到营缮工程工地。</p>
+<h2 id="10京杭大运河保护与申遗纪念标"><a class="header" href="#10京杭大运河保护与申遗纪念标">10、京杭大运河保护与申遗纪念标</a></h2>
+<ul>
+<li>朱炳仁捐赠</li>
+</ul>
+<p>为纪念2006年5月由全国政协组织的“京杭大运河保护与申遗考察活动”，中国工艺美术大师朱炳仁设计制作了“京杭大运河保护与申遗纪念标”。正面铭刻“中国京杭大运河保护与申遗活动纪念”大字和“中国人民政治协商会议全国委员会 二00六年五月十二日”落款，背面刻大运河宣言。船桨上铭刻此次考察活动参与者的签名，表达参与者立志做一名保护大运河的桨手纤夫的信念。“京杭大运河保护与申遗纪念标”是中国大运河保护与申遗历程中的重要物证。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../extend/extend-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../extend/extend-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

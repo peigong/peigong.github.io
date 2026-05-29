@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>远古时期 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/prehistory.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="远古时期"><a class="header" href="#远古时期">远古时期</a></h1>
+<h2 id="第一单元-中国旧石器时代早期人类及生活"><a class="header" href="#第一单元-中国旧石器时代早期人类及生活">第一单元　中国旧石器时代早期人类及生活</a></h2>
+<h3 id="第一组-直立人"><a class="header" href="#第一组-直立人">第一组 直立人</a></h3>
+<ul>
+<li>
+<p>北京人背鹿</p>
+</li>
+<li>
+<p>山顶洞人生活场景</p>
+</li>
+<li>
+<p>元谋人</p>
+</li>
+<li>
+<p>蓝田人</p>
+</li>
+<li>
+<p>北京人</p>
+</li>
+</ul>
+<h3 id="第二组-古老的石器工具人"><a class="header" href="#第二组-古老的石器工具人">第二组 古老的石器工具人</a></h3>
+<ul>
+<li>石锤、石砧</li>
+<li>石器工具</li>
+</ul>
+<h3 id="第三组-用火"><a class="header" href="#第三组-用火">第三组 用火</a></h3>
+<ul>
+<li>烧骨、烧石、烧土</li>
+</ul>
+<h3 id="第四组-采集和狩猎"><a class="header" href="#第四组-采集和狩猎">第四组　采集和狩猎</a></h3>
+<ul>
+<li>朴树籽</li>
+<li>剑齿虎</li>
+<li>肿骨鹿</li>
+</ul>
+<h2 id="第二单元-中国旧石器时代中晚期的人类及文化"><a class="header" href="#第二单元-中国旧石器时代中晚期的人类及文化">第二单元 中国旧石器时代中、晚期的人类及文化</a></h2>
+<h3 id="第一组-智人"><a class="header" href="#第一组-智人">第一组 智人</a></h3>
+<ul>
+<li>原始牛犄角</li>
+<li>直立人</li>
+<li>智人</li>
+<li>多地区起源假说</li>
+<li>单一地区起源假说</li>
+</ul>
+<h3 id="第二组-石器技术的改进"><a class="header" href="#第二组-石器技术的改进">第二组 石器技术的改进</a></h3>
+<ul>
+<li>间接打片工艺技术制作细石器</li>
+<li>磨制和穿孔技术</li>
+</ul>
+<h3 id="第三组-弓箭鱼镖的发明与骨角器的使用"><a class="header" href="#第三组-弓箭鱼镖的发明与骨角器的使用">第三组　弓箭、鱼镖的发明与骨、角器的使用</a></h3>
+<h3 id="第四组-原始信仰与原始艺术的萌芽"><a class="header" href="#第四组-原始信仰与原始艺术的萌芽">第四组　原始信仰与原始艺术的萌芽</a></h3>
+<ul>
+<li>赤铁矿粉末</li>
+</ul>
+<h2 id="第三单元-中国新石器时代的生产与生活"><a class="header" href="#第三单元-中国新石器时代的生产与生活">第三单元 中国新石器时代的生产与生活</a></h2>
+<h3 id="第一组-农业的发生"><a class="header" href="#第一组-农业的发生">第一组 农业的发生</a></h3>
+<ul>
+<li>炭化稻谷</li>
+<li>骨耜</li>
+<li>石磨盘、石磨棒</li>
+<li>炭化粟粒</li>
+</ul>
+<h3 id="第二组-家畜饲养"><a class="header" href="#第二组-家畜饲养">第二组 家畜饲养</a></h3>
+<ul>
+<li>家畜形陶器</li>
+</ul>
+<h3 id="第三组-制陶"><a class="header" href="#第三组-制陶">第三组 制陶</a></h3>
+<ul>
+<li>制陶</li>
+<li>捏塑</li>
+<li>模制</li>
+<li>泥片贴塑</li>
+<li>泥条盘筑</li>
+<li>慢轮修整</li>
+<li>快轮制陶技术</li>
+<li>仰韶彩陶盆</li>
+<li>黑陶罐</li>
+<li>龙山文化</li>
+<li>渗碳工艺</li>
+<li>陶拍</li>
+<li>袋足陶模</li>
+<li>陶斝</li>
+<li>陶釜、陶支脚</li>
+<li>陶釜、陶灶</li>
+<li>陶甑</li>
+<li>白陶鬶</li>
+<li>陶鬲</li>
+<li>小口尖底陶瓶</li>
+<li>鹰形陶鼎</li>
+<li>舞蹈纹彩陶盆</li>
+<li>涡纹四系彩陶罐</li>
+</ul>
+<h3 id="第四组-编织与纺织"><a class="header" href="#第四组-编织与纺织">第四组 编织与纺织</a></h3>
+<ul>
+<li>陶纺轮</li>
+<li>骨梭</li>
+</ul>
+<h2 id="第四单元-中国新石器时代的文明化进程"><a class="header" href="#第四单元-中国新石器时代的文明化进程">第四单元 中国新石器时代的文明化进程</a></h2>
+<h3 id="第一组-原始信仰与原始艺术的发展"><a class="header" href="#第一组-原始信仰与原始艺术的发展">第一组 原始信仰与原始艺术的发展</a></h3>
+<ul>
+<li>裸体浮雕彩陶壶</li>
+<li>人面鱼纹彩陶盆</li>
+<li>蚌塑龙虎墓</li>
+<li>十九节玉琮</li>
+<li>玉龙</li>
+<li>玉鸟</li>
+<li>牙雕凤鸟匕形器</li>
+<li>船形彩陶壶</li>
+<li>镂雕旋纹象牙梳</li>
+<li>贾湖骨笛</li>
+<li>陶钟</li>
+<li>彩陶鼓</li>
+</ul>
+<h3 id="第二组-文字的萌芽与铜器的产生"><a class="header" href="#第二组-文字的萌芽与铜器的产生">第二组 文字的萌芽与铜器的产生</a></h3>
+<ul>
+<li>单范青铜刀</li>
+</ul>
+<h3 id="第三组-礼仪制度与权贵阶层"><a class="header" href="#第三组-礼仪制度与权贵阶层">第三组 礼仪制度与权贵阶层</a></h3>
+<ul>
+<li>白陶鬶</li>
+<li>薄胎黑陶高柄杯</li>
+<li>九孔石刀</li>
+</ul>
+<h3 id="第四组-聚落城堡与战争"><a class="header" href="#第四组-聚落城堡与战争">第四组 聚落、城堡与战争</a></h3>
+<ul>
+<li>陶水管</li>
+<li>带箭伤的人骨</li>
+<li>姜寨聚落遗址</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prohibit/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prohibit/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
