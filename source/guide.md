@@ -42,6 +42,7 @@ title: 导游笔记
 - [历代帝王庙](./guide/The-Temple-of-Successive-Emperors)
 - [孔庙和国子监博物馆](./guide/kmgzj) - [给小朋友讲论语](https://pg.js.cn/articles/essay-read-2025-04-06-analects-for-children.html) - [两小儿辩日](https://pg.js.cn/articles/essay-read-2025-04-18-debate-of-children.html)
 - [先农坛（北京古代建筑博物馆）](./guide/xiannong-altar)
+- [中国人民抗日战争纪念馆](./guide/1937china)
 - [北京鲁迅博物馆](./guide/beijing-luxun-museum)
 - [中国科学技术馆](./guide/cstm)
 - [中国农业博物馆](./guide/ciae)
