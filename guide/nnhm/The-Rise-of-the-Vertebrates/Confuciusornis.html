@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>孔子鸟 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/The-Rise-of-the-Vertebrates/Confuciusornis.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="孔子鸟"><a class="header" href="#孔子鸟">孔子鸟</a></h1>
+<p>孔子鸟（学名：Confuciusornis）是鸟纲孔子鸟目孔子鸟科的一属已灭绝古鸟类，也是一类处于演化基干阶段的早期鸟类。化石分布于中国辽宁省北票市及建昌县早白垩世热河生物群地层，保存完好的羽毛印迹和骨骼结构使其成为中生代最著名的鸟类之一。属内包括圣贤孔子鸟、杜氏孔子鸟等有效种，体型近似现代鸡类，具有无齿角质喙、退化尾椎融合形成的尾综骨及原始龙骨突胸骨，头骨保留眶后骨等爬行类特征，雄性个体尾羽较雌性修长。前肢结构已具备一定的飞行适应特征，但飞行能力较为有限。</p>
+<p>该属生存于约1.25亿至1.1亿年前，栖息于淡水湖泊沿岸，可能因火山爆发死亡被掩埋。化石在辽西地区密度超过40件/100平方米，已发现标本超千件。1993年由当地村民杨雨山首次发现于北票四合屯，1995年由侯连海团队以孔子命名圣贤孔子鸟。2022年学者在九佛堂组地层发现师范孔子鸟新种，其手部骨骨骺次级骨化特征改变了学界对古鸟类骨化机制的认知。2025年，其前肢结构正处于从抓握功能向飞行功能演化的关键过渡阶段。</p>
+<h2 id="物种介绍"><a class="header" href="#物种介绍">物种介绍</a></h2>
+<p>孔子鸟（Confuciusornis）的形态与德国的始祖鸟有许多相近的特征，例如，头骨没有完全愈合，肱骨比桡骨长，手上长有3个带爪的指，等等。孔子鸟的个体与鸡的大小相近，上下颌没有牙齿，有一个发育的角质喙；它的脊椎骨退化，胸骨发育，尾巴很短。 从进化角度来看，孔子鸟的形态特征比始祖鸟显得进步，生活时代也应该比始祖鸟晚。不过孔子鸟的研究者、中国科学院古脊椎动物与古人类研究所的侯连海研究员当初认为，孔子鸟的形态与始祖鸟近似，它们的时代也大致相当。其生存年代现被确定为距今1.25~1.2亿年前的早白垩纪。</p>
+<ul>
+<li>名称：圣贤孔子鸟</li>
+<li>学名：Confuciusornis sanctus Hou, Zhou et al., 1995</li>
+<li>学名来源（etymology）：孔子为中国古代思想家、教育家,“圣贤”是历代封建王朝赠于孔子的封号。</li>
+<li>产地和时代（locality and age）：中国辽宁省北票市上园镇四合屯，早白垩世热河组。</li>
+<li>保存现状：基本完整的个体。</li>
+</ul>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>圣贤孔子鸟属蜥鸟亚纲，是世界最早最原始的鸟类之一，个体大小近似现代鸡类，其主要特征是：头骨各骨块不愈合，保留双颞孔等爬行类特征，尚具有其爬行类祖先遗留下来的眶后骨，牙齿退化，出现了最早的角质喙，尾椎骨融合形成尾综骨。前肢仍有三个发育的指爪，前肢结构已具备一定的飞行适应特征，但飞行能力有限，保留部分原始结构。胸骨无龙骨突，胸肌发达，肱骨有一大气囊孔等等。雄性尾羽较雌性修长，存在两性异形。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>孔子鸟可能栖息在淡水湖岸湿地环境。其化石大量发现于热河生物群，该生物群代表一个古老的火山湖系统。化石证据表明孔子鸟为高度群居的社会性鸟类。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>孔子鸟目的化石仅分布在中国早白垩世的热河生物群（距今约1.3—1.2亿年前），其化石主要发现于中国辽宁省，如北票市上园镇的尖山沟、黄半吉沟和四合屯等地，以及建昌县的热河生物群地层，另有少量化石可能见于朝鲜半岛时代相当的地层。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<h3 id="生长发育"><a class="header" href="#生长发育">生长发育</a></h3>
+<p>人们根据孔子鸟和其他早期鸟类的肢体骨骼去研究鸟类的进化情况。骨从内向外的生长（增积）有着与树的年轮相似的过程，这样就可以了解它们个体的发育过程。在显微镜下，人们通过观察骨的横切面就可以了解到孔子鸟不同生长时期的状况。</p>
+<p>观察的结果是，孔子鸟和其他白垩纪的鸟类的骨外层生长非常缓慢，比起恐龙和现代鸟类有着更少的血管组织。因此认为古鸟类比现代鸟类要更长的时间达到成熟。对化石胚胎的研究使人们明白了其中可能的原因：第一批鸟是早成雏，甚至孵化后不久就能飞。这种理论认为，雏鸟把大部分能量花费在飞行上而非生长上。这种状态一直到新鸟品种的出现，这种鸟非常细心的照顾新生的雏鸟。雏鸟就不必在出生后如此快地学会飞行，以脱离双亲独自生活，而是将自己摄入的能量大部分用在生长上，也就进化出晚成雏。</p>
+<p>另一种观点认为，在鸟类的进化过程中，鸟类的生长因受到限制而导致体型越来越小，比起其恐龙祖先要小得多。</p>
+<h3 id="两性异形"><a class="header" href="#两性异形">两性异形</a></h3>
+<p>孔子鸟的化石样品在羽毛上显示了差异：大概5%到10%的样品显示有一对长的尾羽。</p>
+<p>很多研究人员相信这是性别特征。如果这一观点成立，孔子鸟就是最早的两性异形鸟类。</p>
+<p>这种两性异性在行为学上有着很多可能性：首先存在择偶，来自其中一别性的个体会观察异性的羽毛。如果有长尾羽的是雄性的话，根据上面提到的性别比例失调，可能出现一夫多妻制现象。但是，若雄性参与护幼活动，例如保护雏鸟等，这种制度有其经济性的一面。</p>
+<p>这种羽毛上的差别提示，早在下白垩纪的鸟类，就可能有复杂的社会行为。</p>
+<h3 id="生活方式"><a class="header" href="#生活方式">生活方式</a></h3>
+<p>不同的古鸟类研究小组对孔子鸟的飞行能力有不同的看法。孔子鸟的手和脚有大的弯曲的爪子。这让人想到，孔子鸟的飞行器官没有足够的力量原地起飞。为此，孔子鸟会用爪子爬到树上，然后从上面坠落，在这种自由下落的过程中开始拍打翅膀起飞。这种观点却有违一个事实——孔子鸟的脚相比近现代鸟类的在抓取方面相对较弱。这种理论的反对者认为，孔子鸟的骨骼其实已经足够起飞，能通过助跑加速完成起飞。</p>
+<p>侯连海小组认为，孔子鸟可能是一种植食性动物（Hou u. a. 1999），但有别于其他在热河组发现的鸟类化石，直到如今仍没能找到有关孔子鸟胃内容物的标本，以直接证明该观点的正确。</p>
+<p>大量的孔子鸟骨骼化石是在四河屯的湖沉积物中发现的，这可以推断孔子鸟喜欢寻觅湖边地带生活。在有些地层的标本密度超过40件/100㎡，推断可能是由于火山爆发造成很多孔子鸟同时死亡，它们的尸体被雨水从岸上被冲刷到湖中。所以，孔子鸟可能和其他很多近现代鸟类一样，过的是群居生活，或在某一段时间集中在一起。</p>
+<h2 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h2>
+<p>2022年，学者在九佛堂组地层发现师范孔子鸟新种，其标本保存了一个特殊的个体发育状态，为认识鸟类最早的尾综骨由哪些椎体融合而成提供了首例直接证据。研究揭示了一种在鸟类中极为特殊的骨化机制——骨骺次级骨化，很可能在师范孔子鸟手部关节的骨化中发挥了作用，以满足其在骨骼生长不完全阶段飞行时对指骨硬度的需求，这一发现改变了此前学界认为该骨化机制仅存在于爬行动物有鳞类和哺乳动物附肢骨，而在鸟类中仅发生于后肢胫骨近端的认知。</p>
+<p>孔子鸟存在两性异形现象，雄性个体尾羽较雌性修长。化石证据显示，大量孔子鸟个体集中保存在一起，表明它们可能是高度群居的社会性鸟类。</p>
+<h2 id="分类学"><a class="header" href="#分类学">分类学</a></h2>
+<h3 id="属"><a class="header" href="#属">属</a></h3>
+<p>孔子鸟科除了孔子鸟属外还有长城鸟（Changchengornis），两者的区别是，后者的喙部更短，上肢孔缺失，肩胛带各结构的外形区别，还有第一个向后的脚趾（后趾Hallux）的长度。根据后趾的长度推测，长城鸟抓取的能力强于孔子鸟。</p>
+<p>孔子鸟属的共有特征是喙部无牙，上肢三角胸突起的近四边形外形，胸骨V形后边和手爪比例。</p>
+<p>在2001年被描述的锦州鸟（Jinzhouornis）也是出土自热河组岩层，同样属于孔子鸟属。但缺乏细节描述。</p>
+<h3 id="种"><a class="header" href="#种">种</a></h3>
+<p>直到为止四个属于孔子鸟属的种中，根据路易斯·恰佩（Luis M. Chiappe）带领的研究小组（Chiappe u. a. 1999）有两种作废：孙氏孔子鸟（Confuciusornis suniae）和川州孔子鸟（Confuciusornis chuonzhous），它们与圣贤孔子鸟（Confuciusornis sanctus）所谓的种间差别是不存在的。所有属于这两个种的标本和当时大部分的标本一样归到圣贤孔子鸟中。</p>
+<p>杜氏孔子鸟（Confuciusornis dui），1999年被描述的第四个种，和圣贤孔子鸟的区别在于手的比例，颅骨的外形和构造以及胸骨和胸骨肋的构造上。</p>
+<p>此外，2022年发现的师范孔子鸟新种（Confuciusornis shifan）也被确认，代表孔子鸟类新的演化方向。</p>
+<h3 id="中生代鸟类谱系"><a class="header" href="#中生代鸟类谱系">中生代鸟类谱系</a></h3>
+<p>在尾综骨鸟目（Pygostylia）中的孔子鸟科的动物属于鸟类中较原始的形式。其较高级的后代，属于Ornithothoraces，它们脊椎骨数目（Thoracalia）较少，第一个手指形成小翼羽Alula（参看上面的解剖比较列表。）所有的现代鸟类都是来源于 “Ornithothoraces”。</p>
+<h2 id="近种区别"><a class="header" href="#近种区别">近种区别</a></h2>
+<p>孔子鸟与始祖鸟（Archaeopteryx lithographica）是已知最原始的飞鸟，但两者在形态学、时代及行为学上存在显著差异。孔子鸟上下颌没有牙齿，具有一个发育的角质喙嘴，而始祖鸟有牙齿。孔子鸟的脊椎骨退化，尾巴很短，并具有由退化尾椎融合形成的尾综骨，始祖鸟则具有长的骨质尾。孔子鸟的头骨保留了双孔类爬行动物的双颞孔，并具有眶后骨等爬行类特征，始祖鸟则不具备此明确特征。从进化角度来看，孔子鸟的形态特征比始祖鸟显得进步，生活于约1.25亿至1.1亿年前的早白垩世，其时代晚于生活于晚侏罗世的始祖鸟。孔子鸟化石数量庞大，已发现标本超过一千件，并存在性双形现象，雄性个体尾羽较雌性修长，这显示了复杂的群居社会行为证据，而始祖鸟则无此明确证据。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<p>从20世纪90年代末开始，出现了一系列针对孔子鸟化石的非法盗采行为，超过80%的孔子鸟化石流失海外。仅流失到美国的中国孔子鸟化石就有一百多件，而目前我国国内馆藏孔子鸟化石也不过才二十件。保护措施包括辽宁北票鸟化石自然保护区，该保护区位于辽宁省北票市境内，于1997年经辽宁省政府批准建立，是一个以中华龙鸟、原始祖鸟、孔子鸟等珍稀古生物化石为主要保护对象的自然保护区。</p>
+<h2 id="历史研究"><a class="header" href="#历史研究">历史研究</a></h2>
+<h3 id="发现研究"><a class="header" href="#发现研究">发现研究</a></h3>
+<p>在发现长有羽毛的恐龙之前，即早在1993年，辽宁北票市附近的四合屯农民杨雨山釆集到一副近30厘米的鸟类化石，后来化石收集者张和又收集到一些鸟类的前肢和颅骨的化石。及至1995年，由侯连海所带领的研究小组对该鸟进行了描述并命名为圣贤孔子鸟。很快人们就发现四合屯是个鸟类化石库，中国随即成为世界古鸟类研究的中心。到2000年前后，共发现了超过1000件孔子鸟属的化石标本。</p>
+<p>圣贤孔子鸟并不是孔子鸟属的唯一种。研究小组在1997年和1999年间再发现三个新种，但其中两种的存在受到争议。在同一出土地点，1996年发现辽宁鸟，1999年又发现长城鸟等新的鸟属。遗憾的是，1990年代末盗挖行为使很多化石流失。孔子鸟化石是化石黑市最抢手的化石之一。当局采取措施防范盗挖化石行为时，已经有数以百计的标本，被非法挖掘并流到国外。中国科学院古脊椎动物与古人类研究所（IVPP）的古生物学家周忠和表示，大约80%的孔子鸟化石被走私出境或在国内非法贩卖。大部分买主是日本、德国和美国的私人收藏家，原因是这些国家没有法律禁止这类化石的进口。</p>
+<p>当孔子鸟属被首次描述之时，人们就已经相信，四合屯和尖山沟所属的热河组和发现始祖鸟的索伦霍芬石灰岩年纪相仿。1999年从放射性碳测定法得到的数据来看，四合屯化石层的同位素年龄为1.24亿年，就是说热河组年纪比霍伦索芬的更轻（下白垩纪相对于晚侏罗纪）。根据和始祖鸟（1亿5千万年前）的解剖学对比，孔子鸟明显更“年轻”一点。</p>
+<h3 id="起源进化"><a class="header" href="#起源进化">起源进化</a></h3>
+<p>鸟类的起源是个谜。一般认为鸟类起源于恐龙，但也有观点认为鸟类是恐龙的近亲。恐龙起源说以在中国发现的带羽毛的恐龙和孔子鸟、以及在德国发现的始祖鸟为根据，但这一说法并没有被普遍接受。</p>
+<p>孔子鸟的描述者侯连海就坚持认为：从拥有双弓型头骨的杜氏孔子鸟来看，鸟类起源于初龙类，而非恐龙。也就是说，初龙类是鸟类、恐龙、鳄鱼和鳄蜴（Tuatara）等的共同祖先。也有人认为，长鳞龙这种动物的羽毛是该种非恐龙动物向鸟类进化的标志。但是这种长鳞龙也是恐龙同时代的生物，因此这种假设并没有否定鸟类出现于约1.5亿年前的中生代。</p>
+<p>即使是接受恐龙起源说的学者之间，也存在很多不同的观点。比如，有学者认为：两脚直立的恐龙首先从地上转移到树上生活，上肢仍然短小。经过一段时间后，这些恐龙会在两树之间跳跃，上肢变长，开始出现羽毛。后来这些带羽毛的上肢成为它们的“降落伞”进行滑翔，直到最后成为可以飞行的翅膀。在热河组发现的中国鸟龙、尾羽龙、小盗龙等带羽毛的恐龙，是恐龙起源说的直接证据。从始祖鸟的化石来看，这1亿5千万年前的鸟类始祖虽然有明显的鸟类特征，但同时也带有明显的爬行动物特征。其爬行类的特征为：口有牙齿；尾由18-21个分离的尾椎骨构成；前肢有3枚分离的学骨，指端具爪。其鸟类的特征为：有羽毛，有翼；骨盘为“开放式”；后足具4趾，3前1后。体形大小如乌鸦，只能滑翔，尚不能飞行。</p>
+<p>它正是当时达尔文进化论在鸟类进化上所预言的“缺失的一环”，同时也是进化论正确性的一个证据。而孔子鸟，根据其解剖特征（例如尾椎融合为尾综骨和无牙的喙部）则在始祖鸟的基础上向现代鸟类更进一步。虽然孔子鸟还保留了某些爬行类动物的特征（如双窝型颅骨），但孔子鸟离“爬行类动物”的血缘关系无疑比起爬行类与始祖鸟来说是更远了。</p>
+<p>羽毛是鸟类起源与进化的另一个重要问题。因为只有解释清楚羽毛的出现，才能真正理清鸟类的起源。以前一直认为羽毛来自鳞片，但这种看法与新近得到的观察结果相牴触。有些专家认为，孔子鸟的羽毛和始祖鸟所披的一样，是第五阶段的羽毛：外羽片与内羽片不对称，羽小枝之间已出现钩连，这些都是现代鸟类的羽毛常见形式。而在早期带羽毛的恐龙（如小盗龙）的羽毛则是对称的，是第四阶段的羽毛。另外，羽毛和鳞片都是由β-角蛋白构成。羽毛基底部鞘与哺乳动物的毛发的成分相同——都是α-角蛋白。</p>
+<p>让人难以理解的是，鸟类在短短3千万年内的演化是如此之快：因食物性质的改变和鸟类嗉囊的出现，使得由始祖鸟的有牙口部发展到孔子鸟无牙的角质喙；而始祖鸟23节尾椎骨到了孔子鸟身上，则融合为尾综骨。</p>
+<h3 id="解剖比较"><a class="header" href="#解剖比较">解剖比较</a></h3>
+<p>1980年代起，当始祖鸟被证实时间上和解剖学结构上有异于当时已发现的鸟类化石之时，人们也发现了很多填补进化史空缺的过渡物种——孔子鸟就是其中之一。孔子鸟和始祖鸟相似，它的外形既显示了一些鸟类祖先（兽脚亚目）已有的近同形特征，也显示了一些在鸟类进化过程中新出现的离态特征。孔子鸟的颅骨有一些很特别的地方：孔子鸟的喙和现代鸟类一样没有牙齿，但同时代的鸟属如辽宁鸟（Liaoningornis）和燕鸟（Yanornis）却是有牙的；枕骨部分有如双颞孔型爬行动物的构造：在（Orbita）眼眶后有成对的颞孔（下颞孔和上颞孔），其它的鸟类包括始祖鸟，都没有这样的颞孔。</p>
+<p>孔子鸟的飞行器官比始祖鸟的有所改进。一些标本的胸骨有一扁平的突起，这和现代鸟类的龙骨突相似。能飞行的鸟类发展出膨大的龙骨突，为重要的飞行肌肉提供附着点，使得翅膀能够上下拍动。与始祖鸟相比，孔子鸟有延长了的喙突（Coracoid），这表明了孔子鸟的肩部肌肉在向现代鸟类进化过程中比始祖鸟更进一步。</p>
+<p>孔子鸟的胸腔通过带钩突的肋骨和胸骨肋得到加强。叉骨和始祖鸟和各种（非鸟）兽脚类动物一样，不是叉状，而是飞去来器状。</p>
+<p>在大量的重构图中，孔子鸟的手显得更原始。实际上掌骨 （Metacarpalia）II和III在近腕骨处和月骨融合为腕掌骨（Carpometacarpus）。现代的鸟类，其手的融合更进一步，只有第一只手指能活动，即拇指，上有小翼羽，作用是飞行时控制气流。以如今的资料来看，孔子鸟和始祖鸟都没有小翼羽。这个身体构造直到一个例外（小盗龙），才在高等鸟类中如Eoalulavis（拉丁语：早期小翼羽鸟）出现。 孔子鸟的上肢终于一个膨大的胸部突起，上有一椭圆的孔。但这个孔的作用热不清楚，但这是孔子鸟的一个自体衍征，就是说这个属与众不同之处，能借此将其与其他鸟属独立开来的特征。2002年，同样是在热河组的地层中被发现的会鸟（Sapeornis）被描述，它有这类似的上肢构造。据此认为，这个特征比以前推测的更广泛存在于早期的鸟类当中。</p>
+<p>孔子鸟（和会鸟）借以与始祖鸟，胁空鸟龙（Rahonavis）和热河鸟（Jeholornis）（这三种在一些研究中被认为是恐龙，另一些是鸟类）相区别的重要特征是骨性尾的缩短和最后几节尾椎融合成为尾综骨。这样的身体构造对飞行定向有很大的好处。</p>
+<h2 id="孔子鸟的意义"><a class="header" href="#孔子鸟的意义">孔子鸟的意义</a></h2>
+<p>其他的鸟种类不同，孔子鸟的存在历史超过1500万年，就是热河组地层的形成时。这些表明，孔子鸟相比与之竞争的鸟类虽然在飞行方面略逊一筹，但在身体构造方面却更先进一些。</p>
+<p>从中还可看到进化的轨迹，直到九佛堂组的形成之前，反鸟亚纲一直在其在白垩纪灭绝之前主宰着多个生态系统。有趣的是，比起孔子鸟，与始祖鸟更相似的原始热河鸟（Jeholornis prima）直到热河组形成末期才出现。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../The-Rise-of-the-Vertebrates/Ichthyostega.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../The-Rise-of-the-Vertebrates/Lufengosaurus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../The-Rise-of-the-Vertebrates/Ichthyostega.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../The-Rise-of-the-Vertebrates/Lufengosaurus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
