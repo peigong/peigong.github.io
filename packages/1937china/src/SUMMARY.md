@@ -9,3 +9,5 @@
     - [《风云儿女》](./anthem/feng-yun-er-nv.md)
     - [田汉](./anthem/tian-han.md)
     - [国歌歌词最早来源](./anthem/first-source.md)
+- [参考资料]()
+    - [红领巾](./reference/Red-scarf.md)
