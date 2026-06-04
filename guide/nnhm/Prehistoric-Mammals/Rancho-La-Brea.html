@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>拉布雷亚沥青坑 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prehistoric-Mammals/Rancho-La-Brea.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="拉布雷亚沥青坑"><a class="header" href="#拉布雷亚沥青坑">拉布雷亚沥青坑</a></h1>
+<p>拉布雷亚沥青坑位于美国加利福尼亚州洛杉矶市汉考克公园内，由地层渗出的原油干涸形成沥青池，现存约20英亩范围内分布着100多个天然沥青坑。该遗址保存了距今4万至8千年前陷入沥青的史前生物化石，涵盖恐狼、剑齿虎、哥伦比亚猛犸等650余种动植物，形成规模最大的冰河时期化石沉积层。西班牙探险队1769年首次记录该区域，当地原住民曾用其沥青作防水材料。</p>
+<p>1906年科学家开启考古发掘，1916年乔治·艾伦·汉考克将土地捐赠用于科研。1969年发现的91号沥青坑出土超4000件哺乳动物化石，2006年新发现的16处化石矿床包含23箱“23号工程”标本，使馆藏总量突破350万件。乔治·C·佩奇博物馆通过玻璃幕墙展示91号坑的现场发掘过程，并设立化石实验室对微小化石进行生态分析。2023年放射性碳测年研究表明，该地巨型动物群约在1.29万年前因气候变化引发的火灾而灭绝。</p>
+<h2 id="命名"><a class="header" href="#命名">命名</a></h2>
+<p>1769年，葡萄牙探险队首次发现该区域沥青并命名其为“Rancho La Brea”。“拉布雷亚沥青坑”这一名称在语义上是重复的，直译为“the the tar tar pits”。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>拉布雷亚沥青坑的沥青喷涌已有数千年历史，当原油从地底持续冒出、轻组分不断挥发后，剩下的组分在阳光与空气的长期作用下形成了粘稠的沥青。仅需数厘米厚的液态沥青就足以困住野牛甚至猛犸象大小的动物，若沥青湖表面被落叶、灰尘和水体覆盖，便成为了恐怖的死亡陷阱。陷入其中的史前食草动物会引来捕食者，使后者也被困住，这种循环持续了数千年，最终使该地区成为了化石宝库。</p>
+<p>早期的美国原住民曾使用此地的沥青作为粘合剂，用于制作篮子和独木舟，或用于防水和修补工具。1769年，一支葡萄牙探险队首次记录该区域，探险者们将其命名为“Rancho La Brea”，意为“焦油牧场”。1865年，亨利·汉考克少校购买了Rancho La Brea土地，并向旧金山等地销售沥青用于铺路和防水材料。1875年，卫斯理学院地质学教授威廉·丹顿鉴定出一枚来自沥青坑的剑齿虎犬齿化石。</p>
+<p>1901年至1905年，拉布雷亚沥青坑进行了首次科学发掘。1906年，科学家开始对在此地发现的残骨展开研究。1909年至1911年，南加州科学院也在此进行了发掘工作。1913年至1915年，洛杉矶郡博物馆在拉布雷亚进行了大规模系统性发掘，在96个地点采集了超过75万件动物标本。1915年，土地所有者乔治·艾伦·汉考克将发掘出的骨骼化石以及23英亩的Rancho La Brea土地捐赠给洛杉矶郡，用于永久性的科学研究和保护。</p>
+<p>1963年，拉布雷亚沥青坑被美国国家公园管理局评为“美国国家自然地标”。为更好地研究、保存和展示此地发现的化石，1975年，乔治·C·佩奇博物馆动工建设，并于1977年建成向公众开放。2006年，在洛杉矶郡艺术博物馆地下停车场的施工过程中，意外发现了16处新的化石坑，其内含物被整体装入23个巨型木箱，该项目被称为“项目23”。其中发现了一具近乎完整、保存度约80%的哥伦比亚猛犸象骨架，被命名为“Zed”。2015年，乔治·C·佩奇博物馆正式更名为“拉布雷亚沥青坑博物馆”。2019年后，博物馆启动了名为“Reimagine La Brea Tar Pits”的总体规划，旨在对占地12英亩的园区进行整体改造和升级。</p>
+<h2 id="自然资源"><a class="header" href="#自然资源">自然资源</a></h2>
+<p>拉布雷亚沥青坑由地层渗出的原油干涸形成，现存约20英亩范围内分布着100多个天然沥青坑。该遗址保存了距今4万至8千年前（更新世晚期至全新世早期）陷入沥青的史前生物化石，涵盖恐狼、剑齿虎、哥伦比亚猛犸等650余种动植物。作为世界上骨化石蕴藏最丰富的地方之一，这里已发现超过350万件标本。沥青坑至今仍有活动，湖区是园区内最大的焦油坑，至今仍在冒油、冒气泡，小鸟和动物仍会陷入其中。</p>
+<h2 id="重要景点"><a class="header" href="#重要景点">重要景点</a></h2>
+<p>乔治·C·佩吉博物馆（拉布雷亚沥青坑博物馆）为主要展馆，收藏并展示超过100万件化石，馆内化石实验室对外开放，游客可观看工作人员清理和研究化石的过程。</p>
+<p>湖区是园区内最大的焦油坑，湖畔伫立多座真实比例大小的玻璃纤维猛犸象雕塑，观察坑建于1952年，游客可沿螺旋坡道深入地下观看含化石的沥青沉积层，91号坑是世界上运行时间最长的城市古生物发掘点之一，夏季对外开放观看发掘。</p>
+<p>更新世花园主要展示冰川时代“更新世”时期的植物，“23号项目”工作区展示2006年发现的化石箱的挖掘与复原工作，恐狼墙由大量恐狼头骨化石组成，是博物馆内的壮观展墙。</p>
+<p>馆内设有《冰川时代的巨人》3D影片和《冰川时代》多媒体表演秀等付费项目。</p>
+<h2 id="重要事件"><a class="header" href="#重要事件">重要事件</a></h2>
+<p>2006年，在建造洛杉矶郡艺术博物馆地下停车场时，新发现16处化石坑，坑内化石与其他物质的混合物被放入23只巨型木箱，取名为“23号项目”。“23号项目”中发现一具近乎完整的哥伦比亚猛犸象化石骨架，命名为“Zed”。乔治·C·佩奇博物馆（后更名为拉布雷亚焦油坑博物馆）从2008年起开始对“23号项目”的化石进行挖掘和复原，工作持续至今。</p>
+<p>2023年，洛杉矶自然历史博物馆（NHMLAC）公布了拉布雷亚沥青坑总体规划的三个新概念方案，旨在对占地12英亩的地块进行整体改造，以创造更综合的博物馆和公园体验。作为未来发展的一部分，引入了塞缪尔·奥辛冰河时代全球研究中心（Samuel Oschin Global Center for Ice Age Research）。</p>
+<h2 id="开发与保护"><a class="header" href="#开发与保护">开发与保护</a></h2>
+<p>为了研究和展示拉布雷亚沥青坑内的化石，洛杉矶郡自然历史博物馆设立了子机构「乔治·C·佩奇博物馆」，该馆于1977年建成开放。2015年，乔治·C·佩奇博物馆正式更名为「拉布雷亚沥青坑博物馆」。</p>
+<p>该博物馆是公私合作伙伴关系管理的机构，由洛杉矶郡自然历史博物馆与洛杉矶市政府共同管理，后者拥有其所在的汉考克公园的土地。</p>
+<p>2023年，洛杉矶郡自然历史博物馆公布了由Dorte Mandrup、Diller Scofidio + Renfro和WEISS/MANFREDI三家建筑事务所提出的拉布雷亚沥青坑总体规划方案，旨在改善游客体验、保护场地的标志性特征并增加可持续的基础设施。此外，博物馆计划构建一个在线3D标本模型数据库，并探索使用增强现实（AR）技术来提升公众互动体验。</p>
+<h2 id="相关文化"><a class="header" href="#相关文化">相关文化</a></h2>
+<p>拉布雷亚沥青坑博物馆为许多学生提供地理教育。其部分化石收藏曾于1915年在巴拿马-太平洋国际博览会上展出。</p>
+<p>作为威尔希尔大道博物馆区的重要成员，拉布雷亚沥青坑博物馆与彼得森汽车博物馆（Petersen Automotive Museum）、洛杉矶郡立美术馆（LACMA）等机构共同构成了洛杉矶的文化地标。</p>
+<p>加州大学伯克利分校的钟楼（Campanile）内收藏了约20吨从拉布雷亚沥青坑挖掘的古化石，这些化石最初于1915年在巴拿马-太平洋国际博览会上展出，后捐赠给大学，用于研究和教学。</p>
+<h2 id="化石名单"><a class="header" href="#化石名单">化石名单</a></h2>
+<h3 id="拉布雷亚的哺乳动物化石名单"><a class="header" href="#拉布雷亚的哺乳动物化石名单">拉布雷亚的哺乳动物化石名单</a></h3>
+<p>拉布雷亚的哺乳动物化石名单（*号表示灭绝）</p>
+<h3 id="食虫目"><a class="header" href="#食虫目">食虫目</a></h3>
+<ul>
+<li>Sorex. ornatus-装饰鼩鼱</li>
+<li>Notiosorex crawfordi-克劳福大耳鼩</li>
+<li>Scapanus latimanus-毛腕鼹</li>
+</ul>
+<h3 id="灵长目"><a class="header" href="#灵长目">灵长目</a></h3>
+<ul>
+<li>Homo sapiens-智人</li>
+</ul>
+<h3 id="翼手目"><a class="header" href="#翼手目">翼手目</a></h3>
+<ul>
+<li>Lasiurus cinereus-霜灰毛尾蝠</li>
+</ul>
+<h3 id="贫齿目"><a class="header" href="#贫齿目">贫齿目</a></h3>
+<ul>
+<li>*Nothrotheriops shastensis-沙塔氏孽子兽</li>
+<li>*Megalonyx jeffersoni-杰氏巨爪地懒</li>
+<li>*Glossotherium harlani- 舌懒兽</li>
+</ul>
+<h3 id="啮齿目"><a class="header" href="#啮齿目">啮齿目</a></h3>
+<ul>
+<li>Citellus variegatus- 纹石黄鼠</li>
+<li>Thomomys bottae-勃氏堆土鼠</li>
+<li>Perognathus californicus- 加州囊鼠</li>
+<li>Dipodomys agilis- 灵活更格卢鼠</li>
+<li>Reithrodontomys megalotis-长耳禾鼠</li>
+<li>*Peromyscus imperfectus-白足鼠属的一个灭绝种</li>
+<li>Onychomys torridus-南蝗鼠</li>
+<li>Microtus californicus-加州[鼠平]</li>
+<li>Spermophilus beecheyi-毕氏北美黄鼠</li>
+<li>Neotoma fuscipes-暗足林鼠</li>
+<li>Tamias merriami-墨氏金花鼠</li>
+</ul>
+<h3 id="食肉目"><a class="header" href="#食肉目">食肉目</a></h3>
+<ul>
+<li>Canis latrans-郊狼</li>
+<li>Canis lupus-灰狼</li>
+<li>*Canis dirus-恐狼</li>
+<li>Canis familiaris-家犬</li>
+<li>Urocyon cinereoargenteus- 灰狐</li>
+<li>*Arctodus simus-短面熊</li>
+<li>Ursus americanus- 美洲黑熊</li>
+<li>Ursus arctos-棕熊</li>
+<li>Mustela frenata- 长尾鼬</li>
+<li>Taxidea taxus-美洲獾</li>
+<li>Spilogale putorius-东部斑臭鼬</li>
+<li>Mephitis mephitis-加拿大臭鼬</li>
+<li>*Felis daggetti-猫属的一个灭绝种，英文名字是Daggett cat</li>
+<li>Puma concolor-美洲狮</li>
+<li>*Panthera leo atrox-美洲拟狮</li>
+<li>Lynx rufus- 短尾猫</li>
+<li>*Smilodon fatalis-致命刃齿虎</li>
+<li>*Homotherium serum-斯氏锯齿虎</li>
+<li>*Miracinonyx sp.- 某种北美猎豹</li>
+</ul>
+<h3 id="长鼻目"><a class="header" href="#长鼻目">长鼻目</a></h3>
+<ul>
+<li>*Mammut americanum-美洲乳齿象</li>
+<li>*Mammuthus imperator-帝王猛犸象</li>
+<li>*Mammuthus columbi-哥伦比亚猛犸象</li>
+</ul>
+<h3 id="兔形目"><a class="header" href="#兔形目">兔形目</a></h3>
+<ul>
+<li>Lepus californicus-加州兔</li>
+<li>Sylvilagus audubonii-荒漠林兔</li>
+<li>Sylvilagus bachmani- 林兔</li>
+</ul>
+<h3 id="偶蹄目"><a class="header" href="#偶蹄目">偶蹄目</a></h3>
+<ul>
+<li>*Platygonus compressus-平头猪（西貒科，不是猪科哈……）属的一个灭绝种</li>
+<li>*Camelops hesternus- 西方拟驼</li>
+<li>*Breameryx minor-貌似是种灭绝的叉角羚？英文名字叫做Tar-pit pronghorn</li>
+<li>Antilocapra americana- 叉角羚</li>
+<li>*Bison antiquus-古美洲野牛</li>
+<li>*Hemiauchenia macrophala-骆驼科，貌似是跟骆马有比较近亲缘关系的一个灭绝种</li>
+<li>Cervus elephas-赤鹿</li>
+</ul>
+<h3 id="奇蹄目"><a class="header" href="#奇蹄目">奇蹄目</a></h3>
+<ul>
+<li>*Tapirus californicus- 加州貘</li>
+<li>*Equus occidentalis- 加州西方野马</li>
+<li>*Equus conversidens-马属的一个灭绝种，英文名字叫做Small stout-limbed horse</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prehistoric-Mammals/Chilotherium.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prehistoric-Mammals/heritage-of-Hezheng-fauna.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prehistoric-Mammals/Chilotherium.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prehistoric-Mammals/heritage-of-Hezheng-fauna.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

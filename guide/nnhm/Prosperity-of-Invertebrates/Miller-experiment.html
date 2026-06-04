@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>米勒实验 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prosperity-of-Invertebrates/Miller-experiment.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="米勒实验"><a class="header" href="#米勒实验">米勒实验</a></h1>
+<p>米勒实验（Miller experiment）是由美国芝加哥大学研究生米勒（S.L.Miller）与其导师尤利（H.C.Urey）于1953年设计的化学模拟实验，旨在验证原始地球还原性大气中雷电作用能否生成有机物。实验通过模拟甲烷、氨、氢等气体环境，结合火花放电一周后成功合成包括甘氨酸、丙氨酸在内的11种氨基酸，证实无机物转化为生物小分子的可能性。</p>
+<p>后续实验中，米勒调整混合气体成分后进一步合成35种有机物，其中包含10种蛋白质氨基酸。科学家通过紫外线照射、高温热解等类似方法成功合成核糖、嘌呤等生物分子，星际分子与陨石中有机物的发现也为该实验结论提供了佐证。实验为生命起源的化学进化理论提供了关键实验证据，但存在能源持续性、气体配比不确定性等局限。</p>
+<h2 id="指导思想"><a class="header" href="#指导思想">指导思想</a></h2>
+<p>（1）远离太阳、历史上可能变化较小的巨行星（如木星和土星等），它们的大气都是没有游离氧（O2）的还原性大气，其主要成分是氢（H2）、氦（He）、甲烷（CH4）和氨（NH3）；由此推测原始地球的大气，大概也是这样的还原性大气。</p>
+<p>（2）据测定，能作用于地球大气层的能源，主要是太阳辐射中的紫外线、雷电和宇宙射线等。其中宇宙射线不足以合成有机物，还原性气体仅吸收短波紫外线，但短波紫外线（波长小于1500埃）在太阳辐射紫外线中仅占极微量，可作有机合成能源的量极少；而每年雷电次数较多，可作有机合成的能量较大，又在靠近海洋表面处释放，这样在原始地球还原性大气中合成的产物就很容易溶于原始海洋之中。</p>
+<p>基于上述考虑，米勒在实验室内进行了模拟原始地球还原性大气中雷鸣闪电的实验，看看能否合成有机物，特别是氨基酸、核糖、嘧啶、嘌呤等组成蛋白质和核酸的生物小分子。</p>
+<h2 id="实验步骤"><a class="header" href="#实验步骤">实验步骤</a></h2>
+<h3 id="实验操作"><a class="header" href="#实验操作">实验操作</a></h3>
+<ol>
+<li>将水注入左下方的500毫升烧瓶内。</li>
+<li>先将玻璃仪器中的空气抽去。然后打开左方的活塞，泵入CH4、NH3和H2的混合气体（模拟还原性大气）。再将500毫升烧瓶内的水煮沸，使水蒸汽（H2O）和混合气体同在密闭的玻璃管道内不断循环，并在另一容量为5升的大烧瓶中，经受火花放电（模拟雷鸣闪电）一周，最后生成的有机物，经过冷却后，积聚在仪器底部的溶液内（图中以黑色表示）（模拟原始大气中生成的有机物被雨水冲淋到原始海洋中）。</li>
+</ol>
+<h3 id="结果推测"><a class="header" href="#结果推测">结果推测</a></h3>
+<p>原始大气在高温、紫外线及雷电等自然条件的长期作用下，形成了许多简单的有机物，这是一个化学过程，这说明在原始地球条件下，从无机物到有机物是完全可能的。</p>
+<h3 id="实验结果"><a class="header" href="#实验结果">实验结果</a></h3>
+<p>此实验共生成20种有机物。其中11种氨基酸中有4种（即甘氨酸、丙氨酸、天冬氨酸和谷氨酸）是生物的蛋白质所含有的。以后，米勒认为，设想原始地球还原性大气的成分是CH4、N2、微量的NH3和H2O的混合气体更为合理，因为NH3不可能在大气中大量存在，它会溶于海水中。他和他的合作者于1972年在上述混合气体中进行火花放电，结果得到35种有机物，其中有10种组成蛋白质的氨基酸，即甘氨酸（440微克分子，以下均同此单位）、丙氨酸（790）、缬氨酸（19.5）、亮氨酸（11.3）、异亮氨酸（4.8）、脯氨酸（1.5）、天冬氨酸（34）、谷氨酸（7.7）、丝氨酸（5.0）和苏氨酸（～0.8）。若在分析之前进行水解，还可生成天冬酰胺和谷氨酰胺。若增加H2S，则可生成甲硫氨酸。在CH4、NH3、H2O和H2S混合气体中进行光解作用，可以找到半胱氨酸。对CH4及其它碳氢化合物在高温下进行热解，可以得到苯丙氨酸、酪氨酸和色氨酸。用米勒模拟实验和其它类似实验，已能合成出20种天然氨基酸中的17种；其余三种（赖氨酸、精氨酸和组氨酸）相信在改进技术之后，不久亦能合成。</p>
+<p>由此实验可以证明：由无机物合成小分子有机物是完全有可能的。</p>
+<h3 id="机理分析"><a class="header" href="#机理分析">机理分析</a></h3>
+<p>氨基酸生成的可能机理：米勒在火花放电的头125小时内，不断打开“U”形管的活塞抽样，进行分析，发现首先合成了大量的氰化物和醛类；以后它们的合成速度逐渐下降，而在整个实验期间，均以近乎恒定的速度合成氨基酸，就是说，首先甲烷与氨作用生成氢，甲烷与水作用生成醛类；然后氢、醛类与氨作用生成氨基腈（aminoni- trile）；氨基腈水解就生成氨基酸。</p>
+<h3 id="佐证"><a class="header" href="#佐证">佐证</a></h3>
+<p>上述过程现今在宇宙和其他天体中还在发生，星际分子和陨石中有机物的发现可以证明。据我国天文工作者统计，到1985年为止，已发现星际分子66种，其中除氨、氢等十几种无机分子外，大都是含C的有机化合物如甲醛、甲醇、甲酸、乙醇、炳诀腈（N≡C-C≡CH）等。星际分子中甲醛和氢的量很大，与米勒放电实验中最初的中间产物相同。当它们与氨反应再经水解就能生成氨基酸。1969年9月28日，一颗碳质球粒陨石（carbonaceous chon- drite）堕落在澳大利亚的麦启逊（Murchison）镇，经克文沃尔登（K.A.Kvenvolden）等化验，发现含有18种氨基酸，其中有6种（甘、丙、缬、脯、谷、天冬）是生物所含有的，其种类与含量同米勒放电实验生成的颇为相似。此外，1971年沃森（G.Wat-son）用紫外线照射含有NH3、CH2OH和HCHO的混合气体25天，结果获得了甘氨酸、谷氨酸与少量的天冬氨酸、苏氨酸、丝氨酸、脯氨酸、亮氨酸和异亮氨酸。这个实验没有水，原料都是已知的星际分子。以上种种事实表明，原始大气由无机物生成生物小分子不但是可能的，而且这种过程宇宙间仍在发生。</p>
+<h2 id="科学意义"><a class="header" href="#科学意义">科学意义</a></h2>
+<p>生命起源是一个极其复杂而又难以研究的问题。虽然19世纪70年代恩格斯在《反杜林论》中就指出：“生命的起源必然是通过化学的途径实现的”；20世纪20年代奥巴林和霍尔丹也相继提出生命起源的化学进化观点，即认为在原始地球的条件下，无机物可以转变为有机物，有机物可以发展为生物大分子和多分子体系，直到演变出原始的生命体。但这些都只是理论的推测，还缺乏令人信服的实验证据。</p>
+<p>米勒首次在实验室内模拟原始地球还原性大气中的雷鸣闪电，结果从无机物合成出有机物，特别是多种组成蛋白质的氨基酸，这是生命起源研究的一次重大突破。后来，科学家们仿效米勒的模拟实验，已合成出大量与生命有关的有机分子。例如，有人用紫外线或γ射线照射稀释的甲醛（HCHO）溶液获得了核糖和脱氧核糖（1966）；用紫外线照射HCN获得了腺嘌呤和鸟嘌呤；用丙炔腈（N≡C-C≡CH）、KCN和H2O，在100℃下加热一天得到了胞嘧啶（1966）；将NH3、CH4、H2O与聚磷酸加热到100～140℃获得了尿嘧啶（1961）；将腺嘌呤和核糖的稀溶液与磷酸或乙基偏磷酸盐（ethyl- metaphosphate）放在一起，用紫外线照射，可生成腺苷（1977）；将腺苷、乙基偏磷酸盐封入石英玻璃管中用紫外线照射，可产生腺苷酸（A）（1966）。此外，长链脂肪酸也可通过在高压下用γ射线照射乙烯和CO2而获得。可以说，几乎全部的生物小分子，都可以通过模拟原始地球的条件，在实验室内合成了。</p>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<p>（1）米勒试验提供持续的电能，但是原始时代的地球不一定。
+（2）不能完全确定米勒试验各物质浓度的配比。
+（3）氨基酸很可能是宇宙流星和彗星在撞击地球的时候带出的，因为当时这种现象十分普遍，科学证明氨基酸可以在宇宙的恶劣环境中存在。
+（4）由于不能确定烧瓶中的水的无菌性，且取样器与烧瓶为一联通器，因此米勒实验所产生的有机物不排除是微生物高温分解得来的。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prosperity-of-Invertebrates/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prosperity-of-Invertebrates/Stringocephalus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prosperity-of-Invertebrates/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prosperity-of-Invertebrates/Stringocephalus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

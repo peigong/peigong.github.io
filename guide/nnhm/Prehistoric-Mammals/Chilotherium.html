@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>大唇犀 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prehistoric-Mammals/Chilotherium.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="大唇犀"><a class="header" href="#大唇犀">大唇犀</a></h1>
+<p>大唇犀（学名Chilotherium）是犀牛的祖先。它们生存于中新世的中国蒙古。 大唇犀的下唇比上唇大，下颌骨粗壮成铲子状。上颚没有门齿，下颚的门齿阔大，并且向上弯。头部比现今的犀大稍大，头颅骨没有角。大唇犀矮小，四肢短小，每肢有三趾。大唇犀是草食性的动物，生活于沼泽地带。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>大唇犀（学名Chilotherium）是犀牛的原始类群。它们生存于中新世的中国内蒙古。它属于奇蹄类的角型亚目(ceratomorpha)中的犀总科(rhinocerotoidea)。</p>
+<h2 id="简史"><a class="header" href="#简史">简史</a></h2>
+<p>大唇犀属 Chilotherium是林斯顿（Lingstrom,1924）建立的，他在同一著作中还记述了对角犀属的一个新种 — Diceratherium palaeosinense。大唇犀是无角的，而他认为 Diceractherium palaeosinense在雄性个体鼻端可能有两个对生的角，因此，林斯顿把它们分别放到不同的亚科中：前者归 Teleocerinae，后者归Diceratheriinae。1937年步林( Bohlin)记述了采自青海的另一种犀牛，D. tsaidamense。他认为这种犀牛和林斯顿的D. palaeosinense十分接近，他曾明确的指出：这两种“ Diceratherium”都和大唇犀比较接近，它们之间的区别也是逐渐过渡的。相反，中国这两种“ Diceratherium”和真正的Diceratherium反而相差甚远。1942年德日进( Teilhard de Chardin,p.63)在编写“中国哺乳动物化石”时认为，林、步所定的“ Diceratherium”都是无角的，它们和大唇犀没有明显的区别，亦即也应归入大唇犀属。同年，柯莱特楚依( Kretzoi,1942)也把林、步这两个种从" Diceratherium中分出，确定为一新属Acerorhinus。从属名也可以看出，Kretzoi也不相信它们是有角的。此后，很长一段时间无人涉及这个问题。</p>
+<h2 id="特点"><a class="header" href="#特点">特点</a></h2>
+<p>唇犀体型矮壮，四肢短。前后脚均为三趾。头骨短，鼻骨长而弱，无角。下颌结合部粗壮并扩大成铲状。门齿大，间距宽，向外上方伸出。前臼齿比后臼齿小并向前急速递减。臼齿具粗大的前刺和反前刺，是大唇犀牙齿的最明显标准。第二臼齿明显地大。它属于奇蹄类，奇蹄类的趾数常为奇数，足的中轴通过中趾。前后足的内趾(即大拇趾)和后足的第五趾都退化消失了；前足的第五趾在原始类型中保留，在进步类型中也消失了。因此，奇蹄类的前后足常常只有三个起作用的趾，而在进步的现代马类中仅剩下了一个中趾。奇蹄类的踝部，距骨近端(即距离身体较近的那一端)有一个双重突起的滑车形的面，与胫骨的远端(即距离身体较远的那一端)相关节，距骨远端与踝部其它骨头相接处则为扁平的面。起作用的趾集中在少数几个直到一个趾上，距骨具有滑车结构，这两点使得奇蹄类能够更加快速地奔跑以逃离危险的食肉动物，这是奇蹄类超越与踝节类的重要进步特征。此外，奇蹄类股骨在骨干外侧有一显著的突起，称为第三转节。</p>
+<p>大唇犀在中新世的亚欧大陆一度非常繁盛，甚至成为当时数量最多的草原植食动物，我国甘肃，宁夏，陕西，山西等省都有发现，中国发现的大唇犀属物种包括哈氏大唇犀，维氏大唇犀等。但在晚中新世大唇犀突然衰落直至灭绝，其原因至今不明，其灭亡也代表着无角犀类的最终灭绝。</p>
+<h2 id="考古发现"><a class="header" href="#考古发现">考古发现</a></h2>
+<p>1991年9月，在内蒙古自治区乌兰察布市四子王旗乌兰花镇南3公里处的砖厂发现了距今800～500万年前的犀牛化石群，经专家鉴定，这批犀牛化石均为大唇犀，是国内罕见的大唇化石带。化石埋藏在距地表5米的红色泥岩层内，初步探明化石集中分布在宽5米、长约30米左右的古河相地层中，呈东南－西北向的带状分布，裸露面积约150平方米，出露犀牛化石个体20多具，包括20个犀牛头骨及脊柱、四肢等。美国、法国、瑞典、前苏联、日本、加拿大等国的古物生学者及专家先后来此考察。</p>
+<h2 id="分类"><a class="header" href="#分类">分类</a></h2>
+<p>大唇犀主要包括维氏大唇犀、安氏大唇犀、哈氏大唇犀等几种。其中安氏大唇犀是同族中较大的种类，身长可达4米，头骨也较长且后部较高，獠牙状的下门齿更加发达，与另外两种的区别相当明显。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prehistoric-Mammals/machairodus.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prehistoric-Mammals/Rancho-La-Brea.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prehistoric-Mammals/machairodus.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prehistoric-Mammals/Rancho-La-Brea.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

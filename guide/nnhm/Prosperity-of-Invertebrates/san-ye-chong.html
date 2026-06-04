@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>三叶虫 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prosperity-of-Invertebrates/san-ye-chong.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="三叶虫"><a class="header" href="#三叶虫">三叶虫</a></h1>
+<p>三叶虫是节肢动物门三叶虫纲节肢动物。身体分为头、胸、腹三个部分；背上长有甲壳，甲壳纵向分为三片。头部覆盖有硬壳，称为头甲；头甲中央隆起的部分叫头鞍，头鞍的形状和大小根据种类的不同而变化较大；头鞍前部是头盖，头盖上长着眼睛；腹部和尾部也有甲壳包裹。因背上甲壳纵向分为三片而得名。</p>
+<p>三叶虫在远古海洋中广泛分布，化石遍布现在的各大洲。喜欢生活在温暖的浅海区域，以藻类植物、原生动物等为食。当遇到危险时，能蜷起身体保护自己，然后潜入海底逃离危险。</p>
+<p>三叶虫是地球表面上出现得最早的甲壳动物。最早可以追溯到5.5亿年前的第一纪初，并很快占领了海洋。明朝末年，中国一个叫张华东的人首次在山东泰安大汶口发现了三叶虫的化石，当时该化石被命名为“蝙蝠石”，到20世纪20年代，科学家们才知道它是三叶虫的尾部化石。</p>
+<h2 id="动物分类"><a class="header" href="#动物分类">动物分类</a></h2>
+<p>在动物分类学上，三叶虫属于节肢动物门、三叶虫纲。它们生活在远古的海洋中，主要出现在寒武纪，到寒武纪晚期时发展到顶点。此后，三叶虫从极盛的高峰走向衰退，延续到二叠纪末期时绝灭，没有进入中生代。三叶虫在整个古生代3亿多年的漫长地质历程中生生不息，繁衍出了众多的类群和巨大的数量，三叶虫纲可以分为10目 ：球接子目、莱得利基虫目、耸棒头虫目、褶颊虫目、镜眼虫目、裂肋虫目、栉虫目、镰虫目、砑头虫目及齿肋虫目。总计有1500多个属，1万多个种，其中发现于我国的有大约500个属。</p>
+<h2 id="形态结构"><a class="header" href="#形态结构">形态结构</a></h2>
+<h3 id="综述"><a class="header" href="#综述">综述</a></h3>
+<p>三叶虫的形状大多为卵圆形或椭圆形，个体大小相差却很悬殊。发现于葡萄牙奥陶纪地层中的乌拉裂肋虫是最大的三叶虫之一，长达70厘米。而古盘虫、球接子之类的微小三叶虫却只有不到6毫米。常见的三叶虫一般长度都在3到10厘米，宽度在1到3厘米。超过20厘米的就算大型的了。在我国昆明寒武纪早期地层中曾经发现过长度为30厘米的莱得利基虫。</p>
+<p>三叶虫生活的年代距今虽然遥远，但是科学家对它的形态、构造等特征的了解是相当充分的，主要的原因有以下几点：首先，三叶虫身体表面披有坚固的甲壳，在个体发育过程中经历多次脱壳生长，所以它们在地层中遗留下的化石数量比其他生物要多；其次，寒武纪海洋中很少有比三叶虫更大、更凶暴的动物和它生活在一起，因此它们能够迅速繁衍，广泛分布；此外，三叶虫化石大多保存在质地细致的石灰岩或页岩中，因此，不仅外壳的特征能够被观察得很清楚，而且有时其内部构造也能被看得很清晰。</p>
+<p>三叶虫的主要特征表现在它的背壳构造，其头部中央有一个突起的“头鞍”，可能是安置脑的处所。头鞍的表面有的光滑无饰，有的瘤斑点缀，还有的具有为数不等的横沟。这些横沟被称为“头鞍沟”。头鞍两侧，一般有成对的眼睛。沿眼睛的前后有一条沟，称为“面线”，这是三叶虫成长过程中借以脱壳钻出身体的地方。头部腹面的前端有一对分节的触须，既是行动器官，又是感觉器官。触须的后面是摄食的口，通常盖着“唇瓣”。口两侧有许多细小而分节的行动器官——附肢，附肢上有细密的纤毛，大概可以起到呼吸的作用。</p>
+<p>三叶虫的胸部分节，多者达十几节，少者只分两节。各节之间以覆瓦状（即像房顶的瓦片一样一片覆叠在另一片的上面）关联起来，便于卷曲活动。三叶虫腹面两侧有为数众多的分节附肢，附肢上具有纤毛，因此这些附肢也兼负行动和呼吸之用。三叶虫的尾部和胸部一样，纵向上分为中轴及其两侧的肋叶部，其形态多样；尾部的边缘有的带刺，有的不带刺。</p>
+<p>从背部看去三叶虫（trilobites）为卵形或椭圆形， 成虫的长为3～10厘米，宽为1～3厘米。小型的6毫米以下。从结构上可分为头甲、胸甲和尾甲三部分。三叶虫体外包有一层外壳，坚硬的外壳为背壳及其向腹面延伸的腹部边缘。腹面的节肢为几丁质，其他部分都被柔软的薄膜所掩盖。一般所采到的三叶虫化石都是背壳。三叶虫背壳的中间部分称为轴部或中轴，左、右两侧称为肋叶或肋部。三叶虫壳面光滑。或有陷孔、瘤包、斑点、放射形线纹、同心圆线纹、短刺等。头部多数被两条背沟纵分为三叶，中间隆起的部分为头鞍及颈环，两侧为颊部，眼位于颊部。颊部为面线所穿过，两面线之间的内侧部分统称为头盖，两侧部分称为活动颊或自由颊。胸部由若干胸节组成，形状不一，成虫2～40节。中间部分为中轴，两侧称为肋部。每个肋节上具肋沟，两肋节间为间肋沟。尾部是由若干体节互相融合而形成的，1～30节以上不等。形状一般半圆形，但变化很大，可分为一中轴和两肋部。肋部分节，有肋沟和间肋沟。肋部可具边缘 ，边缘上亦常有边缘刺。</p>
+<p>三叶虫腹面的节肢极少保存为化石，迄今为止全世界已发现节肢化石的只有19个种。从奥陶纪到泥盆纪末的一些三叶虫（比如裂肋三叶虫目）进化出了非常巧妙的脊椎似的结构。在摩洛哥就发现了这样的化石。此外在俄罗斯西部、美国俄克拉何马州以及加拿大安大略省也有带脊椎结构的化石被发现。这种脊椎结构可能是对于鱼的出现的一种抵抗反应。</p>
+<h3 id="眼睛"><a class="header" href="#眼睛">眼睛</a></h3>
+<p>多数三叶虫有眼睛，它们还有可能用来作味觉和嗅觉器官的触角，触须可达20至30厘米。三叶虫的眼睛是由方解石（碳酸钙，CaCO₃）组成的。结晶良好的纯净方解石（冰洲石）是透明的，有些三叶虫使用单晶的、透明的方解石来组成其每只眼睛的透镜。这与大多数其它节肢动物不同，球差，同时提供极好的视觉效果和景深。在今天生存的动物中蛇尾海星Ophiocoma wendtii使用类似的透镜。</p>
+<p>典型的三叶虫眼睛是复眼，每个透镜都是一个一般排列为六边形的拉长的棱镜。每只复眼内的透镜数不等，有些只有一个，有些可达上千。</p>
+<p>有些三叶虫是瞎的，可能它们居住在非常深的海底，那里没有光，因此用不着眼睛。有些（比如蛙形镜眼虫Phacops rana）有很大的眼睛。</p>
+<h3 id="身体"><a class="header" href="#身体">身体</a></h3>
+<p>三叶虫的样子奇特，身体分为头、胸和腹三个部分。贝壳则有三个叶体，二叶位于纵向轴叶的每一侧，因此被称为：“三叶虫”。从背部看去三叶虫微卵形或椭圆形，成虫的长为3～10厘米，宽为1～3厘米。外壳坚硬，正中突起，两肋低平，也形成纵列的三部分，三叶虫的名字就是这么来的吧。由于三叶虫的背壳坚硬，所以容易被保存成为化石。我们今天了解这种绝灭了的动物，全是通过化石来认识它们的。三叶虫的头部由于覆盖有硬甲，可称为头甲，头甲上中央隆起的部分叫头鞍，头鞍的形状和大小在不同种类中变化较大，头鞍前部是头盖，上面发育着眼脊、眼叶和眼。头盖两侧的边缘下凹并延展形成活动颊，活动颊常常进一步形成十分尖锐的颊刺，伸向身体的后方，整个头甲是三叶虫分类和种属鉴定的重要依据。</p>
+<h3 id="胸甲尾部"><a class="header" href="#胸甲尾部">胸甲尾部</a></h3>
+<p>胸甲由许多形状相似的胸节组成，这些胸节相互衔接，与绝大多数节肢动物的体节相似，胸节可以活动，并有弯曲的功能。三叶虫身体能够蜷起或伸展开全靠这些活动的胸节，但幼年体的三叶虫没有胸节。尾甲是指三叶虫身体末端由若干体节融合而成的部分，它们形成三叶虫独特的尾部。三叶虫的尾一般都是半圆形，由于尾的边缘常常形成大小不同的尾刺，使许多三叶虫的尾伸展、放射，变得很美丽。整个三叶虫的背面硬而光滑，但科学家们发现有些种类在背甲上具有小瘤或小结节，这些小瘤和小结节与背甲上的颊刺、肋刺、尾刺一起，构成了复杂的防护"盔甲"。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<p>三叶虫与珊瑚、海百合、腕足动物、头足动物等动物共生。大多适应于浅海底栖爬行或以半游泳生活，还有一些在远洋中游泳或远洋中漂浮生活。生活习性的不同决定着其身体构造不同。底栖三叶虫身体扁平，有的三叶虫可钻入泥沙生活，其头部结构坚硬，前缘形似扁铲，便于挖掘。有的头甲愈合，肋刺发育，尾小，具尖末刺，用以在泥沙中推进。另外，适于在松软或淤泥海底爬行生活的类型，其肋刺和尾刺均很发达，使身体不易陷入泥中。营漂浮生活的类型，往往身体长满纤细的长刺。它们以原生动物、海绵动物、腔肠动物、腕足动物的动物尸体或以海藻等细小生物为食。</p>
+<p>三叶虫的生活习性是多种多样的，化石中最多的一类是保存在石灰岩或页岩中，可见当时它们大多生活在浅海底或游移于淤泥之上。它们有的稍能游泳，有的随水漂流。志留纪中期的齿虫类，整个身体几乎被密密的长刺包围，这些长刺对于它们在水里游泳来说是一种强有力的推进器，因此可以推测它们是游泳的能手；同时，这些长刺也是抵御天敌的有效武器。这种类型的三叶虫主要是出现于奥陶纪到泥盆纪时期，当时与它共生的鹦鹉螺类、板足鲎类和鱼类都是三叶虫的劲敌，如果三叶虫不增强它的游泳能力和御敌的武器，它们怎样在那个竞争激烈的环境中继续生存繁衍呢？</p>
+<p>奥陶纪的某些三叶虫，如宝石虫、斜视虫、隐头虫等还发展了卷曲的能力，它们的头部和尾部可以完全紧接在一起，仅将背部的硬壳暴露在外；它们还可以钻进淤泥以保护其柔软的腹部器官，这样，一方面便于御敌；另一方面也可以以类似于尺蠖那样的伸曲的方式推动身体前进。</p>
+<p>三叶虫为雌雄异体，卵生，个体发育过程中经过多次周期性蜕壳，在个体发育过程中，形态变化很大。一般划分为3个阶段：幼虫期、分节期 、成虫期。对于三叶虫的个体发育过程，科学家通常是通过采集同一层位中同一种个体的不同生长阶段的标本来研究的。三叶虫的个体发育，大致划分为三个时期——幼年期、中年期和成年期。幼年期虫体头部和尾部尚不分明，也没有胸节，直径大约为0.24～1.3毫米。中年期虫体头部和尾部已经分开，胸节也已经发育，但是节数比成年期少一节。成年期虫体的胸部与尾部节数增加到了极限，虫体增大，壳上的刺、瘤等附加物均出现了。</p>
+<h2 id="发育过程"><a class="header" href="#发育过程">发育过程</a></h2>
+<p>经过各国古生物学家多年的研究，认为三叶虫具有复杂的发育阶段。三叶虫为雌雄异体，卵生，在它们在一生的发育中，要经过多次的蜕壳才能长成，当前的许多节肢动物都承袭了三叶虫的生长方式。三叶虫从幼虫到成虫，一般经历三个生长阶段，即幼年期、分节期和成虫期。了解这点，对我们在野外采集三叶虫化石很有必要，如果人们稍微具备一些有关三叶虫发育阶段的知识，就能对采集到的三叶虫化石做出大致的鉴定，不致于把不同发育阶段的同一种三叶虫当做不同形态的属种了。</p>
+<p>从卵中孵化出来的幼虫被称为原甲期（protaspid period），在这个阶段里所有环全部融合在一起形成一个单一的盔甲。在此后的生长期里在每次蜕皮时在尾部前会增加新的胸部环。此后在蜕皮时环的数目不再增加，对三叶虫的幼虫阶段人们的认识很丰富，它们为研究三叶虫之间的亲缘关系提供了非常重要的帮助。</p>
+<p>幼年期的三叶虫除身体很小外，常常凸起明显，头部与尾部区分不明显，没有胸节，虫体呈圆球状。以后，随着三叶虫不断生长，胸节逐渐增加，当胸节全部长成不再增加时就进入成年期，此时意味着三叶虫已达到性成熟阶段，能够生儿育女了。三叶虫每蜕一次壳，身体都会增大，壳上的刺、瘤、甚至尾甲的分节数也会增加。</p>
+<p>三叶虫长大以后就可以在海洋中无忧无虑地生活了，至今为止，人们还没有在陆相地层中发现三叶虫化石，这说明这种动物确实只生存在海洋里。由于三叶虫化石常常与珊瑚、腕足动物、头足动物共同出现，表明它们都喜欢生活在比较温暖的浅海，在那里，三叶虫以各种微小的生物为食，或者也对海草及动物的尸体感兴趣。可以肯定，它们不具有主动攻击的能力，因为三叶虫没有良好的游泳器官，也不具备流线形的体形，在水中行进的速度较慢。从它们的坚固背甲可以想象，一旦有凶猛的动物（如鹦鹉螺类）向它们摆出进攻的架势时，三叶虫会迅速把身体蜷起，象穿山甲那样把自己保护起来，悄悄沉入海底。</p>
+<h2 id="演化历史"><a class="header" href="#演化历史">演化历史</a></h2>
+<h3 id="起源"><a class="header" href="#起源">起源</a></h3>
+<p>三叶虫的祖先可能是类似于节肢动物的动物，如斯普里格蠕虫或其它隐生宙埃迪卡拉纪时期类似三叶虫的动物。早期三叶虫与伯吉斯页岩和其它寒武纪的节肢动物化石有许多类似的地方，因此三叶虫与其它节肢动物可能在埃迪卡拉纪和寒武纪的交界之前有共同的祖先。</p>
+<p>三叶虫最早是随着寒武纪初期的小壳动物群而出现的，小壳动物群主要是指软舌螺、腹足类、单板类、喙壳类和分类位置不明的一大批个体微小（一般仅1～2mm）、低等的软体动物，当时的海洋条件已经适合于它们生存，这些动物给三叶虫带来了丰富的食源，在那时的海洋中，三叶虫还没有遇到有力的竞争对手，因此它们横行霸道，迅速发展，整个寒武纪成了三叶虫的世界。</p>
+<p>寒武纪时为什么出现那么多三叶虫呢？科学家们通过古生态学的研究认为，三叶虫具有很好的适应环境的生存方式。三叶虫并不遵循着单一的生活模式，有些种类的三叶虫喜欢游泳，有些种类喜欢在水面上漂浮，有些喜欢在海底爬行，还有些习惯于钻在泥沙中生活，它们占据了不同的生态空间，寒武纪的海洋成了三叶虫的世界。在寒武纪以后的地质时代，这种不同寻常的生物与其它无脊椎动物又共同生存了很长时间，才逐渐数量减少和衰退。我国三叶虫化石非常丰富，仅在寒武纪的早期就发现了200多个属，山东泰安盛产的“燕子石”，经研究发现就是当时大量活动的三叶虫死后堆积形成的，那些显露在岩石表面纷纷欲飞的“燕子”，实际上全是一种长有长长尾刺三叶虫的尾甲。</p>
+<h3 id="演化"><a class="header" href="#演化">演化</a></h3>
+<p>三叶虫发展迅速，在寒武纪晚期达到繁殖高点的时代。为了适应不同的生活环境，形态演变多种多样。有的头、胸、尾三部分大小相等，壳体缓平，头、尾都缺少明显的装饰，如大头虫 （BUMASTUS）：有的头部既宽且大，前缘被一条平阔的围边所环绕，其上还排列着整齐的瘤粒，如隐三瘤虫（CRYPOLITHUS）；有的为了免于受害，在胸、尾装饰着尖长的针刺，如裂肋虫（LICHAS）；有的壳体还能够卷曲成为球状，如隐头虫（CALYMENE）。</p>
+<p>具体说来，三叶虫自从在寒武纪早期出现以后，在整个系统演化中各部主要构造特点也逐渐发生相应的变化，这些变化规律主要有下列几方面：</p>
+<p>1、头鞍形态的变化：寒武纪早期的原始三叶虫的头鞍形态多为长圆锥形，凸起也不显著。往后到了寒武纪中期以后，头鞍逐渐缩短，两侧趋向平行，成为圆柱形，甚至有的成为了球形。到了寒武纪晚期及以后的三叶虫，甚至头鞍与其两侧的颊部分界也不清楚了。</p>
+<p>2、面线后支所在位置的变化：早期三叶虫的面线后支（即眼睛之后的那段面线）终点常与头部的后边缘或两颊角相交；往后到了奥陶纪以后的类型，则常与头部的两旁侧缘上相交。</p>
+<p>3、眼的变化：某些三叶虫的眼睛。早期是新月形的，随后逐渐变小，最后消失。另一类复眼比较发达的三叶虫，眼睛则由小变大，最后会出现眼柄，眼睛则长在高高耸起的眼柄顶端上。志留纪的许多三叶虫就属于这一类。</p>
+<p>4、身体周围长刺的变化：寒武纪和奥陶纪的三叶虫很少长刺，而志留纪及其以后的类型长刺较为多见，而且刺比以前的也更加复杂。</p>
+<p>5、胸节由多变少，尾部由小变大，头鞍上的横沟由多到少等等趋势也在许多类型的三叶虫中显示出来。</p>
+<h3 id="灭绝"><a class="header" href="#灭绝">灭绝</a></h3>
+<p>三叶虫灭绝的具体原因不明，但是志留纪和泥盆纪时期两腭强大，互相之间由关节连接的鲨鱼和其它早期鱼类的出现与同时出现的三叶虫数量的减少似乎有关。三叶虫为这些新动物可能提供了丰富的食物。</p>
+<p>此外到二叠纪后期时三叶虫的数量和种类已经相当少了，这无疑为它们在二叠纪——三叠纪灭绝事件中灭绝提供了条件。此前的奥陶纪——志留纪灭绝事件虽然没有后来的二叠纪——三叠纪灭绝事件那么严重，但是也已经大大地减少了三叶虫的多样性。</p>
+<p>对于三叶虫的个体发育过程，科学家通常是通过采集同一层位中同一种个体的不同生长阶段的标本来研究的。三叶虫的个体发育，大致划分为三个时期——幼年期、中年期和成年期。幼年期虫体头部和尾部尚不分明，也没有胸节，直径大约为0.24－1.3毫米。中年期虫体头部和尾部已经分开，胸节也已经发育，但是节数比成年期少一节。成年期虫体的胸部与尾部节数增加到了极限，虫体增大，壳上的刺、瘤等附加物均出现了。</p>
+<h3 id="各期代表"><a class="header" href="#各期代表">各期代表</a></h3>
+<ol>
+<li>寒武纪代表性三叶虫（5.4亿~4.9亿年前） 多数三叶虫身体扁平。莱得利基虫目（Redlichiida）被认为是三叶虫的始祖。研究中有把球接子目（Agnostus）归入甲壳类的观点。</li>
+<li>奥陶纪代表性三叶虫（4.9亿~4.4亿年前） 形态多样，有的长着蜗牛一样的眼睛，有的身上长着好几根角，还出现了视野范围宽广的游泳型三叶虫。因为这时的海洋里它的天敌很少，所以奥陶纪成为“三叶虫大繁荣时代”。</li>
+<li>志留纪代表性三叶虫（4.4亿~4.2亿年前） 逃过了奥陶纪大灭绝的种类，它们在珊瑚礁附近大量繁殖。</li>
+<li>泥盆纪代表性三叶虫（4.2亿~3.6亿年前） 这一时代随着有下颚的鱼类出现，海洋环境发生了巨大的变化。很多三叶虫的身体上进化出了多种多样的装饰性部分，研究者认为这些装饰能提升三叶虫的防御功能和感觉机能。</li>
+<li>石炭纪/二叠纪代表性三叶虫（3.6亿~2.5亿年前） 寒武纪之后，三叶虫纲下的10个目都繁衍的相当兴盛。但是泥盆纪后期的大灭绝，使除了蚜头虫目（Proetus）之外的三叶虫全部灭绝。逃过劫难的蚜头虫目拥有流线型的身体，但身上没有刺和装饰。</li>
+</ol>
+<h2 id="化石存留"><a class="header" href="#化石存留">化石存留</a></h2>
+<h3 id="形成环境"><a class="header" href="#形成环境">形成环境</a></h3>
+<p>在远古海洋中三叶虫的生活环境从浅海到深海非常广。偶尔三叶虫在海底爬行时留下的足迹也被化石化了。几乎在所有今天的大陆上均有三叶虫的化石被发现，它们似乎在所有远古海洋中均有生存。</p>
+<p>今天在全世界发现的三叶虫化石可以分上万种，由于三叶虫的发展非常快，因此它们非常适合被用作标准化石。在英属哥伦比亚、纽约州、中国、德国和其它一些地方发现过非常稀有的、带有软的身体部位如足、鳃和触角的三叶虫化石。</p>
+<h3 id="中国种类"><a class="header" href="#中国种类">中国种类</a></h3>
+<p>中国三叶虫化石是早古生代的重要化石之一，是划分和对比寒武纪地层的重要依据。</p>
+<p>主要的三叶虫化石种类有：蝙蝠虫（Drepanura）、四川虫（Szechuanella）、副四川虫（Parasxechuanella）、似栉壳虫(即湘西虫)、王冠虫（Coronocephalus）、沟通虫（Ductina）</p>
+<p>2020年11月报道，古生物学家发现约5亿年前的奇特虫子，命名为“耳形范特西虫”，是三叶虫的一种。</p>
+<h2 id="研究"><a class="header" href="#研究">研究</a></h2>
+<h3 id="命名"><a class="header" href="#命名">命名</a></h3>
+<p>早在300多年前的明朝崇祯年间，一个名叫张华东的人在山东泰安大汶口发现了一种包埋在石头里的“怪物”，其外形容貌颇似蝙蝠展翅，于是他就为之命名为“蝙蝠石”。到了20世纪20年代，我国的古生物学家对“蝙蝠石”进行了科学研究，终于弄清楚了原来这是一种三叶虫的尾部。这种三叶虫生活在5亿年前的寒武纪晚期，是海洋中的一种节肢动物。为了纪念这个世界上给三叶虫起的第一个名字，我国科学家就把这种三叶虫由拉丁名翻译成的中文名字依然叫做蝙蝠虫。</p>
+<p>国外研究三叶虫的最早记录可以追溯到1698年。当时，鲁德把一个头部长有三个圆瘤的三叶虫化石命名为“三瘤虫”。到了1771年，瓦尔其根据这种动物的形态特征，即身体从纵横两方面来看都可以分成三部分：纵向上分为头部、胸部和尾部，横向上分为中轴及其两边的侧叶部分，因而给出了一个恰如其分的名称——“三叶虫”。</p>
+<h3 id="国内研究"><a class="header" href="#国内研究">国内研究</a></h3>
+<p>最早描述的三叶虫化石在英国，当时误以为是一种比目鱼化石。在十九世纪国外对三叶虫的研究已经比较透彻，中国的三叶虫最早由许多国外专家和探险家进行命名和报道，民国时期的卢衍豪教授对中国三叶虫的研究做了重要的起步工作。新中国建立后，国家开始系统研究中国的三叶虫。有《中国的三叶虫》等书出版。吉林大学博物馆馆长昝淑芹教授对辽宁东部地区（辽东半岛和太子河流域）寒武纪的三叶虫动物群进行过系统研究。记述了该区寒武纪地层中的四十一个科或亚科，一百零一个属或亚属，一百八十九个种的三叶虫化石，其中有新属五个，新种57个。发表了专著《辽宁东部寒武纪地层及三叶虫动物群》等一系列的研究成果。今天在全世界发现的三叶虫化石可以分为上万种，由于三叶虫的发展非常快，因此它们非常适合被用做标准化石，地质学家可以使用它们来确定含有三叶虫的石头的年代。三叶虫是最早的、获得广泛吸引力的化石，至今为止每年还有新的物种被发现。但是由于我国三叶虫分类起步晚，当前我国三叶虫分类研究方面仍很混乱。</p>
+<h2 id="生物意义"><a class="header" href="#生物意义">生物意义</a></h2>
+<p>三叶虫出现后，在整个早古生代（包括寒武纪、奥陶纪和志留纪）都可作为众多生物的代表，它们和许多其它生物一起共同揭开了地球走进生物多样化的序幕，从此，一个欣欣向荣的生物世界才真正出现。晚古生代时三叶虫数量随着门类众多的海相无脊椎动物的大量涌现而减少，中生代到来时终于绝灭。</p>
+<h2 id="嵩里山三叶虫"><a class="header" href="#嵩里山三叶虫">嵩里山三叶虫</a></h2>
+<p>1958年4月15日我国发行一套《中国古生物》邮票，其中第一枚就是“嵩里山三叶虫”</p>
+<p>近日，芝加哥大学科学家AlanDrummond利用了这样一种方法再现了一种已经灭绝的古老史前物种：三叶虫</p>
+<p>其他</p>
+<p>三叶虫还是中国一种“贡茶”的名称——三叶虫茶，城步民间简称虫茶，也可以做茶叶蛋。</p>
+<h2 id="考古发现"><a class="header" href="#考古发现">考古发现</a></h2>
+<p>重庆酉阳发现奇特古生物化石 疑似三叶虫(1/8)</p>
+<p>9月18日，笔者在重庆市酉阳土家族苗族自治县毛坝乡毛坝村发现一些奇特的昆虫化石，几位当地村民一起在现场看了这些化石。陈碧生/东方IC</p>
+<p>长约7厘米，宽约3厘米的不明古生物轮廓清晰可见。</p>
+<p>这些化石最大的特征是呈羽毛状的“触须”栩栩如生。</p>
+<p>据一些老人说，这叫三叶虫化石，估计距今有上亿年。</p>
+<p>化石就是在这样的岩石上发现的。</p>
+<p>留下的纹路清晰可见。</p>
+<p>当地村民找到的奇特化石。古生物化石是地球演化的漫常地质历史过程中遗留下来的不可再生的地质自然遗产，对研究地质、地里、气候等具有较大的参考价值。酉阳地处武陵山腹地，古生物化石资源丰富。目前，笔者将这一情况告诉了当地政府，对方表示将派人对此进行实地考察。</p>
+<p>三叶虫是距今5.6亿年前的寒武纪就出现的最有代表性的远古动物，5亿～4.3亿年前发展到高峰，至2.4亿年前的二叠纪完全灭绝，前后在地球上生存了3.2亿多年，是一类生命力极强的生物。在漫长的时间长河中，它们演化出繁多的种类，有的长达70厘米，有的只有2毫米。背甲为两条背沟纵向分为一个轴叶和两个肋叶，因此名为三叶虫。（资料图）</p>
+<p>2022年4月26日，湖北省恩施州咸丰县高乐山镇龙家界村一工地施工人员发现，在1200米高山上的石块中有不少远古化石。经相关地质专家判定，这些化石前身为三叶虫和中华震旦角。距今或超4.4亿年。 重大发现！或超4.4亿年。</p>
+<p>2022年5月6日，据中国科学院南京地质古生物研究所官网消息，科研人员在滇东北昭通镇雄地区发现奥陶纪末大灭绝前三叶虫动物群。相关研究已在线发表在国际期刊《远古世界》。</p>
+<p>2022年5月12日消息，此次在镇雄地区发现的三叶虫动物群略早于奥陶纪末生物大灭绝的时间，共有9科15属17种，含4个新种。根据三叶虫（种）的时空分布情况，能够推断出华南奥陶纪末生物大灭绝前发生过一次生物迁移事件。</p>
+<p>2022年，科学家在5.08亿年前寒武纪三叶虫化石上发现的“交配证据”。</p>
+<p>2022年5月，现代科学家通过仔细分析X射线图像，发现某些三叶虫物种拥有“超级复眼”，配有数百个晶状体，它们的神经网络处理和发送信号，并具有多条视神经通道。这项最新研究报告发表在去年出版的《科学报告》杂志上。现今的节肢动物，例如：蜻蜓和螳螂虾，也以强大的复眼而闻名，它们的眼睛是由无数个叫做“小眼”的眼面构成，每个小眼都长有晶状体，就像一个迪斯科球。</p>
+<p>2024年6月27日，法国、英国、摩洛哥、美国和澳大利亚的科学家组成的国际研究团队，在顶级科学期刊《科学》上发表了关于这些化石的研究成果。该研究首次报道了保存有三维精细解剖结构的三叶虫化石，这让人类对三叶虫这类古生代海洋中常见的节肢动物的认识向前迈进了一大步。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prosperity-of-Invertebrates/Nautiloidea.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Dinosaur-Park/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prosperity-of-Invertebrates/Nautiloidea.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Dinosaur-Park/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

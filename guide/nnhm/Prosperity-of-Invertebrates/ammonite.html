@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>菊石 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prosperity-of-Invertebrates/ammonite.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="菊石"><a class="header" href="#菊石">菊石</a></h1>
+<p>菊石，是软体动物门头足纲菊石目海洋动物，有600多种，从四亿年前的泥盆纪早期的鹦鹉螺目进化而来。其壳体、壳形变化多样，小至几毫米，大至2米以上；大多沿平面旋卷，少数呈直形、弓形或塔形；壳饰从表面光滑至具有瘤、肋、刺、沟、棱、脊等各种形式；因其表面通常有类似菊花的线纹，故名。</p>
+<p>菊石始见于早泥盆世，中生代最为繁盛，广泛分布于世界各地的三叠纪海洋中，白垩纪末全部灭绝。菊石幼年期大多营漂浮或游泳生活，成年后有的在浅海底栖，有的在深水大陆架区游泳生活；游速不快、运动连贯很差。菊石以一些浮游生物为食，如小的甲壳类幼虫。菊石会在水中产出成千上万枚小卵，生长速度慢。</p>
+<p>菊石壳体、壳形、壳饰及缝合线类型，是鉴定菊石类的重要依据。菊石的演化非常快，在浅海繁盛了3亿多年，所以菊石不但深受古生物学家的欢迎，而且被地质学家当作测定岩石年代的“标准”化石。</p>
+<h2 id="基本介绍"><a class="header" href="#基本介绍">基本介绍</a></h2>
+<p>菊石亚纲(Ammonoidea)头足类(cephalopod)软体动物，有600多种。在古生代后期和中生代大量存在。约一亿年前灭绝。化石壳有直，有卷，直径可达200厘米，内壳分隔成许多小空间以提供浮力。</p>
+<p>菊石在泥盆纪至晚白垩世存在，因它的表面通常具有类似菊花的线纹而得名。有关菊石动物的知识主要来自保存为化石的菊石壳体和口盖以及通过对菊石在地层中的分布和保存状态的观察并根据与现代海洋中生活的鹦鹉螺类的对比而获得。</p>
+<p>菊石是从四亿年前的泥盆纪早期的鹦鹉螺目进化而来，在以后的3亿7千万年间，在全世界的海洋里大量存在，直到白垩纪同其他海生类，诸如箭石以及陆生类恐龙同时从地球上绝种。</p>
+<h2 id="菊石---进化发展"><a class="header" href="#菊石---进化发展">菊石 - 进化发展</a></h2>
+<p>菊石最早出现在距今约4亿年的古生代泥盆纪初期，在中生代得到繁盛，广泛分布在世界各地的三叠纪海洋中。因而，它比恐龙的出现早1.7亿年。菊石是由鹦鹉螺演化而来的，属于头足类动物，运动的器官在头部。体外有一个硬壳--这是它自己建造的蜗居，与鹦鹉螺的形状酷似。在头足类的进化过程中，除鹦鹉螺外，其他的种属已不再背负着一个沉甸甸的硬壳，而是轻装前进。菊石贝壳的形状多种多样，有三角形的、锥形的和旋转形，以旋转形的壳为多。菊石的壳也分前、后、背、腹。菊石壳体的大小差别很大，一般的壳只有几厘米或者几十厘米，最小的仅有1厘米；大的则达到2米。</p>
+<p>“棱菊石”是最早出现的一种菊石。在2.45亿年前出现了大规模的物种灭绝，使“棱菊石”从地球上消失了。后来出现了“齿菊石”，当这种动物在三叠纪成为主要的海洋动物时，恐龙也开始到陆地生活。然而，“齿菊石”在大约2亿年前的三叠纪末就消失了。后来，还有“腹菊石”、“白羊石”、“箭石”。</p>
+<h2 id="菊石详细资料"><a class="header" href="#菊石详细资料">菊石详细资料</a></h2>
+<h3 id="外形特点"><a class="header" href="#外形特点">外形特点</a></h3>
+<p>头足类动物，运动的器官在头部。体外有一个硬壳，与鹦鹉螺的形状相似。菊石类壳体的大小差别很大，一般的壳只有几厘米或者几十厘米，最小的仅有一厘米；最大的比农村的大磨盘还要大，可达到2米。</p>
+<p>壳的形状多种多样，有三角形、锥形和旋转形。总体来说有外卷圆形壳、内卷圆形壳、杆形壳、塔形壳、外卷三角形壳、不规则旋卷壳等。圆形内、外卷的壳在菊石中占绝大多数。菊石的壳也分前、后、背、腹。这一点与现代鹦鹉螺是一样的，开口的一方是前面，原壳处为后方。旋环的外部为腹，与腹部相对应的面为背。</p>
+<h3 id="菊石壳体构造"><a class="header" href="#菊石壳体构造">菊石壳体构造</a></h3>
+<p>菊石的壳体是一个以碳酸钙为主要成分的锥形管。壳管的始端细小，通常呈球形或桶形，称为胎壳。绝大多数菊石的壳体以胎壳为中心在一个平面内旋卷，少数壳体呈直壳、螺卷或其他不规则形状。平面旋卷的壳体的每一个壳圈称为旋环，外围是腹部，包围内部旋环的一面是背部，腹部和背部之间的壳面为侧面。</p>
+<p>菊石动物在生长过程中周期性地向前做升阶式的移动，在后方由外套膜分泌出隔壁，用以支持动物体，增加浮力和加强壳体。因此壳体可以分为两部分：动物体栖居而没有隔壁的部分，称为住室；具有一系列隔壁的部分是气壳，被相邻两个隔壁所分隔的空间叫做气室，隔壁是一个曲面，通常具有复杂的形状，尤其是在近壳壁处褶皱十分强烈。隔壁与壳壁的接触线叫做缝合线，是菊石分类中十分重要的标志。每一个隔壁有一个圆形隔壁孔，为体管所在位置。体管可能起联系软体与壳体和调节浮力使壳体沉浮的作用。它通常位于腹部边缘，但少数类别的体管在背部或近中心位置。</p>
+<p>菊石壳体的旋卷程度很不相同，大致可以分为松卷、触卷、外卷、半外卷、半内卷和内卷。壳体外形也多种多样：由薄板状至圆球形，有的呈三角形旋卷，有的呈直杆状或呈环形，腹部尖形，平板状或圆形等。</p>
+<p>壳体表面有时平滑，有时有不同类型的装饰，常见的装饰有生长线纹、纵旋线纹、横肋、瘤、刺、沟、脊等，这些装饰又因粗细、强弱、密度、方向及相互组合而有许多变化。此外，壳体表面有不同类型的色带，但绝大多数色带都不能在化石上保存下来。</p>
+<p>菊石的壳口覆以口盖。口盖有的单瓣(单口盖)，有的双瓣（双口盖），也有的由双瓣融合而成(合盖)。通常口盖与菊石壳体分离保存。带有口盖的菊石化石十分稀少。</p>
+<p>菊石的系统分类标志有壳体形状、旋卷程度、壳表装饰、体管位置和缝合线的特征等。</p>
+<h3 id="菊石缝合线变化"><a class="header" href="#菊石缝合线变化">菊石缝合线变化</a></h3>
+<p>其中，缝合线的特征具有特别重要的意义。每条缝合线可以分为外缝合线和内缝合线。外缝合线是壳体外表面的一段缝合线，内缝合线是背部表面的一段缝合线。缝合线的基本要素是叶和鞍。叶是缝合线向后弯曲的部分，鞍则是向前弯曲的部分。按照叶和鞍分布的位置，分别称为腹叶（或腹鞍）、背叶（或背鞍）、侧叶（或侧鞍）等。缝合线在侧面未完全变成独立的鞍和叶的一系列褶曲称为肋线系；在腹叶和第一侧叶中间的一系列次生鞍和叶称为偶生鞍和叶。</p>
+<p>叶和鞍的增生有两种方式：</p>
+<p>①鞍裂式，由鞍部分裂，形成独立的叶和鞍；</p>
+<p>②叶裂式，由叶部分裂，产生新的叶和鞍。</p>
+<p>按照叶和鞍的形态，可以将菊石缝合线归纳为4种基本类型：</p>
+<p>①无棱菊石式：叶和鞍完整，数量少，侧面只有1个宽圆形的叶，在泥盆纪菊石可见到；</p>
+<p>②棱菊石式：叶和鞍完整，数量较多，叶较尖，在泥盆纪至三叠纪菊石可见到；</p>
+<p>③齿菊石式：鞍完整，叶呈锯齿状，在石炭纪至三叠纪菊石可见；</p>
+<p>④菊石式：叶和鞍强烈分叉或齿化，在二叠纪至白垩纪菊石可见到。</p>
+<p>缝合线的特征是划分目和亚目一级的主要标志，也是划分超科、科、属，以至种的重要标志。胎壳、体管的位置和方向（前向或后向）在划分目和亚目一级上也有意义。壳表装饰对于确定属和种，以及某些科有重要作用。壳体形状和旋卷程度是划分属和种的标志。</p>
+<p>总体来讲，菊石跟鹦鹉螺在壳体方面的区别在于：菊石的壳体要稍微薄一些，体管相对简单，隔壁向壳口方向延伸，此外最重要的是菊石有复杂的缝合线，而鹦鹉螺没有缝合线是菊石隔壁跟壳壁内面接触的线。其他头足动物的缝合线呈简单的弧线或者直线，但菊石的缝合线则相当复杂，任何对菊石的描述、分类必须建立在讨论缝合线的基础上。缝合线向壳口方向弯曲的部分成为鞍，向反方向的部分成为叶，然后根据所处在壳圈里不同位置分别命名为腹鞍、腹叶、背鞍和背叶, 据此缝合线类型有一下几种：</p>
+<p>A．由一些简单的鞍和叶组成，称之为棱菊石式缝合线，为大多数古生代菊石动物所具有。</p>
+<p>B．由锯齿状的或者有饰边的叶以及圆形的不间断的鞍组成，称为齿菊石式缝合线。齿菊石是具有这种类型缝合线的典型例子，它们在中生代的三叠纪占主导地位。</p>
+<p>C. 由叶和鞍都有饰边并分化出许多小叶的缝合线，称为菊石式缝合线，大多出现在在侏罗纪和白垩纪。</p>
+<h2 id="系统分类"><a class="header" href="#系统分类">系统分类</a></h2>
+<p>菊石的系统分类有几种不同的方案，通常采用的一种是将菊石亚纲划分为9个目：</p>
+<ul>
+<li>似古菊石目：腹方后颈式体管，具全侧叶或侧叶在个体发育过程中向侧方移动而形成较多的脐叶，泥盆纪。下分4个亚目：</li>
+<li>杆石亚目：壳体直或弓形，球形胎壳，有腹叶，有时尚有全侧叶；</li>
+<li>无棱菊石亚目：环形壳或旋卷壳，早期有脐孔，有全侧叶，早-中泥盆世；</li>
+<li>似古菊石亚目：脐叶在个体发育过程中留在脐线处或向侧方位移，早泥盆世晚期-晚泥盆世；</li>
+<li>桥菊石亚目：在个体发育过程中，侧叶和腹叶分裂而产生一系列的肋叶和偶生叶，晚泥盆世早期。</li>
+<li>棱菊石目：腹方体管，卵形胎壳，在个体发育过程中，缝合线中有1至数个侧叶是由侧鞍鞍裂而成，中泥盆世-二叠纪。下分2个亚目：
+<ul>
+<li>圆叶菊石亚目：腹叶简单不分叉，中泥盆世-二叠纪；</li>
+<li>棱菊石亚目：基本缝合线为 8个叶：一个三分的腹叶，一对侧鞍鞍裂而成的第一侧叶，一对近脐的外侧叶，一对内侧叶和一个背叶。各个叶可以通过一次或多次叶裂二分或三分形成更多的叶，早石炭世-二叠纪。</li>
+</ul>
+</li>
+<li>海神石目：背方体管，卵形胎壳,晚泥盆世晚期。下分2个亚目：</li>
+<li>棱海神石亚目：原始类别中含一个腹叶，某些类别腹叶消失，叶和鞍较多，晚泥盆世晚期；</li>
+<li>海神石亚目：没有腹叶，缝合线很简单，晚泥盆世晚期。</li>
+<li>前碟菊石目：腹方后向体管，腹叶窄而三分叉，背叶窄，简单或二分叉，肋线系发育，早石炭世-晚三叠世。</li>
+<li>齿菊石目：体管在个体发育过程中由近中心位置移到腹方，缝合线多数为齿菊石式，少数为棱菊石式或菊石式，二叠纪-三叠纪。</li>
+<li>叶菊石目：菊石式缝合线，鞍部分化为众多小圆叶状，三叠纪-白垩纪。</li>
+<li>弛菊石目：壳体平卷，菊石式缝合线，叶和鞍少，多次二分叉，无肋线系，背叶尖，侏罗纪-白垩纪。</li>
+<li>菊石目：菊石式缝合线，简单或复杂，鞍主要二分，有时三分，但不呈小叶状，然后再次二分，侏罗纪-白垩纪。</li>
+<li>曲菊石目：壳体平卷，或作不规则卷曲，乃至呈直杆状，菊石式缝合线，仅有一个背叶和腹叶，一对侧叶和脐叶，腹叶二分叉，侧叶二分叉或三分叉，侏罗纪-白垩纪。</li>
+</ul>
+<p>在目和亚目以下，又进一步分为超科（约80个），科（约280个）和属（约2000个），以及许多种和亚种等。</p>
+<h2 id="分布"><a class="header" href="#分布">分布</a></h2>
+<p>长期以来，许多学者推测具有旋卷壳体的菊石是由直壳的杆石类，逐渐弯曲而演变为环形壳的无棱菊石类。但是，地层学的证据表明，最古老的具环形壳的无棱菊石类和弓形的杆石类几乎是同时出现的。因此，也有人设想杆石类和无棱菊石类几乎同时由具卵形胎壳和腹方体管的直角石类演化的。</p>
+<p>菊石化石均产于浅海沉积的地层中，并与许多海生生物化石共生。通过对含菊石地层的古地磁、古温度的测定、岩性和岩相分析和对菊石古生态的研究，推测菊石栖居在热带至温带的有一定深度的海域，内中又因壳壁厚薄、壳形和壳表装饰的不同而有不同的生活习性，例如：壳壁较厚和具粗强壳饰的类型是较不活动的类型；壳壁较薄、表面平滑和具尖饼状壳形者是较活动的栖居于较深水体的类型。</p>
+<p>菊石演化迅速，分布广泛和易于辨认，是划分和对比地层最有效的标准化石。依据菊石在地层中的垂向演变而划分成颇为精细的菊石带。例如在中生代的三叠纪、侏罗纪和白垩纪，每一个纪均可划分出30个以上的菊石带，平均每个菊石带的延续时限在100～200万年之间，在西欧古生代早石炭世晚期赛尔布霍夫期地层划分出30个菊石带，平均每个菊石带延续时限不超过50万年。应用同位素和其他方法测定地层的绝对年龄，还远远不能达到这个精度。</p>
+<p>在中国古生代和中生代地层中含有各种菊石，特别是广西的早泥盆世菊石群，华南二叠纪菊石，广西、青海和西藏三叠纪菊石和西藏侏罗纪及白垩纪菊石都具有重要的意义。</p>
+<p>在我国广西、贵州、青海和西藏的海相地层中都有发现菊石化石的记录，特别是在西藏的珠穆朗玛峰地区有大量的菊石化石产出，甚至随手可得。因为在中生代时期，那里是古喜马拉雅海，随着构造运动地壳抬升，海底变为高山，菊石化石也得以显露出来。人们曾经把这种旋卷型外壳上装饰着肋、棱、脊的动物称为“阿蒙神之角(Ammon’s horns)”或“蛇石( snake- stones)”。</p>
+<p>2023年10月，在卓奥友峰地区距今7000万年的白垩纪末期地层中发现了异形菊石。</p>
+<h2 id="进化发展"><a class="header" href="#进化发展">进化发展</a></h2>
+<p>在头足类的进化过程中，惟有鹦鹉螺还背负着一个沉甸甸的硬壳，慢慢地在水中游动，依靠硬壳保护自己，而其他的种属在进化中已脱掉硬壳，轻装前进。按照鹦鹉螺的运动方式推断，菊石也是一种游速不快、运动连贯性很差的动物。</p>
+<p>在菊石壳的表面有许多的壳饰。壳饰是生长纹和生长线的总称，与螺口平行。有的是与壳体的旋卷方向平行的纵纹，有的是与壳体方向垂直的横纹。</p>
+<p>菊石壳以碳酸钙为主要成分，多为平旋的壳。壳体以胎壳为中心在一个平面内旋卷，少数壳体呈直壳、螺卷或其他不规则形状。菊石动物在生长过程中周期性地由外套膜分泌出隔壁，被相邻两个隔壁所分隔的空间叫做气室；隔壁与壳壁的接触线叫做缝合线；每一个隔壁有一个圆形隔壁孔，为体管所在位置，通常位于腹部边缘，少数在背部或近中心位置。壳体表面有时平滑，有时有生长线纹、纵旋线纹、横肋、瘤、刺、沟、脊等装饰，菊石的壳口覆以口盖。菊石的系统分类中缝合线的特征具有特别重要的意义。每条缝合线可以分为壳体外表面的一段叫外缝合线，背部表面的一段叫内缝合线。缝合线的基本要素是叶和鞍。叶是缝合线向后弯曲的部分，鞍则是向前弯曲的部分。按照叶和鞍分布的位置 ，分别称为腹叶（或腹鞍）、背叶（或背鞍）、侧叶（或侧鞍）等。在侧面未完全变成独立的鞍和叶的一系列褶曲称为肋线系。按照叶和鞍的形态，可以将菊石缝合线归纳为无棱菊石式、棱菊石式、齿菊石式和菊石式。</p>
+<p>软体部分出口也就是壳口。壳口的形状也不尽相同，有圆形、椭圆形，普遍有腹弯。壳口有盖，被称为口盖。其成分为石灰质或角质。当软体部分收缩进壳以后，口盖将口紧密盖好以保护软体部分。口盖在泥盆纪的早期才出现，分成两大类：一类是在三叠纪出现的单口盖，口盖为一片角质包薄片，它不能完全封闭口部；另一类是在中生代侏罗纪和白垩纪才出现的双口盖，由一对大致呈三角形微微向外凸出的石灰质片组成。</p>
+<h2 id="收藏价值"><a class="header" href="#收藏价值">收藏价值</a></h2>
+<p>菊石化石均产于浅海沉积的地层中，并与许多海生生物化石共生。通过研究，推测菊石栖居在热带至温带的有一定深度的海域。菊石是划分和对比地层最有效的标准化石，可划分出颇为精细的菊石带。在中国古生代和中生代地层中所含的各种菊石，都具有重要的意义。</p>
+<p>中国泥盆纪菊石主要出产于广西南丹等地，石炭纪化石也主要产于广西，二叠纪菊石分布较广，在我国南方有广泛分布。三叠纪菊石主要在贵州、西藏、四川，湖北等地。西藏的珠穆朗玛峰地区有大量的侏罗纪菊石化石，甚至随手可得，因为在2亿多年前，那里曾经是古喜马拉雅海，由于造山运动，地壳上升，海底变成了高山。因此，生活在海洋底层的菊石，就呈现在地面上，成为喜马拉雅山地壳运动变化的见证物，同时也为恢复当地的古生态环境提供了有利的证据。白垩纪中国菊石甚少。</p>
+<p>菊石化石的纵剖面呈美丽的螺旋形，棕黄色半透明，色如琥珀，闽、台一代民间认为菊石可以转运、行气，给人带来好运气、好风水，多喜收藏，室内成对摆放。个体硕大，色美者价高，精美者可称宝石级收藏品。2012年，台湾市场出售70cm直径菊石切片，一对价值800,000新台币。 不过菊石总体产量很大，它的科研价值胜过收藏价值。</p>
+<h2 id="研究意义"><a class="header" href="#研究意义">研究意义</a></h2>
+<p>菊石是推算岩石年代最有用的化石。利用菊石，专家可以将地质年代划分精确到50万年。与地球46亿年的年龄相比，50万年可谓是非常短的时间段。侏罗纪和白垩纪的大部分时期，就是利用菊石以此种方法划分的。菊石化石分布地很广——发现相同种类化石的地点可能相隔数千英里。这是因为在侏罗纪，泛大陆开始分裂，给菊石散布到全世界提供了航道。</p>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<h3 id="阿蒙神的化身与蛇石"><a class="header" href="#阿蒙神的化身与蛇石">阿蒙神的化身与蛇石</a></h3>
+<p>菊石的学名来源于古埃及的阿蒙神。祭士们用绵羊头来表达阿蒙神的形象。弯卷的绵羊角酷似菊石的贝壳，乃是绵羊神的象征。公元88年，罗马著名的博物学家普林尼第一个在著作中提到了菊石。他把菊石称作阿蒙神的角。阿蒙神原为埃及的风神和空气神，从公元前2000年到1360年，阿蒙神在埃及诸神中占有显赫的地位，被尊为第一创造神，信奉阿蒙神的底比斯建有卡纳克神庙和卢克索神庙来供奉阿蒙。而阿蒙神的代表符号之一，便是长着两只螺旋形弯角的白羊，与菊石的盘绕状外壳极为相似。因而普林尼将菊石视为圣石，认为它有唤起未来的梦幻魔力。</p>
+<p>在中世纪时，人们把菊石视为盘曲的无头蛇，使菊石充满神秘。英国把菊石称为“蛇石”。英国约克郡的一个小城一直传说菊石是被7世纪的圣女希尔达砍掉了头的无头小蛇。因而这个小城的城徽上绘有三个蛇头菊石。据说巫师利用菊石能使沉睡的神灵显圣。</p>
+<h3 id="古菊石类生物与章鱼鱿鱼有亲属关系"><a class="header" href="#古菊石类生物与章鱼鱿鱼有亲属关系">古菊石类生物与章鱼鱿鱼有亲属关系</a></h3>
+<p>4亿年以前，有一种古老的菊石类生物nautiluslike漫步在广阔的海洋里，搜寻鱼类和其他猎物。nautiluslike有着几十只触手，住在螺旋型或圆锥型的壳中，一直以来古生物学家这样假设。但是，日前一项新研究发现，这个古老家族中的一些成员有许多是定栖类生物，它们大部分时间都待在海底有甲烷气泡冒出的地方。这些生物与章鱼、鱿鱼、墨鱼有着亲属关系。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prosperity-of-Invertebrates/Stringocephalus.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prosperity-of-Invertebrates/jiao-shi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prosperity-of-Invertebrates/Stringocephalus.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prosperity-of-Invertebrates/jiao-shi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
