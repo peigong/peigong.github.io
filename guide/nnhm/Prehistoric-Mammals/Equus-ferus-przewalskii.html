@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>普氏野马 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prehistoric-Mammals/Equus-ferus-przewalskii.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="普氏野马"><a class="header" href="#普氏野马">普氏野马</a></h1>
+<p>普氏野马（学名：Equus ferus ssp. przewalskii）是奇蹄目、马科、马属的哺乳动物。体长约220-280厘米，肩高约120厘米，尾长90厘米，体重350千克。头部长大，颈粗，耳短小而圆，蹄宽圆。外形似家马，但额部无长毛，鬃毛短而直立，背部中央有一条黑色脊线，尾基部毛短，四肢下部前面黑色；其夏毛背部浅棕色，两侧及四肢内侧色淡，腹部黄白色：冬毛长而厚，毛色较淡，呈浅黄色。两颊有赤褐色长毛。</p>
+<p>普氏野马栖息于山地草原和荒漠。该物种感官敏锐，性格机警、暴躁；白天活动，体壮擅跑，无固定栖息地；耐渴，主要食用芨芨草、芦苇，冬天能刨开积雪觅食枯草。普氏野马2岁性成熟，一般在6月份发情交配，次年4-5月份产仔，每胎1仔，幼驹出生后几小时就能随群奔跑。寿命为25-35年。分布于中国新疆、甘肃、内蒙古等地。</p>
+<p>原分布于中国新疆北部准葛尔盆地北塔山及甘肃、内蒙古交界的马鬃山一带。最后一次发现普氏野马是在1957年，野生种群灭绝。20世纪80年代末期以来，普氏野马从欧洲引回中国新疆奇台、甘肃武威半散放养殖，为普氏野马重返大自然而进行科学实验和研究工作。目前，全世界仅有的普氏野马不足1500匹，是比大熊猫还要珍稀的物种，已被列入中国《国家重点保护野生动物名录》一级。列入《濒危野生动植物种国际贸易公约》(CITES)附录Ⅰ。截至2025年底，中国普氏野马种群稳步增加，数量接近1000匹。2026年5月7日，一匹普氏野马幼驹在杭州野生动物世界降生。</p>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<h3 id="意义"><a class="header" href="#意义">意义</a></h3>
+<p>普氏野马是世界上存活的唯一野马，保留着马的原始基因，具有重要的生物学研究意义。演化史长达五六千万年的野马。比大熊猫、鸭嘴兽等"活化石"更具有动物演化研究价值。全世界目前只有1400多匹，比大熊猫的数量还稀少，被誉为“比大熊猫还要珍贵的动物”。</p>
+<h3 id="分类"><a class="header" href="#分类">分类</a></h3>
+<p>1986年对野生马科动物分类的科学定论，将普氏野马列为已灭绝的马科动物的一个亚种。虽然普氏野马（Equus ferus przewalskii）可以与家马（Equus ferus caballus）杂交产生可育后代，但普氏野马中2n=66条染色体的存在表明了这一点比任何两个品种的家马都更不同于其家畜的染色体2n=64。此外，2001年线粒体DNA研究表明，普氏野马不是现代家马的祖先。与家养马品种相比，普氏野马在外观上也表现出许多一致或差异性：当身体状况良好时，鬃毛短而直立；前毛发几乎不存在；尾巴上部有短护毛；一条深色的背部条纹从鬃毛向下延伸到尾巴；通常腕骨和跗骨上会出现几条深色条纹。普氏野马在冬天长出浓密的鬃毛，这与家马相反，它们每年都会随着春天的来临，而冬季皮毛会部分脱落。</p>
+<p>其他关于普氏野马和家养马之间遗传差异的研究表明，它们之间的遗传差异很小。只有4个单独的血清学标记基因座上的4个等位基因被鉴定为普氏野马特异的；绝大多数血液蛋白变异体存在于普氏野马和家养马中，甚至哺乳动物中已知进化最快的DNA区域（线粒体DNA控制区域），在这两种马之间没有显示出显著的差异。因此很明显，普氏野马和家养马的关系非常密切，并且过去曾进行过杂交，但它们之间固定的染色体数目差异表明它们是不同的种群。截止2012年，各种分子研究支持它们作为姐妹类群的系统发育关系。也就是定位普氏野马是一个独立的物种。</p>
+<h3 id="消失"><a class="header" href="#消失">消失</a></h3>
+<p>1879年，沙俄军官、探险家普热瓦尔斯基首次在野外发现该物种，随后普热瓦尔斯基率领探险队先后3次进入中国准噶尔盆地奇台至巴里坤的丘沙河、滴水泉一带捕获、采集普氏野马标本，并于1881年由沙俄学者波利亚科夫正式定名为“普氏野马”（Equus przewalskii Poliakov, 1881）。由于普氏野马生活于极其艰苦的荒漠戈壁，缺乏食物，水源不足，还有低温和暴风雪的侵袭。而人类的捕杀和对其栖息地的破坏，更加速了它消亡的进程。在近1个世纪的时间里，普氏野马的分布区急剧缩小，数量锐减，在自然界濒临灭绝。蒙古西部在1947年曾经捕捉到过1只，当时送到乌克兰的动物园饲养，此后就再也没有发现过普氏野马。</p>
+<p>中国于1957年曾在甘肃肃北县的野马泉和明水之间捕到过1只，1969年在新疆尚有人在准噶尔盆地看到过有8匹普氏野马组成的小群。1971年，当地的猎人看到过单匹的普氏野马。20世纪80年代初，还有人在东准噶尔盆地乌伦古河和卡拉麦里山之间的地域发现了普氏野马的踪迹，但没有确凿的证据。后来，新疆也时常传来发现普氏野马的消息，不过经证实，所看到的都是野驴。中国对普氏野马的存亡十分关注，1974年、1981年和1982年，由中国科学院、新疆大学等单位先后组织考察队，深入到准噶尔荒漠、乌伦古河、卡拉麦里山、北塔山等普氏野马产地考察，并结合航空调查，力求找到普氏野马，结果令人失望。大多数人认为，如果自然界还有残存的普氏野马，其数量也少到不能形成种群，因而不足以保证一个物种的生存，所以野生的普氏野马很可能已经在自然界消失。</p>
+<h3 id="重生"><a class="header" href="#重生">重生</a></h3>
+<p>20世纪60年代，蒙古国首先宣布野生普氏野马灭绝，而中国内新疆作为普氏野马的故乡，也由于俄、德、法等国的探险队不断大规模捕猎，并将28匹马驹偷运出境，加之国内大批捕杀，到20世纪70年代，新疆普氏野马也基本宣布消失。到1985年，分布于美、英、荷兰等112个国家和地区的存活普氏野马仅有700多匹，而且是圈养和栏养的。</p>
+<p>1977年，三位荷兰鹿特丹人创立了普氏野马保护基金会，该基金会有两个主要目标，一是将早前的普氏野马血统记录数据经电脑处理，建立起蒙古野马血统记录数据库；二是首倡将普氏野马放回归大自然。</p>
+<p>1981年，普氏野马保护基金会开始购买普氏野马，而且尽量挑选血缘较远的野马进行繁殖。1986年，该基金会开始和苏联科学院动物进化形态学和生态学研究所合作，预计到1988年合作研究出要在苏联和蒙古寻找尚存的适宜草原保护区。最终在蒙古境内建立了一个面积达24000英亩的胡斯坦奴鲁草原保护区（1998年正式建立），并在1992年将第一批16匹蒙古野马运往该保护区进行野外放养，由于进展顺利，该基金会又在1994年、1996年分两批各16匹蒙古野马送往保护区，截至1998年1月1日，胡斯坦奴鲁草原共有约60匹普氏野马。正是在此基础上，2005年伦敦动物学会正式向世界自然保护联盟提出申请，将蒙古野马在世界自然保护联盟濒危物种红色名录中的保护状态由原来的野外灭绝更改为濒危。</p>
+<p>1986年8月14日，中国林业部和新疆维吾尔自治区人民政府组成专门机构，负责“野马还乡”工作，并在准噶尔盆地南缘、新疆吉木萨尔县建成占地9000亩全亚洲最大的野马饲养繁殖中心。随着18匹野马先后从英、美、德等国的运回，野马故乡结束了无野马的历史。</p>
+<p>2018年9月27日，新疆野马繁殖研究中心向卡拉麦里山有蹄类野生动物自然保护区放归15匹普氏野马，6公9母。即普氏野马在新疆的野外种群数量达到221匹。</p>
+<p>2019年7月，中国从1985年实施普氏野马引入项目以来，在新疆诞生的普氏野马已到第6代，累计数量达到703匹。新疆普氏野马存活种群数量达416匹，其中野放野马217匹、半散放野马108匹、圈养野马91匹。新疆成为中国普氏野马种群数量最多的省区。</p>
+<p>截至2019年11月，中国新疆和甘肃两地普氏野马总量达593匹，加之国内一些动物园饲养的几十匹普氏野马，中国普氏野马种群总数已突破600匹大关，占世界普氏野马总数的近三分之一。</p>
+<p>截止2025年8月，中国普氏野马种群进一步扩大，总数突破900匹。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>普氏野马属大型有蹄类哺乳动物，体长约210厘米，肩高约110厘米，尾长90厘米，体重350千克。体型健硕，从比例上来说，头部较大而短钝，脖颈短粗，口鼻部尖削，嘴钝，牙齿粗大，耳比家马小而略尖，长且直立，但可以移动以定位声音。口鼻有斑点。上下切牙用于切割植被，而它的许多前颊齿用于研磨。它的眼睛靠在头骨后面，能够看到广阔的视野，头后面是它唯一的盲点。</p>
+<p>整体外形像马，但不似家马具有长长的额毛，额发极短或缺如。颈鬃短硬而直立，呈暗棕色，逆生直立，不似家马垂于颈部的两侧。背部平坦，有明显深色背线，顺脊柱由肩部向后延伸至尾部；四肢短粗，腿内侧毛色发灰，常有二至五条明显黑色横纹，小腿下部呈黑色，俗称“踏青”腿。蹄型比家马小，高而圆。尾基着生短毛，尾巴粗长几乎垂至地面，尾形呈束状，不似家马自始至终都是长毛。尾巴自尾基部开始长毛，上半部毛短，下半部毛长。</p>
+<p>普氏野马的染色体为66个，比家马多出一对。体毛为棕黄色，向腹部渐渐变为黄白色，腰背中央有一条黑褐色的脊中线。夏天，它的皮毛又短又光滑。背部和两侧呈红棕色。腹部的颜色变成黄白色。冬天，它的皮毛会变长，颜色变浅。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>野生的普氏野马栖息地海拔在1,100-2,000米之间。栖息于缓坡上的山地草原、开阔的戈壁荒漠及水草条件略好的沙漠、戈壁。最喜欢的栖息地长有芨芨草、梭梭、芦苇、红柳等。</p>
+<p>2025年4月，放归宁夏贺兰山国家级自然保护区的普氏野马产下第一匹马驹，证明了贺兰山的生态环境适宜普氏野马生存和繁衍。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<p>野马性机警，善奔驰；一般由强壮的雄马为首领结成5-20只马群，营游移生活。多在晨昏沿固定的路线到泉、溪边饮水。三五只或十余只成群游荡。群体中的个体之间在进食之后常互相清理皮肤，一般呈相反方向站立，然后将头伸到同伴的侧身，轻轻地啃拭对方的耆甲、肩部、背侧、臀部等。双方啃拭的都是同一个部位，当一方改变部位时，另一方立即相应地改变，配合十分默契而完善。有时也进行自身的护理，包括打滚、自我刷拭和驱散蚊蝇等，特别是在沙地上。休息和睡眠有站立、腹卧和侧卧等3种姿势，但警惕性很高，稍有动静便处于应激状态。感觉灵敏，警惕性高，奔跑能力强，昼夜活动，但以夜晚为多。</p>
+<p>以荒漠上的芨芨草、梭梭、芦苇、红柳等为食，冬天能刨开积雪觅食枯草。饮水量也很大。叫声的种类也很多，争斗开始时发出声调尖而单一的吼叫；失群时发出声音洪亮而高亢的呼唤信号；感到某种满足时，就发出轻微的喉音；当反感时则发出尖而细的声音。更多的情况是打响鼻，表达的情感也十分复杂，大多为恐吓对方，也有时是由于鼻腔内有异物、蚊蝇干扰、异味刺激或感冒患病等因素引起的。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<ul>
+<li>分布：中国；</li>
+<li>灭绝：哈萨克斯坦、俄罗斯和乌克兰；</li>
+<li>重新引进：蒙古。</li>
+</ul>
+<h2 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h2>
+<p>普氏野马一年四季均可发情。为了争夺领群的地位，雄马之间则昂首静立，两眼凝视，耳朵朝向前方，而后嘶叫、前蹄刨地、打响鼻、低头小跑，鼻孔喷出粗气，接近以后就互嗅抿耳，怒目而视，举弹前蹄，发出尖锐而短促的吼叫，继而竖起前身扭打在一起，其争斗的残酷性和凶悍程度比家马要强烈得多。雌马之间也有一定的攻击行为，主要是地位较高的经常表现出护食和阻止其他雌马与雄马交配。</p>
+<p>雌兽的发情周期为28-22天，持续时间为5-7天。发情时表现为精神兴奋，食欲减退，烦躁不安，起卧不定，互相嗅闻等。交配前，雄马和雌马互相嗅闻会阴部和外生殖器，然后雌马将臀部朝向雄马，雄马则轻咬雌马的颈部或膝部，促使雌马前进，然后进行爬跨，经过3-7次骨盆冲动完成射精。健壮的雄马可以在30分钟之内与2匹雌兽连续交配8次之多。</p>
+<p>雌马的妊娠期为11-12个月，大约为307-348天，翌年5-6月产仔。幼马刚出生时为浅土黄色，出生后一小时，小马能够站立和行走，2小时后即可吃奶，在几周内开始吃草，但在8-13个月内不会断奶。</p>
+<p>交配和分娩发生在同一个季节，因为雌性在分娩后7-8天会进入发情期。3岁左右性成熟，寿命为30岁左右。</p>
+<p>普氏野马曾因过度偷猎和环境退化而在中国灭绝，从20世纪80年代中期开始，普氏野马从英国、德国和美国重新引入中国，并在中国西北部的新疆维吾尔自治区和甘肃省饲养。自2024年以来，共有18匹来自新疆的普氏野马分三批被释放到宁夏贺兰山自然保护区，以保护濒危物种。2025年4月13日，普氏野马产下了一匹小马，这是普氏野马在自然保护区重新引入后的第一次繁殖。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<h3 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h3>
+<p>列入《濒危野生动植物种国际贸易公约附录Ⅰ、附录Ⅱ和附录Ⅲ》(CITES)2023年版附录Ⅰ。</p>
+<p>列入《世界自然保护联盟濒危物种红色名录》(IUCN)2014年10月9日——濒危(EN)；</p>
+<p>2011年——濒危(EN)</p>
+<p>2008年——极度濒危(CR)</p>
+<p>1996年——野外灭绝(EW)</p>
+<p>列入中国《国家重点保护野生动物名录》（2021年2月5日）一级。</p>
+<h3 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h3>
+<p>19世纪70年代，俄罗斯探险家普热瓦尔斯基深入准噶尔盆地，意外撞见了几匹野马。同家马相比，它们头大颈粗，耳短小而圆，背部中央有一条黑色脊线。这些拥有6000万年进化史的野马，后被命名为普氏野马。</p>
+<p>20世纪70年代，国内普氏野马野外绝迹。全球仅存的700多匹普氏野马，均为从原生地流失的野马后代。</p>
+<p>1985年，中国启动实施野马返乡计划，在新疆、甘肃等地建立繁育基地，为普氏野马搭建“回家之路”。</p>
+<p>1986年8月，新疆野马繁殖研究中心在吉木萨尔县正式建立。同年12月，首批11匹普氏野马从欧洲启程，踏上了返乡的旅途。</p>
+<p>1988年3月8日，一匹马驹在新疆野马繁殖研究中心健康诞生，这是普氏野马回归后在原生地繁育的首个后代，被命名为“准噶尔一号”。</p>
+<p>2009年，一匹马驹在北京动物园十三陵动物繁育基地出生，被命名为“2009-1”。它的父母是从国外引入的，此后未再生育并相继离世。</p>
+<p>2021年9月28日，国家林草局为进一步扩大普氏野马野外种群，将6匹普氏野马在内蒙古大青山国家级自然保护区放归。据初步统计，中国普氏野马种群数量已突破700匹。</p>
+<p>2021年11月，国家林草局最新发布：通过三十多年的保护，中国一级重点保护动物普氏野马的饲养繁育、野化放归等工作，取得显著成效。国内普氏野马种群数量，突破了700匹。</p>
+<p>2022年3月，1匹普氏野马出现在渥洼池湿地附近，并在阳关渥洼池湿地和荒漠之间出没达5个月之久。</p>
+<p>2024年6月10日，据英国《卫报》报道，由于欧洲多个动物园的放归计划，普氏野马得以在长达200多年后，重回故乡哈萨克斯坦的草原生活。</p>
+<p>2025年3月1日，宁夏贺兰山国家级自然保护区管理局消息，经过为期3个月的适应性训练，6匹来自新疆的普氏野马成功放归宁夏贺兰山国家级自然保护区，标志着普氏野马种群在中国的放归区域进一步扩大。</p>
+<p>2025年4月15日，从宁夏贺兰山国家级自然保护区管理局获悉，从新疆成功放归宁夏贺兰山国家级自然保护区的普氏野马已产下第一匹马驹。</p>
+<p>2025年6月3日，在宁夏贺兰山国家级自然保护区，又一批次来自新疆的普氏野马经过适应性训练后被放归野外，标志着贺兰山普氏野马野化种群规模进一步扩大。</p>
+<p>2025年是中国启动“野马返乡计划”四十周年，中国境内普氏野马总数已超过900匹，约占全球总量的三分之一。</p>
+<p>2025年9月15日，在甘肃濒危动物保护中心，一批普氏野马将被转运到甘肃敦煌西湖国家级自然保护区。按照计划，本次将转运4个种群，共28匹普氏野马，从甘肃濒危动物保护中心转运到甘肃敦煌西湖国家级自然保护区，距离大概是1030公里，车程预计14～15个小时。这是国内首次采用远距离散装转运，就是在转运过程中马匹将全程保持清醒状态，不再采用以往麻醉装箱的办法。</p>
+<p>截至2025年10月，卡拉麦里保护区已完成18个批次、146匹野马的野放。如今种群总数突破900匹，中国普氏野马数量约占全球总量的三分之一。其中，新疆存栏546匹，累计繁殖815匹，成活率连续30年居世界首位。</p>
+<p>2025年计划从欧洲引进5匹雄性野马，进一步丰富基因库。</p>
+<p>2026年1月9日消息，截至2024年底，我国普氏野马种群数量已突破900匹，占全球总量的1/3。其中，新疆繁殖数量突破800匹，野放18个批次146匹。普氏野马已在祁连山、大青山、贺兰山等地繁衍生息，种群规模逐渐壮大。</p>
+<p>2026年4月22日，新疆卡拉麦里山有蹄类野生动物自然保护区迎来新成员——30匹普氏野马完成野化训练，成功放归野外。</p>
+<p>2026年4月22日消息，截至2025年底，中国普氏野马种群稳步增加，数量接近1000匹。</p>
+<p>2026年5月7日清晨，杭州野生动物世界，一匹普氏野马幼驹顺利降生。</p>
+<h2 id="人工圈养"><a class="header" href="#人工圈养">人工圈养</a></h2>
+<p>早在普氏野马刚刚发现后不久，一些俄、法、英等国的研究机构和博物馆就对蒙古野马产生了极大的兴趣。起初，因普氏野马难以捕获，仅是一些头骨和皮张被陆续运回欧洲加以研究和保存，经过几度尝试，发现成年野马几乎无法捕获（它们十分机警，逃跑也特别快），于是人们选择捕捉刚刚出生的小马。1899年至1903年，共有总计50匹左右野马被相继运抵欧洲，成为了第一批由人工饲养的蒙古野马。</p>
+<p>然而由于20世纪初期战争的影响，人工饲养的普氏野马数量并未扩大，甚至到1945年第二次世界大战结束时，这些普氏野马仅在捷克布拉格和联邦德国慕尼黑二园还剩下不到20匹的数量，而这其中又仅有一半有繁殖能力，当前全世界饲养的野马，几乎全是这10匹3公7母的后代。唯一的例外就是乌克兰阿斯卡尼亚·诺瓦野生动物园为了重建野马群，除了从慕尼黑和布拉格买回几匹外，还在1957年从蒙古的国家种马场买来一匹真正野生的野马（1947年捕获）。</p>
+<p>二战以后，各国人工饲养的普氏野马的数量持续增加，但由于整个圈养族群，追溯起源仅来自10余匹野马，故近亲交配所引起的衰退现象十分严重。经过人们的努力，普氏野马在全世界的圈养数量已达1500匹，但此问题依然存在。</p>
+<p>为保护普氏野马，1985年，中国启动“野马还乡”工作，在准噶尔盆地南缘的吉木萨尔县建立了亚洲最大的新疆野马繁殖研究中心，占地面积9000亩。同时，还先后从欧美国家引进了24匹人工圈养的普氏野马，并按照从适应性饲养保护到栏养繁育扩群、从半散放到自然散放、最终放归大自然的技术方案，全力开展一系列的科学研究和实验攻关。截至2022年，经过30多年的持续努力，喜添普氏野马宝宝的信息连连不断。据统计，已经诞生到第6代，累计数量达760余匹。新疆已成为中国普氏野马种群数量最多的省区，并已发展成了世界上最大的普氏野马基地。</p>
+<p>对普氏野马实施野外放归始于2001年8月，是在新疆准噶尔盆地荒漠草原的卡拉麦里有蹄类自然保护区进行的。截至2022年，已进行了16次放归活动，共有110匹普氏野马回归野外。新疆普氏野马存活种群数量达440匹，其中野放的数量最多为240匹，半散放的次之是108匹，圈养的最少为92匹。</p>
+<p>同时，“野马还乡”以来，也有不少普氏野马在甘肃敦煌西湖国家级自然保护区和安西极旱荒漠国家级自然保护区落户。据统计，截至2021年11月，中国普氏野马种群数量已突破700匹。</p>
+<p>从曾经濒临灭绝到如今的不断繁衍，普氏野马在野生动物史上演绎了传奇一幕，现分布于20多个国家和地区，中国分布的种群数量占世界总数的三分之一。</p>
+<h2 id="相关展出"><a class="header" href="#相关展出">相关展出</a></h2>
+<p>2026年2月春节期间，被誉为“马中活化石”的濒危动物普氏野马标本，首次在天津自然博物馆亮相。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prehistoric-Mammals/Bosprimigenius.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prehistoric-Mammals/Mammonteus-primigenius.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prehistoric-Mammals/Bosprimigenius.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prehistoric-Mammals/Mammonteus-primigenius.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

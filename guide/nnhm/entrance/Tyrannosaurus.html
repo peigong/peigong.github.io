@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>霸王龙 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/entrance/Tyrannosaurus.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="霸王龙"><a class="header" href="#霸王龙">霸王龙</a></h1>
+<p>霸王龙属于暴龙超科的暴龙属，为该属模式种，于1905年由美国古生物学家，美国艺术与科学院院士亨利·奥斯本描述命名。如果参考其它恐龙种名的翻译格式，它的种名翻译为“君王暴龙”会更合适。白垩纪晚期体长：10-13米 体重：7.5吨~10吨。</p>
+<p>霸王龙是地球上有史以来最大的陆地捕食者之一。</p>
+<p>霸王龙是久负盛名的恐龙，拥有海量的标本收藏，其中几十件标本都达到了非常高的完整度，使得古生物学家对于霸王龙的研究不仅仅局限于经典的形态描述，还可以对它的个体发育，生物力学，种群生物学等做出更详细的分析。如对于霸王龙头骨生物力学的研究表明它具有粉碎骨骼的咬合力，对它的脑颅三维重建表明霸王龙具有极佳的视觉和嗅觉，而对霸王龙个体发育序列的研究表明，霸王龙具有非常快的生长速度。很多在其它恐龙物种或是其它古生物身上无法落实的研究手段都可以用霸王龙尝试。在科学研究方面，霸王龙在国际顶级学术期刊《Science》上拥有属于自己的综述论文，并且与它相关的各种研究也会频繁登上《Nature》和《Science》这样的顶级学术期刊。虽然目前霸王龙的体型受到了大型异特龙类以及棘龙的挑战，但是综合研究深度以及文化影响力来看，它依然是名副其实的恐龙之王。</p>
+<h2 id="命名由来"><a class="header" href="#命名由来">命名由来</a></h2>
+<p>“tyrannos”意为暴君，种名中的“Rex”为国王的意思，以凸显霸王龙巨大的体型。合并起来的意思就是残暴的蜥蜴之王。</p>
+<h2 id="基本信息和形态学"><a class="header" href="#基本信息和形态学">基本信息和形态学</a></h2>
+<p>霸王龙的外鼻孔是一个前后向延长的开孔，其前背侧缘由前颌骨构成，后缘背侧缘由鼻骨构成。眶前窝非常大，眶前窗和上颌孔都位于其内。眶前孔的前缘，腹缘和背缘由上颌骨构成，后背侧面由泪骨构成，后腹侧缘由颧骨构成。前颌孔是一个圆形的小孔，位于眶前窝的前缘。此孔在头骨的外侧面无法被看到。上颌孔是一个圆形的孔，完全处于上颌骨之内。眼眶呈背腹向增高，前后向压扁。其腹缘的宽度大于背缘的宽度。其前边缘由泪骨构成，后缘和背缘由眶后骨构成，腹缘由颧骨构成。下颞孔呈钥匙孔状。其背缘主要由鳞骨的前突构成，后缘由鳞骨和方颧骨构成，前缘和腹缘由颧骨构成。上颞孔的背视呈长方形。</p>
+<p>前颌骨具有四枚牙齿，每一枚都呈圆锥状。前颌骨的牙齿横截面略微成“D”字形，牙的后表面比较扁平。一排小的滋养孔延平行于齿列的方向排列。前颌骨的升突为圆柱状，构成了外鼻孔的前缘。前颌骨的腭面呈拱形。两侧前颌骨的裂隙不算明显，但是犁骨的前突可以伸入到两块前颌骨之间。</p>
+<p>鼻骨限于吻端的背面。两侧的鼻骨愈合，但是在吻端和后端略有分开。鼻骨在向后延伸的过程中向外侧扩展。鼻骨前端有一个小的向腹侧延伸的突起，与前颌骨相连接，将上颌骨从外鼻孔的边界排除出去。每块鼻骨具有两个后突，腹外侧突比较短，与泪骨相关节，背内侧突较长，与额骨和前额骨相接。由于上颌骨与泪骨的关节，鼻骨没有参与眶前窗的形成。成年霸王龙的鼻骨背面具有粗糙的骨质纹饰。上颌骨向外侧扩展，齿列向腹缘突出。</p>
+<p>上颌骨前侧的牙齿具有很深的牙根。上颌骨的牙齿在内外侧向上压扁，明显的向后弯曲，并且大于前颌骨的牙齿。上颌牙齿双侧都有锯齿。一排滋养孔在上颌骨的腹缘延平行于齿列的方向向后延伸。在上颌骨和前颌骨的交界处具有一鼻下孔。在第十二枚上颌骨齿以后，上颌骨开始向后变细，并最终与颧骨相接合。上颌骨的外侧面非常粗糙，但位于眶前窝的部分则非常光滑。一个漏斗形的骨质间隔将前颌孔和上颌孔相隔开。前颌窦占据了整个整个骨头的前五分之一，并通过一个三角形的窗与上颌窦相连通。上颌骨的腭骨突是一个薄的骨片，它构成了内鼻孔的前缘和外缘。</p>
+<p>两侧的犁骨在内侧面联合，并在前部有一个扩张略呈菱形。犁骨的大部分都是细长的棒状，并将内鼻孔分开，它们膨大的位置正好位于前颌窦的位置。犁骨前部的膨大骨壁非常薄，但是相背面凹陷。在上颌窗位置后的部分，犁骨腹侧有一对钩突，犁骨与颚骨相关节的地方背腹向扩展。犁骨前侧扩展的位置具有容纳下颌齿的小凹陷。犁骨在颚骨升突后的部分开始变细，具有细的后突与翼骨的前缘相接。</p>
+<p>颚骨的升突向上隆起并在前向和背向膨大，形成一个鸡蛋形状的腭骨突。颚骨具有气腔化构造。颚骨的后侧有一个背腹向纤细的翼骨突。颚骨的后缘的外侧形成了凹面用于与翼骨相关节。颚骨的腹面具有一大的结节，其位置在翼骨的前侧。</p>
+<p>泪骨的降突将眶前窗和眼眶区分开。泪骨的前突构成了眶前窝的背边缘。强壮的后突构成了眼眶的上边缘。从背面看，泪骨呈半月形，并对鼻骨的后缘和额骨进行了一定程度的挤压。泪骨的降突向前强烈的拱起。泪骨后突的背缘具有粗糙的骨质纹饰，与眶后骨的骨质纹饰相衔接，中间有一明显的凹口分开。泪骨窦向前开口。泪骨的前突呈二分支状，小的腹侧支与上颌骨连接，大的背侧支与上颌骨和鼻骨连接。</p>
+<p>颧骨的腹缘几乎构成了颊部的腹缘，其后侧升突构成了眶后柱的一部分。在眼眶下的位置，颧骨的外侧面向外膨大。颧骨前侧升突构成了眶前柱的三分之一的高度。两个升突之间的凹陷非常深且窄。后侧升突的顶端非常尖锐，其后外侧面上有一个小的粗糙面可能用于与鳞骨关节。在后侧升突后面的部分，颧骨构成了下颞孔的腹缘。额骨部分愈合。</p>
+<p>额骨前缘与鼻骨相关节的关节面非常复杂。额骨的背面整体来讲比较光滑和凹陷，额骨与眶后骨的关节面呈“V”字形。两侧额骨的腹面都有一个大的凹陷窝，用于容纳巨大的嗅叶。顶骨完全愈合，且两侧顶骨的中线处也没与切迹。顶骨额骨关节处的裂隙不甚清晰，但是在这一位置有一高高隆起的脊。顶骨构成了上颞孔的内侧表面。从后面看，顶骨的后面形成了一对翼状的凹面，每块顶骨具有一个尖细的腹外侧突将鳞骨与副枕突隔开。顶骨构成了中脑的顶面。</p>
+<p>眶后骨的降突向前延伸进入到眼眶的里面。眶后骨构成了上颞孔的前边缘和外侧边缘。鳞骨与眶后骨的内侧重叠。眶后骨的背缘具有很粗大的骨质隆起。眶后骨的后侧突尖细。眶后骨的降支构成了眶后柱的上半截，且发育有一个前脊。一对小孔位于前脊之前的背侧面上。眶后骨降支与颧骨连接的地方隆入到眼眶内部，使得眼眶呈钥匙孔的形状。</p>
+<p>从侧面看方颧骨呈沙漏型。方颧骨的后缘具有一个明显的凹陷，前缘具有两个突。背侧突与鳞骨相关节，且深入到下颞孔内部。腹侧突与颧骨相关节。前背侧突的侧面具有明显的凹陷。前腹侧突的截面呈现出圆柱状。方颧骨的外表面具有两个非常明显的结节，第一个靠背侧，位于前背侧突与前腹侧突之间的高度对应的外表面上。第二个位于前腹侧突的后缘。</p>
+<p>在关节状态下，鳞骨的大部分是看不到的，只有背侧和前外侧突暴露的比较多。鳞骨的前外侧突是二分式的，在关节的状态下，只有上分支能够看的到，并一直延伸到眶后骨骨质粗隆的位置。鳞骨与顶骨的关联处位于上颞孔的后外侧角。从背面看，上颞孔在两块骨头关节处有一个明显的后侧凹陷。鳞骨的前突参与了上颞孔的外侧壁的构成。鳞骨的腹外侧边缘构成了下颞孔的背边缘。眶后骨的后突插入到鳞骨前突的一个很深的与之对应的插口里。鳞骨的降支与方颧骨向关联。一个很深的凹陷位于降支的后缘。鳞骨内侧面的后背侧角可以看到一个凹窝，用于与方骨关节。</p>
+<p>方骨围绕成了后方骨孔的边界。方骨与下颌的关节头被一个沟分成两个部分，外侧髁大于内侧髁。方骨具有很发达的气腔化构造。</p>
+<p>外翼骨的颧骨突为新月形状。外翼骨具有很发达的气腔化构造，且内侧面有很大的开口与内部的气腔化构造相通。翼骨具有很窄的前突。方骨突前后向压扁并向背面延伸。后突较短，扁平，且向背侧翻卷。外翼骨突是呈纤细的刀片状。</p>
+<p>上翼骨是一块泪滴状的骨头，位于脑颅的外侧面，与侧蝶骨相邻并位于前耳骨的后面。其背部顶端浑圆并向后弯曲，并于侧蝶骨相接。上翼骨的腹面扩张，并与翼骨的方骨突搭接。</p>
+<p>侧蝶骨位于额骨和顶骨的腹面。侧蝶骨与眶蝶骨的缝合线很直并延内外侧相延伸。上枕骨与顶骨的枕面相愈合，并形成一个非常发达的升突在背缘扩展搭接在顶骨的外边。外枕骨和后耳骨愈合，后耳骨形成了宽阔的副枕骨突。每一个副枕突的末端形成一个圆球状的髁，其高度位于鳞骨之下。副枕突具有发达的气腔化结构。一条脊将副枕骨突的背缘和后腹缘分开。后耳骨具有一发达的鼓室窦。基枕骨构成了枕髁的主要部分。在枕髁的外侧具有一对舌下神经孔。基枕骨在枕骨髁的下面的部分向外侧扩展。</p>
+<p>齿骨在内外向压扁，其横截面为D字形，外侧面略有突起。齿骨的外表面排列着很多滋养孔，每个大概2-5mm，主要集中在齿骨的前侧，延齿骨的背缘和腹缘排列。齿骨联合处略有倾斜，关节面粗糙。齿骨具有13个齿槽。齿骨齿在内外侧向上压扁，但是整体比其它的兽脚类恐龙更粗壮。夹板骨贴在齿骨的内侧缘，其与齿骨的接触面非常光滑。夹板骨构成了麦氏窝的内侧壁。夹板骨向前延伸的过程逐渐变得尖细。夹板骨的背缘有一个大的凹陷。夹板骨的外侧面基本是光滑的，但是在位于麦氏窝下面的位置有一条明显的脊。上隅骨具有一个圆形的，大的后上隅骨孔。此孔的前腹侧的表面较为粗糙。后上隅骨孔的背边缘具有一条很粗的侧脊。隅骨具有很长且尖细的前突，构成了下颌窝的腹缘。关节骨的反关节突非常短。</p>
+<p>霸王龙具有10节颈椎，13节背椎和5节荐椎。尾椎的数量暂时没法确定。“苏”的标本保存了47节尾椎。在自然状态下，霸王龙的颈部会弯成S形。与其它兽脚类不同的是，霸王龙的颈部短粗，附着了大量的肌肉用以支撑厚重的头骨。枢椎后的颈椎基本呈弱后凹的状态。颈椎具有气腔化结构，两侧具有发达的气孔与其相通。背椎粗壮，椎体的腹面具有钩状突。椎体的前关节面凹陷。背椎也具有气腔化结构，两侧有气孔与内部相通。背椎神经棘的前面和后面都非常粗糙，用于附着粗壮的韧带。荐椎的椎体和神经棘都愈合在一起。荐椎也具备气腔化构造，它们通过横突和荐椎肋骨与肠骨连在一起。霸王龙的尾椎形态转变点大约位于第13节尾椎。</p>
+<p>肩带的总长大于整个前肢的长度。肩胛骨柄比较细，但是在它在末端有所膨大。乌喙骨较狭长，且向前倾。前肢非常短小，与成年人的前肢差不多长。手部具有两个功能指以及一个没有功能的第三指。</p>
+<p>肠骨前后向延长，并在背腹向一定程度加深。其前髋臼突的前背侧缘具有一个明显的凹陷。前髋臼突的前腹侧缘向腹面扩展，并略微往后腹侧向钩。髋臼后突较直，其后缘略呈方形。肠骨外侧面的中间位置具有一发达的纵脊。髋臼上脊发达。肠骨坐骨柄的外侧面也具有一发达的对转子。耻骨柄在前后向延伸的长度大于坐骨柄。两侧耻骨在近端和远端前后向膨大处各有一联合。远端向后侧的延伸大于向前侧的延伸。坐骨在近端前缘具有发达的闭孔突，坐骨骨干向远端延伸的过程中变细。</p>
+<p>股骨头和大转子之间由一个明显的凹陷分开。股骨头的腹缘具有一个明显的钩状突。小转子呈手指状，与大转子之间有一个非常明显的沟分开。在小转子的远端具有一发达的副转子。第四转子发达，位于股骨的后外侧面。胫骨近端具有单一的发达的胫骨脊。腓骨呈棒状。跟骨和距骨没有愈合。第三跖骨的近端内外侧向压扁，第二三四跖骨构成窄足型的结构，其远端关节面不具备滑车。脚部趾骨的关节头两侧具有发达的韧带窝。</p>
+<h2 id="系统发育位置"><a class="header" href="#系统发育位置">系统发育位置</a></h2>
+<p>早期研究认为霸王龙与异特龙拥有很近的亲缘关系。现在主流的观点认为，整个暴龙类属于虚骨龙类，是坚尾龙类中较为进步的一支，相比于异特龙类而言，暴龙类与鸟类具有更近的亲缘关系。在暴龙类内部，霸王龙属于暴龙亚科，与蒙古的特暴龙，中国的诸城暴龙有很近的亲缘关系。曾经也有一些观点认为勇士特暴龙是暴龙属下的另外一个物种，不过更主流的观点认为特暴龙是独立于暴龙的一个属。</p>
+<h2 id="分类争议"><a class="header" href="#分类争议">分类争议</a></h2>
+<h3 id="暴龙属的物种重新划分"><a class="header" href="#暴龙属的物种重新划分">暴龙属的物种重新划分</a></h3>
+<p>2022年发表的一项研究依据股骨和牙齿的差异将暴龙属重新划分为三个物种，即霸王龙（T.rex），帝王暴龙（T. imperator），女王暴龙（T. regina）。这里强调一点，对暴龙属的物种进行重新划分只是一种观点，在几乎所有的古生物学宏演化工作中都只承认霸王龙这一个种。此外，古生物学领域里最权威的数据库“The Paleobiology Database”里也只承认霸王龙一个种。近期古生物学家史蒂夫.布鲁萨特和托马斯卡尔等人发表论文称没有任何证据可以将霸王龙划分为三个物种。</p>
+<h3 id="霸王龙与矮暴龙"><a class="header" href="#霸王龙与矮暴龙">霸王龙与矮暴龙</a></h3>
+<p>矮暴龙属由业余古生物学家罗伯特.贝克于1988年建立，其模式标本为CMNH 7541。贝克等人推测，矮暴龙是一种与霸王龙亲缘关系很近，但是要小很多的动物，其体长大约只有5.2米。然而在1999年一项关于霸王龙个体发育的研究证实这件矮暴龙的正型标本实际上是霸王龙的幼年个体。后来，在2001年另外一件体型很小的标本—BMRP 2002.4.1（代称“简”）被发现，它被鉴定为矮暴龙。这一发现促使了伯比自然历史博物馆专门召开了一次会议来讨论矮暴龙到底是不是一个独立的物种。当看到这件袖珍的标本以后，一些原本承认矮暴龙的古生物学家开始逐渐认为矮暴龙是霸王龙的幼年个体，但仍然有人坚持矮暴龙的有效性。2020年的一项组织学研究显示，BMRP 2002.4.1和另外一件更不完整的标本BMRP 2006.4.4都是没有发育成熟的幼体，并且它们都很有可能是霸王龙的幼体。</p>
+<h2 id="个体生物学与种群生物学"><a class="header" href="#个体生物学与种群生物学">个体生物学与种群生物学</a></h2>
+<h3 id="体型估计"><a class="header" href="#体型估计">体型估计</a></h3>
+<p>霸王龙的体型一直是大众和古生物学家关注的话题。以往的很多科普书和动画片里将霸王龙描述为体长15米，身高6米，其实这一数据有点过于夸大了，并且6米的身高是霸王龙尾巴拖地站直的状态，并不符合霸王龙的正常步态。事实上，大多数的霸王龙标本体长在11米至12米之间，正常步态下的站立高度也就是3米多至4米的样子。比较大的标本比如“苏”可以略微超过12米。最近报道的新标本RSM P2523.8的体长可能达到13米，它的体重估计也达到了8.8吨。在RSM P2523.8的描述文献中，它的体重估计值要大于南方巨兽龙正型标本，鲨齿龙，棘龙。</p>
+<ul>
+<li>白垩纪晚期体长：10-13米体重：7.5吨~10吨。</li>
+</ul>
+<h3 id="生长发育"><a class="header" href="#生长发育">生长发育</a></h3>
+<p>对于霸王龙体重随年龄变化的“S”形曲线拟合发现，幼年霸王龙在到达14岁之前体重都会小于1.8吨，在接下来的4年里，霸王龙将迎来生长速度的巅峰，每年会增加约600千克的体重。到达18岁的时候，曲线开始渐进平缓，说明在这一时间段生长速度减慢。其它大型暴龙类如蛇发女怪龙，艾伯塔龙，惧龙都具有类似的生长曲线，但是其生长速度比霸王龙要缓慢，因此成体的体型更小。2020年的一项研究还表明，霸王龙的生长速率会受到环境因素的影响。</p>
+<h3 id="同类相残"><a class="header" href="#同类相残">同类相残</a></h3>
+<p>一些霸王龙标本的肱骨，脚趾骨，跖骨上面留有齿痕。依据这些齿痕的大小，它们很有可能来自于另一只霸王龙。研究者认为这些齿痕是动物死后尸体被啃食造成的，而不是同类打架致死的时候造成的。同类相残的化石证据在其它大型暴龙类中也有发现，比如惧龙。</p>
+<h3 id="种群生物学"><a class="header" href="#种群生物学">种群生物学</a></h3>
+<p>依托霸王龙巨量的标本库藏以及完整的个体发育序列，科学家可以还原霸王龙的存活曲线。研究发现，霸王龙具有很高的新生个体死亡率，较低的幼体死亡率，但是在进入青年期至性成熟时期以后，死亡率又会上升。这种死亡曲线与现生的相对长寿的鸟类和哺乳动物有着非常相似的模式。在青年时期的死亡率增加在现生物种中并不常见。大型暴龙类的头部表面通常会具有一些病理特征，比如同类的撕咬的痕迹。进入青年期以后的同类打斗，可能是死亡率增加的主要原因。另外一项发表于2021年的研究尝试通过现生物种的种群密度与体型的相关性来估算霸王龙的种群密度。这项研究尝试了不同的化石保存率（每8千万只个体保存1只，至每16000个个体保存1只）。研究结果表明，霸王龙大约在地球上延续了127000代，而地球上大约存在过25亿只霸王龙。然而由于种群密度和体型的相关性具有比较大的方差，因此他们的估计数值也有较大的误差范围。</p>
+<h3 id="对生态系统的影响"><a class="header" href="#对生态系统的影响">对生态系统的影响</a></h3>
+<p>即使是生态系统中的顶级捕食者也是从弱小的幼体成长而来。大型兽脚类恐龙在个体发育的过程中会发生一系列的形态变化。霸王龙在个体发育的过程中会伴随着诸如头骨由纤细向着更短粗而背腹向加深的趋势转变，下颌的牙齿数量会减小，以及体型的增加等变化。不同发育阶段的个体由于具有不同的形态，因此会占据不同的生态位，同时对生态系统中的其它动物也会产生一定的影响。一项研究调查了43个处于不同地质历史时期的恐龙动物群落，来讨论巨型化的兽脚类捕食者对于其所处生态系统内的其它体型的捕食者的影响。研究结果表明，含有巨型化兽脚类捕食者的生态系统缺少体重在100至1000千克之间的中等体型的捕食者。诸如霸王龙这样的大型兽脚类恐龙的年轻个体很有可能会占据中等体型捕食者成年个体的生态位。这一研究结果表明，大型兽脚类在个体发育过程中的生态位转变是影响恐龙动物群群落结构和物种多样性的关键因素。</p>
+<h2 id="功能形态学"><a class="header" href="#功能形态学">功能形态学</a></h2>
+<h3 id="捕食策略"><a class="header" href="#捕食策略">捕食策略</a></h3>
+<p>古生物学家杰克.霍纳认为霸王龙是食腐动物，主要原因包括：短小的前肢，比较大的嗅球，以及无法快速奔跑。但是这些证据要么也可以反过来用于支持霸王龙是捕食者，比如很大的嗅球，要不就是缺乏足够的对比，比如霸王龙虽然不快，但是足够追上猎物。多数古生物学家认为霸王龙兼具积极的捕食者和食腐动物的双重身份，如同现代的狮子和鬣狗。作为其生存环境中最大肉食动物，霸王龙可能会捕食三角龙，鸭嘴龙类和甲龙类。生物力学的研究表明，霸王龙拥有非常巨大的咬合力，其极限咬合力可以达到3吨以上。如此巨大的力量可以轻易摧毁任何猎物。霸王龙的头骨也有多道保险来防止它在对猎物施暴的过程中损坏头骨，比如愈合形的鼻骨，上颌骨与颧骨之间起到减震作用的可动关节等等。此外，一项研究表明，肉食性恐龙的牙齿中有一层多孔的组织，可以在撕咬的过程中起到一定的保护作用，而霸王龙的牙齿拥有很厚的多孔组织。另外一项研究计算和比较了霸王龙和异特龙的下颌张开角度。结果显示，异特龙的张嘴角度比霸王龙更大，并且很适合使用劈砍式咬合的策略来杀死猎物，而霸王龙的张嘴角度则更适合于施加野蛮的咬合力，给予猎物致命一击。一些化石证据也可以为霸王龙的捕猎行为以及捕食策略。比如一件埃德蒙顿龙的标本的尾椎骨有被霸王龙撕咬后愈合的痕迹，显示霸王龙会攻击活的猎物。另外一件三角龙的标本的颈盾上也有被咬后愈合的痕迹，显示霸王龙会攻击三角龙。还有一项研究号称找到了霸王龙的粪便化石，发现里面含有一些骨头渣子，研究人员借此推测霸王龙具有咬碎骨头的能力。而近期的一项生物力学研究认为，霸王龙可以像现生的一些哺乳动物，比如鬣狗一样咬碎骨头。虽然基于这些标本的研究存在一定的想象成分，但是结合更多的现代科学手段，古生物学家对于霸王龙的行为将会了解的愈发清晰。</p>
+<h3 id="小短手的功能"><a class="header" href="#小短手的功能">小短手的功能</a></h3>
+<p>很多书籍在介绍霸王龙的时候，都会错误的以为它的手只有2个手指。实际上，霸王龙的手有第三个手指，只是非常小，仅由一根袖珍的掌骨构成，没有任何功能。与霸王龙巨大的身躯相比，它的前肢是非常袖珍的，而它的功能则一直是个谜。起初对于霸王龙的复原都认为它的手部应该和大多数兽脚类恐龙一样拥有3个发达的手指，直到MOR 555的发现才坐实霸王龙的小短手。与阿贝力龙类的小短手不同，霸王龙的前肢具有非常发达的肌肉附着点，能够产生比较大的力量，具有一定的控制猎物的功能。成年霸王龙前肢肱二头肌所产生的力量可以提起约200千克的物体。同时另外一项研究认为，霸王龙的前肢能够协助它睡醒以后从地上爬起来。还有一种观点认为，霸王龙的小短手可以防止在集体进食的时候前肢被同类咬掉。</p>
+<h3 id="运动速度"><a class="header" href="#运动速度">运动速度</a></h3>
+<p>作为一种大型兽脚类恐龙，霸王龙并不是一种擅长奔跑的动物。2002年的一项研究认为，假设成年霸王龙体重5吨左右，那么他如果能以每小时40公里的速度奔跑，那么霸王龙腿部肌肉所占的比重大约是体重的40%-80%，但是这是不可能的。如果按照正常比例估算，霸王龙只可能以每小时18公里的速度快走。2020年的另一项研究认为尽管霸王龙无法快速奔跑，但是它们是效率极高的竞走专家。研究认为，以霸王龙为首的大型暴龙类可以长时间追踪猎物，并在短时间内以强大的爆发力提速然后完成猎杀。2021年的一项研究在模拟霸王龙的走路速度时考虑了尾巴的摆动，研究结果显示霸王龙正常的速度大约是每小时4.6公里。2017年的一项研究认为，成年霸王龙是无法奔跑的，一旦速度超过每小时18公里，腿骨就会骨折。这一结果也意味着，诸如南方巨兽龙，马普龙和高棘龙这样的大型捕食者都是无法奔跑的。然而另外一项发表于2019年的研究认为，霸王龙的转身灵活度高于大型的异特龙类。</p>
+<h3 id="脑颅研究和感官"><a class="header" href="#脑颅研究和感官">脑颅研究和感官</a></h3>
+<p>对于霸王龙脑颅的CT扫描显示，霸王龙具有很好的感官，包括敏锐的嗅觉，良好的头部活动能力，以及对低频声音的敏感。这些证据都显示霸王龙是感官极佳的猎手。另外一项研究认为霸王龙具有立体视觉。研究结果显示，霸王龙双眼视觉的重叠范围是55度，甚至好于一些现代的猛禽。</p>
+<p>霸王龙拥有非常大的嗅球，这意味着它们拥有非常好的嗅觉，能够在很远处闻到尸体的味道。三维复原显示，霸王龙拥有很长的耳蜗管，这使得它能够听到低频的声音。还有一项研究计算了霸王龙的相对脑量大小，发现除了一些小体型的手盗龙形类，霸王龙的相对脑大小在非鸟类恐龙里是非常高的。</p>
+<h2 id="古组织学和分子古生物学"><a class="header" href="#古组织学和分子古生物学">古组织学和分子古生物学</a></h2>
+<p>玛丽.史怀哲博士于2005年发表的研究成果报告了她们在霸王龙标本MOR 1125中找到了软组织，其中包括一部分分叉的血管系统，以及髓质骨。另外她们似乎也观察到了红细胞的存在。在2007年的一项研究里，研究者们报告了在霸王龙的化石里找到了胶原蛋白序列，并发现与鸡的序列最为相似。当然，这样新颖的研究成果自然也少不了质疑，一些研究者认为，这些类似于毛细血管组织的微观结构，包括所谓的恐龙蛋白序列都是由于细菌污染造成的。</p>
+<p>传统的观点认为包括霸王龙在内的多数兽脚类恐龙的牙齿的外表面没有软组织覆盖，牙齿的外侧面直接暴露在外。由于与恐龙亲缘关系最近的现生外类群鳄类的牙齿的外表面也无任何软组织覆盖，因此这一观点更是深入人心。然而近期的一项研究详细的对比了现生鳄类，巨蜥和大型暴龙类的吻部形态学特征。研究结果显示，大型暴龙类上颌骨外侧面密布的陷窝略呈线性排列，与现生的巨蜥更加相似，而现生鳄类的上颌骨外侧面的陷窝的排列模式则显得没有规则。对于大型暴龙类牙齿的组织学切片显示，牙齿外侧的釉质层没有被磨损的痕迹，但是内侧面存在较为明显的磨损。考虑到兽脚类恐龙牙齿釉质层较薄且易受到磨损，内侧面的牙齿磨损应该是由于牙齿咬合造成的，而外侧面没有被磨损可能是由于有软组织保护的结果。对于兽脚类恐龙牙齿与头长的主轴回归显示，回归线的斜率几乎与巨蜥的回归线斜率一致。现生巨蜥中的一些成员，如水巨蜥的牙齿长度与头骨长度比例甚至比霸王龙的比例还要大，但它们的牙齿外侧面都覆盖有软组织。这一结果说明较大的牙齿长度与头骨长度比例不能作为大型兽脚类牙齿外露的主要证据。因此，结合多种证据，包括霸王龙在内的多数大型兽脚类恐龙可能是有“嘴唇”的，且“嘴唇”可能存在于所有恐龙的最近共同祖先之中。</p>
+<h2 id="同一地区的其它恐龙"><a class="header" href="#同一地区的其它恐龙">同一地区的其它恐龙</a></h2>
+<p>发现霸王龙化石最为著名的地层是地狱溪组。在这里，与霸王龙生活在同一个区域的动物包括角龙类的三角龙，纤角龙和牛角龙，奇异龙类的奇异龙，鸭嘴龙类的埃德蒙顿龙，甲龙类的甲龙和丹佛龙，厚头龙类的厚头龙和圆头龙，兽脚类的似鸟龙，似鸵龙，冥河盗龙，达科他盗龙，疏齿龙和安祖龙。另一个产出霸王龙的著名层位是兰斯层。在这一层位，与霸王龙共存的物种组成与地狱溪组非常类似。</p>
+<h2 id="影视作品中的霸王龙"><a class="header" href="#影视作品中的霸王龙">影视作品中的霸王龙</a></h2>
+<p>霸王龙是登上大银幕次数最多的恐龙，然而直到1993年《侏罗纪公园》上映时，人们才对霸王龙的正确步态有了认识。《侏罗纪公园》中的结尾与小说中的结尾不同。小说中是格兰特博士用毒药毒死了迅猛龙。而电影中是霸王龙突然出现咬死迅猛龙救下众人。之所以修改结局是由于导演斯皮尔伯格对霸王龙的喜爱，他认为霸王龙才是真正的英雄。《侏罗纪公园2》和《侏罗纪公园3》中的霸王龙和第一部的不是同一只，其中第三部的霸王龙被棘龙咬死，且图标也是棘龙的头骨。从《侏罗纪世界》开始，霸王龙重新成为主角，并且是《侏罗纪公园》里的那只霸王龙，之后她一直活到第三部，一直都是主角团的守护神。有一点值得注意的是，这只霸王龙确实很长寿。我们假设1993年的电影它刚成年，也就是18岁，那么到今年《侏罗纪世界3》上映它已经47岁了，可以说是一个非常老年的个体了。化石记录里最老的个体只有28岁。另外值得注意的一点是，《侏罗纪世界3》安排南方巨兽龙作为大反派的剧情设计似乎也体现了无论是学术界还是科普界都对于两个物种谁更大这一问题的关心。同时这样的剧情设计也暗示了暴龙类与异特龙类在演化历史中绵延8000万年的纠葛。</p>
+<p>霸王龙登场于多部纪录片中，近期的包括《与龙同行》，《侏罗纪格斗俱乐部》，《恐龙的战争》，《远古巨兽大复活》，《恐龙凶面目》，《恐龙革命》，《恐龙星球》，《霸王龙：进化之旅》和《史前星球》。由于数量过多，这里就不一一列举了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../The-Rise-of-the-Vertebrates/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../The-Rise-of-the-Vertebrates/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

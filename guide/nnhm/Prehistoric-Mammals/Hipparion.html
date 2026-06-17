@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>三趾马 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prehistoric-Mammals/Hipparion.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="三趾马"><a class="header" href="#三趾马">三趾马</a></h1>
+<p>学名Hipparion，分布极为广泛的一类已绝灭的马。三趾马一名自1924年就在中国广泛使用。随着新材料的发现和研究的深入，人们认识到这是一个相当庞杂的类群，可能包括多个属。广义的三趾马至少还包括北美的祖三趾马、新三趾马和矮三趾马。旧大陆的三趾马过去多认为都属于狭义的三趾马而分成若干亚属，但有人认为它们也应该分成若干属，例如长鼻三趾马、柱齿三趾马等。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>三趾马（Hipparion）</p>
+<ul>
+<li>生存年代：晚中新世（距今5.3-2.6百万年）</li>
+<li>分布：美洲，欧亚大陆，非洲</li>
+<li>体型：体长1.2M、肩高1M</li>
+<li>食性：草食</li>
+</ul>
+<h2 id="科属与分布"><a class="header" href="#科属与分布">科属与分布</a></h2>
+<p>古哺乳动物的一属。化石大量发现于欧洲、亚洲、非洲和北美洲上新世地层中。在我国山西、陕西、河南、新疆、甘肃等地均有发现。三趾马为哺乳动物纲奇蹄目马科的一个灭绝的属。</p>
+<h2 id="外形特征"><a class="header" href="#外形特征">外形特征</a></h2>
+<p>体型比现代马小，前后肢均为三趾，中趾粗而着地，侧趾较小而不着地。门齿有凹坑。颊齿高冠，棱柱形，前臼齿已臼齿化。上颊齿珐琅质褶皱强烈，白垩质丰富，原尖孤立，圆柱形。下臼齿有两个突起，形成一个纵长的双柱形。</p>
+<h2 id="三趾马的家谱"><a class="header" href="#三趾马的家谱">三趾马的家谱</a></h2>
+<p>马，不但一直是牧民及赛马者偏爱的动物，也是古生物学家所偏爱的，因为根据北美洲马类化石的确定，可以把马的进化阶段清楚的列出来。马的进化时代是从第三纪的始新世开始到现代，经过了始（新）马、山马、渐（新）马、草原古马、（上）新马和真马阶段。</p>
+<p>始（新）马在开始进化之际，已经从原始哺乳类那里继承了前肢4个趾、后肢3 个趾的特点。从山马到（上）新马，前肢均具三趾，进化至真马时前后肢仅剩一趾。在世界上（上）新马（具三趾）和真马（具单趾）常作为划分第三纪及第四纪地层界线的标准化石。而我国却不同，在我国第四纪更新世早期，仍有三趾马和真马同时存在的情况，那时有长鼻三趾马。需要指出的是，与真马同时出现的三趾马是不可能再进化到真马了。生物界进化的特点是：当主干上新的生物已经出现，与它共生的大部分旧种类就要被淘汰，退出历史舞台只是时间早晚问题。这一现象在脊椎动物进化中表现得极为明显。在我国常见的三趾马是马类进化中的一个侧支，是从中新世纪由草原古马阶段分化出去的，生存时代为距今1000 多万年至100 多万年前，当时它们在数量上还占有很大的优势。</p>
+<h2 id="进化历程"><a class="header" href="#进化历程">进化历程</a></h2>
+<p>从挖掘的马类化石上我们能够将马进化过程描述出来：始新世纪时，马生活在森林中，形体似狐狸，背部弯曲，前肢具4 趾，后肢有3 趾，以吃树叶和嫩枝为生，前肢可撑着树干将身体直立起来，觅食高处的食物，行动机警。森林中猛兽很多，加上气候趋于干旱，草原面积增大，三趾马便来到草原求发展。草原的环境与林中大不一样，天高地广，障碍物少，便于奔跑，</p>
+<p>同时沟坎壕堑也需要跳跃。更主要的是，草比树木低矮得多，草原光线明亮，活动动物体很容易被发现，故始马在吃草时要时常抬头观看四周，同时也要让自己的身体向高长，才能看得更远，而且要不时地奔跑来躲避危险。这些变化使原来的身体结构不能适应了，首先趾数多跑不快。我们都有这种体会，行走时全脚掌着地，而奔跑时只有前脚掌着地速度才能快。始马为了各种原因都需要奔跑，于是腿、掌、趾骨都开始增长，支撑力也主要放在中趾上；身体长高了便于观察周围环境，步幅增大了跨沟跃坎的不在话下。就是一点不好：个儿长高了，低头也吃不到地上草，只好努力地伸长脖子与前肢等长，一低头就能吃到脚边的草。朝着这个方向的演化，到山马阶段前肢就变成三趾了。从它开始到新马阶段，前后肢一直都是三趾，这好像没有什么进化，其实马的进化一直没有停下：身体仍在不断地长高，腿、掌、趾骨也不停地加长，脊椎变得平直，保护内脏不受剧烈震动；脸部骨头加长了，头颅加大脑量增多，长智慧了；前后肢虽仍为三趾，但侧趾已经明显地缩短变细，尤其是到了新马阶段时，侧趾已沾不到地了，完全由粗大的中趾支撑着全身，奔跑速度有了很大提高；变化最大的还是牙齿，门齿变宽、犬齿退化、前臼齿臼齿化，牙体变长，咀嚼面扩大褶皱复杂化。</p>
+<p>变化的结果是加快了吃草的速度，适应了吃草的能力，尤其是冬季吃干草，与此同时它的内脏器官也做了相应的调整，腹部小利于奔跑，肠胃也比牛、羊等动物短，食物消化时间短，排泄快，其中很多养分来不及吸收就被排出体外，要靠大量吃草来弥补这一缺点。由此看来，这种动物的进化方向并不先进，有人做过统计，一匹马的日进草量相当于1～2 头牛，对草场占有率很大，因此包括马在内的奇蹄目动物现在正趋向绝灭中，而马类若不是人类因其速度快而驯养、利用，在自然界也就绝灭了，现在野生的马类仅剩下斑马和普氏野马，而普氏野马也曾经过了一段保护性圈养的时间。</p>
+<h2 id="灭绝原因"><a class="header" href="#灭绝原因">灭绝原因</a></h2>
+<p>在草原古马阶段，有一类三趾马不再继续进化了。当时我国境内草原面积不断扩大，生活环境相对稳定，三趾马没有其他自卫本领，只有从大量的繁衍来弥补被猛兽吃掉的损失，形成了暂时的兴盛。在世界各地三趾马都绝灭、真马已经出现的情况下，还继续生存到第四纪早更新世，虽然它也有些变化，如鼻子伸长了，但终因未入正路，在环境变化中不能适应还是被淘汰了。我们虽然没有见到它，但祖先们在进化中却与它相依相伴了几十万年，说不定还是祖先为了果腹把它绝灭了。由于它奔跑不如真马快，活动范围就没有真马广，在“弱肉强食”自然界的淘汰规律面前，自然是首当其冲了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prehistoric-Mammals/yunnanensis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prehistoric-Mammals/Platybelodon.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prehistoric-Mammals/yunnanensis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prehistoric-Mammals/Platybelodon.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

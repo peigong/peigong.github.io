@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>埃迪卡拉动物群 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/biota/Ediacaran-biota.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="埃迪卡拉动物群"><a class="header" href="#埃迪卡拉动物群">埃迪卡拉动物群</a></h1>
+<p>埃迪卡拉动物群位于澳大利亚南部的埃迪卡拉地区，生活在5.65-5.43亿年前的前寒武纪一大群软体躯的多细胞无脊椎动物。包括腔肠动物门、节肢动物门和环节动物门等8科22属31种低等无脊椎动物。1960年召开的第22届国际地质会议正式命名该化石群为“埃迪卡拉动物群”。埃迪卡拉动物群的发现，初步解开了寒武纪初期突然大量出现各门无脊椎动物化石的所谓“进化大爆炸”之谜。埃迪卡拉生物化石出土越多，反而越没有规律，这些化石到底是什么、什么年代也有很多争论。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>生物在地球上出现以后的将近30亿年里，一直是以单细胞的形式生活在海洋里。大约6.8亿年前，海洋里突然大量出现了个体较大、结构复杂的多细胞生物。最著名的早期多细胞动物群是生活在5.8亿年前一5.6亿年前的埃迪卡拉动物群。埃迪卡拉动物群保存了大型的多细胞生物化石。古生物学家剥开褐色的薄层泥岩，发现许多动物印模化石。使人惊叹的是埃迪卡拉动物群中的绝大部分动物不具硬体，如水母、蠕虫、类珊瑚等动物。到了距今6.8～6亿年时，一大群软体躯的多细胞无脊椎动物（无壳后生动物）终于发展到高峰，这就是埃迪卡拉动物群的出现；该动物群化石产于澳大利亚南部埃迪卡拉山前寒武纪末期的地层中，共计8科22属31种，包括刺胞动物、环节动物、节肢动物等。其特点是动物体增大，门类增多，结构变得复杂，生活方式多种多样。而且，该动物群化石在世界各地广泛分布，表明当时该动物群是海洋中的真正统治者。</p>
+<p>埃迪卡拉动物群最先由斯普里格（R.C.Sprigg）于1947年在澳大利亚南部的埃迪卡拉地区的庞德石英岩（PoundQuartzite）中发现。</p>
+<h2 id="生物门类"><a class="header" href="#生物门类">生物门类</a></h2>
+<p>埃迪卡拉生物群包含三个门，22个属，31种低等无脊椎动物。</p>
+<p>三个门是：刺胞动物门，环节动物门和节肢动物门。</p>
+<p>其中：水母（Medusoid）有7属9种；水螅纲有3属3种；海鳃目（Pennatulaceun）（珊瑚纲）有3属3种；钵水母2属2种；多毛类环虫2属5种；节肢动物2属2种。（各个版本文件分类有所不同，需进一步考证）</p>
+<p>以后世界各地都发现了此类化石。</p>
+<h2 id="动物分类"><a class="header" href="#动物分类">动物分类</a></h2>
+<p>腔肠动物类水母体化石主要是游泳的，钟状外形，保存为印模者较多。口部及触手的外形还不清楚。从外形及表面不同装饰，如同心状、放射沟状、突出叶状物等来分类，有许多属可以区分出来，如Ediacaria，Medusinites，Cyclomedusa等属是常见的。Mau'sonites比较特殊，有单一同心状脊及盾状外形的物体，看来是一群体水螅漂浮室的支持物。Conomedusites 是一锥状化石，有4重对称及许多触手，应属于钵水母纲的原始锥石类。腔肠动物门的3个纲在埃迪卡拉动物群内都有代表，并可能有钙质骨针的痕迹。还有一些属钵水母纲及水螅纲，有可疑的几丁质的骨骼。没有发现钙质珊瑚的痕迹。</p>
+<p>环节类的蠕虫有两类，一是体平及多节的狄更逊蠕虫，与现生的Spinther相似，过去曾称为狄更逊水母。另一类是更像蠕虫的斯普里格蠕虫，它有马蹄形的头部。</p>
+<p>Parvancorina像是一个甲壳动物或三叶虫的生长过大的幼虫，其他则与海鞘类被囊动物可以相比，它的亲缘关系还不清楚。Tribrachidium 似属棘皮动物中稀少的三辐射对称一类，没有现代的及早寒武世的棘皮动物所具有的钙质板的痕迹。Praecambridium个体小，它可以有几丁质的壳，附在分类位置不明的动物分节体上。</p>
+<h2 id="动物群特征"><a class="header" href="#动物群特征">动物群特征</a></h2>
+<p>埃迪卡拉动物群是软躯体的，大都呈扁平辐射对称，类型很多。许多是水母形盘碟状，如 Medusinites, Tribrachidium， Spinther，在表面具放射散发的弯曲沟，或具同心脊，或兼有两者，可以称为水母形类，都已绝灭，没有这样的代表。有一些呈叶状，或成为带状，与现代海笔很相似，如蕨叶状的 Rangea和 charnia，被称为花瓣类( Petalonamae)。再有分节多毛蠕虫状，如 Spriggina和 Dickinsonia；有的奇特地似有3条腿在中央；有的有头盖和环节。还有在早石炭世绝灭的棘皮动物门海座星纲的早期代表。</p>
+<h2 id="动物群的分布"><a class="header" href="#动物群的分布">动物群的分布</a></h2>
+<p>1946年，在澳大利亚弗林德斯山脉，地质学家斯普里格(RegC. Sprigg)发现了元古宙末期的埃迪卡拉动物化石群( Ediacara fossils，这是重大发现，受到世界性的保护，繁盛在7亿年至5.8亿年前的埃迪卡拉动物群，在世界各地广泛分布，包括澳大利亚(埃迪卡拉山和弗林德斯山脉)俄罗斯(莫斯科东北的亚连斯克西伯利亚北部“文德杂岩系”出露地区)、乌克兰(西南部的波多利亚)、波罗的海瑞典(北部的托内湖区)英国〔莱斯特郡强伍德森林(Chamwood forest)，1840年发现)、纽芬兰(1872年发现)、南非纳米比亚、北美( Fedonkin，1992)，以及我国湖北峡东(丁启秀、陈忆元，1981)，辽东半岛，黑龙江东部等地埃迪卡拉软躯体动物群首次出现生命在典型的寒武纪具壳动物群之下，常见于元古宙晚期冰积层之上；由于元古宙晚期年龄测定的精确度还不理想，判断这动物群的出现和分异是逐渐的还是迅速的意见不一，但一般认为它们的分异是迅速的但不是瞬时的爆发( Stanley，1976)。埃迪卡拉动物群出现不久就辐射演化，类似于指数分异。</p>
+<h2 id="地质年代"><a class="header" href="#地质年代">地质年代</a></h2>
+<p>埃迪卡拉（Ediacaran）生物群是Sprigg于1947年在澳大利亚中南部Ediacara地区的庞德砂岩层中首先发现的。最初人们未能确定这一动物群的时代，后来终于确定为前寒武纪，年龄为6.7亿年。</p>
+<p>在对埃迪卡拉地区重新进行深入细致的研究中，采集到几千块化石，有的是圆形的压印，同现代水母相似；有的是柄状的印痕，与现代的海鳃相似，也是一种腔肠动物；有的像细长的蠕虫那样的印痕，有一个像马蹄形的头和约40个完全相同的体节所组成，与现代的环节动物相似；还有椭圆形、盾形印痕，并且有T形的纹道，可能是节肢动物，它们同已知的任何一种生物都不相似。</p>
+<p>经过测定，埃迪卡拉动物群生存的年代为距今6亿-6.8亿年前。在1974年召开的国际地质科学联合会巴黎会议上，一致肯定埃迪卡拉生物群为前寒武纪晚期，这是已发现的地球上最古老的后生生物化石群之一。埃迪卡拉生物群的发现和研究，大大地促进了前寒武纪古生物学的发展，也纠正了过去认为无脊椎动物在寒武纪初期才发生的观点；也把原来以为只有6亿年左右的后生动物历史，大大向前推进了。有的学者推算，后生动物群很可能起源于9亿-10亿年前。</p>
+<h2 id="化石产生原因"><a class="header" href="#化石产生原因">化石产生原因</a></h2>
+<p>后生动物软体印模能在厐德砂岩里保存下来，是由于该砂岩沉积时波浪及水流强度暂时减弱，动物软体与细泥砂合在一起，软体正在腐烂时或腐烂之后被盖上另一层细砂，原来软体的印模即被保留。如软体较长期不腐烂，则盖上去的细砂的下表面还可具有印痕。</p>
+<h2 id="分布环境"><a class="header" href="#分布环境">分布环境</a></h2>
+<p>埃迪卡拉生物群的组成说明它生活于海洋环境，从沉积物来看说明是浅海，大概只有6～7米的深度，并距海岸很近。在这样的环境下，蠕虫状动物可在海底砂里钻洞或在砂上觅食，海羽笔类可以扎根砂里。大多数水母是从开阔海洋漂浮而来的。一些狄更逊蠕虫体在它们被埋藏的地方显示了收缩与扩张。还有一个种有许多大小不同生长阶段的个体，这说明它们生活的地方与埋藏的地方很近。
+除澳大利亚外，在西南非洲前寒武纪晚期至早寒武世的Nama系中的Kuibis石英岩内有Rangea，Pteridinium。产于英格兰莱斯特郡的Charnia与Rangea非常相似，同位素年龄是8.6亿年前。与Charnia相似的化石还发现于西伯利亚北部奥列涅克高地，其同位素年龄是6.75亿年前。在俄罗斯中部一钻孔中，与Spriggina相似的化石也有发现。</p>
+<p>寒武纪大量出现的动物及其分异，与前寒武纪晚期出现的埃迪卡拉动物完全不同，这是生物进化史上的一个重大问题。两期动物群最大的一个差别是在进化的进程中产生了硬壳从而造成了许多新门类。这两期动物群在生物进化史上的关系尚不明了，中间的间隔近1亿年。寒武纪动物出现是海生无脊椎动物在生物化学及生理学方面有了重大改变并全面发展的结果。</p>
+<h2 id="化石研究"><a class="header" href="#化石研究">化石研究</a></h2>
+<p>有几种化石比较象后来动物的先驱。埃迪卡拉后期，有一些虫子爬行的痕迹，也找到一些小的硬壳动物。可是大部分的埃迪卡拉动物是一些不能动的球，盘，叶状体。在学者之间，这些化石到底是什么也有很多争论。有些科学家认为，它们是进化的尽头：一种自然历史经历的结束，没有进化为任何东西。</p>
+<p>研究人员发现了一批新的化石，是神秘的、前寒武纪的埃迪卡拉(Ediacaran)生物的化石，化石保留着三维的特性。埃迪卡拉生物被认为是寒武纪大爆发的“导火索”。因为埃迪卡拉动物是软体的，所以它们的化石很难找到，人们对它们也缺乏了解。加拿大纽芬兰的错误点(MistakenPoint)有埃迪卡拉生物的化石集合，在此之前研究人员在那里只发现过二维的印记样品。</p>
+<p>GuyM.Narbonne描述了一组从这个化石集合中找到的三维的化石，其中有保存下来的30微米之小的特征。和其他在错误点找到的同类化石一样，这些生物体看起来有点像植物，有从干上分支出来的被称为“小叶(frondlet)”的结构。这些小叶结构可能是由茎支撑在海底上面，自由地漂浮的。新化石还展示了一些以前没有看到过的小叶排列。Narbonne说，现代动物没有明显的类似结构。</p>
+<p>埃迪卡拉生物群包含了多种形态奇特的动物化石：身体巨大而扁平、多呈椭圆形或条带形，具有平滑的有机质膜，是人们迄今为止发现的最古老、最原始的化石，也是在太古代地层中发现的最有说服力的生物证据。按Seilacher的观点，埃迪卡拉动物群可分为辐射状生长、两极生长和单极生长3种类型。除辐射状生长的类型中可能有与腔肠动物有关系的类群外，其他两类与寒武纪以后出现的生物门类无亲源关系 。</p>
+<p>尽管有关埃迪卡拉（型）生物群的性质还有许多争议，但其奇怪的形态令许多学者相信，埃迪卡拉（型）生物群是后生动物出现后的第一次适应辐射，它们采取的不同于现代大多数动物采取的形体结构变化方式。不增加内部结构的复杂性，只改变躯体的基本形态，变得非常薄，成条带状或薄饼状，使体内各部分充分接近外表面，在没有内部器官的情况下进行呼吸和摄取营养。</p>
+<p>如现代大型寄生动物涤虫现代大多数生物采取的是保持浑圆或球形的外部形态的同时，进化出复杂的内部器官来扩大相应的表面积（如肺、消化道），从化石上可以看出，这些生物已具有了高度分化的组织和器官，说明它们已不是最原始的类型。它们代表了后生生物出现以后的第一次辐射演化因此，可以认为艾迪卡拉（型）动物群是在元古宙末期大气氧含量较低的条件下后生动物大规模占领浅海的一次尝试，结果失败了，而导致绝灭。在后来的演化过程中，后生动物采取了第二种方式，使内部的器官复杂化和物种多样化的发展，即生物系统演化。</p>
+<h2 id="发现意义"><a class="header" href="#发现意义">发现意义</a></h2>
+<p>迄今为止，生命在地球上已经延续了35亿年，但是这其中却有近30亿年是水生细菌和藻类的时代。尽管生命在不断的自我完善，几十亿年中，先后出现了真核生物并显现出多细胞个体的趋势，但这一时期的生命仍然是非常原始的。这一局面在藻类时代行将结束时出现了变化。1947年，古生物学家在澳大利亚埃迪卡拉地区的岩层中发现了大量距今6、7亿年前的古生物化石，发现的古生物共计8科22属31种，这标志着原始的生命形态在经过30亿年的准备之后，其积累的生命能量和无穷的创造力即将喷薄而出。生命演化的历史翻开了全新的篇章。</p>
+<h2 id="最新研究"><a class="header" href="#最新研究">最新研究</a></h2>
+<p>由“管子”构成的基本上无法移动的奇特生物体是地球上最早的复杂生命。它们出现在5.79亿年前，在海底繁盛了约3700万年，然后就消失了。这变成一桩奇事，人们只能从砂岩化石记录模糊的印记中略知皮毛。</p>
+<p>是什么让它们灭绝？来自纳米比亚的新化石证据显示，这些埃迪卡拉动物群的世界被5.41亿年前寒武纪开始时生命形式的暴发所颠覆。其中一些生物可能进化到吃掉它们神秘的祖先，并且通过几乎未给被动的埃迪卡拉动物群留下任何希望的方式改造了环境。</p>
+<p>如果是这样的话，这些复杂生命形式的首次大规模灭绝便有了生物学原因，而非像被认为由环境驱动的5次物种大灭绝。</p>
+<p>埃迪卡拉动物群从化石记录中的消失一直困扰着生物学家。主流的理论是在一次灾难性的大灭绝中，它们被吃掉了或者其栖息地被新进化的动物破坏，亦或者由于海洋环境的变化，没再留下化石记录。</p>
+<p>来自加拿大多伦多大学密西沙加校区的Marc Laflamme和同事在仔细研究后，并没有发现低氧条件或其他扰动的地球化学特征，以支持环境驱动的大灭绝观点。考虑到这种寒武纪软体动物的化石是在像著名的波基斯页岩一样的岩石中形成的，外部环境似乎不可能不允许任何幸存的埃迪卡拉动物群在寒武纪时期留下化石印记。</p>
+<p>2022年11月，澳大利亚国立大学的科学家们发现了世界上最古老的一餐。在5.58亿年前居住在地球上的已知最早动物所消耗的最后一餐中，研究人员挖掘出有关最早动物生理学的新线索。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../biota/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../biota/Chengjiang-biota.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../biota/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../biota/Chengjiang-biota.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
