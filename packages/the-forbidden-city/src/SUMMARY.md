@@ -105,6 +105,7 @@
     - [三希堂记](./literature/san-xi-tang-ji.md)
     - [御题三希堂记](./literature/yu-ti-san-xi-tang-ji.md)
     - [训守冠服骑射碑](./literature/xun-shou-guan-fu-qi-she-bei.md)
+    - [御制开惑论](./literature/yu-zhi-kai-huo-lun.md)
 - [相关人物](./celebrities/README.md)
     - [明宪宗朱见深]()
     - [万贞儿]()
