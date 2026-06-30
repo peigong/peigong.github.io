@@ -8,3 +8,7 @@
     - [老北京涮羊肉](./food/boiled.md)
     - [老北京烤肉](./food/roast.md)
     - [叉烧肉](./food/Grilled-Pork.md)
+- [互动游戏](./games/README.md)
+    - [十二个氛围小游戏](./games/game12-49637280378.md)
+    - [七十三个团体小游戏](./games/game73-740647641.md)
+    - []()
