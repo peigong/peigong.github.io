@@ -108,7 +108,7 @@
     - [御制开惑论](./literature/yu-zhi-kai-huo-lun.md)
 - [相关人物](./celebrities/README.md)
     - [明宪宗朱见深]()
-    - [万贞儿]()
+    - [万贞儿](./celebrities/wan-zhen-er.md)
     - [孝穆纪皇后]()
     - [明孝宗朱祐樘]()
     - [兴献王朱祐杬]()
