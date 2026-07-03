@@ -26,6 +26,8 @@
         - [铁细腰](./basic/basic-2-4.md)
         - [陆羽](./basic/basic-2-5.md)
         - [茶经](./basic/basic-2-6.md)
+        - [斗茶](./basic/basic-2-dou-cha.md)
+        - [渣斗](./basic/basic-2-zha-dou.md)
         - [永济渠]()
         - [回洛仓、黎阳仓和瓦岗山]()
         - [北京法源寺](./basic/basic-2-fa-yuan-si.md)
