@@ -22,6 +22,7 @@
     - [古琴（汉族弹拨乐器）](./the-Inner-Eastern-Palaces/gu-qin-yue-qi.md)
     - [古琴（音乐术语一）](./the-Inner-Eastern-Palaces/gu-qin-shu-yu-1.md)
     - [古琴（音乐术语二）](./the-Inner-Eastern-Palaces/gu-qin-shu-yu-2.md)
+    - [四大名琴](./the-Inner-Eastern-Palaces/si-da-ming-qin.md)
 - [内西路](./the-Inner-Western-Palaces/README.md.md)
     - [养心殿](./the-Inner-Western-Palaces/the-hall-of-mental-cultivation.md)
 - [宁寿全宫](./the-Palace-of-Tranquil-Longevity/README.md)

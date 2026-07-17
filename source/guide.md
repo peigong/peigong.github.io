@@ -27,6 +27,7 @@ title: 导游笔记
 - [国家植物园](./guide/chnbg)
 - [北海公园](./guide/beihaipark)
 - [陶然亭公园](./guide/taoranting-park)
+- [北京大观园](./guide/beijing-grand-view-garden)
 - [园博园](./guide/garden-expo)
 - [雁栖湖](./guide/YanqiLake)
 
