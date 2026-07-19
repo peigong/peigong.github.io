@@ -1,0 +1,12 @@
+{
+  "name": "jingshan-park",
+  "version": "1.0.0",
+  "description": "景山",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

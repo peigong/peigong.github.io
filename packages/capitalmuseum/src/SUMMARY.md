@@ -16,6 +16,7 @@
     - [大都肇建]()
         - [观音菩萨形象的演变](./general-history/history-5/Avalokitesvara-form-history.md)
     - [都城典范]()
+        - [明朝对元大都的拆迁](./general-history/history-6/rework.md)
     - [京师繁华]()
         - [宋体](./general-history/history-7/song-ti.md)
         - [朝珠纪念](./general-history/history-7/chao-zhu-ji-nian.md)

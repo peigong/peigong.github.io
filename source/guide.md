@@ -25,6 +25,8 @@ title: 导游笔记
 - [北京海洋馆](./guide/aquarium)
 - [香山](./guide/fragrant-hills)
 - [国家植物园](./guide/chnbg)
+- [太庙](./guide/imperial-ancestral-temple)
+- [景山](./guide/jingshan-park)
 - [北海公园](./guide/beihaipark)
 - [陶然亭公园](./guide/taoranting-park)
 - [北京大观园](./guide/beijing-grand-view-garden)
