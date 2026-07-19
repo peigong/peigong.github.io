@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中国古琴艺术 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-Inner-Eastern-Palaces/gu-qin-art.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国古琴艺术"><a class="header" href="#中国古琴艺术">中国古琴艺术</a></h1>
+<p>古琴是中国最早的弹弦乐器，是中国传统文化之瑰宝。它以其历史久远，文献浩瀚、内涵丰富和影响深远为世人所珍视。</p>
+<p>《诗经》《尚书》等文献中都对这一艺术形式有所记载。2003年11月，中国古琴艺术被联合国教科文组织列入第二批“人类口述和非物质遗产代表作”，2008年被纳入《人类非物质文化遗产代表作名录》。</p>
+<h2 id="古琴介绍"><a class="header" href="#古琴介绍">古琴介绍</a></h2>
+<p>琴在中国有着悠久的历史，中国古琴是世界最古老的弹拨乐器之一，主要由弦与木质共鸣器发音，至今已有3000多年历史，20世纪初才被称作“古琴”。关于它的创制者，有“昔伏羲作琴”、“神农作琴”、“舜作五弦之琴以歌南风”之说。古琴艺术在中国音乐史、美学史、社会文化史、思想史等方面具有广泛影响，是中国古代精神文化在音乐方面的主要代表之一。</p>
+<p>在先秦时代，琴已很流行。现在常见的古琴式样，大多为魏晋之后的式样，一般长为110cm，琴头宽17cm，琴尾宽12cm，分大、中、小不同的形制，琴弦根数有五弦、九弦、十弦、十二弦、二十弦等多种。常见的是七弦，所以古琴又称七弦琴。古琴的面板用桐木制成，面板的外侧有十三粒白色小圆点，称徽，是音阶的标志。制徽的材料可以用玉，也可用金、用骨、用蚌壳。古琴的弦用蚕丝制成，取其坚韧而发音纯正。</p>
+<p>古琴音色纯净、幽雅，有三种音：散音、泛音、走手音。散音如钟鼓之声古朴、稳重、深远；泛音象珍珠一样明亮，古琴拥有91个泛音，最高音在小字三组的海D；它还有四组相同音高的泛音，如此众多的泛音，是世界上任何一种乐器不能相比和不能达到的。至于古琴的走手音，更是古琴艺术之一绝，如人声在低声细语，音韵特别悠长深厚，感人肺腑。</p>
+<p>从唐代开始，古琴有了自己专用的记谱法，这种记谱法记录弦位和徽位、左右手的弹奏方法，但不直接记录音高。它由汉字的部首、数字和一些减笔字拼合而成，称作减字谱。减字谱记录古琴音乐的仔细程度和科学性，使现代的五线谱等记谱方法至今仍不能取代它。用减字谱记录而传承至今的古琴谱有150多种，保存了大量的古代音乐作品，是一座巨大而珍贵的音乐宝库。</p>
+<p>古琴的弹奏法、记谱法、琴史、琴律、美学等方面早已形成独立完整的体系，被称作“琴学”。其内容精深博大，是中国传统音乐的代表，也是反映中国哲学、历史、文学的镜子。</p>
+<p>2003年11月，联合国教科文组织在巴黎宣布了第二批“人类口述和非物质遗产代表作”，中国古琴艺术与世界其他27个文化艺术表现形式获此殊荣。古琴是中华民族最早的弹弦乐器，是中国传统文化之瑰宝。她以其历史久远，文献浩瀚、内涵丰富和影响深远为世人所珍视。湖北曾侯乙墓出土的实物距今有二千四百余年，唐宋以来历代都有古琴精品传世。</p>
+<p>存见南北朝至清代的琴谱百余种，琴曲达三千首，还有大量关于琴家、琴论、琴制、琴艺的文献，遗存之丰硕堪为中国乐器之最。古时，琴、棋、书、画并称，用以概括中华民族的传统文化。历代涌现出许多著名演奏家，他们是历史文化名人，代代传颂至今。隋唐时期古琴还传入东亚诸国，并为这些国家的传统文化所汲取和传承。近代又伴随着华人的足迹遍布世界各地，成为西方人心目中东方文化的象征。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<p>有关古琴的记载最早见于《诗经》《尚书》等文献。《尚书》载：“舜弹五弦之琴，歌南国之诗，而天下治。”可知琴最初为五弦，周代时已有七弦。东汉应劭《风俗通》：“七弦者，法七星也，大弦为君，小弦为臣，文王、武王加二弦，以合君臣之恩。”三国时期，古琴七弦、十三徽的型制已基本稳定，一直流传沿续到现在。</p>
+<h3 id="先秦"><a class="header" href="#先秦">先秦</a></h3>
+<p>古琴的演奏形式主要有琴歌、独奏两种。根据文献记载，先秦时期，古琴除用于郊庙祭祀、朝会、典礼等雅乐外，主要在士以上的阶层中流行，秦以后盛兴于民间。关于以琴为声乐伴奏的形式，早在《尚书》中，已有“搏拊琴瑟以咏”的记载。</p>
+<h3 id="周代"><a class="header" href="#周代">周代</a></h3>
+<p>周代多用琴瑟伴奏歌唱，叫“弦歌”，即唐宋以来所谓的琴歌。从汉代蔡邕所著《琴操》中，有歌诗五曲，即周之弦歌，其中的“十二操”、“九引”以及“河间杂歌”，都是援琴而歌的。</p>
+<h3 id="春秋战国"><a class="header" href="#春秋战国">春秋战国</a></h3>
+<p>春秋战国时期，古琴的独奏音乐已具有一定的艺术表现能力，如伯牙弹琴子期善听的传说。当时有名的琴师有卫国的师涓，晋国的师旷，郑国的师文，鲁国的师囊等。著名的琴曲如《高山》《流水》《雉朝飞》《阳春》《白雪》等，均已载入史册。</p>
+<h3 id="汉魏六朝"><a class="header" href="#汉魏六朝">汉魏六朝</a></h3>
+<p>汉、魏、六朝时期，古琴艺术有了重大发展，除在《相和歌》《清商乐》中作伴奏乐器外，还以“但曲”演奏形式出现。如器乐曲《广陵散》《大胡笳鸣》《小胡笳鸣》等，反映出古琴作为器乐演奏的一个重要发展阶段。汉末的蔡邕父女和魏、晋间的嵇康，都是当时著名的古琴演奏家和作曲家。如嵇康擅长弹奏古琴名曲《广陵散》，己传为历史佳话。创作的著名乐曲有嵇氏四弄：《长清》《短清》《长侧》《短侧》；蔡氏五弄：《游春》《渌水》《幽居》《坐愁》《秋思》；传为竹林七贤中的阮籍所作琴曲《酒狂》以及六朝宋王义庆《乌夜啼》。</p>
+<h3 id="隋唐"><a class="header" href="#隋唐">隋唐</a></h3>
+<p>隋唐时期，西域音乐盛行，琵琶兴起，古琴音乐的发展受到一定的抑制。但由于古琴谱的产生，不仅推动了当时古琴音乐的传播，而且对后世古琴音乐的继承发展具有深远的历史意义，使中国古代音乐历史进入了一个具有音响可循的时期。隋末唐初赵耶利，对当时流行的文字指法谱字，进行了整理，并辑录了《弹琴右手法》《弹琴手势图》等解释演奏法的著作。著名的琴曲《碣石调幽兰》，为南朝梁丘明传谱，现存为传到日本的唐手写卷子，是中国最早的、也是目前所知的唯一的一份古琴文字谱。</p>
+<p>唐代诗人李峤、李颀、李白、韩愈、白居易、张祜、元稹等，都为古琴写下了不朽的诗篇。白居易爱好古琴，在《夜琴》中有：“蜀琴木性实，楚丝音韵清。”他的琴艺很高，并能自弹自唱，甚至在旅途船中仍以古琴为友，他在《船夜援琴》中写道：“鸟栖月动，月照夜江，身外都无事，舟中只有琴。七弦为益友，两耳是知音，心静即声淡，其闻无古今。”张祜的《听岳州徐员外弹琴》也有：“玉律潜符一古琴，哲人心见圣人心。尽日南风似遗意，九疑猿鸟满山吟。”描写了古琴丰富的表现力。</p>
+<p>唐代著名琴家有赵耶利、董庭兰、薛易简、陈康士、陈拙等。赵耶利总结当时琴派说：“吴声清婉，若长江广流，绵延徐逝，有国士之风，蜀声躁急，若急浪奔雷，亦一时之俊。”至今仍符合吴、蜀两派的特点，盛唐的董庭兰作有《大胡笳》《小胡笳》等琴曲传世。薛易简在他著的《琴诀》中总结了古琴音乐的作用是：“可以观风教、摄心魂、辨喜怒、悦情思、静神虑、壮胆勇、绝尘俗、格鬼神。”并提出演奏者必须“定神绝虑，情意专注”，为后世琴家所重视，从而引伸出许多弹琴的规范。</p>
+<p>晚唐曹柔鉴于文字谱“其文极繁”，使用不便，而创造了减字谱。即在文字谱字的基础上对汉字谱字加以减笔而成的一种谱式，近似演奏符号，是古琴减字谱的早期形式。唐代著名琴家有董庭兰（开元、天宝年间），从其师陈怀古处承继了当时最负盛名的沈、祝二家声调，擅弹琴曲《大胡笳》《小胡笳》。天宝中琴家薛易简，可弹大弄四十、杂调三百，并有理论著作《琴诀》七篇，擅弹《三峡流泉》《胡笳》《乌夜啼》《别鹤操》《白雪》等曲。晚唐还有琴人陈康士根据屈原《离骚》所作的琴曲等。</p>
+<h3 id="宋朝"><a class="header" href="#宋朝">宋朝</a></h3>
+<p>宋朝的古琴一方面出现怀旧的复古主义倾向，另一方面由于古琴在《相和歌》《清商乐》演奏中的长期实践，与民间音乐有着深远的联系，以及琴曲“楚汉旧声”的历史传统，使古琴音乐在复古主义倾向中并没有被湮没，而是有起有伏曲折地发展着。南宋时期杰出琴家郭沔（号楚望，生于1190年，卒于1260年后）和他的弟子刘志芳、毛敏仲等人，在古琴遗产的整理、创作方面对古琴音乐的发展作出一定的贡献。如郭沔创作的琴曲《潇湘水云》《泛沧浪》《秋鸿》，刘志芳创作的《忘机》《吴江吟》，毛敏仲创作的琴曲《渔歌》《樵歌》《佩兰》《山居吟》等都流传至今。当时著名的琴曲还有《楚歌》《胡笳十八拍》《泽畔吟》等。琴歌有姜夔（公元1155一1221）的《古怨》，庐山道士崔闲所著《醉翁吟》等。宋人朱长文撰写的《琴史》，真实地记录了隋、唐、宋三代琴的史料。</p>
+<h3 id="明清"><a class="header" href="#明清">明清</a></h3>
+<p>明、清时期由于印刷术的发展，大量琴谱得到刊刻流传，见于记载的琴谱有一百四十多种，从中可知仅明代创作的琴曲就有三百多首。明初琴家冷谦的《琴声十六法》，是对古琴的美学思想、演奏技巧和艺术表现提出的理论。明太祖朱元璋第十七子、宁王朱权是明代琴家，对古琴艺术的发展作出卓越贡献，他收录唐宋之前艺术珍品六十四曲、历十二年主持撰辑了《神奇秘谱》，于1425年刊行，是中国现存最早的一部琴谱。明末清初，徐上瀛更进而提出《二十四琴况》。明清以来，著名的琴曲有《秋鸿》《平沙落雁》《渔樵问答》《良宵引》《水仙操》《鸥鹭忘机》《龙翔操》《梧叶舞秋风》等。</p>
+<p>这一时期在演奏上由于民间音乐（特别是戏曲音乐）的熏陶和影响，古琴技巧有了突出的发展，尤其是左手技巧的创新，如《五知斋琴谱》中的《潇湘水云》《胡笳十八拍》等琴曲，左手技法极为细腻，前所未见。以后的许多琴谱，在整理加工传播传统古琴音乐方面，也达到了一个新的阶段。明、清时期著名琴人有严澄、徐谼、蒋兴俦、徐常遇、蒋文勋、张孔山等人，近代著名琴人又有黄勉之、杨宗稷、王燕卿等。</p>
+<p>清末与民国年间由于战乱和社会变迁，特别是古琴本身存在的局限性，使古琴音乐濒于绝灭。当时，全国各地也出现了一些琴会组织，如北京的“岳云琴集”、济南的“德音琴社”、上海的“今虞琴社”、长沙的“愔愔琴社”、太原的“元音琴社”、扬州的“广陵琴社”，南京的“青豁琴社”、南通的“梅庵琴社”等，它们的活动都有一定的社会影响。其中尤以上海的“今虞琴社”，持续时间最长，对琴界影响最大。</p>
+<h3 id="建国后"><a class="header" href="#建国后">建国后</a></h3>
+<p>建国后，古琴音乐得到政府的重视和抢救，调查、收集、整理了流失于民间中的各种传谱，并录制了一批音响，发掘一批失传的琴曲，如《广陵散》《幽兰》等，培养了一批古琴音乐人材，为今后古琴音乐的整理、研究、发展开辟了新的前景。著名的琴家有管平湖、吴景略、龙琴舫、查阜西、张子谦、夏一峰等。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../the-Inner-Eastern-Palaces/jian-zi-pu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../the-Inner-Eastern-Palaces/gu-qin-yue-qi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../the-Inner-Eastern-Palaces/jian-zi-pu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../the-Inner-Eastern-Palaces/gu-qin-yue-qi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

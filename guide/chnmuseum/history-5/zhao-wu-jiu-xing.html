@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>昭武九姓 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-5/zhao-wu-jiu-xing.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="昭武九姓"><a class="header" href="#昭武九姓">昭武九姓</a></h1>
+<blockquote>
+<p>昭武九姓（粟特城邦"九姓胡"）</p>
+</blockquote>
+<p>"昭武九姓"是隋唐中原对中亚粟特（Sogdian）诸绿洲城邦王族的统称——传说其先祖本居河西走廊昭武城（今甘肃临泽），汉初被匈奴所破西迁，征服粟特地区后各支后裔建城邦，皆以"昭武"为姓，故称"昭武九姓"，入华粟特商人常以国名为汉姓（康、安、石、米、史等）。</p>
+<h2 id="一九国与今地对照"><a class="header" href="#一九国与今地对照">一、九国与今地对照</a></h2>
+<p>《 《新唐书》·西域传》所记主流九国：</p>
+<p>国名(汉姓) | 今地 | 备注
+康国（康姓） | 乌兹别克斯坦撒马尔罕(Samarkand) | 九姓之首，商业中心
+安国（安姓） | 乌兹别克斯坦布哈拉(Bukhara) | 有精锐"柘羯"武士
+石国（石姓） | 乌兹别克斯坦塔什干(Tashkent) | 玄奘经行，柘枝舞源地
+米国（米姓） | 塔吉克斯坦片治肯特(Panjikent) | 你刚问的米继芬即此国人
+史国（史姓） | 乌兹别克斯坦沙赫里萨布兹(Shahr-i-Sabz) | 又称羯霜那
+何国（何姓） | 撒马尔罕与布哈拉间Koshana | 丝路枢纽
+曹国（曹姓） | 撒马尔罕北伽不单(Kabudan) | 分东/中/西曹
+火寻（花剌子模） | 阿姆河下游，今乌兹别克+土库曼 | 今希瓦一带
+戊地（伐地） | 布哈拉西Betik | 亦译戊地/西安国</p>
+<p>"九"为虚指，有时还包括穆国、毕国、乌那曷、拔汗那等，视朝代记载略有差异。</p>
+<h2 id="二民族属性与社会特点"><a class="header" href="#二民族属性与社会特点">二、民族属性与社会特点</a></h2>
+<ul>
+<li>族属：东伊朗语族——粟特人（Sogdians），说粟特语（阿拉米字母书写），非突厥人也非中国人。</li>
+<li>政治形态：无统一帝国，各城邦自治，先后臣属波斯、亚历山大、贵霜、嚈哒、西突厥、唐朝（显庆年间设康居都督府等羁縻州，隶安西都护府）。</li>
+<li>经济特长：垄断丝路中转贸易——丝绸、香料、珠宝、马匹，善经商， 《新唐书》称"丈夫年二十，去傍国，利所在无不至"。在华形成"胡商聚落"（敦煌、凉州、长安西市、洛阳南市）。</li>
+<li>宗教信仰：主流信祆教（琐罗亚斯德教），部分信佛教、摩尼教、景教（聂斯托利派）</li>
+</ul>
+<h2 id="三入华影响与代表人物"><a class="header" href="#三入华影响与代表人物">三、入华影响与代表人物</a></h2>
+<p>粟特人沿丝路大量侨居中原，带来胡旋舞、胡乐（琵琶、筚篥）、胡服、祆祠、景教寺等，唐代"九部乐"中康国、安国乐即来自昭武诸国。</p>
+<p>知名入华人物：</p>
+<ul>
+<li>安禄山（本姓康，继父姓安，安国粟特人）、史思明（史国粟特）——引发安史之乱</li>
+<li>米继芬（米国质子后裔，长安神策军将，次子为大秦寺景僧）</li>
+<li>康洽、康昆仑、米嘉荣——唐代著名乐工</li>
+<li>安菩、安元寿——唐初粟特武将，墓志出土于西安</li>
+<li>曹保、曹善才——曹国琵琶世家，白居易 《琵琶行》提及</li>
+</ul>
+<h2 id="四衰落"><a class="header" href="#四衰落">四、衰落</a></h2>
+<ul>
+<li>751年怛罗斯之战后阿拉伯帝国东扩，8世纪中后期粟特城邦渐伊斯兰化，粟特文、祆教衰退。</li>
+<li>安史之乱后唐廷对胡人猜忌加深，入华粟特聚落解体，加速汉化融入汉族、回鹘、沙陀等，康/安/石/史等姓氏留存至今。</li>
+</ul>
+<p>简言之：昭武九姓=中亚粟特城邦王族统称=入华粟特人汉姓来源（康安石米史何曹等），是丝路商业与文化交流的关键中介，你之前问的米继芬即其中的米国粟特人。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-5/china-green-white.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-5/mi-ji-fen.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-5/china-green-white.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-5/mi-ji-fen.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

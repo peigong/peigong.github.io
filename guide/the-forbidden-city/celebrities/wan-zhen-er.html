@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>万贞儿 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/wan-zhen-er.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="万贞儿"><a class="header" href="#万贞儿">万贞儿</a></h1>
+<h2 id="万贞儿-1"><a class="header" href="#万贞儿-1">万贞儿</a></h2>
+<p>万贞儿（1430年－1487年），山东诸城人，明宪宗朱见深的妃嫔。</p>
+<p>万贞儿生于宣德五年（1430年），父亲万贵本是县吏，谪居霸州，四岁时选入掖庭，后来成为孙太后（孝恭皇后孙氏）的宫女。正统十四年（1449年）景泰帝立三岁的侄子朱见深为太子，万氏二十岁。天顺八年（1464年）十八岁的朱见深即位为帝，万氏时年三十五岁，万贞儿比宪宗大十七岁，和宪宗生母周太后（孝肃周皇后）同岁。成化二年（1466年）正月，万贞儿终于生下一个儿子，宪宗大喜过望，三月封为贵妃，不到周岁这个儿子便夭折。成化二十三年正月十日（1487年），万贞儿暴病身亡，终年五十八岁，葬于皇陵天寿山(今昌平天寿山西南的苏山)，并谥号为“恭肃端慎荣靖皇贵妃”。</p>
+<h3 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h3>
+<h4 id="早年经历"><a class="header" href="#早年经历">早年经历</a></h4>
+<p>万妃是青州诸城县人，其父万贵曾任县衙小吏，后谪居霸州。万妃生于宣德五年（1430年），四岁时被选入宫中侍奉孙太后。成年后，被安排侍奉当时还是太子的宪宗。</p>
+<p>后来，朱祁钰产生了废掉朱见深，立己子为太子的念头，并付诸行动，将朱见深废为沂王，立己子朱见济为太子。朱祁镇复辟后，朱见深又被立为太子。</p>
+<p>朱见深自小不与母亲一同生活，而万贞儿时常在其身边照顾他，因此朱见深便对万贞儿产生了一种别样的感情。</p>
+<h4 id="废吴皇后"><a class="header" href="#废吴皇后">废吴皇后</a></h4>
+<p>天顺八年（1464年），明英宗崩，十八岁的皇太子朱见深即位为帝，是为宪宗，万氏时年三十五岁。早在宪宗为太子之时，万贵妃便已独蒙宠眷。及至吴氏正位中宫，因万贵妃偶有过失，吴皇后遂施以杖责。宪宗闻讯震怒，旋即颁诏废黜吴皇后。《明实录》明确记载：“皇后吴氏之废，实由万贵妃所致。”</p>
+<h4 id="宠冠后宫"><a class="header" href="#宠冠后宫">宠冠后宫</a></h4>
+<p>成化二年（1466年）正月十九日，万贞儿生下皇长子。成化二年三月十日，册封万氏为贵妃。明宪宗亲临奉天殿，任命太保会昌侯孙继宗、少保吏部尚书兼华盖殿大学士李贤为正使，太子少保户部尚书马昂、礼部尚书姚夔为副使，分别持节主持册封礼仪。成化二年十一月二十六日，皇长子去世，明宪宗谕令礼部议定丧仪。礼部依制奏请，以皇子未满八岁属"无服之殇"，建议祭葬从简：祭祀仅用素食，免牲礼；出殡日，帝着素服；翌日，百官行奉慰礼。成化三年九月十六日，晋升锦衣卫正千户万贵（万贵妃父亲）为本卫世袭指挥佥事。</p>
+<p>成化十二年（1476年）十月八日，明宪宗任命定西侯蒋琬作为正使，礼部尚书兼文渊阁大学士万安作为副使，持节册封贵妃万氏为皇贵妃。</p>
+<p>万氏册封皇贵妃的诏书：天下之本在国，国之本在家。二帝三王以来，未有家齐而天下不治者也。朕率是道以临万邦，厥有褒陞，必先内德。申锡赞书之美，载扬彤管之华，庸进锡于徽称，乃克彰于异数。贵妃万氏，柔明而专静，端懿而惠和，率礼称诗，实禀贞于茂族；进规退矩，遂冠德于后宫。动则闻环珮之音，居则视箴图之戒。宠愈加而愈慎，誉益显而益恭。副予关睢乐得之心，克谨鷄鸣儆戒之道。相成既久，辅助良多。是用度越彛章，进超位序。兹特以金册金宝，加封尔為皇贵妃。于戏！位亚坤仪，峻陟列妃之首；明章妇顺，用刑四方之风。惟仁以进贤，惟敬以相祀，惟谦以崇德，惟善以荣身。上以奉慈闱之欢，下以增椒寝之庆。荣膺显命，永荷嘉祥。钦哉！</p>
+<h4 id="与世长辞"><a class="header" href="#与世长辞">与世长辞</a></h4>
+<p>成化二十三年（1487年）正月十日，皇贵妃万贞儿去世，享年五十八岁。当日宪宗正举行郊祀大典，回宫时突遇罕见大雾，众人皆惊。次日庆成宴结束后，皇帝刚回宫就接到万妃猝死的消息。宪宗悲恸不已，下令辍朝七日，追谥"恭肃端慎荣靖皇贵妃"，葬于天寿山西南，所有丧葬仪制均逾越常格。成化二十三年二月五日，明宪宗命贾俊负责督修皇贵妃万氏的陵墓，因为尚书谢一夔患病，贾俊应当代理掌管工部事务。成化二十三年三月六日，葬皇贵妃万氏。</p>
+<h4 id="身后之事"><a class="header" href="#身后之事">身后之事</a></h4>
+<p>成化二十三年九月二十一日，山东鱼台县县丞徐顼上疏，请求为纪太后追谥迁葬，并严惩万贵妃亲属万喜等人。明孝宗令礼部复议万喜之罪，礼部建议彻查宫闱内外。最终孝宗裁定，依太后懿旨不再深究，但追缴万喜等人所受赏赐及违禁财物。</p>
+<p>成化二十三年十二月十一日，监察御史曾璘上奏，建议明宪宗出殡时，孝宗应率百官服丧跪送，并守孝三年，同时加强奉养两宫太后及关爱诸王公主。对于万贵妃，应将其罪行禀告先帝，迁葬别处并削除她的谥号。孝宗回应将遵行守孝奉养之礼，但否决了迁葬削谥之议。</p>
+<p>万贵妃侄子万喜、万达被革职贬为平民后，此时又上奏称每年以平民身份前往皇陵祭祀行礼多有不便，请求恢复官职。弘治十年十二月二十三日，明孝宗下令：恢复万喜为正千户，万达为百户，万祥为所镇抚，均在锦衣卫挂职领俸。</p>
+<p>弘治十一年十一月三日，户部主事李世亨上疏奏称：先帝宪宗朝时，万贵妃恃宠而骄，妒忌成性，致使皇太后纪氏未能安享尊荣，其罪实属十恶不赦。今陛下即位之初，虽已宽宥万喜等人死罪，然其不思悔改，反夤缘钻营，复任锦衣卫千户要职。臣以为此辈罪孽深重，法理难容，恳请陛下明正典刑，以慰太后在天之灵。此疏呈上后，孝宗谕令有司审议施行。</p>
+<h3 id="亲属成员"><a class="header" href="#亲属成员">亲属成员</a></h3>
+<ul>
+<li>祖父：万伯高</li>
+<li>祖母：毕氏</li>
+<li>外祖：王迪</li>
+<li>父亲：万贵</li>
+<li>母亲：王氏</li>
+<li>儿子：早夭</li>
+</ul>
+<h3 id="人物评价"><a class="header" href="#人物评价">人物评价</a></h3>
+<p>《明史》：万、郑两贵妃，亦非有阴鸷之谋、干政夺嫡之事，徒以恃宠溺爱，遂滋谤讪。</p>
+<p>蔡东藩：</p>
+<p>① 以三十余岁之万贵妃，乃宠冠后宫，权倾内外，窃不知其何术而得此。意者其有夏姬之术欤？观其阴贼险狠，娼嫉贪私，则又与吕雉、武曌相似。天生尤物，扰乱明宫，虽曰气数使然，亦宪宗不明之所致耳。</p>
+<p>②汪直以大藤余孽，幼入禁中，不思金日磾宝瑟之忠，妄有安禄山赤心之诈，刺事西厂，倾害正人，酷好弄兵，轻开边衅，吏民之受其荼毒，不可胜计，要之皆万贵妃一人之所酿成也。</p>
+<h3 id="坟墓"><a class="header" href="#坟墓">坟墓</a></h3>
+<p>万娘坟，位于北京市昌平区卫星城西北7公里，十三陵镇所辖行政村。清代成村。因村域内有明宪宗朱见深的贵妃万氏的园寝，村民大多是明朝看守万贵妃园寝的坟户的后代，村落因坟得名，称万娘娘坟，简称万娘坟。</p>
+<p>该墓二十世纪三十年代末被盗，存园寝的围墙、门楼、无家石碑等。该村原名万娘娘坟，后简称今名。</p>
+<p>万娘坟位于苏山东麓，坐西北朝东南，整体布局为前方后圆。</p>
+<p>方形院落面宽197.8米，进深138.5米，园寝围墙用绿色琉璃筒瓦，黄色琉璃滴水。</p>
+<p>正中为硬山式琉璃构件的园寝门，两侧各有一座随墙角门。</p>
+<p>门内为两进院落，第二进院落正中有享殿，面阔五间，进深三间，两厢配殿各三间。</p>
+<p>享殿后有门，可进入半圆形的寝园，中轴线上由前至后设照壁、石碣（即圆顶的碑石）、石供案和墓冢。</p>
+<p>明代设官军守卫，有官员管理。清代改为坟户看守后，看坟人及家眷即住在园寝的第一进院落内，经世代繁衍，形成村落。后因院内狭小，清末民初就将民居扩建到园寝院外，形成村落格局。</p>
+<h4 id="历史与现状"><a class="header" href="#历史与现状">历史与现状</a></h4>
+<p>万娘坟作为明十三陵的文物古迹之一，至今已有500多年的历史了。由于清朝中、晚期失修，园寝内的享殿、配殿在清末已倾毁，现仅存围墙、碣石、供案等古迹。</p>
+<p>1937年秋天，长陵园的程彦斌率众将万娘坟的墓室盗掘，随葬器物大部分流失。</p>
+<p>解放以后，由于人民政府重视文物保护工作，现有文物得到保护。园寝东门外有1棵古槐，墓园内有2棵古柏，均被列为北京市一级保护古树，现已受到政府与村民的妥善管护。</p>
+<h3 id="人物成就"><a class="header" href="#人物成就">人物成就</a></h3>
+<p>在宫廷内部，嫔妃们的最高尊称是贵妃。在过去的朝代中，能够获得这一尊贵地位的人屈指可数。到了明宪宗朱见深的时代，有皇贵妃万氏，谥号恭肃端顺荣靖，她是第一个获得六字谥号的宫妃。</p>
+<h3 id="史书记载"><a class="header" href="#史书记载">史书记载</a></h3>
+<h4 id="宪宗纯皇帝实录卷二百八十六"><a class="header" href="#宪宗纯皇帝实录卷二百八十六">《宪宗纯皇帝实录•卷二百八十六》</a></h4>
+<p>成化二十三年正月十日，皇贵妃万氏薨。妃，青州诸城县人，父贵为县吏，谪居霸州。妃生宣德庚戌，四岁选入掖庭，侍圣烈慈寿皇太后。及笄，命侍上于青宫，上即位，遂专宠，皇后吴氏废实由于妃。及今皇太后王氏正位中宫，每以厚德优容之。妃亦机警，善迎合上意，且笼络群下，令觇候动静，六宫希得进御。成化丙戌生皇子一人，上为遣内官诣山川寺观，挂袍行香以祈阴佑，因封贵妃，皇子未晬而薨，妃亦自是不复娠育，数年储嗣未兆，中外以为忧言者每劝上恩泽当溥，然未敢显言妃之妬也，惟给事中李森言及之，而宠益甚。初居昭德宫，后移安喜宫，进封皇贵妃。服用器物穷极僣儗，四方进奉奇技异物皆归之，一门父兄弟姪皆授以都督都指挥、千百户等官，赉赐金珠宝玉无筭，甲第宏侈田连州县。中贵用事者一忤妃意，辄遭斥逐，而佞幸出外镇守内备供奉者，如钱能、覃勤、汪直、梁方、韦兴辈，皆假以贡献买办科歛民财，倾竭府库而不恤，委以行事擅作威福，戕害善良，弄兵搆祸而无已，皆由妃主之也，甚至斋醮之滥费宴乐之暴殄靡有纪极。孝穆皇太后以妃之故，孙居西内数年而崩。至是上郊祀，回值天大雾，人皆惊讶。翌日，庆成宴罢，上还宫，忽报云妃薨逝矣，上震悼，辍视朝七日，谥曰恭肃端慎荣靖，葬天寿山西南，凡丧礼皆从厚。弘治初言者，籍籍不已，欲追废妃号，籍其家，毁其坟。赖今上仁圣，卒置不究云。</p>
+<h4 id="万历野获编补遗"><a class="header" href="#万历野获编补遗">《万历野获编·补遗》</a></h4>
+<p>史云万贵妃生于宣德庚戌，四岁选入，侍圣烈慈寿皇太后，即宣宗孝恭皇后孙氏也；云及笄，侍上于青宫，宪宗以正统十四年立为太子，时方三岁，妃已二十岁矣；后至天顺元年，宪宗从沂邸复储位，年仅十一，而妃则已二十八矣；又云上即位，遂专宠，此年七月大婚，圣龄十八而妃则已三十五；次年妃举皇长子，未晬而薨，进封贵妃，此后遂不复孕；又进皇贵妃，嬖幸终宪宗之世，以成化二十三年正月初十日薨，计其年盖已五十八，而上以是年秋八月上升，圣寿仅四十一，则妃实长于宪宗十七年。窃以为必无之事，或者史臣纪载之讹。然成化四年秋彗星见，大学士彭时上疏，乞正宫闱以绵圣嗣，且言专宠者年日以迈，宜子者恩或未逮，宜更新以回天意。又云凡女子年过四十虽有所生亦多不育，盖谓皇长子之薨，已直指其事不复讳。是年妃盖已三十九矣，彭文宪谓之年迈，似史臣所述又未必诬矣。自古妃嫔承恩，最晚而最专最久，未有如此者，然则夏姬之三少，宜主之内视，信乎有之。</p>
+<h2 id="万贵"><a class="header" href="#万贵">万贵</a></h2>
+<p>万贵，明朝人，字显宗。原为县衙椽吏，后升为世袭指挥佥事。为明宪宗皇贵妃万氏父；有儿子三名，分别为万喜、万通、万达三人。死后葬于霸州城南万贵墓。</p>
+<h3 id="生平经历"><a class="header" href="#生平经历">生平经历</a></h3>
+<p>洪武壬申十一月十二日生。</p>
+<p>本为小吏，因罪贬官，编户霸州。</p>
+<p>成化初年，因为万贵妃显贵，升任锦衣卫指挥使。万贵为人谨慎，每次接受赏赐，就忧形于色，说：“吾起掾史，编尺伍，蒙天子恩，备戚属，子姓皆得官。福过灾生，未知所终矣”。他看到儿子万喜、万通、万达为人骄横，轻易糟蹋赏赐的的东西，于是告诫他们说：“官所赐，皆著籍。他日复宣索，汝曹将重得罪。”他的儿子都嘲笑他迂腐。</p>
+<p>成化十一年（1475）七月十九日，去世，明宪宗抚恤赏赐有加。</p>
+<h3 id="亲属成员-1"><a class="header" href="#亲属成员-1">亲属成员</a></h3>
+<ul>
+<li>父亲：万伯高</li>
+<li>母亲：毕氏</li>
+<li>妻子：太夫人王氏，父王迪。洪武甲戌十二月廿八生，成化戊戌正月初一殁，享年八十五。</li>
+<li>子：万喜、万通、万达</li>
+<li>长女：万贵妃</li>
+<li>次女：万氏，嫁锦衣卫百户王瑄。</li>
+</ul>
+<h2 id="万喜"><a class="header" href="#万喜">万喜</a></h2>
+<p>万喜，历史人物，明代万贵妃的弟弟，官至都指挥同知。万喜依仗万贵妃的权势，与弟万通、万大等皆骄横。成化年间，万喜升为都指挥同知。万喜等人胡作非为，扰害民间，而且勾结内监，盗取内库的宝物。明宪宗朱见深去世后，万喜被夺官。明孝宗朱祐樘即位后，将万喜抄家入狱，但最终宽恕释放。</p>
+<h3 id="人物生平-1"><a class="header" href="#人物生平-1">人物生平</a></h3>
+<p>凭借姐姐万贵妃的得宠，万喜在成化年间升任都指挥同知，后迁都督同知。其弟万通、万达等人亦担任指挥使等锦衣卫官职。万喜等人依仗万贵妃的权势，骄横不法，胡作非为，扰害民间，并勾结内监梁芳等人盗取内库宝物。</p>
+<p>明宪宗去世后，万喜等人被夺去官职，追回封诰及此前赏赐。明孝宗朱祐樘即位后，惩办了万喜、万通、万达等外戚，将其抄家入狱。面对朝臣要求严惩的奏请，明孝宗最终选择宽恕，依法将万喜释放。</p>
+<h3 id="人际关系"><a class="header" href="#人际关系">人际关系</a></h3>
+<p>万喜是明宪宗万贵妃的弟弟，其兄弟包括万通、万达等。在明孝宗时期，万喜与方士李孜省、太监梁芳等同被列为应被贬斥的奸邪之徒。</p>
+<h2 id="万通"><a class="header" href="#万通">万通</a></h2>
+<p>万通，明朝锦衣卫指挥佥事，万贵妃之弟，在《孝穆诞圣》中有所记载。于成化十二年十一月被册封为指挥佥事。曾被成化帝吓坏。朱祐樘登基后，万通被革职。</p>
+<h3 id="人物生平-2"><a class="header" href="#人物生平-2">人物生平</a></h3>
+<p>万通，明朝锦衣卫指挥佥事，于成化十二年十一月被册封为指挥佥事。明孝宗朱祐樘登基后，万通与其兄万喜一同被革去锦衣卫职务。</p>
+<h3 id="人际关系-1"><a class="header" href="#人际关系-1">人际关系</a></h3>
+<p>万通是明宪宗宠妃万贵妃的弟弟。其兄弟包括万喜、万达等。</p>
+<h3 id="史料记载"><a class="header" href="#史料记载">史料记载</a></h3>
+<p>成化十二年十一月，太监黄赐传奉圣旨，升锦衣卫正千户万通为指挥佥事，副千户万达军人，邵宗、王敏为正千户，俱世袭。</p>
+<h2 id="万达"><a class="header" href="#万达">万达</a></h2>
+<p>万大，明宪宗万贵妃之三弟是也，父亲万贵。除万贵妃一个姐姐外，还有万喜、万通两位哥哥。父亲万贵与两位哥哥均在锦衣卫处当差，万大为军人。</p>
+<h3 id="人物生平-3"><a class="header" href="#人物生平-3">人物生平</a></h3>
+<p>万大的官职是军人，于《明实录 宪宗实录》中可得知。</p>
+<p>贵，山东诸城县人充吏坐事谪编户霸州，成化初以女为贵妃，恩历升锦衣卫指挥使，至是卒命有司给赙并葬祭，视常例加隆贵处闾阎，曾执役公门颇知礼法，每受重赏辄忧形于色，见其子骄侈过度则戒其毋妄费，曰：官家赐物皆注于历，他日复来追汝无以为偿。子三人，喜、通、大，而通尤恣肆。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

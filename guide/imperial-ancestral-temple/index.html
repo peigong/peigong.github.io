@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 太庙 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">太庙 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="太庙"><a class="header" href="#太庙">太庙</a></h1>
+<p>太庙（Imperial Ancestral Temple），位于北京市东城区天安门东侧，始建于明永乐十八年（1420年），是明清两代皇帝祭祖的地方，旧时北京城“五坛八庙”之一，1950年5月1日改为“北京市劳动人民文化宫”并正式对社会开放。</p>
+<p>太庙平面呈长方形，占地面积19.7万平方米， 南北长475米，东西宽294米，有三重围墙。墙内主要建筑均为坐北朝南，庙内主体建筑为享殿（前殿）、寝殿（中殿）、祧庙（后殿）。太庙按照“左祖右社”的古制与故宫同时期建成，历经明清两朝，是中国现存较完整的、规模较宏大的皇家祭祖建筑群。</p>
+<p>太庙总建筑面积1万余平方米。整个建筑布局颇具匠心，三层琉璃砖门、三层大殿、戟门、石桥南北排列在轴线上，再加上封闭的围墙、浓密的古柏，形成了庄严肃穆的气氛。耸峙在整个建筑群中心的是三座雄伟的宫殿，重檐庑殿顶的享殿，是这组建筑群的中心。2011年被评为国家级AA旅游景区、北京市级重点公园。</p>
+<p>1957年10月28日，太庙被北京市人民政府公布为北京市第一批市级文物保护单位。1988年1月13日，太庙被中华人民共和国国务院公布为第三批全国重点文物保护单位。</p>
+<p>2025年12月1日，太庙-北京中轴线世界文化遗产标牌揭幕仪式在文化宫南门外隆重举行。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<ul>
+<li>明永乐十八年（1420年），参照南京太庙的规制建设北京太庙，与故宫同时建成。</li>
+<li>明弘治四年（1491年），太庙的祧庙建成。</li>
+<li>明嘉靖十四年（1535年），明世宗朱厚熜将太庙一分为九，改合祀制度为分祭，设九庙分别供奉历代祖先。</li>
+<li>明嘉靖二十年（1541年），太庙中的九庙有八庙被雷火焚毁。</li>
+<li>明嘉靖二十四年（1545年），太庙中被雷火焚毁的八庙重建，恢复了“同堂异室”的合祀制度。</li>
+<li>清顺治元年（1644年），清世祖福临将太祖、太宗等神牌由盛京太庙移至北京太庙供奉。</li>
+<li>民国十三年（1924年），太庙由清室移交北洋政府，改称和平公园并对外开放，后关闭。</li>
+<li>民国十七年（1928年），太庙改归民国政府内务部。</li>
+<li>民国二十年（1931年），太庙由故宫博物院接管。</li>
+<li>1950年5月1日，太庙改为“北京市劳动人民文化宫”并正式对外开放。</li>
+<li>2006年8月4日，太庙进行修缮，暂停开放。</li>
+<li>2007年6月9日，太庙修缮竣工，恢复向社会开放。</li>
+<li>2018年，太庙完成全部73户居民住户的腾退工作。</li>
+<li>2023年1月9日，太庙祧庙暂停开放。</li>
+<li>2023年9月16日，太庙古建区因古建修缮需要暂停开放。</li>
+<li>2024年8月20日，太庙古建区恢复对外开放。</li>
+<li>2025年12月1日，太庙-北京中轴线世界文化遗产标牌揭幕仪式在文化宫南门外隆重举行。</li>
+</ul>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>太庙平面呈长方形，占地面积19.7万平方米， 南北长475米，东西宽294米，有三重围墙，均为黄琉璃瓦顶红墙身。墙内主要建筑均为坐北朝南，庙内主体建筑为享殿（前殿）、寝殿（中殿）、祧庙（后殿），在第一道红墙的西墙上有西向大门两座，南边的一座称太庙街门，北边的一座叫太庙右门，距故宫阙左门不远的东面为太庙西北门，黄琉璃筒瓦歇山顶。在第一重院内的东南角有牺牲所，此所的西侧建有六角井亭。天安门与端门之间，有东、西两庑各26间，东庑之中者为太庙门，坐东朝西。在第二重院墙内正门为三开间的琉璃砖门，左右各一门。过前琉璃门有玉带河，河上有七座单孔汉白玉石桥，称戟门桥，桥北有两座六角井亭。内院正门五间，原列有镀金、镀银铁戟120支，故又称戟门。戟门正北，即为享殿。寝殿在享殿的北面，祧庙位于二重院落的最北侧。在祧庙、寝殿间有一红墙，墙上有中琉璃门五座，均为黄琉璃瓦歇山顶。祧庙后檐的两侧，各有随墙角门一座。其北为一狭长院落，构成太庙的第三重院墙。</p>
+<h2 id="主要建筑"><a class="header" href="#主要建筑">主要建筑</a></h2>
+<h3 id="前琉璃门"><a class="header" href="#前琉璃门">前琉璃门</a></h3>
+<p>前琉璃门位于太庙中墙的南墙正中，中间三座为拱门，旁门二座为过梁式。黄琉璃瓦顶，檐下饰有黄绿琉璃斗拱额及垂莲柱，墙下为汉白玉须弥座。</p>
+<h3 id="戟门桥"><a class="header" href="#戟门桥">戟门桥</a></h3>
+<p>戟门桥位于前琉璃门正北，宽8米，两侧有汉白玉护栏，龙凤望柱交替排列。正中的桥是皇帝走的御路桥，边为王公桥，次为品级桥，边桥二座供常人行走。</p>
+<h3 id="井亭"><a class="header" href="#井亭">井亭</a></h3>
+<p>井亭位于戟门桥北的东、西两侧，高8.55米，为黄琉璃瓦盝顶六角亭，梁架用鎏金斗拱承托，亭内正中有水井一口，上置六角汉白玉井圈。</p>
+<h3 id="戟门"><a class="header" href="#戟门">戟门</a></h3>
+<p>戟门位于戟门桥正北，原门内外各列朱漆戟架四座，每座插置金银铁载各15支，共120支，故称戟门。戟门面阔五间，正中三间为三座实榻大门，庑殿顶，黄琉璃瓦屋面，三层汉白玉台基四周都有石护栏。正中有汉白玉石雕御路，从上至下分别雕刻二龙戏珠纹、狮滚绣球纹、海水江崖纹。东西旁门各一座，歇山顶，黄琉璃瓦屋面，面阔各一间。</p>
+<h3 id="享殿"><a class="header" href="#享殿">享殿</a></h3>
+<p>享殿位于戟门正北，又称前殿或大殿，面阔十一间（长68.2米），进深六间（宽30.2米），坐落在高3.46米的三层汉白玉须弥座上，殿高32.46米。黄琉璃瓦重檐庑殿顶，檐下悬挂满汉文书写的“太庙”九龙贴金题额。殿内六十八根大柱皆是整根金丝楠木，最高的达13.32米，直径最大的达1.2米，殿顶用片金沥粉彩画装饰，地面墁铺金砖。</p>
+<h3 id="寝殿"><a class="header" href="#寝殿">寝殿</a></h3>
+<p>寝殿位于享殿正北，又称中殿，面阔九间（长62.31米），进深四间（宽20.54米），殿高21.95米，黄琉璃瓦单檐房殿顶，汉白玉须弥座，周绕石栏，望柱交错雕以龙凤，台阶中饰丹陛，是平时供奉历代皇帝、皇后牌位的地方。内设神椅、香案、床榻、褥枕等物。清末供奉努尔哈赤、皇太极、福临、玄烨、胤禛、弘历等十一代皇帝及皇后的牌位。每次祭典前一天，将牌位移至享殿安放于神座之上，祭毕奉回。</p>
+<h3 id="中琉璃门"><a class="header" href="#中琉璃门">中琉璃门</a></h3>
+<p>中琉璃门位于寝殿正北，原为三座，后增建为五座，均为歇山顶，黄琉璃瓦屋面，檐下施绿琉璃仿木斗拱，门为过梁式，中间三门连为一体，两侧有旁门。</p>
+<h3 id="祧庙"><a class="header" href="#祧庙">祧庙</a></h3>
+<p>祧庙位于中琉璃门正北，又称后殿，面阔九间（长61.99米），进深四间（宽20.33米），黄琉璃瓦单檐房殿顶，是供奉追封的清代立国前的四代帝、后神牌位的地方，殿内陈设亦如寝殿。清代规制，正中肇祖、左兴祖、再左显祖、右景祖。每季首月时享皇帝委托官员在本殿祭祀岁末将先祖牌位移至享殿裕祭。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="五坛八庙"><a class="header" href="#五坛八庙">五坛八庙</a></h3>
+<p>旧时老北京有句俗语：“东单、西四、鼓楼前，五坛八庙颐和园。”这几处地方是旧北京的闹市区或坛庙、名胜的典型代表，昔日在北京享有较高的声誉。“五坛”是指天坛、地坛、日坛、月坛、先农坛，均为明代所建，清代沿用，是明、清两朝帝王们祭天、地、日、月、山川、太岁等神祇而特意建造的。“八庙”系指太庙、奉先殿、传心殿、寿皇殿、雍和宫、堂子、文庙（北京孔庙）和历代帝王庙。这几处在封建时代都是帝王们祭祀列祖列宗、神佛、历代圣贤先哲的地方。除奉先殿、传心殿在故宫内，其余皆在城内。</p>
+<h3 id="活动"><a class="header" href="#活动">活动</a></h3>
+<ul>
+<li>2007年6月9日，北京市在太庙举办“非物质文化遗产在我身边——北京市非物质文化遗产资源项目展览”。</li>
+<li>2015年4月17日，“知古鉴今——《资治通鉴》大型展览”在太庙举办。</li>
+<li>2016年1月13日，“文明的回响（第一部）：穿越敦煌”大型艺术展在太庙开幕。</li>
+<li>2017年1月22日，太庙举办《文明的回响：第二部·中华匠作》展。</li>
+<li>2020年9月16日，太庙举办由全国水产技术推广总站、北京市农业农村局主办的“匠心独具——北京市劳动人民文化宫2020年宫廷金鱼特展”。</li>
+<li>2025年6月18日，庆祝中华全国总工会成立100周年“劳动颂” 主题展嘉宾开放日活动在太庙艺术馆举办。</li>
+</ul>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>太庙又称为皇帝的“宗庙”，国家的“大庙”，是古代皇帝祭祀远祖、近祖的地方，有时候也是国家面临重大抉择进行祭祀祷告的场所。太庙之内收录着本朝皇帝的神位，从开国之初到现任皇帝的更迭，可以被认作是一个朝代的“记录史册”。随着国家的灭亡，前朝的太庙大多都被焚毁，能够留下来的也寥寥无几，正因如此，其历史价值才尤为珍贵。太庙建筑不仅反映了一个时代辉煌的营造技艺，还是较完备的礼法建筑之一。中国古代太庙的形成不仅仅是随着建筑技术的提高规模变得宏大，构件变得精细的结果，其蕴含的礼制思想更是太庙建筑的灵魂所在。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<ul>
+<li>1957年10月28日，太庙被北京市人民政府公布为北京市第一批市级文物保护单位。</li>
+<li>1988年1月13日，太庙被中华人民共和国国务院公布为第三批全国重点文物保护单位。</li>
+</ul>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<p>2023年11月，入选首批“全国标准化工人文化宫”名单。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="note.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="note.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

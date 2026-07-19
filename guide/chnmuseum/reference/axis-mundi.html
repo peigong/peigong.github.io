@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>世界树 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/axis-mundi.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="世界树"><a class="header" href="#世界树">世界树</a></h1>
+<h2 id="一什么是世界树axis-mundi"><a class="header" href="#一什么是世界树axis-mundi">一、什么是“世界树”（Axis Mundi）</a></h2>
+<p>世界树（宇宙树/生命树/宇宙轴）：以树为核心意象的垂直宇宙模型，象征世界中心，将地下/冥界—人间—天界/神界连为一体。</p>
+<h2 id="二全世界分布按文化圈"><a class="header" href="#二全世界分布按文化圈">二、全世界分布（按文化圈）</a></h2>
+<h3 id="1-北欧与日耳曼"><a class="header" href="#1-北欧与日耳曼">1. 北欧与日耳曼</a></h3>
+<ul>
+<li>北欧：尤克特拉希尔（Yggdrasil）
+<ul>
+<li>白蜡树，位于宇宙中心，连接九个世界（阿斯加德、米德加尔特、约顿海姆、尼福尔海姆、穆斯贝尔海姆、亚尔夫海姆、斯瓦塔尔夫海姆、华纳海姆、赫尔海姆）。</li>
+<li>三根主根深入不同区域（阿斯加德、约顿海姆、尼福尔海姆），根下有命运之泉、智慧之泉与毒龙尼德霍格。</li>
+<li>奥丁将自己吊于树上以获得如尼文字，世界树因此得名“奥丁的马”。</li>
+</ul>
+</li>
+<li>日耳曼与波罗的海/斯拉夫
+<ul>
+<li>存在垂直宇宙树母题，连接天、地、冥三界。</li>
+<li>斯拉夫民间传说中，世界树常与雷神佩伦等神灵相关联。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-西伯利亚中亚与北亚萨满传统"><a class="header" href="#2-西伯利亚中亚与北亚萨满传统">2. 西伯利亚、中亚与北亚萨满传统</a></h3>
+<ul>
+<li>西伯利亚与突厥/蒙古
+<ul>
+<li>萨满教宇宙观核心：宇宙树/宇宙山/天地之柱。</li>
+<li>蒙古称北极星为“金钉子”，视为固定天盖的轴心。</li>
+<li>萨满仪式中，宇宙树/宇宙山是灵魂旅程与神灵沟通的垂直通道。</li>
+</ul>
+</li>
+<li>通古斯、鄂伦春、布里亚特等
+<ul>
+<li>宇宙树常位于山顶，或生命起源于宇宙树上的灵魂。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-印度与波斯"><a class="header" href="#3-印度与波斯">3. 印度与波斯</a></h3>
+<ul>
+<li>古印度：阿什瓦特（Ashvattha）
+<ul>
+<li>《吠陀》与印度教中的倒生宇宙树（树根在上，枝干在下）。</li>
+<li>象征永恒本源与现象世界，菩提树被视为诸神居所。</li>
+</ul>
+</li>
+<li>波斯：万种之树/豪麻树
+<ul>
+<li>琐罗亚斯德教创世神话中的生命之树。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-中东与地中海"><a class="header" href="#4-中东与地中海">4. 中东与地中海</a></h3>
+<ul>
+<li>美索不达米亚
+<ul>
+<li>苏美尔《胡芦普树》（Huluppu Tree）、《埃塔纳神话》。</li>
+<li>树根从地下海洋汲取水分，树顶连接云层，整合诸天、大地与冥界。</li>
+<li>亚述艺术中的圣树（生命树），象征世界秩序。</li>
+</ul>
+</li>
+<li>希伯来与犹太神秘主义
+<ul>
+<li>圣经中的生命树、尼布甲尼撒梦见的世界树。</li>
+<li>卡巴拉生命之树（Tree of Life）：十个质点（sefirot）构成宇宙结构图。</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-东亚"><a class="header" href="#5-东亚">5. 东亚</a></h3>
+<ul>
+<li>中国：建木、扶桑、若木、扶木
+<ul>
+<li> 《山海经》 《淮南子》：建木位于都广之野（天地之中），为“众帝所自上下”的天地通道。</li>
+<li>扶桑（东方汤谷，十日所浴）、若木（西方，日落后栖息），构成东西两极与太阳运行的宇宙方位。</li>
+<li>三星堆青铜神树：体现神树沟通天地、连接宇宙层次的观念。</li>
+</ul>
+</li>
+<li>日本
+<ul>
+<li>神话宇宙分层：高天原（天界）、苇原中国（人界）、黄泉国（冥界）。</li>
+<li>虽无典型“世界树”，但具备垂直宇宙轴（天柱/山/柱）的结构。</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-美洲"><a class="header" href="#6-美洲">6. 美洲</a></h3>
+<ul>
+<li>玛雅与中美洲
+<ul>
+<li>世界树（Yaxché/Ceiba）：木棉树，连接上界、中界与下界（西巴尔巴 Xibalba）。</li>
+<li>四棵彩色方向树（东红、西黑、北白、南黄）+ 中央绿色世界树。</li>
+<li>树顶为神鸟/双头蛇，树根为亡灵与祖先通道，关联玉米神与重生。</li>
+</ul>
+</li>
+<li>阿兹特克
+<ul>
+<li>宇宙树/方向树支撑天空，分隔四个太阳纪元与世界方向。</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-其他凯尔特与北欧相近"><a class="header" href="#7-其他凯尔特与北欧相近">7. 其他（凯尔特与北欧相近）</a></h3>
+<ul>
+<li>凯尔特
+<ul>
+<li>圣树（橡树等）象征自然力量、生命循环与天地联系。</li>
+</ul>
+</li>
+</ul>
+<h2 id="三传播源流与理论解释"><a class="header" href="#三传播源流与理论解释">三、传播源流与理论解释</a></h2>
+<h3 id="1-独立起源-vs-文化传播"><a class="header" href="#1-独立起源-vs-文化传播">1. 独立起源 vs 文化传播</a></h3>
+<ul>
+<li>独立起源（主流）：不同地区因共同经验（树木垂直生长、山岳高耸、北极星定位）各自发展出宇宙轴概念。</li>
+<li>文化传播：欧亚草原、萨满网络、印欧迁徙促成母题流动。</li>
+</ul>
+<h3 id="2-欧亚草原与萨满网络"><a class="header" href="#2-欧亚草原与萨满网络">2. 欧亚草原与萨满网络</a></h3>
+<ul>
+<li>萨满教宇宙观：西伯利亚、中亚、北亚共享“天地之柱—宇宙山—宇宙树”复合结构。</li>
+<li>阿尔泰、蒙古、通古斯：宇宙树、中心柱与萨满升天旅程紧密结合。</li>
+</ul>
+<h3 id="3-印欧传统"><a class="header" href="#3-印欧传统">3. 印欧传统</a></h3>
+<ul>
+<li>原始印欧遗产：古印度《吠陀》、波斯、北欧、斯拉夫、波罗的海等共享垂直宇宙树母题。</li>
+<li>北欧尤克特拉希尔：该母题在北大西洋文献中最复杂的文本化呈现。</li>
+</ul>
+<h3 id="4-跨文明交汇"><a class="header" href="#4-跨文明交汇">4. 跨文明交汇</a></h3>
+<ul>
+<li>丝绸之路与绿洲文明：美索不达米亚圣树、波斯生命树、印度宇宙树、中亚萨满宇宙轴相互影响。</li>
+<li>中国模式：扶桑/建木/若木/昆仑构成“东方—中央—西方”复合宇宙轴线。</li>
+</ul>
+<h3 id="5-美洲独立发展"><a class="header" href="#5-美洲独立发展">5. 美洲独立发展</a></h3>
+<ul>
+<li>玛雅/阿兹特克：高大乔木（Ceiba）、四方+中心、玉米农业、历法仪式、球赛与重生神话自成体系，无旧大陆直接传播证据。</li>
+</ul>
+<h2 id="四共同结构与变体"><a class="header" href="#四共同结构与变体">四、共同结构与变体</a></h2>
+<h3 id="1-垂直三层结构"><a class="header" href="#1-垂直三层结构">1. 垂直三层结构</a></h3>
+<ul>
+<li>根系：冥界、祖先、水泉、死亡、龙/蛇。</li>
+<li>树干：人间、中心、王权、祭祀、现实世界。</li>
+<li>树冠：天界、诸神、星辰、鸟、太阳。</li>
+</ul>
+<h3 id="2-水平四方中心"><a class="header" href="#2-水平四方中心">2. 水平四方+中心</a></h3>
+<ul>
+<li>玛雅：四色方向树+中央绿。</li>
+<li>中国：扶桑（东）+建木（中）+若木（西）。</li>
+</ul>
+<h3 id="3-动态博弈"><a class="header" href="#3-动态博弈">3. 动态博弈</a></h3>
+<ul>
+<li>北欧：毒龙尼德霍格啃食树根 vs 鹰与松鼠维持宇宙紧张平衡。</li>
+<li>玛雅：神鸟与双头蛇象征上下界力量互动。</li>
+</ul>
+<h3 id="4-常见变体"><a class="header" href="#4-常见变体">4. 常见变体</a></h3>
+<ul>
+<li>宇宙山：昆仑、须弥山、奥林匹斯。</li>
+<li>宇宙柱：萨满天柱、北极星金钉子。</li>
+<li>生命树：强调生命来源、不朽与繁衍。</li>
+</ul>
+<h2 id="世界树宇宙树跨文化对比表"><a class="header" href="#世界树宇宙树跨文化对比表">世界树/宇宙树跨文化对比表</a></h2>
+<h2 id="文化地区--名称代表--树种形象--宇宙结构--连接三界--方向方位--核心功能--关键象征结局"><a class="header" href="#文化地区--名称代表--树种形象--宇宙结构--连接三界--方向方位--核心功能--关键象征结局">文化/地区 | 名称/代表 | 树种/形象 | 宇宙结构 | 连接三界 | 方向/方位 | 核心功能 | 关键象征/结局</a></h2>
+<p>北欧 | 尤克特拉希尔 (Yggdrasil) | 白蜡树，树冠达天际 | 宇宙中心，贯穿九个世界 | 上层：神界/精灵界<br>中层：人界/巨人界<br>下层：冥界/雾之国/火之国 | 垂直宇宙轴 | 宇宙支架、命运与智慧通道 | 毒龙尼德霍格啃根，关联诸神黄昏与宇宙更新
+玛雅 | 世界树 (Wacah Chan / Yaxché) | 木棉树 (Ceiba) | 中心+四方结构 | 上界(天)<br>中界(人)<br>下界(西巴尔巴) | 五色方位：<br>东红、西黑、北白、南黄、中绿 | 灵魂通道、祭祀中心 | 生命与死亡循环、祖先回归、重生与宇宙秩序
+印度 | 阿什瓦特 (Ashvattha) | 菩提树/宇宙树 | 倒生宇宙树 | 根在上(本源)<br>枝在下(现象界) | 垂直宇宙轴 | 本源象征、修行觉悟 | 永恒与本源、现象世界、觉悟解脱
+中国 | 建木、扶桑、若木 | 神树、通天通道 | 天地之中、东西两极 | 天界、人界、神界 | 东方(扶桑)、西方(若木)、中央(建木) 众帝上下、太阳运行、天地通道 | 天地之中、太阳运行秩序、通天之路
+美索不达米亚 | 胡芦普树 (Huluppu Tree) | 圣树/生命树 | 天地冥连通 | 地下水/冥界、大地、天空 | 垂直宇宙轴 | 神圣秩序、王权象征|  神圣秩序、王权、文明与神界联系
+西伯利亚/北亚 | 宇宙树/萨满树 | 桦树等 | 多层宇宙 | 上界、中界、下界 | 垂直宇宙轴 | 萨满升降、灵魂旅程 | 萨满通灵、仪式宇宙轴、灵魂治疗
+波斯 | 万种之树 / 豪麻树 | 生命树 | 生命与秩序本源 | 生命、秩序、植物本源 | 垂直宇宙轴 | 生命来源、神圣秩序 生命本源、神圣秩序、植物起源
+凯尔特 | 生命树 / 圣树 | 橡树等 | 自然力量中心 | 自然、神灵、祖先 | 垂直宇宙轴 | 自然崇拜、德鲁伊仪式 | 自然力量、生命循环、神灵居所
+犹太神秘主义 | 生命之树 (Tree of Life) | 十个质点 (sefirot) | 神圣流出结构 | 神圣界、创造界、物质界 | 垂直宇宙轴 | 宇宙结构、神人关系 | 神圣流出、宇宙结构、神人关系</p>
+<h3 id="核心共性总结"><a class="header" href="#核心共性总结">核心共性总结</a></h3>
+<ul>
+<li>宇宙轴 (Axis Mundi)：几乎所有文化都以“树”作为连接天、地、冥的垂直通道。</li>
+<li>中心定位：多位于“世界中心”或圣地，如北欧的尤克特拉希尔、中国的建木、玛雅的中心树。</li>
+<li>三界连通：根系深入地下/冥界，树干支撑人间，树冠通达天界/神界。</li>
+<li>方位秩序：常以“中心+四方”构建空间秩序，如玛雅的五方五色、中国的东西两极。</li>
+<li>动态博弈：常与破坏力量并存，如北欧毒龙啃根、玛雅死亡与重生循环。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/reference-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/reference-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

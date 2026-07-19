@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>冶铁 - 中国国家博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国国家博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history-3/ye-tie.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="冶铁"><a class="header" href="#冶铁">冶铁</a></h1>
+<p>铁的冶炼史跨越约3500年，经历了从陨铁利用→块炼铁→生铁冶铸→近代高炉炼铁的演进。下面按时间脉络和技术路线给你梳理：</p>
+<h2 id="一前奏陨铁与早期认识公元前3000年前2000年"><a class="header" href="#一前奏陨铁与早期认识公元前3000年前2000年">一、前奏：陨铁与早期认识（公元前3000年～前2000年）</a></h2>
+<ul>
+<li>陨铁使用：古埃及、美索不达米亚、中国商代（如河北藁城出土的铁刃铜钺）均用陨铁锻打嵌铸，但此时人类尚不知如何从矿石中炼铁。</li>
+<li>陨铁含镍高、质地硬，古人已认识到铁优于铜，但因无法人工冶炼，铁长期被视为"天降神物"。</li>
+</ul>
+<h2 id="二起源赫梯人与块炼铁技术约公元前1800前1200年"><a class="header" href="#二起源赫梯人与块炼铁技术约公元前1800前1200年">二、起源：赫梯人与块炼铁技术（约公元前1800～前1200年）</a></h2>
+<ul>
+<li>最早人工冶铁：小亚细亚（今土耳其）的赫梯帝国（Hittites）约公元前18～16世纪掌握人工冶铁，公元前14世纪大量生产铁器，是全球公认的冶铁技术起源。</li>
+<li>块炼法（Bloomery Process）：
+<ul>
+<li>用黏土竖炉，木炭为燃料和还原剂，鼓风升温至约1100～1200℃。</li>
+<li>铁矿石（Fe₂O₃/Fe₃O₄）被CO还原为金属铁，但未达铁的熔点（1538℃），形成多孔海绵铁（块炼铁/熟铁）。</li>
+<li>取出后趁热反复锻打，挤出炉渣、压实，可得致密熟铁；再埋入木炭中加热渗碳，表面形成高碳钢。</li>
+</ul>
+</li>
+<li>赫梯垄断冶铁近两世纪，前12世纪帝国崩溃后工匠流散，冶铁术传向近东、希腊、欧洲，人类进入铁器时代。</li>
+</ul>
+<p>块炼铁是此后约2500年间（至14世纪欧洲高炉出现前）西方主流冶铁方式，产率低、靠锻打，无法直接浇铸大型器具。</p>
+<h2 id="三中国路径从块炼铁到独创生铁冶铸春秋汉代"><a class="header" href="#三中国路径从块炼铁到独创生铁冶铸春秋汉代">三、中国路径：从块炼铁到独创生铁冶铸（春秋～汉代）</a></h2>
+<p>中国春秋早期（前8～前7世纪）通过西域传入块炼法，但迅速走出独特道路——世界独有的早期生铁（铸铁）体系。</p>
+<ol>
+<li>春秋——块炼铁与生铁并行出现</li>
+</ol>
+<ul>
+<li>甘肃灵台、河南三门峡虢国墓地出土春秋早期块炼铁制品。</li>
+<li>春秋晚期（前6～前5世纪）已出现液态生铁铸造：江苏六合程桥出土白口生铁铁丸，湖南长沙出土白口铸铁鼎——比欧洲早约1800～2000年。</li>
+<li>关键突破：中国沿用青铜冶铸的高大竖炉+强力鼓风（皮橐），炉温达1300～1400℃，铁吸碳后熔点降至1150℃左右，呈液态流出，可连续放铁、浇铸成形。</li>
+</ul>
+<ol start="2">
+<li>战国——铸铁柔化与铁范铸造</li>
+</ol>
+<ul>
+<li>发明韧性铸铁（可锻铸铁）：将白口生铁经退火脱碳/石墨化热处理，克服生铁脆性问题，广泛用于农具、车具。</li>
+<li>发明铁范（金属铸模）：河北兴隆出土战国铁范，可重复使用批量铸造，大幅提高效率。</li>
+</ul>
+<ol start="3">
+<li>西汉——炒钢、百炼钢与高炉、水排</li>
+</ol>
+<ul>
+<li>炒钢法（西汉中期）：将生铁加热至半熔融翻炒，氧化脱碳得钢或熟铁，解决了生铁不能直接锻打的局限，是钢铁生产史上的重大革新。</li>
+<li>百炼钢：以块炼铁或炒钢为原料，反复折叠锻打渗碳，制作高质量钢剑（燕下都出土钢戟）。</li>
+<li>大型高炉：汉代古荥冶铁遗址炉容约50m³，日产铁约1吨，采用石灰石作熔剂，渣铁分离。</li>
+<li>水排（东汉杜诗）：水力驱动鼓风装置，比欧洲早约1100年。</li>
+</ul>
+<ol start="4">
+<li>南北朝～唐宋——灌钢法与煤/焦炭冶炼</li>
+</ol>
+<ul>
+<li>灌钢法（南北朝綦毋怀文）：将生铁液浇于熟铁上，二者熔合碳均衡得钢， 《天工开物》 《梦溪笔谈》均有记载，省工高效。</li>
+<li>宋代开始用煤（而非木炭）炼铁，缓解森林消耗；明代已用焦炭冶铁（欧洲17世纪才用焦炭）。</li>
+<li>北宋铁年产量估计达数万吨至十余万吨，相当于18世纪初全欧洲总产量。</li>
+</ul>
+<h2 id="四欧洲及其他地区的中世纪近代演进"><a class="header" href="#四欧洲及其他地区的中世纪近代演进">四、欧洲及其他地区的中世纪～近代演进</a></h2>
+<ul>
+<li>中世纪欧洲：长期沿用块炼法（bloomery），得熟铁再渗碳锻打成钢，"炒钢"直至17～18世纪才从东方引入概念。</li>
+<li>高炉（Blast Furnace）出现：14世纪欧洲（如瑞典、德国）出现带强力水力鼓风的高炉，首次在西方生产液态生铁（铸铁），此前欧洲视生铁为废料。</li>
+<li>工业革命（18世纪后半，英国）：
+<ul>
+<li>焦炭炼铁（Abraham Darby，1709）解决木炭短缺。</li>
+<li>配套蒸汽机鼓风、热风炉，高炉大型化，生铁产量暴增，奠定近代钢铁工业基础。</li>
+</ul>
+</li>
+<li>1856年贝塞麦转炉炼钢法（Bessemer）、1865年平炉炼钢（Siemens-Martin）、20世纪氧气顶吹转炉及直接还原铁等现代工艺相继出现，钢铁进入大规模工业化时代。</li>
+</ul>
+<h2 id="五技术路线对比简表"><a class="header" href="#五技术路线对比简表">五、技术路线对比简表</a></h2>
+<h2 id="阶段地区--工艺--温度--产物--特点"><a class="header" href="#阶段地区--工艺--温度--产物--特点">阶段/地区 | 工艺 | 温度 | 产物 | 特点</a></h2>
+<p>赫梯/西方古代 | 块炼法（Bloomery） | ~1100～1200℃ | 海绵铁→锻打成熟铁/渗碳钢 | 低温固态还原，需锻打，产量低
+中国春秋～汉 | 生铁冶铸+块炼 | &gt;1300℃ | 液态生铁（白口/灰口铁）→铸/炒钢 | 早用竖炉强鼓风，可铸造，效率高
+欧洲14世纪后 | 高炉(Blast Furnace) | &gt;1400℃ | 生铁→后期经搅炼(puddling)成熟铁/钢 | 借鉴东方思路，工业革命后焦炭高炉主导
+近现代 | 现代高炉+转炉/电炉 | — | 生铁→钢 | 科学配矿、热风、碱性操作、连续生产</p>
+<p>小结：人类冶铁始于赫梯人的块炼法，西方沿此路线走到中世纪；中国则在引入块炼法后迅速发明高温生铁冶铸体系，形成"铸铁—炒钢—灌钢"的独特技术链，长期领先世界。近代欧洲通过高炉+焦炭+蒸汽动力完成反超，开启现代钢铁工业。</p>
+<h2 id="生铁和熟铁"><a class="header" href="#生铁和熟铁">生铁和熟铁</a></h2>
+<p>生铁和熟铁（锻铁/工业纯铁）本质上都是铁碳合金，核心区别就在于含碳量不同，由此导致性能、工艺和用途完全不同。</p>
+<h3 id="相同点"><a class="header" href="#相同点">相同点</a></h3>
+<ul>
+<li>基本成分：都以铁（Fe）为主要成分，属于铁碳合金，区别于纯金属单质。</li>
+<li>来源关联：熟铁通常由生铁经脱碳精炼（古代"炒钢/炒铁"、现代氧化精炼）得到。</li>
+<li>外观：都有金属光泽，可导电导热，能被磁铁吸引。</li>
+</ul>
+<h3 id="主要不同点"><a class="header" href="#主要不同点">主要不同点</a></h3>
+<p>对比项 | 生铁（铸铁） | 熟铁（锻铁/工业纯铁）
+含碳量 | 2.11%～4.3%（通常2%～4%） | ＜0.02%（＜0.0218%），近乎纯铁
+其他杂质 | 含Si、Mn、P、S较多 | 杂质极少（Si、Mn、P、S极低）
+冶炼来源 | 高炉直接还原铁矿石得液态生铁 | 生铁氧化脱碳精炼（炒铁）或电解纯铁
+物理性能 | 硬而脆，无塑性，不可锻打，只能铸造 | 软、延展性极好，可锻打、冷热加工、拉丝
+断口特征 | 灰白/灰黑颗粒状（灰口铁）| 或银白（白口铁） 平整光亮金属光泽
+典型用途 | 铸铁锅、暖气片、机床床身、下水管道、炼钢原料 | 电工硅钢片基材、电磁铁芯、装饰锻件、高级合金钢原料
+古代称呼 | "出炉未炒则生"——高炉直接浇铸者 | "既炒则熟"——生铁炒炼脱碳锻打者（《天工开物》）</p>
+<p>补充：介于二者之间含碳量0.02%～2.11%的叫钢，兼顾强度与韧性。</p>
+<h3 id="简单记忆"><a class="header" href="#简单记忆">简单记忆</a></h3>
+<ul>
+<li>生铁＝高碳＋硬脆＋可铸不可锻→适合浇铸成型（锅、管、底座）</li>
+<li>熟铁＝极低碳＋软韧＋可锻不可铸→适合锻打、拉丝、电磁材料</li>
+<li>钢＝中碳→强度与韧性平衡</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history-3/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history-3/Bloomery.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history-3/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history-3/Bloomery.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

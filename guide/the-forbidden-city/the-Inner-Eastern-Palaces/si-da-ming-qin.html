@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>四大名琴 - 祡禁城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">祡禁城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-Inner-Eastern-Palaces/si-da-ming-qin.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="四大名琴"><a class="header" href="#四大名琴">四大名琴</a></h1>
+<p>中国古代四大名琴指春秋至汉代流传的四张名琴，包括齐桓公所藏“号钟”、楚庄王所获“绕梁”、司马相如持有的“绿绮”及蔡邕所制“焦尾”。四琴因材质特殊、音色出众且承载历史典故闻名，相关记载见于《列子》《淮南子》等古籍。</p>
+<p>“号钟”为周代名琴，音如洪钟，曾由伯牙演奏后被齐桓公收藏；“绕梁”因余音绵长，楚庄王得琴七日不朝，最终毁琴绝响；“绿绮”由梁王赠予司马相如，其弹奏《凤求凰》求娶卓文君使琴名广传；“焦尾”为蔡邕救火时取焦桐制成，琴尾焦痕为特征，汉末存于内库。四琴历代流转，南朝时“焦尾”仍存世，明代文献记载部分名琴实物信息。</p>
+<h2 id="基本含义"><a class="header" href="#基本含义">基本含义</a></h2>
+<p>中国古代四大名琴指在历史上享有盛名的四张古琴，分别是：号钟（周代）、绕梁（春秋）、绿绮（汉代）、焦尾（东汉）。
+这四张琴以其音色和相关的历史典故而闻名。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<p>中国古代“四大名琴”是指历史上最负盛名的四张古琴，分别是号钟（周代）、绕梁（春秋）、绿绮（汉代）和焦尾（东汉）。晋人傅玄在《琴赋》中曾提及：“齐桓公有鸣琴曰号钟，楚庄有鸣琴曰绕梁，中世司马相如有绿绮，蔡邕有焦尾，皆名器也。”</p>
+<h3 id="号钟"><a class="header" href="#号钟">号钟</a></h3>
+<p>号钟是周代的名琴，音色洪亮如钟声震撼。传说伯牙曾弹奏此琴。后来“号钟”传到齐桓公的手中，齐桓公是齐国的贤明君主，通晓音律。据《淮南子》等典籍记载，此琴音色洪亮，如钟声震撼，故而得名“号钟”。齐桓公收藏了许多名琴，但尤其珍爱“号钟”琴，曾令部下敲起牛角，唱歌助乐，自己则奏“号钟”与之呼应。</p>
+<h3 id="绕梁"><a class="header" href="#绕梁">绕梁</a></h3>
+<p>绕梁为春秋时期的名琴。琴名“绕梁”源于其音色余韵绵长，成语“余音绕梁”形容音乐美妙动人。据《列子·汤问》所载“余音绕梁，三日不绝”的典故即源于歌者韩娥的故事。此琴据说由华元献给楚庄王。楚庄王得到“绕梁”后，整天弹琴作乐，陶醉在琴乐之中，曾连续七天不上朝，最终忍痛毁琴。</p>
+<h3 id="绿绮"><a class="header" href="#绿绮">绿绮</a></h3>
+<p>绿绮是汉代的名琴。梁王慕名请司马相如作赋，相如写《如玉赋》相赠，梁王遂以“绿绮”琴回赠。其琴身泛幽绿色，故名“绿绮”，典故出自《西京杂记》。司马相如得“绿绮”后，精湛琴艺配上绝妙音色，使琴名噪一时。他曾弹奏《凤求凰》向卓文君求爱，传为佳话。</p>
+<h3 id="焦尾"><a class="header" href="#焦尾">焦尾</a></h3>
+<p>焦尾是东汉蔡邕亲手制作的名琴。蔡邕在烈火中抢救出一段梧桐木，制成七弦琴，因琴尾留有焦痕，故取名“焦尾”。《后汉书·蔡邕传》详细记载：“吴人有烧桐以爨者，邕闻火烈之声。知其良木，因请而裁为琴，果有美音，而其尾犹焦，故时人名曰焦尾琴焉。”蔡邕遇害后，此琴曾存于皇家内库，南唐时曾为李璟、大周后所藏，后归宋室，至明朝时仍有私人收藏。</p>
+<h2 id="基本特征"><a class="header" href="#基本特征">基本特征</a></h2>
+<p>中国古代四大名琴（号钟、绕梁、绿绮、焦尾）的共同特征在于其音色均极为出众，且每张琴都承载着重要的历史典故与文化内涵。记忆口诀：“钟声洪亮号钟琴，绕梁三日韩娥音。绿绮传情凤求凰，焦尾救火蔡邕心。”</p>
+<p>号钟为周代名琴，音如洪钟，相关人物有伯牙、齐桓公，典故出自《淮南子》。绕梁为春秋名琴，以余音绕梁闻名，相关人物有韩娥、楚庄王，典故出自《列子·汤问》。绿绮为汉代名琴，琴身泛幽绿色，相关人物有司马相如、卓文君，典故出自《西京杂记》，琴曲《凤求凰》。焦尾为东汉名琴，由蔡邕救火取焦桐制成，琴尾有焦痕，典故出自《后汉书·蔡邕传》。焦尾琴的得名直接源于其物理特征，即“琴尾有焦痕”，而非制作者蔡邕的名字。</p>
+<h2 id="影响"><a class="header" href="#影响">影响</a></h2>
+<p>中国古代四大名琴作为传世名器，其影响深远，主要体现在文化、文学、教育及语言等多个层面。首先，它们已成为中国古代音乐文化、文人雅士精神与高超制琴技艺的象征。其次，其典故深刻影响了中国文学与语言，例如“绕梁”琴的故事衍生出“余音绕梁”这一经典成语，用以形容音乐或歌声美妙动人，余韵不绝；而“绿绮”琴与司马相如、卓文君“凤求凰”的爱情故事，则成为文学艺术中传颂不衰的佳话。</p>
+<p>再次，四大名琴因其独特的历史与文化内涵，成为公共基础知识等教育考试中的高频考点，常以选择题、填空题等形式出现，并有“钟声洪亮号钟琴，绕梁三日韩娥音。绿绮传情凤求凰，焦尾救火蔡邕心”等记忆口诀辅助学习。最后，部分琴名已演变为古琴的雅称，如“焦尾”琴常被代称为“焦桐”，“绿绮”也常被用作古琴的美称。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>四大名琴的记载主要散见于《列子》《淮南子》《西京杂记》《后汉书》等古籍，例如焦尾琴的详细制作故事最早见于《后汉书·蔡邕传》：“吴人有烧桐以爨者，邕闻火烈之声。知其良木，因请而裁为琴，果有美音，而其尾犹焦，故时人名曰焦尾琴焉。”</p>
+<p>这些名琴的故事在后世广为流传并经过考证，成为文学、艺术的典故，例如唐代诗人李咸用在《山居》诗中写道：“焦尾何人听，凉宵对月弹。”</p>
+<p>在当代，四大名琴成为音乐史、历史文化的研究对象，其典故和形制也见于公共基础知识教育、文化展览等内容。</p>
+<h2 id="号钟琴"><a class="header" href="#号钟琴">号钟琴</a></h2>
+<p>“号钟”是周代的名琴，居古代四大名琴之首。此琴音之宏亮，犹如钟声激荡，号角长鸣，令人震耳欲聋。</p>
+<p>“号钟”是传说中周代的名琴，音色宏亮，犹如钟声激荡、号角长鸣一般。传说古代杰出的琴家伯牙曾弹奏过“号钟”琴。后来“号钟”传到齐恒公的手中。齐桓公姜姓，名小白，是春秋五霸之首，通晓音律，十分爱琴。当时，他收藏了许多名琴，相传“鸣廉”、“修况”、“蓝胁”等琴都是桓公所藏，尤其是对“号钟”此琴，桓公尤为珍爱。</p>
+<p>“号钟”此琴大有来历，相传其最初的所有者是黄帝，《云笈七签》卷一百“黄帝之琴名号钟，作清角之弄”可证。此琴与“高山流水”典故相关。齐桓公常与大夫宁戚相和，齐桓公弹奏“号钟”琴，宁戚则敲击牛角，唱歌助乐，与之呼应。相传有一次齐桓公出兵征讨鲁国，在誓师时宁戚扣牛角而歌，桓公鼓“号钟”之琴以和之，只听得牛角声声，歌声凄切，“号钟”则奏出雄浑激昂的旋律，将士们听闻后无不感动，士气倍增。</p>
+<h3 id="基本含义-1"><a class="header" href="#基本含义-1">基本含义</a></h3>
+<p>号钟是传说中周代的名琴，居中国古代四大名琴之首。</p>
+<p>此琴音色宏亮，犹如钟声激荡，号角长鸣。</p>
+<p>传说春秋时期的琴家伯牙（俞伯牙）曾弹奏过此琴，后为春秋五霸之一的齐桓公所珍藏并尤为喜爱。</p>
+<h3 id="基本特征-1"><a class="header" href="#基本特征-1">基本特征</a></h3>
+<p>“号钟”音色宏亮，犹如钟声激荡，号角长鸣，音如洪钟。</p>
+<p>“号钟”亦为古琴传统样式之一，即“号钟式”，属于古琴形制的一种分类。</p>
+<p>现存有宋代仲尼式“号钟”七弦琴实物，琴面、琴底可见规律的大蛇腹断纹，音量大，发声宽宏。轸池下方刻有篆书琴名“号钟”，配有长方形龙池与凤沼。</p>
+<h3 id="应用"><a class="header" href="#应用">应用</a></h3>
+<p>在2021年的沉浸式艺术特展中，号钟与绕梁、绿绮、焦尾并列为四大名琴，观众可端坐琴前抚动琴弦，触发面前画卷的影像变化，相应的琴名和其所代表的意境出现在屏幕之上。</p>
+<h3 id="影响-1"><a class="header" href="#影响-1">影响</a></h3>
+<p>号钟式得自于名琴“号钟”，作为传统古琴样式之一，其形制被后世传承与借鉴，例如天音琴坊曾参照古制制作“号钟式”古琴。“号钟式”亦被列入中国古琴艺术的“传统样式”之中，见于联合国教科文组织非物质文化遗产名录（名册）项目之古琴艺术相关记载。</p>
+<h2 id="绕梁琴"><a class="header" href="#绕梁琴">绕梁琴</a></h2>
+<p>绕梁琴是中国古代四大名琴之一，其典故最早见于宋代虞汝明《古琴疏》。春秋时期宋国右师华元将绕梁琴献于楚庄王，琴音余韵三日不绝，致使楚王七日不朝。经樊姬谏言以夏桀、商纣亡国为鉴，楚王命人以铁如意击碎此琴。后世将"绕梁琴"与齐桓公号钟琴、司马相如绿绮琴、蔡邕焦尾琴并称四大古琴，其"余音绕梁"的美学意象在当代文旅场景中仍有应用。</p>
+<h3 id="历史源流"><a class="header" href="#历史源流">历史源流</a></h3>
+<p>据《古琴疏》记载，公元前594年楚宋战争期间，华元夜闯楚营与子反结盟后，作为人质携带绕梁琴进献楚庄王。琴名源于韩娥'余音绕梁'传说，其音色缠绵婉转，文献记载'余音三日不绝于耳'。楚庄王获琴后沉迷音律，连续七日不早朝，引发朝政危机，最终命人以铁如意击碎此琴。</p>
+<h3 id="典故内涵"><a class="header" href="#典故内涵">典故内涵</a></h3>
+<p>樊姬以夏桀宠幸妺喜、商纣王沉迷靡音致亡国为鉴进行劝谏，促成楚庄王下令毁琴。据宋代文献描述，侍臣用铁如意捶击琴体使其破损，该细节被《太平御览》转引。此事成为古代"以乐鉴政"的典型案例，虽含艺术夸张成分，但确立音乐与治国关系的文化符号。</p>
+<h3 id="文献关联"><a class="header" href="#文献关联">文献关联</a></h3>
+<p>《列子·汤问》记载的'余音绕梁'典故虽晚于《古琴疏》成书，但两者共同构建'绕梁'意象体系。明代《永乐琴书集成》将绕梁琴归为'圣贤遗音'，清代《琴史补》考证其为桐木制琴身配蚕丝金属弦的特殊构造。虞汝明记载比《列子》早百余年，故学界普遍认定华元献琴事件为成语本源。</p>
+<h3 id="文化影响"><a class="header" href="#文化影响">文化影响</a></h3>
+<p>绕梁琴与号钟、绿绮、焦尾并称四大名琴，奠定其在传统音乐史的地位。唐代《乐府杂录》将其音色特征概括为'清越中含悲怆'，宋代《梦溪笔谈》考证其残片曾藏于汴京文庙。2020年青秀区'金花小镇'旅游项目设置'听绕梁琴音'体验环节，将典故转化为文旅融合载体。</p>
+<h3 id="学术争议"><a class="header" href="#学术争议">学术争议</a></h3>
+<p>部分学者认为华元献琴事件存在时间矛盾：华元活跃于公元前600年左右，而韩娥传说一般认为形成于战国中期。故宫博物院古琴专家郑珉中提出，现存唐代'绕梁'仿制琴的形制特征更接近魏晋风格，可能与原型存在工艺断层。这些争议不影响典故本身的文化传播价值，其'戒奢倡俭'的核心思想仍被现代管理学引用为典型案例。</p>
+<h2 id="绿绮琴"><a class="header" href="#绿绮琴">绿绮琴</a></h2>
+<p>绿绮琴，汉语词语，指古琴名，出自《西京杂记》。后来也常用作古琴的别称或美称。</p>
+<p>传说汉代司马相如因作《玉如意赋》（或《如玉赋》）而受梁王赏赐此琴。琴身通体黑色，隐隐泛着幽绿，琴内有“桐梓合精”铭文。司马相如曾以此琴弹奏《凤求凰》向卓文君示爱。绿绮与齐桓公的“号钟”、楚庄王的“绕梁”、蔡邕的“焦尾”并称为“四大名琴”。</p>
+<p>晋代张载《拟四愁诗》中已有“佳人遗我绿绮琴”之句。后世亦有一张唐代所制名为“绿绮台”的古琴，为岭南四大名琴之一，曾为明武宗朱厚照所有，明末归邝露，其抱琴殉国，后由东莞可园收藏。现代有斫琴师制作绿绮式古琴，古琴家出版《绿绮琴歌》专辑，相关非遗传承人设有“绿绮琴院”，并有名为“古琴(绿绮琴)”的外观设计专利。</p>
+<h3 id="解释"><a class="header" href="#解释">解释</a></h3>
+<p>古琴名，出自《西京杂记》。</p>
+<p>传说汉代司马相如因作《玉如意赋》（或称《如玉赋》）而受梁王赏赐此琴。绿绮与号钟、绕梁、焦尾并称四大名琴。琴身通体黑色，隐隐泛着幽绿色，琴内有“桐梓合精”铭文。</p>
+<p>后“绿绮”亦成为古琴的美称或别称。如晋代张载《拟四愁诗》有“佳人遗我绿绮琴”之句，唐代李白《听蜀僧濬弹琴》亦云“蜀僧抱绿绮”。</p>
+<h3 id="发展历程-1"><a class="header" href="#发展历程-1">发展历程</a></h3>
+<p>绿绮琴是古琴名，传说汉代司马相如作《玉如意赋》，梁王悦之，赐以绿绮琴。司马相如曾以此琴弹奏《凤求凰》向卓文君求爱。绿绮与齐桓公的“号钟”、楚庄王的“绕梁”、蔡邕的“焦尾”并称为中国古代“四大名琴”。唐代有名为“绿绮台”的琴，制于唐武德二年（619年），形为仲尼式，琴底颈部刻有隶书“绿绮台”三字。绿绮台琴曾为明武宗朱厚照收藏，后赐予大臣；明末为名士邝露所得，邝露抱琴殉国。清代先后由叶维城、陈昙等人收藏，后为东莞人张敬修购得，张敬修在东莞可园建“绿绮楼”珍藏此琴。民国时期，绿绮台琴为邓尔雅购得，并于1940年在广东文物展览会上公开展出。2014年，岭南派古琴传承人王可逊应可园博物馆之邀，成功复刻了唐代绿绮台琴。</p>
+<h3 id="形制特征"><a class="header" href="#形制特征">形制特征</a></h3>
+<p>相传绿绮通体黑色，隐隐泛着幽绿，有如绿色藤蔓缠绕于古木之上，因而得名。琴内有铭文曰“桐梓合精”，即桐木与梓木结合的精华。</p>
+<p>现代斫制的绿绮式古琴造型简约，音韵明净。有测评指出其面板厚重带来深邃音色，弦路偏软，按弦手感轻松，有效弦长约110厘米。</p>
+<p>当代斫琴师在《五知斋琴谱》记载的基础上，对绿绮式的外观和内部结构进行调适，以体现汉代雄浑高古的审美特点。</p>
+<h3 id="应用-1"><a class="header" href="#应用-1">应用</a></h3>
+<p>“绿绮”自汉代起便成为古琴或佳琴的代称，频繁出现在后世诗文中用以指代琴或象征高雅情趣。例如晋代张载《拟四愁诗》有“佳人遗我绿绮琴，何以赠之双南金”之句；唐代李白《听蜀僧濬弹琴》写道“蜀僧抱绿绮，西下峨眉峰”。宋代词作中亦常以“绿绮”指琴，如李处全《朝中措·初夏》“琴推绿绮”，张履信《谒金门》“起来调绿绮”等。</p>
+<p>在现代文化实践中，“绿绮”一词常被用于命名相关艺术作品或机构以传承其文化意涵。例如，古琴家赵晓霞曾录制出版名为《绿绮琴歌》的专辑；在“十香花十古琴”等艺术展览中，“绿绮琴”（式）常与绘画等艺术作品（如许固令画作《鱼子兰》）并列展示，形成琴画和鸣的艺术效果；此外，亦有以“绿绮”命名的文化传播机构，如致力于古琴（岭南派）教学与传播的“绿绮琴院”。</p>
+<h3 id="影响-2"><a class="header" href="#影响-2">影响</a></h3>
+<p>后世文人常以“绿绮”代指古琴，与“丝桐”、“瑶琴”等并称，成为古琴的文学化称谓之一。</p>
+<p>绿绮琴与司马相如、卓文君的爱情故事紧密相连，司马相如用绿绮琴弹奏《凤求凰》向卓文君求爱，使得“绿绮”成为音乐传情、才子佳人爱情的文化象征。</p>
+<p>唐代古琴“绿绮台”作为“岭南四大名琴”之一，曾为邝露、张敬修、邓尔雅等历史人物收藏，其复刻与展示于东莞可园博物馆，强化了在岭南文化中的历史记忆与认同。</p>
+<p>当代斫琴实践中，“绿绮”作为一种经典琴式被传承，如丁爱国制作绿绮式古琴，非物质文化遗产传承人王可逊通过复刻绿绮台琴、创办绿绮琴院等方式推广古琴艺术。</p>
+<h2 id="焦尾琴"><a class="header" href="#焦尾琴">焦尾琴</a></h2>
+<p>焦尾琴是中国古代四大名琴之一，由东汉蔡邕截取吴地烧桐良木制成，因琴尾留有焦痕得名，别名“焦桐”。蔡邕避难时闻火烈声辨识良材，所制琴身造型尖异，《后汉书》记载其裁木成琴、尾焦存音之事，后世以此衍生‘焦尾’‘爨下桐’等典故。</p>
+<p>该琴汉末起历经宫廷收藏，至明代仍有演奏记载。2009年中国民族器乐学会经史料查证与实地考察，确认江苏省溧阳市观山蔡邕读书台遗址为焦尾琴故里，当地保留青桐林及相关制琴传说。</p>
+<h3 id="简介"><a class="header" href="#简介">简介</a></h3>
+<p>中国古代有“四大名琴”之说，齐桓公的“号钟”，楚庄王的“绕梁”，司马相如的“绿绮”和蔡邕的“焦尾”。</p>
+<p>“焦尾”是东汉著名文学家、音乐家蔡邕亲手制作的一张琴。蔡邕在“亡命江海、远迹吴会”时，曾于烈火中抢救出一段尚未烧完、声音异常的梧桐木。他依据木头的长短、形状，制成一张七弦琴，果然声音不凡。因琴尾尚留有焦痕，就取名为“焦尾”。“焦尾”以它悦耳的音色和特有的制法闻名四海。</p>
+<p>后遂用“焦尾琴、焦尾、焦桐、焦琴”等指美琴，或比喻历尽磨难的良才、未被赏识的宝器；用“桐尾焦、桐爨、爨下桐、爨下残、爨下余、良才入爨”写良才不得其用，或比喻遭受摧残，幸免于难。</p>
+<p>琴有五不弹：疾风甚雨不弹，尘市不弹，对俗子不弹，不坐不弹，不衣冠不弹。</p>
+<p>明赵震元《为袁石寓（袁可立子）复开封太府》：“霞壮日暧，咏幼丝于曹碑；薇省风高，识焦尾于班管。”</p>
+<h3 id="传说"><a class="header" href="#传说">传说</a></h3>
+<p>蔡邕（公元132—公元192），字伯喈，东汉陈留圉县（今河南省杞县）人，是中国历史上著名的文学家、史学家、音乐家、书法家。蔡邕生性笃孝，自小博学多才，喜辞章、数学、天文之学，“覃恩典籍，韫读六经”，熟知两汉史事，正定六经文字，自书于碑，世称《熹平石经》，为古今隶书之典范。他创“飞白体”，写《笔论》《九势》，后人尊其为“书法之开山鼻祖”。蔡邕的“焦尾琴”名扬千古，关于蔡邕救琴的故事也在民间广为流传，说法不一。</p>
+<h4 id="一说"><a class="header" href="#一说">一说</a></h4>
+<p>汉献帝时曾拜左中郎将，故后人也称他“蔡中郎”。蔡邕为人正直，性格耿直诚实，眼里容不下沙子，对于一些不好的现象，他总是敢于对灵帝直言相谏。这样，他顶撞灵帝的次数多了，灵帝渐渐讨厌起他来。再加上灵帝身边的宦官也对他的正直又恨又怕，常常在灵帝面前进谗言说他目无皇上，骄傲自大，早晚会有谋反的可能，蔡邕的处境越来越危险。他自知已成了灵帝的眼中钉、肉中刺，随时有被加害的危险，于是就打点行李，从水路逃出了京城，远远来到吴地，隐居了起来。</p>
+<p>蔡邕爱好音乐，他本人也通晓音律，精通古典，在弹奏中如有一点小小的差错，也逃不过他的耳朵。蔡邕尤擅弹琴，对琴很有研究，关于琴的选材、制作、调音，他都有一套精辟独到的见解。从京城逃出来的时候，他舍弃了很多财物，就是一直舍不得丢下家中那把心爱的琴，将它带在身边，时时细加呵护。</p>
+<p>在隐居吴地的那些日子里，蔡邕常常抚琴，借用琴声来抒发自己壮志难酬反遭迫害的悲愤和感叹前途渺茫的怅惘。</p>
+<p>有一天，蔡邕坐在房里抚琴长叹，女房东在隔壁的灶间烧火做饭，她将木柴塞进灶膛里，火星乱蹦，木柴被烧得“噼里啪啦”地响。</p>
+<p>忽然，蔡邕听到隔壁传来一阵清脆的爆裂声，不由得心中一惊，抬头竖起耳朵细细听了几秒钟，大叫一声“不好”，跳起来就往灶间跑。来到炉火边，蔡邕也顾不得火势的人，伸手就将那块刚塞进灶膛当柴烧的桐木拽了出来，大声喊道：“快别烧了，别烧了，这可是一块做琴的难得一见的好材料啊！”蔡邕的手被烧伤了，他也不觉得疼，惊喜地在桐木上又吹又摸。好在抢救及时，桐木还很完整，蔡邕就将它买了下来。然后精雕细刻，一丝不苟，费尽心血，终于将这块桐木做成了一张琴。这张琴弹奏起来，音色美妙绝伦，盖世无双。</p>
+<p>这把琴流传下来，成了世间罕有的珍宝，因为它的琴尾被烧焦了，人们叫它“焦尾琴”。</p>
+<p>后世有联曰：“灵帝无珠走良将，焦桐有幸裁名琴”。</p>
+<h4 id="二说"><a class="header" href="#二说">二说</a></h4>
+<blockquote>
+<p>《故事新编》焦尾琴 作者：乙木生</p>
+</blockquote>
+<p>汉朝灵帝时，陈留地方有个儒生叫蔡邕，性情豪爽，特别喜爱琴棋书画。为了求学，蔡邕拜别父母，到京都洛阳求学，不久就很有名气，得到朝廷重用。</p>
+<p>蔡邕作了官后更加潜心研究儒学，对朝廷提了很多有用的建议。后来，他多次上书揭露时政弊端，得罪了皇帝，也惹恼了权臣，被逐出朝廷。不久，朝廷又有逮捕他下狱。蔡邕于是逃出京城。这天，天气很热，蔡邕走了好久都没见到人家，又饿又困，便在一峭壁下荫凉处歇息。</p>
+<p>不一会儿，蔡邕就靠着石壁睡着了。迷迷糊糊中，他听到水滴声：“叮——咚——叮叮咚咚——叮咚咚——”这声音很有节奏且清脆响亮，他突然来了精神，循声找去。只见石岩峭壁高约十余丈，从顶端到脚下有一道宽宽的石缝，岩下有一个圆圆的水凼，凼里一汪清水，顶上有水滴下来，滴在水凼里，滴水声在这岩腔里回荡，煞是好听。</p>
+<p>他听得醉了，忘记了自己在逃亡中。他捧起清水来喝了几口，呀，好清凉，他觉得全身清爽，立时来了精神。突然一位笑盈盈的白发老者站在他背后，他忙向老者施礼。只见老者腰佩弓箭手持猎叉，已猎得一些山鸡和野兔。通过交谈得知老者姓林，是个猎户。林老者很喜欢蔡邕，便邀请他去家中作客。到了林老者家中，蔡邕见过林老者的老伴和孙女绿玉。一家三口忙烧锅煮饭。</p>
+<p>这地方煮饭的灶和平原不同，灶火门很大，一些原木不经辟开就能放进去燃烧。蔡邕见他们一家三口忙于做饭，自己就走出柴扉观赏深山风景，耳朵里似乎还听到那水滴声。</p>
+<p>突然，蔡邕听到灶堂里木头烧爆的声音很特别，好像拨动了他那根神经，急得大呼大叫起来：“别烧了，快灭火！”蔡邕心急火燎地把灶堂里燃烧着的木头拖出来，浇水灭火。林老汉一家三口被他这惊叫和那不容制止的动作惊呆了，愣愣地望着他。这时，蔡邕才觉察到自己的失态，忙向林老者一家施礼道，这段木头有用，烧之可惜，并请求老人家将这段木头赐给他。</p>
+<p>蔡邕先是拖着那段烧焦了的木头，在院中盯着入神，随后就用刀斧劈砍起来。绿玉好奇地守着他，问这木头有什么用处，他反问绿玉懂不懂音乐，绿玉摇头说不懂。</p>
+<p>经过好多天摆弄，蔡邕终于将那段木头做成了一把琴，只是琴尾仍有烧焦的痕迹，故取名焦尾琴。这琴弹起来，音质特别好，胜过皇宫中的名琴。蔡邕边弹边唱，三人都听呆了。</p>
+<p>林老看了叹息说，可惜我还不知道这木头是何种树木，蔡先生，你懂？蔡邕摇摇头说，我也不知道其为何树种，只辨得其音质。正如对人一样，不问其出身官阶如何，只看他是不是人才。林老汉深以为然，并要将孙女绿玉许配于他。蔡邕说，我是朝廷追捕的人，不可害了绿玉。林老者说，天高皇帝远，我这山野村夫不知道什么逃犯。怎奈蔡邕始终不同意。不过，蔡邕在这里避祸半年多，和林老者一家相处很好，而且还把绿玉调教成了音乐奇才。</p>
+<h4 id="三说"><a class="header" href="#三说">三说</a></h4>
+<p>有一次，蔡邕路经吴县，见一个挑夫在江边用三根木棍捆成三脚架，挂着一口大铁锅烧水。火点燃后，他就去挑水去了。燃烧的木材在噼啪声中散发出一种梧桐木特有的香味。蔡邕好奇地上前一看，原来一块老桐木板正着了火在燃烧着。他连忙把这块木头抽了出来熄灭了火，双手捧着，细细端详，爱不释手。这时烧火的挑夫回来了，责问蔡邕为何抽掉他生火的木材。蔡邕说：“你知道吗？这是一块很好的梧桐木，是作琴的好材料，你却当柴烧了。你肯卖吗？多少钱？”挑夫说：“既然你有用，就拿去用好了。”蔡邕深深地感谢挑夫。回到住地就动手把它雕成一张七弦琴，因琴尾正好在烧焦的地方，故给它起名为“焦尾琴”。这架“焦尾琴”与齐桓公的“号钟琴”、楚庄王的“绕梁琴”、司马相如的“绿绮琴”并列为中国古代四大名琴。</p>
+<h3 id="典故"><a class="header" href="#典故">典故</a></h3>
+<p>这蔡邕的“焦尾”琴还有一段有趣的故事。</p>
+<p>据《后汉书·蔡邕列传》记载：吴人有烧桐以爨者，邕闻火烈之声，知其良木，因请而裁为琴，果有美音，而其尾焦，故时人名曰“焦尾琴”焉。初，邕在陈留也，其邻人有以酒食召邕者，比往而酒已酣焉。客有弹琴于屏，邕至门试潜听之，曰：“嘻！以乐召我而有杀心，何也？”遂反。将命者告主人曰：“蔡君向来，至门而去。”邕素为乡邦所宗，主人遽自追而问其故，邕具以告，莫不怃然。弹琴者曰：“我向鼓弦，见螳螂方向鸣蝉，蝉将去而未飞，螳螂为之一前一却。吾心耸然，惟恐螳螂之失之也，此岂为杀心而形于声者乎？”邕莞然而笑曰：“此足以当之矣。”</p>
+<p>汉末，蔡邕遇害后，焦尾琴保存在皇家内库之中。据说齐明帝在位时，曾取出焦尾琴请古琴高手王仲雄弹奏。王仲雄连续弹奏了五天，并即兴创作了《懊恼曲》献给明帝。后传至南唐中主李璟手中，后又赠与大周后。李煜死后归宋室所有。据传，明朝昆山人王逢年还收藏着蔡邕制造的焦尾琴。</p>
+<p>汉灵帝时（公元168年—公元189年），陈留郡的蔡邕，因为多次上书陈述自己的政见，违背了皇帝的旨意，又因为得宠的宦官憎恶他，他考虑到免不了要遭到毒害，于是就流亡江河湖海，足迹远达吴郡、会稽郡。他来到吴郡时，吴郡人烧桐木来做饭，蔡邕听见火势猛烈的声音，便说：“这是块好木料啊！”因而请求把桐木给他，他把这段桐木削制成琴，果然能弹出优美悦耳的声音。但是琴的尾都已经烧焦，因而把它取名为“焦尾琴”。</p>
+<p>原文：</p>
+<p>汉灵帝时，陈留蔡邕，以数上书陈奏，忤上旨意，又内宠恶之，虑不免，乃亡命江海，远迹吴会。至吴，吴人有烧桐以爨者，邕闻火烈声，曰：“此良材也。”因请之，削以为琴，果有美音。而其尾焦，因名“焦尾琴。”《搜神记》</p>
+<h3 id="名琴故里"><a class="header" href="#名琴故里">名琴故里</a></h3>
+<p>2009年9月26日，中国民族器乐学会会长冯光钰教授在江苏省溧阳市举行以“琴筝丝竹颂中华”为主题的大型民乐盛典音乐会上正式宣布溧阳是中国四大古琴之一焦尾琴的故里。此前，中国民族器乐学会组织专家查检史料，并在溧阳观山蔡邕读书台一带实地采集，多方科学考证，确定溧阳就是东汉蔡邕亲手制作焦尾琴的地方。</p>
+<p>中国古琴是世界非物质文化遗产，四大古琴之一有焦尾琴。此古琴是东汉著名文学家、音乐家蔡邕亲手制作。据史料记载，蔡邕亡命江海，远迹吴会，十二年，其间隐居在吴楚交界的溧阳观山、黄山湖一带。传说蔡邕曾在观山一农家灶堂里抢出一段尚未烧完的青桐木，他依据青桐木的长短、形状，制成一张七弦琴，音色奇绝，因琴尾尚留有焦痕，故取琴名为“焦尾”。观山一带仍有片片青桐，观山与羡山之间的一座小山上，有蔡邕读书台遗址，当地乡民仍流传着蔡邕故事。</p>
+<p>中国民族器乐学会会长冯光钰教授说，溧阳是焦尾琴故里的发现和确认，揭开焦尾琴出自何地的千古之谜，是中国古琴界的一件大事。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../the-Inner-Eastern-Palaces/gu-qin-shu-yu-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../the-Inner-Western-Palaces/README.md.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../the-Inner-Eastern-Palaces/gu-qin-shu-yu-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../the-Inner-Western-Palaces/README.md.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
