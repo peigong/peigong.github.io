@@ -17,7 +17,7 @@ title: 导游笔记
 - [天坛](./guide/the-temple-of-heaven)
 - [颐和园](./guide/the-summer-palace)
 - [圆明园](./guide/the-winter-palace)
-- [雍和宫](./guide/YongHeGong)
+- [雍和宫](./guide/the-lama-temple)
 - [恭王府](./guide/prince-gongs-mansion)
 - [长城](./guide/the-great-wall)
 - [明十三陵](./guide/ming-tombs)
