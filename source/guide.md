@@ -29,6 +29,7 @@ title: 导游笔记
 - [景山](./guide/jingshan-park)
 - [北海公园](./guide/beihaipark)
 - [陶然亭公园](./guide/taoranting-park)
+- [卢沟桥](./guide/lugou-bridge)
 - [北京大观园](./guide/beijing-grand-view-garden)
 - [园博园](./guide/garden-expo)
 - [雁栖湖](./guide/YanqiLake)
@@ -48,6 +49,8 @@ title: 导游笔记
 - [中国人民抗日战争纪念馆](./guide/1937china)
 - [北京鲁迅博物馆](./guide/beijing-luxun-museum)
 - [中国科学技术馆](./guide/cstm)
+- [‌中国工艺美术馆](./guide/gmfyg)
+- [保利艺术博物馆](./guide/polyartmuseum)
 - [中国农业博物馆](./guide/ciae)
 
 ## 北京的文化
