@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>仁寿殿 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/the-hall-of-benevolence-and-longevity.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="仁寿殿"><a class="header" href="#仁寿殿">仁寿殿</a></h1>
+<h2 id="仁寿殿-1"><a class="header" href="#仁寿殿-1">仁寿殿</a></h2>
+<p>仁寿殿是慈禧太后和光绪皇帝处理国家大事的地方，相当于皇家的“办公室”。</p>
+<p>从乾隆十五年到乾隆六十年，乾隆皇帝到清漪园六十六次，但是他恪守诺言，午时前一定离清漪园回圆明园。</p>
+<p>修建颐和园是为了奉养太后，改称仁寿殿，匾额是光绪皇帝御笔。仁寿殿内檐悬大圆宝镜匾，殿内悬寿协仁符。</p>
+<p>殿左右各陈一对大铜缸，缸肚处醒目地铸有【天地一家春】【光绪年制】的款识。天地一家春，本是圆明园的一处殿宇，慈禧太后说他在这里怀上的同治皇帝。所以，指令颐和园内的铜缸、铜龙、铜凤、铜鹤、铜花瓶都铸上【天地一家春】款识，以示先帝咸丰对他的无比恩宠。</p>
+<p>仁寿殿前露台上陈设的四只铜鼎大香炉，是乾隆年间所铸。</p>
+<h3 id="名字藏着大道理"><a class="header" href="#名字藏着大道理">名字藏着大道理</a></h3>
+<p>“仁寿”来自《论语》，意思是“仁爱又长寿”。乾隆皇帝希望用这个名字提醒自己，做个有德行、让百姓安宁的好皇帝。</p>
+<h3 id="外观超威严"><a class="header" href="#外观超威严">外观超威严</a></h3>
+<ul>
+<li>金色屋顶亮闪闪：屋顶铺着黄色琉璃瓦，屋脊上有小兽（龙、凤、狮子等），屋檐下的柱子是朱红色的，远远看过去金光闪闪，特别气派！</li>
+<li>门前有“保镖”：殿外台阶下有一对铜麒麟和铜龙，它们瞪大眼睛、张着嘴巴，好像在守护这里，不让坏人靠近！</li>
+</ul>
+<h3 id="殿里有啥宝贝"><a class="header" href="#殿里有啥宝贝">殿里有啥宝贝？</a></h3>
+<ul>
+<li>皇帝的宝座：殿中央有个巨大的宝座，四周环绕着雕刻精美的屏风，宝座上方挂着“寿协仁符”的匾额，是慈禧太后的御笔，意思是“长寿和仁爱相符”。</li>
+<li>神奇的镜子：宝座后面有一面大屏风，中间是玻璃镜，周围镶嵌着100多个不同写法的“寿”字，据说慈禧很喜欢这个“百寿镜”！</li>
+<li>会“喷水”的缸：殿外有几口大铜缸，夏天储水防火，冬天缸下烧炭防结冰，古人是不是很聪明？</li>
+</ul>
+<h3 id="这里发生过什么"><a class="header" href="#这里发生过什么">这里发生过什么？</a></h3>
+<ul>
+<li>光绪皇帝曾在这里接见外国使节，比如美国公使、日本首相。</li>
+<li>慈禧太后晚年常在这里“垂帘听政”，隔着帘子指挥大臣办事。</li>
+</ul>
+<h3 id="小知识和故宫的区别"><a class="header" href="#小知识和故宫的区别">小知识：和故宫的区别</a></h3>
+<p>故宫的金銮殿（太和殿）是举行大典的地方，而仁寿殿更像“日常办公室”，规模小一些，但一样庄重威严！</p>
+<h3 id="历史渊源"><a class="header" href="#历史渊源">历史渊源</a></h3>
+<p>仁寿殿始建于清乾隆十五年（1750年），当时叫勤政殿，咸丰十年（1860年）被英法联军烧毁，光绪十二年（1886年）重建，改名仁寿殿，取自《论语》中“仁者寿”之意。</p>
+<h3 id="建筑特色"><a class="header" href="#建筑特色">建筑特色</a></h3>
+<ul>
+<li>坐西朝东：仁寿殿坐西向东，与传统汉民族文化建筑方向不同，这体现了满族萨满教东方升起的太阳永不落的思想理念。</li>
+<li>外观宏伟：它建于汉白玉高石基上，面阔七间，进深五间，周围有廊，为卷棚歇山顶，上覆灰瓦，脊上有吻兽，檐下匾额用满汉两种文字书写“仁寿殿”三字。 </li>
+<li>装饰精美：殿柱涂红漆，门、窗为朱红色，采用规格最高的隔扇门，门以四扇为一组，上半部分是菱花格心，裙板和绦环板上浮雕如意纹，窗为槛窗形式随门，上下两扇，菱花格心，四角雕花贴金。</li>
+</ul>
+<h3 id="庭院陈设"><a class="header" href="#庭院陈设">庭院陈设</a></h3>
+<ul>
+<li>铜龙铜凤：殿前对称陈列着一对铜龙、一对铜凤，腹内中空，用以在朝会时焚香。与传统的龙在上凤在下不同，这里凤在中央昂首挺立，龙在两旁低附身躯，反映了当时慈禧太后掌权的政治局势。</li>
+<li>铜麒麟：庭院中有一只蹲在石须弥座上的铜铸麒麟，龙头、狮尾、鹿角、牛蹄、遍体鳞甲，造型奇特，是传说中的瑞兽，象征富贵吉祥。</li>
+<li>峰虚五老：院子里有五块太湖石，被称为“峰虚五老”，其中一块石头上刻有乾隆皇帝的御题诗“水木明瑟”，它们原是圆明园四十景之一“水木明瑟”的旧物。</li>
+</ul>
+<h3 id="殿内布置"><a class="header" href="#殿内布置">殿内布置</a></h3>
+<ul>
+<li>宝座屏风：明间正中有地平床，台上设有慈禧太后、光绪皇帝朝会大臣的宝座，由紫檀木精雕而成，椅背上雕有九条金龙。宝座前有御案，左右设有孔雀羽掌扇，后有镶着帖金框架的“寿”字屏风，屏风上雕有200多个不同书法的寿字。</li>
+<li>金字匾额：殿内高悬金字大匾“寿协仁符”，意为仁与寿君子兼而有之；殿内前柱匾“安乐延年”，殿内后柱楹联“金马晓明珂风清兰苑，铜龙晴转漏日永蓬壶”。</li>
+<li>百蝠捧寿：在南北暖阁山墙上分别挂有条幅，上书一个大“寿”字，寿字的四周和空档内共画了100只形态不同的蝙蝠，寓意“百福捧寿”。此外，殿堂内还摆设有景泰蓝凤凰、鹤灯、甪端熏炉等用品。</li>
+</ul>
+<h3 id="历史意义"><a class="header" href="#历史意义">历史意义</a></h3>
+<p>仁寿殿是慈禧太后和光绪皇帝住颐和园期间临朝理政，接受恭贺和接见外国使节的地方，是颐和园听政区的主要建筑，也是中国近代史上变法维新运动的策划地之一。1898年光绪皇帝曾在此殿召见改良派领袖康有为，揭开了维新变法的序幕。</p>
+<h2 id="圆明园的天地一家春"><a class="header" href="#圆明园的天地一家春">圆明园的天地一家春</a></h2>
+<h4 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h4>
+<ul>
+<li>初建与早期使用：“天地一家春”是圆明园九洲清晏东路后妃寝宫院七间正殿的内额，也是后妃寝院的总称，嘉庆皇帝生于此。咸丰时期，慈禧太后入宫赐号兰贵人也居于此，后晋封为嫔。</li>
+<li>焚毁与重修：1860年，英法联军火烧圆明园，天地一家春被烧毁。同治十二年（1873年），同治帝以向慈禧进寿为由，试图择要重修圆明园，九洲清晏是修缮重点，其中包括天地一家春殿等建筑，但次年七月因财力不足停工。同治十三年（1874年），慈禧在昔日敷春堂内选址新建一组建筑，赐名“天地一家春”。</li>
+<li>再次被毁：1900年，八国联军入侵北京，原存建筑皆毁于战乱。</li>
+</ul>
+<h4 id="建筑布局与特色"><a class="header" href="#建筑布局与特色">建筑布局与特色</a></h4>
+<ul>
+<li>整体布局：根据故宫博物院藏「天地一家春」烫样，建筑群分三路，中路为寝宫区，东路为戏楼，西路有花园、宫殿、楼台、亭榭、花木、山石等，四周以围墙围合。</li>
+<li>建筑特色：「天地一家春」主体建筑位于中路中央，屋顶为三个卷棚歇山顶，连后抱厦卷棚共四卷，建筑形式朴素典雅，别具一格。</li>
+</ul>
+<h4 id="慈禧太后的纪念意义"><a class="header" href="#慈禧太后的纪念意义">慈禧太后的纪念意义</a></h4>
+<p>慈禧太后对天地一家春念念不忘，在垂帘听政后铸造的陈设器物上几乎都铸有“天地一家春”字样，如颐和园仁寿殿前陈设的铜龙、铜凤的铜座上，乐寿堂、排云殿等院落内消防储水用的金缸上，都刻有此印记，以示对发迹之地的怀念。</p>
+<h2 id="地面建筑"><a class="header" href="#地面建筑">地面建筑</a></h2>
+<h3 id="延年井"><a class="header" href="#延年井">延年井</a></h3>
+<h2 id="相关人物"><a class="header" href="#相关人物">相关人物</a></h2>
+<h3 id="乾隆皇帝"><a class="header" href="#乾隆皇帝">乾隆皇帝</a></h3>
+<h3 id="慈安太后"><a class="header" href="#慈安太后">慈安太后</a></h3>
+<h3 id="慈禧太后"><a class="header" href="#慈禧太后">慈禧太后</a></h3>
+<h3 id="醇亲王奕譞"><a class="header" href="#醇亲王奕譞">醇亲王奕譞</a></h3>
+<h3 id="光绪皇帝"><a class="header" href="#光绪皇帝">光绪皇帝</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="the-east-palace-gate.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="the-garden-of-virtuous-harmony.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="the-east-palace-gate.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="the-garden-of-virtuous-harmony.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

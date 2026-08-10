@@ -1,0 +1,476 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>大国匠作 - ‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/exhibition-1/unit-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="大国匠作"><a class="header" href="#大国匠作">大国匠作</a></h1>
+<h2 id="玉雕松石---七仙女奏乐"><a class="header" href="#玉雕松石---七仙女奏乐">玉雕：松石 - 七仙女奏乐</a></h2>
+<ul>
+<li>制作年代：20世纪50年代</li>
+<li>产       地：湖北</li>
+</ul>
+<h3 id="展品介绍"><a class="header" href="#展品介绍">展品介绍</a></h3>
+<ul>
+<li>材质：绿松石</li>
+<li>尺寸：20cm×12cm×26cm</li>
+<li>作品表现了七位仙女脚踏样云、手执各式乐器凌空演奏的场景，七仙女神态优雅、祥和，人物布局错落有致，头饰华丽而富于变化，脸部刻画丰富而细腻，举手投足使人感到情趣无限，显示了立体雕刻技艺的娴熟。</li>
+</ul>
+<h2 id="玉雕珊瑚---梅兰竹菊"><a class="header" href="#玉雕珊瑚---梅兰竹菊">玉雕：珊瑚 - 梅兰竹菊</a></h2>
+<ul>
+<li>设       计：杨世昌</li>
+<li>制       作：杨世昌、满淑敏、李秀芳、李理明</li>
+<li>制作年代：1986年</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-1"><a class="header" href="#展品介绍-1">展品介绍</a></h3>
+<ul>
+<li>材质：珊瑚</li>
+<li>尺寸：30cm×16cm×34cm</li>
+<li>由中国工艺美术大师杨世昌进行设计，并与满淑敏、李秀芳、李理明共同制作。此件作品造型丰满，枝杈交错，秋菊多姿，梅枝苍老，枝头喜鹊鸣吹，青竹挺秀，兰花幽香。梅兰竹菊气韵生动，层次分明，花叶翻卷折叠自如有序，枝梗穿插变化多端，具有独特的艺术风格。</li>
+</ul>
+<h2 id="玉雕青玉---对鸡"><a class="header" href="#玉雕青玉---对鸡">玉雕：青玉 - 对鸡</a></h2>
+<ul>
+<li>制       作：张儒通</li>
+<li>制作年代：20世纪60年代</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-2"><a class="header" href="#展品介绍-2">展品介绍</a></h3>
+<ul>
+<li>材质：青玉</li>
+<li>尺寸：24cm×11cm×27cm×2</li>
+<li>北京玉器厂设计制作。作品使用深碧色的青玉材质，质地纯正浑厚。对鸡造型，两鸡眼神专注，体态矫健、羽毛丰满。挺立的鸡冠、坚硬的鸡喙、有力的双足、挺翘的鸡尾等，塑造了对鸡惟妙惟肖的形象，动态十足。</li>
+</ul>
+<h2 id="青田石雕高粱"><a class="header" href="#青田石雕高粱">青田石雕：高粱</a></h2>
+<ul>
+<li>制       作：林如奎</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-3"><a class="header" href="#展品介绍-3">展品介绍</a></h3>
+<ul>
+<li>材质：青田石</li>
+<li>尺寸：27cm×14cm×45cm</li>
+<li>林如奎制作。作品构思巧妙，因材施艺，把石色利用得天衣无缝，恰到好处。几株红透壮实的高粱沉甸甸地悬挂着丰收的果实，淡绿的叶子拥抱住累累颗粒，散发着田野芳香的气息。</li>
+</ul>
+<h2 id="青田石雕夜巡"><a class="header" href="#青田石雕夜巡">青田石雕：夜巡</a></h2>
+<ul>
+<li>制作年代：20世纪60年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-4"><a class="header" href="#展品介绍-4">展品介绍</a></h3>
+<ul>
+<li>材质：青田石</li>
+<li>尺寸：25cm×6cm×17cm</li>
+<li>作品在咫尺之间巧妙地利用了石质颜色的变化，融海浪、人物及象征夜晚的黑色背景石为一体，将骑自行车人物躬身向前的姿态、坐于后座手持长枪向后防备的姿态，都刻画得栩栩如生。</li>
+</ul>
+<h2 id="寿山石雕六盘山"><a class="header" href="#寿山石雕六盘山">寿山石雕：六盘山</a></h2>
+<ul>
+<li>制作年代：20世纪60年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-5"><a class="header" href="#展品介绍-5">展品介绍</a></h3>
+<ul>
+<li>材质：寿山石</li>
+<li>尺寸：27cm×12cm×21cm</li>
+<li>郭功森制作。毛泽东曾经在长征途中写下“今日长缨在手，何时缚住苍龙”的豪迈诗句。寿山石雕作品《六盘山》描绘的就是这个场景，作者将人物、山体、植物、云朵等进行了因色施艺的雕刻，表现了红军于险峻的山间攀登最终登顶的场景。</li>
+</ul>
+<h2 id="青田石雕光阴生命"><a class="header" href="#青田石雕光阴生命">青田石雕：光阴·生命</a></h2>
+<ul>
+<li>制       作：周百琦</li>
+<li>制作年代：1987年</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-6"><a class="header" href="#展品介绍-6">展品介绍</a></h3>
+<ul>
+<li>材质：青田石</li>
+<li>尺寸：43cm×20cm×34cm</li>
+<li>周百琦制作。用料为寻常的青田石，作品表现树根上生长的一簇簇活生生的、鲜嫩的小蘑菇。苍老灰黑的树根和新生鲜艳的蘑菇形成鲜明对比。展现出作者对于生命、时间的思考。</li>
+</ul>
+<h2 id="寿山石雕求偶鸡"><a class="header" href="#寿山石雕求偶鸡">寿山石雕：求偶鸡</a></h2>
+<ul>
+<li>制作年代：20世纪50年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-7"><a class="header" href="#展品介绍-7">展品介绍</a></h3>
+<ul>
+<li>材质：寿山石</li>
+<li>尺寸：50cm×30cm×33cm</li>
+<li>陈敬祥制作。作品以寿山石原料固有的特点和天然色彩雕成，表现了一只母鸡被套在笼子里急切地伸出头向外张望以及笼子外围绕的公鸡和小鸡的形象，整体形神兼备。这件作品采用了难度极大的三维镂空雕刻手法。</li>
+</ul>
+<h2 id="寿山石雕硕果累累"><a class="header" href="#寿山石雕硕果累累">寿山石雕：硕果累累</a></h2>
+<ul>
+<li>制作年代：20世纪70年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-8"><a class="header" href="#展品介绍-8">展品介绍</a></h3>
+<ul>
+<li>材质：寿山石</li>
+<li>尺寸：42cm×25cm×45cm</li>
+<li>冯久和制作。它是寿山石雕史上一个重要的节点，开创了寿山石大型花果题材雕刻的先河，是花卉、瓜果传统题材推陈出新的佳作。1972年展出时，莅临参观的邓小平同志评价说：“福建的寿山石雕，俏色利用极美、极美！”</li>
+</ul>
+<h2 id="竹编竹丝扇"><a class="header" href="#竹编竹丝扇">竹编：竹丝扇</a></h2>
+<ul>
+<li>制       作：龚玉文</li>
+<li>制作年代：1959年</li>
+<li>产       地：四川</li>
+</ul>
+<h3 id="展品介绍-9"><a class="header" href="#展品介绍-9">展品介绍</a></h3>
+<ul>
+<li>工艺：竹编</li>
+<li>尺寸：26cm×36cm</li>
+<li>这幅竹丝扇由龚玉文编制，表现出了踏云飞舞、衣裙翩跹的飞天形象。中国竹丝扇制作时须采用质优黄竹，经几十道工序加工，制成透明莹洁、细若发丝的竹丝，然后对照名家字画用1000根以上的竹丝编织而成。</li>
+</ul>
+<h2 id="黄杨木雕柳枝观音"><a class="header" href="#黄杨木雕柳枝观音">黄杨木雕：柳枝观音</a></h2>
+<ul>
+<li>制       作：王凤祚</li>
+<li>制作年代：1982年</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-10"><a class="header" href="#展品介绍-10">展品介绍</a></h3>
+<ul>
+<li>材质：黄杨木</li>
+<li>尺寸：10cm×10cm×40cm</li>
+<li>王凤祚制作。作品融中西表现技法于一体，观音左手拿柳枝，右手提小篮，头微微下低，形象秀丽娴静，慈祥而典雅，生动传神。</li>
+</ul>
+<h2 id="黄杨木雕藏族饲养员"><a class="header" href="#黄杨木雕藏族饲养员">黄杨木雕：藏族饲养员</a></h2>
+<ul>
+<li>制作年代：20世纪70年代</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-11"><a class="header" href="#展品介绍-11">展品介绍</a></h3>
+<ul>
+<li>工艺：黄杨木雕</li>
+<li>尺寸：15cm×8cm×15cm</li>
+<li>黄杨木质地坚细，色黄而温润。作品采用圆雕手法雕刻了一位藏族女饲养员和牦牛的形象，饲养员左手搭在牦牛身上，右手手提木桶，表现出与牦牛的亲昵感情，人物和动物的造型均古朴自然，神态生动，栩栩如生。</li>
+</ul>
+<h2 id="黄杨木雕泼水节"><a class="header" href="#黄杨木雕泼水节">黄杨木雕：泼水节</a></h2>
+<ul>
+<li>制       作：王笃芳</li>
+<li>制作年代：1979年</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-12"><a class="header" href="#展品介绍-12">展品介绍</a></h3>
+<ul>
+<li>材质：黄杨木</li>
+<li>尺寸：14cm×10cm×32cm</li>
+<li>王笃芳制作。作品雕刻了一位婀娜少女举手遮挡前额提防别人泼水的形象，整体设计非常简洁，仅将女子腰间的裙褶做细微纹饰装饰和凸起表现，其他部分均不加任何装饰，别出心裁，不落窠臼。</li>
+</ul>
+<h2 id="竹编苏武持节牧羊"><a class="header" href="#竹编苏武持节牧羊">竹编：苏武持节牧羊</a></h2>
+<ul>
+<li>制       作：俞樟根</li>
+<li>制作年代：1978年</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-13"><a class="header" href="#展品介绍-13">展品介绍</a></h3>
+<ul>
+<li>工艺：竹编</li>
+<li>尺寸：73cm×52cm×86cm</li>
+<li>俞樟根制作。作品表现了汉武帝时期苏武被匈奴扣留，被迫在北海牧羊期间，一直节不离手，始终坚持自己的汉朝使者身份，坚贞不屈的故事。作品中苏武手持的节，是古代使者的凭证物。</li>
+</ul>
+<h2 id="织绣-绒绣-宋庆龄像"><a class="header" href="#织绣-绒绣-宋庆龄像">织绣 绒绣 宋庆龄像</a></h2>
+<ul>
+<li>制       作：高婉玉</li>
+<li>制作年代：1989年</li>
+<li>产       地：上海</li>
+</ul>
+<h3 id="展品介绍-14"><a class="header" href="#展品介绍-14">展品介绍</a></h3>
+<ul>
+<li>工艺：绒绣</li>
+<li>尺寸：89cm×120cm</li>
+<li>高婉玉绣制。这件绒绣宋庆龄像，其蓝本选自于宋庆龄读书时的一张照片，将其用绒绣技法重新表现，充分展现宋庆龄读书时的优雅娴静之态。</li>
+</ul>
+<h2 id="织绣机绣---铁人王进喜"><a class="header" href="#织绣机绣---铁人王进喜">织绣：机绣 - 铁人王进喜</a></h2>
+<ul>
+<li>制作年代：1995年</li>
+<li>产       地：上海</li>
+</ul>
+<h3 id="展品介绍-15"><a class="header" href="#展品介绍-15">展品介绍</a></h3>
+<ul>
+<li>工艺：绒绣</li>
+<li>尺寸：85cm×98cm</li>
+<li>作品采用绒绣工艺绣制，展现铁人王进喜身披棉袄、手持书籍认真学习的场景。王进喜是大庆油田的石油工人，他因用自己的身体制伏井喷而家喻户晓，人称“铁人”，铁人精神集中体现出我国石油工人的精神风貌。</li>
+</ul>
+<h2 id="织绣湘绣---虎"><a class="header" href="#织绣湘绣---虎">织绣：湘绣 - 虎</a></h2>
+<ul>
+<li>设       计：邵春林</li>
+<li>制       作：刘爱云等</li>
+<li>制作年代：1982年</li>
+<li>产       地：湖南</li>
+</ul>
+<h3 id="展品介绍-16"><a class="header" href="#展品介绍-16">展品介绍</a></h3>
+<ul>
+<li>工艺：湘绣</li>
+<li>尺寸：100cm×150cm</li>
+<li>邵春林设计，刘爱云绣制。整幅作品采用湘绣独创的针法“鬅(péng)毛针”结合旋游针、绒毛针、毛针等针法绣制。采用白色真丝库缎，绣线为纯蚕丝线。绣品中的猛虎双眼圆睁，侧耳聆听，动静之间尽显虎威。</li>
+</ul>
+<h2 id="织绣湘绣---狮"><a class="header" href="#织绣湘绣---狮">织绣：湘绣 - 狮</a></h2>
+<ul>
+<li>设       计：杨应修</li>
+<li>制       作：刘爱云等</li>
+<li>制作年代：1982年</li>
+<li>产       地：湖南</li>
+</ul>
+<h3 id="展品介绍-17"><a class="header" href="#展品介绍-17">展品介绍</a></h3>
+<ul>
+<li>工艺：湘绣</li>
+<li>尺寸：100cm×150cm</li>
+<li>刘爱云绣制。作品在刺绣技艺上，运用鬅毛针法表现出蓬松刚劲的雄狮毛发，显得威猛而有生气，与采用毛针法表现的可爱幼狮形成对比。画面中雄狮抚爱幼狮，呢喃憨厚，情态可亲。作品活脱欲动的艺术效果，令人叹为观止。</li>
+</ul>
+<h2 id="钧瓷双龙戏珠瓶"><a class="header" href="#钧瓷双龙戏珠瓶">钧瓷：双龙戏珠瓶</a></h2>
+<ul>
+<li>制       作：刘富安</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：河南</li>
+</ul>
+<h3 id="展品介绍-18"><a class="header" href="#展品介绍-18">展品介绍</a></h3>
+<ul>
+<li>材质：钧瓷</li>
+<li>尺寸：12cm×15cm×40cm</li>
+<li>刘富安制作。瓶两侧各塑一龙，昂头向上，栩栩如生。龙尾部两个转动灵活的环采用新的技艺，将死环变活环。此瓶不仅造型、釉色迷人，其胎质同样冶炼精纯，细腻坚实，用手一敲，声音圆润。</li>
+</ul>
+<h2 id="紫砂矮井栏壶"><a class="header" href="#紫砂矮井栏壶">紫砂：矮井栏壶</a></h2>
+<ul>
+<li>制       作：顾景舟</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：江苏</li>
+</ul>
+<h3 id="展品介绍-19"><a class="header" href="#展品介绍-19">展品介绍</a></h3>
+<ul>
+<li>材质：紫砂</li>
+<li>尺寸：7cm×11cm×8cm</li>
+<li>顾景舟制作。这件紫砂矮井栏壶壶体线形单纯、流畅，造型整体统一。壶体的转折不留硬线，壶嘴短而粗，粘接面积较大，出水口收缩变小，强调其使用功能。壶钮比例恰当，令整个壶体完美统一，和谐有致。</li>
+</ul>
+<h2 id="紫砂-桃圣壶"><a class="header" href="#紫砂-桃圣壶">紫砂 桃圣壶</a></h2>
+<ul>
+<li>制       作：汪寅仙</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：江苏</li>
+</ul>
+<h3 id="展品介绍-20"><a class="header" href="#展品介绍-20">展品介绍</a></h3>
+<ul>
+<li>材质：紫砂</li>
+<li>尺寸：9cm×5cm×6cm</li>
+<li>汪寅仙制作。这件“桃圣”壶是最接近明末项圣思制作的桃形杯紫砂的变形作品，它以寿桃为壶体，桃枝为壶把，散出的若干枝条攀爬、蔓延至壶身、壶底，将整器托起，浑然一体。</li>
+</ul>
+<h2 id="黑陶晨曲尊"><a class="header" href="#黑陶晨曲尊">黑陶：晨曲尊</a></h2>
+<ul>
+<li>制       作：杨永善</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-21"><a class="header" href="#展品介绍-21">展品介绍</a></h3>
+<ul>
+<li>材质：黑陶</li>
+<li>尺寸：8cm×10cm×30cm</li>
+<li>杨永善制作。作品造型比例协调，尊的腹部刻画有三角、圆圈、五角星、树叶等图案，通过多种图形的结合展现了蝉在树上演唱“晨曲”的景象。黑陶特有的黑亮色泽和尊的典雅形制相结合，形成一种庄重古朴的视觉效果。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../exhibition-1/unit-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../exhibition-1/unit-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../exhibition-1/unit-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../exhibition-1/unit-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

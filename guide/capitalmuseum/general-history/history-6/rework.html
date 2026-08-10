@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>明朝对元大都的拆迁 - 首都博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">首都博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/general-history/history-6/rework.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="明朝对元大都的拆迁"><a class="header" href="#明朝对元大都的拆迁">明朝对元大都的拆迁</a></h1>
+<p>明朝对元大都的拆改并非一次性完成，而是横跨洪武、永乐、正统三朝，分阶段推进。整体脉络与动因如下。</p>
+<h2 id="一时间线"><a class="header" href="#一时间线">一、时间线</a></h2>
+<ol>
+<li>洪武元年（1368）—— 接管，未拆宫</li>
+</ol>
+<p>徐达入城后“封府库、封故宫殿门”，以张焕带兵守护，明确“无得侵暴”。元大内（大明殿、延春阁等）在洪武初年基本保留，所谓“徐达焚毁元宫”属后世讹传。</p>
+<p>同年改大都为北平府。</p>
+<ol start="2">
+<li>洪武元—四年（1368–1371）—— 缩建北城（最早的大规模拆除）</li>
+</ol>
+<p>原因：北部人口稀少、城围过广、不便防守。徐达、华云龙主持，在北城墙以南约 2.8 公里（俗称“五里”）另筑新城，东西墙沿用元旧。</p>
+<p>洪武四年正式废弃原北墙及安贞、健德、光熙、肃清四门；原北段城墙、城楼及划在城外的部分官署宅邸被拆除或弃用，元土城北段此后逐渐沦为郊野（“土城”），明代仍偶作防御依托，未彻底铲平。</p>
+<ol start="3">
+<li>洪武时期（约 1370 年代）—— 局部拆改宫室</li>
+</ol>
+<p>朱元璋定都南京，无意以北平为京师，但封燕王朱棣驻此。为“去胡元之制”，将具游牧、藏传佛教、伊斯兰风格的元宫次要建筑（兴圣宫、隆福宫部分殿宇，如延华殿、维吾尔殿等）逐步拆毁，核心区（大明殿一带）仍暂存，改作燕王府使用。</p>
+<ol start="4">
+<li>永乐十四—十八年（1416–1420）—— 彻底拆元宫、建紫禁城</li>
+</ol>
+<p>永乐定都北京，以南京宫殿为蓝本。将元大内主体（尤其北部延春阁一组）彻底拆毁，渣土堆于延春阁旧址，培为“镇山”——即今景山。</p>
+<p>紫禁城建于元大内南半部，东西墙部分沿用元旧，南北墙南拓；同时拆元大都几何中轴标识（旧鼓楼、钟楼、中心阁），南移重建钟鼓楼，确立贯穿紫禁城—景山—鼓楼的单条中轴线。</p>
+<ol start="5">
+<li>永乐十七年（1419）</li>
+</ol>
+<p>南城墙向南推移约 0.7 公里（二里），原元南墙未完全拆除，后渐湮为土丘。</p>
+<ol start="6">
+<li>正统元—四年（1436–1439）</li>
+</ol>
+<p>九门城楼、瓮城、角楼、城壕、砖包城墙陆续完工；城门悉数改名（丽正→正阳，文明→崇文，顺承→宣武，齐化→朝阳，平则→阜成等），元大都门制彻底替换。</p>
+<h2 id="二拆除原因"><a class="header" href="#二拆除原因">二、拆除原因</a></h2>
+<ol>
+<li>军事与实用层面</li>
+</ol>
+<p>北部空旷难守：洪武初缩城是最早、最务实的一步，减少防线长度、集中兵力，应对北元残余。</p>
+<p>永乐拓南、正统包砖，则是配合新都功能与城防升级。</p>
+<ol start="2">
+<li>政治象征与“鼎革”逻辑</li>
+</ol>
+<p>中国古代王朝更替常有“毁前朝标识”传统；加之元末口号“驱逐胡虏，恢复中华”，明朝需在空间上清除蒙元符号、回归唐宋汉制。</p>
+<p>典型表现：</p>
+<p>拆元宫、建新宫，制度“一如南京”，明示不与元续；</p>
+<p>延春阁旧址堆景山为“镇山”，取“洿其宫而潴/压焉”的压胜之意，镇残元王气；</p>
+<p>改城门名、重构中轴线与“大衍之数四十九”模数，替换元大都“九五之尊”数理体系。</p>
+<ol start="3">
+<li>礼制与规划重构</li>
+</ol>
+<p>元大都是按蒙古族王朝理念平地新建的街巷制都城；明朝在街道胡同基本沿用前提下，只动“标识性建筑”（宫、庙、署、门、墙），以最小成本完成政治—文化置换。</p>
+<p>简言之：</p>
+<p>洪武主打“缩城 + 局部去元化”，宫室基本保全；</p>
+<p>永乐才是元大内主体被彻底拆除、紫禁城与景山成型的关键阶段；</p>
+<p>正统完成城门—城防的最后汉化包装。</p>
+<p>动因上，军事防守是起点，“厌胜镇王气 + 恢复中华正统”才是持续拆改的核心驱动力。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../general-history/history-5/Avalokitesvara-form-history.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../general-history/history-7/song-ti.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../general-history/history-5/Avalokitesvara-form-history.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../general-history/history-7/song-ti.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

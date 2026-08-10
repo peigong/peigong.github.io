@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>坤舆万国全图 - 首都博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">首都博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/general-history/history-7/kun-yu-wan-guo-quan-tu.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="坤舆万国全图"><a class="header" href="#坤舆万国全图">坤舆万国全图</a></h1>
+<h2 id="版本疑点"><a class="header" href="#版本疑点">版本疑点</a></h2>
+<p>《坤舆万国全图》（1602年）主流史学界公认是利玛窦提供西方世界地图蓝本（主要参考奥特里乌斯《地球大观》），与明朝官员李之藻合作翻译、增补中国地理后刊刻的，属于中西合作产物，利玛窦是主导者。图上也有利玛窦自序及李之藻跋文为证。</p>
+<p>但有学者（以李兆良为代表）提出"非利玛窦原创绘制说"，认为底图是明代中国人（郑和船队）早先绘制的世界地图，利玛窦仅参与整理润色。以下是"反方"（否定利玛窦为真正绘制者）的主要证据：</p>
+<p>"反利玛窦绘制说"的主要证据（李兆良等新说）</p>
+<p>① 出现欧洲同期不知的美洲地理细节</p>
+<p>图中南美洲西岸地形、部分美洲地名（如"哥泥白斯湖""雪山""美湾"等）描绘精度超过1602年欧洲地图，欧洲要晚近百年才有同等精度。若利玛窦照抄欧洲原图不应超前。</p>
+<p>② 欧洲本土关键地名严重缺失</p>
+<p>作为欧洲人绘制的世界地图，却未标教皇国、佛罗伦萨、威尼斯、哈布斯堡等欧洲核心政治实体，不符合欧洲制图惯例——欧洲人不会在自己画的世界地图上省略本国重要地名。</p>
+<p>③ 保留明代早期（永乐—宣德）地名与称谓</p>
+<p>越南标"交趾"而非万历年惯用的"安南"（1428年后已改称安南）</p>
+<p>出现"榆木川"（明成祖朱棣驾崩地）、"杀胡镇""远安镇""斡难河"等永乐北征特有地名，万历时已无此行政建制意义</p>
+<p>→ 说明底图成图时间可能在15世纪初而非1602年。</p>
+<p>④ 外文地名汉译体系不同于利玛窦习惯</p>
+<p>部分域外地名的音译用字与利玛窦其他著作（如《天主实义》中外来词译法）及同期耶稣会士译名规律不符，似为中文母语者据某种原始资料自行音译。</p>
+<p>⑤  《利玛窦中国札记》版本疑点</p>
+<p>李兆良指出金尼阁整理的法文版《利玛窦中国札记》删去了利玛窦提及"中国人原有世界地图"相关内容，认为有意掩盖地图真正来源（此点为主流学界质疑）。</p>
+<p>主流学界对反方说的反驳（供参考）</p>
+<p>利玛窦明确在书信日记中记载与李之藻合作绘制，序跋多人作证</p>
+<p>地图采用墨卡托式投影、五大洲框架、经纬度网格均为16世纪欧洲制图学特征</p>
+<p>部分"独有地名"可在欧洲增订版地图中找到，不能仅凭早期版奥特里乌斯未收录就认定非欧源</p>
+<p>中国部分地名由李之藻依《广舆图》等本土文献补入，可解释时代错位</p>
+<p>简单说：官方/教科书答案是利玛窦与李之藻合作绘制（1602）；反方说底图可能为明代中国人更早所绘，利玛窦起整合作用而非原创。反方说目前未被主流史学界采纳。</p>
+<h2 id="正方和反方"><a class="header" href="#正方和反方">正方和反方</a></h2>
+<p>《坤舆万国全图》（1602年）主流史学界公认由意大利传教士利玛窦以欧洲世界地图（主要参考奥特里乌斯《地球大观》）为底本，与明朝官员李之藻合作翻译、增补中国地理后刊刻，属中西合作产物，利玛窦为主导绘制者。但也有学者（以李兆良为代表）提出"非利玛窦原创说"，认为底图是明代中国人（郑和船队）更早绘制的世界地图，利玛窦仅参与整理。正反方证据如下：</p>
+<h3 id="正方利玛窦与李之藻绘制说主流观点"><a class="header" href="#正方利玛窦与李之藻绘制说主流观点">正方：利玛窦（与李之藻）绘制说——主流观点</a></h3>
+<ul>
+<li>文献记载明确：原刻本有利玛窦自序及李之藻、陈民志、祁光宗等人跋文，均写明"利玛窦取敝邑原图及通志诸书，重为考定"，利玛窦 《中国札记》也详述在北京绘制过程。</li>
+<li>制图体系为16世纪欧洲特征：采用经纬度网格、墨卡托式投影、五大洲框架、球形地球概念，与同期欧洲奥特里乌斯、墨卡托地图体系一致，非中国传统计里画方。</li>
+<li>中国部分由李之藻据本土文献补入：如引用《广舆图》等标注中国府州地名，为迎合明朝"天下之中"观念特意将本初子午线偏移使中国居中——这是欧洲人迁就中国观念的刻意调整。</li>
+<li>时间线吻合：利玛窦1595年起在南昌、南京已绘过简化版世界地图，1602年在北京增补刊刻符合其活动轨迹。</li>
+</ul>
+<h3 id="反方非利玛窦原创绘制说李兆良等明代中国人底图说"><a class="header" href="#反方非利玛窦原创绘制说李兆良等明代中国人底图说">反方：非利玛窦原创绘制说（李兆良等"明代中国人底图说"）</a></h3>
+<ul>
+<li>美洲地理精度超同期欧洲：图中部分美洲西岸地形、地名（如"哥泥白斯湖""美湾"等）描绘精度超过1570年版《奥特里乌斯世界地图》，欧洲要晚数十年才有同等精度，不应是抄欧洲底图所得。</li>
+<li>欧洲核心政治地名缺失：作为欧洲人绘的世界地图却未标教皇国、威尼斯、佛罗伦萨、哈布斯堡等欧洲重要政治实体，不符合欧洲制图惯例。</li>
+<li>保留明初（永乐—宣德）专有时名：出现"榆木川"（成祖驾崩地）、"杀胡镇""斡难河""远安镇"等永乐北征特有地名，万历时已无此行政意义，说明底图可能成于15世纪初。</li>
+<li>外文地名译法不合利玛窦习惯：部分域外地名音译用字与利玛窦其他著作译名规律不同，似为中文母语者据未知原始资料自行音译。</li>
+<li> 《利玛窦中国札记》版本疑点：金尼阁整理法文版被认为删去利玛窦提及"中国人原有世界地图"内容，暗示有意掩盖真正来源（主流学界指出意大利文原稿仍存且明确记载绘图经过）。</li>
+</ul>
+<h3 id="补充说明"><a class="header" href="#补充说明">补充说明</a></h3>
+<p>目前主流中外史学界仍采信利玛窦—李之藻合作说，反方说尚未被普遍接受，主要争议焦点在于地图中部分美洲信息来源是否超出当时欧洲已知范围。</p>
+<h2 id="测绘美洲大陆"><a class="header" href="#测绘美洲大陆">测绘美洲大陆</a></h2>
+<p>哥伦布发现新大陆（1492年）后，欧洲人对美洲的测绘经历了从“误判”到“逐步确认”的过程：</p>
+<h3 id="一哥伦布时代14921506误判与早期草图"><a class="header" href="#一哥伦布时代14921506误判与早期草图">一、哥伦布时代（1492–1506）：误判与早期草图</a></h3>
+<ul>
+<li>1492年首航：哥伦布抵达巴哈马、古巴、 Hispaniola，误以为是亚洲边缘（印度/日本/中国）。</li>
+<li>1493–1504年后续航行：探索加勒比海、中美洲沿岸，仍未意识到是独立大洲。</li>
+<li>地图成果：仅有零散航海日志、海岸草图，无完整的美洲地图。</li>
+</ul>
+<h3 id="二命名与轮廓确立15001520年代"><a class="header" href="#二命名与轮廓确立15001520年代">二、命名与轮廓确立（1500–1520年代）</a></h3>
+<ul>
+<li>1500年前后：葡萄牙探险家（如卡布拉尔）抵达巴西海岸，开始意识到南美存在。</li>
+<li>1507年（关键节点）：
+<ul>
+<li>马丁·瓦尔德泽米勒出版《宇宙志导论》及附图《瓦尔德泽米勒世界地图》。</li>
+<li>首次使用“America”命名新大陆（致敬亚美利哥·韦斯普奇）。</li>
+<li>首次较完整描绘美洲南北轮廓。</li>
+</ul>
+</li>
+<li>1520年代：麦哲伦环球航行进一步验证美洲独立性。</li>
+</ul>
+<h3 id="三精确测绘与填补空白15301600年代"><a class="header" href="#三精确测绘与填补空白15301600年代">三、精确测绘与填补空白（1530–1600年代）</a></h3>
+<ul>
+<li>1530–1580年代：西班牙、葡萄牙、荷兰、英国探险家持续测绘：
+<ul>
+<li>皮萨罗、科尔特斯等征服并测绘墨西哥、秘鲁、安第斯山脉。</li>
+<li>德雷克等英国航海家补充北美西海岸。</li>
+</ul>
+</li>
+<li>1570年：亚伯拉罕·奥特柳斯出版《世界舞台》（Theatrum Orbis Terrarum），成为第一本现代世界地图集，美洲轮廓趋于成熟。</li>
+<li>1600年代：随着殖民深入，美洲内陆、河流、山脉细节日益精确。</li>
+</ul>
+<h3 id="总结时间线"><a class="header" href="#总结时间线">总结时间线</a></h3>
+<ul>
+<li>1492年：发现，但误判为亚洲。</li>
+<li>1507年：正式命名并绘制轮廓。</li>
+<li>1570年：纳入世界地图集，走向精确化。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../general-history/history-7/chao-zhu-ji-nian.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../general-history/history-7/gong-che.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../general-history/history-7/chao-zhu-ji-nian.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../general-history/history-7/gong-che.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>七七事变 - 卢沟桥 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">卢沟桥 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/77.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="七七事变"><a class="header" href="#七七事变">七七事变</a></h1>
+<p>七七事变，又称卢沟桥事变，发生于1937年7月7日，是日本继“九一八”事变对中国发动侵略战争的继续和发展，也是中国全面抗击日本侵略战争的起点 。</p>
+<p>1937年7月7日夜，驻丰台日军在卢沟桥以北地区举行以攻取卢沟桥为假想目标的军事演习；11时，日军诡称演习时一士兵离队失踪，要求进城搜查。遭到中国驻军拒绝后，日军迅即包围宛平县城。7月8日凌晨2时，第二十九军副军长兼北平市长秦德纯为防止事态扩大，与日方商定，双方派员前往调查；凌晨4时50分，日军向宛平县城发起攻击，强占宛平东北沙岗，打响攻城第一枪；同一天内，日军连续进攻宛平城三次，均遭中国守军英勇抵抗；北平当局令驻军坚守卢沟桥，国民政府外交部向日本大使提出口头抗议。7月11日起，日军以大炮轰击宛平城及其附近一带，战事由此扩大到八宝山、长辛店、廊坊、杨村等处，日军出动飞机在各处侦察扫射，战事时断时续。7月28日，日军向驻守在北平四郊的南苑、北苑、西苑的中国第29军发起猛烈攻击，经过5个多小时的战斗，中国守军伤亡2000余人，北平沦陷。9月22日，国共两党经过多轮谈判，正式建立以合作为基础的抗日民族统一战线。</p>
+<p>七七事变的发生标志着日本帝国主义发动全面侵华战争，也标志着中国全民族抗战的开端，由此开辟了世界反法西斯战争的东方主战场。中国抗日战争由局部抗战演变为全国抗战，中国社会各阶层开展不同形式的救亡运动。在中国全面抗战的影响下，世界格局呈现出向法西斯和反法西斯两个阵营发展的趋势。</p>
+<h2 id="事变背景"><a class="header" href="#事变背景">事变背景</a></h2>
+<h3 id="战略背景"><a class="header" href="#战略背景">战略背景</a></h3>
+<p>卢沟桥位于北京广安门外约十三公里处，是当时北平西南交通的咽喉要道，地处平汉、平绥、北宁三条铁路线的交叉中心，具有重要的军事战略地位。宛平县设治于此地，县城就在桥畔。桥北，有平汉铁路桥；南行，就是兵家必争的长辛店；往东约四公里，是平汉、北宁两路枢纽的丰台重镇。距丰台不远，则是南苑，是驻兵的重要地方。</p>
+<p>1936年，日本华北驻屯军以卑鄙的手段占领丰台，将下一个目标定在了卢沟桥。七七事变爆发前夕，北平的北、东、南三面已经被日军控制：北面，是部署于热河和察东的关东军一部；西北面，有关东军控制的伪蒙军8个师约4万人；东面，是伪“冀东防共自治政府”及其所统辖的约17000人的伪保安队；南面，日军已强占丰台，逼迫中国军队撤走。</p>
+<p>因此，卢沟桥成为北平对外的唯一通道，其战略地位更加重要。为占领这一战略要地，截断北平与南方各地的来往，进而控制冀察当局，使华北完全脱离中国中央政府，日军不断在卢沟桥附近进行挑衅性军事演习，形势严峻。</p>
+<h3 id="中方背景"><a class="header" href="#中方背景">中方背景</a></h3>
+<p>鸦片战争之后中国沦为半殖民地国家，甲午战争后，列强大大加快了对华侵略的步伐。包括日本在内的“八国联军”武装占领中国的首都北京达1年之久；日本强行在华北派遣“驻屯军”。1912年3月，袁世凯就任中华民国临时大总统，以袁世凯为首的北洋军阀政权建立起来。袁世凯对内镇压国民党，对外出卖国家主权，孙中山号召武力讨伐，“二次革命”失败。袁世凯镇压“二次革命”后，开始复辟帝制的活动。孙中山再次组织武力讨袁，护国运动爆发，袁世凯被迫取消帝制。此后，中国出现军阀割据的局面。</p>
+<p>1924年，中国国民党第一次全国代表大会召开，标志第一次国共合作为基础的统一战线正式建立。1927年4月12日，蒋介石发动反革命政变。四一二反革命政变发生后，国内政局迅速逆转。除以张作霖为首的北京政府外，蒋介石于4月18日在南京另行成立“国民政府”，与武汉的国民政府相对立。全中国形成北京、南京和武汉三个政权对峙的局面。1930年11月起，国民党对中央苏区进行多次围剿。</p>
+<p>随着满洲事变及上海事变的爆发，中国开始迅速着手整备空军，依靠美国和意大利的力量来发展空军，努力从两国购入器材、招聘教官、设立航空学校、新设扩张航空工厂并向外国派遣空军留学生。</p>
+<p>1935年8月1日，中共驻共产国际代表团王明等人，起草了《为抗日救国告全体同胞书》，即《八一宣言》；10月1日，以中华苏维埃中央政府和中共中央的名义在巴黎《救国报》正式发表，号召全国人民团结起来，停止内战，抗日救国，组织国防政府和抗日联军。1936年12月12日，西安事变爆发，蒋介石最终接受“停止内战，联共抗日”的主张。</p>
+<h3 id="日方背景"><a class="header" href="#日方背景">日方背景</a></h3>
+<p>日本早在明治维新时期，在确立近代天皇制的同时，迅速走上扩张侵略的军国主义道路，并制定以中国、朝鲜为主要侵略对象的所谓“大陆政策”。20世纪初叶，日本于日俄战争后取代俄国，在中国东北扩大殖民势力，屯驻关东军，设立殖民机构“南满铁路公司”，把东北作为对中国殖民扩张的基地。第一次世界大战期间，日本利用西方列强无暇东顾，极力扩大对华侵略，出兵山东，胁迫袁世凯接受日本妄图鲸吞中国的“二十一条要求”，把侵略魔掌伸向中国内地。</p>
+<p>一次大战后，日本企图通过加紧掠夺中国、朝鲜和其他亚洲国家，摆脱政治、经济危机，1927年的东方会议是日本扩大对华侵略的新起点，该会议在田中义一主持下，制定了《对华政策纲领》，确定以武力干涉中国内政，实现满蒙与中国的分离，进而向中国关内各省扩张的方针。</p>
+<p>1931年9月18日，日本对中国东北发动突然袭击，3个多月占领东北全境。翌年，日军进攻上海（一·二八事变），并攻占大片华北土地，威逼平津，又在东北建立伪“满洲国”、在华北搞所谓“自治运动”，妄图长期占领这些地区。1933年，日军炮击临榆城，强占山海关，进攻热河省；5月，压迫南京政府签订《塘沽协定》，使日本对东北三省和热河的占领实际上得到承认，并将冀东、平北地区划为所谓缓冲区。1936年，日本制定的总体战略计划“国策基准”出笼后，日本举行了一次“将官”演习，向参加演习的将官交代了全面发动侵华战争的战争部署。</p>
+<p>日本侵略者自1931年九·一八事变侵吞中国东北后，为进一步挑起全面侵华战争，陆续运兵入关。到1936年，日军已从东、西、北三面包围了北平（今北京）。1936年4月17日，日本政府决定强化中国驻屯军；6月起，驻丰台的日军连续举行挑衅性的军事演习；8月，日本陆军制定了1937年度的对华作战计划，准备用14个师团的兵力，占领华北、华中、华南地区。1937年1月20日，参谋本部在《关于对华政策给陆军省的建议》中，提出了“不再进行华北分治工作”，“真的到了不得已时，经过最大忍耐后，准备给予(中国)致命痛击”这都表明日本侵略者决心发动一场战争了。</p>
+<h2 id="事件经过"><a class="header" href="#事件经过">事件经过</a></h2>
+<h3 id="制造事端"><a class="header" href="#制造事端">制造事端</a></h3>
+<p>1937年7月7日夜（一说为19时30分），驻丰台日军河边旅团第一联队第三大队第八中队，由中队长清水节郎率领，在卢沟桥以北地区举行以攻取卢沟桥为假想目标的军事演习；11时许，日军诡称演习时一士兵离队失踪，要求进城搜查。在遭到中国驻军第二十九军第三十七师二一九团团长吉星文的严词拒绝后，日军迅即包围宛平县城；翌晨2时，第二十九军副军长兼北平市长秦德纯为防止事态扩大，经与日方商定，双方派员前往调查。</p>
+<h3 id="事态扩大"><a class="header" href="#事态扩大">事态扩大</a></h3>
+<p>日本北平特务机关长松井根据未经核实的丰台日军的报告向华北当局交涉时，丰台日本驻屯军一木清直大队长已经向联队长牟田口廉也报告，并得到批准，命令丰台日军“立即出动”开赴卢沟桥。</p>
+<p>7月8日，大队日军出现在卢沟桥，协助守卫桥头的第29军37师219团3营预备队十连排长沈忠明，跳出堑壕，站在掩体前伸出右手，制止日军进入警戒线。日军扬言搜寻失踪士兵，强行上前并开枪，沈忠明中弹当场牺牲；晨4时50分，日军向宛平县城猛烈攻击，并强占宛平东北沙岗，打响攻城第一枪，中国守军忍无可忍，奋起还击，日军在同一天内，连续进攻宛平城三次，并向平汉铁路桥及左侧的回龙庙阵地中国守军连连猛攻。中国守军110旅旅长何基沣发出誓死“与桥共存亡”的命令，并亲临前线指挥战斗。中国守军与日军浴血搏斗，没有子弹，抡起大刀，与日军展开肉搏战，两个排80余位中国守军，最后全部战死在桥头阵地；当天，北平当局令驻军坚守卢沟桥，宋哲元致电蒋介石，报告卢沟桥事变真相；同日，国民政府外交部为卢沟桥事变向日本大使提出口头抗议；同日，中共中央发布通电号召全中国军民团结起来，抵抗日本的侵略；同日，日本内阁会议提出所谓“事件不扩大，就地解决”的方针，欺骗世界舆论，麻痹国民党当局，争取时间调集部队。</p>
+<p>卢沟桥事变发生后，第29军的将领秦德纯、冯治安、张自忠等召开紧急会议，会后发表声明：“彼方要求须我军撤出卢沟桥城外，方免事态扩大，但我方以国家领土主权所关，未便轻易放弃，倘彼一再压迫，为正当防卫计，当不得不竭力周旋。”同时，第29军向防卫卢沟桥部队发出命令：“卢沟桥即为尔等坟墓，应与桥共存亡，不得后退。”旅长何基沣根据军部命令又向守桥部队下达三条命令：一、不同意日军进城；二、日军武力侵犯则坚决回击；三、守土有责，绝不退让，放弃阵地，军法从事。</p>
+<h3 id="停战谈判"><a class="header" href="#停战谈判">停战谈判</a></h3>
+<p>7月9日，第29军全歼日军一个中队，收复铁路桥和龙王庙，卢沟桥战场上出现暂时的沉寂。日军诡称“失踪日兵业已归队，一场误会希望和平解决”。北平、天津两地中日双方代表进行谈判。北平当局与日军达成协议：（1）双方立即停止射击；（2）日军撤退至永定河左岸，中国军队撤至右岸；（3）卢沟桥守备由河北保安队石友三部担任。翌日，中国军队撤退，日军不仅不履行诺言，反而大批调兵向中国军队进攻；7月10日，各方报告，日军已由天津、古北口、榆关等处陆续开到，且有大炮、坦克等向卢沟桥前进，已将大井村五里店等处占领，战事即将再发。</p>
+<p>7月11日，日本内阁决定，从关东军、朝鲜军和日本国内派遣7个师到华北；当天，平津当局与日军达成现地协定：（1）第二十九军代表声明向日军表示道歉，并惩办此次事变责任者；（2）取缔共产党、蓝衣社及其他抗日团体的抗日活动；（3）永定河以东不驻中国军队。同时，日军“以武清、丰台、宛平、昌平为第一线侵略出发点”，对北平城进行全面包围，并不断向四郊增兵进占。</p>
+<h3 id="战事再发"><a class="header" href="#战事再发">战事再发</a></h3>
+<p>7月11日起，日军时以大炮轰击宛平城及其附近一带，城内居民伤亡众多，团长吉星文负伤，于是将城内居民向城外比较安全地带疏散。战事由此扩大到八宝山、长辛店、廊坊、杨村等处，第29军各部分散于各处应敌。日军出动飞机在各处侦察扫射，战事时断时续。</p>
+<p>7月13日，毛泽东在延安号召“每一个共产党员与抗日的革命者，应准备随时出动到抗日的最前线”；7月15日，中共代表将《中国共产党为公布国共合作宣言》交给蒋介石。中共代表提议，以此《宣言》作为两党合作的政治基础，并由国民党公开发表。周恩来、秦邦宪、林伯渠在庐山与蒋介石、邵力子、张冲继续谈判。蒋介石宣布承认陕甘宁边区，但在红军改编方面尚有分歧。</p>
+<p>7月16日，东京五相会议，决议动员侵华日军40万人，确定迅速灭亡整个中国的政策；7月17日，日军百余人分别抵达顺义、昌平，并在昌平城上构筑防御工事；7月18日，日军由长城各口侵入昌平、通州等伪边区各县，昌平小汤山一带的日本便衣队活动猖獗，中国军队处于严防戒备中；7月20日，国民党军政部获悉日军企图先占领位于平西地区的蓝靛厂、万寿山、八里庄、西苑等地，然后切断平绥路，控扼北平至昌平一线。</p>
+<p>7月21日，日军撕毁协议，炮击宛平县城及长辛店驻军；7月25日晚，日军以修理电话为借口，与三十八师在廊坊驻军第113旅刘振三部发生激烈冲突，同时在大沽附近对38师一一二旅黄维纲之张宗衡团进行挑衅；7月26日，三十余辆汽车满载日兵，企图从北平广安门外冲向城内，经奋勇抵抗，日军未能得逞。</p>
+<p>7月27日，日军向大兴、南苑、丰台等地展开全线进犯，此时日方除继续施加军事压力外，并发出最后通牒，限第37师于28日午前撤出北平。宋哲元立即将通牒退回，予以拒绝，并将情况报告南京政府。与此同时，设立北平城防司令部，以张维藩为城防司令，准备固守北平。又于当晚派人远赴保定，催促孙连仲、万福麟等部，北上协同作战。</p>
+<h3 id="北平沦陷"><a class="header" href="#北平沦陷">北平沦陷</a></h3>
+<p>7月28日，在飞机、大炮的支援下，日本侵略者向驻守在北平四郊的南苑、北苑、西苑的中国第29军发起猛烈攻击。在5个多小时的战斗中，中国守军伤亡2000余人，第29军副军长佟麟阁、第132师师长赵登禹壮烈殉国，北平沦陷。</p>
+<h3 id="后续发展"><a class="header" href="#后续发展">后续发展</a></h3>
+<p>8月中旬，中共代表周恩来、朱德、叶剑英同蒋介石等就发表中共宣言和改编红军问题，在南京举行第五次谈判，将陕北的中央红军改编为国民革命军第八路军（简称八路军）；8月，中共中央在陕北洛川召开政治局扩大会议，通过《抗日救国十大纲领》，提出争取抗战胜利的全面抗战路线；8月25日，中共中央军委发布命令，中央红军改编为八路军，任命朱德、彭德怀为正、副总指挥，开赴华北抗日前线；9月22日，国民党中央通讯社发表《中共中央为公布国共合作宣言》；9月23日，蒋介石发表谈话，承认共产党的合法地位，抗日民族统一战线正式形成，第二次国共合作开始。</p>
+<h2 id="事变各方"><a class="header" href="#事变各方">事变各方</a></h2>
+<h3 id="中国国民革命军第29军"><a class="header" href="#中国国民革命军第29军">中国：国民革命军第29军</a></h3>
+<ul>
+<li>军长：宋哲元</li>
+<li>副军长：佟麟阁</li>
+<li>第37师，冯治安，北平西苑、保定、丰台、八宝山、卢沟桥和长辛店</li>
+<li>第38师，张自忠，天津、大沽、沧县、廊坊、韩柳墅、小站、马厂和大沽一带</li>
+<li>第132师，赵登禹，河北省大名、河间、广平、长垣</li>
+<li>第143师，刘汝明，张家口、张北，怀来</li>
+<li>第9骑兵师，郑大章，通县，南苑</li>
+<li>冀北保安司令部，石友三，黄寺</li>
+</ul>
+<h3 id="日本中国驻屯军"><a class="header" href="#日本中国驻屯军">日本：中国驻屯军</a></h3>
+<ul>
+<li>司令官：田代皖一郎中将、香月清司中将（接任）</li>
+<li>中国驻屯步兵第一联队（北平），联队长：牟田口廉也大佐</li>
+<li>中国驻屯步兵第二联队（天津），联队长：萱嶋高大佐</li>
+<li>步兵第三大队，大队长：一木清直少佐</li>
+<li>步兵第八中队，中队长：清水节郎大尉</li>
+<li>北平特务机关长，松井太久郎大佐</li>
+<li>陆军大臣，第40任首相，东条英机大将</li>
+<li>日本间谍，土肥原贤二中将</li>
+</ul>
+<h2 id="事件影响"><a class="header" href="#事件影响">事件影响</a></h2>
+<h3 id="国内影响"><a class="header" href="#国内影响">国内影响</a></h3>
+<h4 id="形成抗日民族统一战线"><a class="header" href="#形成抗日民族统一战线">形成抗日民族统一战线</a></h4>
+<p>“七七事变”揭开了全国抗日战争的序幕，促成了抗日民族统一战线的正式形成。“七七事变”使国民党站到了统一战线上，而成为民族统一战线确立的转折点。西安事变的和平解决，中国共产党虽然完成了“逼蒋抗日”到“联蒋抗日”的方针转变，蒋介石也暂时放弃了“攘外必先安内”的政策，在国民党五届三中全会通过中共提出的一些提议，但是蒋介石并没有即刻准备联合抗日事宜，而是希望通过外交政策和国际压力迫使日本当局放弃侵略。“七七”事变的发生，国家和民族到了生死存亡的关头，中日之间的民族矛盾成为国内的主要矛盾，七·七事变的第二天，中共中央通电全国，号召中国军民团结起来，共同抵抗日本侵略者。全国各族各界人民热烈响应，抗日救亡运动空前高涨。在这种形势下，蒋介石于7月17日在庐山发表谈话，宣布对日作战，抗日民族统一战线遂正式形成。</p>
+<p>“七七事变”标志着抗日战争的全面爆发。中共中央向全国发出通电“只有全民族实行抗战，才是我们的出路。并号召全国同胞，政府和军队团结起来，抵抗日寇的侵略”。蒋介石和国民党政府在庐山谈话中表示“如果战争一开，就是地无分南北，人无分老幼，皆有守土抗战之责任，皆应抱定牺牲一切之决心。”种种事实说明，“七七”事变的炮火点燃了全国人民抗日的热情，也警醒了国民政府的抗日决心，“七七”事变的发生不仅促进了全国抗日统一战线的正式形成，更标志着中国抗日战争的全面开始。</p>
+<h4 id="社会各阶层协同抗日"><a class="header" href="#社会各阶层协同抗日">社会各阶层协同抗日</a></h4>
+<p>七七事变后，中国社会各阶层开展积极的抗日活动。在中国共产党的领导和推动下，中国工人、农民、青年、妇女等各阶层民众的抗日救亡运动全面高涨起来。七七事变后，以北平、上海、武汉等几个大城市为中心的工人抗日救亡运动首先开展，北平工人联合会率先携带慰问品慰问29军受伤官兵，组织工人救护队到前方救护伤员。长辛店工人在民先队员带动下到卢沟桥担任救护工作，并协助赶筑防御工事。日商亚细亚丝业工厂工人不断离厂，以示抗议；沪西公大三厂工人因平津失陷而离厂达2000人。七七事变后两三月内，国民党正规部队南下，农民救亡运动在河北、山西、山东等北方农村兴起。在河北地区，数月之内，农救会发展到45县60万会员。翌年春，上海成立工人救亡协会，京沪、沪杭等线铁路工人建立了抗敌协会、车上服务团组织。随着日寇进攻，战线不断拉长，各地各界妇女组织各种战地服务团，奔赴前线为参战将士服务，其中有丁玲、胡兰畦、谢冰莹率领的18集团军西北战地服务团，上海劳动妇女战地服务团和湖南妇女战地服务团等。在工人、农民、青年、妇女各界开展救亡运动的同时，文教界、工商界、宗教界等也都开展了救亡运动。</p>
+<h3 id="国际影响"><a class="header" href="#国际影响">国际影响</a></h3>
+<p>“七七事变”的爆发开辟了世界反法西斯战争的东方战场的主战场，“七七事变”使得中国国内阶级关系发生变化，引起国际关系的重大改变，特别是东亚地区局势的紧张。“七七事变”只是日本占领中国，征服东亚，称霸世界的第一步，它的爆发改变了东亚及太平洋地区的国际秩序，使得法西斯战争进入一个新的阶段。一方面日德意三国紧密地联系在一起，建立法西斯同盟，致使三个战争策源地连成一个整体，以备发动世界性的侵略战争，另一方面，东方反法西斯战场又与西方反法西斯战场结合在一起，形成世界性的反法西斯战场，中国作为东方战场的主力军，由国民党组成的正面战场，共产党组成的敌后战场团结一致，粉碎了日军企图三个月灭亡中国的计划，中国的抗日战争极大地打乱了侵略者的计划，从一开始就超出了民族自卫战争的性质，此外苏联也以实际行动援助中国反侵略战争，英美等国也发起了世界人道主义的关怀，极力谴责日军的侵略行径。因此，“七七事变”开辟的中国战场不仅是世界反法西斯战场的重要组成部分，更是第二次世界大战的起点。</p>
+<h2 id="历史意义"><a class="header" href="#历史意义">历史意义</a></h2>
+<p>七七事变的整个过程清楚地表明，它是日本政府、财阀、政党的共同意志，绝不是什么日本少数军人牵着军部、政府的鼻子走。它是日本大陆政策的必然发展和有计划有准备的行动，是日本长期以来侵华野心的最终全面实施，也绝不是什么偶然事件。中国已经丧失了台湾、澎湖列岛和东北等一系列领土于日本侵略者之手，日本还霸占了中国剩余领土内一系列军事、经济主权，更甚而要侵占华北，中国已经到了忍无可忍、不得不还手的最后地步。日本知道中国已不可能再有任何的退让，渐进式的蚕食已经走到了尽头，再也行不通了。为此，日本急不可耐地抛弃了渐进式蚕食的方法，为了实现预定的大陆政策，对中国开始全面出击，企图根本上灭亡中国。然而，侵略者总要给自己粉饰一下，说什么是由于中国的“反日”行为才造成了日本的被迫反应：简直是一派胡言，潜台词无非是“中国应该顺从地接受日本的统治、占领和奴役”。而这，只能是日本侵略者自己的梦想罢了。</p>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="七七周年"><a class="header" href="#七七周年">七七周年</a></h3>
+<p>2014年7月7日是“七七事变”77周年纪念日。党和国家领导人在2014年7月7日上午到中国人民抗日战争纪念馆，同首都各界代表一起，隆重纪念全民族抗战爆发七十七周年。中央人民广播电台、中央电视台、中国国际广播电台现场直播纪念仪式，新华网、人民网、中国网络电视台同步直播。</p>
+<h3 id="历年纪念"><a class="header" href="#历年纪念">历年纪念</a></h3>
+<ul>
+<li>1987年7月7日，全民族抗战爆发50周年之际，坐落于全民族抗战爆发地——北京卢沟桥畔的宛平城内的中国人民抗日战争纪念馆正式对外开放，邓小平同志亲自题写了馆名。</li>
+<li>1997年7月7日，纪念馆二期工程竣工，江泽民亲笔题词：“高举爱国主义旗帜，以史育人；弘扬中华民族精神，振兴祖国。”</li>
+<li>2005年7月7日，在纪念馆举行了一场盛大的纪念活动——《伟大胜利——纪念中国人民抗日战争暨世界反法西斯战争胜利60周年》大型主题展览开幕。此次展览共分为《民族危急救亡兴起》《国共合作共赴国难》《中流砥柱抗战灯塔》《日军暴行惨绝人寰》《浴血疆场民族壮歌》《得道多助国际援助》《历史胜利巨大贡献》《以史为鉴面向未来》八个部分，选用文物800余件、照片600余张、图表近40件，大量的历史资料，其中的141件文物首次展出。时任中共中央政治局常委李长春、时任中宣部部长刘云山等多位国家领导人出席开幕式，时任北京市委副书记、市长王岐山主持开幕式，开幕式有2000人参加。现场伴随着《没有共产党就没有新中国》的乐曲声，60发红色信号弹射向天空，3000羽和平鸽飞上蓝天。</li>
+<li>2007年7月7日，在抗战馆举行千人大会，纪念全民族抗战爆发70周年，同时举办《难忘七七珍爱和平》史料展，还推出一枚纪念全民族抗战爆发70周年的纪念封。除此之外，由抗战馆参与整理的纪念抗战历史书籍——《北京抗战遗存》和《抗战家书》在京首发。</li>
+<li>2012年，恰逢全民族抗战爆发75周年，中国人民抗日战争纪念馆与中国音乐家协会爱乐乐团共同举办了主题音乐会。</li>
+<li>2014年7月7日上午10时，纪念全民族抗战爆发七十七周年仪式在卢沟桥畔的中国人民抗日战争纪念馆隆重举行，中共中央总书记、国家主席、中央军委主席习近平出席纪念仪式并发表重要讲话。</li>
+<li>2023年7月7日上午，纪念全民族抗战爆发86周年仪式在中国人民抗日战争纪念馆举行。</li>
+<li>2025年7月7日，中国在卢沟桥举行纪念全民族抗战爆发88周年仪式，同时举行《为了民族解放与世界和平——纪念中国人民抗日战争暨世界反法西斯战争胜利80周年》主题展览。</li>
+<li>2026年7月6日，黑龙江多地依托本土红色资源，举办形式多样的纪念活动，引导干部群众、青少年铭记历史、缅怀先烈，在沉浸式学习中传承红色基因、厚植家国情怀。在安徽望江县，当地组织开展了“七七事变”89周年纪念活动，让群众铭记抗战历史，凝聚奋进前行力量。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="WanpingCity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="celebrities/zhao-deng-yu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="WanpingCity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="celebrities/zhao-deng-yu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

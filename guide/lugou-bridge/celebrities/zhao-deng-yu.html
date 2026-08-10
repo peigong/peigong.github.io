@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>赵登禹 - 卢沟桥 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">卢沟桥 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/zhao-deng-yu.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="赵登禹"><a class="header" href="#赵登禹">赵登禹</a></h1>
+<p>赵登禹（1898年5月16日—1937年7月28日），字舜诚（一作舜臣），山东省菏泽市杜庄乡赵楼村人，抗日英烈，曾任国民革命军陆军第29军132师师长。</p>
+<p>1914年，赵登禹加入冯玉祥的部队，任冯玉祥的随身护兵。1918年，随冯玉祥驻防湖南常德。一次在德山野战练习中，突遇一猛虎，赵登禹冲向前连发数枪，将猛虎击伤擒捕。冯玉祥为此举拍照，并题写“打虎将军”四字，登报表彰。1922年，直奉大战，在孙良诚团任尖兵排排长，攻打奉军，屡建奇功，升任第一连连长。同年11月，开始了“南苑练兵”，组建了“大刀队”。1930年，赵登禹以“中华民国军”第二方面军第四路军第十一军第二十五师师长的身份率领部队加入“中原大战”。1933年3月9日，赵登禹率部驰援喜峰口，与日军钤木师团展开了惨烈的争夺战。喜峰口夜袭战的胜利提升了赵登禹及其“大刀队”的知名度。同年9月，赵登禹率部进驻察哈尔省张北县。1934年10月，8名日本人在张北挑衅赵登禹部队，被赵登禹展示军力方式迫使其道歉。1935年5月，4名日本人潜入二十九军阵地被赵登禹扣押，引发“张北事件”。1937年7月28日，日军重兵进攻南苑，赵登禹率部接令集结反击时，遭日军伏击，胸部中弹牺牲，年仅39岁。</p>
+<p>1952年6月11日，中央人民政府颁发了由毛泽东主席签署的赵登禹将军烈士证书。2009年9月，被中央宣传部、中央组织部等11个部门评选为“100位为新中国成立作出突出贡献的英雄模范人物”。2014年，被公布在民政部的第一批著名抗日英烈和英雄群体名录。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="少年时代"><a class="header" href="#少年时代">少年时代</a></h3>
+<p>1898年5月16日，赵登禹出生于山东省菏泽市牡丹区杜庄乡赵楼村的贫苦农民家庭。幼年丧父，由母亲独自抚养长大。因家境贫寒，常与兄弟姐妹一同采桑养蚕以补贴家用。七八岁时入学堂读书，两年后因家贫而辍学。</p>
+<p>13岁时，赵登禹开始跟随朱楼村的武术名师朱凤军习武。经过不到三年的学习，他掌握了刀、枪、剑、棍等兵器的使用，以及太极拳、八卦掌和少林功夫。</p>
+<h3 id="从军岁月"><a class="header" href="#从军岁月">从军岁月</a></h3>
+<p>1914年春，16岁时与哥哥赵登尧和两个好友一起步行900多公里，到陕西投奔了冯玉祥的军队。当时冯军兵额已满，赵登禹被安排在佟麟阁任连长的连队里当了一名“只管饭、不发饷”的副兵。</p>
+<p>1916年，赵登禹正式入伍。一次摔跤比赛中，赵登禹肢体矫健，动作灵活，连胜数名大汉。冯玉祥观战，禁不住脱下军装，与其比试，不想连败三阵。冯玉祥见赵登禹身手不凡，便招为随身护卫。</p>
+<p>1917年，赵登禹随冯玉祥的十六混成旅进驻湖南常德。</p>
+<p>1918年，赵登禹随冯玉祥驻防湖南常德。一次在德山野战练习中，突遇一猛虎，赵登禹毫不畏惧，冲向前连发数枪，将猛虎击伤擒捕。冯玉祥为此举拍照，并题写“打虎将军”四字，登报表彰。</p>
+<p>1920年前后，赵登禹被任命为第16混成旅直属工兵连第3排排长，跟随部队转战河南、河北、北京等地。以后，他又先后担任了连长、营长、副团长等职。</p>
+<p>1922年，直奉大战，赵登禹在孙良诚团任尖兵排排长，攻打奉军，屡建奇功，升任第一连连长。同年11月，开始了“南苑练兵”，组建了“大刀队”。</p>
+<p>1924年底，冯玉祥班师回京发动“北京政变”之后，组织国民军并任总司令兼第一军军长，赵登禹在该军内任团长。不久，国民军第一军再度扩编，赵登禹又被任命为旅长，跟随冯玉祥四处征战。</p>
+<p>1926年9月16日，冯玉祥决定组织国民军联军，参加北伐，并于第二天举行誓师典礼，部队集体加入国民党。五原誓师以后，赵登禹仍任旅长，跟随部队在数省转战。</p>
+<p>1928年，蒋介石国民政府对所属部队进行了统编，冯玉祥的西北军被编为第二集团军，冯任总指挥，赵登禹升为第二十七师师长。</p>
+<p>1929年，蒋介石在南京召开全国编遣会议，以排除异已势力，扩充本派实力，独揽中央大权。冯玉祥等人虽在会上力争，但也不得不对所属部队进行缩编。于是，师长赵登禹又成了旅长。</p>
+<p>1930年，“中原大战”爆发，赵登禹以“中华民国军”第二方面军第四路军第十一军第二十五师师长的身份率领部队加入了这场混战，但由于军阀之间的重重矛盾，冯玉祥的西北军瓦解了。赵登禹率残部退到晋南一带听候整编。11月，由西北军残部组成的陆军第二十九军成立，宋哲元任军长，下辖第三十七、三十八两个师。赵登禹任第三十七师第一〇九旅旅长，率部驻扎在山西猗氏县（今临猗）、辽县（今左权县）一带，进行休整练兵。</p>
+<h3 id="抗日生涯"><a class="header" href="#抗日生涯">抗日生涯</a></h3>
+<p>1931年9月18日，日军侵略东北，东三省沦亡。日本的侵华活动，激起了赵登禹强烈的爱国意识，他经常对部下进行“不扰民、真爱国、誓死救国”的教育，还邀请东北大学的流亡学生来部队讲演离乡之苦和亡国之恨，并组织部队剧团演出抗日话剧。</p>
+<p>1932年，日军发动“一·二八”事变后，他派副旅长何基沣到上海实地考察淞沪战场。何基沣回到部队后，对全体官兵讲述日本人的暴行和十九路军浴血奋战的壮烈事迹。</p>
+<p>1933年3月，长城抗战爆发。3月9日，赵登禹率部驰援喜峰口，与日军钤木师团展开了惨烈的争夺战。经过三天战斗，喜峰口多次变更控制权，双方均有重大伤亡，赵登禹左腿受伤。为削弱日军武器优势，3月11日晚，赵登禹组织三个团的敢死队，携带大刀和手榴弹，分两路夜袭日军炮兵阵地和营地，深夜时分突入，击杀日军500余人。喜峰口夜袭战的胜利提升了赵登禹及其大刀队的知名度。政府为表彰赵登禹的功绩，颁发最高勋章，将109旅扩编为132师，升任师长，授予中将衔。同年秋，29军入察，赵登禹率领132师驻防张北县，期间日本驻屯军为了吞并察省，经常派特工人员窜扰独石口等地进行挑衅。同年9月，赵登禹率部进驻察哈尔省张北县后，“制造”了两次“张北事件”。</p>
+<p>1935年8月，二十九军调到北平地区驻防，赵登禹一三二师驻扎在河北任丘、河间一带。在此期间，赵登禹命令部队加紧训练，以日军为假想敌，苦练杀敌本领。</p>
+<h3 id="壮烈牺牲"><a class="header" href="#壮烈牺牲">壮烈牺牲</a></h3>
+<p>1937年7月7日，卢沟桥抗战爆发。7月26日，赵登禹奉军长宋哲元之命，赶赴南苑，和副军长佟麟阁共同负责北平防务。7月28日凌晨，日军集中三个联队步兵、一个联队炮兵和30多架飞机，向南苑进攻。赵登禹率部与日军血战六小时，在敌人飞机大炮的轰炸扫射下，伤亡惨重。战至中午，宋哲元命令赵登禹率部向城南大红门集结，准备反击。但他在集结途中，不幸被日军的伏兵击中胸部，壮烈殉国，年仅39岁。</p>
+<p>赵登禹牺牲后，遗体先是被北平红十字会草草掩埋。几天后，陶然亭内龙泉寺的僧人们将遗体取出，盛殓于一上好棺材，暂厝于寺内。赵登禹的灵柩在龙泉寺停放了九年，直到抗战胜利后的1946年7月28日举行国葬时，才由北平市政府在中山公园举行公祭，落葬于卢沟桥西1公里处的西道口。</p>
+<h2 id="人物事迹"><a class="header" href="#人物事迹">人物事迹</a></h2>
+<h3 id="少小立志"><a class="header" href="#少小立志">少小立志</a></h3>
+<p>赵登禹将军出身贫寒，家族世代务农。他是家中三子，13岁时师从当地著名武术家朱凤军，擅长拳术和大刀，能与多人对战。
+1914年，16岁的赵登禹得知冯玉祥参与辛亥革命且治军严明，遂长途跋涉20余天至陕西潼关，加入冯玉祥的第十六混成旅。因招兵已满，经军中管事特许，他得以作为副兵入伍。面对连长关于军饷的说明，赵登禹表示从军非为求财。</p>
+<p>赵登禹身高一米九，难以找到合身的军服和军鞋，常穿着不合身的衣服和鞋子训练。一次被冯玉祥注意，询问后特别要求为其定制服装。冯玉祥询问赵登禹是否擅长摔跤并提议比试，赵登禹连胜三跤，引起连长不满。尽管连长责备，赵登禹坚持认为应真实比试。次日，冯玉祥将赵登禹调为自己的警卫员。</p>
+<p>赵登禹幼时受过基础教育，在冯玉祥身边继续学习文化，擅长书法，逐渐成长为文武兼备的将领。</p>
+<h3 id="打虎将军"><a class="header" href="#打虎将军">打虎将军</a></h3>
+<p>常德郊外的德山常有猛虎出没。一次，部队在山下进行训练，一只猛虎突然从林间冲出。当时，战士们正在进行徒手格斗练习，仅连长携带手枪。连长迅速向老虎开枪，但未击中要害，猛虎随即扑向战士们，众人一时不知所措。紧急情况下，赵登禹大声呼喊，迅速冲出队列，冲向猛虎，跃上虎背，双腿紧紧夹住虎肩，左手抓住虎脑门，右手连续重拳击打老虎，导致猛虎抽搐并瘫软，七窍流血。随后，战士们上前协助，共同将老虎打死。事后，冯玉祥请照相馆为赵登禹拍摄了一张骑在虎背上挥拳的照片。赵登禹去世后，冯玉祥找出这张照片，并在其上题写了“打虎将军”四个字。</p>
+<h3 id="勇擒匪首"><a class="header" href="#勇擒匪首">勇擒匪首</a></h3>
+<p>1921年，冯玉祥在陕西进行剿匪行动，计划捉拿匪首郭坚，为此设下计谋。郭坚携卫兵到访冯玉祥住所赴宴时，预先安排的士兵因缺乏经验，在观察郭坚与冯玉祥交谈时不慎弄倒屏风。郭坚的卫士见状警觉，拔枪护卫。郭坚亦受惊，迅速掏枪并尝试离开，但被在场人员未能成功阻拦。关键时刻，赵登禹采取行动，运用武术技巧迅速将郭坚击倒并捕获。随后，冯玉祥公开处决了郭坚，此举在当地受到民众的广泛支持。</p>
+<h3 id="张北事件"><a class="header" href="#张北事件">“张北事件”</a></h3>
+<p>1933年秋，第二十九军进驻察哈尔省，赵登禹率领第一三二师驻防张北县，他令二一七团进驻独石口、沽源，驱逐李守信的骑兵部队。在此期间，日本驻屯军为了吞并察哈尔省，经常派特工人员骚扰独石口、车棚子、小厂、张北县等地。赵登禹无法容忍日军的侵略行径，一再违抗上级“隐忍”的训示，与日军针锋相对，毫不退让，制造了两次“张北事件”。</p>
+<p>第一次：1934年10月，8名日本人经过张北时，未遵守赵登禹部队的检查要求并挑衅。为维护民族尊严，赵登禹命令100名士兵携带刺刀步枪，高喊口号在正步行进中展示力量，迫使日本人道歉。</p>
+<p>第二次：1935年5月，4名日本人潜入第二十九军阵地绘制驻军布防图，赵登禹决定将其扣押。</p>
+<p>日本人抓住两次“张北事件”大做文章，南京国民政府再次妥协退让，于6月19日以“屡生事端”为由免去宋哲元察哈尔省政府主席职务，任命省民政厅长秦德纯暂做代理，随后又与日本代表签定了屈辱的《秦土协定》。赵登禹部随第二十九军移驻北平附近。</p>
+<h3 id="绑架事件"><a class="header" href="#绑架事件">绑架事件</a></h3>
+<p>1936年夏，第二十九军政治部主任宣介溪被日本特工绑架。赵登禹认为此举嚣张，决定采取强硬措施。他通过亲日分子向日方传达要求，限两小时内放回宣介溪，否则将对平津一带的日本人采取行动。赵登禹同时命令部队做好作战准备。日方受到震慑，将宣介溪释放。</p>
+<h3 id="壮烈殉国"><a class="header" href="#壮烈殉国">壮烈殉国</a></h3>
+<p>1937年7月7日，卢沟桥事变爆发。中国军队奋起抵抗，宋哲元通电全国，“卢沟桥是二十九军的坟墓，誓死保卫祖国！”7月26日，赵登禹奉宋哲元之命，率部队赶赴南苑，抗击日军入侵。7月28日上午，日军飞机三架狂炸南苑营房，俯冲扫射；敌炮二十余门，集中向南苑机场轰击。赵登禹亲率卫士三十余人，指挥卫队旅和军训团队反复冲杀，与敌寇进行殊死战斗。当日寇攻到132师阵前二百米处时，赵登禹挥大刀亲率手枪旅、军训团向敌人冲杀过去。日军看到大刀闪亮，吓得魂不附体，向后溃逃一里多。这时，日军炮兵用猛烈的炮火阻止赵师的追击。一时机场硝烟弥漫，血肉横飞，双方伤亡都很大。最后终因力量对比过于悬殊，南苑大部分被日军占领。</p>
+<p>战至中午时分，赵登禹奉宋哲元之命率部向大红门一带集结，重整部队，准备反击。当赵乘坐的汽车行至大红门御河桥处，突遭埋伏在两侧的日军的袭击，身中数弹，血流不止。他从昏迷中苏醒过来，对身边的传令兵说：“我不会好了，军人战死沙场原是本份，没什么值得悲伤的。只是老母年事已高，受不了惊慌，请你们替我安排一下，此外我也没别的心事了！”说罢便停止了呼吸，年仅39岁。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<ul>
+<li>1937年7月31日，南京国民政府颁布褒奖令，追授赵登禹为陆军上将。</li>
+<li>中华人民共和国成立后，有关部门给赵登禹将军的家属颁发了“革命牺牲军人家属光荣纪念证”，编号为“北京字第000捌拾号”，证书“查赵登禹同志在革命斗争中光荣牺牲，丰功伟绩永垂不朽，其家属当受社会上之尊崇。除依中央人民政府《革命军人牺牲病故褒恤暂行条例》发给恤金外，并发给此证以资纪念。”此证由毛泽东亲自署名，日期为“一九五二年六月十一日”。</li>
+<li>1952年6月11日，中央人民政府颁发了由毛泽东主席签署的赵登禹将军烈士证书。</li>
+<li>2009年9月，赵登禹被中央宣传部、中央组织部等11个部门评选为“100位为新中国成立作出突出贡献的英雄模范人物”。</li>
+<li>2014年，赵登禹公布在民政部公布的第一批著名抗日英烈和英雄群体名录。</li>
+</ul>
+<h2 id="人物生活"><a class="header" href="#人物生活">人物生活</a></h2>
+<h3 id="人物语录"><a class="header" href="#人物语录">人物语录</a></h3>
+<p>“抗日救国，军人天职，养兵千日，报国时至。只有不怕牺牲，才能救亡。今夜我们绕至敌后，与日军拼个你死我活，要让小日本知道，我们中华民族还有不怕死的军队。”</p>
+<p>“军人战死沙场原是本分，没有什么值得悲伤的。北平城还有我的老母，你回去告诉她老人家，忠孝不能两全，他的儿子为国死了，也算对得起祖宗。”</p>
+<p>“抗日救国，军人天职，养兵千日，报国时至。今夜我们绕至敌后，要与日军拼个你死我活，让小日本知道我中华民族还有不怕死的军队……”</p>
+<h3 id="家庭情况"><a class="header" href="#家庭情况">家庭情况</a></h3>
+<ul>
+<li>父亲：赵锡君</li>
+<li>妻子：倪玉书</li>
+<li>大哥：赵登銮</li>
+<li>二哥：赵登尧</li>
+<li>女儿：赵学芳</li>
+<li>儿子：赵学武</li>
+<li>女儿：赵学芬</li>
+</ul>
+<h2 id="人物评价"><a class="header" href="#人物评价">人物评价</a></h2>
+<ul>
+<li>“躯干修伟，负膂力，精技击。”（冯玉祥在《公祭征文启》 评）</li>
+<li>“奋战至最后一滴血，光荣地完成了保国卫民的天职，足为全国军人之模范。”（《救国时报》 评）</li>
+<li>“白日下的噩梦。”（1939年日本发行的《大陆战史》 评）</li>
+<li>“赵登禹是菏泽人民的骄傲。”（曹州书画院书记祖士常 评）</li>
+</ul>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="人物书籍"><a class="header" href="#人物书籍">人物书籍</a></h3>
+<p>《大刀将军赵登禹》是2007年山东友谊出版社出版的图书，作者是孙丰华。该书讲述了赵登禹的人物事迹。</p>
+<h3 id="赵登禹墓"><a class="header" href="#赵登禹墓">赵登禹墓</a></h3>
+<p>赵登禹墓位于卢沟桥城东关外沙岗村（一文子山）。</p>
+<p>赵登禹墓于1980年重建，1984年被公布为区级文物保护单位。 1987年，赵登禹墓被列为“北京市烈士纪念建筑物市级保护单位”。</p>
+<p>1991年和2003年，丰台区人民政府对该墓进行了两次大的修葺。</p>
+<p>2003年4月3日，赵登禹将军墓修缮工程竣工。该工程由丰台区民政局优抚科具体负责实施，共投入5万余元。原本破损的灰石砖地面被重新铺设，保护墓志标志和生平简介的铁护栏也别改为了不锈钢护栏，新改建的2.6米的灰砖墙和松柏围绕在墓地的四周，形成了一道道的“保护网”。 该墓为汉白玉石结构，墓体为长方形卧式，长2米多，宽1米，墓碑高1米多，顶部呈弧形，墓碑的正面镌刻有“抗日烈士赵登禹将军之墓”11个大字。墓志标志的上方，是一块方形石碑，刻有赵登禹将军的生平简介。</p>
+<p>2007年3月，丰台区民政局再次投入资金两万元，对赵登禹将军墓进行了修缮。</p>
+<h3 id="赵登禹路"><a class="header" href="#赵登禹路">赵登禹路</a></h3>
+<p>1946年11月25日，当时的北平市长何思源签发了《府秘字第729号训令》，将市区三条道路命名为赵登禹路、佟麟阁路、张自忠路，以纪念抗日英烈。新中国保留了这三处地名，并沿用至今。</p>
+<p>赵登禹路是南北走向，北起西直门内大街新开路口，南止阜成门内大街白塔寺路口，全长1800米左右，是三条以抗战英烈命名的街巷中最长的。</p>
+<p>抗战胜利后，经冯玉祥将军提议，1947年3月，北平正式将南沟沿大街、北沟沿大街和铁狮子胡同分别更名为佟麟阁路、赵登禹路和张自忠路。1952年，毛泽东亲自为三位抗日将领签发烈士证书，三位将领的抗日功勋得到了新中国的承认。</p>
+<h3 id="赵登禹大街"><a class="header" href="#赵登禹大街">赵登禹大街</a></h3>
+<p>赵登禹大街原名东关大街，明代时在通州城东门之外傍河形成，作为货栈与买卖街道，至今已有600多年。1946年，为缅怀抗日将领赵登禹，更名赵登禹大街；1981年恢复原名；1985年10月，为纪念抗战胜利40周年，又改称“赵登禹大街”。</p>
+<h3 id="赵登禹纪念馆"><a class="header" href="#赵登禹纪念馆">赵登禹纪念馆</a></h3>
+<p>赵登禹纪念馆是1995年经原菏泽地委、行署同意成立的全国唯一的一家纪念著名爱国将领、民族英雄赵登禹将军的纪念馆，是我省爱国主义教育基地之一。在菏泽广福大街路西，矗立着一座赵登禹纪念馆，暗红色的大门、朱红色的门楣，上书“赵登禹纪念馆”6个大字。步入大门，迎面看到的是赵登禹的塑像，四面墙壁上挂满了赵登禹的事迹故事。纪念馆存留了大量翔实的照片和文字资料、实物等，其中最引人瞩目的是悬挂在墙壁上的62幅连环画，这62幅画作以写意的手法，讲述了赵登禹从出生，到退学习武，再到远赴西安参军，最终战死沙场的全部故事，浓缩了赵登禹的一生。</p>
+<h3 id="北京市赵登禹学校"><a class="header" href="#北京市赵登禹学校">北京市赵登禹学校</a></h3>
+<p>北京市赵登禹学校，建于1951年，原为北京市十八中，1990年更名为北京市十八中初中部，1993年更名为北京市大红门中学，1997年再次更名为北京市赵登禹中学。2003年与嘉园小学合并，更名为北京市赵登禹学校。2013年与马家堡小学合并，成为北京市赵登禹学校教育集团。2023年成立高中部，同年丰台区教育布局调整，小学部与丰师附小城南校区合并成立为丰台区嘉园小学和丰台区嘉佑小学。现北京市赵登禹学校教育集团调整为以北京市赵登禹学校牵头，下设丰台区嘉园小学和丰台区嘉佑小学。</p>
+<h3 id="菏泽登禹中学"><a class="header" href="#菏泽登禹中学">菏泽登禹中学</a></h3>
+<p>登禹中学位于菏泽高新区万福街道办事处泰山路西段，地理位置优越，交通便利。学校占地面积3.3万平方米，其中校舍建筑总面积1.2万平方米，体育运动场所面积1.9万余平方米，绿化面积7992平方米。学校现有教职工114人，25个教学班，在校生1400余人，2020年被评为“菏泽市文明校园”。</p>
+<p>登禹中学是以赵登禹将军命名的学校，自“赵登禹中队”成立以来，学校始终教导少先队员们秉承将军遗志，传承将军精神，刻苦学习，励志奋斗。学校注重开发具有特色的校本课程《入学第一课》《走进孔子》《大刀将军赵登禹》，同时广泛运用教育资源，积极开展文化活动，使理想信念和社会主义核心价值观教育深入人心。学校先后获得“菏泽市职业道德建设先进集体”“菏泽市规范化学校”“山东省初中教学示范学校”“山东省绿色学校”“山东省体育传统项目学校”“全国青少年普法教育工作先进单位”“全国青少年文明礼仪教育示范基地”“菏泽市初中教学工作先进单位”“菏泽市文明校园”“山东省教育系统先进单位”等荣誉。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../77.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../celebrities/tong-lin-ge.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../77.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../celebrities/tong-lin-ge.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>物种濒危等级 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Animals-The-Friends-of-Humankind/endangered-category.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="物种濒危等级"><a class="header" href="#物种濒危等级">物种濒危等级</a></h1>
+<p>物种濒危等级是衡量物种灭绝风险的分类体系，依据种群数量、分布范围等指标制定。世界自然保护联盟（IUCN）于1994年确立现行评估标准，将物种划分为灭绝、野外灭绝、极危、濒危、易危等9个等级，2018年更新的名录评估了96951个物种，其中26840种面临灭绝风险。国际层面还有《濒危野生动植物种国际贸易公约》(CITES)附录等级。各国采用不同体系，如中国《国家重点保护动物名录》分为一级和二级，《中国植物红皮书》采用“濒危、稀有、渐危”三级；美国《濒危物种法案》分为“濒危”与“受胁”两类。IUCN等级具有动态调整特性，例如大熊猫于2024年从“濒危”等级调降为“易危”。</p>
+<p>该体系始于19世纪中叶英国海鸟保护法案的颁布。世界自然保护联盟（IUCN）于1948年正式成立。IUCN于1966年发布首部《哺乳动物红皮书》，2001年基于Mace-Lande标准形成IUCN3.1版评估框架。中国《国家重点保护野生植物名录》于1999年颁布，2021年调整后共收录455种和40类；《国家重点保护野生动物名录》于2021年调整后共列入980种和8类。IUCN等级具有动态调整特性，例如朱鹮因保护成效从“极危”降级为“濒危”。</p>
+<h2 id="基本含义"><a class="header" href="#基本含义">基本含义</a></h2>
+<p>物种濒危等级是依据物种的生存状况，即种群数量与分布区状况来评定。世界自然保护联盟（International Union for Conservation of Nature，简称IUCN）制定的《IUCN物种红色名录濒危等级和标准》是目前应用较为广泛也较为权威的物种濒危标准，其《IUCN濒危物种红色名录》是世界上最具有影响力的关于全球动物、真菌和植物灭绝风险状况的信息库。该名录将物种的灭绝风险划分为九个等级，由高到低依次为：灭绝（EX）、野外灭绝（EW）、极危（CR）、濒危（EN）、易危（VU）、近危（NT）、无危（LC）、数据缺乏（DD）、未评估（NE）。其中，极危（CR）、濒危（EN）和易危（VU）三个等级被统称为“受威胁物种”。</p>
+<h2 id="濒危物种定义"><a class="header" href="#濒危物种定义">濒危物种定义</a></h2>
+<p>通常是指由于物种自身原因或受到人类活动或自然灾害影响而有灭绝危险的所有生物种类。在《濒危野生动植物种国际贸易公约》附录中所列的濒危物种是指由于国际贸易而可能灭绝的物种。《中国植物红皮书》对濒危物种定义为：物种在其分布的全部或显著范围内随时有灭绝的危险。通常生长稀疏，个体数和种群数低，且分布狭域，由于栖息地丧失、破坏或过度开采等原因，其生存濒危。</p>
+<h2 id="等级体系"><a class="header" href="#等级体系">等级体系</a></h2>
+<p>新的世界自然保护联盟物种濒危标准体系：</p>
+<p>1、灭绝：如果具有确凿证据证明一个分类单元的最后一个个体已经死亡，即认为该分类单元已经绝灭。</p>
+<p>2、野生灭绝：如果已知一个分类单元只生活在栽培、圈养条件下，或者只作为被自然化后的种群生活在远离其过去栖息地时，即认为该分类单元属于野生灭绝。</p>
+<p>3、极危：当一个分类单元的野生种群面临即将绝灭的几率非常高，即符合极危标准中的任何一条标准时，该分类单元被列为极危。</p>
+<p>4、濒危：当一个分类单元未达到极危标准，但是其野生种群在不久的将来面临绝灭的几率很高，即符合濒危标准中的任何一条标准时，该分类单元被列为濒危。</p>
+<p>5、易危：当一个分类单元未达到极危或濒危标准，但在未来一段时间，其野生种群绝灭的几率较高，即符合易危标准中的任何一条标准时，该分类单元被列为易危。</p>
+<p>6、低危：通过评估被不符合极危、濒危或易危等级中的任何一个等级的分类单元。列为低危的分类单元可以再三个亚等级，即依赖保护，接近受危和需要予关注。</p>
+<p>7、无危：</p>
+<p>8、数据缺乏：如果没有足够的资料来直接、间接地根据一个分类单元的分布和种群状况来评估其绝灭的受危程度时，即认为该分类单元属于数据缺乏。</p>
+<p>9、未评估：如果一个分类单元未经应用本标准进行评估，则可将该分类单元列为未评估。</p>
+<h3 id="极危标准"><a class="header" href="#极危标准">极危标准</a></h3>
+<p>当一个分类单元的野生种群面临即将绝灭的几率非常高，即符合以下标准（一~五）中任何一条标准时，该分类单元被列为极危。</p>
+<p>一、种群数以以下任何一种形式减少。</p>
+<p>1、根据（或特别由于）以下任何一方面资，观察、估计、推断或者猜测，过去10年或者三个世代内（取更长的时间），种群数减少至少达80%：（1）直接观察；（2）适合该分类单元的丰富度指数；（3）占有面积、 分布区的缩小和 或栖息地质量的衰退；（4）实际或者具有开发潜力；（5）由于引进的外来生物、 杂交、 疾病、 污染、 竞争者或者寄生生物所带来的不利影响。</p>
+<p>2、根据（或特别由于）以上（2）（3）（4）或（5）任何方面的资料，显现出或者猜测在今后,10年或者三个世代（取更长的时间）内，该分类单元将减少至少达80%。</p>
+<p>二、估计一分类单元的分布区少于100平方公里或者占有面积少于10平方公里，该估计符合以下条件中的任何两条：</p>
+<p>1、严重分割或者已知只有一个地点</p>
+<p>2、观察、 推断或者设想以下任何一方面持续衰退：（1）分布区；（2）占有面积；（3）栖息地的面积、 范围和 或质量；（4）地点或亚种群的数目；（5）成熟个体数。</p>
+<p>3、以下任何一方面发生极度波动：（1）分布区；（2）占有面积；（3）地点或亚种群的数目；（4）成熟个体数。</p>
+<p>三、估计种群的成熟个体数少于250并符合以下任何一条标准：</p>
+<p>1、预计今后3年或者一个世代内（取更长的时间），成熟个体数将持续减少至少达25%。</p>
+<p>2、观察、设想或者推断成熟个体数和种群结构以以下任何一种形式持续衰退： （1）严重分割（ 例如. 估计没有一个亚种群的成熟个体数超过50）；（2）所有个体都存在于一个亚种群中。</p>
+<p>四、推断种群的成熟个体数少于50。</p>
+<h3 id="濒危标准"><a class="header" href="#濒危标准">濒危标准</a></h3>
+<p>当一个分类单元未达到极危标准，但是其野生种群在不久的将来面临绝灭的几率很高达，即符合以下标准（一~五）中任何一条标准时，该分类单元被列为濒危。</p>
+<p>一、种群数以以下任何一种形式减少：</p>
+<p>1、根据（或特别由于）以下任何一方面资，观察、估计、推断或者猜测，过去10年或者三个世代内（取更长的时间），种群数减少至少达50%:（1）直接观察；（2）适合该分类单元的丰富度指数；（3）占有面积、 分布区的缩小或栖息地质量的衰退；（4）实际或者具有开发潜力；（5）由于引进的外来生物、 杂交、 疾病、 污染、 竞争者或者寄生生物所带来的不利影响。</p>
+<p>2、根据（或特别由于）以上（2）（3）（4）或（5）任何方面的资料，显现出或者猜测在今后，10年或者三个世代（取更长的时间）内，该分类单元将减少至少达50%。</p>
+<p>二、估计一分类单元的分布区少于5000平方公里或者占有面积少于500平方公里，该估计符合以下条件中的任何两条：</p>
+<p>1、严重分割或者已知只有一个地点。</p>
+<p>2、观察、 推断或者设想以下任何一方面持续衰退：（1）分布区；（2）占有面积；（3）栖息地的面积、 范围和 或质量；（4）地点或亚种群的数目；（5）成熟个体数。</p>
+<p>3、以下任何一方面发生极度波动：（1）分布区；（2）占有面积；（3）地点或亚种群的数目；（4）成熟个体数。</p>
+<p>三、推断种群的成熟个体数少于2500并符合以下任何一条标准：</p>
+<p>1、预计5年或者二个世代内（取更长的时间），成熟个体数将持续减少20%。</p>
+<p>2、观察、 设想或者推断成熟个体数和种群结构以以下任何一种形式持续衰退：（1）严重分割 （例如：推测没有一个亚种群的成熟个体数超过250）；（2）所有个体都存在于一个亚种群中。</p>
+<p>四、推断种群的成熟个体数少于250。</p>
+<p>五、定量分析表明今后年或者五个世代内（取更长的时间），野生绝灭的几率至少20%。</p>
+<h3 id="各国标准"><a class="header" href="#各国标准">各国标准</a></h3>
+<p>一个国家对其生物资源拥有主权。世界上大多数国家已经立法保护野生生物资源。各国对濒危物种保护等级的划分标准不一致。有时，等级划分标准不是公开的。</p>
+<h4 id="美国"><a class="header" href="#美国">美国</a></h4>
+<p>1973年，美国总统尼克松签署了美国濒危物种法案。该物种濒危等级分为“濒危”和“受胁”两大类。如果一个物种在它的分布区面临灭绝的威胁，则列为濒危物种，如果一个物种在可以预见的将来将面临灭绝，则列为受胁物种。一个物种一旦被列为濒危或受胁，美国濒危物种法案要求为该物种制定一个恢复计划，执行这个恢复计划，直到该物种恢复到成功地脱离濒危或受胁状态为止。从1973年开始，美国每年大约有40个物种被列为濒危或受胁物种，仅18个物种从濒危降为受胁，或完全从濒危物种名录剔除。</p>
+<h4 id="中国"><a class="header" href="#中国">中国</a></h4>
+<p>中国动物红皮书的物种等级划分参照1996年版IUCN濒危物种红色名录，根据中国的国情，使用了野生灭绝(Ex)、绝迹(Et)、濒危(E)、易危(V)、稀有(R)和未定(I)等等级。中国植物红皮书参考IUCN红皮书等级制定，采用“濒危”、“稀有”和“渐危”3个等级。①濒危：物种在其分布的全部或显著范围内有随时灭绝的危险。这类植物通常生长稀疏，个体数和种群数低，且分布高度狭域。由于栖息地丧失或破坏、或过度开采等原因，其生存濒危。②稀有：物种虽无灭绝的直接危险，但其分布范围很窄或很分散或属于不常见的单种属或寡种属。③渐危：物种的生存受到人类活动和自然原因的威胁，这类物种由干毁林、栖息地退化及过度开采的原因在不久的将来有可能被归入“濒危”等级。</p>
+<p>1988年颁布的“国家重点保护野生动物名录”使用了两个保护等级。中国特产稀有或濒于灭绝的野生动物列为一级保护，将数量较少或有濒于灭绝危险的野生动物列为二级保护动物。由于科学研究、引种驯化等目的需要猎捕国家一级重点保护野生动物时，需要经过国家野生动物主管部门批准。由于科学研究、引种驯化等目的需要猎捕国家二级重点保护野生动物时，需要经过省级野生动物主管部门批准。</p>
+<h4 id="优先序"><a class="header" href="#优先序">优先序</a></h4>
+<p>物种的濒危等级与物种保护优先序是挂钩的。如我国一级国家重点保护野生动物包括一些中国特有物种、孑遗物种和亚种，如大熊猫、白暨豚、华南虎和朱鹮等。濒危物种保护受经费的制约。有限的资源应优先投入到一些应优先受到保护的物种。那么，哪一些濒危物种优先列为受保护物种呢？于是，人们提出了物种保护的“优先序”。但是，存在两种截然不同的观点。一个分类系统中，有6个假想的物种：A、B、C、D、E和F。可以用不同的方法测度这些物种之间的进化特有性。物种F代表的信息量等价于物种A、B、C、D和E的总信息量，应当受到优先保。</p>
+<p>Erwin(199)提出了一个相反的观点，他认为应当重点保护生物系统进化树上的那些“分枝末梢”，以保存生物的进化潜力。生物系统进行树上那些代表古老、孑遗生物的分枝已经停止了进化，因而，这些分枝失去了保护的价值，我们应当更重视分枝α的保护。以灵长类为例，两种不同的观点反映了不同的保护对策。依照第一种观点，我们应当投入相等的资源来保护灵长类进化树上的每个分枝，而依照Erwin的观点，我们应当将资源更多地投入猩猩类的保护。按照Erwin的观点，那些孑遗物种是不同值得保护的。</p>
+<p>保护生物学是一门发展中的学科。有关濒危物种的等级划分，物种的保护优先序与物种濒危等级之间的关系，人们仍在深入研究之中。在这个领域，将不断地有的新的理论和新的发现。</p>
+<h4 id="应用"><a class="header" href="#应用">应用</a></h4>
+<p>国际物种濒危等级新标准正式通过后国际上尚未产生出一套应用新标准制定的红皮书或红色名录，据了解，这方面的尝试或试探性的工作早已启动，哺乳动物的食肉目已经有了一个根据新标准制定的名录初稿，并且认为新标准是可行的。</p>
+<p>为了同国际接轨，无论从物种保护出发，还是为了执行国内法规或履行国际义务，国内有关方面应该首先认真研究国际濒危物种等级划分的新标准，同时，结合我国对濒危物种有关资料和信息的实际掌握情况，研究新标准在我国实施的可行性。必要时也不排除在参考该新标准的基础上，另行制定出一套既同国际接轨，又适用于我国国情的濒危物种分级标准。</p>
+<p>与新标准有关的各项工作可归纳如下：</p>
+<p>1、我国及国际濒危物种红皮书及红色名录的制定或修订；</p>
+<p>2、根据国家野生动物法及实施条例对国家重点保护名录的修订；</p>
+<p>3、国际濒危物种公约附录有关我国种类的修订案；</p>
+<p>4、生物多样性保护行动计划优先项目的修订；</p>
+<p>5、濒危物种保护行动计划的制定。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<p>人类对物种濒危的关注可追溯至19世纪中叶的保护运动，这催生了世界上第一部自然保护法——1869年英国海鸟保护法案诞生。进入20世纪，物种面临的形势日趋严峻，世界自然保护联盟（IUCN）于1948年正式成立。</p>
+<p>1966年，世界自然保护联盟首先出版了《哺乳动物红皮书》。IUCN受威胁物种红色名录是在红皮书（Red Data Book）的基础上逐渐发展而成，红皮书使用的濒危等级体系现已不再使用。自1989年起，IUCN物种生存委员会的指导委员会提出应建立新的濒危物种等级标准。新的濒危物种等级标准的制定历经了多年研讨，1994年版本2.3开始应用和推广，并于1994年11月30日在世界自然保护联盟理事会第40次会议获正式通过。IUCN红色名录的发展历程中，其第一个版本（探讨针对大型脊椎动物量化标准）于1991年出版。此后经历了1992年2.0版、1993年2.1版的修订。从2001年开始使用版本3.1，该版本成为一个相对固定的评估框架。在此框架基础上，后续又编制了《IUCN物种红色名录等级和标准使用指南（2010年8.1版）》和《IUCN物种红色名录标准在地区和国家的应用指南（2012年4.0版）》。</p>
+<p>1994年通过的Mace-Lande物种濒危等级标准（即IUCN物种濒危等级标准）虽非国际法，但对全球保护决策、各国法律法规制定以及保护生物学研究产生了深远影响。在发展过程中，除了IUCN的全球标准，也出现了如《濒危野生动植物种国际贸易公约》（CITES）附录等级、美国濒危物种法案的“濒危”和“受胁”分类、以及结合中国国情制定的中国物种红色名录等级和《国家重点保护野生动物名录》等多种国家和地区性的物种濒危与保护等级体系。</p>
+<h2 id="应用-1"><a class="header" href="#应用-1">应用</a></h2>
+<p>IUCN受威胁物种红色名录是世界上最具有影响力的关于全球动物、真菌和植物灭绝风险状况的信息库，也是全球生物多样性健康状况的关键指标。</p>
+<p>红色名录广泛应用于保护优先区域的确定、保护成就的确定、环境影响的评估、项目资助的参考、保护优先行动的确定和立法中的受保护物种名录的制定等领域。</p>
+<p>在国家层面，中国于2008年编制了《中国生物多样性红色名录》，作为国内物种保护工作的重要参考依据。</p>
+<p>例如，世界自然保护联盟（IUCN）于2016年依据其物种濒危等级标准，将大熊猫的受威胁等级从“濒危”下调为“易危”。该评估基于对种群数量持续增长、栖息地范围扩大等指标的客观分析（如不符合种群下降的A标准，且分布区远超B标准中的阈值）。截至2024年，大熊猫野外种群已从20世纪80年代的约1100只恢复至近1900只，进一步印证了保护措施的有效性。</p>
+<h2 id="影响"><a class="header" href="#影响">影响</a></h2>
+<p>IUCN每年更新发布濒危物种红色名录，以反映物种生存状况的动态变化，如果物种的生存状况改善，其濒危等级会下调；如果物种的生存状况恶化，其濒危等级会上调。例如，大熊猫受威胁程度等级由“濒危”降为“易危”，藏羚羊从“濒危物种”降级为“近危物种”，朱鹮受威胁等级从“极危”降为“濒危”。而禾花雀在短时间内从“无危”被四次上调至“极危”，揭示了过度捕猎带来的危机。</p>
+<p>IUCN红色名录等级对国内保护名录具有参考价值，2021年新版《国家重点保护野生动物名录》正式公布，其相关内容涵盖物种的IUCN红色名录等级信息。此外，有建议在科普宣传中增加物种濒危等级和保护等级等信息，以提高公众生物多样性保护意识。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>国际上主要的物种濒危等级标准包括国际自然及自然资源保护联盟(IUCN)物种濒危等级、《濒危野生动植物种国际贸易公约》(CITES)附录等级等。各国也制定了符合本国国情的标准，例如，美国《濒危物种法案》将物种分为“濒危”和“受胁”两大类；中国则参照IUCN标准，在《中国动物红皮书》中采用了野生灭绝(Ex)、绝迹(Et)、濒危(E)、易危(V)、稀有(R)和未定(I)等等级，而《中国植物红皮书》则采用了“濒危”、“稀有”和“渐危”3个等级。</p>
+<p>IUCN濒危物种红色名录虽然不是国际法和国家法律，但是对于政府间组织、非政府组织的保护决策以及各国的自然法律法规的制定有着深远的影响，在保护生物学理论研究中也发挥了一定作用。然而，学术界在应用该标准时也提出了一些思考，例如如何区别对待那些本来就数量稀少、分布区狭窄的物种和那些由于人类活动而导致其种群数量与生境面积急剧下降的物种、不同的动物类群能否应用同一濒危标准尺度以及如何区别对待物种边缘分布区和核心分布区的种群数量与密度的差异。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Animals-The-Friends-of-Humankind/IUCN-Red-List.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../aquarium/Latimeriidae.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Animals-The-Friends-of-Humankind/IUCN-Red-List.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../aquarium/Latimeriidae.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

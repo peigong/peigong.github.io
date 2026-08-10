@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>乾隆御制碑 - 皇都篇 - 首都博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">首都博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/literature/huang-du-pian.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="皇都篇"><a class="header" href="#皇都篇">皇都篇</a></h1>
+<p>《皇都篇》是清代乾隆皇帝于乾隆十八年（1753年）创作的杂言古诗，以北京都城为书写对象，融合帝王治国理念与历史观，创作背景关联北京中轴线历史及都城礼制建设。</p>
+<p>全诗以北京地理形胜、建都历史与市井繁华为脉络，援引唐太宗《帝京篇》等典故，通过“陶唐冀方”“帝车开阳”等意象阐释都城天文地理依据，并与寿皇殿“中峰正午”建筑布局形成互文。末句以居安思危的忧思呼应儒家“中和”思想。现存燕墩御碑（满汉双文）与先农坛出土碑刻，后者可校勘《日下旧闻考》版本讹误。</p>
+<h2 id="作品原文"><a class="header" href="#作品原文">作品原文</a></h2>
+<h3 id="皇都篇-1"><a class="header" href="#皇都篇-1">皇都篇</a></h3>
+<p>皇都者，据今都会而为言，约形势则若彼，详沿革则若此。盖不如研京十年，练都一纪，鸿篇巨作，纂组雕龙。若夫文皇传十首之吟（1）；宾王构一篇之藻（2）。节之中和（3），固所景仰；归于暌遇，亦用兴怀。俊逸清新，古人蔑（4）以加矣；还淳返朴，斯篇三致意焉。</p>
+<p>惟彼陶唐此冀方，上应帝车曰开阳（5）。</p>
+<p>轩辕台榭虽莫详，职方有幽无徐梁（6）。</p>
+<p>要之幅员长且广，山河襟带具大纲。</p>
+<p>列国据此士马强，可以雄视诸南邦。</p>
+<p>辽金以来始称京（7），阅今千年峨天阊（8），地灵信比长安长（9）。</p>
+<p>玉帛奔走来梯航（10），储胥（11）红朽余太仓。</p>
+<p>天衢十二九轨容（12），八旗居处按界疆。</p>
+<p>朱楼甲第多侯王，槐市（13）陆海（14）无不藏。</p>
+<p>富乎盛矣日中央，是予所惧心彷徨（15）。</p>
+<h2 id="作品注释"><a class="header" href="#作品注释">作品注释</a></h2>
+<p>（1）文皇，指唐太宗。唐太宗逝世后，谥曰文，故谓文皇。《十首之吟》指唐太宗所作《帝京篇十首并序》。参见《全唐诗》卷一，《太宗皇帝·帝京篇十首并序》。</p>
+<p>（2）宾王，即骆宾王（公元640－未知）唐婺州义乌人。高宗末为长安主薄，以言事得罪，贬临海丞。684年中，徐敬业在扬州起兵反武则天，骆宾王参与起草讨伐武则天檄文，文锋犀利。相传武则天读檄文，叹曰：“宰相安得失此人。”。后徐敬业兵败，骆宾王不知所终。骆宾王诗文俱佳，与同时王勃、杨炯、庐照邻齐名，称四杰。《旧唐书》有传。“宾王构一篇之藻”指骆宾王所作 《帝京篇》，参见《骆宾王集》。</p>
+<p>（3）中和，儒家中庸观念，不偏不倚、宽猛相济、政治平和之意。</p>
+<p>（4）蔑，在这里是“无”的意思。</p>
+<p>（5）帝车，指北斗七星。《史记·天官书》：“斗为帝车，运于中央，临制四乡”。开阳是北斗星中第六颗星的名字。此句的意思是说，由陶唐氏开辟的以北京为中心的北方地区，上方正对着开阳星的位置，因此北京具有作为帝都的吉兆。</p>
+<p>（6）职方，系《周礼·夏官·大司马》中的一篇，作者不详，大约成书于战国，是中国古代重要地理著作。幽，即幽州，徐即徐州，梁即梁州，皆古九州之一。关于古九州，史书说法不一。《尚书·禹贡》记为冀、兖、青、徐、扬、荆、豫、梁、雍。《周礼·职方》所记，有幽、并，而无徐、梁。关于幽州，该书记为“东北曰幽州”，包括今北京、河北北部及辽宁南部一带。《尔雅·释地》所记，有幽、营，而无青、梁。这里“职方有幽无徐梁”是说以今北京为首府的幽州自古就是我国北方十分重要的战略要地。</p>
+<p>（7）指辽南京和金中都。</p>
+<p>（8）阊，即阊阖，传说中的天门，亦指皇宫正门。天阊，指北京。</p>
+<p>（9）这句诗意思是北京乃人杰地灵之宝地，比汉、唐长安城更适合于作国都。</p>
+<p>（10）梯航，指登山之梯和航海之船。也指登山与航海。这里是说北京是玉帛汇粹之地。此句典故出自《汉书·食货志》，其中描述“文景之治”的富庶景象说：“京师之钱累巨万，贯朽而不可校；太仓之粟陈陈相因，充溢露积于外，至腐败不可食。”</p>
+<p>（11）储胥，原意为木栅藩篱之类，作为守卫之用。这里指盛粮食的粮仓。这句是说，北京是万物珍宝汇粹之地，皇家太仓里存粮丰盛，朽烂了也吃不完。</p>
+<p>（12）天衢，即天路。衢是四通八达的大路，比喻通显之地。天衢，指京师。轨，指车两轮间距。古代中国各国车轨间距不一，故秦始皇搞“书同文，车同轨”。九，泛指多样化。这里是指清政府在对待各民族政策上，不搞整齐划一，能够兼容并蓄，团结了汉、蒙等民族，靠满、蒙、汉八旗来巩固统治、保卫边疆。</p>
+<p>（13）槐市，汉长安市场名，在城东南，以其地多种槐树而得名。这里指北京的市场。</p>
+<p>（14）陆海，旧指关中一带。《汉书·东方朔传》记载，前138年（汉武帝建元三年）朔进谏：“汉兴……都泾渭之南，此所谓天下陆海之地”注曰：“高平曰陆，关中地高故称耳。海者，万物所出，言关中山川物产饶富，是以谓之陆海也”。这里是说北京百货汇集，市场繁荣。</p>
+<p>（15）这句是说，尽管大清政权巩固，京师繁荣，如日中天，但乾隆帝仍心存警惕，彷徨担忧，表明居安思危之意。乾隆的担忧颇具远见，他逝世以后，“康乾盛世”也随之结束了，清朝开始走向逐渐衰落的下坡路。</p>
+<h2 id="创作背景"><a class="header" href="#创作背景">创作背景</a></h2>
+<p>《皇都篇》创作于清乾隆十八年（1753年），碑文落款为“大清乾隆十八年夏四月之吉御笔勒石永定门南皋”；创作背景与北京中轴线历史及都城礼制建设相关，特别是永定门外燕墩的重修及立碑。乾隆皇帝借诗阐述其建都思想与治国理念，核心思想强调居安思危和“在德不在险”的治国理念，作品性质被称为“北京颂”。</p>
+<h2 id="版本流变"><a class="header" href="#版本流变">版本流变</a></h2>
+<p>刻有乾隆御制《皇都篇》的碑刻有两处。其一为永定门外燕墩碑，据《钦定日下旧闻考》记载，燕墩在永定门外半里许，官道西，恭立御碑台，恭勒御制《帝都篇》、《皇都篇》。碑立正中，形方而长，下刻诸神像，顶刻龙纹；碑首为四角攒尖顶，四条垂脊各雕一龙，碑身为方形，各宽1.85米，通高8米。</p>
+<p>其二为先农坛出土碑，埋藏于先农坛墙外地下，后于2005年初春发掘出土。该碑总高6.7米，重40多吨，为汉白玉材质，保存十分完好，四面刻有满、汉两种文字的《皇都篇》。碑文落款为“乾隆十有八年岁次癸酉孟夏月御笔”。</p>
+<p>两碑关系密切，先农坛碑（亦称“天桥西碑”）形制仿自永定门外燕墩石幢，碑文为燕墩碑文的复刻，二者堪称“姊妹碑”。先农坛碑于民国时期被移出原址，后埋入地下；其发现历经过程：1993年文物普查获得线索，2004年通过探地雷达技术在先农坛北区定位，最终于2005年4月完整发掘出土。</p>
+<h2 id="作者简介"><a class="header" href="#作者简介">作者简介</a></h2>
+<p>爱新觉罗·弘历（1711一1799年），即清高宗乾隆皇帝，系清世宗雍正皇帝第四子，在六十年的皇帝生涯中，将自己磨炼成为一个政治家和军事家、诗人。他勤政爱民、废除苛政、贯彻祖家之法。抗击外敌，维护了国家的统一和主权。致力于生产发展，鼓励垦荒，使耕地显著增加，还在倡导汉学等方面做出了努力。编撰典志书籍，保存文化遗产。乾隆皇帝文才出众，遗有《乾隆御制诗集》，系中国封建社会写诗最多的一位皇帝。其流传下来的诗词共43000多首，是历史上最高产的诗人。乾隆皇帝东巡时曾三次想来千山皆未成行。但心中寄挂千山，赋诗三首。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../literature/di-du-pian.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../literature/tuo-luo-ni.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../literature/di-du-pian.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../literature/tuo-luo-ni.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

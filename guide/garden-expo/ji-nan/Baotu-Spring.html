@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>趵突泉 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/ji-nan/Baotu-Spring.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="趵突泉"><a class="header" href="#趵突泉">趵突泉</a></h1>
+<p>趵突泉（Baotu Spring），济南三大名胜之一，位于山东省济南市历下区。趵突泉被乾隆皇帝册封为“天下第一泉”。也是最早见于古代文献的济南名泉。趵突泉与千佛山、大明湖并称为济南三大名胜。趵突泉东临泉城广场，北望五龙潭，面积达158亩，位居济南七十二名泉之冠。趵突泉泉眼位于趵突泉公园内的泺源堂前。</p>
+<p>趵突泉最早并没有正式名字，因趵突泉是古泺水的源头，所以历史上经常以“泺”代指趵突泉。宋代的曾巩出任齐州知州时，为趵突泉取名“槛泉”。济南百姓却因“槛泉”之称太雅，仍叫它“爆流泉”。“趵突”就是由“爆流”这个名字还引申出的一种叫法。所谓“趵突”，即跳跃奔突之意。</p>
+<p>民国二十年（1931年）四周用石砌岸。几经变化，形成长方形泉池，长30米，宽18米，深2.2米。北临泺源堂，西傍观澜亭，东架来鹤桥，南有长廊围合。趵突泉是地下水在强大的压力下，从地下的裂隙中涌上地面形成的。泉水从地下石灰岩溶洞中涌出，每天涌出7万立方米泉水，泉水有三个出水口，最大涌水量为16.2万立方米/天。泉水一年四季恒定在18℃左右。趵突泉周边的名胜古迹有尚志堂、李清照纪念堂、李苦禅纪念馆等。</p>
+<p>2013年，包含趵突泉在内的“济南市天下第一泉景区”被评为国家AAAAA级旅游景区。2016年9月5日下午，趵突泉泉群成为山东省级地质公园。2024年9月，趵突泉迎来自2003年复涌以来的第21个年头，打破持续喷涌的最长纪录。 2025年10月14日，趵突泉水位刷新1966年以来济南市最高地下水位，达到30.29米。</p>
+<h2 id="名称由来"><a class="header" href="#名称由来">名称由来</a></h2>
+<p>趵突泉最早并没有正式名字，因趵突泉是古泺水的源头，所以历史上经常以“泺”代指趵突泉。北魏地理学家郦道元在《水经注》中写道：“泺水出历城县故城西南，泉源上奋，水涌若轮。”后因泉上建有祭祀娥皇、女英的娥英庙，也俗称为娥英水。</p>
+<p>宋代的曾巩出任齐州知州时，为趵突泉取名“槛泉”。“槛”，假借为滥，泛滥之意。“槛泉”典出自《诗经》，《诗·大雅·瞻卬》中写道：“觱沸槛泉，维其深矣。”但济南百姓却因“槛泉”之称太雅，直接弃之不用。对于此事，金代元好问在《济南行记》中记载道：“近世有太守改泉名槛泉，又立槛泉坊，取诗义而言。然土人呼爆流如故。”济南百姓仍叫它“爆流泉”。“爆流”这个名字还引申出许多类似的叫法，“趵突”就是其中一种。</p>
+<p>曾巩在《齐州二堂记》中记载：“自（渴马）崖以北，至历城之西，盖五十里，而有泉涌出，高或至数尺，其旁之人名之曰趵突之泉”。所谓“趵突”，即跳跃奔突之意。</p>
+<h2 id="位置境域"><a class="header" href="#位置境域">位置境域</a></h2>
+<p>趵突泉位于济南市市中心，泉城广场西邻，趵突泉南路和泺源大街中段，北邻五龙潭公园。泉池东西长30公尺，南北宽20公尺，泉分三股涌出平地。趵突泉的四周有大块砌石，可凭栏俯视池内三泉喷涌的奇景。在趵突泉附近，散布着金线泉、漱玉泉、洗钵泉、柳絮泉、皇华泉、杜康泉、白龙泉等三十多个名泉，构成了趵突泉泉群。</p>
+<h2 id="水文特征"><a class="header" href="#水文特征">水文特征</a></h2>
+<p>趵突泉每天涌出7万立方米的泉水。趵突泉水从地下石灰岩溶洞中涌出，泉水有三个出水口，水量巨大，最大涌水量为16.2万立方米/天，出露标高可达26.49米。水质含菌量极低，经化验符合国家饮用水标准。泉水一年四季恒定在18℃左右，严冬水面上有一层薄薄的烟雾，济南人称之为“云蒸雾润”。</p>
+<p>20世纪90年代末，由于济南市的水文情况，趵突泉经常陷入季节性停喷的窘境。自2003年9月以来，趵突泉已经基本上恢复了四季泉水不断的景象。</p>
+<p>2025年9月18日，据济南市水务局官方网站数据显示，当日趵突泉地下水位突破29.06米，月牙泉水位亦跃居七十二名泉之首，再现“月牙飞瀑”胜景。2025年10月11日15时，趵突泉实时水位达到30.00米，相较两周前抬升80厘米，创年度新高。10月14日，趵突泉水位刷新了1966年以来济南市最高地下水位，达到30.29米。10月15日，趵突泉实时水位达到30.32米，再次刷新1966年以来的最高水位纪录。</p>
+<h2 id="地质地貌"><a class="header" href="#地质地貌">地质地貌</a></h2>
+<p>趵突泉的泉涌与济南的地形结构有关系。济南南面是山区丘陵，有千佛山，北面是黄河和平原。济南位于山区和平原的交界线上。济南市的山区是由石灰岩组成的，而平原的泥土底下也隐藏着岩浆岩。</p>
+<p>山区的石灰岩大约是在4亿年前形成的，其质地比较纯，石灰岩以大约30°的斜度由南向北倾斜。石灰岩本身不很紧密，有空隙、裂隙和洞穴，能储存和输送地下水。地下水顺着石灰岩层的倾斜，大量地流向济南，成为济南泉水的水源。</p>
+<p>在平原下的岩浆岩，组织很紧密。地下水流到这里后碰到岩浆岩的阻挡就流不过去了。岩浆岩上又覆盖着一层不透水的粘土层，地下水就不能自由地流出地面。这些被拦阻的大量地下水凭着强大的压力，从地下的裂隙中涌上地面，形成了这些泉水。趵突泉就是其中之一。</p>
+<h2 id="水系构成"><a class="header" href="#水系构成">水系构成</a></h2>
+<p>趵突泉，属趵突泉泉群——南护城河——东泺河——小清河水系。</p>
+<p>济南护城河是在旧城四周修建的人工河，全长6260米，辖区5534米。河水源出趵突泉、黑虎泉、珍珠泉、五龙潭四大泉群。趵突泉群、五龙潭泉群水入西护城河，经北护城河，西泺河入小清河；黑虎泉群水入南护城河，经东护城河，菜市庄河入小清河；珍珠泉群水经曲水亭河入大明湖，出小北门，经北护城河、菜市庄河入小清河。大柳行头河汇集东圩子壕沟等排水沟之水入小清河。护城河1985年辟为环城公园的游览河。</p>
+<p>小清河水系在山东省中北部，界于黄河与泰鲁沂山地间，主要河流有小清河及支脉河等。小清河上游水源补给主要来自济南市内各泉，此外小清河在济南市区睦里庄分纳部分玉符河水，因此亦可称小清河首受玉符河。小清河自睦里庄东流，经济南市区、历城章丘、邹平、高青、桓台、博兴、广饶和寿光8县，于羊角沟东注入渤海。河长233公里，流域面积10498.8平方公里。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="发展沿革"><a class="header" href="#发展沿革">发展沿革</a></h3>
+<p>2002年，专家根据河南安阳出土的“甲骨文”考证，趵突泉的记载可上溯至商代，迄今长达3543年。趵突泉是古泺水之源，古时称“泺”，早在2600年前的编年史《春秋》上就有“鲁桓公会齐侯于泺”的记载。</p>
+<p>北魏郦道元《水经注》载：“泉源上奋水涌若轮，突出雪涛数尺。声如隐雷。”“泺水出历城县故城西南，泉源上奋，水涌若轮，觱涌三窟。”</p>
+<p>宋代曾巩任齐州知州时，在泉边建“泺源堂”，并写了一篇《齐州二堂记》，正式赋予泺水以“趵突泉”的名称。该泉亦有“槛泉”、“娥英水”、“温泉”、“瀑流水”、“三股水”等名。在《齐州二堂记》中说：“自（渴马）崖以北，至历城之西，盖五十里，而有泉涌出，高或至数尺，其旁之人名之曰‘趵突’之泉。”</p>
+<p>相传乾隆皇帝下江南，出京时带的是北京玉泉水，到济南品尝了趵突泉水后，便立即改带趵突泉水，并封趵突泉为“天下第一泉”。</p>
+<h3 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h3>
+<h4 id="节庆活动"><a class="header" href="#节庆活动">节庆活动</a></h4>
+<p>趵突泉灯会：趵突泉灯会由来已久，每年于农历正月初一举办，持续一个月，是泉城济南一大文化品牌和冬季旅游主打项目，有“不到趵突泉观灯不算过年”之说。
+菊展：趵突泉赏菊由来已久。</p>
+<p>泉水文化节：每年在众泉齐涌、泉水旺盛的九月下旬举办趵突泉水文化节，一般持续十天左右。活动如戏曲演唱、民俗活动、书画展览、趵突泉行为戏、杂技等。</p>
+<h4 id="文学作品"><a class="header" href="#文学作品">文学作品</a></h4>
+<p>历代文化名人诸如曾巩、苏轼、元好问、赵孟頫、张养浩、王守仁、王士祯、蒲松龄、何绍基、郭沫若、启功等，均对趵突泉及其周边的名胜古迹有所题咏。</p>
+<p>曾巩的七律《趵突泉》：一派遥从玉水分，暗来都洒历山尘。滋荣冬茹温常早，润泽春茶味更真。已觉路旁行似鉴，最怜沙际涌如轮。曾城齐鲁封疆会，况托娥英诧世人。
+金代诗人元好问描绘为“且向波间看玉塔”。</p>
+<p>元代著名画家、诗人赵孟頫在《趵突泉》诗中赞道：“泺水发源天下无，平地涌出白玉壶”，翻上水面有二、三尺高”。</p>
+<p>清代诗人何绍基喻之为“万斛珠玑尽倒飞”。</p>
+<p>清朝刘鹗《老残游记》载：“三股大泉，从池底冒出，翻上水面有二三尺高”。</p>
+<p>《历城县志》中对趵突泉的描绘最为详尽：“平地泉源觱沸三窟突起雪涛数尺，声如隐雷，冬夏如一”。</p>
+<p>文学家蒲松龄则认为趵突泉是“海内之名泉第一，齐门之胜地无双”。</p>
+<h4 id="节庆活动-1"><a class="header" href="#节庆活动-1">节庆活动</a></h4>
+<h2 id="治理开发"><a class="header" href="#治理开发">治理开发</a></h2>
+<h3 id="园林建设"><a class="header" href="#园林建设">园林建设</a></h3>
+<h4 id="正门"><a class="header" href="#正门">正门</a></h4>
+<p>趵突泉的南大门横匾“趵突泉”蓝底金字，是清朝乾隆帝的御笔，有人誉为中国园林“第一门”。</p>
+<h4 id="观澜亭"><a class="header" href="#观澜亭">观澜亭</a></h4>
+<p>观澜亭建于明天顺五年（1461年），钦差内监韦、吴二人来济南，于泉旁构亭（另说为巡抚胡缵宗建），名为“观澜”，取《孟子·尽心上》“观水有术，必观其澜”之意。该亭原为四面长亭，半封闭式。宋代大文学家苏辙于熙宁六年（1073年）任齐洲掌书记，对济南名胜古迹咏吟甚多，其中咏《槛泉亭》一诗犹为著称。</p>
+<h4 id="亭碑"><a class="header" href="#亭碑">亭碑</a></h4>
+<p>观澜亭前水中矗立石碑，上书“趵突泉”三字，为明代书法家胡缵宗所写，池东为“来鹤桥”，桥南端耸立木牌楼，木牌楼横额上有“洞天福地”、“蓬山旧迹”字样。
+趵突泉边还立有石碑一块，上题“第一泉”，其色为墨绿色，为清同治年间（1861-1874年）历城王钟霖所题。</p>
+<h4 id="观澜桥"><a class="header" href="#观澜桥">观澜桥</a></h4>
+<p>观澜桥在趵突泉西侧，位于娥英祠、通泺园之间。桥宽3米，长5米，呈弓型，系按民族风格建造，东西构架。因在桥上能观赏趵突泉水，故称观澜桥。</p>
+<h4 id="广会桥"><a class="header" href="#广会桥">广会桥</a></h4>
+<p>广会桥在观澜桥北面约30米处，此桥在明刘敕《历乘》、《崇祯历城县志》均有记载。桥南墙壁上嵌同治四年的《重修广会桥碑记》，文中有“济南一名大板桥，桥南数千米为趵突泉。清山之泉均与北水会，每值夏秋之交，山水涨发，奔腾澎湃”的记载。</p>
+<h4 id="龟石"><a class="header" href="#龟石">龟石</a></h4>
+<p>龟石是元散曲家张养浩在北园的别墅——云庄的遗物。据考，当时云庄中有秀石10块，称为“十友”，其中，龙、凤、龟、麟四大灵石尤为著名。到了明代以后分移到济南城中的皇亭、孔庙及趵突泉等地。</p>
+<p>趵突泉原来还有一座麟石，“七七事变”时被日本帝国主义的飞机炸毁。四座灵石仅存的只有这一龟石。它是一座玲珑剔透、栩栩如生的太湖石，高近4米，重约8吨。该石挺拔露骨，多空窍，筋络明显，多凹凸，具有太湖石品中的“皱、瘦、透、漏”的特点。</p>
+<h4 id="泺源堂"><a class="header" href="#泺源堂">泺源堂</a></h4>
+<p>泺源堂在趵突泉北岸，最早为娥姜祠或称娥英祠。一组三进的建筑群，原是古代娥姜祠的旧址，原来奉祀的是大舜的妻子唐尧的两个女儿：娥皇和女英。大约在金元以后改为吕祖庙，曾供奉着宋代以后逐渐流行的道教新神吕洞宾。著名文学家曾巩在北宋熙宁年间（1072-1073）任齐州太守，在泺水建二堂，南堂临泺水之源，故称“泺源堂”。北堂南对历山，曰“历山堂”。后来，金代元好问把“泺源”、“历山”二堂改成“吕公祠”。明朝，盐运使司张奎光、济南知府樊时英、历城县令吕黄钟又改祠为阁。此后，恢复原名“泺源堂”。</p>
+<p>泺源堂，三间两层，坐北朝南，建在同一中轴线上，是一组较大的明清建筑。</p>
+<h4 id="来鹤桥"><a class="header" href="#来鹤桥">来鹤桥</a></h4>
+<p>来鹤桥原为木桥，南北纵向，在趵突泉池东岸，望鹤亭西南侧。系由明万历年间历城知府张鹤鸣始建，天启年间济南知府樊时英重修，清顺治年间监察史程公再次重修。均为木质，后改为平板石桥。1964年扩建趵突泉公园时，更换了石板。1975年，在桥体两侧设置雕花石栏。</p>
+<h4 id="白雪楼"><a class="header" href="#白雪楼">白雪楼</a></h4>
+<p>白雪楼位于趵突泉的东南侧，为纪念明代文学家李攀龙所建。李攀龙晚年，在大明湖畔白花洲又建一楼，亦曰“白雪楼”。</p>
+<p>明万历年间（1572-1620年），山东右布政使叶梦熊因敬仰李攀龙，出资在趵突泉畔，建了第三座白雪楼。1956年趵突泉扩建公园时，该楼因破烂不堪被拆除。1996年予以重建。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../BeijingGardenExpo/ji-nan.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../BeijingGardenExpo/ji-nan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

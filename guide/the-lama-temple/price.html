@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>参观门票价格 - 雍和宫 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雍和宫 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/price.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="参观门票价格"><a class="header" href="#参观门票价格">参观门票价格</a></h1>
+<h2 id="参观时间"><a class="header" href="#参观时间">参观时间：</a></h2>
+<p>夏秋季：4月1日至10月31日，09:00—17:00（16:30止票，停止入园。17:00清场）；</p>
+<p>冬春季：11月1日至3月31日，09:00—16:30（16:00止票，停止入园。16:30清场）。</p>
+<h2 id="门票价格"><a class="header" href="#门票价格">门票价格：</a></h2>
+<p>门票25元（半价票12元）</p>
+<h2 id="票务政策"><a class="header" href="#票务政策">票务政策</a></h2>
+<h3 id="免票"><a class="header" href="#免票">免票：</a></h3>
+<p>1.6周岁（含6周岁）以下或身高1.2米（含1.2米）以下的儿童凭有效证件免票参观。</p>
+<p>2.残疾人持残联核发的第二代残疾证免票参观（残疾军人、残疾警官、残疾消防救援人员持证免票参观）。</p>
+<p>3.离休干部凭离休证免票参观。</p>
+<p>4.现役军人、退役军人、军队文职人员凭有效证件，中华人民共和国烈士、因公牺牲军人、病故军人遗属凭遗属优待证免票参观。</p>
+<p>5.“八一”建军节当日，现役军人家属凭有效证明材料免票参观。</p>
+<p>6.在职、退休消防救援人员及消防救援院校学员，凭有效证件免票参观。</p>
+<p>7.持北京市民政局颁发的“民政优待卡”或“民政优待临时卡”的人员免票参观。</p>
+<h3 id="半票"><a class="header" href="#半票">半票：</a></h3>
+<p>1.6周岁（不含6周岁）—18周岁（含18周岁）未成年人、全日制大学本科及以下学历学生（不含研究生、成人教育、业余大学、夜大函大等）凭学生证或有效证件半价优惠购票。</p>
+<p>2.60周岁（含60周岁）以上老年人凭老年证、身份证等有效证件半价优惠购票。</p>
+<p>3.持有本市社会保障金领取证的人员半价优惠购票。（持证件原件到任意售票窗口验证购票）</p>
+<h2 id="购票说明"><a class="header" href="#购票说明">购票说明:</a></h2>
+<p>雍和宫采用现场窗口与线上相结合方式发售门票，现场购票在“票务处理中心”购买纸质门票；线上购票请在“雍和宫游客信众服务”微信公众号上操作购票。</p>
+<h2 id="线上购票"><a class="header" href="#线上购票">线上购票：</a></h2>
+<h3 id="一购票"><a class="header" href="#一购票">一、购票</a></h3>
+<p>1.线上购票在“雍和宫游客信众服务”微信公众号上录入相关信息方可进行购票。</p>
+<p>2.每个有效证件每日限购一张门票，只限一人一次使用。</p>
+<p>3.一个微信号每日限购5张门票。</p>
+<p>4.享受免票政策的游客信众持本人相关有效证件原件在检票口人工核验入园，无需兑换纸质门票。</p>
+<p>5.持港澳台有效身份证件（港澳居民来往内地通行证、台胞证、港澳台居民居住证）及护照的游客信众：①全价票：购票成功后获取入园二维码，入园当日在检票口刷二维码核销入园；②半价票：请持有效证件原件至“票务处理中心”购买纸质门票。</p>
+<p>6.购买全价票时，姓名与身份证号为选填项，如未填写，购票成功后请使用二维码入园，如填写，可使用身份证原件或二维码入园；购买半价票时，姓名和身份证号为必填项，入园时可使用身份证原件或二维码入园。</p>
+<p>7.雍和宫从未授权任何第三方平台和个人以任何形式销售、代售雍和宫门票，敬请广大游客信众切勿通过其他渠道购买，以免自身合法权益受到损害。</p>
+<h3 id="二退票"><a class="header" href="#二退票">二、退票</a></h3>
+<p>1.门票在未使用的情况下，自行操作退票，超过时限请致电客服咨询，电话：010-84191906/010-84191907。</p>
+<p>2.退款在您提交退票申请后的5日内执行，如果您届时尚未收到退款，请致电客服咨询。</p>
+<p>3.退票时间：06:00-21:00。</p>
+<h3 id="三验票"><a class="header" href="#三验票">三、验票</a></h3>
+<p>1.下单时填写了二代身份证号及外国人永久居留身份证号的游客信众在入园日持身份证原件或订单内生成的二维码在检票口刷闸机入园，无须兑换纸质门票；购买全价票时，如未填写姓名和身份证号，购票成功后请使用订单内生成的二维码在检票口刷闸机入园。</p>
+<p>2.持港澳台有效身份证件（港澳居民来往内地通行证、台胞证、港澳台居民居住证）及护照购买全价票的游客信众，在入园日至检票口刷二维码核销入园。</p>
+<h3 id="四发票开具"><a class="header" href="#四发票开具">四、发票开具</a></h3>
+<p>1.线上票申请开票：请您在门票核验过后登录“雍和宫游客信众服务”官方微信公众号，点击购票选择→电子发票→线上门票申请开票，选择需要开具发票的订单并填写相关信息后申请开具。</p>
+<p>2.现场纸质门票申请开票：请您在门票核验过后关注“雍和宫游客信众服务”官方微信公众号，点击购票选择→电子发票→现场纸质门票申请开票→扫描纸票副券上的二维码，填写相关信息后申请开具。</p>
+<p>3.开票申请提交成功后，电子发票将于3日内发送至您填写的邮箱中，请您注意查收。</p>
+<p>服务监督电话：84191906  84191907</p>
+<p>价格监督电话：12315 12345</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="note.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="YongheGateHall.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="note.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="YongheGateHall.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

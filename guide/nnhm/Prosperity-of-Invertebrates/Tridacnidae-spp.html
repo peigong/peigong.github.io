@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>砗磲‌ - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prosperity-of-Invertebrates/Tridacnidae-spp.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="砗磲"><a class="header" href="#砗磲">砗磲</a></h1>
+<p>砗磲是帘蛤目砗磲科砗磲属的世界上最大的双壳类软体动物。其质地厚重粗糙，表面有很多巨大的隆起和沟壑，有的种类的隆起上有粗大的鳞片或棘刺。贝壳内部的颜色为白色。砗磲的外表并不十分漂亮，但张开贝壳后，孔雀蓝、粉红、翠绿等绚丽的颜色很吸引人。因壳的表面具有隆起的放射肋，壳缘有大的缺刻，弯曲如荷叶边，像一道道深深的凹槽，如车渠，故名。</p>
+<p>砗磲分布于中国的台湾海南、西沙群岛及其它南海岛屿，在印度洋和西太平洋亦有分布。砗磲栖息于珊瑚礁中，以固着形式生活；其为滤食性贝类，用鳃滤食海水中的浮游生物，与一种叫虫黄藻的单细胞藻类共生，并以这种藻类做补充食料。寿命可长达80-100年之久。</p>
+<p>砗磲被列入《世界自然保护联盟濒危物种红色名录》（IUCN） 1996年 ver 3.1。列入《华盛顿公约》CITES 附录 Ⅱ 级保护动物。中国重点保护水生野生动物名录里也将库氏砗磲贝列为一级国家保护海洋生物。</p>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<p>砗磲一名始于汉代，因壳的表面具有隆起的放射肋，壳缘有大的缺刻，弯曲如荷叶边，像一道道深深的凹槽，如车渠，故名。砗磲在古代也称为“车渠”，它的外壳有多条突出的棱，中间凹槽如车轮碾过的印渠，所以被命名为“车渠”，由于其外壳像石头一样硬，后人改称为“砗磲”。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>砗磲是帘蛤目砗磲科砗磲属的世界上最大的双壳类软体动物。其质地厚重粗糙，表面有很多巨大的隆起和沟壑，有的种类的隆起上有粗大的鳞片或棘刺。贝壳内部的颜色为白色。砗磲的外表并不十分漂亮，但张开贝壳后，孔雀蓝、粉红、翠绿等绚丽的颜色很吸引人。有的种类肋上长有粗大的鳞片。外韧带，通常有一个大的足丝孔。铰合部有一个主齿和 1-2 个后侧齿。外套痕完整，前闭壳肌消失，后闭壳肌近中央。</p>
+<p>砗磲其中大砗磲（Tridacna gigas）壳长可达1米。贝壳略呈三角形，壳顶弯曲，壳缘呈波形屈曲。表面灰色，上有数条像被车轮辗压过的深沟道。外套膜大，十分粗糙，具有 5 条粗大的覆瓦状放射肋，生长轮脉明显，在贝壳表面形成弯曲重叠的皱褶。贝壳内面为白色，但富有光泽，有与放射肋相应的肋间沟，铰合部狭长，两壳都有主齿和后齿各一个。主齿短，后侧齿弱。</p>
+<p>砗磲的外貌并不漂亮，但在海里张开贝壳时，体内色彩艳丽，它们的外套膜极为绚丽多彩，不仅有孔雀蓝、粉红、翠绿、棕红等鲜艳的颜色，而且还常有各色的花纹。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>砗磲栖息于珊瑚礁系统浅水环境中，以固着形式生活。砗磲是重要的造礁护礁生物，约占珊瑚礁生物量的30％至40％。鉴于砗磲体型较大，能为海洋动物，如鱼、蟹、虾、鲨鱼、海豚等提供活动场所，形成一个庞大且复杂的生态系统。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>砗磲主要分布在印度洋、西太平洋海域。特别在印尼、缅甸、马来西亚、菲律宾、澳大利亚等国的低潮区附近的珊瑚礁间或较浅的礁内较多。都生活在热带海域的珊瑚礁环境中。</p>
+<p>砗磲在中国的台湾海南、西沙群岛及其它南海岛屿也有这类动物分布。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<p>砗磲常与大量虫黄藻（Zooxanthellae）共生。这种单胞藻可在砗磲体内循环，并可进行光合作用，供砗磲丰富的营养。砗磲的外套膜边缘有一种叫玻璃体的结构，能聚合光线，可使虫黄藻大量繁殖。这种蛤藻的特殊关系，称为互惠共生。此外，也食浮游生物。砗磲肉可食，大贝壳可用作贮水器或贝雕原料。有的砗磲还能产生珍珠。小型贝壳可烧制石灰或供观赏。有的国家已对鳞砗磲和无鳞砗磲进行人工养殖并获成功。</p>
+<p>砗磲其为滤食性贝类，用鳃滤食海水中的浮游生物，与一种叫虫黄藻的单细胞藻类共生，并以这种藻类做补充食料。在海里生活的砗磲，当潮水涨满把它淹没时，便张开贝壳，伸出肥厚的外套膜边缘进行活动。砗磲也和其他双壳类一样，也是靠通过流经体内的海水把食物带进来的。但砗磲不光靠这种方式摄食，它们还有在自己的组织里种植食物的本领。虫黄藻可以借砗磲外套膜提供的方便条件，如空间、光线和代谢产物中的磷、氮和二氧化碳，充分进行繁殖；砗磲则可以利用虫黄藻作食物。因为砗磲可以从两方面获得食物，它才之所以长得如此巨大。砗磲寿命可长达80-100年之久。</p>
+<h2 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h2>
+<p>雌雄同体。生殖腺发育过程中，精巢先发育成熟，随后卵巢发育成熟。砗繁殖时，利用贝壳的收缩和张开，每一次收缩或张开都是一次排放精子或卵子的过程，通常是先排放精子，然后再排放卵子。精卵在海水中相遇，完成受精和胚胎发育过程。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<h3 id="食用"><a class="header" href="#食用">食用</a></h3>
+<p>闭壳肌和外套膜等可食用，其味道鲜美，也可加工成干制品，都是非常好的食材，是日本、新加坡及中国台湾、香港和海南等地居民的传统美食。</p>
+<h3 id="观赏"><a class="header" href="#观赏">观赏</a></h3>
+<p>体型小、色彩鲜艳的活体砗磲如番红砗磲是水族市场热销的品类，主要用于观赏。</p>
+<h3 id="经济"><a class="header" href="#经济">经济</a></h3>
+<p>砗磲的贝壳很大，壳质优良，是非常好的贝雕工艺的原材料。还可以烧制成石灰用于建筑等。贝壳内面呈白色、淡橘色，有的个体呈紫褐色，富有光泽，刨光后形似美玉，可加工雕刻成各种工艺品或装饰品。</p>
+<h2 id="相关文化"><a class="header" href="#相关文化">相关文化</a></h2>
+<ul>
+<li>《广雅·释地》：“蜀石、碝、玫、砗磲……石之次玉。”</li>
+<li>唐苏鹗《苏氏演义》卷下：“魏武帝以玛瑙石为马勒，砗磲为酒椀。”</li>
+<li>明屠隆《昙花记·西游净土》：“嵌珊瑚砗磲玛瑙，光射月轮孤。”</li>
+<li>清朱彝尊《赠许容》诗：“吾生好奇颇嗜此，砗磲犀象罗笥中。”</li>
+<li>明屠隆《彩毫记·展武相逢》：“斩头颅报怨都城，把砗磲使酒侯家。”</li>
+<li>《妙法莲华经·普门品》：“为求金银、琉璃、砗磲、玛瑙、珊瑚、琥珀、真珠等宝入于大海。”唐欧阳詹《智达上人水精念珠歌》：“穷川极陆难为宝，孰说砗磲将玛瑙。”明曹昭《格古要论》卷六：“车渠，形如蚌，极厚大，色白有纹理。"《钦定大清会典·冠服》：“百官冬朝冠、夏朝冠之制..文、武六品官，蓝翎侍卫，上衔砗磲。</li>
+<li>《西游记》里，多次出现砗磲的身影，龙宫里把砗磲壳当成床，通天河底金鱼怪藏唐僧的六尺白石匣，也是用砗磲外壳制成的。
+砗磲是一种十分珍贵的矿物颜料，北宋画家王希孟的《千里江山图》，正是因为使用了砗磲制成的白色颜料，历经千年而不褪色。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prosperity-of-Invertebrates/Nautiloidea.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prosperity-of-Invertebrates/san-ye-chong.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prosperity-of-Invertebrates/Nautiloidea.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prosperity-of-Invertebrates/san-ye-chong.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

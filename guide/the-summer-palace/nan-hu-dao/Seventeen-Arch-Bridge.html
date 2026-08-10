@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>十七孔桥 - 颐和园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">颐和园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/nan-hu-dao/Seventeen-Arch-Bridge.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="十七孔桥"><a class="header" href="#十七孔桥">十七孔桥</a></h1>
+<p>十七孔桥（Seventeen-Arch Bridge），又称长桥，位于北京市海淀区新建宫门路19号颐和园内，始建于清乾隆十五年（1750年），是连接东堤与南湖岛的石桥，也是中国皇家园林中现存最长的桥梁。</p>
+<p>十七孔桥是一座联拱石桥，东西向，长150米，桥面下宽14.6米，桥面上宽6.56米，高7米，横卧在东堤与南湖岛之间。桥身由十七个发券孔组成，正中一孔最大两侧依次渐小。桥正中额栏上北刻“灵鼍偃月”，南刻“修蝀凌波”。桥栏望柱共62对，望柱柱头雕有石狮540余只，形态各异。桥东西两端有4只石刻靠山兽，威武勇猛，形态生动。十七孔桥是古代园林建筑的艺术杰作，为研究清乾隆时期的园林建筑提供了实物资料。</p>
+<p>1961年3月4日，包含十七孔桥在内的颐和园被中华人民共和国国务院公布为第一批全国重点文物保护单位。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>清乾隆十五年（1750年），十七孔桥始建。</p>
+<p>清咸丰十年（1860年），英法联军洗劫焚毁清漪园，十七孔桥侥幸保存。</p>
+<p>清光绪二十六年（1900年），八国联军洗劫焚毁颐和园，十七孔桥再次侥幸保存。</p>
+<p>1986年，十七孔桥修缮。</p>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<p>十七孔桥是一座联拱石桥，东西向，长150米，桥面下宽14.6米，桥面上宽6.56米，高7米，横卧在东堤与南湖岛之间。桥身由十七个发券孔组成，正中一孔最大两侧依次渐小。桥正中额栏上北刻“灵鼍偃月”，南刻“修蝀凌波”。桥栏望柱共62对，望柱柱头雕有石狮540余只，形态各异。桥东西两端有4只石刻靠山兽，威武勇猛，形态生动。</p>
+<h2 id="建筑特色"><a class="header" href="#建筑特色">建筑特色</a></h2>
+<p>十七孔桥位于颐和园内昆明湖东侧水域，西连南湖岛，东接昆明湖东堤，是进出南湖岛的陆上必经之道；同时和南湖岛一起形成“桥+岛”组合，构成昆明湖东侧水域的中心景致，是颐和园中交通和景致的重要组成部分。</p>
+<p>十七孔桥从立面看，石拱桥由桥面、拱圈、桥墩等部分组成。其中，桥面为抛物线形，呈现长虹卧波的视觉效果。十七个拱圈呈对称分布，洞口尺寸由中间向两边称逐渐减小，产生极强的韵律感。各拱圈通过石块的堆叠，产生侧向挤压力，不仅有力地支撑桥面传来的重量，并将该重量传递给桥墩，而且圆弧状的拱洞产生柔和圆润之感，凸显拱圈的曲线之美。硕大的方形桥墩与柔美的弧形拱圈和谐一体，形成力与美的巧妙融合。</p>
+<h2 id="历史文化"><a class="header" href="#历史文化">历史文化</a></h2>
+<h3 id="金光穿洞"><a class="header" href="#金光穿洞">金光穿洞</a></h3>
+<p>“金光穿洞”是每年冬至前后，十七孔桥的桥洞被夕阳照亮的景象。傍晚时分的太阳高度角，为“金光穿洞”提供了适宜的光线高度。所谓太阳高度角，即太阳光入射方向和目标地平面的夹角。研究表明，目标位置的太阳高度角与其所处的纬度、日期、时间等因素密切相关。在一年中，冬至日的太阳高度角最小。而在冬至日，太阳高度角随着太阳的东升西落，呈现由小到大再到小的变化过程。在不同时间段，十七孔桥处的太阳高度角近似值分别为：上午8时，4度；中午12时，27度，太阳高度角达到一天的最大值；傍晚16时，8度，阳光略高于湖水面，之后继续减小，直至阳光落到地平面以下。在傍晚时分，正是太阳西落之时，太阳高度角很小，阳光照射方向几乎与湖面平行，有利于光线直接照射到桥洞内壁上，进而产生“金光穿洞”的效果。</p>
+<h3 id="传说轶事"><a class="header" href="#传说轶事">传说轶事</a></h3>
+<p>相传，在乾隆年间修十七孔桥的时候，修桥工地上来了一个七八十岁的老头，背着工具箱子，一边走一边吆喝：“谁买龙门石！谁买龙门石啊！”老头子在工地上转悠了三天，也吆喝了三天，没有人理他。老头就背着工具箱子离开了工地，往东走到六郎庄一棵大槐树底下，待住不走了。他夜里就睡在树底下，每天鸡叫头遍起身，抡起铁锤，叮叮当当凿那块龙门石。</p>
+<p>一天晚上，下起了瓢泼大雨，风吹雨潲迷得老头睁不开眼睛。他双手抱头，蹲在树底下背雨。正好，村西住的王大爷路过，见那个老头畏畏缩缩的样子，挺心疼，就让他搬到自个儿家里来住。老头搬到王大爷家，有房子住，还管饭吃。整整住了一年，也叮叮当当一天不停地凿了一年龙门石。</p>
+<p>一天早晨，他对王大爷说：“今天我要走了。我吃你的饭，住你的房，你的恩情我一辈子也忘不了。我也没有什么报答的，就把这块石头留给你吧！”王大爷瞅了瞅汉白玉的龙门石，对老头说：“你也别说报答不报答。为这块石头，你劳累了一年，还是你带走吧！我要它也没用。”老头说：“我这块石头，真要到节骨眼上，花一百两银子还买不到呢！”说完，背起工具箱，顺大道往南去了。</p>
+<p>颐和园里修建十七孔桥的工程快完工了，没料想到，桥顶正中间最后那块石头，怎么也凿不好、砌不上。这可急坏了工程总监，这时候，有人想起了那个卖龙门石的老头子，便提醒了总监，之后就开始派人四面八方去找他。</p>
+<p>工程总监打听到了那位老石匠在六郎庄住过，就亲自来到王大爷家。他一眼看到窗底下那块龙门石，就蹲下来量了量尺寸，结果是长短薄厚一分不差，就好像专为修桥琢磨的一样。总监高兴得合不拢嘴，对王大爷说：“这是天上下来神人专为修桥凿的，可救了我的急啦！你张口吧，要多少银子我支付多少。”王大爷说：“你也别多给，那老石匠在我家吃住了一年，你就给我一年的饭钱吧！”总监听说，留下一百两银子，就把龙门石运走了。这块龙门石砌在十七孔桥上，不偏不斜，严丝合缝。从这以后，鲁班爷帮助修建十七孔桥的故事，就流传开了。</p>
+<h2 id="文物价值"><a class="header" href="#文物价值">文物价值</a></h2>
+<p>十七孔桥是古代园林建筑的艺术杰作，为研究清乾隆时期的园林建筑提供了实物资料。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<p>1961年3月4日，包含十七孔桥在内的颐和园被中华人民共和国国务院公布为第一批全国重点文物保护单位。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../nan-hu-dao/kuo-ru-ting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../nan-hu-dao/tong-niu.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../nan-hu-dao/kuo-ru-ting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../nan-hu-dao/tong-niu.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

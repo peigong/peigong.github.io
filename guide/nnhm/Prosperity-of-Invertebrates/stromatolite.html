@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>叠层石 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Prosperity-of-Invertebrates/stromatolite.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="叠层石"><a class="header" href="#叠层石">叠层石</a></h1>
+<p>叠层石是由藻类在生命活动过程中，将海水中的钙、镁碳酸盐及其碎屑颗粒粘结、沉淀而形成的一种化石。随着季节的变化、生长沉淀的快慢，形成深浅相间的复杂色层构造,叠层石的色层构造，有纹层状、球状、半球状、柱状、锥状及枝状等。中国叠层石十分丰富，北方中元古界白云岩、白云质灰岩及灰岩中普遍产出；在南方新元古界震旦系上部白云质灰岩及硅质内云岩中亦有出产。</p>
+<h2 id="形态"><a class="header" href="#形态">形态</a></h2>
+<h3 id="基本层"><a class="header" href="#基本层">基本层</a></h3>
+<p>基本层又叫生长层，是构成叠层石体的基本单元。它通常由暗层及亮层两部分组成，藻类生活状况及自然条件的周期变化形成叠层石的原生亮暗层理。</p>
+<p>叠层石的基本层形态有两种主要类型：①拱形基本层；②锥形基本层。</p>
+<h3 id="柱体"><a class="header" href="#柱体">柱体</a></h3>
+<p>柱体形态主要受基本层形态的控制，同时受环境影响。根据柱体自上而下直径的变化，柱体形态可以分为两种基本类型。一是圆柱状或次圆柱状柱体，柱体直径自下而上无显著变化。</p>
+<p>二是杯状或茎块状柱体，柱体一般较短，基部很窄，向上很快不断地增宽。</p>
+<h2 id="形成方式"><a class="header" href="#形成方式">形成方式</a></h2>
+<p>研究叠层石的成因必须从研究现代叠层石入手。它们主要是层纹状叠层石，头状的柱叠层石，球状叠层石等。在温泉中还可发现蓝藻所形成的近乎锥状叠层石的构造。</p>
+<p>现代叠层石主要生长于潮间带。生活于水下，但可露出水面。水体可以是正常海水、亦可以是咸化或淡化潟湖。</p>
+<h2 id="生长条件"><a class="header" href="#生长条件">生长条件</a></h2>
+<p>① 蓝藻藻丛的生长发育；</p>
+<p>② 有一定数量的细小沉积颗粒供蓝藻的胶鞘粘附；</p>
+<p>③ 水底的底流不太强烈，水底物质的位置相对稳定；</p>
+<p>④ 叠层石增长速度大于它的剥蚀速度；</p>
+<p>⑤ 叠层石在生长过程中应迅速得到固结，否则就会垮塌，不能具备形态学特征。</p>
+<p>古代叠层石主要保存于石灰岩、白云岩中。在燧石层、磷块岩、铁矿中，甚至砂岩中也可发现叠层石。</p>
+<h2 id="命名方式"><a class="header" href="#命名方式">命名方式</a></h2>
+<p>叠层石命名采用双名法。在分类级别上可使用独特的类（type）、亚类（subtype）、超群（supergroup）、群(group)、型（form）五级分类系统。</p>
+<p>Tungussia Semikhatov(通古斯叠层石)柱体呈块茎状或不规则假圆柱状，母柱体粗大，从母柱体上长出众多的子柱体（可以是5-10个子柱体）。子柱体可以是斜向生长，也可以横向生长。有时在横向或斜向生长的子柱体又长出向上生长的次一级子柱体、形成屈膝状。基本层为不规则拱形，可具环檐，局部具体壁。主要产出时代为13.5亿年前至5.7亿年前。</p>
+<h2 id="地质史"><a class="header" href="#地质史">地质史</a></h2>
+<p>世界上最古老的叠层石发现于非洲南部的布拉瓦约白云岩（Bulawayo Dolomite）中。同位素年龄为28亿年左右，是层状—层柱状的叠层石。不分叉柱状叠层石开始出现于25-27亿年的地层中，以Conophyton类型为主。分叉的柱状叠层石繁盛于20亿年前到6.8亿年前，以后随着后生动物的繁荣而急剧衰落。中奥陶世以后，多为小型分叉叠层石，一般不形成大块礁体。</p>
+<h2 id="分布"><a class="header" href="#分布">分布</a></h2>
+<p>根据Walter(1983)的统计，已知在澳大利亚、北美和南非三个不同大陆的11个地点发现了太古宙的叠层石，其年龄都在25亿年以上。</p>
+<p>现代叠层石主要分布于北美巴哈马群岛和西澳大利亚沙克湾（Shark Bay）。</p>
+<p>最古老的叠层石发现于踞今约28亿年前的南非布拉瓦白云岩中。不分叉的叠层石出现在距今25—27亿年前，分叉的柱状叠层石主要繁盛于20亿年前到6亿年前，随后逐渐衰落。现代的叠层石主要分布在北美巴哈马群岛和西澳大利亚沙克湾。我国最著名的叠层石产地是天津蓟县国家地质公园，那里叠层石非常壮观，甚至整座山都是叠层石。我国北方很多地方都分布有中新元古代的沉积岩，那里都有可能找到叠层石，如北京的房山区的西部，昌平的南口。</p>
+<p>2017年2月26日，重庆酉阳古生物调查组在酉阳板溪镇附近，发现了面积约1.8平方千米的寒武纪叠层石。据悉，去年10月酉阳后坪乡也曾发现叠层石，而此次发现是重庆境内的第二次发现。</p>
+<h2 id="研究"><a class="header" href="#研究">研究</a></h2>
+<p>为解读叠层石中丰富的古环境信息，屈原皋等在北京周口店西南的拴马庄剖面上，选取高程135米，地质年代约10亿年前，包含水平状、波状、穹隆状、包菜状、分枝状、柱状、S型等各种形态的叠层石构造，通过实地剖面观测、样品显微镜观测等手段，对其岩性、纹层、形态等进行了详尽的分析。发现叠层石主体岩性为白云岩，所含矿物95%以上是白云石，有少量长石碎屑和石英，在显微镜下可以看到明显的亮暗分层。研究者通过对S型叠层石样品的综合观察，统计其中300多个纹层的厚度值发现，一个完整的S型叠层石包含纹层至少为470，由此推断该岩石沉积时，一年至少有470天。同时，根据这些纹层周期性的厚度变化，发现相邻两个厚度峰值间隔36到40个纹层，显示当时一个月至少有40天。进行必要的数理统计分析，考虑可能引起误差的相关因素后确定，当时一年的天数至少为516±20，包括12.9±0.5个月，进而在不考虑地球公转周期变化的前提下，算出一天的长度为16.99±0.66小时。最后根据S型叠层石的形态，算出当时的黄赤交角大于现在的23°27’，应为29.2°～30.6°。</p>
+<p>现在科学界普遍认为，由于月球逐渐远离地球和潮汐作用对能量的消耗，地球自转和月球绕地公转的速度，都在不断减慢，地球的黄赤交角也在不断减小，此次的研究结果支持这一总体演变趋势。虽然这一研究已取得初步结论，但叠层石纹层的厚度周期变化具体的形成机制，还有待进一步的深入研究。</p>
+<h2 id="衰落之谜"><a class="header" href="#衰落之谜">衰落之谜</a></h2>
+<p>叠层石是藻类繁衍生息形成的生物遗迹岩石。元古代叠层石生长于潮上带、潮间带和潮下带的滨海地区。元古代藻类——丝体藻主要生活在平坦的沉积碳酸盐岩表面之上10mm的范围内。从元古代的含藻类的燧石切片看，丝体藻像水蛇或章鱼一样完全自由、舒展地漂浮在海水溶液中，而不是生活在洞穴中。假如当时叠层石所生活的海洋中有海浪或海流的话，藻类又没有什么可抓扶的地方，必然会被海水冲走。然而叠层石是藻类世世代代在一个固定地方生息形成的，藻类没有被海水冲走，说明藻类生存在静水环境之中。因此说叠层石所生活的海水和海岸是没有海浪和海流的，即使有也非常微弱，且海浪高度应该不超过10cm。海浪微弱说明当地的风力也很微弱，不超过1级。如果海流存在的话，海流会使海水里钙镁离子的浓度达到均一，饱和程度和沉积厚度一致，而元古代地层里碳酸盐岩的厚薄相差极大，因此说海流不存在。</p>
+<p>从世界各地叠层石统计资料来看，叠层石只生成于较纯净的碳酸盐岩中或燧石中，而不会生成于黏土岩或碎屑岩中，甚至含泥较多的碳酸盐岩中也没有叠层石。也就是说，叠层石只生存于清洁的海水中，因为有黏土沉积的话，藻类群就会被掩埋掉，这说明黏土没进入海洋中。而黏土没有进入海洋中，需要具备两个条件：一、不能有河流入海（有河流的话，黏土会被带入海洋）；二、不能有稍大的风。因此说叠层石存在的地方，必然具备下述4种地理环境特征：1、无风（微风）；2、没有海浪或者是微浪；3、没有海流；4、没有河流。也说是说，叠层石能指示上述4种地理环境特征。</p>
+<p>在中上元古代时段，全球七大洲都分布有大量的叠层石，如北非毛里塔尼亚、南非、印度、阿富汗；中国的蓟县、神农架，都存在大量的叠层石，叠层石几乎无处不在。因此上述4种地理环境特征，在当时是全球普遍存在的。</p>
+<p>根据叠层石的生存环境特征可知，叠层石是生长于静水之中的产物，因此不少学者认为，叠层石生长在潟湖之中。持潟湖观点的认为，在湖的外围有条坝，将潟湖和大洋隔开；坝上只有一个窄小的通道，使潮汐通过，却能将海流和海浪挡在坝外。但是，假设叠层石生长于潟湖中，由于叠层石生长于潮坪地带，也就是潟湖里的海水同大洋一样潮起潮落。潟湖里的潮差应为1m，那么潟湖每天要更换1m深的新鲜水。元古代的叠层石都生长在较浅的地表海里，水深在20m以内，那么潟湖里的水20天就要被更换一遍。</p>
+<p>由于元古代深海里没有燧石沉积和碳酸盐岩沉积，因此大洋里的硅酸和碳酸盐是不饱和的。如果潟湖的水被大洋水快速地更换，潟湖里的硅酸和碳酸盐就不能饱和，因此燧石和碳酸盐在潟湖里就不能沉积下来。这和实际情况是不符的，因此说，认为生长于潮坪地带的叠层石是生长在潟湖里的观点是错误的。由于元古代，全球各地的叠层石基本上都生长于潮坪地带（有潮水的地方），因此，元古代的叠层石都不生长于潟湖内，是生长于大洋的正常的海滨地带，是开放的海，而不是封闭的。</p>
+<p>根据叠层石的指示特性，已知叠层石所处海域没有海浪和海流，元古代的叠层石又都生成于开放海，说明没有海浪从大洋传播过来，也没有海流从大洋流过来。这种现象的解释是：整个大洋是滞流的，大洋的水体近乎于静止，没有像太平洋赤道海流、黑潮、墨西哥湾流这样的海流。由于这些海流是靠赤道信风来推动的，因此推断赤道信风也没有。整个大洋里没有海浪，说明大洋里没有赤道信风、西风带这样的大型风场，也没有高强度的台风。因为这3种风，任何一个存在，都会在大洋里掀起大浪，并传播到大洋的各个角落。</p>
+<p>低纬度地区也是赤道幅合带覆盖的地区，是全球降雨量最多的地区，根据叠层石的指示，在元古代，低纬度地区没有河流。降雨量多的地区尚且如此干旱，其他地区年降雨量就更少了。因此降雨量少是全球普遍存在的，同时证明，赤道幅合带也不存在。
+在海洋里，洋流和渔场是一对密不可分的孪生兄弟，洋流沉降的地方必然是渔场所在地，而且渔场里的海洋生物量同洋流沉降的流量成正比关系。本来海流是在风力的作用下形成的，但在暖流、黑潮或湾流与寒流汇合的地方，由于黑潮像树枝一样分出很多支流，流向四面八方，并有寒流迎面“驶”来，此时海流的流向，同风的流向完全不一致，甚至相反，因此说明此时海流的流向，已不受风的控制。这些都证明海流是在元古代之后形成的。</p>
+<p>黑潮和来自北极的寒流在日本的东北部汇合，形成黑潮水域和寒流水域，中间夹着漩涡状的混合水域，黑潮弯曲着向东流去。寒流先潜入混合水域下，然后进入暖流的下层，并同暖流一起向下游流去。由于寒流在暖流的下层，形成极大的温差。巨大温差使寒流温度很快升高，由于寒流的含盐量低，寒流的密度相对于周围水体很快变小、变轻，于是上升到海水表面。寒流水在上升过程中，经过暖流，使暖流温度降低。由于暖流海水含盐量高，于是暖流水密度变大、变重，沉入海底。由于这里海洋生物和鱼特别多，生物的扰动又加速了海水的混合。混合水域中，生物量巨大，包括大量的藻类，藻类释放出大量的氧气，因此，混合水域里300m深处以上的水层里的含氧量极高，平均达到5L氧气/1t海水，这些氧气使海水的密度降低了0.5%，正因如此，寒流才潜入混合水域300m深处的位置，位于含氧量高的水层的底部。</p>
+<p>只有寒流下潜，才能使暖流和寒流在上下层之间进行迅速的垂直混合，使暖流垂直下沉。如果寒流不下潜，和暖流在海洋表面平行并流，要想在水平方向进行混合是不可能的，海流也就无法下沉。而寒流下潜是在海洋藻类释放的氧气的帮助下，使混合水体变轻后才完成的，因此说，海洋生物在海流沉降过程中起着不可缺少的决定性作用。而海流沉降是大洋环流的一个必要环节，因此，没有海洋生物，就没有大洋环流。</p>
+<p>厄尔尼诺现象证明海流和大气环流之间有密不可分的关系，由此可见，生物圈、河流、海流和大气环流相互有机融为一体，构成一个完整的、有机的系统。</p>
+<p>到了7亿年前的震旦纪，出现地史上第一次大范围冰川，说明地表的降雨量增大，地层里的黏土岩和砂岩比例开始增多，并逐渐占据主要比例。因此说明，这时地表的风化能力和搬运能力增加了，即风力增大，河流和海流出现，同时海浪增大。这样的气候和地理环境已不适合叠层石生存，因此说叠层石在7亿年前迅速衰落是由于气候和地理环境变化造成的。</p>
+<h2 id="最新发现"><a class="header" href="#最新发现">最新发现</a></h2>
+<p>最近，中科院南京地质古生物研究所、国际志留委员会副主席、中科院院士，博士生导师戎嘉余等专家一行9人，在黔北地区桐梓县进行地质工作考察时，在该县代家沟和茅石乡两地发现了4亿多年前由菌藻类形成的水平状叠层石。据称，该“叠层石”系华南地区首次被发现，这也是世界上第五次被发现，在地质史上极具重大意义。</p>
+<p>叠层石”它的主要价值在于：用它来划分、对比某一地区的地层、地理、生物，环境的演变及灭绝规律。它曾被海内外地质学家推崇为世界同一地质时期的“标准层型剖面”、世界罕见的“地质瑰宝”、“大地的史书”。用它雕刻出来的作品具有很高的艺术价值，党和国家领导人曾以叠层石作为馈赠国际友人的高级礼品。</p>
+<p>据介绍，专家组在对桐梓县红花园“全球型浅海相地质剖面”的辅助点——代家沟进行为期一周的野外标本采集后，竟在该县石牛栏组发现了在4亿多年前由菌藻类形成的水平状叠层石。同时，专家组在该县茅石乡也发现了一处。据戎嘉余专家介绍，这是秦岭以南、淮河以西地质的华南地区首次被发现，也是世界上第五处被发现，在地质史上有极其重大的意义。</p>
+<h2 id="影响"><a class="header" href="#影响">影响</a></h2>
+<h3 id="成铁"><a class="header" href="#成铁">“成铁”</a></h3>
+<p>叠层石，即蓝藻，是靠光合作用自养的。由于光合作用，这种一度统治了地球的生物产生了大量的氧气。</p>
+<p>而当时地球的海洋里有大量的铁元素。铁被氧化后便从水中分离出来，沉积在海底，经过数百万年形成了如今的各大铁矿。</p>
+<h3 id="21的氧"><a class="header" href="#21的氧">21%的氧</a></h3>
+<p>叠层石最大的功劳却不是“成铁”，而是产生了地球大气中约21%的氧气。</p>
+<p>在这些晦暗的石头上，充满了生命，每平方米的岩石上生活着36亿个微生物，它们在释放氧气。花了20亿年的时间，大约40%的地球历史，大气中的氧含量才接近20%。</p>
+<p>海洋中所含的铁并不能阻止氧气浮出海面。在这些铁元素被氧化殆尽后，几乎覆盖了所有海洋浅滩的叠层石一如既往的产生着大量的氧气。当这些氧气破水而出时，地球不再是一颗被火山气体覆盖的星球，而是一支焕然一新的宜居的生命的摇篮。</p>
+<p>可以说是叠层石产生的氧使地球适宜孕育更多的高等生命，它为此后的生物进化扫清了大气无氧的障碍，为生命史的下一章也是更复杂的一章铺平了道路。</p>
+<p>可以说，叠层石默默工作20亿年，是地球能够进化出复杂生命的关键。</p>
+<h2 id="研究进展"><a class="header" href="#研究进展">研究进展</a></h2>
+<p>中国科学院南京地质古生物研究所早古生代研究团队博士研究生于深洋在李启剑博士和李越研究员的指导下，联合英国布鲁内尔大学Stephen Kershaw博士，对安徽南部下奥陶统地层进行了多次野外科学考察，系统采集了不同剖面特马豆克阶仑山组的叠层石样品，并通过显微薄片开展了深入研究。相关成果已于近期在国际期刊Facies上在线发表。</p>
+<p>在较近岸的北贡剖面，叠层石礁呈平缓的穹隆状，微生物岩主体由纤维状钙质微生物（蓝细菌）构成状，单个叠层石柱可高达1米，同时缺乏棘皮动物等底栖固着生物。与这些碳酸岩台地边缘的叠层石形成对比，更远岸剖面斜坡相的大坞圲组组因进入无光带而缺乏微生物礁。</p>
+<p>微生物岩的宏观和微相特征显示扬子台地东缘特马豆克阶仑山组叠层石的古地理分异主要受控于古水深。与扬子台地西部陆表海域相比，该研究聚焦的安徽南部案例显示出微生物礁主导的特点，底栖后生动物鲜见，不但说明后生动物礁替代微生物礁的过程具有强烈的地区差异，也印证了早奥陶之初确实是显生宙中微生物岩最丰富的时期之一，代表了叠层石最后的黄金时期。该研究为生物礁生态系统的早期演化提供了重要线索。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Prosperity-of-Invertebrates/endosymbiotic-theory.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Prosperity-of-Invertebrates/Fusulinidae.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Prosperity-of-Invertebrates/endosymbiotic-theory.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Prosperity-of-Invertebrates/Fusulinidae.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

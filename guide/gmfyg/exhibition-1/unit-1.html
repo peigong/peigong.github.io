@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>天工开物 - ‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/exhibition-1/unit-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="天工开物"><a class="header" href="#天工开物">天工开物</a></h1>
+<h2 id="玉雕白玉---五行塔"><a class="header" href="#玉雕白玉---五行塔">玉雕：白玉 - 五行塔</a></h2>
+<ul>
+<li>设       计：刘小华</li>
+<li>制       作：张英荪、陈永贵等</li>
+<li>制作年代：1985年</li>
+<li>产       地：江苏</li>
+</ul>
+<h3 id="展品介绍"><a class="header" href="#展品介绍">展品介绍</a></h3>
+<ul>
+<li>
+<p>材质：白玉</p>
+</li>
+<li>
+<p>1986年琢成的《白玉五行塔》，以新疆白玉雕刻而成。中央为七层八角形的主塔，高105cm、宽32cm。四周有四座六角形的分塔，以8根玉链、440圈链条从四方连接四塔。</p>
+</li>
+<li>
+<p>塔群构成正方形，东南西北的四个正面各有两尊玉坐狮，玉狮之间又有一座玉制香炉，主塔和分塔之间，地面上又有走廊相接，与悬空的相接的八根链条相呼应。此作品制作精巧，历时两年之久，充分展示了玉器精细的镂雕工艺，是古往今来玉塔中的一件罕见之佳作。</p>
+</li>
+</ul>
+<h2 id="玉雕翡翠山子---岱岳奇观"><a class="header" href="#玉雕翡翠山子---岱岳奇观">玉雕：翡翠山子 - 岱岳奇观</a></h2>
+<ul>
+<li>设       计：陈长海、张志平、高祥</li>
+<li>制       作：集体创作</li>
+<li>制作年代：1989年</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-1"><a class="header" href="#展品介绍-1">展品介绍</a></h3>
+<ul>
+<li>材料：翡翠  尺寸：88x60x102cm</li>
+<li>作品岱岳奇观，高88厘米，1982年由北京玉器厂设计制作。原料净重368公斤，呈三角形，质地上乘，是四块翡翠料中最大的一块。该作品充分利用了原料的特点，取材泰山。以概括的手法表现泰山的雄伟壮观、春意盎然的景色，象征中华民族勇于攀登高峰的精神。翡翠正面切割成两个平面，中间有一棱线，左右两个平面大致呈90度倾斜。雕刻出的泰山山峦挺拔，树木青翠，以中天门为背景，着重刻画十八盘，天街和五岳顶；背面为土*石质覆盖，设计者利用原料的油青色塑造山峦树木灰暗的黄昏景象。此外设计者还巧妙地利用原料上地几块俏色——翡，增强了作品地艺术效果和文学意境。在艺术手法上，这件《岱岳奇观》还采用了镂雕，圆雕，深浅浮雕等手法，来体现层层叠叠的树木、小桥；中景、远景则采用浅浮雕、阴刻等手法，使之深远。作品背面还用铁线篆体字刻上了唐代大诗人杜甫的《望岳》，填以金色，风格古朴高雅，书法和工艺造型相映成辉，更具传统的民族特色。</li>
+</ul>
+<h2 id="玉雕翡翠花篮---群芳揽胜"><a class="header" href="#玉雕翡翠花篮---群芳揽胜">玉雕：翡翠花篮 - 群芳揽胜</a></h2>
+<ul>
+<li>设       计：高祥</li>
+<li>制       作：集体创作</li>
+<li>制作年代：1989年</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-2"><a class="header" href="#展品介绍-2">展品介绍</a></h3>
+<ul>
+<li>材质：翡翠</li>
+<li>尺寸：42.3×30×97cm</li>
+<li>作品《群芳揽胜》高42.3厘米，由北京玉器厂设计制作。这件国宝所用原料重87.6公斤，体积较小，色泽主要为深油青色。设计人员巧妙地将其取材为提梁花篮，用提梁、活动链条的形式增加作品的高度。在制作过程中，由于花卉的花朵，枝梗，叶子等可以比较自由地穿插，因此能去除裂纹、瑕疵等缺点，保留并突出绿色，藕粉色部分。另外，制作者还运用掏膛的工艺手法，挖出花篮中的翡翠，雕刻成提梁链条和花叶，从而使深沉的暗青色玉料变薄，变得透亮。布局上，设计者将色泽较好处设计为引人注目的牡丹、菊花，放在主体地位，突出翡翠的质地优美；周围衬以玉兰、梅花、海棠等十多种花卉，相互交错，疏密有致。</li>
+<li>《群芳揽胜》整体效果丰满生动，花卉枝叶富有生气，是中国玉器艺术史上最大的花卉作品。在制作过程中，受裂纹的影响，在掏膛时，取出活动链条、吊坠、提梁时需要克服重重困难，经过起股、分链、透眼、拉丝、活环、找型、揉细等工序才完成环环相套、活动自如的链条工程。</li>
+</ul>
+<h2 id="玉雕翡翠插屏---四海腾欢"><a class="header" href="#玉雕翡翠插屏---四海腾欢">玉雕：翡翠插屏 - 四海腾欢</a></h2>
+<ul>
+<li>设       计：郭石林</li>
+<li>制       作：集体创作</li>
+<li>制作年代：1989年</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-3"><a class="header" href="#展品介绍-3">展品介绍</a></h3>
+<ul>
+<li>材质：翡翠</li>
+<li>尺寸：177.5×34.7×112cm</li>
+<li>作品《四海腾欢》，1982年由北京玉器厂开始创作，1989年制作完成。原料的形状方正而规矩，面积大，翠色多而密，色泽鲜明，质地光润、透亮。设计者将原料剖为4片，每片厚度仅为1.8厘米；之后将这4片翡翠拼合成一块高74厘米，宽146厘米的大插屏，最大限度地展示翡翠晶莹剔透的质地。拼合后的翡翠不仅平整、严谨，而且接缝处平直一致，没有丝毫间隙。</li>
+<li>内容上，作品正面为矫健的九龙翻腾的场面，象征中华民族的腾飞精神。龙的形象吸收了历代龙形图案的精华，使得其生动、活泼而传神。设计者利用原料的天然色泽，将绿色部位设计为龙，采用深浮雕技法，突出重点的绿翠;其他部位则设计为云彩、水波纹，以浅浮雕技法雕刻而成，衬托主体。同时还充分利用绿翠、白、粉白、浅青等俏色的布局特点，巧妙地处理好纹饰之间的关系，使之相互缭绕、相互辉映。下端的水波纹分别以深浅浮雕技法制成，使平面的插屏具有立体的效果。插屏的背面用先进的设备琢碾，以油石反复打磨并抛光。</li>
+</ul>
+<h2 id="玉雕翡翠花薰---含香聚瑞"><a class="header" href="#玉雕翡翠花薰---含香聚瑞">玉雕：翡翠花薰 - 含香聚瑞</a></h2>
+<ul>
+<li>设       计：蔚长海、马庆顺</li>
+<li>制       作：集体创作</li>
+<li>制作年代：1989年</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-4"><a class="header" href="#展品介绍-4">展品介绍</a></h3>
+<ul>
+<li>材料：翡翠</li>
+<li>尺寸：65×47.5×96cm</li>
+<li>作品含香聚瑞，高65厘米，1985年由北京玉器厂设计制作。原料重274.4公斤，类似长方形，绿翠多，材料质地优良，所以设计者们将其设计为球形花薰。作品不仅采用了中国玉器历史上高难度的套料工艺，并用料中套料，小料做大的手法，增加原料绿翠的面积。花薰由底足、中节、主身、盖、顶五部分组成，以主身和盖组成的球体为中心，周围饰以圆雕的龙。在盖、中节、底足三部分，以深浅浮雕的技法和开光的艺术形式，装饰传统的青龙、白虎、朱雀、玄武图案。盖的周身除四个开光图案外，通体镂雕唐代传统的蕃草图案。</li>
+<li>套料工艺，即从玉料中掏膛，掏出玉料，是中国玉器艺术传统的高难度的优秀技艺。花薰的盖由主身中掏出，而且要求膛的厚薄均匀一致。在五个部分的组合上，底足和中节、中节和主身、盖和顶的结合都采用螺口相接的方法，达到螺纹角度精确，子母口密切配合，各个平面的水平一致，上下垂直到位，制作精确。花薰有2个大环和8个小环，大小一致，比例恰当。</li>
+</ul>
+<h2 id="玉雕白玉---薄胎炉"><a class="header" href="#玉雕白玉---薄胎炉">玉雕：白玉 - 薄胎炉</a></h2>
+<ul>
+<li>制       作：潘秉衡</li>
+<li>制作年代：20世纪40年代</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-5"><a class="header" href="#展品介绍-5">展品介绍</a></h3>
+<ul>
+<li>材质：白玉</li>
+<li>尺寸：26cm×18cm×31cm</li>
+<li>作品原系清宫的半成品，后流入民间，玉商穆祥振购得后交由潘秉衡改制，潘秉衡费时8年完成。薄胎炉膛壁厚仅2mm左右，却满壁刻以纹饰，繁密中透出雅秀之美。炉两边雕有小巧的双耳，炉体花瓣片片舒展，雕刻精美。</li>
+</ul>
+<h2 id="玉雕-青玉-兽面壶"><a class="header" href="#玉雕-青玉-兽面壶">玉雕 青玉 兽面壶</a></h2>
+<ul>
+<li>制       作：刘忠荣</li>
+<li>制作年代：1983年</li>
+<li>产       地：上海</li>
+</ul>
+<h3 id="展品介绍-6"><a class="header" href="#展品介绍-6">展品介绍</a></h3>
+<ul>
+<li>材质：青玉</li>
+<li>尺寸：27cm×15cm×24cm</li>
+<li>刘忠荣制作。作品造型仿西周青铜盉。主体纹饰为兽面纹。作品主线分明，刚柔相济，兽面纹刻画得栩栩如生。壶嘴及盖钮雕刻成动物形状，为肃穆的作品增添了一分灵动活泼。</li>
+</ul>
+<h2 id="玉雕白玉---圆罍"><a class="header" href="#玉雕白玉---圆罍">玉雕：白玉 - 圆罍</a></h2>
+<ul>
+<li>制作年代：20世界40年代</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-7"><a class="header" href="#展品介绍-7">展品介绍</a></h3>
+<ul>
+<li>材质：白玉</li>
+<li>尺寸：30cm×25cm×51cm</li>
+<li>罍是中国古代大型盛酒器和礼器，有方形和圆形之别，流行于商晚期至春秋中期。这件作品仿照青铜器中的圆罍造型制作而成，采用了圆雕、透雕、浅浮雕等技法，瓶身雕刻层次丰富，雕工精致，器型高雅端庄，极富观赏价值。</li>
+</ul>
+<h2 id="漆线雕波月洞悟空降妖"><a class="header" href="#漆线雕波月洞悟空降妖">漆线雕：波月洞悟空降妖</a></h2>
+<ul>
+<li>制       作：蔡水况</li>
+<li>制作年代：1990年</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-8"><a class="header" href="#展品介绍-8">展品介绍</a></h3>
+<ul>
+<li>工艺：漆线雕</li>
+<li>尺寸：30cm×25cm×60cm</li>
+<li>作品采用漆线雕工艺，取材于孙悟空取经途中为民除害、英勇降妖的内容，通过对漆线图案的精心装饰，突出鲜明的盔甲、艳丽的战袍和神气的人物形象，使得孙悟空的形象更加威武逼真、栩栩如生。</li>
+</ul>
+<h2 id="雕漆花篮盘"><a class="header" href="#雕漆花篮盘">雕漆：花篮盘</a></h2>
+<ul>
+<li>制       作：杜炳臣</li>
+<li>制作年代：20世纪70年代</li>
+<li>产       地：北京</li>
+</ul>
+<h3 id="展品介绍-9"><a class="header" href="#展品介绍-9">展品介绍</a></h3>
+<ul>
+<li>工艺：雕漆</li>
+<li>尺寸：51cm×51cm</li>
+<li>杜炳臣制作。花篮盘采用了雕漆工艺，以紫铜为胎，髹漆600多层，漆色朱红光润，中心为盛满花卉的花篮，花卉花瓣轻薄娇嫩，枝杆连理穿插，多而不乱，层次丰富，立体感强。</li>
+</ul>
+<h2 id="漆砂砚大涤草堂"><a class="header" href="#漆砂砚大涤草堂">漆砂砚：大涤草堂</a></h2>
+<ul>
+<li>设       计：许从慎</li>
+<li>制       作：赵如柏、任宝明、殷春凤等</li>
+<li>制作年代：1987年</li>
+<li>产       地：江苏</li>
+</ul>
+<h3 id="展品介绍-10"><a class="header" href="#展品介绍-10">展品介绍</a></h3>
+<ul>
+<li>材质：漆器</li>
+<li>尺寸：38cm×35cm×9cm</li>
+<li>许从慎制作。此砚以一株古树的主干与支干自然地构出一椭圆形砚池，砚池上方绘以山石、平坡、草堂，草堂中端坐一位有发冠的老叟。砚盒上雕有苍天古树，间以树丛绿竹，象征了大涤子的高风亮节。</li>
+<li>石涛（1642年—1707年）明末清初画家，俗姓朱，名若极，小字阿长，僧名元济，一作原济，别号石涛，大涤子、钝根、石道人、苦瓜和尚、瞎尊者、清湘陈人、清湘老人、清湘遗人、零丁老人，广西全州(今全县)人，明靖江王朱亨嘉之子。</li>
+</ul>
+<h2 id="青田石雕杨梅"><a class="header" href="#青田石雕杨梅">青田石雕：杨梅</a></h2>
+<ul>
+<li>制       作：倪东方</li>
+<li>制作年代：20世纪80年代</li>
+<li>产       地：浙江</li>
+</ul>
+<h3 id="展品介绍-11"><a class="header" href="#展品介绍-11">展品介绍</a></h3>
+<ul>
+<li>材质：青田石</li>
+<li>尺寸：24cm×14cm×42cm</li>
+<li>中国工艺美术大师倪东方设计制作。青田石雕精巧、秀丽、朴实、自然。作品多写实，江南地方色彩浓郁，富有装饰情趣。作者将原料进行适度工艺处理，利用石料本身的红色，以极细腻的写实手法，将每颗杨梅刻划得惟妙惟肖，几乎乱真。用色之巧妙，看后有垂涎之感。同时运用镂雕技艺，对杨梅的枝、叶、果进行精心布局，巧妙穿插。</li>
+<li>作品因材命题，就势造型，以色呈彩。运用镂雕、线刻技法和夸张、对比等艺术手法，使作品达到形似神具，情景交融的意境，显示出青田石雕独特的艺术魅力。</li>
+</ul>
+<h2 id="金属工艺斑铜---犀牛"><a class="header" href="#金属工艺斑铜---犀牛">金属工艺：斑铜 - 犀牛</a></h2>
+<ul>
+<li>制       作：蒋铁峰、杨丽云</li>
+<li>制作年代：1966年</li>
+<li>产       地：云南</li>
+</ul>
+<h3 id="展品介绍-12"><a class="header" href="#展品介绍-12">展品介绍</a></h3>
+<ul>
+<li>材质：斑铜</li>
+<li>尺寸：35cmx22cmx15cm</li>
+<li>作品是昆明市斑铜厂根据1963年陕西兴平县豆马村出土的战国中晚期错金云纹青铜犀牛尊移植而成。作品既保持了青铜原件浑朴大气的特点，又将原先的纹饰代以金红交错的微妙斑花，使器物华丽典雅。</li>
+</ul>
+<h2 id="金属工艺k金摆件---补天"><a class="header" href="#金属工艺k金摆件---补天">金属工艺：k金摆件 - 补天</a></h2>
+<ul>
+<li>制       作：沈柏源设计、刘红宝制作</li>
+<li>制作年代：1987年</li>
+<li>产       地：上海</li>
+</ul>
+<h3 id="展品介绍-13"><a class="header" href="#展品介绍-13">展品介绍</a></h3>
+<ul>
+<li>材质：18K金</li>
+<li>尺寸：14cm×10cm×24cm</li>
+<li>沈柏源设计、刘红宝制作。作品取材“女娲补天”的故事，综合金属、玉雕、漆器等工艺，在形式上推陈出新，装饰感极强，是一件难能可贵的佳作。</li>
+</ul>
+<h2 id="玉雕岫玉---电焊工"><a class="header" href="#玉雕岫玉---电焊工">玉雕：岫玉 - 电焊工</a></h2>
+<ul>
+<li>制作年代：20世纪60年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-14"><a class="header" href="#展品介绍-14">展品介绍</a></h3>
+<ul>
+<li>材质：岫玉</li>
+<li>尺寸：17cm×9cm×23cm</li>
+<li>作品通体呈现湖水绿色，以岫玉雕刻的工艺表现了一站一蹲两个电焊工人的形象，通过站立者头戴的电焊帽和手持的电焊工具点明了人物的职业特点，并以两人饱满的精神状态和强健的体魄展现出新一代工人的典型面貌。</li>
+</ul>
+<h2 id="玉雕-岫玉-女民兵"><a class="header" href="#玉雕-岫玉-女民兵">玉雕 岫玉 女民兵</a></h2>
+<ul>
+<li>制作年代：20世纪60年代</li>
+<li>产       地：福建</li>
+</ul>
+<h3 id="展品介绍-15"><a class="header" href="#展品介绍-15">展品介绍</a></h3>
+<ul>
+<li>材质：岫玉</li>
+<li>尺寸:20cm×10cm×15cm</li>
+<li>作品使用岫岩碧玉，通体呈现出温润细腻的绿色，通过岫玉雕刻工艺表现了两个扛枪女民兵英姿飒爽的形象，两个女民兵的眼神坚毅有力，由此向我们传达出女民兵保家卫国的坚强力量。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../exhibition-1/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../exhibition-1/unit-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../exhibition-1/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../exhibition-1/unit-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

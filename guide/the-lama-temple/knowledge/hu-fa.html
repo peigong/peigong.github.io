@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>护法 - 雍和宫 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">雍和宫 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/knowledge/hu-fa.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="护法"><a class="header" href="#护法">护法</a></h1>
+<p>藏传佛教的护法体系极其庞大精密，可以说是佛教世界里最复杂的一章。如果把佛菩萨比作大学的“教授”（负责教学和解脱），那么护法就是“保安”和“后勤处长”——他们不发菩提心，而是以威力遣除修行者的内外障碍，护持教法。</p>
+<p>护法分为两大类：出世间的智慧护法（本身就是佛菩萨化身）和世间的福德护法（受佛法嘱托的世间神灵）。二者境界天差地别，修行者对他们的态度也完全不同。</p>
+<h2 id="一护法的两大阵营出世-vs-世间"><a class="header" href="#一护法的两大阵营出世-vs-世间">一、护法的两大阵营：出世 vs 世间</a></h2>
+<p>这是理解护法的关键，很多误区都源于混淆这两者。</p>
+<h2 id="维度--出世间护法智慧护法--世间护法业力护法"><a class="header" href="#维度--出世间护法智慧护法--世间护法业力护法">维度 | 出世间护法（智慧护法） | 世间护法（业力护法）</a></h2>
+<p>本质 | 佛菩萨的忿怒化身（如观音化马头明王），已证悟空性。 | 天神、鬼神、罗刹、龙王等，未断轮回，仍在六道中。
+境界 | 拥有般若智慧，属于圣者。 | 拥有大福报和神通，但仍有贪嗔痴，属于凡夫。
+职责 | 直接护持正法修行，斩断修行者的无明烦恼。 | 护持寺院、僧人、信众的世俗利益（如健康、财富、权势）。
+供养关系 | 依止（如同依止上师），需修持其本尊法。 | 委托/雇佣（如同请保镖），供养护食、酬谢。
+典型代表 | 玛哈嘎拉（大黑天）、吉祥天母、大威德金刚、阎魔敌。 | 山神（念青唐古拉）、财宝天王（毗沙门天）、紫玛护法。</p>
+<h2 id="二核心出世间护法必须认识的大咖"><a class="header" href="#二核心出世间护法必须认识的大咖">二、核心出世间护法（必须认识的大咖）</a></h2>
+<p>这些护法是密宗修行中不可或缺的部分，常出现在唐卡的上方或角落。</p>
+<ol>
+<li>玛哈嘎拉（大黑天）</li>
+</ol>
+<p>藏传佛教首席护法，总揽一切护法事业。不同教派供奉的形象不同：</p>
+<ul>
+<li>二臂玛哈嘎拉：噶举派（白教）主要护法。身青黑，持钺刀、颅碗，形象威猛。</li>
+<li>四臂玛哈嘎拉：格鲁派（黄教）主要护法。身黑，持钺刀、颅碗、三叉戟，以“怙主”著称。</li>
+<li>六臂玛哈嘎拉：萨迦派（花教）主要护法。身蓝黑，六臂各执法器，脚踏象头天神（象鼻天），专门铲除修行的违缘与魔障，也是香巴噶举的重要护法。</li>
+<li>白玛哈嘎拉：财神属性极强的护法，能赐予福报与财富。</li>
+</ul>
+<ol start="2">
+<li>吉祥天母（玛哈嘎哩）</li>
+</ol>
+<p>藏地唯一的女主护法，拉萨城的保护神。</p>
+<ul>
+<li>形象：骑一头黄骡子（骡子上系着疾病口袋），身蓝黑，一面二臂，獠牙外露，手持骷髅棒。</li>
+<li>特殊之处：她是拉萨守护神，每年藏历正月的“吉祥天母节”（仙女节），信徒会向她祈福。她不仅能除障，还能预知死亡，被称为“三界总主”。</li>
+</ul>
+<ol start="3">
+<li>大威德金刚（阎曼德迦）</li>
+</ol>
+<p>虽然常被列为本尊，但他本质上是文殊菩萨的忿怒相，也是极其重要的护法。</p>
+<ul>
+<li>形象：九头（最高头为文殊菩萨的水牛头）、三十四臂、十六足，拥抱明妃。</li>
+<li>职能：专治“我慢”，降伏死神阎魔王，是破除修行中细微魔障的最强本尊之一。格鲁派极为重视。</li>
+</ul>
+<ol start="4">
+<li>阎魔敌（阎罗王）</li>
+</ol>
+<p>通常被视为文殊菩萨的化身，而非地狱里的阎王爷。</p>
+<ul>
+<li>职能：调伏地狱众生，同时也护持修行者不受死亡的恐惧干扰。</li>
+</ul>
+<ol start="5">
+<li>毗沙门天（财宝天王）</li>
+</ol>
+<p>北方的多闻天王，也是重要的财神护法。</p>
+<ul>
+<li>形象：身金黄色，一头二臂，骑绿鬃白狮，右手持如意宝幢，左手持吐宝鼬。</li>
+<li>职能：赐予众生财富、地位，并护持佛法不受侵犯。</li>
+</ul>
+<ol start="6">
+<li>狮面空行母</li>
+</ol>
+<p>宁玛派（红教）重要护法。</p>
+<ul>
+<li>形象：狮头人身，面露凶恶。</li>
+<li>职能：强力回遮诅咒和巫术。如果你怀疑自己被下了咒，修此法非常有效。</li>
+</ul>
+<h2 id="三世间护法地方大神"><a class="header" href="#三世间护法地方大神">三、世间护法（地方大神）</a></h2>
+<p>这些护法通常是某个地区的山神或战神，后来被莲花生大士等高僧降伏，立誓成为佛教护法。</p>
+<ol>
+<li>十二丹玛女神</li>
+</ol>
+<p>西藏本土的十二位地母神，遍布藏区各地，负责护持当地的山水和居民。</p>
+<ol start="2">
+<li>紫玛护法（拉莫查哇）</li>
+</ol>
+<p>乃琼护法，曾是西藏最大的战神，后被莲师降伏。他是世间护法中神力最强者之一，也是拉萨桑耶寺的护法。他常以附体神巫（乃琼降神师）的形式预言吉凶，历史上曾担任达赖喇嘛的宣谕神。</p>
+<ol start="3">
+<li>白哈尔</li>
+</ol>
+<p>原是霍尔（蒙古一带）的地方神，后被莲师降伏，成为桑耶寺的护法，也是五明王之一。</p>
+<h2 id="四护法的忿怒相与供养护法"><a class="header" href="#四护法的忿怒相与供养护法">四、护法的“忿怒相”与供养护法</a></h2>
+<ol>
+<li>为什么要长得吓人？</li>
+</ol>
+<p>护法的忿怒相（多臂、火焰、骷髅、血盆大口）不是为了吓唬人，而是有其深意：</p>
+<ul>
+<li>威慑力：以此威猛形象震慑天魔外道和内心的贪嗔痴。</li>
+<li>断除执着：提醒修行者，表象不可靠，不要执着于“慈眉善目”的表象。</li>
+<li>能量象征：背后的火焰代表智慧之火，燃烧一切烦恼。</li>
+</ul>
+<ol start="2">
+<li>供养护法的禁忌</li>
+</ol>
+<ul>
+<li>不可当作“鬼神”拜：尤其是出世间护法，他们是佛菩萨的化身，需恭敬如佛。</li>
+<li>不可交易心态：不能许愿“帮我赢官司，我给你烧香”，这被视为亵渎。应以“祈请护持正法”为出发点。</li>
+<li>肉食供养：传统上护法供有“食子”（糌粑做的供品）和酒肉（象征断除贪欲和魔障），但现代在家居士若无此条件，以清水、鲜花代替亦可，重在诚心。</li>
+<li>誓言：很多护法修法需要灌顶和口传，不可随意自学修持，以免触犯誓言。</li>
+</ul>
+<h2 id="五一个重要的教理区分护法与世间神"><a class="header" href="#五一个重要的教理区分护法与世间神">五、一个重要的教理区分：护法与世间神</a></h2>
+<p>在藏传佛教中，有一个严格的规定：皈依佛门，不能皈依世间神。</p>
+<ul>
+<li>你可以祈请世间护法帮忙挡灾、求财（这属于“请求帮助”）。</li>
+<li>但你不能皈依世间护法（这属于“寻求终极依靠”）。</li>
+<li>只有佛、法、僧三宝才是最终的皈依处。护法只是护持者。</li>
+</ul>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>藏传佛教的护法体系，本质上是一套“借力打力”的系统：利用高维存在的力量，来清除我们在三维世界和低维心识中的障碍。出世间护法是修行的加速器，世间护法是生活的保护伞。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../knowledge/du-mu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../knowledge/Vajra.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../knowledge/du-mu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../knowledge/Vajra.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

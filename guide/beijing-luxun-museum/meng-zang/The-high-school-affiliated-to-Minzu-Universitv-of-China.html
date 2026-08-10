@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中央民族大学附属中学 - 北京鲁迅博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京鲁迅博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/meng-zang/The-high-school-affiliated-to-Minzu-Universitv-of-China.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中央民族大学附属中学"><a class="header" href="#中央民族大学附属中学">中央民族大学附属中学</a></h1>
+<p>中央民族大学附属中学（The high school affiliated to Minzu Universitv of China），简称“民大附中”，是一所公办民族高级中学，位于北京市海淀区。</p>
+<p>中央民族大学附属中学前身为蒙藏学校，创建于1913年。1918年更名为蒙藏专门学校。1929年更名蒙藏委员会北平蒙藏学校。1937年至1949年建国前易名国立北平蒙藏学校。1950年改名蒙藏学校。1951年该校被命名为中央民族学院附属中学。文革期间校名易名北京市第一六零中学。1978年恢复原名。1993年更名为中央民族大学附属中学。</p>
+<p>截至2014年5月，该校除北京市海淀区主校区外还拥有海南陵水分校、丰台实验学校；并拥有有专职教师110名，其中特级教师3名，高级教师52名；博士4名，硕士37名，学生574人。</p>
+<p>2018年7月10日，丽江市政府与中央民族大学附属中学在丽举行合作签约仪式。市委书记崔茂虎、中央民族大学附属中学党委书记佟丽娟等出席仪式，并为“中央民族大学附属中学丽江实验学校”授牌。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>1913年3月，中央民族大学附属中学前身蒙藏学校成立。</p>
+<p>1918年7月，更名为蒙藏专门学校。</p>
+<p>1929年7月，更名为蒙藏委员会北平蒙藏学校。</p>
+<p>1937年10月至1949年建国前，易名国立北平蒙藏学校。</p>
+<p>1950年9月，改名蒙藏学校。</p>
+<p>1951年6月，改名为中央民族学院附属中学。“文化大革命”期间校名易名北京市第一六零中学。</p>
+<p>1978年4月，恢复原名。</p>
+<p>1987年11月，学校以空军指挥学院北院为临时校舍。</p>
+<p>1990年10月，学校迁址法华寺甲5号。</p>
+<p>1993年11月，更名为中央民族大学附属中学。</p>
+<p>2008年10月3日，学校举行建校95周年庆祝典礼暨文艺演出。</p>
+<p>2011年附中被纳入国家级特色高中建设校的行列。</p>
+<p>2012年附中构建了“共美教育”课程体系，实施“混和式”培养模式的“共美教育”，并获得北京市自主课程实验学校和自主会考实验学校资格。</p>
+<p>2013年附中被授予首都“百年学校”光荣称号；2014年荣获国务院授予的“全国民族团结进步模范集体”。</p>
+<p>2015年成为北京市级优质高中统筹校之一。10月22日，香港中文大学（深圳）在该校建立“优质生源基地”。</p>
+<h2 id="办学条件"><a class="header" href="#办学条件">办学条件</a></h2>
+<h3 id="办学规模"><a class="header" href="#办学规模">办学规模</a></h3>
+<p>据2015年10月学校官网显示，中央民族大学附属中学除北京市海淀区主校区外还拥有中央民族大学附属中学海南陵水分校、中央民族大学附属中学丰台实验学校；并拥有学生574人（截至2014年5月）。</p>
+<h3 id="硬件设施"><a class="header" href="#硬件设施">硬件设施</a></h3>
+<p>截至2014年5月，该校拥有完善的校园网络系统，全部实现多媒体教学；还拥有现代化的实验室、微机室、电子阅览室、电子录课室、电子备课室、图书馆和体育馆、塑胶运动场等设施。此外，每个教室和寝室安装了空调，新建全塑胶的田径场、足球场、篮球场。</p>
+<h3 id="师资力量"><a class="header" href="#师资力量">师资力量</a></h3>
+<p>截至2014年5月，该校有专职教师126名，其中特级教师2名，高级教师55名；博士3名，硕士37名。市级学科带头人和市级骨干教师5名，海淀区学科带头人和骨干教师20名。</p>
+<h2 id="文化传统"><a class="header" href="#文化传统">文化传统</a></h2>
+<h3 id="形象标识"><a class="header" href="#形象标识">形象标识</a></h3>
+<h4 id="校徽"><a class="header" href="#校徽">校徽</a></h4>
+<p>中央民族大学附属中学校徽，左边为校名，右边则是鸽子与橄榄枝的搭配。鸽子与橄榄枝是和平的象征，结合校训，意义即为各民族之间和平共处，互相学习包容。</p>
+<h4 id="校训"><a class="header" href="#校训">校训</a></h4>
+<p>各美其美，美美与共</p>
+<p>”各美其美“就是各个民族自己，弘扬自己优美的文化传统。“美美与共“这样各个民族、各个国家的优秀文化互相包容、互相学习，那么它就可以展现一个多彩的世界，多元的文化。这样的话，培养我们一代一代的人，我们就可以建立一个大同的社会。</p>
+<h3 id="优良传统"><a class="header" href="#优良传统">优良传统</a></h3>
+<h4 id="校风"><a class="header" href="#校风">校风</a></h4>
+<p>为人为学，至诚至和。</p>
+<h4 id="教风"><a class="header" href="#教风">教风</a></h4>
+<p>进德敬业，精益求精。</p>
+<h4 id="学风"><a class="header" href="#学风">学风</a></h4>
+<p>好学好问，善思善行。</p>
+<h3 id="百年校庆"><a class="header" href="#百年校庆">百年校庆</a></h3>
+<p>2013年中央民族大学附属中学100周年校庆前夕，学校来自全国24个省区市50个少数民族的1800名学生给习近平写信，汇报在首都北京学习和生活的情况。2013年10月1日，中共中央总书记、国家主席、中央军委主席习近平给中央民族大学附属中学全校学生回信，就学校迎来百年华诞向同学们和全校教职员工表示祝贺。中共中央政治局常委、国务院总理李克强也就此作出批示。</p>
+<h3 id="社团文化"><a class="header" href="#社团文化">社团文化</a></h3>
+<p>该校各族学生与北京学生在附中校园“各美其美，美美与共”，长思想、育情怀（举行一二·九合唱节、科技节、春季运动会、文化节、新年元旦晚会、体育节、读书节、高三成人仪式等活动），长能力、出领袖（学生社团、活动频繁：歌舞社、彼岸文学社、棋弈社、电影社、话剧社、街舞社、广播站、动漫社、都仑乐队、跆拳道社、寰球社、华氏100.4、新闻社、模联社等），长身体、增活力（学校建有篮球、足球、羽毛球、兵乓球、博击等体育俱乐部），会生活、能生存（进行生存教育、法制教育、安全教育、健康教育、国防教育等）。学校在4月举行读书节，5月举行体育节，6月举行音乐节，8月进行国防教育，9月进行民族团结教育，10月至12月举行科技艺术节，12月举行纪念一二·九大合唱比赛、年终总结表彰大会暨迎新年联欢会。学校俱乐部的各项活动和赛事开展也如火如荼。据不完全统计，每年开展各类大型活动近百次，2万多人次参加，人均参加活动20次以上。</p>
+<h2 id="知名校友"><a class="header" href="#知名校友">知名校友</a></h2>
+<p>建校以来，中央民族大学附属中学培养了以生前原国家副主席乌兰夫、革命烈士荣耀先、多松年、贾力更、李裕智、伟大诗人郭小川、传记文学家巴彦布、原国家民委副主任文精等数以万计的各民族优秀人才。</p>
+<h3 id="党政界"><a class="header" href="#党政界">党政界</a></h3>
+<p>乌兰夫 蒙古族 前国家副主席 （20世纪20年代校友）</p>
+<ol>
+<li>
+<p>荣耀先 蒙古族 黄埔军校第一期学员 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>多松年 蒙古族 中共五大代表 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>李裕智 蒙古族 大革命时期内蒙古革命军创建者 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>贾力更 蒙古族 广州农民运动讲习所六期学员 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>吉雅泰 蒙古族 首任驻蒙古大使 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>奎碧 蒙古族 内蒙古政协原主席 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>特木尔巴根 蒙古族 内蒙古自治区政协原副主席（20世纪20年代校友）</p>
+</li>
+<li>
+<p>高布泽博 蒙古族 广州农民运动讲习所六期学员 黄埔军校第四期学员（20世纪20年代校友）</p>
+</li>
+<li>
+<p>朱实夫 蒙古族 黄埔军校第四期学员（20世纪20年代校友）</p>
+</li>
+<li>
+<p>吴勒吉敖喜尔 蒙古族 内蒙古骑兵师师长（20世纪20年代校友）</p>
+</li>
+<li>
+<p>弗鼎 蒙古族 中共国际六大代表 参加中共六大工作（20世纪20年代校友）</p>
+</li>
+<li>
+<p>赵诚 蒙古族 内蒙古高级人民法院原院长（20世纪20年代校友）</p>
+</li>
+<li>
+<p>勇夫 蒙古族 黄埔军校第四期学员 《内蒙古日报》的创办人 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>康根成 蒙古族 内蒙古高级人民法院原副院长 在列宁故乡度过30个春秋 （20世纪20年代校友）</p>
+</li>
+<li>
+<p>恒生 蒙古族 蒙藏学校带头参加五四运动学生之一（20世纪20年代校友）</p>
+</li>
+<li>
+<p>孟纯 蒙古族 1924年北京学联常委担任李大钊交通员（20世纪20年代校友）</p>
+</li>
+<li>
+<p>克力更 蒙古族 内蒙古自治区五届人大常委原副主任（20世纪30年代校友）</p>
+</li>
+<li>
+<p>乌兰 蒙古族 全国总工会书记处原书记（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>黄静涛 蒙古族 青海省委宣传部副部长，建国后首任校长（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>潮洛濛 蒙古族 内蒙古自治区六届人大常委原副主任（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>寒峰 蒙古族 中共内蒙古自治区原纪委书记（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>墨志清 蒙古族 包头市市长（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>浩帆 蒙古族 内蒙古社会科学院党组书记. 院长（20世纪30年年代校友）</p>
+</li>
+<li>
+<p>赛西 （蒙古族） 内蒙古建材局原副局长</p>
+</li>
+<li>
+<p>乌兰木伦 （蒙古族） 商业部原副部长</p>
+</li>
+<li>
+<p>蔡萱 （藏族） 国家民委原计财司长</p>
+</li>
+<li>
+<p>文精 （蒙古族） 国家民委原副主任</p>
+</li>
+<li>
+<p>马福英 （哈尼族） 云南省缉毒英雄</p>
+</li>
+<li>
+<p>李先猷 （哈尼族） 云南省政协副主席</p>
+</li>
+<li>
+<p>胡达古拉 （蒙古族） 原内蒙古妇联主席、党组书记</p>
+</li>
+<li>
+<p>高原 （蒙古族） 原内蒙古高级人民法院副院长、一级高级法官</p>
+</li>
+<li>
+<p>瓦哈甫·阿扎买提 （乌孜别克族） 新疆维吾尔自治区政协文史委员会主任</p>
+</li>
+<li>
+<p>阿斯娅（维吾尔族） 新疆维吾尔自治区人大常委会人事委副主任</p>
+</li>
+<li>
+<p>巴和提亚 （维吾尔族） 新疆维吾尔自治区社科妇联主席</p>
+</li>
+<li>
+<p>阿扎特 （维吾尔族） 新疆维吾尔自治区安全生产监督管理局副局长</p>
+</li>
+<li>
+<p>保拉特（维吾尔族） 新疆维吾尔自治区公路管理局局长</p>
+</li>
+<li>
+<p>吴文彦 北京市民政局副局长</p>
+</li>
+<li>
+<p>扎西顿珠 （藏族） 中央人民广播电台驻云南副站长</p>
+</li>
+</ol>
+<h3 id="教育界"><a class="header" href="#教育界">教育界</a></h3>
+<ol>
+<li>孟和 （蒙古族） 著名骨科专家</li>
+<li>斯力根 （蒙古族） 内蒙古师范大学教授</li>
+<li>赵玉英 （蒙古族） 内蒙古自治区医院院长、主任医师</li>
+<li>乌林西拉 （蒙古族） 蒙古文文献、图书管理学专家</li>
+<li>布和（蒙古族） 内蒙古自治区科技情报研究专家</li>
+<li>道布 （蒙古族） 蒙古语言学家</li>
+<li>沙人 （蒙古族） 中国少数民族第一位遗传优生专家</li>
+<li>荫禾 （蒙古族） 著名园林设计学家</li>
+<li>青卓力克 （蒙古族） 航天动力研究专家</li>
+<li>巴林凤 （蒙古族） 清华大学教授、计算机专家</li>
+<li>尹宗禹 （回族） 中学教学研究专家、西城区教研中心原主任</li>
+<li>吴松年 （蒙古族） 中学教学艺术专家、国家级骨干教师培训主讲教师</li>
+<li>姜贵善 （朝鲜族） 原国土资源部信息中心资源战略室译审、北京大学教授</li>
+<li>木拉提·苏里堂 （哈萨克族） 国家有突出贡献的中青年科学技术管理专家</li>
+<li>王法利 中医按摩专家</li>
+<li>李明赞 北京四中特级教师</li>
+<li>张盛国 北京市人民警察学院原副院长、法学教授</li>
+<li>王炎华 北京师范大学外交学院副院长、教授</li>
+<li>刘孜 法学博士、中国政法大学教授</li>
+<li>巴莫曲布嫫 （黎族） 法学博士、中国社会科学院民族文学研究专家</li>
+<li>张汉鹏 （回族） 理学博士、应用化学研究专家</li>
+<li>贺卫光 （俗固族） 民族学博士，社会人类学、民俗学研究专家</li>
+<li>李寿德 （土族） 管理学博士、交通管理学专家</li>
+<li>陆孜 （壮族） 清华大学数学博士、运筹组合优化与图论方向研究专家</li>
+<li>牙浩明 （壮族） 中国运载火箭技术研究青年专家</li>
+<li>尹宏 （蒙古族） 中国阿拉伯文学研究专家</li>
+<li>林金盈 （壮族） 中华医学会血液、风湿免疫专家</li>
+</ol>
+<h3 id="工商界"><a class="header" href="#工商界">工商界</a></h3>
+<ol>
+<li>康明德 （蒙古族） 蒙文印刷专家</li>
+<li>王性纯 （蒙古族） 内蒙古毛纺专家</li>
+<li>蔡昉 经济学博士、研究员，国家级有突出贡献的中青年专家</li>
+<li>丁一凡 国务院发展研究中心，世界发展研究所副所长、研究员</li>
+<li>黄颖 北京出版社教材中心主任、教育出版社总编</li>
+<li>胡颖 北京东来顺集团副总经理</li>
+<li>肖春平 中国网通集团大客户部经理</li>
+</ol>
+<h3 id="文艺界"><a class="header" href="#文艺界">文艺界</a></h3>
+<ol>
+<li>郭小川 著名诗人</li>
+<li>照日格巴图 （蒙古族） 著名作家</li>
+<li>毕力格太 （蒙古族） 著名作家</li>
+<li>乌尔莎娜 （蒙古族） 内蒙古电影制片厂著名导演</li>
+<li>苏日图 （蒙古族） 著名摄影家</li>
+<li>纳穆吉勒 （蒙古族） 著名摄影家</li>
+<li>妥木斯（蒙古族） 著名画家</li>
+<li>娅茹 （蒙古族） 著名戏剧家</li>
+<li>乌嫰齐 （蒙古族） 革命历史纪实文学专家 （照片见随想录）</li>
+<li>云文耀 （蒙古族） 北京电影制片厂一级摄影师</li>
+<li>斯琴高娃 （蒙古族） 北京电影制片厂著名导演</li>
+<li>马国超 （回族） 中国人民解放军海军少将、军旅作家</li>
+<li>马德华 （回族） 著名演员</li>
+<li>巴彦布 （蒙古族） 著名诗人</li>
+<li>广春兰 （锡伯族） 天山电影制片厂著名导演</li>
+<li>庞旸 中国和平出版社编审、青年作家</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../meng-zang/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Beijing-Luxun-Museum/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../meng-zang/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Beijing-Luxun-Museum/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

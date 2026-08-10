@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>总鳍鱼 - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/aquarium/Latimeria.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="总鳍鱼"><a class="header" href="#总鳍鱼">总鳍鱼</a></h1>
+<p>总鳍鱼（学名：Latimeria）是脊索动物门硬骨鱼纲总鳍亚纲腔棘鱼目动物的通称，包含化石种类与现存矛尾鱼。其体长可达1.8米，体表覆椭圆形鳞片，具肉质偶鳍及矛状尾鳍，鳍内骨骼结构与陆生脊椎动物四肢相似，背鳍两个，鳔可行使肺功能。化石记录显示该类群最早出现于4.2亿年前的泥盆纪，早期栖息于淡水环境，三叠纪后部分进入海洋。</p>
+<p>现生种矛尾鱼栖息于非洲东南部150-700米深海域，寿命可达100岁，属濒危物种。1938年在南非海域首次发现活体，颠覆了白垩纪灭绝的认知。传统理论认为总鳍鱼类的骨鳞鱼为四足动物祖先，但我国学者张弥曼通过研究先驱杨氏鱼化石，发现其缺乏内鼻孔结构，对该假说提出质疑。矛尾鱼现存两种，分布于科摩罗群岛和印度尼西亚苏拉威西岛附近深海。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>脊椎动物，硬骨鱼类的1个大分支。除极少数外，几乎完全是化石种类。在古生代泥盆纪和中生代曾广泛分布。较早种类均生活于淡水中，从中生代三叠纪开始，也有栖于海中的。体圆肉厚，其中有的种类有内鼻孔，嗅觉发达，能用肺呼吸，背鳍2个，除第1背鳍和尾鳍外，偶鳍基部富有肉质，被有鳞片的柄部称为肉叶，内有基鳍骨，能转动，可用来游泳、支撑身体和作短时间爬行。尾鳍歪形、圆形或三叶形。上下颌有锐齿，鳃外有鳃盖。为贪食性鱼类。总鳍鱼类包括骨鳞鱼类和空棘鱼类两枝，现仅有残存于非洲东南部海洋中的“矛尾鱼”(Latimeri achalumnae)，又称“拉蒂迈鱼”，即属空棘鱼类，被认为是总鳍鱼类的“活化石”。古总鳍鱼类的另一枝骨鳞鱼类的头骨、脊柱和偶鳍骨等，均表现出与原始两栖类有惊人的相似，因而一直被公认是四足动物的祖先。但近年来，我国古鱼类学家张弥曼采用头骨化石的连续磨片技术，深入研究了我国云南省东部的早泥盆纪骨鳞鱼——先驱杨氏鱼 (Younaolepispiaecursor)的特征，并对比了其他骨鳞鱼类的头骨化石，首次发现这些鱼类无内鼻孔，也无其他原认为是四足动物特征的结构。这一发现如果得到确认，则总鳍鱼类作为四足动物直接祖先的地位，将需要重新考虑。</p>
+<p>总鳍鱼偶鳍基部有发达的肌肉，鳍内原骨骼排列和陆栖脊椎动物的四肢骨构造相似。这种肉质鳍不仅能支撑身体，而且能在一定程度上沿陆地移动。由地质史和发掘的化石证明，总鳍鱼有可能进化为古代的两栖类。早期的总鳍鱼均生活于淡水内，从中生代三叠纪开始，有一支转移到海中生活。这就是残存至今的空棘鱼类，著名的代表就是 1938年在非洲东南部沿岸捕捉到的矛尾鱼（Latimeria chalumnae，也叫拉蒂迈鱼）。当时曾轰动一时，被称为活化石，因为人们认为早在6000万年以前总鳍鱼就已灭绝了。矛尾鱼至今已捕到几十条，均在科摩罗岛附近，一般生活在200～400公尺的深海中，体重13～80公斤。</p>
+<h2 id="进化"><a class="header" href="#进化">进化</a></h2>
+<p>在晚泥盆世时期，作为陆生脊椎动物的最早类型，总鳍鱼开始登陆。总鳍鱼已经具有原始肺的构造，它的肉质偶鳍可以使身体在陆地上爬行。进入到石炭一二叠纪时，从两栖动物迷齿类深化出来的蜥螈形类，坚定的保持着陆生的方向，它们很可能就是爬行动物的祖先。</p>
+<p>总鳍鱼化石种类出现在古生代的泥盆纪，直到中生代的白垩纪趋于绝灭。偶鳍基部有发达的肌肉，鳍内原骨髓排列和陆栖椎动物的四肢骨构造相似。这种肉质鳍不仅能支撑身体，而且能在一定程序上沿陆地移动。由地质史和发掘的化石证明，总鳍鱼有可能进化为古代的两栖类。</p>
+<h2 id="特征"><a class="header" href="#特征">特征</a></h2>
+<p>总鳍鱼类有一个强半的歪尾，两对支身体的叶状持的偶鳍，两个背鳍，还有厚的斜方形的齿鳞。总鳍鱼的内内胳有条强壮的脊索，头骨和上下颌完全是硬骨质的。腭上有牙齿，锋利而尖锐，很适合于捉住捕获物，因此总鳍鱼显然是肉食性的鱼类。把总鳍鱼的牙齿横切，在显微镜下观察，可以见到釉质层是强烈地褶皱起来的，形成一种曲曲折折迷宫似的图案，这种牙齿称为迷齿，与早期两栖动物的牙齿结构相似。目前没有足够证据证明总鳍鱼有内鼻孔，现生深海种类也没有。特别有意义的是偶鳍的内部结构，在偶鳍内有一块与肢带相关节的骨头，在这块骨头的下边是与之相关节的两块骨头，在这两块骨头的下边还有一些向鳍的远端辐射的骨头。把这些骨头与陆生脊椎动物的四肢骨相比，它们分别相当于四肢的骨的肱骨（股骨）、桡骨与尺骨（胫骨与腓骨），但是这样的结构与陆生动物四肢仍然有一定差距。所以科学界对于到底谁是两栖动物祖先的问题上，仍然在肺鱼和总鳍鱼之间摇摆。总鳍鱼有两大特点：一是它的胸鳍和腹鳍的骨骼排列方式和现代生存的青蛙的四肢骨基本相同，这种强有力的鳍，便于在陆地上支撑和移动身体；二是总鳍鱼能用鳔直接呼吸空气。</p>
+<h2 id="现存鱼种"><a class="header" href="#现存鱼种">现存鱼种</a></h2>
+<p>现存的总鳍鱼只有腔棘鱼一种。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../aquarium/Latimeria-chalumnae.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../aquarium/Crossopterygii.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../aquarium/Latimeria-chalumnae.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../aquarium/Crossopterygii.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

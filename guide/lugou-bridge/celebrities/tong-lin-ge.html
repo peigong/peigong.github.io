@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>佟麟阁 - 卢沟桥 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">卢沟桥 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/celebrities/tong-lin-ge.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="佟麟阁"><a class="header" href="#佟麟阁">佟麟阁</a></h1>
+<p>佟麟阁（1892年10月29日—1937年7月28日），满族(此处有争议，一说为汉族)，本名佟凌阁，字捷三，出生于河北省高阳县边家务村，抗日英烈，原国民革命军第二十九军副军长，追晋陆军上将。</p>
+<p>佟麟阁自幼习读经史，立志救国。16岁时，到高阳县县公署做缮写。1912年，投笔从戎，追随冯玉祥南征北战，剿匪平藩，屡立战功，先后任连长、营长、团长、师长等职。1930年，中原大战冯玉祥讨蒋失败后，佟麟阁解甲归田，总结以往斗争的经验教训，寻求救国之路。1932年，应第二十九军军长宋哲元之邀出山参加抗日斗争。1933年，任张家口警备司令，支持二十九军在喜峰口抗击日军；同年5月，任察哈尔民众抗日同盟军第一军军长兼代察省主席，领导对日作战，保卫察省，收复失地。同盟军被迫撤销后再次隐退。随着抗日形势发展，再次出山任第二十九军中将副军长兼军事训练团团长。1937年，“七七事变”爆发时，出任第二十九军代军长，率部坚守北平南苑，在与日军鏖战时，于1937年7月28日14:30殉国。</p>
+<p>佟麟阁是在抗日战争中为国捐躯的第一位高级将领。1937年7月31日，国民政府发布褒奖令，追晋其为陆军上将。1979年，中共北京市委统战部发出通知，追认其为抗日阵亡的革命烈士。2009年，被评为“100位为新中国成立作出突出贡献的英雄模范人物”之一。2014年，被列入第一批著名抗日英烈和英雄群体名录。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="少年立志"><a class="header" href="#少年立志">少年立志</a></h3>
+<p>1892年10月29日，佟麟阁出生于河北省保定市高阳县一户农民家庭，自幼随舅父习读经史。期间，高阳县遭八国联军之日军的烧杀掳掠，百姓流离失所，生活苦不堪言。他的父母教育他发愤读书，以期他长大后一雪国耻。佟麟阁受到爱国思想教育，萌生投笔从戎，救国之念。16岁时，到高阳县县公署做缮写工作。</p>
+<h3 id="投笔从戎"><a class="header" href="#投笔从戎">投笔从戎</a></h3>
+<p>1911年11月，冯玉祥等举行滦州起义。1912年，冯玉祥招募新兵，佟麟阁慕名投军，成为冯玉祥营下哨兵，后升为哨长。1913年，在第一团任排长，受冯玉祥影响皈依基督，坚定了牺牲自我、拯救人民的信念。1914年，佟麟阁任第十六混成旅第一团第三营第二连连长，驻防陕西。</p>
+<h3 id="讨伐军阀"><a class="header" href="#讨伐军阀">讨伐军阀</a></h3>
+<p>1917年，佟麟阁率部驻防廊坊，参加冯玉祥领导的“廊坊起义”。张勋被击败后，佟麟阁升任第一团第一营副营长。1920年，升任第四团的营长，先后驻防湖北、河南信阳。1921年，随冯玉祥入陕打败陕西督军陈树藩后，第十六混成旅扩编为陆军第十一师第二十二混成旅，佟麟阁在第一团任营长。1922年，升为团长，隶属宋哲元的第二十五混成旅，在冯部的“陆军检阅使署高级教导团”带职受训一年。</p>
+<p>1924年，佟麟阁升任陆军第二十五混成旅旅长。冯玉祥在第二次直奉战争中发动北京政变，佟麟阁率部前往增援。其后，冯玉祥组建国民军，佟麟阁任该军第十一师二十一混成旅旅长。1925年，苏联顾问到国民军扩编后，佟麟阁升任第四师师长。在奉军郭松龄联合冯玉祥反对张作霖的起义行动中，佟麟阁奉命率部进攻热河。在起义军占领滦河后，佟麟阁被任命为滦河防守副司令；同年12月，参加天津战役，消灭奉系军阀李景林。</p>
+<p>1926年，佟麟阁被任命为国民军第十一师师长，奉命率部与段祺瑞讨赤联军开始争战；同年8月，兵败南口，西撤至五原，后进甘肃。1927年，佟麟阁驻军天水，兼任甘肃省陇南镇守使；同年5月，率部东出潼关，先后攻占洛阳、孟津、孝义、郑州、开封，与北伐军唐生智部会师郑州。后在豫、鲁两省与奉、直军继续作战，战无不胜。1928年1月，任第二集团军第三十五军军长兼第十一师师长，再次率部参加北伐战争，转战于豫、鲁、冀各省，屡立战功；同年，佟麟阁率第十一师进驻甘肃河州，被马仲英部包围。因顾虑与回族产生民族争端，致使第十一师蒙受损失。事后，他引咎辞职，解甲归田。</p>
+<p>1929年1月，佟麟阁重被起用，在冯玉祥第二集团军第二编遣区任第十一师师长。1930年，在中原大战期间，奉命在西安建立新一军，任军长兼第二十七师师长，负责召集西北军旧部，招募新兵，训练巩固后方。1930年，中原大战讨蒋失败后，他与冯玉祥解甲归田，总结以往斗争的经验教训，寻求救国之路。</p>
+<h3 id="出山抗日"><a class="header" href="#出山抗日">出山抗日</a></h3>
+<p>1931年，“九一八”事变爆发，日军发动侵华战争。1932年，佟麟阁应第二十九军军长宋哲元的邀请，出山任职。1933年，日军占据山海关后，宋哲元任命佟麟阁为张家口警备司令，安定后方；2月，日军向长城各口——独石口、古北口、喜峰口进犯，二十九军奉命在喜峰口抗击日军，佟麟阁在后方积极备战，维持局势，保障供给，使前线将士无后顾之忧，保证了长城前线战斗的胜利；5月，参加冯玉祥组织的察哈尔民众抗日同盟军，担任第一军军长，兼代察省主席，领导对日作战，保卫察省，收复失地。</p>
+<h3 id="撤职退隐"><a class="header" href="#撤职退隐">撤职退隐</a></h3>
+<p>1933年8月，抗日同盟军被迫撤销后，佟麟阁深感抗日之志未酬，退居北平香山寓所，以待报国时机。隐退期间，宋哲元再三敦请佟麟阁出山，负责军事。二十九军师长冯治安、赵登禹、张自忠、刘汝明等亦联名相邀。此时天津大学生和人民群众的抗日救亡运动，日益激昂。佟麟阁感到抗日救国之日到来，于是再次出山，1936年回任二十九军副军长兼军事训练团团长，还兼大学生军训班主任，住南苑二十九军军部，主持全军事务。全国有志抗日救国青年，慕其坚决抗日的声誉，纷纷前往投军。</p>
+<h3 id="复出抗战"><a class="header" href="#复出抗战">复出抗战</a></h3>
+<p>1937年2月，宋哲元离任，佟麟阁代理军长职务，负责军事指挥；7月6日，日军驻丰台的清水节郎中队全副武装，要求通过宛平县城到长辛店地区演习，宛平第三十七师驻军不许，双方相持达十余小时。二十九军当即作了应变准备，严阵以待；7月7日夜，日军一个中队突然向卢沟桥守军发起攻击。佟麟阁代军长立即命令三十七师一一〇旅旅长何基沣自卫还击，该旅吉星文团金振中营遂奋起抵抗。</p>
+<h3 id="壮烈殉国"><a class="header" href="#壮烈殉国">壮烈殉国</a></h3>
+<p>1937年7月28日，日军向北平发动总攻击，进犯南苑，佟麟阁和一百三十二师师长赵登禹指挥二十九军坚守南苑，在战斗中，佟麟阁被机枪射中腿部，带伤指挥作战作战，后头部再受重伤，壮烈殉国，时年45岁。</p>
+<h2 id="人物事迹"><a class="header" href="#人物事迹">人物事迹</a></h2>
+<h3 id="军纪严明"><a class="header" href="#军纪严明">军纪严明</a></h3>
+<p>1920年，在驻信阳时，因军阀冯玉祥部不属直系，又未参加直皖战争，而得不到吴佩孚的薪饷供应。官兵以盐水和杂粮勉强度日。佟麟阁常以“饿死事小，失节事大”和“真爱民，不扰民”的道理，勉励所部官兵，严守军纪，同甘共苦，共度难关。他还带领全营兵为信阳城区翻修街道，两旁植树，造福于民。</p>
+<h3 id="解围西安"><a class="header" href="#解围西安">解围西安</a></h3>
+<p>1926年8月，佟麟阁随冯玉祥举行“五原誓师”响应北伐，加入中国国民党。时值国民军的杨虎城等部被吴佩孚的刘镇华部包围在西安已达八个多月之久，形势危急。冯玉祥派佟麟阁部和吉鸿昌第五军为先头部队驰援，先解赵登禹部之围，尔后进军西安，击败刘镇华部，解除了西安之围。</p>
+<h3 id="主政天水"><a class="header" href="#主政天水">主政天水</a></h3>
+<p>1927年，佟麟阁驻军天水，兼任甘肃省陇南镇守使，上任后致力于革新政治，兴办地区福利，厉行禁烟禁毒，提倡妇女放足，创建学校和孤儿院等慈善事业，深得民心。他为官清廉，常微服出访，体察民情。</p>
+<h3 id="治军有方"><a class="header" href="#治军有方">治军有方</a></h3>
+<p>佟麟阁善于练兵，常讲述历代民族英雄的事迹，以培养官兵爱国爱民的精神。在训练和作战时，佟麟阁做到有功必赏，有过必罚。他对于犯错误的官兵，打破西北军的惯例，一向不准肉体惩罚。官兵的问题严重，但没有触及刑律，便责令他们在适当的场合检讨，并提出个人改进措施；凡能认识错误并决心改正的，就不追究；对于官兵的一般错误，主张私下规劝，不再公开批评。</p>
+<h3 id="整顿警务"><a class="header" href="#整顿警务">整顿警务</a></h3>
+<p>1933年，佟麟阁受宋哲元邀请出担察哈尔省警务处长兼领张家口公安局局长。他见军警往往不遵法令，拘押百姓，滥行处罚，便颁发禁令，严饬各县局，遇有案件，非法律所规定的，一概不准处罚，作弊者一律严办。并通过招考，挑选外事警官；整理警官补习所，自兼所长，训练男女军警二百七十六名，造就警材。</p>
+<h3 id="收复失地"><a class="header" href="#收复失地">收复失地</a></h3>
+<p>1933年，佟麟阁担任抗日同盟军第一军军长，兼代察省主席。在日军对察哈尔省发起进攻时，他与吉鸿昌、方振武等部配合，并派出所部第二师接受吉鸿昌指挥，出兵张北，先后收复康保、宝昌、沽源、多伦等地，共击毙日军茂木骑兵第四团及伪军李华岑部等千余人。期间，佟麟阁治军理政，运筹帷幄，筹备军需，安定后方，出版《国民新报》，宣传抗日主张，组织民众武装，担任前方运输，救护伤员，收容难民，殚精竭虑，获得察省军民的爱戴。</p>
+<h3 id="七七事变"><a class="header" href="#七七事变">七七事变</a></h3>
+<p>“七七事变”爆发后，佟麟阁坚决主战，他表示：“中日战争是不可避免的。日寇进犯，我军首当其冲。战死者光荣，偷生者耻辱；荣辱系于一人者轻，而系于国家民族者重。国家多难，军人应当马革裹尸，以死报国。”闻者一致拥护，请缨杀敌，佟麟阁以军部名义向全军官兵发布命令：凡有日军进犯，坚决抵抗，誓与卢沟桥共存亡，不得后退一步。　　
+在二十九军军长宋哲元意图与日本议和、放松前线防备时，佟麟阁又说服他下定决心抗日。1937年7月27日，宋哲元军长下令军部撤回北平城内，并命增援北平的一三二师赵登禹师长为南苑战场指挥官。但佟麟阁不愿随军部回城，坚持与赵登禹共守南苑；7月28日，日军对北平、天津发动了更猛烈的进攻。拂晓时分，日军出动通县、丰台等地驻军，在三十余架飞机和几十辆装甲车的配合下，直扑南苑。当时南苑守军有二十九军卫队旅、骑兵第九师留守的一部、军事训练团、平津大学生军训班等共五千余人。佟麟阁誓死坚守。他说：“既然敌人找上门来，就要和他死拼，这是军人天职。”日军见久攻不下，便派飞机前来助战，在敌机的狂轰滥炸中，佟麟阁壮烈殉国。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<ul>
+<li>2009年9月14日，佟麟阁被评为“100位为新中国成立作出突出贡献的英雄模范人物”之一。</li>
+<li>2014年9月，佟麟阁被列入第一批著名抗日英烈和英雄群体名录。</li>
+</ul>
+<h2 id="人物生活"><a class="header" href="#人物生活">人物生活</a></h2>
+<h3 id="人物语录"><a class="header" href="#人物语录">人物语录</a></h3>
+<p>“要为民族生存而战斗，为国家荣誉而献身。”</p>
+<p>“日寇消灭中国，是其根本目的。中国人只有一条出路，就是抗战！日寇阴谋侵占平津、吞并华北，吾辈首当其冲。战死者光荣，偷生者耻辱！荣辱系于一人者轻，而系于国家民族者重。国家多难，军人当马革裹尸，以死报国。”</p>
+<p>“凡是日军进犯，坚决抵抗，誓与卢沟桥共存亡，不得后退一步。”</p>
+<p>“大红门失守，全局被动，事急如此，我不能临阵而退。”</p>
+<p>“中央如下令抗日，麟阁若不身先士卒行，君等可执往天安门前，挖我两眼，割我两耳。”</p>
+<h3 id="家庭情况"><a class="header" href="#家庭情况">家庭情况</a></h3>
+<p>佟麟阁的父亲是佟焕文，母亲是胡氏。1907年，由父母作主，佟麟阁与高阳县八果庄农民女儿彭静智结婚，婚后育有六个子女。</p>
+<p>佟麟阁的次子佟荣芳出生于1926年6月，因幼时活泼好动，常被父亲叫做“小兵”，后改名为佟兵。2015年9月2日，佟荣芳作为烈士遗属，在人民大会堂代替父亲接受中共中央总书记、国家主席、中央军委主席习近平颁发的中国人民抗日战争胜利70周年纪念章。</p>
+<p>2020年，佟荣芳去世后，该纪念章转由佟麟阁的女儿佟亦非保存。2023年9月3日，佟亦非将该纪念章枚传家捐赠给中国人民抗日战争纪念馆。</p>
+<p>2025年7月12日，“烽火卢沟 硬气铸魂”北京丰台抗战专题展在宛平城开展。当天，抗日名将佟麟阁之孙佟晓冬向展览捐赠了一把按原样复制的国民革命军第二十九军大刀队大刀。</p>
+<h3 id="逸闻轶事"><a class="header" href="#逸闻轶事">逸闻轶事</a></h3>
+<h4 id="模范夫人"><a class="header" href="#模范夫人">模范夫人</a></h4>
+<p>佟麟阁的的夫人彭静智早年随军，响应冯玉祥的号召，纺纱织布，为将士做军衣。在北伐战争中，佟麟阁在前线指挥作战，交通受阻，军饷不济，她曾化装冒险，亲送款项，被冯玉祥誉为“模范夫人”。因此，佟麟阁常对子女说：“我事业成就，一半归功于你们的母亲。”并把夫人的贤德撰拟成词，刻于手镯赠与夫人，上刻“瑞卿夫人，随我廿年。戎马颠簸，历尽艰危。含辛茹苦，风雨同舟。尊老育幼，克勤克俭。镌此数语，以志不忘。”</p>
+<h4 id="名字之误"><a class="header" href="#名字之误">名字之误</a></h4>
+<p>佟麟阁原名佟凌阁，因报纸上误写成佟麟阁，传开后就一直沿用下来。</p>
+<h4 id="刚正不阿"><a class="header" href="#刚正不阿">刚正不阿</a></h4>
+<p>佟麟阁驻军天水时，一次他到某县视察时，该县县长因一向为非作歹，畏惧丢官，就向佟麟阁进行贿赂，受到佟麟阁的严词斥责，随后立即被撤了职。佟麟阁离任之时，当地上万名乡绅百姓前往送行。</p>
+<h4 id="本色雄心"><a class="header" href="#本色雄心">本色雄心</a></h4>
+<p>1932年10月，冯玉祥找佟麟阁磋商组织同盟军等问题。佟夫人因事先不知，未作准备，问如何接待冯先生。佟麟阁说：“还是照旧用小米面窝头，外加大萝卜咸菜招待他。”冯玉祥吃得很香甜，并夸奖说：“你不愧是我的好部下，做了大官还没丢失农民的本色。”冯玉祥告知此来是决心走武装抗日道路的意图时，佟麟阁极表拥护。从此，他们共同策划，为救亡图存积极准备。当冯玉祥与佟麟阁会商组织抗日同盟军时，佟麟阁挥笔书写王昌龄的《出塞》诗句：“秦时明月汉时关，万里长征人未还。但使龙城飞将在，不教胡马度阴山。”以示决不准许日军跨越长城一步。</p>
+<h2 id="人物评价"><a class="header" href="#人物评价">人物评价</a></h2>
+<ul>
+<li>佟麟阁等国民党抗日将领在执行抗击日本侵略者的“神圣任务中光荣地、壮烈地牺牲了”，他们“给了全中国人以崇高伟大的模范。”（毛泽东评）</li>
+<li>佟麟阁英勇奋战，光荣地完成了保国卫民的天职，是全国军人的模范。（救国时报评）</li>
+<li>他是治兵有方的将军，造就名震天下的大刀队，在喜峰口战役痛击敌寇。他是以身作则的榜样，曾说：“中央如下令抗日，麟阁若不身先士卒，你们可把我绑至天安门前，挖我双眼，割我双耳。”一番演说让有志青年都奔他而来。在香山的山坡上，佟麟阁亲手移栽的枣树仍在向上生长。佟麟阁路上的铜怀表，反射着太阳的光。刹那间，仿佛英雄从未离去，他早已融进这片深爱的土地。（新华社 评）</li>
+</ul>
+<h2 id="后世纪念"><a class="header" href="#后世纪念">后世纪念</a></h2>
+<h3 id="悼念活动"><a class="header" href="#悼念活动">悼念活动</a></h3>
+<ul>
+<li>1937年7月29日，中国红十字会、冀察政委会外交委员会率警卒10余人在大红门寻获佟麟阁遗体并运回北平城内。佟夫人及其子女含悲收殓，隐姓埋名，寄厝于雍和宫附近柏林寺。老方丈仰慕将军为国献身精神，保守寄柩秘密，直到抗战胜利。</li>
+<li>1937年7月31日，国民政府发布褒恤令，追授佟麟阁为陆军上将，生平事迹宣付史馆，以彰忠烈。</li>
+<li>1938年3月12日，延安举行纪念孙总理逝世十三周年及追悼抗敌阵亡将士大会，毛泽东同志在大会上致演说词时对佟麟阁的献身精神给予高度评价。</li>
+<li>1946年4月5日，清明节当天，北平市各界在北平八宝山忠烈祠举行入祀大典，供奉佟、赵两将军神位。</li>
+<li>1980年7月28日，中国人民政治协商会议北京市委员会和中国国民党革命委员会北京市委员会在香山举行扫墓仪式，纪念佟麟阁殉国四十三周年。</li>
+</ul>
+<h3 id="佟麟阁路"><a class="header" href="#佟麟阁路">佟麟阁路</a></h3>
+<p>1946年，北平西城的南沟沿被命名为“佟麟阁路”。通州亦因佟麟阁在该县指挥过抗日，也命名一条街为“佟麟阁街”，以为纪念。2022年，佟麟阁路入选《首都功能核心区传统地名保护名录（街巷胡同类 第一批）》。佟麟阁路北口，一尊怀表雕塑矗立。它以铸铜为主要材料，顶部雕刻两尊麒麟。怀表上的时间，定格在抗日英雄佟麟阁将军为国捐躯那一刻。</p>
+<h3 id="烈士墓园"><a class="header" href="#烈士墓园">烈士墓园</a></h3>
+<p>1946年7月28日，国民政府为佟麟阁举行国葬，由李宗仁主祭，从北新桥柏林寺到香山兰涧沟，沿途设 6 处公祭点，民众自发摆设供桌、祭品。随后，将佟麟阁骸骨移葬于北京西郊香山南约一公里的兰涧沟山上。</p>
+<p>1979年，北京市人民政府为佟麟阁修墓立碑，汉白玉碑上镌刻着“抗日烈士佟麟阁将军之墓”十一个黑色的大字。佟麟阁墓坐南朝北，宝顶为半圆凸形。1992年，佟麟阁墓被列为北京市文物保护单位。2021年3月，佟麟阁墓被北京市文物局确定为北京市第一批不可移动革命文物。</p>
+<h3 id="追认烈士"><a class="header" href="#追认烈士">追认烈士</a></h3>
+<p>1979年，中国共产党北京市委员会统一战线工作部发出通知，追认佟麟阁为抗日阵亡的革命烈士。</p>
+<h3 id="纪念场馆"><a class="header" href="#纪念场馆">纪念场馆</a></h3>
+<ul>
+<li>1985年8月13日，中国人民革命军事博物馆中国人民抗日战争纪念馆开馆。馆内展出了佟麟阁的遗像、史料、墨宝等，并有塑像一尊，以供人们参观和纪念。</li>
+<li>2004年，在北京香山北正黄旗18号佟麟阁将军故居和佟麟阁墓所在地，建成“佟麟阁将军纪念馆”并对外开放。2005年，该馆被北京市海淀区政府定为爱国主义教育基地。</li>
+<li>2015年7月6日，佟麟阁纪念雕塑在北京市佟麟阁路落成，雕塑为一只被炸坏的怀表，怀表上的日期和时间停在1937年7月28日这一佟麟阁将军殉国的时刻。该雕塑以铸铜为主要材料，两端雕刻两尊麒麟，借“铜”“麟”二字来表达对佟麟阁将军的怀念之情。雕塑整体高1.937米，链子为77个铜环组成，寓意为：1937年7月7日，牢记历史，勿忘国耻。</li>
+</ul>
+<h3 id="影视宣传"><a class="header" href="#影视宣传">影视宣传</a></h3>
+<ul>
+<li>2010年7月，中央电视台《抗日英雄谱》栏目播出《佟麟阁：与阵地共有无的抗日将领》专题节目，介绍了佟麟阁抗日战争期间的英雄事迹。</li>
+<li>2015年8月，由闫东执导、中央电视台制作的八集纪录片《东方主战场》播出，记录了北平保卫战中佟麟阁、赵登禹壮烈殉国的事迹。</li>
+</ul>
+<h2 id="艺术形象"><a class="header" href="#艺术形象">艺术形象</a></h2>
+<ul>
+<li>1995年，由李前宽、肖桂云导演的电影《七七事变》，讲述了1937年“七七事变”发生后，佟麟阁、赵登禹等爱国将士奋起抵抗日本侵略者的故事。</li>
+<li>2016年6月23日，由路奇执导的革命历史题材电视剧《东方战场》播出，其中佟麟阁由丛林饰演。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../celebrities/zhao-deng-yu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../celebrities/zhao-deng-yu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>讲解提纲 - ‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">‌中国工艺美术馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="讲解提纲"><a class="header" href="#讲解提纲">讲解提纲</a></h1>
+<h2 id="刘恒甫作品"><a class="header" href="#刘恒甫作品">刘恒甫作品</a></h2>
+<h3 id="中华福树"><a class="header" href="#中华福树">中华福树</a></h3>
+<ul>
+<li>材质为不锈钢镜面结构</li>
+<li>代表了生命之树、文化之树、和平之树，是“人类命运共同体”的美好诠释。</li>
+</ul>
+<h3 id="丝路祥音"><a class="header" href="#丝路祥音">丝路祥音</a></h3>
+<ul>
+<li>凭借不同色彩线条的组合，将“丝绸之路”诠释得极尽完美又富有诗意。</li>
+</ul>
+<h2 id="文脉华滋"><a class="header" href="#文脉华滋">文脉华滋</a></h2>
+<p>明代宋应星《天工开物》，道法自然、巧夺天工、开物成务、经世致用，天人合一</p>
+<ul>
+<li>
+<p>青铜器</p>
+</li>
+<li>
+<p>玉石雕琢</p>
+<ul>
+<li>琢玉</li>
+<li>扬州的玉有两大绝活，一个是山子雕，一个是链子活。</li>
+</ul>
+</li>
+<li>
+<p>陶瓷</p>
+<ul>
+<li>瓷器过釉</li>
+</ul>
+</li>
+<li>
+<p>丝绸</p>
+</li>
+<li>
+<p>刺绣</p>
+</li>
+<li>
+<p>纺织印染</p>
+</li>
+<li>
+<p>漆器</p>
+</li>
+<li>
+<p>牙骨角雕</p>
+</li>
+<li>
+<p>竹木雕</p>
+</li>
+<li>
+<p>珐琅</p>
+</li>
+<li>
+<p>金属工艺</p>
+</li>
+<li>
+<p>彩陶是指在打磨光滑的橙红色陶坯上，以天然的矿物质颜料进行描绘，用赭石和氧化锰作呈色元素，然后入窑烧制。</p>
+</li>
+<li>
+<p>掏膛工艺是薄胎玉器中最重要的环节，是待器身、器盖的外型确定之后，才开始打钻掏膛，并逐渐掏空，其技术要求是膛壁厚薄均匀。</p>
+</li>
+<li>
+<p>夹纻工艺</p>
+</li>
+<li>
+<p>漆线雕用陈年砖粉和大漆、熟桐油等原料调和，经反复捶打成为柔软而又富于韧性的泥团，俗称“漆线土”，再由手工搓成“漆线”，然后在涂有底漆的坯体上用“漆线”盘、结、绕、堆，塑造浮凸的图形。</p>
+</li>
+<li>
+<p>绒绣，又称绒线绣，是一种在特制网眼麻布上用彩色羊毛绒线绣制图案的刺绣工艺，成品具有毛绒质感。</p>
+</li>
+<li>
+<p>德化瓷</p>
+</li>
+<li>
+<p>耀州瓷，是宋代的青瓷代表，民窑的一种，工艺非常有特点，一是纹样属于通体雕刻，胎面形成凹凸变化，纹饰有深浅变化，是北方青瓷的代表</p>
+</li>
+<li>
+<p>龙泉有章生一、章生二兄弟俩擅长制瓷，各有千秋。哥窑瓷器的特点：黑胎厚釉，不同规律的纹片。弟窑特点：白胎厚釉、其中以粉青、梅子青为贵。</p>
+</li>
+<li>
+<p>北宋徽宗时期，官府在今河南省禹州市区东北部设置官窑，为皇宫烧制贡瓷。因窑址邻近古代春秋战国的钧台，故名为“钧台窑”，简称“钧窑”，所产瓷器即名“钧瓷”。</p>
+</li>
+<li>
+<p>钧瓷在烧制中会出现窑变现象，因釉料当中有铜，经火焙烧氧化还原，形成千变万化的紫红釉色。</p>
+</li>
+<li>
+<p>青瓷色调的产生，是因为胎釉中含有一定数量的氧化铁，并在高温火焰中还原烧制而成。唐朝的越窑和宋朝的汝窑、官窑、耀州窑、龙泉窑等，都属于青瓷系统。</p>
+</li>
+<li>
+<p>釉下彩于胎体绘制后高温一次烧成，代表品种有青花、釉里红。</p>
+</li>
+<li>
+<p>釉上彩在烧成瓷胎上二次低温焙烧，典型如斗彩、五彩、粉彩等。</p>
+</li>
+<li>
+<p>釉上彩色与釉下彩色交错重叠从而产生一种争奇斗艳的效果，在古代我们取其“斗”字，叫做斗彩。</p>
+</li>
+<li>
+<p>钦州坭兴陶，简称坭兴陶，以广西钦州市钦江东西两岸特有紫红陶土为原料</p>
+</li>
+<li>
+<p>巴林石产于内蒙古赤峰巴林右旗，巴林石与福建省的寿山石、浙江省的青田石和昌化石齐名，统称为中国“四大名石”</p>
+</li>
+</ul>
+<h3 id="四大国宝"><a class="header" href="#四大国宝">四大国宝</a></h3>
+<ul>
+<li>由国库秘藏的四块翡翠原石制作，他们原本是一整块翡翠原石，重达一千多公斤。</li>
+<li>1982年由国务院交由轻工业部，又交由北京玉器厂，作品由40多位技艺精湛的大师和数十名专家学者组成的顾问团队共同参与设计制作，原计划在86年完成，所以被誉为86工程，但最终由于设计就用了3年多的时间，共历时八年才最终完成，它们也是新中国玉雕史上唯一一项国家工程。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="exhibition-1/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="exhibition-1/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>红领巾 - 中国人民抗日战争纪念馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国人民抗日战争纪念馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/Red-scarf.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="红领巾"><a class="header" href="#红领巾">红领巾</a></h1>
+<p>红领巾（Red scarf），是少先队员的标志，是少先队组织的重要象征，代表红旗的一角，具有重要的政治意义和精神内涵。</p>
+<p>按照新标准的要求，红领巾分为小号和大号两种规格。其中，小号的尺寸为底边长100厘米、腰边长60厘米；大号的尺寸为底边长120厘米、腰边长72厘米。历史上红领巾源自俄罗斯的东正教。1922年4月，安源儿童团员佩戴的红飘带长90厘米，宽6厘米，两头呈三角形，这就是红领巾的雏形。1950年4月23日至27日，中国新民主主义青年团中央委员会在北京召开第一次全国少年儿童工作干部会议，确定红领巾为少先队员标志。2012年，《红领巾》国家标准（GB/T 28846-2012）发布。2022年5月28日，国家市场监管总局（标准委）批准发布新版《红领巾》国家标准（GB/T 28846-2022），2022年11月1日正式实施。</p>
+<p>规范佩戴红领巾的方法：将红领巾披在肩上，钝角对准脊椎骨，右角放在左角下面，两角交叉；将右角经过左角前面拉到右边，左角不动；右角经左右两角交叉的空隙中拉出，右角恰绕过左角一圈；将右角从此圈中拉出，抽紧。少先队员要爱护红领巾，保持红领巾干净、平整，按照有关要求规范佩戴红领巾，佩戴时服装规整。少先队员离队时应当珍藏红领巾。佩戴规格及使用范围：小学低、中年级少先队员佩戴小号红领巾，小学高年级和初中少先队员佩戴大号红领巾。小学中年级身高较高或身形较胖的少先队员，可佩戴大号红领巾。少先队辅导员、少先队工作者在参加少先队会议、集会、活动时，应当佩戴红领巾。</p>
+<h2 id="诞生背景"><a class="header" href="#诞生背景">诞生背景</a></h2>
+<p>1922年2月13日，世界上第一个由工人阶级政党领导的少先队组织，在苏联莫斯科诞生了。刚成立的组织，没有特殊的标志。那时的饥饿、困难正威胁着全苏人民，当然考虑不到少先队的标志问题。列宁的夫人克鲁普斯卡娅十分关心下一代的成长，建议共青团给少先队员们设计一种特有的标志。在一次接受新队员的大会上，来参加会议的先进女工把自己的红色三角头巾解下来系在少先队员的脖子上，勉励他们说：“戴着它，别玷污了它！它的颜色是同革命战旗一样的！”红领巾就这样诞生了。</p>
+<p>1922年4月，安源党组织首先将王耀南、刘玉汉、张正等7名小矿工召集组织起来，培养和训练他们，交给他们一些简单的工作任务，同时定下了三条纪律：保守秘密，不许打架，完成任务。安源儿童团的雏形就这样，在安源革命的星火燎原中渐渐成型。安源儿童团员佩戴的红飘带长90厘米，宽6厘米，两头呈三角形。岁月的侵蚀使它失去了往日的鲜艳，褪色而微微泛白的颜色，是红领巾的雏形。</p>
+<h2 id="历史发展"><a class="header" href="#历史发展">历史发展</a></h2>
+<p>1950年4月23日至27日，中国新民主主义青年团中央委员会在北京召开第一次全国少年儿童工作干部会议。会议颁布了中国少年先锋队的队旗、队歌、队员标志、队礼、誓词及口号等。包括确定红领巾为少先队员标志。</p>
+<p>现在其他东欧、亚洲的社会主义国家，也有少年先锋队的类似组织成员佩戴红领巾。现在，拥有少先队的国家有朝鲜、越南。</p>
+<p>2022年5月28日，国家市场监管总局（标准委）批准发布了新版《红领巾》国家标准。11月1日，新版《红领巾》国家标准正式实施。</p>
+<h2 id="使用规定"><a class="header" href="#使用规定">使用规定</a></h2>
+<p>少先队员要爱护红领巾，保持红领巾干净、平整，按照有关要求规范佩戴红领巾，佩戴时服装规整。少先队员离队时应当珍藏红领巾。少先队的各级组织应当加强对红领巾的规范使用和宣传管理，教育少年儿童和少先队员遵守红领巾的使用规范，及时发现并举报社会上有关不当行为。</p>
+<h3 id="佩戴规格"><a class="header" href="#佩戴规格">佩戴规格</a></h3>
+<p>小学低、中年级队员佩戴小号红领巾，小学高年级和初中队员佩戴大号红领巾。小学低、中年级身高较高的队员，可佩戴大号红领巾。少先队员离队时应珍藏红领巾和队徽徽章。</p>
+<h3 id="使用范围"><a class="header" href="#使用范围">使用范围</a></h3>
+<ol>
+<li>少先队员参加校内外少先队集会、活动，参加升国旗仪式、开学典礼、毕业典礼等重要仪式活动，须佩戴红领巾。参加体育活动、生产劳动或在家里休息时，可以不佩戴红领巾。天气炎热时可暂不佩戴红领巾，但应佩戴队徽徽章。</li>
+<li>少先队辅导员、少先队工作者在参加少先队会议、集会、活动时，应当佩戴红领巾。少先队活动邀请党员、团员团干部等参加时，其可佩戴红领巾；邀请非党员、团员团干部的先进人物参加时，经学校少工委或县级和县级以上少工委同意后，其可佩戴红领巾。</li>
+<li>红领巾及其名义不得用于商标、商业广告以及商业活动。</li>
+<li>各级少先队组织、少先队员、少先队辅导员不得购买使用不合规定的红领巾。</li>
+</ol>
+<h3 id="佩戴方法"><a class="header" href="#佩戴方法">佩戴方法</a></h3>
+<ol>
+<li>将红领巾披在肩上，钝角对准脊椎骨，右角放在左角下面，两角交叉；</li>
+<li>将右角经过左角前面拉到右边，左角不动；</li>
+<li>右角经左右两角交叉的空隙中拉出，右角恰绕过左角一圈；</li>
+<li>将右角从此圈中拉出，抽紧。</li>
+</ol>
+<p>2024年6月7日，全国少工委办公室发布《关于红领巾佩戴方法的说明》：</p>
+<p>近日，网络上对红领巾的佩戴方法讨论很热烈，感谢大家的关注。</p>
+<p>关于红领巾的佩戴方法是有明确规定的。1950年颁布的中国少年儿童队队旗、队歌、队员标志等(“中国少年儿童队”1953年改名为“中国少年先锋队”)作了明确一、将红领巾披在肩上，钝角对准脊椎骨右角放在左角下面，两角交叉。二、将右角经过左角前面拉到右边，左角不动。三、右角经左右两角交叉的空隙中拉出，右角恰绕过左角一圈。四、将右角从此圈中拉出，抽紧。2005年发布的《关于中国少年先锋队队旗、队徽和红领巾、队干部标志制作和使用的若干规定》和2017年发布的《中国少年先锋队标志礼仪基本规范》，均对红领巾佩戴方法进行重申，与1950年所作规定一致。在规定中，对红领巾披上肩之前是否折叠、是否压在衣领下等细节未作硬性要求。具体操作中，各地在这些细节上有所差异。</p>
+<p>针对网友的反映和关切，我们将指导各级少先队组织和少先队辅导员根据少先队员年龄、身高等匹配合适大小的红领巾，避免出现红领巾滑落至肩膀以下、领结以下红领巾左右角过短等情况，进一步完善相关工作。</p>
+<h2 id="规格材质"><a class="header" href="#规格材质">规格材质</a></h2>
+<p>红领巾分为小号、大号两个规格，分别是：</p>
+<p>小号：底边长100厘米、腰边长60厘米。</p>
+<p>大号：底边长120厘米、腰边长72厘米。</p>
+<p>红领巾颜色采用国旗红，应当按照国家市场监督管理总局、国家标准化管理委员会发布的《红领巾》国家标准（GB/T 28846-2022）生产制作。</p>
+<h2 id="技术标准"><a class="header" href="#技术标准">技术标准</a></h2>
+<p>新版《红领巾》国家标准（GB/T 28846-2022）是在2012年版《红领巾》国家标准（GB/T 28846-2012）基础上进行的修订，在红领巾的规格、要求、试验方法、检验规则、包装、储运和标志等方面提出了具体细化指标。明确提出基本安全类项目要符合GB 31701的B类（直接接触皮肤类的儿童纺织产品）标准。</p>
+<p>该标准的发布实施，为生产企业提供更新更高的技术要求，将有助于提升市场流通的红领巾产品质量，进一步满足少先队员需求和少先队工作需要，对于突出少先队标志标识庄严的政治涵义、维护少先队组织形象、增强少先队员光荣感具有重要意义。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>红领巾并非某个单一历史事件的道具，而是中国共产党领导下中国少年儿童革命组织百年发展史的延续性象征。从革命年代儿童团的"红领带/红飘带"演变而来，1949年后正式定为少先队员标志，代表"红旗的一角，革命先烈鲜血染成"。以下按历史阶段介绍其渊源与相关事件：</p>
+<h3 id="一萌芽与雏形安源儿童团与黄静源就义1922年"><a class="header" href="#一萌芽与雏形安源儿童团与黄静源就义1922年">一、萌芽与雏形——安源儿童团与黄静源就义（1922年）</a></h3>
+<p>1922年，中共在江西安源煤矿组织了中国第一个少年儿童革命组织——安源儿童团，早期佩戴长约90cm的红飘带/红领带作标志。</p>
+<p>1925年，安源俱乐部副主任黄静源被军阀杀害，工人们将其血衣撕成条分给儿童团员系在颈上，以此纪念烈士、继承遗志——这被视为"红领巾是先烈鲜血染成"说法的由来。</p>
+<h3 id="二大革命时期劳动童子团与烈士邓金娣罗志群19241927"><a class="header" href="#二大革命时期劳动童子团与烈士邓金娣罗志群19241927">二、大革命时期——劳动童子团与烈士邓金娣、罗志群（1924—1927）</a></h3>
+<p>中共在城市与农村建立劳动童子团（童子团），标志为红色领巾或红领带，儿童团员参与宣传、募捐、游行、放哨等活动。</p>
+<p>1927年"四一二"政变后，广州劳动童子团队员邓金娣、罗志群冒险上街刷标语贴传单被捕，临刑坚贞不屈慷慨就义——她们曾冒死藏起红领巾继续革命工作，是早期红领巾与烈士事迹直接关联的典型事例。</p>
+<h3 id="三土地革命与苏区共产主义儿童团19271937"><a class="header" href="#三土地革命与苏区共产主义儿童团19271937">三、土地革命与苏区——共产主义儿童团（1927—1937）</a></h3>
+<p>各革命根据地建立共产主义儿童团，戴红袖章或红飘带，高呼"准备着！"，承担站岗放哨、送信、查路条等任务，延续了红色标志的革命传统。</p>
+<h3 id="四抗日战争抗日儿童团19371945"><a class="header" href="#四抗日战争抗日儿童团19371945">四、抗日战争——抗日儿童团（1937—1945）</a></h3>
+<p>晋察冀、太行等根据地广泛组织抗日儿童团，虽多以臂章为主，但"红色标志=革命后代"的观念深入人心，王璞等儿童团长带领团员高呼抗日口号宁死不屈，成为红领巾精神谱系的一部分。</p>
+<h3 id="五解放战争解放区儿童团与地下少先队19451949"><a class="header" href="#五解放战争解放区儿童团与地下少先队19451949">五、解放战争——解放区儿童团与地下少先队（1945—1949）</a></h3>
+<p>老解放区保留儿童团组织，国统区出现地下少先队，以暗藏红布条或红色折纸作联络暗号，支援前线、传递情报。</p>
+<h3 id="六新中国中国少年儿童队少年先锋队成立与重大活动1949起"><a class="header" href="#六新中国中国少年儿童队少年先锋队成立与重大活动1949起">六、新中国——中国少年儿童队/少年先锋队成立与重大活动（1949起）</a></h3>
+<p>1949年10月13日：中国少年儿童队正式成立（1953年改名中国少年先锋队）；1950年4月首次全国少儿工作会议正式确定红领巾为少先队员标志。</p>
+<p>抗美援朝捐献（1951年）：全国少先队员节省零花钱、捡废铁，倡议捐献"中国儿童号"飞机，后命名为"中国少年先锋号"，大量红领巾随慰问品送往前线，战士将红领巾系在高射炮上宣誓保卫祖国。</p>
+<p>"小五年计划"（1950年代）：少先队员开展"收集废钢铁""种树""捐建红领巾水库""红领巾邮电局"等活动，红领巾出现在工农业建设的各种公益现场。</p>
+<p>学雷锋与各类纪念活动（1963年起）："向雷锋同志学习"活动中少先队员佩戴红领巾做好事；此后清明祭英烈、"红领巾讲解员"、入队仪式等常态化活动中，红领巾始终是核心符号。</p>
+<p>总结：红领巾的直接历史渊源可追溯至1922年安源儿童团的红飘带，经劳动童子团→共产儿童团→抗日儿童团→解放区儿童团一路传承，1950年正式定为少先队标志。它与邓金娣罗志群就义、黄静源烈士纪念、抗美援朝捐献、各类爱国主义教育活动密切相关，是中国近现代少年儿童参与革命与国家建设的标志性物证。</p>
+<h2 id="敌我识别标志"><a class="header" href="#敌我识别标志">敌我识别标志</a></h2>
+<p>近现代武装起义和革命战争中使用的不是少先队"红领巾"，而是形制相近的"红领带/红布条（牺牲带）"，被起义军系在颈上或臂上当作敌我识别标志。二者外观相似（红色三角布系于颈），但性质不同：前者是成人武装部队的临时识别记号，后者是后来少先队的正式标志，不过源头上红领巾正是脱胎于这种革命红带。</p>
+<p>以下是具体使用情况：</p>
+<p>一、南昌起义（1927.8.1）——最典型的"红领巾"作识别标志</p>
+<p>参加南昌起义的部队多为原国民革命军，穿着与敌方相同的军服。为避免误伤和混淆，起义官兵统一在脖子上系红色领带（红领巾/红带）作为己方识别标记，民间称其为"红带兵"。这是中共领导的武装首次大规模用红色布条区分敌我。</p>
+<p>二、秋收起义（1927.9）——红领带＋红袖章</p>
+<p>工农革命军第一师部分官兵颈系红领带、臂佩红袖章，史料记载"红色领带系在颈，只顾死来不顾生"，同样是为在无统一军服情况下区分敌我。</p>
+<p>三、广州起义（1927.12）——红布带（红颈带）</p>
+<p>广州起义总指挥部规定所有参战人员须在颈上或手臂缠绕红布带，部分队员因红布短缺甚至撕红被面做成布条系在脖子上——当地文物馆也称此为"红领巾（红颈带）"。起义失败后，敌人挨家搜捕凡是系过红布带留有红印痕的人。</p>
+<p>四、湘南起义、井冈山时期——"牺牲带"</p>
+<p>南昌起义余部转战湘南及井冈山会师后，红军仍沿用红色识别带（牺牲带）系于颈或腰，既作敌我识别，也写姓名供阵亡后辨认，一直沿用到红军有了统一灰军装和红领章为止。</p>
+<p>五、补充说明：安源儿童团的红飘带</p>
+<p>1922年安源儿童团佩戴的红飘带（后据黄静源血衣布条系颈）是少先队红领巾的前身，但儿童团在工人罢工中主要承担放哨、送信，不作为武装起义的敌我识别标志。</p>
+<p>小结：三大起义（南昌、秋收、广州）及早期红军确实用红布条/红领带系颈作敌我识别，时人也俗称"红领巾"，但它不等同于后来的少先队员红领巾——只是今天红领巾在形制和象征意义上继承了这份革命传统。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../anthem/first-source.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../anthem/first-source.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

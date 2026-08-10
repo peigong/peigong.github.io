@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>缸#16 鬃狮蜥 - 北京海洋馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京海洋馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/selva/18.ppogona-vitticeps.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="鬃狮蜥"><a class="header" href="#鬃狮蜥">鬃狮蜥</a></h1>
+<p>鬃狮蜥（学名：Pogona vitticeps）是鬣蜥科、鬃狮蜥属爬行动物。鬃狮蜥的身体粗而扁平，在背部及颈背上覆盖满了棘状鳞片，体侧的刺有规律的排列至前肢的前方。体色一般以黄色、褐色、红棕色为主，具有明显的深色斑点。成年的鬃狮蜥体长约20厘米，几乎和尾长相等。遭受威胁时会以张开嘴以及将带刺的咽喉充气膨大做展示动作，让自己看起来更强壮，来吓唬对手，并因此得名。</p>
+<p>鬃狮蜥原产于澳洲东部，经过人工培养出来的各品种广泛见于世界各地，是半地栖性的种类，可以在平地上活动，也能停留在石块、树枝上。偏食肉为主，偶尔取食植物花叶。对鬃狮蜥的饲喂以各种昆虫，如蟋蟀、面包虫、大麦虫等为主；偶尔也可投喂一些蒲公英的花朵叶片、芥菜、生菜等。喜欢生活在高温干燥的环境里。鬃狮蜥有强烈的阶级性，不同个体生活在一起时，最强壮者往往具有领导地位，有优先选择栖息地和取食的权利。每年春季是鬃狮蜥的交配期，为了产卵，母鬃狮蜥会挖一个很深的洞穴将卵产在里面，一般分几个批次产卵，可产下15～48个白色的球形卵，孵化期约为60天。平均寿命为10-15 年。</p>
+<p>鬃狮蜥性格温顺，体型适中，很适宜于和人体接触，是比较适合家庭饲养的中型蜥蜴。它可以很安然地攀爬在人的胳膊手臂或者肩膀上，随人四处移动，接受人们的注视。在平时的生活中，鬃狮蜥也有各种很丰富的行为动作展示给人们，比如点头示意求偶或保护领地、伸舌头示意好奇、卷尾示意警戒、张口以及变色则示意受惊吓等。</p>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<p>名称来源：遭受威胁时会以张开嘴以及将带刺的咽喉充气膨大做展示动作，让自己看起来更强壮，来吓唬对手，并因此得名鬃狮蜥。</p>
+<p>词源：种加词vitticeps大概以拉丁语vitta（丝带）加上ceps（头）命名，指的是颞区的条纹。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>成年的体型从雌性40-50厘米到雄性60厘米不等。身体粗而扁平，背部及颈背上布满刺状鳞，体侧的刺有规律的排列至前肢的前方；背部及颈背上覆满有棘状鳞；体色一般以黄色、褐色、红棕色为主，具有明显的深色斑点；成年的鬃狮蜥体长约20厘米，几乎和尾长相等；其头部皮肤上有许多长而尖的附属物。头部呈三角形，下巴上似乎有条纹图案。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>鬃狮蜥喜欢生活在高温干燥的环境里。占据了从沙漠到干燥森林和灌木丛的广泛栖息地。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>鬃狮蜥广泛分布于澳大利亚东部和中部。经过人工培养出来的各品种广泛见于世界各地。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<h3 id="行为"><a class="header" href="#行为">行为</a></h3>
+<p>鬃狮蜥性格温顺，体型适中。半树栖型，可以在平地上活动，也能停留在石块、树枝上。鬃狮蜥有强烈的阶级性，不同个体生活在一起时，最强壮者往往具有领导地位，有优先选择栖息地和取食的权利。</p>
+<p>鬃狮蜥带刺的咽喉充气膨大用于交配展示和吓唬对手。两性都有带刺的咽喉，但雄性更频繁地展示带刺的咽喉，尤其是在求偶仪式中。然而，雌性也会展示带刺的咽喉作为侵略性的标志。咽喉变黑并膨胀。鬃狮蜥除了膨胀带刺的咽喉以显得更吓人外，还可能张开嘴巴张大嘴巴。</p>
+<p>另一个有趣的行为是挥舞手臂。鬃狮蜥用3条腿站立，以缓慢的圆形方式挥动它的一条前肢。它看起来很像鬃狮蜥在挥手说你好，或者只用一只手臂游泳。挥动手臂的一个功能似乎是物种识别。挥动手臂也用于表示屈服。小鬃狮蜥在面对更大、更占优势的鬃狮蜥时会挥舞手臂作为回应。雌性也会挥臂以避免雄性的攻击，尤其是当雄性摇头时。</p>
+<h3 id="食物"><a class="header" href="#食物">食物</a></h3>
+<p>由于鬃狮蜥是昼夜活动的，因此鬃狮蜥也在白天进行狩猎。鬃狮蜥偏食肉为主，偶尔取食植物花叶。对鬃狮蜥的饲喂以各种昆虫，如蟋蟀、面包虫、大麦虫等为主；偶尔也可投喂一些蒲公英的花朵叶片、芥菜、生菜等。</p>
+<h2 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h2>
+<p>鬃狮蜥在1-2岁时达到性成熟。交配发生在澳大利亚的春季和夏季9月至次年3月。然而，圈养的室内鬃狮蜥似乎不是季节性的，可以全年繁殖。为了产卵，母鬃狮蜥会挖一个很深的洞穴将卵产在里面，一般分几个批次产卵，可产下15～48个白色的球形卵，孵化期约为60天，每胎可产11-26颗卵。众所周知，雌性可以储存精子，并且能够从一次交配中产下许多窝受精卵。在圈养条件下，卵将在55-75天内孵化，温度为28.9℃。平均寿命为10-15年。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<h3 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h3>
+<p>列入《世界自然保护联盟濒危物种红色名录》（IUCN 2017年 ver 3.1）——无危（LC）。</p>
+<h3 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h3>
+<p>该物种分布广泛且在澳大利亚当地很常见。虽然它在国际宠物贸易中很常见，但它被广泛圈养，不被认为受到重大威胁。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<p>该物种和是全球宠物贸易中最常见的蜥蜴，被广泛圈养。鬃狮蜥很适宜于和人体接触，是比较适合家庭饲养的中型蜥蜴，它可以很安然地攀爬在人的胳膊手臂或者肩膀上，随人四处移动，接受人们的注视。在平时的生活中，鬃狮蜥也有各种很丰富的行为动作展示给人们，比如点头示意求偶或保护领地、伸舌头示意好奇、卷尾示意警戒、张口以及变色则示意受惊吓等。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../selva/17.macrochelodina-rugosa-ogilby.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../selva/19.jar.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../selva/17.macrochelodina-rugosa-ogilby.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../selva/19.jar.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
