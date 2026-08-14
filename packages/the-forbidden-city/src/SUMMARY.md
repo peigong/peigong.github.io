@@ -1,7 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
-- [讲解提纲](./note/README.md.md)
+- [讲解提纲](./note/README.md)
 - [外朝]()
     - [午门](./the-Outer-Court/meridian-gate.md)
     - [太和门](./the-Outer-Court/the-gate-of-supreme-harmony.md)
