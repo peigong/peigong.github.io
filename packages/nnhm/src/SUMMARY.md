@@ -1,7 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
-- [讲解提纲](./note.md)
+- [讲解提纲](./note/README.md)
 - [展馆入口]()
     - [霸王龙](./entrance/Tyrannosaurus.md)
     - [异特龙]()
@@ -177,9 +177,11 @@
 - [1层：动物 - 人类的朋友](./Animals-The-Friends-of-Humankind/README.md)
     - [1层：多彩的动物世界]()
     - [日本蝠鲼]()
-    - [纳氏鹞鲼]()
-    - [史氏鲟]()
-    - [圆犁头鳐]()
+    - [胎卵生](./Animals-The-Friends-of-Humankind/ovoviviparity.md)
+    - [蝠鲼](./Animals-The-Friends-of-Humankind/manta.md)
+    - [纳氏鹞鲼(yào fèn)](./Animals-The-Friends-of-Humankind/Spotted-eagle-ray.md)
+    - [史氏鲟](./Animals-The-Friends-of-Humankind/Amur-Sturgeon.md)
+    - [圆犁头鳐](./Animals-The-Friends-of-Humankind/Bowmouth-Guitarfish.md)
     - [皇带鱼]()
     - [大斑刺鲀]()
     - [月鱼]()
