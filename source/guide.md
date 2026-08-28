@@ -8,8 +8,6 @@ title: 导游笔记
 - 内容不断在持续迭代更新，结构严谨和文章缜密等方面，不能保证。
 - 引文一般标注原文链接，没有注明出处的，则是百度百科，标题为词条名。
 
-如果整理的笔记，对你有一点用处，不妨扫一扫公众号的二维码，加个关注。如果因此赚到了钱，不妨在公众号上随便找一篇文章打赏一块钱，活跃活跃气氛。
-
 ## 北京景点
 
 - [祡禁城](./guide/the-forbidden-city)
@@ -73,3 +71,4 @@ title: 导游笔记
 
 - [The Journey to the West](./guide/The-Journey-to-the-West)
 - [English Tour Guiding in Beijing](./guide/english-tour-guiding-in-beijing)
+- [Guide of Beijing](./guide/leidada)
