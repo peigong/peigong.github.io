@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>纳氏鹞鲼(yào fèn) - 国家自然博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">国家自然博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Animals-The-Friends-of-Humankind/Spotted-eagle-ray.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="纳氏鹞鲼yào-fèn"><a class="header" href="#纳氏鹞鲼yào-fèn">纳氏鹞鲼(yào fèn)</a></h1>
+<p>纳氏鹞鲼，学名：Aetobatus narinari (Euphrasen, 1790)，鲼科鳐鲼属的一种鱼类。纳氏鹞鲼正式命名在1790年。它们是拥有不同形态的复杂物种，但比那些广泛而单一分布的物种有更多的限定范围，由于体型结构的复杂性，科学界仍在跟踪观察。成年纳氏鹞鲼不包括尾部，一般长度为1.8米，最长可达3.3米，计入尾部，最长可达5.5米。最大体盘宽3米。最大重量230公斤。其模式种产地在沙特阿拉伯的吉达。</p>
+<h2 id="地理分布"><a class="header" href="#地理分布">地理分布</a></h2>
+<p>广泛分布于热带和暖温带水域，大西洋中东、中西部、东南及西南部地区：包括多米尼加岛、赤道几内亚、加蓬、冈比亚、加纳、格林纳达、巴西、哥伦比亚、百慕大群岛、洪都拉斯、美国、墨西哥、贝宁、古巴、海地、维京群岛、委内瑞拉、安提瓜及巴布达岛、巴巴多斯、伯利兹、开曼群岛等。</p>
+<p>印度洋东部、西部地区：包括安哥拉、孟加拉 、吉布提、厄立特里亚国、印度、印度尼西亚、伊朗、也门、马尔代夫、安达曼尼科巴群岛、缅甸等。</p>
+<p>太平洋中东、中西部、西北部、东南及西南部地区：包括中国、日本、韩国、文莱达鲁萨兰国、厄瓜多尔、哥斯达黎加、危地马拉、巴林、新西兰、斐济、新西兰、柬埔寨、夏威夷群岛（美）、澳大利亚等。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>背棘数：2-6；背软条数：0；臀鳍数：0；臀软条数：0</p>
+<p>纳氏鹞鲼鼻长，扁而圆像鸭舌。大脑袋。胸盘大幅弯曲，边缘呈三角形，无尾鳍。下颌一排扁平锯齿形牙齿，每颗牙都由新月状平板彼此联结在一起。众多白色斑点散布于黑色或淡蓝色的盘形背部，下腹白色。尾巴长鞭状，由一根长脊柱连接小背鳍后的尾基部。盘上无刺。</p>
+<p>扁平的体盘又宽又短，经测量，盘宽是盘长的两倍。呼气孔发源端靠近胸鳍起端。嘴下肉质叶，如鸭嘴兽状，不同于上方的鼻子。翼状胸鳍边部尖起，胸鳍翼后缘角状深凹。腹鳍狭圆。背鳍小，起端低于腹鳍接点。无尾鳍，长鞭似的尾巴，完好时有体盘的2.5-3倍长。脊棘起端仅次于背鳍，有2-6根，较短。顺着叉状根部，有一根尖刺和后弯侧齿。当遇到潜在威胁时，作为防御，这些毒刺会发起反击。</p>
+<h2 id="生活环境"><a class="header" href="#生活环境">生活环境</a></h2>
+<p>栖息于珊瑚礁附近，一般停留在礁石边缘。它们更喜欢温暖的，下面由泥巴、砂子、碎石构成软底的地方活动。多数时间停在大约60米深水域，但可潜至80米。在世界各地的热带地区，纳氏鹞鲼也经常被发现于海边的沙滩、河口以及红树林沼泽地带。</p>
+<h2 id="生存习性"><a class="header" href="#生存习性">生存习性</a></h2>
+<p>纳氏鹞鲼根据潮汐状况变换活动方式。大潮来临时，它们出去捕食，或与住所地附近的同类交流，而交配也通常发生在高潮期。潮落时，觅食活动减弱，它们从浅水区下沉到深水区。低潮时，一大群鹞鲼栖息在深水中不活动。这种循环周而复始。</p>
+<p>纳氏鹞鲼跃出水面的动作为人所知，有假设认为，它们跃出水面是为躲避猎食者的攻击，另有观察发现，雌性鹞鲼产仔时跃出水面，借助回落水面的力量将幼体推出子宫。有时3-50只组群四处游动，组群通常出现在繁殖季，也被认为是一种捕食防御机制。</p>
+<h2 id="繁殖情况"><a class="header" href="#繁殖情况">繁殖情况</a></h2>
+<p>繁殖季节通常在仲夏，纳氏鹞鲼会不停变换地点。一般而言，雌兽每次怀孕生两胎，每年有1-4次怀孕几率。妊娠期大约持续12个月，短则只需8个月，取决于所处位置和平均水温。有证据显示，纳氏鹞鲼身长达到体盘一半时进入性成熟期，大概4-6岁左右。</p>
+<h2 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h2>
+<p>列入《世界自然保护联盟》（IUCN） 2012年濒危物种红色名录ver 3.1——近危物种（NT）。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Animals-The-Friends-of-Humankind/manta.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Animals-The-Friends-of-Humankind/Amur-Sturgeon.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Animals-The-Friends-of-Humankind/manta.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Animals-The-Friends-of-Humankind/Amur-Sturgeon.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
