@@ -8,7 +8,7 @@ We are now in front of the east gate of the Temple of Heaven, and I'd like to gi
 
 The Temple of Heaven was built in 1420 during the reign of Emperor Yongle of the Ming Dynasty.
 
-In 1988, it was listed on the World Cultural Heritage.
+In 1988, it was listed as the World Cultural Heritage.
 
 The main buildings in the Temple of Heaven are circular shaped. But each building has a round and a square wall around it. This layout shows the ancient people's belief that heaven was round while the earth was square.
 
