@@ -50,6 +50,8 @@ title: 导游笔记
 - [‌中国工艺美术馆](./guide/gmfyg)
 - [保利艺术博物馆](./guide/polyartmuseum)
 - [中国农业博物馆](./guide/ciae)
+- [中国钱币博物馆](./guide/cnm)
+- [周口店遗址](./guide/zhoukoudian)
 
 ## 北京的文化
 
