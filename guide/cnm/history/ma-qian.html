@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>骆驼钱 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history/ma-qian.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="骆驼钱"><a class="header" href="#骆驼钱">骆驼钱</a></h1>
+<p>骆驼钱是汉代新疆于阗地区于公元1-3世纪铸造的地方货币，采用源自古希腊的打压法制作，圆形无孔，因钱面铸有汉文与佉卢文两种文字，又称“汉佉二体钱”或“和田马钱”。该钱币按面值分为大型（重廿四铢）和小型（重六铢）两类，每类钱币正面图案均可为马纹或骆驼纹，正面环绕佉卢文铭文记录于阗王名号，背面为包含"重廿四铢铜钱""六铢钱"等字样的汉文铭文。</p>
+<p>作为新疆地区最早铸造的钱币，骆驼钱融合了中亚贵霜钱币与中原钱币的特征。其大型钱重二十四铢，小型钱重六铢，币值设计考虑了与汉代五铢钱的兑换。这种钱币最早于1874年由英国官员道格拉斯·福赛斯在新疆发现，并于1876年在英国皇家地理学会首次公开。此后在和田及周边地区续有发现，2012年曾在喀什至阿富汗的古道遗址一次性发现3000余枚。骆驼钱的铸造工艺和双语铭文反映了汉代于阗地区商贸往来的发展水平。</p>
+<h2 id="形制特征"><a class="header" href="#形制特征">形制特征</a></h2>
+<p>骆驼钱，又称汉佉二体钱或和田马钱，其形制特征鲜明，是东西方货币文化融合的产物。该钱币为圆形无孔、无周廓的饼状铜币，采用源自古希腊的打压法（或称打制法）手工打制而成，与中原地区同期流行的采用钱范浇铸法生产的内方外圆铜钱（如五铢钱）有根本区别。主要分为大型和小型两种形制：大型钱直径约2.5-3.3厘米，重8-15克；小型钱直径约2-2.3厘米，重2.9-4.5克。此项打压工艺及其圆形无孔的币形，主要受到中亚贵霜钱币及更早的希腊货币体系的影响。</p>
+<p>钱币正面图案多为马或骆驼的站立或行走像，其中以马纹居多。图案周围环绕一圈佉卢文，内容多为于阗国王的姓名、称号和赞语。背面为汉文篆字，大型钱铭文为“重廿四铢铜钱”或“铜钱重廿四铢”；小型钱铭文为“六铢钱”。部分钱币中间常有特殊形状戳记，学界对此有"族徽"或"兀（元）字"等不同解读。</p>
+<h2 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h2>
+<p>汉佉二体钱（俗称和田马钱或骆驼钱）的铸造年代，学术界一般认为在西汉末年至东汉初年（约公元1-3世纪），即丝绸之路开通后不久。其铸造者于阗王国，位于今新疆和田地区，是陆上丝绸之路南道的重要枢纽，为适应丝路上东西方商人的交易需求，于阗地区开始铸造这种双语钱币。在货币单位上，它沿用了中原的“铢两制”，大型钱重“廿四铢”，小型钱重“六铢”，以便与汉代流通的五铢钱进行换算（如5枚六铢钱可换6枚五铢钱），而在货币制度的比值上，则延续了中亚地区受古希腊币制影响的1:4体系（即6铢与24铢之比），体现了东西方货币文化的融合。</p>
+<h2 id="发现与研究历史"><a class="header" href="#发现与研究历史">发现与研究历史</a></h2>
+<p>1874年（或1873年），英国官员道格拉斯·福赛斯爵士在新疆首次发现2枚汉佉二体钱，并于1876年在英国皇家地理学会上公布，当时被误认为是古代大夏国货币。此后至20世纪初，多国探险队及学者在新疆和田及周边地区发现并收集了大量此类钱币，包括1892年法国杜特雷依考察队发现的4枚、1901年英国学者赫恩雷公布的120多枚、1902年至1914年间日本大谷光瑞考察队发现的11枚、俄国探险家彼得罗夫斯基和奥登堡收集的约21枚，以及英籍探险家斯坦因于1900至1916年间三次考察收集的187枚。</p>
+<p>1929年，中国学者黄文弼参加西北科学考察团，在和田地区采集到1枚汉佉二体钱。1989年，王炳华等人在塔克拉玛干沙漠南道的安迪尔河夏羊塔格遗址地表发现1枚。1962年，中国考古学家夏鼐将其正式命名为“汉佉二体钱”（Sino-Kharosthi Coin）。</p>
+<p>截至20世纪末，全球学术界已公布的数量约为352至353枚，其中仅13枚（或"十多枚"）收藏于中国国内的文博机构，大部分流失海外。2012年，在新疆喀什通往阿富汗的古道遗址新发现了埋藏地下的3000余枚汉佉二体钱，丰富了版别，弥补了国内保存实物数量较少的遗憾。</p>
+<h2 id="现代展示"><a class="header" href="#现代展示">现代展示</a></h2>
+<p>汉佉二体钱在新疆巴音郭楞蒙古自治州博物馆及和田地区博物馆等机构均有常设陈列。巴州文博院利用内嵌画框屏技术，通过红外感应使‘汉佉二体钱’以静态与动态相结合的方式呈现，观众可立体式了解其制造工艺、铭文解析和图案释义等内容。该钱币曾在北京中华世纪坛‘和田历史文物展’及‘五星出东方’等专题展览中亮相。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history/qian-shen-lun.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history/ma-qian-yu-tian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history/qian-shen-lun.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history/ma-qian-yu-tian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

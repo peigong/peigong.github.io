@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>国民政府币制改革 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history/fa-bi-gai-ge.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="国民政府币制改革"><a class="header" href="#国民政府币制改革">国民政府币制改革</a></h1>
+<p>国民政府币制改革是南京国民政府财政部于1935年11月3日推行的货币制度改革，核心内容为实施法币政策。根据《法币政策实施办法》，中央、中国、交通三银行（1936年增加中国农民银行）发行的纸币被定为法币，规定银元限期兑换为法币并实行白银国有化，禁止黄金流通，明确法币与英镑、美元的外汇比价。</p>
+<p>此次改革以废两改元政策为基础，通过银两银元固定兑换率统一银本位货币。国际因素引发中国白银大量外流，导致金融危机。法币政策通过官僚资本搜刮民间白银（累计3.7亿盎司）并以外汇储备稳定币值，1936年中国工业产值较1927年增长83.2%。国际银价波动迫使国民政府通过外交手段应对白银危机，虽实现货币制度现代化转型，但为后续滥发纸币引发通货膨胀埋下隐患。</p>
+<h2 id="历史背景"><a class="header" href="#历史背景">历史背景</a></h2>
+<p>民国成立后，北洋政府于1914年公布《币制条例》，并开始大量铸造国币银元，银元重七钱二分，成色为九银一铜，其正面印有大总统袁世凯的侧面像，这就是赫赫有名的“袁大头”。此后，银元逐渐在流通市场上占据了主要地位，而铜钱则彻底退出了历史舞台，中国又从银铜复本位过渡到银本位，但银两制依然存在，此种复杂的货币制度不仅造成实际交易时银两和银元换算方式复杂，同时银两和银元间行情的涨跌波动较大，造成了交易的成本增加，有碍国计民生。因此，早已有金融界的有识之士提出了废两改元的建议，早在1921年，天津银行公会就陈请政府废两改元。国民政府上台之后，也曾于1928年召开全国经济会议，通过了废两改元的议案，但后因种种阻碍而未能实现。</p>
+<p>转机出现在1932年，因1929年世界经济大萧条、1931年长江水灾及“九·一八”事变等消极因素的影响，使中国内地经济遭受沉重打击，造成大量银元流入上海等大城市，一年之内，上海的银元存量便增加了一亿元，银元充斥导致了银元价格大跌，此时如推行废两改元便能较为合理地确定银元与银两的换算率。因此，1932年夏，国民政府正式将废两改元提上议事日程，并专门组织成立了废两改元研究委员会。国民政府财政部长兼中央银行总裁宋子文数度专程到上海，与金融界人士讨论此项问题，阐述了政府关于废两改元的基本原则：废除银两计算，完全采用银元制度；旧铸银元仍照旧使用；待正式定下每银元法价后，再行详细研究新币币值，并表示以三个月为准备期，实施废两改元，由中央造币厂铸造新币。</p>
+<p>上海银行公会对此明确表示支持，并希望政府能早日实施这一改革，而钱业公会则认为实行废两改元“断非仓促可期”，如果贸然实施将导致国内经济与金融的混乱。财政部在听取了各方意见后，表示对于实行废两改元的各种利弊已有充分考虑，一旦中央造币厂开铸新的国币后即开始实施。有关统一发行、整顿现有货币的主张，“本部自当制定方案，次第施行”。国民政府还就新币标准问题专门听取了上海金融界知名人士的意见。这样，政府与金融界之间、银行业与钱业之间就实行废两改元问题充分地交换了意见，在基本问题上有了更多的共识，从而为日后正式实施此项改革扫清了障碍。</p>
+<h2 id="主要经过"><a class="header" href="#主要经过">主要经过</a></h2>
+<p>1933年3月1日，国民政府正式颁布训令，规定上海市面通用银两与银本位币一元或旧有一元银币之原定重量及成色者，以重量七钱一分五厘折合银币一元为标准换算率，自1933年3月10日起首先自上海施行。凡公私款项及一切交易均按此定率用银币收付，不得再用银两。上海各家银行接到上述命令后，立即转告所属各分支行，对国外汇兑，如美元、英镑等，自10日起，也同样以法定换算率七钱一分五厘折合银元。3月7日，交通银行、中央银行和中国银行正式组成了上海银元银两兑换管理委员会，并制定了组织大纲，根据大纲规定，该委员会的任务是管理上海市面原有银两和通用银元的兑换事宜。按财政部规定，以七钱一分五厘作为银元折合银两的永久市价来兑换，中央银行、中国银行和交通银行的兑换比例分别是50%、35%和15%。</p>
+<p>3月10日，废两改元正式施行，上海地区各行业交易均改为银本位，兑换委员会也于当天开始办公，无限制兑换银元银两。此后，中国的银行业与钱庄业在废两改元的问题上也逐渐结束了长期的对立，彼此之间开始了协商与合作，使得这一重要改革得以在全国范围内正式推行。</p>
+<p>废两改元意义重大，中国的币制实现了在银本位基础之上的统一，而上海作为中国金融中心的地位得到了进一步的加强。与此同时，国民政府通过此举加强了对于金融业和金融市场的控制，也为日后推行法币政策奠定了基础。</p>
+<p>1929年的大危机中，美国等西方国家的经济遭受了重创。为了摆脱危机，缓解大萧条带来的通货紧缩，美国效法英日等国放弃了金本位制，并于1934年6月通过了《白银收购法案》，实行白银国有政策，在国外大量收购白银，国际银价从而大幅飙升，在一年之内猛涨了两倍半，比中国国内银价高出许多，从而导致中国的白银大量外流，造成了银根紧缩的局面，使得中国以银本位为基础的货币体系摇摇欲坠，从而引发了中国近代史上第五次金融危机：全国物价大幅下跌，出口量剧降，工厂严重开工不足，而受灾最严重的则是上海和天津两地的房地产市场，随着房价暴跌，原本以房产抵押为主业的银行、钱庄饱受冲击，当时的上海就有近两成的民营银行和钱庄倒闭。</p>
+<p>面对这一异常严峻而复杂的局面，国民政府下决心推行彻底的货币体制改革。1935年11月3日深夜，当时的财政部长孔祥熙在上海召开紧急会议，代表国民政府向上海银行界领袖宣布改革货币，实施法币和白银国有制度，中央银行、中国银行和交通银行发行的钞票被政府定为法币，并享有无限买卖外汇之特权。11月15日，财政部公布了《兑换法币办法》，规定各地银钱行号、商店及其他公共团体或个人，凡持有银元、生银或其他银类者，必须在法币政策实行后三个月内，就近向兑换机关换取法币。兑换机关分为四类：</p>
+<p>一、中央银行、中国银行、交通银行及其分支行或代理处。</p>
+<p>二、受中央银行等三行委托的银行、钱庄、当铺和邮政、铁路、电报各局及其他公共机关或公共团体。</p>
+<p>三、各地税收机关。</p>
+<p>四、各地县政府。</p>
+<p>不久，中国农民银行发行的钞票也被定为法币。在具体做法上，名义上法币与银元等量兑换，但各银行可用六成银币加四成票据，向央行兑换十成法币，这样一来，法币的流通就有了利益的驱动，而币值的合理贬值，使得市场上的通货紧缩一下子转变为通货膨胀，从而达到了刺激物价上升，使经济逐渐回暖的目的。法币政策还使得国民政府得以从民间回收大量白银并出售给美国，并将换回的外汇作为今后支持抗战的有力财政保证。据统计，从发行法币的1935年到1941年太平洋战争爆发前夕的6年内，中国共向美国出售了5.5亿盎司的白银，换回了2.5亿美元的外汇，这笔钱中有很大一部分都用于对日作战的武器装备和粮饷的采购。</p>
+<h2 id="主要意义"><a class="header" href="#主要意义">主要意义</a></h2>
+<p>法币的发行在中国金融发展史上具有里程碑的意义。诚如当时日本三菱银行上海分行负责人所言:“国民政府的币制改革，在中国经济史上可谓破天荒之举，任何外国的货币改革，其复杂与困难程度均不能与之相比，这是无与伦比的大改革和大成功。” 至此，近代中国终于告别了货币纷乱的时代，第一次在真正意义上实现了币制的统一，且成功地与国际接轨，符合近代以来世界各国通用纸币等信用货币的惯例，并在可控的范围内适当地刺激了通货膨胀，使得市场回暖、百业复兴，中国从而成功摆脱了1934-1935年间的金融危机。据统计，法币改革后的1936年中国工业产值比1927年增长了83.2%。此外还有力地促进了商品经济和对外贸易的发展，推动了国内统一市场的形成。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history/fei-liang-gai-yuan.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/gold-smelting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history/fei-liang-gai-yuan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/gold-smelting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

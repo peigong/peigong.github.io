@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>打制货币 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/hammered-coins.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="打制货币"><a class="header" href="#打制货币">打制货币</a></h1>
+<h2 id="琥珀金和西域马币"><a class="header" href="#琥珀金和西域马币">琥珀金和西域马币</a></h2>
+<p>“琥珀金”和“西域马币”其实分属两套工艺传统：前者是古代地中海—西亚的金银天然/人工合金币材体系，后者在新疆和田主要指“汉佉二体钱/和田马钱”，再广一点可纳入贵霜、大夏、粟特、萨珊的骑马/马形金银铜钱。下面按“材—工—制—交流”四条线梳理。</p>
+<h3 id="一琥珀金从吕底亚天然砂矿到金银分铸"><a class="header" href="#一琥珀金从吕底亚天然砂矿到金银分铸">一、琥珀金：从吕底亚天然砂矿到金银分铸</a></h3>
+<ol>
+<li>概念与矿源</li>
+</ol>
+<p>琥珀金（electrum）是金—银天然合金，常带少量铜，色黄偏白、似琥珀光。小亚细亚吕底亚（今土耳其西部）萨尔迪斯一带的巴克托罗斯/帕克托罗斯河床产出天然砂矿，古人直接淘洗得粒料，无需先配矿。天然比例并不稳定，常见金约40%—85%，吕底亚实用币多控制在约50%—55%金、余为银，后来为标准化又人为加银调到约55%金。</p>
+<ol start="2">
+<li>最早打制币（前7世纪）</li>
+</ol>
+<ul>
+<li>吕底亚阿里阿特斯—克罗伊斯前期（约前630—前560）：小金块/小饼，热软后放下底模（硬石或青铜嵌面），上冲锤击，单面狮头或狮身，反面浅凹（incuse）。重量分斯塔特全重、半重、三分之一等，全重约14克级。</li>
+<li>爱奥尼亚城邦（以弗所、福凯亚、米利都）跟进：用鹿、海豹、船首等本地记号，延续天然琥珀金，但各城金含量不一。</li>
+<li>技术痛点：天然合金金银比浮动，商人用试金石划色、用比重/手感估金；若官方不保证纯度，就出现“劣币驱良币”——含金的被熔走、含银多的留下。</li>
+</ul>
+<ol start="3">
+<li>配比控制与分铸革命</li>
+</ol>
+<p>克罗伊斯（约前561—前546）改双金属：先把琥珀金用“盐法/渗碳氯化”思路分离——高温下用食盐与银生成氯化银、被多孔坩埚壁吸收，得近纯金；银单独回收，发纯金斯塔特与纯银斯塔特，狮子斗牛对纹，金纯常&gt;98%。波斯灭吕底亚后接这套：大流克金币（约8.4克）、西吉洛斯银币（约5.6克），大流克仿吕底亚打压、由王室垄断，西吉洛斯各省自打。</p>
+<p>希腊方面：雅典等转向纯银德拉克马体系；前5世纪后琥珀金作为主币基本退场，只在局部危机、礼仪器、镀层、装饰件里留用。</p>
+<ol start="4">
+<li>后期回潮</li>
+</ol>
+<ul>
+<li>拜占庭/中世纪：偶用金银合金做高值币（如某些希斯塔门农含金感币材并非纯electrum，但“金感”来自合金调控）；</li>
+<li>伊斯兰早期：第纳尔以纯金为主，但首饰、礼器、局部试铸仍用人工electrum；</li>
+<li>现代“绿金”是人工配Au+Ag（+少量Cu），与古天然砂矿不是一回事。</li>
+</ul>
+<p>小结：琥珀金工艺主线＝天然砂矿淘洗→不标定打制→试金/比重控伪→盐法分银→纯金纯银双本位；它的历史贡献不是“材质高级”，而是把“重量+成色+官印”三者绑成可流通硬币。</p>
+<h3 id="二西域马币和田马钱为主贵霜大夏粟特为外围"><a class="header" href="#二西域马币和田马钱为主贵霜大夏粟特为外围">二、西域“马币”：和田马钱为主，贵霜/大夏/粟特为外围</a></h3>
+<p>西域说“马币”最常指和田马钱＝汉佉二体钱，公元1—3世纪于阗/莎车一带打制，是目前新疆最早自铸币之一。</p>
+<ol>
+<li>材质与形制</li>
+</ol>
+<ul>
+<li>红铜（不是琥珀金），圆形无孔、无郭或浅郭，饼状；大钱直径约2.4—3.6厘米、重14—18克，小钱直径约2—2.5厘米、重3—4克。</li>
+<li>正面汉文篆书：“铜钱重廿四铢”或“六铢钱”，中心常带徽记/圆圈；背面马形为主、少骆驼，环佉卢文（王号、监造名之类）。</li>
+<li>计量用中原“铢两”，图像用中亚马/驼，文字汉+佉卢双体——这是它“混血”的核心。</li>
+</ul>
+<ol start="2">
+<li>工艺来源：希腊打压→贵霜中转→于阗落地</li>
+</ol>
+<ul>
+<li>不用中原范铸（陶范/铜范浇铜液），而用打压法：备红铜饼（planchet），下模刻马/驼/佉卢文，上冲锤击；大钱仿希腊四德拉克马重量级，小钱仿一德拉克马，整体祖形来自希腊—大夏—贵霜圆形无孔打压钱。</li>
+<li>贵霜（迦腻色伽等）1—3世纪在西北印度、阿姆河以南大量打金铜银，马、驼、王骑、佉卢/希腊/婆罗米文并用；于阗匠人直接借贵霜模序，部分实物可见“在旧贵霜铜片/旧币上再打新纹”。</li>
+<li>大夏（阿姆河、今阿巴边境）先出方形/圆形希腊化王币，马纹、骑射、城邦神祇输入塔里木；和田马钱的“马”可追到大夏动物钱与草原牧马图像，不完全是中原马政纹。</li>
+</ul>
+<ol start="3">
+<li>与中原范铸的差别</li>
+</ol>
+<p>中原两汉五铢用母范—子范浇铸，批量、文字规整、方孔；和田马钱单枚打制，同版轻重略差、图文浅深不一，适合小政权、多语种、随贸改模。它吸收“铢”名与汉官号，不吸收方孔与范铸，说明工艺选择受贵霜—希腊链主导，制度名目受汉朝—西域都护体系影响。</p>
+<ol start="4">
+<li>更广的“西域马形币”</li>
+</ol>
+<ul>
+<li>贵霜金币/铜币：王骑马、神立像、佉卢文纪年；</li>
+<li>粟特（片治肯特、撒马尔罕系）：多银铜，少量马商标记，受萨珊而非希腊为主；</li>
+<li>萨珊波斯：银币为主，骑射王、无马钱之名，但“王骑”图像经粟特入新疆；唐西州、伊州仿萨珊银币见科技分析证据。所以若把“西域马币”泛化，要分“希腊—贵霜红铜马钱”（和田型）与“波斯—粟特王骑银/铜”（萨珊型）两路，工艺一是打压低铜合金、一是高银打压，都不用琥珀金。</li>
+</ul>
+<h3 id="三两套工艺的渊源与交会"><a class="header" href="#三两套工艺的渊源与交会">三、两套工艺的“渊源与交会”</a></h3>
+<ol>
+<li>材质不相交，但“打压法”同宗吕底亚→希腊城邦→大夏→贵霜→和田，是一条“硬模单枚锤打”技术链；中原是“泥/铜范浇铸”链。琥珀金退场后，希腊系改用纯银/纯金打压，贵霜传到新疆变成红铜打压；所以和田马钱继承的是希腊—贵霜“打法”，不继承吕底亚“金银行”。</li>
+<li>成色控制思想可对照吕底亚因天然合金不稳而发明试金石、分金；和田因红铜软、单打易偏重，用“廿四铢/六铢”汉制名目补重量差。一个靠金属学控成色，一个靠汉地度量名目控信用。</li>
+<li>丝路金银钱反向输入汉唐以降，西域—中亚金银币（萨珊银、拜占庭金、后期阿拉伯—萨珊、喀喇汗金银）东入新疆、河西，《隋书》有“河西或用西域金银之钱”之载；这些币材多是纯银/高金，不再用天然electrum，但“金银并重、打压、王权印信”的逻辑，正是吕底亚—波斯—希腊体系东传的末端。哈密拉甫却克唐墓银币的合金检测显示，新疆本地对萨珊式银币有接收、仿打、配料调整，可视为“西方打压金银工艺”在西域的晚段延续。</li>
+<li>改宗节点
+<ul>
+<li>前6世纪吕底亚：electrum→纯金纯银；</li>
+<li>1—3世纪和田：希腊—贵霜红铜打压＋汉铢名＋佉卢文；</li>
+<li>10世纪后喀喇汗推伊斯兰统一币，和田马钱式退出，西域转入阿拉伯—波斯重量制（第纳尔/迪拉姆）与本地铜钱并行。</li>
+</ul>
+</li>
+</ol>
+<h3 id="四如果做工艺复原要点"><a class="header" href="#四如果做工艺复原要点">四、如果做工艺复原要点</a></h3>
+<ul>
+<li>琥珀金币：淘砂→筛粒→目测/试金比色→按目标金比补银或补金→熔锭→擀饼→退火→下模狮/神、上冲单面或多面→称重校正；分金用盐焙烧吸氯化银。</li>
+<li>和田马钱：红铜熔炼（少铅以利打制）→切饼/锤圆→退火软化→下模刻马/驼＋佉卢环文、上模汉篆铢文→冷/温打→修边；若借旧贵霜片，先压平旧纹再覆新模。</li>
+<li>贵霜—萨珊系：银铜分别配Pb/Sn微量，金币高纯，骑像用深浮雕下模、轻敲防裂。</li>
+</ul>
+<h2 id="打制币的图案"><a class="header" href="#打制币的图案">打制币的图案</a></h2>
+<p>打制币的图案不是“装饰”，本质是把发行权、成色担保、城邦/王权身份、宗教信仰、贸易受众压缩进一枚金属圆片。从吕底亚琥珀金到希腊城邦，再到贵霜、萨珊、和田马钱，图案逻辑是一脉演化的。</p>
+<h3 id="一最原始功能官方钢印替代秤量和试金"><a class="header" href="#一最原始功能官方钢印替代秤量和试金">一、最原始功能：官方“钢印”，替代秤量和试金</a></h3>
+<p>吕底亚最早用琥珀金打制币，正面狮头（有时狮牛对峙），背面只是锤击凹痕。狮头不是艺术，是王室担保——“按这个标记，重量成色由我负责，市场不用再秤、不用再拿试金石划”。</p>
+<p>这类早期戳记的意义分三层：</p>
+<ul>
+<li>防伪：图案越具体、模具越唯一，私铸越难仿；</li>
+<li>信用：把“这块金属值多少”从“看金含量”变成“看谁打的”；</li>
+<li>主权：动物/王名=发行主体，类似后来国徽。</li>
+</ul>
+<p>所以从一开始，打制币图案的核心就是“谁背书”。</p>
+<h3 id="二希腊城邦保护神城徽做成流动名片"><a class="header" href="#二希腊城邦保护神城徽做成流动名片">二、希腊城邦：保护神+城徽，做成“流动名片”</a></h3>
+<p>希腊接吕底亚技术后，把单面戳记发展成双面浮雕，图案变成城邦身份系统：</p>
+<ul>
+<li>雅典：正面雅典娜头盔像，背面猫头鹰+橄榄枝。雅典娜是城保护神，猫头鹰象征智慧与夜间洞察，整体等于“雅典出品、神明护航”，四德拉克马银币在地中海当硬通货用。</li>
+<li>埃伊纳：早期海龟，希波战争后改陆龟——海军强时用海龟标身份，失利后换陆龟，图案随政治地位变。</li>
+<li>科林斯：飞马佩伽索斯，配科林斯字母缩写，关联柏勒洛丰驯马神话，也暗指速度与骑兵/交通。</li>
+<li>其他：以弗所牡鹿、米利都城徽、克里特迷宫、塞浦路斯阿佛洛狄忒等，都是“本地主神/建城神话/特产”三选一或叠加。</li>
+</ul>
+<p>规律是：正面通常放主神或英雄，背面放圣物、动物、植物、兵器。对希腊人来说改宗教图样近乎渎神，所以城邦币图案极稳定，一用几百年。</p>
+<p>动物类单独说——狮=王权/力量，牛=财富/祭祀/丰产，马/鹿/公牛=军事与狩猎实力，龟=海权或地缘身份，猫头鹰=智慧与司法秩序。打制币用动物，比用长篇铭文更适合多语商人群体一眼识别。</p>
+<h3 id="三希腊化王权肖像从神到神化的人"><a class="header" href="#三希腊化王权肖像从神到神化的人">三、希腊化—王权肖像：从“神”到“神化的人”</a></h3>
+<p>亚历山大之前，希腊城邦币很少放活人头像；马其顿和希腊化王国把图案功能改掉一半：</p>
+<ul>
+<li>亚历山大银币常用赫拉克勒斯（大力神）头像，实际是自比神裔；死后继业者才把亚历山大本身做成神化侧脸（带宙斯-阿蒙羊角等）。</li>
+<li>托勒密、塞琉古、安提柯诸王：正面国王侧像，背面神像/王族符号/鹰/大象盔。肖像=“我的脸就是法定价值来源”，把城邦的“神保”换成君主的“个人权威+神性”。</li>
+<li>这一步直接影响东方：帕提亚、贵霜、萨珊都学会用王像+神像双向表达。</li>
+</ul>
+<h3 id="四中亚西亚打制币王权神权双向马与骑像特殊化"><a class="header" href="#四中亚西亚打制币王权神权双向马与骑像特殊化">四、中亚—西亚打制币：王权+神权双向，马与骑像特殊化</a></h3>
+<ol>
+<li>阿契美尼德/帕提亚</li>
+</ol>
+<p>波斯大流克不用希腊式神像，用持弓武士/王侯侧身，强调“王即军队最高统帅”；帕提亚银币国王侧面、王冠随朝代变，图案首要是宣示正统而非宗教。</p>
+<ol start="2">
+<li>贵霜（最关键，影响和田马钱）</li>
+</ol>
+<ul>
+<li>早期丘就却、阎膏珍近似罗马/印度-希腊：王像、希腊铭文；</li>
+<li>威玛·伽德菲赛斯、迦腻色伽改本地化：正面王立像、穿伊朗长袍、手指火坛（琐罗亚斯德教意涵），高冠；背面放多神——湿婆+公牛、娜娜带光背、风神、火神，后来瓦什色迦起放佛像。</li>
+<li>意义：贵霜地处多语种多宗教，币面像“万神殿展览”，让佛教、印度教、波斯祆教、希腊化神祇商人都能认；王像+火坛=君权神佑，背面神=神权君护。</li>
+<li>骑马/王骑图像在贵霜和部分大夏钱也常见，承印度-希腊“王骑”与草原“马政”双重来源。</li>
+</ul>
+<ol start="3">
+<li>萨珊</li>
+</ol>
+<p>银币正面加冕王像、侧面或加冕立像，背面拜火教祭火坛+侍者；王冠形制按王世变，几乎可凭图案断代。骑射、王权、祆教三位一体，不怎么用动物图腾，而用“王+坛”表达正统。</p>
+<h3 id="五和田马钱汉佉二体钱把汉制希腊打压贵霜王号大夏动物叠一起"><a class="header" href="#五和田马钱汉佉二体钱把汉制希腊打压贵霜王号大夏动物叠一起">五、和田马钱/汉佉二体钱：把“汉制+希腊打压+贵霜王号+大夏动物”叠一起</a></h3>
+<p>公元1—3世纪于阗打制，图案分工非常清楚：</p>
+<ul>
+<li>正面汉文篆书：大钱“铜钱重廿四铢”、小钱“六铢钱”，中心常带不明徽记（或释“贝/元”，更可能是地方记号）；用“铢”不用“德拉克马”，向汉地/西域都护体系认重量信用。</li>
+<li>背面马或骆驼，环佉卢文王号（如“大王、众王之王、某王之钱”一类尊号）；马多驼少。</li>
+<li>工艺祖形：大钱仿希腊四德拉克马重量级、小钱仿一德拉克马；打法仿贵霜；马驼图像溯源大夏—贵霜动物钱。</li>
+<li>意义分层：
+<ul>
+<li>马=丝路交通、于阗绿洲马政、草原—中亚“马即战略资源”符号；</li>
+<li>驼=南道商队长途贸易、西域物产；</li>
+<li>佉卢文王号=向西域/印度/贵霜商圈自证王权；</li>
+<li>汉篆铢文=向东向汉晋体制认制度、换比值；</li>
+<li>不打王头像而打马驼，说明于阗小政权不强调个人神化，而强调“贸易枢纽+双方法统”。</li>
+</ul>
+</li>
+</ul>
+<p>所以它和吕底亚狮头、雅典娜猫头鹰、迦腻色伽火坛不是一套宗教逻辑，而是“双文字双受众”的混血：图像负责本地/中亚识别，汉文负责中原计值，佉卢负责王权名分。</p>
+<h3 id="六一条总沿革打制币图案演化"><a class="header" href="#六一条总沿革打制币图案演化">六、一条总沿革（打制币图案演化）</a></h3>
+<ol>
+<li>吕底亚琥珀金：狮头戳记→“王室担保重量成色”</li>
+<li>希腊城邦：神像+圣物→“城邦身份+保护神”</li>
+<li>希腊化王国：国王侧像+神→“王权神授、个人宣传”</li>
+<li>贵霜/大夏：王立像+火坛/多神/马骑→“多宗教包容+中亚王权”</li>
+<li>萨珊：王冠+火坛→“祆教正统+世系可断”</li>
+<li>和田马钱：汉篆铢+佉卢王号+马驼→“汉—贵霜—大夏三线合流，重贸易不重个人神化”</li>
+</ol>
+<h2 id="打制币的模具"><a class="header" href="#打制币的模具">打制币的模具</a></h2>
+<p>打制币的“模具”和中国古代陶范、铜范不是一回事。它通常是两件硬模对夹一块加热/退火后的金属饼（flan），用锤击把图纹压出来。下面按材质、工具、操作、出土实物四块说。</p>
+<h3 id="一模具的基本结构上下两件套"><a class="header" href="#一模具的基本结构上下两件套">一、模具的基本结构：上下两件套</a></h3>
+<p>手工打制一般两套：</p>
+<ul>
+<li>下模（anvil die／obverse die）：固定在铁砧或木块/石砧里，刻主要图面（神像、王像、主徽）。因为不直接受锤顶击，磨损慢、可刻得更深更细。</li>
+<li>上模/上冲（punch／reverse die）：手执或装短铁柄，放在币坯上面，锤子敲它。承受直接冲击力，容易裂、磨损快。</li>
+<li>早期更简单：下模刻图，上面对一块平面铁冲/木槌敲，反面只留凹坑（incuse）；吕底亚琥珀金很多就是“正面狮、反面浅四方/不规则凹痕”。</li>
+</ul>
+<p>希腊化以后才普遍“双面都刻图”，罗马、贵霜、萨珊、和田马钱都属这种。</p>
+<h3 id="二模具材质青铜为主铁钢渐替石模少量"><a class="header" href="#二模具材质青铜为主铁钢渐替石模少量">二、模具材质：青铜为主，铁/钢渐替，石模少量</a></h3>
+<p>1）高锡青铜（最常用早期—古典）</p>
+<p>学界对希腊—罗马早期打制模的共识：偏好高锡青铜（锡可达约20%），硬度足够压金银铜币，且不象熟铁那样易锈断。 优点是可铸出复杂负像再精修，缺点是长期大批量打硬金属会疲劳。</p>
+<p>2）铁，后接淬钢</p>
+<p>铁模零星见于古典，但大量保存少（易锈）。罗马约3世纪后逐渐用铁、再往淬钢走；铁模耐用，适合长期量产第纳尔、安敦尼安等。 有一例6世纪铁模存世，叙拉古部分希腊币表面留“锈模”痕，可反推用过铁模。</p>
+<p>3）石模</p>
+<p>硬石（闪长岩、蛇纹岩、玛瑙、石英类）可用于早期试验、地方小打、或低产量。吕底亚是否“官方主用石模”有争议——文学描述常提硬石，但存世最早实物反而出青铜下模（见下）。石模优点是耐磨、不锈，缺点脆、刻细像不如金属方便。</p>
+<p>4）组合模</p>
+<p>罗马常见：青铜模芯镶进铁套筒/铁柄，上模做成短柱、圆锥或圆盘，整体两三英寸长，便于手执换模。</p>
+<p>材质选择规律：打金银用青铜/铁都行；打硬铜频繁生产，铁/钢更合适；小政权、试铸、再打压旧币，青铜或石模更省事。
+三、制作工具与工序</p>
+<p>一套打制模从毛坯到可用，大致：</p>
+<ol>
+<li>备料：金属模先锻或铸成圆柱/圆盘/短棒；石模切方坯磨平面。</li>
+<li>退火/硬化：青铜按目标硬度调锡；铁模锻后可能表面渗碳、淬火；罗马后期钢模做热处理。</li>
+<li>起稿：在模面抛光后画镜像草图。因为币面是凸像，模腔是阴刻、左右反。</li>
+<li>雕刻：
+<ul>
+<li>主刀：铁/钢刻刀（burin）、小平錾、圆錾；</li>
+<li>压花：小冲头先压出眼睛、星、字母基本形，再修；</li>
+<li>钻孔/细部：弓钻配刚玉（corundum）或其它磨料钻头，做深孔、放射线、珠圈；</li>
+<li>石模则用金刚石粉/刚玉粉慢研磨，或青铜刀配合磨料。</li>
+</ul>
+</li>
+<li>试打修模：用软银/退火铜坯试压，看深浅、移位、断线，返修。希腊简单低浮雕小模可一小时内外，复杂高浮雕可能数十小时；现代仿古者复制阿克拉加斯级大币曾耗十几小时。</li>
+<li>装砧/装柄：下模嵌入木砧或铁砧槽；上模装铁柄或手持短冲。</li>
+<li>报废处理：官方模磨损、改版、换王后会销毁/重熔/砸扁；所以存世“真官模”极少，多是私铸模、废弃模、偶然窖藏。</li>
+</ol>
+<p>配套工具还包括：熔炉、坩埚、天平、剪/切条机（从铸条切饼）、退火钳、毛刷去氧化、试金石（金银比色）。</p>
+<h3 id="四各体系实物出土情况"><a class="header" href="#四各体系实物出土情况">四、各体系实物出土情况</a></h3>
+<h4 id="吕底亚小亚细亚"><a class="header" href="#吕底亚小亚细亚">吕底亚/小亚细亚</a></h4>
+<ul>
+<li>存世最早之一：萨迪斯出土/现市面的吕底亚琥珀金 trite 青铜下模，狮头带日光纹，阴刻镜像，约前7末—前6中，标称“世界最早钱币模”之一。</li>
+<li>早期操作实物反推：以弗所等地出早期电子斯塔特，单面狮、反面多重冲痕，说明下硬模+上平面冲/多角冲。</li>
+</ul>
+<h4 id="希腊城邦"><a class="header" href="#希腊城邦">希腊城邦</a></h4>
+<ul>
+<li>米利都出青铜 diobol 下模（前6末—前5初），狮前身、阴刻镜像，绿锈，是“已知最早希腊模”级别实物；同批资料称古风期希腊存世模极罕。</li>
+<li>雅典、叙拉古等虽少出“模”，但大量币可反推用青铜模、个别铁模（叙拉古锈痕）；西西里部分币模有匠名签名，说明雕刻师独立工种。</li>
+</ul>
+<h4 id="罗马"><a class="header" href="#罗马">罗马</a></h4>
+<ul>
+<li>存世几百件古模中，大部分是私铸/废弃；官模严格控制、作废重熔。</li>
+<li>实例：一枚前136年左右的罗马第纳尔反模，青铜模芯装方铁柄，全长约70mm，曾上拍。</li>
+<li>罗马造币场图（如T. Carisius币）反面上砧、钳、锤、圆冲，可旁证工具组合。</li>
+</ul>
+<h4 id="贵霜犍陀罗印度-希腊"><a class="header" href="#贵霜犍陀罗印度-希腊">贵霜/犍陀罗/印度-希腊</a></h4>
+<ul>
+<li>塔克西拉、犍陀罗体系：早期本地/后印度-希腊阶段有“先铸后单模打压→双模打压”的演进；塔克西拉出过铜银单面铸打压币，后转双面模。</li>
+<li>贵霜官方模材质直接出土报告不多；市面偶有“贵霜青铜对模”拍卖品，但学术引用要谨慎。可稳妥说的是：贵霜王像+火坛/神像用金属打压模，塔克西拉近年住宅区地层出贵霜Vasudeva铜/银币，证明当地作坊存在，但是“币”不是“模”。</li>
+<li>技术链：巴尔赫（金）、贝格拉姆（铜）等中心据文献/钱币学重建，模可能分中心雕、分点用。</li>
+</ul>
+<h4 id="萨珊"><a class="header" href="#萨珊">萨珊</a></h4>
+<ul>
+<li>全系手工打压：下模固定砧中刻王像，上模手执刻火坛/铭文；银德拉克姆薄饼大径，常因坯太薄出“死点”未压清。</li>
+<li>5世纪起模多集中制作再发各铸地，之前各地自刻；材质文献常归铁/青铜，但萨珊“模出土”并不成系列，主要靠钱币联动研究（die-link）反推。</li>
+</ul>
+<h4 id="和田马钱汉佉二体钱"><a class="header" href="#和田马钱汉佉二体钱">和田马钱/汉佉二体钱</a></h4>
+<ul>
+<li>工艺是红铜打压、无孔：正面汉篆“廿四铢/六铢”+中心徽记，背面马/驼+佉卢王号；大钱仿四德拉克马级、小钱仿一德拉克马，部分在旧贵霜铜片上再打。</li>
+<li>模具实物：公开考古报告里“和田马钱专用石/青铜模”并不多见，更多靠币面压力痕、同模重复、再打压层、未成品饼反推用了硬模对打。也就是说——有工艺结论，缺系统出土模具。若做田野，重点应找绿洲作坊灰坑里的废铜柱、刻残块、退火渣、红铜饼，而不是像中原那样找陶范。</li>
+</ul>
+<h3 id="五和范铸别混"><a class="header" href="#五和范铸别混">五、和“范铸”别混</a></h3>
+<ul>
+<li>中原五铢、开元：陶/铜范浇熔铜，方孔同范批量，模具是“范”不是“die”。</li>
+<li>打制币：先有称重/铸造/剪切出的饼，冷或温态两硬模锤击；同版千枚也会因模损、对位偏而有微差。</li>
+<li>所以出土“陶范”不等于打制模；出土“刻花铜柱/铁柱”才更像打制模。</li>
+</ul>
+<h2 id="高锡青铜模具"><a class="header" href="#高锡青铜模具">高锡青铜模具</a></h2>
+<p>打制币的“高锡青铜模”要分两层说：一是材质理论——高锡青铜（一般 Cu+Sn，锡约 15%–20%，有的更高）硬、耐磨、不粘金银行，适合刻细阴纹并反复锤打；二是实物证据——古代打制模本就极少出土，官方作废会重熔/砸毁，所以“高锡青铜模”的硬证据往往不是成批窖藏，而是零星模体、废模残块，再加钱币本身的压痕反推。下面按“已见实物—材质检测逻辑—完整制作流程”铺开。</p>
+<h3 id="一打制模出土存世实物按体系"><a class="header" href="#一打制模出土存世实物按体系">一、打制模出土/存世实物（按体系）</a></h3>
+<ol>
+<li>吕底亚—小亚细亚早期电子币</li>
+</ol>
+<ul>
+<li>最常被引用的“世界最早存世币模”之一：一件吕底亚电子 trite 下模，青铜，萨迪斯（Sardes）关联，约阿里阿特斯—克罗伊斯时期、前7末—前6中；直径约 22 mm、重 19.03 g、厚 9.3 mm，狮头带额日射线，阴刻镜像，反面无纹。</li>
+<li>意义：证明早期并非全用“硬石砧+平面冲”，已有小型青铜负模；单面主图、另面可只留戳痕。电子币成色不稳，模体本身不解决金银比，只解决“王室标记+重量承诺”。</li>
+<li>萨迪斯造币相关还出熔炉、电子合金处理痕迹，但“成套上下青铜模”并不成系列；多数早期电子币的反面方凹，更像是上冲/平铁棒砸出，不一定每枚都配精细上模。</li>
+</ul>
+<ol start="2">
+<li>希腊城邦</li>
+</ol>
+<ul>
+<li>雅典：文献汇编（Göbl 1978）收一件雅典四德拉克马反模，形状近似方锥/青铜锥体，归类“reverse die”，约前454–前404；同书还收各类青铜、铁模形制。</li>
+<li>米利都/以弗所一类古风期：钱币学界常讲“有极少量下模出土”，但公开可核验的合金检测报告不多；很多结论靠同版币面压力、同模重复（die link）反推。米利都狮形、以弗所鹿形若用青铜模，合理推测为高锡以求浅浮雕清晰，但没有逐件锡含量公布就不能硬称“高锡”。</li>
+<li>西西里叙拉古：部分银币表面有“锈模”痕，被用来论证曾用铁模；青铜模同时存在。铁模易锈，故存世少于青铜，但高锡青铜仍是希腊银币/铜币首选之一。</li>
+</ul>
+<ol start="3">
+<li>马其顿—希腊化</li>
+</ol>
+<ul>
+<li>腓力二世四德拉克马反模有“大铁杆”形制存世/入编（Göbl 239/1），说明3世纪前马其顿系已用铁上模； 下模若青铜则高锡、若铁则后方淬火。</li>
+<li>托勒密、塞琉古王像币以青铜/铁混用为主，王像深浮雕更依赖铁/钢上模，因高锡青铜太脆、大冲击易崩角。</li>
+</ul>
+<ol start="4">
+<li>罗马</li>
+</ol>
+<ul>
+<li>奥古斯都时期存多件青铜模（不同尺寸与形状），说明即使帝国官铸也未统一“标准模材”，青铜、铁并行； 帝国中后期渐用铁/钢上模、青铜下模，或铁套筒+青铜芯。</li>
+<li>罗马铜合金币本身检测：希腊—罗马铜币样品多为 Cu–Sn–Pb 三元，部分 Cu–Sn、Cu–Pb；铸造后打制常见，打前退火可降硬度。某135枚研究铸态平均约97.5 HV、再结晶/退火打制样平均约119.3 HV，部分多次锤+退火可达150–214 HV。 这可作为“模要硬于币坯”的旁证：打铜币若币坯100–120 HV，模体高锡青铜或铁更硬才不易塌纹。</li>
+<li>罗马铜币腐蚀研究显示 Cu–Sn–Pb、埋藏后锡迁移/铅相腐蚀； 但这是币不是模。模若高锡，出土常呈硬绿锈、崩边，需XRF/SEM取芯才能定锡。</li>
+</ul>
+<ol start="5">
+<li>中亚—贵霜—萨珊—和田马钱</li>
+</ol>
+<ul>
+<li>贵霜用希腊打压法，金/银/铜都有，正面王像、背面湿婆/火坛/佉卢等； 新疆西吉、楼兰、和田一带有贵霜铜币出土， 但“贵霜青铜打制模”的考古出土极少，公开报告更多是同遗址铜片、废币、再打压层。</li>
+<li>萨珊银币手工打压，下模王像、上模火坛/铭；文献常归铁或青铜，但中亚干燥遗址若有模体，也多为残杆、废冲，少有完整高锡成分报告。</li>
+<li>和田汉佉二体钱（红铜、无孔、打压）至今缺系统“青铜模”出土；工艺上可设高锡下模+铁上冲，也可用贵霜旧铜模再刻，但实际用石/铁/青铜哪样，要等作坊灰坑出废模再定。不能因为希腊用高锡，就反推和田一定高锡。</li>
+</ul>
+<p>小结：能叫“高锡青铜打制模实物”的，严格说只有少量吕底亚/希腊/罗马青铜模体做了材质观察；更多时候学者只写“bronze die/punch”，锡含量要单独检测。铁模在马其顿、罗马、萨珊后期更常见；石模只适早期试验和小批量。</p>
+<h3 id="二为什么打制模会选高锡青铜"><a class="header" href="#二为什么打制模会选高锡青铜">二、为什么打制模会选“高锡青铜”</a></h3>
+<p>高锡青铜在Cu–Sn相图里，锡约10%开始明显硬化，15%–20%得到较硬α+δ组织，适合浅中浮雕负纹；好处：</p>
+<ul>
+<li>硬度高于退火金/银/铜坯，压几万次不塌珠圈；</li>
+<li>刻阴线不粘金属，尤其打金银时不易让币面“拉丝”；</li>
+<li>耐腐蚀，比熟铁不易锈死；</li>
+<li>可先铸成柱/锥/盘，再精雕，比整块锻铁省工。</li>
+</ul>
+<p>代价：</p>
+<ul>
+<li>高锡（&gt;约20%）偏脆，大锤打硬铜、深浮雕王像时角部易崩；所以深浮雕常改铁/钢上模。</li>
+<li>青铜整体不如铁耐用，罗马后期大批量官铸用铁上模、青铜下模或全铁。</li>
+<li>锡料成本：小国用回收铜+低锡也行，只要纹浅、发行量小。</li>
+</ul>
+<p>经验区间（复原实验用，不是古代强制标准）：</p>
+<ul>
+<li>打金银薄坯：青铜Sn≈12%–18%可；要求长寿用Sn≈18%–22%但减锤力。</li>
+<li>打红铜厚坯（如和田级）：高锡易崩，常改铁模或青铜Sn≈10%–14%+多次退火试打。</li>
+<li>上模受直接锤击：优先铁/钢；下模固定砧：可用高锡青铜镶嵌。</li>
+</ul>
+<h3 id="三高锡青铜打制模制作全过程"><a class="header" href="#三高锡青铜打制模制作全过程">三、高锡青铜打制模制作全过程</a></h3>
+<p>以“希腊式双面银/铜币、下模高锡青铜、上模铁或青铜”为例。</p>
+<p>1）备合金</p>
+<ul>
+<li>纯铜加锡矿/锡锭，按需目标锡含量熔配；若打重要官币可加少量铅改善流动性，但铅多会软、且出土易腐蚀，故“模材”通常低铅，“币材”铜币才高铅。</li>
+<li>高锡配料：Cu余量、Sn 15–20%、Pb 0–5%（模体尽量低铅）。熔温视锡量约1100–1200℃，浇注前除渣。</li>
+</ul>
+<p>2）铸/锻模坯</p>
+<ul>
+<li>下模：铸成短柱、圆盘或方锥（雅典反模方锥、吕底亚下模小圆厚块都是这类思路）；下模要能嵌入木砧/铁砧槽。</li>
+<li>上模：铸小柱或锻铁杆，末端做平面承锤；若青铜上模也铸柱，装木/铁柄。</li>
+<li>铸后清理浇口、毛刺，粗磨两底面平行。</li>
+</ul>
+<p>3）退火与组织调整</p>
+<ul>
+<li>高锡青铜铸态硬脆，可先均匀化退火（视合金约500–600℃区间，具体按锡量调整），减少内应力；但模面最终要硬，不宜过软。</li>
+<li>若用铁/钢上模：锻后正火，再表面渗碳或局部淬火；罗马—中世纪路径是“铁坯→刻→淬火→回火到不崩”。</li>
+</ul>
+<p>4）设计镜像图稿</p>
+<ul>
+<li>币面是凸像正字，模腔是阴刻、左右反。先在模面薄涂墨/朱，画主图：神像、王像、动物、珠圈、铭文位置。</li>
+<li>重量级决定模径：吕底亚trite小模22mm级；雅典四德拉克马下模更大；和田大钱可仿四德拉克马直径但红铜厚坯，模径要匹配且下模更厚防裂。</li>
+</ul>
+<p>5）粗雕外形与定位</p>
+<ul>
+<li>先用平錾定外圈、地张（底面）；珠圈用等距小冲头逐个压，或用车旋+冲钉。</li>
+<li>中心定心：下模中心与币坯中心对位，避免双面错版；上模可不做全圆定位，靠手执对位（所以古币常轻微移位）。</li>
+</ul>
+<p>6）深雕主图</p>
+<ul>
+<li>主刀：铁/钢burin切轮廓；高锡青铜虽硬但脆，刀角要小、逐层剔，不一次深切。</li>
+<li>面部/兽毛/衣纹：用小圆錾、三角錾分层；希腊高浮雕先打大体积再修线，罗马低浮雕直接浅剔。</li>
+<li>文字：字母用细冲头单个敲，或整组阴刻；佉卢、汉篆若同模，汉面可用单独上模、背面马驼用下模，避免两种文字同在一件复杂曲面。</li>
+<li>细孔/放射线/眼珠：弓钻配刚玉（corundum）或金刚石粉磨头；石模同理但更慢。</li>
+</ul>
+<p>7）试打与修模</p>
+<ul>
+<li>用退火银/铜软坯试压：看深浅、珠圈是否全、字口是否缺、错位多少。</li>
+<li>浅了补雕；崩了若小可重新焊补青铜再刻（古代不一定焊，常直接废模重铸）；高锡崩角大就报废。</li>
+<li>罗马/希腊官模会做“die trial”再进正式生产；小政权可能边打边修。</li>
+</ul>
+<p>8）装砧与打制</p>
+<ul>
+<li>下模嵌入铁砧/木砧圆孔，模面朝上；下模若高锡青铜，底部垫铁环防剪裂。</li>
+<li>币坯：金银可冷打（软态），铜常退火温打。称好重量，镊/钳放坯对位。</li>
+<li>上模（trussel）放坯上，锤击一次；硬铜厚坯可二次轻修边再补打。</li>
+<li>下模叫pile、上模叫trussel，是希腊—罗马标准两套；早期吕底亚可只下模+平上冲。</li>
+</ul>
+<p>9）维护与报废</p>
+<ul>
+<li>上模直接受锤，磨损/裂得快；下模主图深、寿命长。同版币可换上模不换下模，形成“die combination”。</li>
+<li>官方换王、改重、防私铸：旧模砸扁、切角、重熔；私铸模常粗刻、尺寸不正。</li>
+<li>高锡青铜废模若不出重熔，可能当金属料回炉；所以考古少见完整模，多见残柱、刻废块。</li>
+</ul>
+<h3 id="四和中国范铸模别混"><a class="header" href="#四和中国范铸模别混">四、和“中国范铸模”别混</a></h3>
+<ul>
+<li>中原半两、五铢、开元：陶/铜范浇铸，母钱翻砂，不叫打制模； 高锡青铜可做铜范/母钱，但功能是“浇腔”不是“锤压负像”。</li>
+<li>打制模是硬对硬冲压，币坯先成圆饼再压；范铸是熔液入腔，方孔、钱文、郭全由范腔决定。</li>
+<li>所以问“高锡青铜打制模出土”——主要看地中海、西亚、希腊化、罗马、部分中亚打压系统；问“高锡青铜钱范出土”——才看中国铜范、母钱。两套别并成一种。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/history-of-spade-coins.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/da-bu-huang-qian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/history-of-spade-coins.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/da-bu-huang-qian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

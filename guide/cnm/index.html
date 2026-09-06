@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国钱币博物馆"><a class="header" href="#中国钱币博物馆">中国钱币博物馆</a></h1>
+<p>中国钱币博物馆，位于北京市西城区西交民巷17号院。总占地面积为1800平方米，展厅面积为1100平方米。馆内建筑布局如一个“方孔圆钱”，内设中央厅和4个展览厅。是中国人民银行总行直属的国家级钱币专业博物馆。</p>
+<p>1990年，中国钱币博物馆开始筹备。1992年7月29日，博物馆正式开馆。截至2022年末，中国钱币博物馆藏品有219411件（套），年度观众总数为35000人。</p>
+<p>2021年6月19日，中国钱币博物馆被中央宣传部命名为“全国爱国主义教育示范基地”。2025年3月17日，入选国有公益性收藏单位名单（第一批）。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>1990年，中国钱币博物馆开始筹备。</p>
+<p>1992年7月29日，博物馆正式开馆。</p>
+<h2 id="建筑布局"><a class="header" href="#建筑布局">建筑布局</a></h2>
+<h3 id="综述"><a class="header" href="#综述">综述</a></h3>
+<p>中国钱币博物馆总占地面积为1800平方米，展厅面积为1100平方米。馆内建筑布局如一个“方孔圆钱”，内设中央厅和4个展览厅。中央厅通过4组图片资料、反映出世界货币的起源，东、西方两大货币体系的主要特点和互相交融。第一、第二、第三展厅是中国货币史的基本陈列“中华钱币”，分别为：货币的统一、圜天函地、金银货币、银行与纸币、现在与未来。第四展厅为举办各种专题货币展的特别展厅。</p>
+<h2 id="基本陈列"><a class="header" href="#基本陈列">基本陈列</a></h2>
+<h3 id="货币统一"><a class="header" href="#货币统一">“货币统一”</a></h3>
+<p>“货币统一”部分起自原始社会交换的产生，直至秦始皇统一货币。通过“实物货币”、“春秋战国的货币”和“货币的统一”三个单元，利用原始社会随葬的农产品、手工业品，各类货币；春秋战国时期的刀、布、圜钱和蚁鼻钱等，以及秦统一货币的有关实物，揭示了货币的起源、货币形成过程中的地域特征和货币统一的必然趋势。</p>
+<h3 id="圜天函地"><a class="header" href="#圜天函地">“圜天函地”</a></h3>
+<p>“圜天函地”部分分为“五铢钱和宝文钱”“钱币与社会”、“技术与艺术”三个单元，集中展示了在中国流通长达两千余年的方孔圆钱的发展、变化；钱币与社会政治、经济状况的关系以及中华货币的文化特点。其中的五铢钱出自河北满城中山靖王刘胜墓；开元通宝钱出自唐代纪年墓；汉代的叠铸陶钱范仍保持着钱币生产时的原貌，都具有较高的科学研究价值。</p>
+<h3 id="金银货币"><a class="header" href="#金银货币">“金银货币”</a></h3>
+<p>“金银货币”部分展现了自春秋中、晚期以来贵金属货币的演变过程。包括银质布币、战国黄金货币、从唐到清的银铤、金银方孔圆钱、早期机制币和近、现代金银纪念币。其中有“杨国忠”铭文的银铤，五台山发现的“淳化元宝”佛像金钱、重达5公斤的世界最大金质纪念币等。</p>
+<h3 id="纸币与银行"><a class="header" href="#纸币与银行">“纸币与银行”</a></h3>
+<p>“纸币与银行”部分从“古代纸币”、“纸币与信用”、“纸币的贬值”和“人民货币”四个单元，向观众展现了纸币最早在中国产生的原因和过程，纸币的信用性质、纸币的流通和中共产党领导发行的人民货币在革命和建设中产生的巨大作用。其中有关古代纸币的实物、中国最早的近代纸币、孙中山先生奔走革命时发行的金币券、国民党发行的面额高达60亿元的纸币和革命根据地使用过的印钞机。</p>
+<h3 id="现在与未来"><a class="header" href="#现在与未来">“现在与未来”</a></h3>
+<p>“现在与未来”是“中华钱币”陈列的最后一部分，向观众介绍了当代硬币和纸币的生产过程和防伪知识，同时也展现了货币向电子化迈进的前景。</p>
+<h2 id="场馆特色"><a class="header" href="#场馆特色">场馆特色</a></h2>
+<p>中国钱币博物馆充分利用各种人工光源，营造出一种浓厚的文化气氛，复制了河北满城刘胜墓、明代有关纸币的布告以及旧式的金融机构一钱庄。观众步入展厅，身临其境，缩短了陈列与观众的距离。</p>
+<h2 id="馆藏文物"><a class="header" href="#馆藏文物">馆藏文物</a></h2>
+<h3 id="综述-1"><a class="header" href="#综述-1">综述</a></h3>
+<p>截至2019年末，中国钱币博物馆藏品有300000件（套）。</p>
+<p>中国钱币博物馆珍藏有世界30多个国家的钱币。如美国、英国、法国、德国、俄罗斯、日本、朝鲜、安南钱等。其中19世纪各国的金币及现代纸币占较大比重。文物等六大类别收藏保管。</p>
+<p>中国钱币博物馆还收藏有与钱币有关的文物。除摇钱树、扑满、钱剑外，还收藏各种钱范，从贝范、空首布范、五铢范到银元祖模等。</p>
+<h3 id="主要藏品"><a class="header" href="#主要藏品">主要藏品</a></h3>
+<p>在中国钱币博物馆的藏品中，有具有较高学术价值的珍贵文物，如出土于山西商墓的保德铜贝、出土于河北中山国遗址的金贝和银贝、河南发现的春秋时期的银布币、西周的“半圜”钱形态完整的楚金版楚地铜牌“良金一铢”、宋代九叠篆“皇宋通宝”、明代中书省发行的“大明通行宝钞”、明代五十两金锭等。其中有些如“刺”字空首布等，属国内仅见。博物馆收藏有相当数量的中国历代少数民族发行的货币，如六铢和二十四铢的汉法二体钱、突骑施钱和回鹘钱、察合台金币、黑龙江出土的金代银铤“承安宝货”、西夏“元德重宝”等，为研究少数民族货币史提供了可贵的实物资料。近代各个时期发行的货币收藏已形成较完整的系统，第一次国内革命战争时期农民协会发行的货币、第二次国内革命战争时期、抗日战争时期和第三次国内革命战争时期各革命根据地发行的货币，包括一些游击区发行的货币，馆内都有比较完整的收藏。特别是中国人民银行成立后发行的各套人民币票样，是博物馆特色。</p>
+<h3 id="藏品来源"><a class="header" href="#藏品来源">藏品来源</a></h3>
+<p>中国钱币博物馆藏品的主要来源：一是中国人民银行的旧存；二是钱币收藏家及钱币爱好者的捐赠；三是向社会征集。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<h3 id="学术研究"><a class="header" href="#学术研究">学术研究</a></h3>
+<p>中国钱币博物馆编写有开馆纪念章、中国钱币博物馆简介，编著有《中国历代货币》、《中国古钞图辑》、《戴葆庭集拓中外钱币珍品》等。</p>
+<p>中国钱币博物馆有馆刊《中国钱币》。</p>
+<h3 id="学术交流"><a class="header" href="#学术交流">学术交流</a></h3>
+<p>1991年9月8日，中国钱币博物馆筹委会以中国钱币学会的身份派员出席布鲁塞尔举行的第十一届国际钱币学大会。自中国钱币博物馆开馆以来，已接待近万名观众，先后接待了美国、英国、日本、法国、德国、丹麦、比利时、瑞典、意大利、澳大利亚，菲律宾、俄罗斯等国家和台湾、香港等地区的金融专家、钱币学者近千人次。</p>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<p>2021年6月19日，中国钱币博物馆被中央宣传部命名为“全国爱国主义教育示范基地”。</p>
+<p>2025年3月17日，入选国有公益性收藏单位名单（第一批）。</p>
+<h2 id="文物保护"><a class="header" href="#文物保护">文物保护</a></h2>
+<p>中国钱币博物馆藏品均建有总账、分类账。按时代、地区、来源和门类分别建立实物卡。同时，逐步将馆藏珍品按一、二、三级标准进行严格鉴定，按藏品的质地，分柜收藏。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="note/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="note/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

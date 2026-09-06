@@ -1,0 +1,526 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>古代的黄金冶炼 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/gold-smelting.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="古代的黄金冶炼"><a class="header" href="#古代的黄金冶炼">古代的黄金冶炼</a></h1>
+<h2 id="黄金提纯"><a class="header" href="#黄金提纯">黄金提纯</a></h2>
+<p>中国黄金提纯可分成“物理富集—火法精炼—湿法/药剂分离”几条线，整体趋势是从砂里淘金、简单熔炼，逐步发展到灰吹、汞齐、硼砂、矾硝等去银去铜。下面按时期说工艺和能达到的成色。</p>
+<h3 id="一史前商周砂金重选简单熔炼"><a class="header" href="#一史前商周砂金重选简单熔炼">一、史前—商周：砂金重选+简单熔炼</a></h3>
+<p>最早利用的是天然砂金和自然金块。工艺很简单：</p>
+<ul>
+<li>淘洗重选：利用金密度约19.3、远大于石英砂石，木盘/淘筐在水流中反复簸选，轻砂随水走、金粒沉底。</li>
+<li>加热熔团：粗金含银铜铁时，炭火重熔，低熔点杂质成浮渣刮去，金沉底。</li>
+<li>直接锤揲：高纯砂金几乎不提纯，直接打箔、做臂钏、面具。</li>
+</ul>
+<p>考古成色跨度很大：</p>
+<ul>
+<li>三星堆、金沙系金器多用高纯砂金，但部分面具/箔因掺银或原料关系成色不等；三星堆5号坑半张金面具检测约 85%。</li>
+<li>北京平谷商代墓葬金器约 85%。</li>
+<li>这一阶段没有“标准纯度”，王室祭器可很高，民间装饰看矿源。</li>
+</ul>
+<p>特点：不追求化学纯，靠原料本身纯。若砂金本身含银多，颜色偏白黄；含铜多则偏红。</p>
+<h3 id="二春秋战国秦汉称量金灰吹汞齐起步"><a class="header" href="#二春秋战国秦汉称量金灰吹汞齐起步">二、春秋战国—秦汉：称量金+灰吹/汞齐起步</a></h3>
+<ol>
+<li>工艺</li>
+</ol>
+<ul>
+<li>灰吹法（吹灰/铅炼）：粗金与铅同熔，铅捕集金银，入骨灰/草木灰多孔“灰窠”鼓风氧化，铅成氧化铅被吸走，得金银合金；再分离银。东汉狐刚子《出金矿图录》《五金粉图诀》已有“锡灰坯炉”“铅炼金”详细操作，张道陵《太清经天师口诀》也记铅七十二两炼金三十六两、反复灰吹。 科普中国以汉代金印为例说明：金矿+铅熔合→骨灰容器氧化除铅→得高纯金银合金，偏将军印XRF约96%。</li>
+<li>汞齐法（混汞）：金屑与水银成金汞齐，加热蒸汞得金。战国已用于鎏金，汉代用于提金/表面富金；满城汉墓长信宫灯、茂陵鎏金马即金汞齐工艺。</li>
+<li>药剂辅助：硫可与铜铁铅成硫化物浮渣，硼砂、黄矾、盐、硝石处理银铜杂质。</li>
+</ul>
+<ol start="2">
+<li>成色</li>
+</ol>
+<ul>
+<li>楚“郢爰”等称量金：多数检测90%—99%，优质98%—99%，差者约85%。</li>
+<li>西汉金饼、马蹄金、麟趾金：一般 95%以上；西安谭家金饼、满城汉墓金饼约95%—97%；海昏侯部分马蹄/麟趾检测均值很高，金板有接近99.9%的报道，但属高成本皇家特例而非流通标准。</li>
+<li>南京博物院西汉金兽：约 99%，属纯金类。</li>
+<li>普通战国金饰：有样本仅70%，整体不稳定。</li>
+</ul>
+<p>结论：汉代官方已能用灰吹+汞齐把特定金料做到95%—99%，但“平均流通纯度”仍低于此，因为矿源、成本、再掺假差异大。</p>
+<h3 id="三魏晋唐灰吹成熟药剂分离系统化"><a class="header" href="#三魏晋唐灰吹成熟药剂分离系统化">三、魏晋—唐：灰吹成熟、药剂分离系统化</a></h3>
+<ul>
+<li>银矿分金用灰吹最成熟（《天工开物》后详记“分金炉/虾蟆炉”沉铅结银）；金中除银同步用同类思路。</li>
+<li>黄金与共生银分离的经验丰富：黄矾—树脂、矾盐、硫黄、硼砂、矾硝、矾硝盐等都有使用记载。</li>
+<li>唐代鎏金大量用金汞齐；矿冶方面岩金用烧爆、破碎、淘选，再熔炼。</li>
+<li>成色：何家村等唐代窖藏顶级金碗类“赤金”常见93%—95%；一般宫廷/供养金器多按“足赤”目标但不等于99%。民间流通金锭、饰金常85%—95%，看用途。</li>
+</ul>
+<p>唐代不是“比汉更纯”，而是灰吹+药剂组合更稳、产量更大；极端高纯仍靠不计成本重炼。</p>
+<h3 id="四宋明天工开物定型"><a class="header" href="#四宋明天工开物定型">四、宋—明：《天工开物》定型</a></h3>
+<p>宋代矿金工艺分支多：破碎—磨矿—溜槽重选得“金泥”—坩埚熔炼，加芒硝、硼砂出粗金。某支民间“非遗”炼金最高仅约75%（相当于18K），只代表小矿重选+简单熔炼，不等于宋代上限。</p>
+<p>明《天工开物·五金·黄金》把整套讲清：</p>
+<ul>
+<li>山金、沙金先淘洗后冶炼；初出“色浅黄”，再炼“转赤”。</li>
+<li>成色判断用试金石，“七青八黄九紫十赤”。</li>
+<li>去银存金：金打薄片剪碎，土泥裹，入坩埚加硼砂熔化，银被土/泥吸走，金流出成足色；之后再入少许铅，可把吸入土中的银再勾出来。</li>
+<li>金箔、掐丝、累丝前都要先精炼到赤色，减少银铜。</li>
+</ul>
+<p>成色区间：</p>
+<ul>
+<li>明代官方/高等级金器：“足色”“足赤”目标多95%+，部分文献标准“九成金”即90%，宫廷特制可95%—99%。</li>
+<li>民间金锭：一般94%—96%，少数“加炼足赤”更高，但稳定99%以上难。</li>
+<li>硼砂+铅返炼可去银很彻底，但微量铜/铁/铂族难完全除，古代“足赤”不等于现代999。</li>
+</ul>
+<h3 id="五清民国银楼足赤与近代精炼"><a class="header" href="#五清民国银楼足赤与近代精炼">五、清—民国：银楼足赤与近代精炼</a></h3>
+<ul>
+<li>内务府/造办处金器按等级配料，宫廷赤金常94%—96%，特需可再炼高些；地方银楼“足赤”行业惯例约99.0%—99.3%，上海大同行“足赤”约99.3‰（即99.3%），再高叫“上足赤”“加炼足赤”。[citation:1相关汇总]</li>
+<li>传统法仍是：重选→熔炼→硼砂/硝矾去银铜→铅灰吹→试金石比色。</li>
+<li>19世纪末起西方引入：氰化浸出、氯化除杂、电解精炼；中国大规模采用是清末—民国矿山、再到现代国营金厂。现代国标足金≥99%，投资金条99.99%，电解/溶剂萃取可达99.995%—99.999%。</li>
+</ul>
+<h3 id="六各时期提纯程度总表"><a class="header" href="#六各时期提纯程度总表">六、各时期“提纯程度”总表</a></h3>
+<h2 id="时期--主要工艺--典型可达成色--说明"><a class="header" href="#时期--主要工艺--典型可达成色--说明">时期 | 主要工艺 | 典型可达成色 | 说明</a></h2>
+<p>史前—商 | 淘洗、重熔、锤箔 | 砂金高者90%+，部分器物80%—85% | 看矿源，不系统去银铜
+西周—战国 | 淘洗+重熔，局部灰吹/汞齐 | 郢爰类90%—99%，普通饰金70%—90% | 不稳定
+汉 | 灰吹、铅捕、汞齐、硫/矾辅助 | 金饼95%+，金兽/特制99%，印96% | 皇家高纯可近足金
+唐—宋 | 灰吹成熟、硼砂/芒硝/硫、汞齐鎏金 | 顶级93%—97%，民间多85%—95% | 产量与稳定性提升
+明 | 《天工开物》硼砂去银、铅返银、试金石 | 足色95%+，特制97%—99% | 文献工艺最完整
+清—民国 | 传统灰吹/硼砂/矾硝+银楼复炼 | 银楼足赤约99.0%—99.3% | 未普及电解
+现代 | 氰化/浮选→氯化/电解/萃取 | 足金99%，金条99.99%，精炼99.999% | 批量稳定</p>
+<h3 id="七几个容易误解的点"><a class="header" href="#七几个容易误解的点">七、几个容易误解的点</a></h3>
+<ul>
+<li>“古代没99”不对：汉海昏侯金板、金兽、部分金饼可近99，但那是精选矿+反复炼，不代表市场金锭都这纯度。</li>
+<li>“灰吹=只炼银”不对：灰吹先以铅捕金银行，氧化除铅得金银合金；再配合硼砂、硝矾、硫等分离金银，所以它是黄金精炼核心火法之一。</li>
+<li>“七青八黄九紫十赤”是比色经验，不是化验标准；银多偏青黄，铜多偏红紫，纯金赤黄，但颜色也受厚度、氧化、共晶影响。</li>
+<li>传统法极限：去砂石、去大部分银铜铅可到99%上下；再去铁、微量铂族、残余银到99.9%以上，靠反复灰吹+药剂可行但损耗大，不如现代电解/氯化稳定。</li>
+</ul>
+<h2 id="灰吹法"><a class="header" href="#灰吹法">灰吹法</a></h2>
+<p>灰吹法（英文 cupellation，也叫烤钵法、吹灰法）是传统火法冶金里专门用来从铅、铜等杂质中分离金、银的工艺。它不直接“把矿石变纯金”，而是先把贵金属用铅“抓”到一起，再靠氧化把铅去掉，最后得到金银合粒。下面按原理、设备、步骤、在中国的发展、成色与局限讲清楚。</p>
+<h3 id="一它解决什么问题"><a class="header" href="#一它解决什么问题">一、它解决什么问题</a></h3>
+<p>含金银的矿石往往不是纯金纯银，而是和铅、铜、铁、硫混在一起；尤其是银矿常与方铅矿（PbS）共生，金粒又极细，直接淘洗/熔炼提不干净。灰吹法的思路是：</p>
+<ol>
+<li>用金属铅当“捕集剂”，高温下把金、银溶解/裹挟成铅‑金银合金；</li>
+<li>再把这坨合金放在多孔“灰皿”里加热鼓风；</li>
+<li>铅优先氧化成氧化铅（PbO，古称密陀僧），一部分挥发，一部分被灰皿毛细吸收；</li>
+<li>金、银不易氧化，留下来凝成合粒（dore bullion）。</li>
+</ol>
+<p>本质是“选择性氧化 + 多孔吸附”：贱金属肯吸氧、贵金属不吸氧，氧化物又被骨头/镁砂“喝”走。</p>
+<h3 id="二核心设备与材料"><a class="header" href="#二核心设备与材料">二、核心设备与材料</a></h3>
+<ul>
+<li>灰皿/灰窠/灰池：多孔耐火容器。古代用动物骨灰压制成钵，或用草木灰、骨灰铺池；现代实验室用骨灰‑水泥、纯骨灰、镁砂（氧化镁）、水泥灰皿。骨灰主要成分磷酸钙，对PbO润湿好、不与其生成黏渣；用含硅黏土会生成硅酸铅玻璃渣，既堵孔又粘金银。</li>
+<li>鼓风/进风：传统用风箱、皮囊；现代灰吹炉在920–1000℃控温并通热空气。铅熔点327℃、PbO熔点约888℃、银约962℃、金1064℃，所以作业温度常取900–1000℃：低了铅冻住不氧化，高了金银会氧化挥发损失。</li>
+<li>配剂：粗矿或粗金常先加铅箔/铅粒；若含硫先焙烧脱硫；若含铜铁，常配硼砂、苏打、萤石等造渣，灰吹主要负责除铅，不完全负责除铜铁。</li>
+</ul>
+<h3 id="三标准操作流程"><a class="header" href="#三标准操作流程">三、标准操作流程</a></h3>
+<ol>
+<li>富集（配铅/熔炼）碎矿或粗金+铅（有时加少量铜、银做“引子”）入坩埚熔炼。铅液把分散的金、银微粒捕集成“贵铅”或“铅扣”。脉石与熔剂成渣撇掉。</li>
+<li>装灰皿预热灰皿先800–900℃烘透，去掉水、有机物、CO₂，避免 later “吐唾沫”（残留气体顶破铅液把铅滴崩飞）。</li>
+<li>氧化灰吹铅扣放红热灰皿上，表面形成PbO薄膜；因PbO能被多孔灰皿润湿、靠毛细渗入，而金属铅内聚不渗，于是不断露新面→再氧化→再渗入。反应大致： 2Pb + O_2 \rightarrow 2PbO 部分PbO挥发，绝大部分被灰皿吸收（资料给到约98.5%吸收、1.5%挥发）。</li>
+<li>得合粒铅除尽后，剩下金+银小球（合粒）留在皿底凹处。若只提银，合粒几乎纯银；若原矿有金，就是金银合金。</li>
+<li>再分金（如需要）灰吹本身不把金、银分开。要纯金再走分金：古代用硼砂/硝石/矾剂再熔使银造渣，或用硝酸溶银留金；现代用火试金硝酸分金。</li>
+</ol>
+<p>提银的完整链常是：方铅矿/含银矿→熔炼得铅银合金→灰吹除铅得银；提金若用灰吹，则多是“粗金含铅铜银”或“细粒金难富集”时才上铅捕集，再灰吹，再分金。</p>
+<h3 id="四在中国的发展与应用"><a class="header" href="#四在中国的发展与应用">四、在中国的发展与应用</a></h3>
+<ul>
+<li>文献最早记载：北宋苏颂《本草图经》记银冶——“先以铅同煎炼，银随铅出……开地作炉，填灰其中，谓之灰池；置银铅于灰上，更加火大煅，铅渗灰下，银住灰上”。这是典型灰吹提银。</li>
+<li>汉代已有实践证据：东汉炼丹/冶金文献与金印考古可互证。科普中国以汉代金印为例说明：金矿+铅熔合→骨灰灰窠再热鼓风→铅成PbO渗入→得高纯金银合金；偏将军印XRF约96%。说明当时可用灰吹去铅、富集金银，但是否“普遍用于所有金器”不宜夸大。</li>
+<li>唐宋银冶成熟：唐代炼银渣、邠王府/章怀太子墓炼渣分析被研究者视为灰吹提银证据；《云麓漫钞》《大冶赋》记碎矿、淘选、配铅、灰吹。司空图“如铅出银”即此意。</li>
+<li>明代系统化：《天工开物·五金》讲分金炉、虾蟆炉、铅捕银、再提金；灰吹去铅后再用硼砂/土泥/少量铅处理残余银铜。民间银炉“足银”靠灰吹+反复熔炼，宫廷金器“足赤”则灰吹+分金+试金石。</li>
+<li>黄金提纯中的定位：对砂金一般不必灰吹，淘洗重熔即可；对岩金细粒、含铅铜硫化矿，先配铅熔成贵铅再灰吹，能把分散金富集起来。之后去银还要另道工序，所以“灰吹=直接出99金”是误读。</li>
+</ul>
+<h3 id="五能到什么纯度有什么局限"><a class="header" href="#五能到什么纯度有什么局限">五、能到什么纯度、有什么局限</a></h3>
+<ul>
+<li>提银：反复灰吹可得95%以上白银，再电解/硝酸处理可更高；古代银锭“纹银”标准约93.5%，足银靠复炼。</li>
+<li>提金（得合粒后）：灰吹只去掉铅和大部分易氧化贱金属；若原合金含银、铜，合粒仍是金+银（+少量铜）。要足金再分银：古代硼砂/矾硝/硝酸，现代硝酸分金或电解。纯到99.9%以上单靠灰吹做不到。</li>
+<li>不适合单独处理：高硫原矿（先焙烧）、高铜高铁（要先造渣/浮选/转炉）、铂族（灰吹捕集不彻底，需后续湿法/电解）。</li>
+<li>环境与安全：PbO烟尘剧毒，古代工匠用灰吹易铅中毒；现代必须在通风、捕尘、控温设备下做。</li>
+</ul>
+<h3 id="六一句话类比"><a class="header" href="#六一句话类比">六、一句话类比</a></h3>
+<p>灰吹法就像“用铅当磁铁吸金银、再用多孔灰砖把氧化后的铅当脏水吸走”——吸完剩下金银行业，但金和银还抱在一起，要分开得再另做一道分金。</p>
+<h2 id="火法炼金"><a class="header" href="#火法炼金">火法炼金</a></h2>
+<p>“火法炼金”在中国古代不是单一秘术，而是一整套靠高温把金从矿石、合金、杂质里富集出来的工艺体系。它和“水法”（氰化、酸溶、混汞后期蒸汞等）相对，但实际操作常互相配合。下面按“干什么—用什么—各时期怎么演进—能纯到什么程度”讲清楚。</p>
+<h3 id="一火法炼金到底包含哪些工序"><a class="header" href="#一火法炼金到底包含哪些工序">一、火法炼金到底包含哪些工序</a></h3>
+<p>古人处理黄金，按矿石类型分两条路：</p>
+<ul>
+<li>砂金/面沙金：重选淘洗→低温重熔去砂石、部分银铜→按需再精炼。很多高纯金器其实没走复杂火法，靠好矿源+淘洗+重熔就够了。</li>
+<li>岩金/脉金（含硫化物、含铅铜银）：破碎→焙烧（烧爆去硫）→重选/磨矿→配铅或配铜熔炼捕金→灰吹除铅→硼砂/矾硝/盐造渣去银铜→分金得足金。</li>
+</ul>
+<p>火法的核心是后一类，关键单元包括：</p>
+<ol>
+<li>烧爆/焙烧：硬岩用炭火加热再泼水，热胀冷缩开裂；含硫铁矿先氧化脱硫，避免硫把金“裹住”。遂昌金矿的烧爆法有现场遗迹，制团烧结后与木炭分层去硫。</li>
+<li>熔炼捕集：粗金若细粒分散，加铅（古称“黑锡”）同熔，铅液把金、银裹成“贵铅”；或加铜、加冰铜思路收金。狐刚子《出金矿图录》记“用三斤炼锡（铅）……纳金矿碎者一斤”，掠渣后得金铅合金。</li>
+<li>灰吹/吹灰：金铅合金放骨灰/草木灰多孔灰皿，鼓风氧化，铅成氧化铅（密陀僧）被吸走，留下金银行。张道陵《太清经天师口诀》记“金三十六两、铅七十二两”，作灰杯反复三七遍；这是东汉铅捕集+灰吹的明确文献。</li>
+<li>造渣去银铜：纯灰吹只把铅去掉，金里若还含银，要再处理。《天工开物》去银法——金打薄片剪碎，土泥裹涂，入坩埚加硼砂熔化，银被土/泥吸走，金流出成足色；之后再入少许铅另炼，把土中银勾回。 另路用黄矾、食盐、雌黄、硫黄使银成硫化物造渣。</li>
+<li>复炼与判色：再熔一次颜色由浅黄转赤；用试金石比色，“七青八黄九紫十赤”。这一步本身是火法辅助质检。</li>
+</ol>
+<p>混汞法（金汞齐）严格说先湿后火：水银捕金→加热蒸汞得金。它常归入“炼金”但偏湿法；纯火法不靠汞。</p>
+<h3 id="二各时期演进"><a class="header" href="#二各时期演进">二、各时期演进</a></h3>
+<p>1）史前—商周：重选+重熔，不系统化学提纯</p>
+<p>砂金为主，木盘淘洗，炭火熔团，刮浮渣。矿源好就能高纯，矿源含银铜就偏色。三星堆—金沙系部分金器检测金约85%、银约13%、余铜铁，研究认为可能来自稳定砂金、并可能已用类似灰吹的初步提纯，但不是成熟铅灰吹。 商代高等级金器有到85%上下的例子，但整体不成标准。</p>
+<p>2）汉魏：铅捕集+灰吹+方士火法成熟</p>
+<p>东汉是分水岭。两条证据：</p>
+<ul>
+<li>文献：狐刚子《出金矿图录》记铁锅熔铅→投金矿→掠渣→入灰坯炉鼓风，再用雌黄、黄矾、盐、胡同律（树脂）处理残铅残银；张道陵记灰杯反复铅炼。 这都是标准火法“配铅—灰吹—药剂分金”。</li>
+<li>考古：汉代金印用“矿+铅熔→骨灰灰窠氧化除铅→得金银合金”，偏将军印XRF含金约96%；说明官方/高等级作坊已能稳定到九成多以上。 首都博物馆相关文章引狐刚子用盐、牛粪灰、黄矾、硫黄处理金薄，以“打看柔软与否”判纯，再烧四五遍成赤金。</li>
+</ul>
+<p>汉代金饼、马蹄金部分很高（如部分西汉官铸检测95%上下，海昏侯某些金板有高纯报道），但这是精选矿+反复炼，不等于市面通行纯度。</p>
+<p>3）唐宋：烧爆、溜槽、灰吹提银并行，金火法规范化</p>
+<ul>
+<li>金矿：岩金用破碎—水磨—溜槽重选得“金泥”—坩埚加芒硝、硼砂熔炼。山东招远“黄金溜槽堆石砌灶”非遗源于宋，四步破碎、磨矿、拉流、熔炼，最后芒硝+硼砂造渣，传承人现场说上限约75%（18K），代表民间小矿而非官冶上限。</li>
+<li>银/金银共生：灰吹提银文献化。北宋苏颂《本草图经》记“先以铅同煎炼，银随铅出；开地作炉、填灰为灰池，置银铅于上，火煅，铅渗灰下、银住灰上”；这虽是提银，但脉金含银时同理先用铅捕再灰吹。 唐代何家村炼银渣、部分银冶遗址被研究者视为灰吹证据。</li>
+<li>鎏金、汞齐并行：金汞齐用于器物表面富金，不属于从矿提金主流程，但属于火法后处理（烤金）。</li>
+</ul>
+<p>4）明清：天工开物定型，去银分金最完整</p>
+<p>《天工开物·五金·黄金》把全国砂金、山金、面沙金分类列全：狗头金、麸麦金、瓜子金、马蹄金；山金“穴山十余丈见伴金石”，水金以云南金沙江为代表；统一原则“先淘洗后冶炼”，入冶“初出色浅黄，再炼而后转赤”。</p>
+<p>去银存金原文要点：</p>
+<p>欲去银存金，将其金打成薄片剪碎，每块以土泥裹涂，入坩锅中，硼砂熔化，其银即吸入土内，让金流出以成足色；然后入铅少许，另入坩锅勾出土内银，亦毫厘具在。</p>
+<p>也就是说明清官匠流程是：淘洗→重熔→硼砂/土泥去银→少量铅返捕回收银→试金石比色→再打箔或铸器。银矿那边另有“分金炉/虾蟆炉”、铅沉底成密陀僧、再沉铅结银，和金去银是同一套火法逻辑的不同方向。</p>
+<h3 id="三能达到什么纯度极限在哪"><a class="header" href="#三能达到什么纯度极限在哪">三、能达到什么纯度、极限在哪</a></h3>
+<ul>
+<li>砂金轻处理：好矿可90%—99%，但含自然银的砂金常成金银合金，不火法分金就到不了“赤金”。</li>
+<li>铅捕+灰吹+分金：去砂石、铅、大部分银铜后可到95%—99%；汉代高等级金印约96% 、部分汉金饼95%±、个别王室金板近99%属特例。</li>
+<li>硼砂/矾硝再分金：官方“足赤”目标95%+，精选重炼可97%—99%；传统法稳定99.9%以上很难，因为铁、微量铂族、残余银靠反复灰吹损耗大。</li>
+<li>民间小矿溜槽+简单熔炼：如招远非遗式流程，报道上限约75%，不等于宋明整体上限，只代表低投入岩金处理。</li>
+</ul>
+<p>火法极限不在“能熔金”，而在杂质氧化顺序和渣系：铅最易灰吹除；银和金同属贵金属，必须靠硼砂吸银、铅返捕、或后期湿法（硝酸分金）才分得开；铜铁硫靠焙烧+硼砂/苏打/萤石造渣。古代没有电解，99.99%这种现代投资金条级别做不到。</p>
+<h3 id="四容易混的三件事"><a class="header" href="#四容易混的三件事">四、容易混的三件事</a></h3>
+<ul>
+<li>灰吹≠只炼金：它最核心是除铅；提金时先“铅捕金”，再灰吹；提银时先“铅捕银”，再灰吹。黄金若不含铅、不含细散微粒，不一定用灰吹。</li>
+<li>方士“炼金”≠矿冶提金：汉唐丹经讲铅汞、雌雄黄、点化黄白，很多是做合金/仿金/药金；其中铅捕、伏火、灰坯可并入矿冶，但“点铁成金”不算火法提金。</li>
+<li>火法+水法不分家：混汞、矾硝水溶银、后期硝酸分金，常接在火法后面。说“纯火法”通常指烧爆—熔炼—灰吹—硼砂造渣这一段。</li>
+</ul>
+<h2 id="金矿"><a class="header" href="#金矿">金矿</a></h2>
+<p>古代人开采和冶炼的对象，主要是那些容易发现和处理的富矿。古代金矿按开采类型，主要分为砂金矿和岩金（脉金）矿两大类，它们的主成分和杂质构成截然不同。</p>
+<h3 id="一砂金矿古代最早最主要的黄金来源"><a class="header" href="#一砂金矿古代最早最主要的黄金来源">一、砂金矿（古代最早、最主要的黄金来源）</a></h3>
+<p>主成分：自然金（Au）</p>
+<p>砂金是原生金矿经风化、水流冲刷后，金粒在河床、溪流中沉积形成的。因为经过大自然的“分选”，砂金矿的纯度相对较高。</p>
+<ul>
+<li>金属成分：以自然金为主，常含银（形成金银合金，即银金矿），以及微量铜、铁、铂族元素。</li>
+<li>杂质成分：主要是石英、砂石、泥土等物理混杂的脉石，几乎不含硫化物。</li>
+<li>古代利用：因为杂质少，古人只需通过淘洗（重选法）就能得到粗金，再简单熔炼即可使用。这也是为什么史前至商周时期，金沙、三星堆等遗址能出现高纯度金器——他们用的是高品位砂金。</li>
+</ul>
+<h3 id="二岩金脉金矿古代中后期的重要来源"><a class="header" href="#二岩金脉金矿古代中后期的重要来源">二、岩金/脉金矿（古代中后期的重要来源）</a></h3>
+<p>主成分：石英（SiO₂）+ 自然金（Au） + 硫化物</p>
+<p>当砂金资源不足时，古人开始开采山体中的原生金矿。这类矿石成分复杂，提纯难度大。</p>
+<ul>
+<li>载体矿物（主成分）：石英脉。金以微细粒状、片状包裹在石英中，或填充在石英裂隙里。所以古人常说“金石相连”。</li>
+<li>金属矿物（主成分）：自然金，但常与以下硫化物共生：
+<ul>
+<li>黄铁矿（FeS₂）：古人称“愚人金”，是岩金矿最常见的伴生矿。</li>
+<li>黄铜矿（CuFeS₂）：含铜，是古代黄金偏红、需要“去铜”的原因。</li>
+<li>方铅矿（PbS）：含铅，正是灰吹法中用来捕集金银的关键介质。</li>
+<li>闪锌矿（ZnS）等。</li>
+</ul>
+</li>
+<li>有害杂质：银（Ag）、铜（Cu）、铁（Fe）、硫（S）。这些正是古代提纯技术（灰吹、汞齐、硼砂、矾硝）所要去除的目标。</li>
+</ul>
+<h3 id="三古代金矿的化学成分总结表"><a class="header" href="#三古代金矿的化学成分总结表">三、古代金矿的化学成分总结表</a></h3>
+<p>成分类型 | 具体元素/矿物 | 在矿石中的角色 | 对古代提纯的影响
+目标成分 | 金（Au） | 自然金，微细粒或片状 | 密度大，可用淘洗分离
+常见伴生成分 | 银（Ag） | 与金形成合金（银金矿） | 使金发白，需用灰吹、硼砂去银
+| 铜（Cu） | 黄铜矿等 | 使金发红，需用硼砂、硝石造渣
+| 铁（Fe） | 黄铁矿、褐铁矿 | 影响颜色，需焙烧（烧爆法）去硫后磁选或淘洗
+| 铅（Pb） | 方铅矿 | 灰吹法中作为捕集剂，氧化后吸走杂质
+| 硫（S） | 硫化物 | 焙烧时产生SO₂，需先“烧爆”去硫
+脉石成分 | 石英（SiO₂） | 主要载体岩石 | 硬度高，需破碎、磨矿后淘洗或熔炼
+| 泥土/砂石 | 风化产物 | 淘洗即可去除</p>
+<h3 id="四为什么古代提纯技术都针对这些成分"><a class="header" href="#四为什么古代提纯技术都针对这些成分">四、为什么古代提纯技术都针对这些成分？</a></h3>
+<p>回顾上一轮提到的技术，其原理正是对抗这些矿石成分：</p>
+<ul>
+<li>淘洗重选：利用金（密度19.3）与石英/砂石（密度2.6）的巨大差异。</li>
+<li>烧爆法：针对含硫铁矿，加热后硫氧化挥发，矿石崩裂，便于粉碎。</li>
+<li>灰吹法：利用铅（Pb）与金银形成合金，而铅氧化后被骨灰吸收，分离出金银。</li>
+<li>硼砂/硝石：作为助熔剂，与铜、铁等金属氧化物形成低密度炉渣，浮在金水表面。</li>
+<li>汞齐法：汞对金有极强亲和力，能选择性捕集微细金粒，与石英等分离。</li>
+</ul>
+<h3 id="五一个有趣的补充古代文献中的金矿"><a class="header" href="#五一个有趣的补充古代文献中的金矿">五、一个有趣的补充：古代文献中的“金矿”</a></h3>
+<p>古人并不懂现代矿物学，他们对金矿的描述很直观：</p>
+<ul>
+<li>“山石中所出”：指岩金，成分复杂，需“凿石取矿，锻冶而成”。</li>
+<li>“水沙中所出”：指砂金，成分简单，淘洗即得。</li>
+<li>“狗头金”：是自然界形成的特大块自然金，主成分就是金（常含10%-20%银），是古代可遇不可求的珍宝，无需提纯即可直接打造器物。</li>
+</ul>
+<p>一句话总结：古代金矿的主成分，从化学元素看就是金（Au），但从矿石角度看，早期砂金矿是“金+沙子”，后期岩金矿是“金+石英+硫化物（铁、铜、铅、银）”。正是这些伴生杂质，塑造了中国两千年的黄金提纯技术史。</p>
+<h2 id="试金石"><a class="header" href="#试金石">试金石</a></h2>
+<p>试金石检验黄金，是古代最经典、最普及的“无损检测”手段。它不需要复杂的化学试剂，仅凭一块石头和一双眼睛，就能判断黄金的大致成色。下面从石头成分、检验原理、操作经验三个层面详细说明。</p>
+<h3 id="一试金石是什么成分"><a class="header" href="#一试金石是什么成分">一、试金石是什么成分</a></h3>
+<p>试金石，顾名思义就是专门用来试金的石头。它并不是某一种特定的矿物，而是一类颜色深黑、质地极细腻、硬度适中的硅质岩石。</p>
+<p>主要成分：</p>
+<ul>
+<li>二氧化硅（SiO₂）：占绝对主体，属于隐晶质石英集合体。</li>
+<li>碳质或铁质浸染：含有极细的碳粒（如石墨）或铁的氧化物（如赤铁矿、磁铁矿），使其呈现深黑色或黑灰色。</li>
+</ul>
+<p>最常见的岩石类型：</p>
+<ul>
+<li>黑色碧玉岩（Black Jasper）：最理想的试金石，致密、细腻、颜色漆黑。</li>
+<li>黑色硅质板岩：层理细腻，硬度均匀。</li>
+<li>黑色燧石（Flint）：质地坚硬，但需挑选纹理极细的部分。</li>
+</ul>
+<p>为什么非得是这种石头？关键在三个物理特性：</p>
+<ol>
+<li>硬度适中（摩氏硬度约 6.5–7）：比黄金（硬度 2.5–3）硬得多，所以金可以在上面划出条痕；但又不能太硬（比如刚玉硬度9），否则会把金粒刮飞或嵌入石中，留不下连续的粉末线。</li>
+<li>质地极度细腻：放大看几乎无孔隙、无粗颗粒，这样划出来的金痕是连续、均匀的粉末条带，不会断断续续或被石头颗粒“吃”掉。</li>
+<li>颜色深黑：底色越黑，金黄色的条痕对比度越高，肉眼越容易分辨细微的颜色差异。</li>
+</ol>
+<p>古代对试金石的挑选很讲究，通常要到特定河滩或山涧去找“黑如漆、细如肤、硬如玉”的石头，打磨平整后使用。欧洲、中东、中国都有各自的优质试金石产地。</p>
+<h3 id="二检验黄金成色的原理"><a class="header" href="#二检验黄金成色的原理">二、检验黄金成色的原理</a></h3>
+<p>试金石法在矿物学上属于条痕比色法（Streak Test），但比普通矿物的条痕测试复杂得多——它比较的不是“矿物自身的颜色”，而是“金属粉末层的颜色”。</p>
+<p>核心原理：三个物理效应的叠加</p>
+<ol>
+<li>硬度差产生粉末条痕</li>
+</ol>
+<p>将待测金器在试金石上用力划动，由于石头比金硬，金的表面被刮下极细的金属粉末，这些粉末压实附着在石头的微孔和表面上，形成一条肉眼可见的金黄色条痕。</p>
+<ol start="2">
+<li>合金成分改变条痕颜色</li>
+</ol>
+<p>纯金是赤黄色。但古代黄金几乎都是金银铜的天然合金（或人为掺杂）：</p>
+<ul>
+<li>银（Ag）：颜色银白。银含量越高，条痕越偏青白、淡黄。</li>
+<li>铜（Cu）：颜色紫红。铜含量越高，条痕越偏紫红、暗红。</li>
+<li>黄金的成色（纯度）与条痕颜色之间，存在非常规律的对应关系：纯度越低（杂色金属越多），颜色偏离赤黄色越远。</li>
+</ul>
+<ol start="3">
+<li>比对标准“对牌”进行目视比色</li>
+</ol>
+<p>光看一条痕的颜色，人眼无法量化“这是多少成色”。所以古人准备了一套已知成色的标准金牌，称为“对牌”或“金牌”（例如：八成金、九成金、九成五……）。</p>
+<p>操作时，把待测金和对牌并排在同一块试金石上划出条痕，放在自然光下对比颜色，哪条痕颜色最接近，成色就是多少。</p>
+<p>这就像油漆工调色时，把样板色卡和墙面涂料并排对比——原理完全一样。</p>
+<h3 id="三古代的经验口诀七青八黄九紫十赤"><a class="header" href="#三古代的经验口诀七青八黄九紫十赤">三、古代的经验口诀：“七青八黄九紫十赤”</a></h3>
+<p>这是中国古代金银匠代代相传的比色经验，把条痕颜色与成色直接挂钩：</p>
+<p>成色（约） | 对应现代K金 | 条痕颜色 | 原因
+七成 | ~17–18K | 青黄色 | 含银多，颜色发白青
+八成 | ~20K | 正黄色 | 金银铜比例较均衡，接近足色
+九成 | ~21–22K | 紫红色 | 含铜较多，偏红紫
+十成（足赤） | 24K | 赤黄色 | 纯金本色，浓烈深赤</p>
+<p>⚠️ 注意：这个口诀是经验性的，不是绝对标准。因为：</p>
+<ul>
+<li>银和铜的含量比例不同，颜色变化不是线性的；</li>
+<li>自然光、阴天、灯光下看色会有偏差；</li>
+<li>金匠的手法（划痕的轻重、粉末的厚薄）也会影响颜色深浅。所以真正专业的金铺，一定是对牌+口诀+手感三者结合。</li>
+</ul>
+<h3 id="四试金石法的完整操作流程古代金铺版"><a class="header" href="#四试金石法的完整操作流程古代金铺版">四、试金石法的完整操作流程（古代金铺版）</a></h3>
+<ol>
+<li>磨平石头：用细砂岩把试金石表面打磨光滑，确保无旧痕。</li>
+<li>清洁金器：用酸（如矾硝水）或火烧去掉金器表面的污垢、氧化物。</li>
+<li>划痕：金器在石头上划出约1–2厘米长的条痕，力度均匀，使粉末层厚度适中。</li>
+<li>对牌比对：取出与预估成色接近的几块标准对牌，在同一石头上并排划痕。</li>
+<li>判色：在日光下（忌直射、忌阴影）观察哪条对牌痕与金痕颜色一致。</li>
+<li>辅助验证（可选）：用牙咬（纯金软，留牙印）、听声（纯金掷地声音闷哑，含铜则清脆）、掂重（密度大则坠手）。</li>
+</ol>
+<h3 id="五科学局限性与现代视角"><a class="header" href="#五科学局限性与现代视角">五、科学局限性与现代视角</a></h3>
+<p>试金石法的优点：</p>
+<ul>
+<li>近乎无损：只刮下微量粉末，金器本身不受损。</li>
+<li>快速直观：熟练匠人几秒就能报出成色。</li>
+<li>成本低：一块石头+一套对牌，走遍天下。</li>
+</ul>
+<p>局限性：</p>
+<ul>
+<li>主观性强：依赖人眼和经验，不同人判色可能有半成到一成的误差。</li>
+<li>无法测铂族金属：如果黄金里掺了铱、钌、锇等（密度与金接近、颜色也相近），条痕颜色变化不大，但硬度会明显升高——这时试金石划上去会感觉“打滑”或根本划不出痕，古人据此能察觉“此金有假”，但说不出具体掺了什么。</li>
+<li>表面镀金/包金难辨：只在表面划，可能划穿薄镀层露出内部贱金属，需要结合火烧（真金不怕火炼，镀金会起皮）来综合判断。</li>
+</ul>
+<p>现代替代：</p>
+<p>如今试金石已被X射线荧光光谱（XRF）、火试金法、密度法取代，精度可达0.01%。但在民间典当、古玩行、部分传统金匠中，试金石依然是快速初筛的保留技能——它背后的“条痕比色”原理，和现代光谱仪的“颜色/波长分析”在逻辑上其实是一脉相承的。</p>
+<h3 id="六一句话总结"><a class="header" href="#六一句话总结">六、一句话总结</a></h3>
+<p>试金石是一块黑色细腻的硅质岩，利用硬度差刮下金粉条痕，通过比对标准对牌的条痕颜色来判断成色。它是中国古代“火法炼金—提纯—质检”闭环中的最后一环，也是经验科学在金属检测上的巅峰体现。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history/fa-bi-gai-ge.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/monetaria-moneta.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history/fa-bi-gai-ge.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/monetaria-moneta.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>讲解提纲 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="讲解提纲"><a class="header" href="#讲解提纲">讲解提纲</a></h1>
+<h2 id="银行旧址"><a class="header" href="#银行旧址">银行旧址</a></h2>
+<ul>
+<li>中央银行北平分行旧址：中央银行是民国政府国家银行，1931年在北平设立分行，建筑入口为半圆外廊，门口两侧有两只石狮子。</li>
+<li>北洋保商银行旧址：原为清理天津商人欠洋商款项，维持天津华洋商务而设，故名“保商”。1921年改组为普通商业银行后，建造了这座大楼。</li>
+<li>大陆银行旧址：由中国人设计的欧式建筑，是清末民初中国的民营银行之一。建于1924年，由当时首屈一指的建筑事务所-基泰工程司主持设计和施工。《北京近代建筑史》将其称之为坐落于北京“中国建筑师设计的西方古典建筑中质量最高的一座”。还曾是中国农业银行和中国银行的总部大楼。</li>
+</ul>
+<h2 id="中国货币通史陈列"><a class="header" href="#中国货币通史陈列">中国货币通史陈列</a></h2>
+<ul>
+<li>“刺”字空首布</li>
+<li>中山靖王刘胜墓</li>
+<li>唐代纪年墓</li>
+<li>开元通宝钱，钱文纪重改为宝文钱</li>
+<li>会昌开元背纪地</li>
+<li>淳化元宝</li>
+<li>摇钱树、扑满、钱剑</li>
+<li>山西商墓的保德铜贝、出土于河北中山国遗址的金贝和银贝、河南发现的春秋时期的银布币、西周的“半圜”钱、宋代九叠篆“皇宋通宝”、明代中书省发行的“大明通行宝钞”、明代五十两金锭</li>
+<li>六铢和二十四铢的汉法二体钱、突骑施钱和回鹘钱、察合台金币、西夏“元德重宝”</li>
+<li>金币券</li>
+<li>一百年上涨十倍，复合增长率约为2.33%</li>
+<li>袁大头的设计过程</li>
+</ul>
+<h3 id="永通万国"><a class="header" href="#永通万国">永通万国</a></h3>
+<ul>
+<li>永通万国是北周静帝宇文阐于大象元年（579年）铸造的虚值货币，位列“北周三品”之首。</li>
+<li>以青铜为主材，采用玉箸篆书体铸“永通万国”四字。</li>
+<li>北魏太武帝拓跋焘曾以“万国宗主”自诩，北周亦以“万国之首”自居。</li>
+<li>据《周书·静帝纪》记载，初铸时“以一当十”（或“以一当百”），与五行大布钱并行流通。</li>
+<li>北周三品，北周三大美泉：永通万国、布泉、五行大布</li>
+</ul>
+<h3 id="贝币"><a class="header" href="#贝币">贝币</a></h3>
+<ul>
+<li>用作货贝的海贝是一种生长于热带亚热带浅海的贝类。</li>
+<li>科技考古研究支持夏代已经使用贝币，商周时期广泛流通。</li>
+<li>商代铜贝被确认为世界最早的金属货币。</li>
+<li>贝币以“朋”为计量单位，五贝为一串，两串为一朋。</li>
+<li>云南部分地区沿用至明代，并与东南亚、南亚贸易网络形成经济互动，这条海贝流通的商道被称为“贝币之路”。</li>
+<li>亢鼎‌是一件西周早期的青铜器，现藏于‌上海博物馆‌，其铭文记录了西周时期一次用贝币购买玉器的真实交易 。‌‌</li>
+</ul>
+<h3 id="青铜称量货币"><a class="header" href="#青铜称量货币">青铜称量货币</a></h3>
+<ul>
+<li>曶鼎，西周恭王时期青铜器，又名舀鼎，原器已佚仅存铭文拓本。</li>
+<li>西周懿王或孝王元年六月，周王于穆王大室命曶司卜职，井叔赐赤金；同年四月曶控告效父违约交易；饥荒年匡众抢禾经东宫判决赔偿事件。</li>
+<li>【用徵，涎赎兹五夫，用百寽。】一名奴隶值铜20寽，约合25公斤。</li>
+</ul>
+<h3 id="布币形制的历史沿革"><a class="header" href="#布币形制的历史沿革">布币形制的历史沿革</a></h3>
+<h3 id="视金一朱铜钱牌"><a class="header" href="#视金一朱铜钱牌">视金一朱铜钱牌</a></h3>
+<ul>
+<li>视金一朱铜钱牌是战国时期楚国的一种青铜货币，呈长方形版状，面、背四周边缘有郭，饰有勾连形卷云纹，中央有两道凸脊同心圆圈，圈内铸有“视金一朱”四字铭文。</li>
+<li>铭文意为可凭此牌兑换黄金，或视同黄金一铢，其本身价值与一铢黄金大致相当。</li>
+<li>钱牌重量在35至39.9克之间，其价值与一铢黄金大致相当，是一种可用于兑换黄金的凭证。</li>
+<li>钱牌铭文首字曾长期被释读为“良”，其真实含义成为先秦货币研究中的疑难问题。</li>
+<li>黄锡全教授根据新出土的郭店楚简中“视”与“见”字的字形区别，提出首字应释读为“视”，义为“比”、“同”。</li>
+</ul>
+<h3 id="蚁鼻钱"><a class="header" href="#蚁鼻钱">蚁鼻钱</a></h3>
+<ul>
+<li>西周至春秋铜贝逐渐普及，楚国所铸“蚁鼻钱”“鬼脸钱”成为典型代表。</li>
+<li>宋代洪遵《泉志》：“此钱上狭下广。背平，面凸，有文如刻镂又类字，也谓之蚁鼻钱。”</li>
+</ul>
+<h3 id="古代的黄金冶炼"><a class="header" href="#古代的黄金冶炼">古代的黄金冶炼</a></h3>
+<h3 id="中国历史上的货币政策争论"><a class="header" href="#中国历史上的货币政策争论">中国历史上的货币政策争论</a></h3>
+<h3 id="五铢钱"><a class="header" href="#五铢钱">五铢钱</a></h3>
+<ul>
+<li>1铢，约0.65克。1两24铢，1斤16两，1钧30斤，1石4钧。</li>
+<li>三官五铢钱，上林苑所属三个官署：钟官、技巧、六厩</li>
+</ul>
+<h3 id="新莽大布黄千"><a class="header" href="#新莽大布黄千">新莽大布黄千</a></h3>
+<h3 id="打制货币"><a class="header" href="#打制货币">打制货币</a></h3>
+<h3 id="和田马钱"><a class="header" href="#和田马钱">和田马钱</a></h3>
+<ul>
+<li>和田马钱，即汉佉二体钱，是公元1-3世纪古代西域莎车、于阗等国铸造的打制货币，也是目前所知新疆地区最早的自造货币。</li>
+<li>圆形无孔，红铜质地，正面中央有徽记和篆书汉字“铜钱重廿四铢”或“六铢钱”，背面为马形或骆驼形图案及佉卢文，采用希腊打压法铸造，融合中原铢两制与希腊铸币工艺，是丝绸之路南道的重要流通货币，现存世数量极少。</li>
+<li>在形制上，大、小马钱分别以希腊货币四德拉克马、德拉克马为祖形，仿照贵霜钱币打压法制成，是世界上最早使用两种文字制造的钱币。</li>
+</ul>
+<h3 id="型砂"><a class="header" href="#型砂">型砂</a></h3>
+<h3 id="钱神论"><a class="header" href="#钱神论">《钱神论》</a></h3>
+<h3 id="沈郎五铢钱"><a class="header" href="#沈郎五铢钱">沈郎五铢钱</a></h3>
+<h3 id="唐代银铤"><a class="header" href="#唐代银铤">唐代银铤</a></h3>
+<ul>
+<li>唐代银铤形制多样，主要有笏形铤、长条铤、饼形铤、平头束腰薄铤、平头束腰长铤和船形铤等。</li>
+<li>白银在唐代被用于货币的大额支付，而银铤则主要用于税收和进奉，是白银确切具有货币属性的重要历史阶段。</li>
+<li>表面錾刻“专知诸道铸钱使司空兼右相杨国忠进”铭文。</li>
+<li>银铤采用五十两笏形制式，铭文记录其为官员进奉的税银，印证天宝年间赋税折银上交制度。</li>
+<li>唐玄宗天宝后期，杨国忠通过增设使职强化中央财权。</li>
+<li>银铤实物印证了《新唐书》记载的“诸道税赋皆折为轻货，输于京师”制度。</li>
+<li>唐代银铤多集中于唐代都城长安、洛阳的宫城遗址附近，可能与“安史之乱”等历史事件导致的仓促窖藏有关。</li>
+</ul>
+<h3 id="船形银铤"><a class="header" href="#船形银铤">船形银铤</a></h3>
+<h3 id="小平折一折二折五折十"><a class="header" href="#小平折一折二折五折十">小平、折一、折二、折五、折十</a></h3>
+<h3 id="对钱"><a class="header" href="#对钱">对钱</a></h3>
+<ul>
+<li>对钱又称“对子钱”，日本泉谱称“符合泉”。</li>
+<li>钱文相同但书体不同、形制完全一致的成对钱币，又称符合泉。</li>
+<li>对钱最早出现于五代十国的南唐，宋代最流行，元以后绝迹。</li>
+<li>五代十国南唐的“开元通宝”（隶篆配对）是中国最早的对钱之一，以“唐国通宝”篆楷配对为早期代表。</li>
+<li>北宋徽宗时期，对钱的艺术达到了一个高峰，如政和通宝等。</li>
+<li>著名文学家苏轼为‘元丰通宝’对钱书写篆书体钱文，史学家司马光为‘元祐通宝’对钱书写了篆书体钱文。</li>
+<li>日本泉界研究推动了该分类体系的建立。</li>
+</ul>
+<h3 id="楮chǔ币"><a class="header" href="#楮chǔ币">楮(chǔ)币</a></h3>
+<ul>
+<li>北宋时期四川成都出现的世界上第一张纸币“交子”即选用楮树皮为原料印制，故亦被称为“楮币”。</li>
+<li>宋﹑金﹑元时发行的“会子”﹑“宝券”等纸币。因其多用楮皮纸制成，故名，后亦泛指一般的纸币；</li>
+<li>公元1024年（北宋天圣元年/二年），朝廷在成都设立“益州交子务”，将“交子”发行权收归官营，发行“官交子”，标志着世界上最早的官方法定纸币诞生。</li>
+<li>南宋绍兴三十年（1160年）或三十一年（1161年），朝廷设立“行在会子务”，发行全国流通的纸币“会子”（亦称“便钱会子”）。</li>
+</ul>
+<h3 id="承安宝货"><a class="header" href="#承安宝货">承安宝货</a></h3>
+<h3 id="元宝"><a class="header" href="#元宝">元宝</a></h3>
+<ul>
+<li>唐代已有“开通元宝”的民间读法</li>
+<li>元宝名称正式用于指代金银货币始于元代，意为“元朝之宝”，黄金制称金元宝，白银制称银元宝。</li>
+<li>元代至元三年官方将五十两银锭定名为“元宝”，确立其标准制式。</li>
+<li>古代真正的元宝，中间部分并没有凸出来的形状，颜色也不是金黄色而是银色。</li>
+</ul>
+<h3 id="明坤舆万国全图"><a class="header" href="#明坤舆万国全图">《明坤舆万国全图》</a></h3>
+<ul>
+<li>《明坤舆万国全图》是意大利传教士利玛窦和明朝官员李之藻于明代万历三十六年（1608年）宫廷摹绘的世界地图，纵1.92米，横3.8米，现藏于南京博物院。</li>
+<li>南京博物院所藏《坤舆万国全图》为明万历三十六年（1608年）宫廷中的彩色摹绘本，是国内现存最早的、也是唯一的一幅据刻本摹绘的世界地图。</li>
+<li>2017年，上海交通大学出版社出版了李兆良的《明代中国与世界：坤舆万国全图解密》，认为《坤舆万国全图》是郑和时代中国人绘制的世界地图。</li>
+</ul>
+<h3 id="一条鞭法的货币方案"><a class="header" href="#一条鞭法的货币方案">一条鞭法的货币方案</a></h3>
+<h3 id="西王赏功"><a class="header" href="#西王赏功">西王赏功</a></h3>
+<h3 id="雕母母钱和样钱"><a class="header" href="#雕母母钱和样钱">雕母、母钱和样钱</a></h3>
+<ul>
+<li>铁母</li>
+<li>金口未开</li>
+</ul>
+<h3 id="新疆红钱"><a class="header" href="#新疆红钱">新疆红钱</a></h3>
+<ul>
+<li>新疆红钱是清乾隆二十五年（1760年）起在新疆南部铸造的红铜货币。</li>
+<li>清政府统一新疆后，为取代准噶尔汗国的普尔钱，首设叶尔羌局铸造圆形方孔“乾隆通宝”。</li>
+<li>最基本的特点是“红”，其含纯铜量在90%左右，采用新疆当地开采的红铜铸造，色泽柔和、红润自然。</li>
+<li>中国钱币史中唯一铸有汉文、满文、维吾尔文三种文字的钱币，体现“因俗施治”策略。</li>
+</ul>
+<h3 id="钞票"><a class="header" href="#钞票">钞票</a></h3>
+<ul>
+<li>由户部发行的纸质货币，旨在应对太平天国运动及第一次鸦片战争赔款等导致的财政危机。</li>
+<li>大清宝钞以制钱为单位，面值从二百五十文至百千文不等；</li>
+<li>户部官票则以银两为单位，面额有一两、三两、五两、十两及五十两等。</li>
+<li>户部右侍郎兼管钱法堂事务的王茂荫，反对铸造低值大钱，提议将已发行的不兑现户部官票与大清宝钞改为有准备金、可兑现的钞票，并主张控制发行总额以维持信用。</li>
+<li>咸丰皇帝严厉斥责：“专为商人指使”。</li>
+<li>王茂荫的货币思想引起后世关注，马克思在《资本论》第一卷的一个脚注中曾提及他的主张。</li>
+</ul>
+<h3 id="端方"><a class="header" href="#端方">端方</a></h3>
+<h3 id="张之洞"><a class="header" href="#张之洞">张之洞</a></h3>
+<h3 id="海趣"><a class="header" href="#海趣">海趣</a></h3>
+<h3 id="摄政王载沣"><a class="header" href="#摄政王载沣">摄政王载沣</a></h3>
+<h3 id="1918年11月太和殿阅兵"><a class="header" href="#1918年11月太和殿阅兵">1918年11月太和殿阅兵</a></h3>
+<h3 id="锻压和冲压"><a class="header" href="#锻压和冲压">锻压和冲压</a></h3>
+<h3 id="废两改元"><a class="header" href="#废两改元">废两改元</a></h3>
+<h3 id="国民政府币制改革"><a class="header" href="#国民政府币制改革">国民政府币制改革</a></h3>
+<h3 id="中央苏区19321934完整账面发多少准备多少回笼多少"><a class="header" href="#中央苏区19321934完整账面发多少准备多少回笼多少">中央苏区1932–1934完整账面（发多少、准备多少、回笼多少）</a></h3>
+<h3 id="遵义红军票逐日流程"><a class="header" href="#遵义红军票逐日流程">遵义红军票逐日流程</a></h3>
+<h3 id="红军根据地和长征时期的货币政策"><a class="header" href="#红军根据地和长征时期的货币政策">红军根据地和长征时期的货币政策</a></h3>
+<h3 id="根据地应对法币的政策"><a class="header" href="#根据地应对法币的政策">根据地应对法币的政策</a></h3>
+<h2 id="纪念纸币诞生千年专题展"><a class="header" href="#纪念纸币诞生千年专题展"><a href="./banknote.html">纪念纸币诞生千年专题展</a></a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../note/banknote.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../note/banknote.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

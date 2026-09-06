@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北周永通万国 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history/yong-tong-wan-guo-bei-zhou.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北周永通万国"><a class="header" href="#北周永通万国">北周永通万国</a></h1>
+<p>北周“永通万国”为北周静帝宇文阐于大象元年（公元579年）铸造的货币，初以一当十，与“五行大布”并行。钱文“永通”意为永远通行，“万国”意为天下万国可用，其名源于北魏太武帝拓跋焘曾以“万国宗主”自诩，北周亦以“万国之首”自居。该钱与“布泉”、“五行大布”合称“北周三品”或“北周三大美泉”。钱文采用玉箸篆体，笔法华美。钱币直径与重量存在差异，直径多在24.5毫米至30.2毫米之间，初铸者较大。北周发行此钱旨在超越此前流通的“五铢钱”，并改变货币文字受年号局限的弊端，是一种旨在永远流通于众多国家之间的“世界货币”。该钱币形制继承秦汉圆形方孔传统，外圆内方体现“天圆地方”宇宙观与皇权威仪。部分钱币背面铸有北斗七星、宝剑和龟蛇等图案，具有道教色彩，这类钱被称为“压胜钱”。永通万国钱币文字精美，工艺精湛，在南北朝乃至世界铸币工艺史上达到新的高度。该钱币多出土于陕西、河南和甘肃等地，2009年河南禹州曾一次出土3000余枚。现收藏于中国钱币博物馆，固原博物馆等地亦有馆藏，并对其进行科学保护与修复。</p>
+<h2 id="文物特征"><a class="header" href="#文物特征">文物特征</a></h2>
+<p>北周“永通万国”钱币铸造于北周静帝宇文阐大象元年（公元579年）。钱文“永通万国”采用玉箸篆。笔法华美，字廓深峻，布局和谐，制作精致，轮廓俊俏，其篆法绝工。在六朝钱币中较为著名，与布泉、五行大布并称“北周三品”或“北周三美泉”。
+该钱币初铸时钱径约30毫米、重6克左右。后因国力衰弱，钱币越铸越小，直径逐渐减至25毫米左右。钱币直径的差异从24.5毫米到30.2毫米不等，是其铸造时间先后和版别区分的重要标志。</p>
+<p>“永通万国”版式丰富。除常见的流通钱外，还有合背钱以及各类厌胜钱（又称压胜钱）。厌胜钱背面常有特殊纹饰，如北斗七星、宝剑、龟、蛇等图案，道教色彩浓厚，其中龟蛇纹饰暗喻玄武大帝。其他版式还包括背将军、背十二生肖、背月、背双剑、背五男二女文字、背鹿纹等多种。传世品中还有阔缘大钱，据考证为后世所翻铸。</p>
+<p>该钱币多出土于陕西、河南和甘肃等地区，河南禹州曾一次性出土3000余枚。因存世量不多而较为珍贵。出土钱币常带有红斑绿锈，深绿色的钱体上玉箸篆文字笔画清晰如刻。</p>
+<h2 id="流传历史"><a class="header" href="#流传历史">流传历史</a></h2>
+<p>北周静帝宇文阐于大象元年（公元579年）始铸“永通万国”钱，旨在超越此前广为流传的“五铢钱”，改变货币文字受国家年号所局限的弊端，发行永远流通于众多国家之间的“世界货币”。</p>
+<p>据《周书·静帝纪》记载，该钱初铸时“以一当十”（或“以一当百”），与五行大布钱并行流通。</p>
+<p>因虚值过高，民不乐用，其流通时间不长；北周灭亡后停止铸造，后世用其名铸造民俗钱币（钱文钱）。</p>
+<p>该钱币初铸时直径约30毫米，后期铸造的钱币直径减小至25毫米左右，这一形制变化反映了北周国力的衰弱。</p>
+<h2 id="出土环境"><a class="header" href="#出土环境">出土环境</a></h2>
+<p>永通万国古币多出土于陕西、河南和甘肃地区。2009年河南禹州市南环路一次出土永通万国钱币3000余枚，五行大布500余枚，钱币直径在24.5—30.2毫米之间。</p>
+<h2 id="制作技术"><a class="header" href="#制作技术">制作技术</a></h2>
+<p>币面文写法采用玉箸篆，字体笔画粗壮，犹如玉箸一般的线条，豪放之中又似乎带着一点柔美，这种风格在钱币中别具一格。</p>
+<p>其制作精致，轮廓俊俏，字廓深峻，形体厚重，钱文和铸工均属精湛。</p>
+<p>永通万国钱币，连同布泉、五行大布，其铸造工艺不仅在南北朝、乃至在我国及世界铸币工艺史上，都达到了一个崭新的高度，被认为是六朝时期钱币工艺的代表之一。</p>
+<p>这类钱币按照直径分，从25毫米到30毫米有余，甚至有初期直径接近32毫米的大钱。直径的不同是这枚钱币铸造时间差异的标志，初期铸造的钱币较大，后期因国力衰弱，钱币越铸越小。</p>
+<h2 id="文物鉴赏"><a class="header" href="#文物鉴赏">文物鉴赏</a></h2>
+<p>北周“永通万国”铸造于北周静帝宇文阐大象元年（公元579年）。钱文“永通万国”采用玉箸篆体，制作精致，轮廓俊俏，字廓深峻，形体厚重。</p>
+<p>该钱币笔法华美，篆法绝工，在六朝钱币中具有重要地位，也是魏晋以来具有代表性的钱币之一，其篆法华美，工艺精湛。
+“永通万国”与“布泉”、“五行大布”合称为“北周三品”或“北周三美泉”，且为三品之首。永通万国的出现，使北周三品不仅在南北朝、乃至在我国以及世界铸币工艺史上，达到一个新的高度。</p>
+<h2 id="文化寓意"><a class="header" href="#文化寓意">文化寓意</a></h2>
+<p>钱文“永通”意为永远通行，“万国”示天下万国可用。部分“永通万国”钱作为压胜钱使用，背面铸有北斗七星、宝剑、龟、蛇等图案，道教色彩浓厚。北斗七星在古代被视为天帝的象征或御辇，龟蛇合体代表北方玄武神祇，这些纹饰寓意神灵护佑与辟邪祈福。“万国”一词的选用，源于北魏太武帝拓跋焘曾以“万国宗主”自诩，北周等政权也以“万国之首”自居，反映了深受中原文化影响的鲜卑贵族以正统中华传承者自居的观念。</p>
+<h2 id="重要展览"><a class="header" href="#重要展览">重要展览</a></h2>
+<p>北周“永通万国”钱币现收藏于中国钱币博物馆。固原博物馆曾从民间征集到12枚“永通万国”钱币，并对其进行了科学保护性处理。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history/yong-tong-wan-guo.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history/kang-ding.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history/yong-tong-wan-guo.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history/kang-ding.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

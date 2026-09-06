@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>对钱 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/history/dui-qian.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="对钱"><a class="header" href="#对钱">对钱</a></h1>
+<p>对钱是中国古代钱币的特殊形制，指钱文相同但书体不同、形制完全一致的成对钱币，又称符合泉。其特点是不同书体（篆书、隶书、楷书、行书等）通过篆书与楷书、隶书与行书等多种组合配对铸造，且在钱体尺寸、穿孔规格、轮廓阔窄等细节上保持严格对称。该形式始于五代十国，南唐“开元通宝”（隶篆配对）是中国最早的对钱之一，以“唐国通宝”篆楷配对为早期代表，其对称设计体现了中国传统美学中追求平衡和谐的审美理念。</p>
+<p>对钱铸造制度始于五代十国，北宋天圣元年（1023年）至南宋淳熙七年（1180年）间持续发展逾150年。北宋仁宗时期以篆书配真书为主流，徽宗政和年间转为篆隶组合，南宋初年延续该制度。淳熙七年因推行纪年钱制度，对钱在铜钱领域消失，转向铁钱领域。这种钱币形式不仅具有流通功能，更成为展现书法艺术与铸造工艺双重美感的独特载体。日本泉界研究推动了该分类体系的建立。</p>
+<h2 id="历史起源"><a class="header" href="#历史起源">历史起源</a></h2>
+<p>对钱最早出现于五代十国的南唐，宋代最流行，元以后绝迹。从北宋天圣元年开始，直到南宋淳熙七年停铸，铸行长达150多年，共出现过十几种。南宋淳熙七年（1180年）因推行纪年钱制度，对钱在铜钱领域消失，转向铁钱领域。南唐时有“开元通宝”篆隶成对、“唐国通宝”篆楷对称、“永通泉货”篆隶对称等。其中，南唐‘开元通宝’被认为是最早的对钱之一，包含隶书和篆书两种书体，为宋代对钱的盛行奠定了基础。到了北宋时期，除了天圣年以前的宋元、太平、天禧、祥符、景德、咸平钱和天圣年以后的康定、庆历、崇宁、大观外，可以说无钱不成对。而且形制非常讲究，也非常严格。比如至道元宝行草成对，绍圣元宝行篆成对。宋徽宗时更是对钱集大成时期，重和、政和、宣和都有多种对钱相匹配，其质量与书法艺术成就受到后世重视。</p>
+<p>日本学者之所以能深入研究对钱，是由于日本靠中国流入的部分古钱进行研究，多属于北宋钱，经过几代人的收藏、研究、比较异同、细致观察，所以日本学者先行一步，对对钱有颇深的研究。国内钱币界的有识之士正埋头工作，以待有一天能够赶上日本，为对钱的研究作出贡献。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<p>对钱制度可追溯至五代十国时期的南唐。南唐元宗李璟在位期间所铸“开元通宝”，开创了以隶书和篆书两种不同书体配对铸行同一年号钱的先河，被视为中国最早的对钱（亦称“对子钱”）。其篆书钱文相传为徐铉所书，字体精美。这种隶篆成对的铸币风格为宋代对钱制度的盛行奠定了基础。</p>
+<p>对钱铸造制度始于五代十国，北宋天圣元年（1023年）至南宋淳熙七年（1180年）间持续发展逾150年。北宋仁宗时期以篆书配真书为主流，徽宗政和年间转为篆隶组合，南宋初年延续该制度。淳熙七年因推行纪年钱制度，对钱在铜钱领域消失，转向铁钱领域。</p>
+<h2 id="基本特征"><a class="header" href="#基本特征">基本特征</a></h2>
+<p>对钱又称“对子钱”，日本泉谱称“符合泉”。对钱有三个主要特征：一是两枚钱币钱文相同；二是通常使用两种或几种不同书体配对，其中一枚多为篆书钱文，可与另一枚异体文（真、草、行、隶等）配为对子；三是除钱文书体不同外，两枚钱币币值相同，形体对等，即钱形大小、钱身厚薄、穿孔大小、轮廓阔狭、钱文位置、字体大小、铜质等各个方面都完全一致，可以成双配对。对钱最早自南唐“开元通宝”始，为一篆一隶配对。</p>
+<h2 id="应用"><a class="header" href="#应用">应用</a></h2>
+<p>对钱除行使货币职能外，其本身也是书法艺术的重要载体，成为展现书法艺术与铸造工艺双重美感的独特载体。例如，南唐“开元通宝”对钱中的篆书钱文，相传为徐铉所书，字体纤细齐整，方中见圆，对后世的玉箸篆和铁线篆产生了一定影响。北宋时期形成对钱制作高潮，如天圣、明道、元丰、熙宁、政和、宣和等年号均铸造有大量对钱，其不同书体（如篆书与真、草、行、隶等）的配对，成为后世钱币收藏与书法艺术研究的重要对象。</p>
+<h2 id="影响"><a class="header" href="#影响">影响</a></h2>
+<p>南唐篆书“开元通宝”据传为徐铉所书，字体纤细齐整，方中见圆，对后世的玉箸篆和铁线篆书体产生了一定的影响；南唐首创的隶、篆成对铸币风格，为宋代“对子钱”的盛行与蔚为大观奠定了基础。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>日本泉界研究推动了该分类体系的建立，对钱在日本泉谱中被称为“符合泉”，日本《符合泉志》列出千种以上。</p>
+<h2 id="制作标准"><a class="header" href="#制作标准">制作标准</a></h2>
+<p>即低标准对钱和高标准对钱的观点：</p>
+<p>第一，不同时期的对钱，其标准和要求是不同的。南唐的开元通宝和唐国通宝，都有篆书体、隶书体两种钱文，两种不同书体的钱，却具有大致相同的制作特征，主要标志是阔缘小字，这是中国最早出现的对钱。当时，对钱刚刚问世，无先例可寻，无章法可依，所以对这一时期的对钱，不可能也不必要去过于挑剔。</p>
+<p>西夏后期，受两宋对钱的影响，乾、天庆、到光定年间的铸钱也出现了对钱。这是对钱的尾声，却也有新的创举，不仅有汉文不同书体的对钱，如乾祐行书、真书，光定篆书、真书，而且出现了汉文和西夏文的对钱。乾祐以前，如福圣、大安、贞观，只铸西夏文钱，文字笔画简朴，书写比较随意，乾祐以后，包括乾祐、天庆，既有西夏文钱，同时也铸汉文钱，此时的西夏钱文书写方整规矩，制作严谨精美，俨然是有对钱的风韵。</p>
+<p>但它们和两宋对钱相比，不仅数量不可同日而语，在制作上也不是那么严丝合缝，这又是西夏对钱的特色。与此相对而言，两宋对钱就要复杂得多，数量众多，版别繁杂，层出不穷。北宋仁宗天圣以后，盛行对钱，成为“制度”，宋时又兴各地铸钱，钱监林立，不同地区，不同钱监，不同铸期的钱币，制作各异，再加上制作者刻意追求对称的完美，因此对于这个时期的对钱要求势必从严，也就是所谓高标准概念的对钱，除钱文书体之外，还必须考虑文字制作等各方面的因素。</p>
+<p>第二，根据学术上的需要，对于对钱的标准和规范要求，也可以作科学的分析，可以由浅入深，由宽及严，制订不同层次的标准。譬如对于初入门的人，只要掌握对钱的一般知识，同一种年号钱，两种书体的钱文，即可以配对，称之谓对钱。当然，这是低标准的对钱。对于学者、古钱收藏家，或者博物馆的钱币收藏来说，这样的要求显然是不够的，那么，不仅要考虑钱文，考虑时代特征，而且要寻找它们的区域特征，制作特征，进而探索不同版别所具有的不同的文物价值，哪些是常见的普通品，哪些是珍贵的稀见品。这样对于对钱的标准就高了，要求就严了。</p>
+<p>对于从事专门研究的学者来说，可能考虑学术上的要求会更多一些，譬如同一钱监铸造的同类对钱，早、中、晚期的制作各有何特征？有什么演变的轨迹可寻？由此可以探讨这个钱监的兴衰历史，铸钱历史。不同钱监铸造的同类对钱，它们之间又有哪些共同之处？哪些不同之处？除版式区别外，原材料，合金成份有哪些区别？由此可以探讨其金属用料的来源，矿产的出处和矿料的性能。譬如有一种宣和短宝对钱，钱体常泛铁锈，杂质铁的含量较高，被认为是江西饶赣监的铸钱。有的对钱，不仅文字轮廓，气息神似，而且同样错范，铸成后一起落土，一样的坑口，一样的锈色，可谓天衣无缝，这不仅是一种天然的艺术杰作，而且对研究铸造工艺、材质和锈蚀成因有重要的参考价值。</p>
+<h2 id="分类"><a class="header" href="#分类">分类</a></h2>
+<p>清朝乾隆嘉庆年间，约十八世纪下半叶至十九世纪初，翁树培在《古泉汇考》中专门记录了关于古钱版别研究的心得体会，其中也包括了对于对钱研究的认识。《古泉汇考》是翁树培的著作，也是那个时代研究成果的一个代表。后来，日本学者对于对钱的研究用力甚多，相继编纂出版了《符合泉志》、《古泉大全·丙集》、《昭和泉谱》、《新订北宋符合泉志》等研究宋钱版别的著作。前辈学者对于对钱的分类，是通过钱币制作的对比分析，寻找出一、二个明显区别于其它同类钱币的主要特点，予以定名，并以此作为标准，区别鉴定的。对钱制作特征的区别鉴定，大致可以从四个方面着手：</p>
+<h3 id="大小轻重"><a class="header" href="#大小轻重">大小轻重</a></h3>
+<p>一是钱体的大小轻重。如：小平大样，小平小样；折二广穿，折二狭穿；厚肉，薄肉等等。</p>
+<h3 id="制作特征"><a class="header" href="#制作特征">制作特征</a></h3>
+<p>二是钱体的制作特征。如：阔缘，中缘，狭缘，背阔缘；肥郭，细郭，正郭，决郭，阴郭，背肥郭等等。</p>
+<h3 id="书写特点"><a class="header" href="#书写特点">书写特点</a></h3>
+<p>三是钱文的书写特点。如：大字，中字，小字，长字，短字，纤字，大头通，广通，隶通；平头元，尖头元，肥元，狭元；横点宝，方贝宝，圆贝宝，隶宝，长宝；政和钱的文政，抱正，长尾；宣和钱的圆冠，长冠，巨冠等等。</p>
+<h3 id="位置布局"><a class="header" href="#位置布局">位置布局</a></h3>
+<p>四是钱文的位置布局。如离郭，寄郭，接郭；隔轮，连轮；进通，退通；仰元，俯元，昂宝，离宝；宣和钱的俯宣，治平钱的直平，斜平等等。</p>
+<h2 id="鉴别方法"><a class="header" href="#鉴别方法">鉴别方法</a></h2>
+<h3 id="看该币是否与普通钱有细小的差别"><a class="header" href="#看该币是否与普通钱有细小的差别">看该币是否与普通钱有细小的差别</a></h3>
+<p>鉴别“对钱”最简单的方法有：一、看该币是否与普通钱有细小的差别，其特点为阔缘、中缘、狭缘、背阔缘、肥郭、细郭、正郭、决郭、阴郭、背肥郭等。</p>
+<h3 id="看该币的钱体大小和轻重有何差别"><a class="header" href="#看该币的钱体大小和轻重有何差别">看该币的钱体大小和轻重有何差别</a></h3>
+<p>二、看该币的钱体大小和轻重有何差别，如是否小平大样、小样、折二广穿、狭穿、厚肉、薄肉等。</p>
+<h3 id="看文字的书写特点"><a class="header" href="#看文字的书写特点">看文字的书写特点</a></h3>
+<p>三、看文字的书写特点，在大字、中字、小字、长字、短字中区分；在大头通、广通中区分；在平头元、尖头元、肥元、狭元中区分；在横点金、方贝宝、圆头宝、长宝、隶宝中区分。</p>
+<p>四、看钱文位置和布局，如离郭、寄郭、接郭、隔轮、连轮、进通、退通、长冠、圆冠、巨冠等。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../history/tang-dai-yin-ting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../history/dui-wen-qian.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../history/tang-dai-yin-ting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../history/dui-wen-qian.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

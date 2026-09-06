@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>沈郎五铢钱 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/shenglang-wuzhu-coins.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="沈郎五铢钱"><a class="header" href="#沈郎五铢钱">沈郎五铢钱</a></h1>
+<p>“沈郎五铢”是钱币收藏圈对东晋沈充所铸小钱的俗称，史书正名叫“沈郎钱”。它不属于标准汉制五铢，而是两晋南朝“小钱—减重钱”里的特殊一支。下面按人物、文献、形制、重量、流通、争议讲清楚。</p>
+<h2 id="一谁铸的什么背景"><a class="header" href="#一谁铸的什么背景">一、谁铸的、什么背景</a></h2>
+<ul>
+<li>铸者：沈充，字士居，吴兴（治今浙江湖州，族望在武康/德清一带）人，江东豪族。初为王敦参军，后附王敦，明帝讨王敦时任大都督，太宁二年（324）兵败，逃回吴兴被杀。</li>
+<li>时间：传统系于东晋元帝太兴年间（318—321）或“元帝过江后”；更谨慎的说法是沈充任王敦幕僚、尤其在太宁元年—二年（323—324）备军、响应王敦期间于吴兴一带铸钱。因铸者很快败死，实际行用很短。</li>
+<li>性质：不是中央统一铸币。东晋元帝南渡后“用孙氏旧钱，轻重杂行”，官方未系统开铸；沈充以地方豪族/军需身份自铸小钱，带私铸、军资、割据供给三重色彩。</li>
+</ul>
+<p>《晋书·食货志》原句最要紧：</p>
+<p>晋自中原丧乱，元帝过江，用孙氏旧钱，轻重杂行，大者谓之比轮，中者谓之四文。吴兴沈充又铸小钱，谓之沈郎钱。钱既不多，由是稍贵。</p>
+<p>“比轮”指孙吴大钱类（大泉五百/当千等大型），“四文”指中型旧钱，“沈郎钱”是最小一等。</p>
+<h2 id="二钱文与形制为什么叫五铢却又常写五朱"><a class="header" href="#二钱文与形制为什么叫五铢却又常写五朱">二、钱文与形制：为什么叫“五铢”却又常写“五朱”</a></h2>
+<p>标准五铢面文“五铢”二字。沈郎钱实物/钱谱常见情况：</p>
+<ul>
+<li>主流面文“五朱”，左右横列或竖读，小篆意味，但多纤弱；有“传形”（左右易位）版。</li>
+<li>极少“五金”版，可理解为把“铢”拆成“金＋朱”，或因钱小刻不下“铢”而省“金”旁。</li>
+<li>圆形方孔，大穿（方孔相对大）、薄肉、小径；面多有外郭，有的面穿有郭，背平或背郭不整；铜色因掺铅锡常青白、发灰，故诗文又称“沈郎青钱”。</li>
+<li>整体仿东汉小五铢/剪轮五铢的“小”路数，但不是剪边后再铸，而是直接铸小。</li>
+</ul>
+<p>之所以归入“五铢类”，是因为它延续“五×”计重名目、与两汉五铢体系对话；实际面文“五朱”更接近“省铢存朱”的减重记号钱。</p>
+<h2 id="三尺寸重量标本差异很大"><a class="header" href="#三尺寸重量标本差异很大">三、尺寸重量（标本差异很大）</a></h2>
+<p>没有统一官定标准，出土/传世标本跨度不小：</p>
+<ul>
+<li>六朝武昌护城壕出土“沈充五铢”标本：廓径约1.64厘米、穿宽1.14厘米、重0.62克。（极轻薄型）</li>
+<li>通俗钱谱常见：径约1.9—2.0厘米，重1.15克左右，或1—1.5克区间。</li>
+<li>个别报告大样：径22.6—23.2毫米、重约2.7克；也有资料给“径18—20.6毫米、重1—1.8克”。</li>
+<li>文学与旧谱有“径七分半、重三铢半”之类说法，但折算到实物差异大，不宜当严标准；网上有些“重三铢、22克、厚15毫米”明显单位或抄写错误，别采用。</li>
+</ul>
+<p>对照一下量级：汉制1铢≈0.65克、1两=24铢≈15.6克；标准五铢约3.25克（5铢）。沈郎钱多数1克上下、最轻0.6克，只相当于标准五铢的1/3到1/5，属于重度减重小钱。</p>
+<h2 id="四在当时货币体系里的位置"><a class="header" href="#四在当时货币体系里的位置">四、在当时货币体系里的位置</a></h2>
+<p>东晋初南方钱市是“旧钱混用”：</p>
+<ol>
+<li>比轮：孙吴大泉系列、大径钱，作大值；</li>
+<li>四文：中型旧钱，或一当小钱四；</li>
+<li>沈郎钱：小钱，和剪边五铢、磨郭五铢、汉魏小五铢一起充当零钱。</li>
+</ol>
+<p>沈充铸它主要解决三吴军需和本地零钱不足。史言“钱既不多，由是稍贵”，说明发行量不大，但因小钱稀缺，单位名义价值不低；和普通足重五铢比，它是“名五、实不及一铢几倍”的虚轻钱。</p>
+<h2 id="五为什么存世难定争议大"><a class="header" href="#五为什么存世难定争议大">五、为什么存世难定、争议大</a></h2>
+<p>这是沈郎钱最麻烦的地方：</p>
+<ul>
+<li>史料只说“小钱”，没画图样；后世把江南出土的小五铢、五朱钱都往“沈郎”上套，但西汉宣帝起已有小五铢（径约1.2厘米级），不能全算东晋沈充。</li>
+<li>“五朱”不是沈充专利：东汉墓有五朱铜/陶钱，孙吴朱然墓出土涉及五朱/五金类，学界有归曹魏、归东吴、归东晋几种意见。</li>
+<li>沈充败后，因属“逆党钱”可能遭禁；又因薄小含铅锡，多被销熔改铸小钱或铜器，导致可确定归属的出土品少。</li>
+<li>钱币学界较稳妥结论：凡“吴兴—三吴出土、东晋地层、面五朱/五金、大穿薄肉青白、与王敦—沈充时段吻合”的，可暂归沈郎系统；单凭“五朱”二字不能定沈充。</li>
+</ul>
+<h2 id="六文学形象比钱本身更出名"><a class="header" href="#六文学形象比钱本身更出名">六、文学形象比钱本身更出名</a></h2>
+<p>因轻薄如榆荚，唐人常用“沈郎钱”喻小钱、春榆：</p>
+<ul>
+<li>李贺《残丝曲》“榆荚相催不知数，沈郎青钱夹城路”；</li>
+<li>王建“绿榆枝散沈郎钱”；</li>
+<li>李商隐“今日春光太飘荡，谢家轻絮沈郎钱”；</li>
+<li>后来“沈郎青钱”成了轻小铜钱的典故，不完全指实物。</li>
+</ul>
+<p>这让它名气大于存世量：真钱难辨，诗钱人人会引。</p>
+<h2 id="七和标准五铢剪轮五铢的区别一眼分清"><a class="header" href="#七和标准五铢剪轮五铢的区别一眼分清">七、和“标准五铢”“剪轮五铢”的区别（一眼分清）</a></h2>
+<ul>
+<li>标准五铢：面“五铢”，径约2.5厘米、重3克上下，外郭严整，中央官铸为主。</li>
+<li>剪轮/磨郭五铢：先有整五铢，再剪边磨郭取铜，面文仍“五铢”但残，边缘被削；属于“改旧钱”不是新铸。</li>
+<li>沈郎/沈充五铢：新铸小钱，面多“五朱”少“五金”，大穿薄肉、青白、整体轻；属于“新铸减重小钱”，可能受剪轮思路影响但非剪边成品。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/da-bu-huang-qian.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/xing-sha.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/da-bu-huang-qian.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/xing-sha.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>承安宝货 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/cheng-an-bao-huo.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="承安宝货"><a class="header" href="#承安宝货">承安宝货</a></h1>
+<p>“承安宝货”是金章宗承安年间（1197年前后）由金朝官方铸造、带固定面值的银铤，被认为是中国货币史上较早“以白银铸成、明文纪值、公私同用”的法定银货之一。下面按背景、制度、形制、出土、流通与废止、历史地位分块说。</p>
+<h2 id="一基本定位与发行背景"><a class="header" href="#一基本定位与发行背景">一、基本定位与发行背景</a></h2>
+<ul>
+<li>朝代年号：金章宗完颜璟“承安”年号；主流记载承安二年（1197）十二月由尚书省奏请改铸。</li>
+<li>货币性质：不是普通五十两大银铤，也不是圆钱，而是小份量、带“承安宝货+重量”铭文的官铸银铤，属“纪值银币/银锭”。</li>
+<li>为什么发：
+<ul>
+<li>旧制银每铤五十两、值约百贯，民间用时常剪凿零用，成色和价格混乱；</li>
+<li>金中后期铜钱荒、交钞（纸币）贬值，军费、边戍、官吏俸给需要更稳的支付手段；</li>
+<li>意图用白银给交钞“做本”，即“与钱兼用，以代钞本”，稳定财政。</li>
+</ul>
+</li>
+</ul>
+<p>《金史·食货志》典型记载：旧例银每铤五十两其直百贯，民间截凿计价不稳，“遂改铸银名‘承安宝货’，一两至十两分五等，每两折钱二贯，公私同见钱用”。</p>
+<h2 id="二面值五等与折算"><a class="header" href="#二面值五等与折算">二、面值五等与折算</a></h2>
+<p>史载五等：</p>
+<ul>
+<li>一两 → 折钱2贯</li>
+<li>一两半 → 折钱3贯</li>
+<li>二两半 → 折钱5贯</li>
+<li>五两 → 折钱10贯</li>
+<li>十两 → 折钱20贯</li>
+</ul>
+<p>也就是“每两=2贯”的线性标准。部分钱币资料提到实际用“省陌”（如以800文作一贯）时，大额戳记会出现“伍两准／拾贯省”之类写法，但基础法令仍按“每两二贯”理解。</p>
+<p>补充：金代“一两”折合今重约39–40克量级。出土“一两”实物约40.2克，“一两半”约58–60.5克，和这个折算基本对得上。</p>
+<h2 id="三形制与铭文"><a class="header" href="#三形制与铭文">三、形制与铭文</a></h2>
+<p>已确认实物为小银铤，不是方孔钱：</p>
+<ul>
+<li>整体：束腰、两端弧圆/椭圆，像小马鞍或板铤；正面略凹，背面、侧面常有蜂窝气孔（浇铸气体排出）。</li>
+<li>边缘：部分标本四周有水波纹三道。</li>
+<li>铭文布局（以“壹两半”为例）：
+<ul>
+<li>首端中部横凿“承安”；</li>
+<li>腰部竖凿右行“宝货壹两半”（或“宝货壹两”）；</li>
+<li>左行配“库”“部”押记——“库”多指交钞库检勘，“部”指尚书户部勘复，用于防偷减、防私铸。</li>
+</ul>
+</li>
+<li>成色：出土标本多在95%以上。</li>
+<li>尺寸举例：
+<ul>
+<li>一两：长约4.25厘米，端宽约2.7厘米，腰宽约1.9厘米，重约40.2克；</li>
+<li>一两半：长4.7–4.85厘米，端宽3.0–3.35厘米，腰宽2.1–2.2厘米，重58–60.5克。</li>
+</ul>
+</li>
+</ul>
+<p>民国一些钱谱曾误以为“宝货”是圆钱，80年代实物出土后才更正为银铤。</p>
+<h2 id="四流通范围与使用规则"><a class="header" href="#四流通范围与使用规则">四、流通范围与使用规则</a></h2>
+<ul>
+<li>法令层面：承安初行后，曾在西北二京、临潢、辽东等路推广；承安三年左右规定部分路分“一贯以上用银/钞/宝货，以下听用钱”的倾向，用银钞替代铜钱大宗支付。</li>
+<li>地理对应：大致含今山西大同（西京）、北京（中都/部分南京体系另论）、内蒙古东部临潢、辽宁辽阳（东京/辽东）及东北上京一带；出土也集中在黑龙江、辽宁、内蒙古，和文献“北、东北、西北边路”吻合。</li>
+<li>用途：军饷、边备、官吏俸、交钞兑现补充、部分商税和大额买卖；不是民间日常小钱。</li>
+</ul>
+<h2 id="五出土与存世"><a class="header" href="#五出土与存世">五、出土与存世</a></h2>
+<p>长期只见于《金史》，20世纪80年代起陆续出实物，国内汇总常按“约15枚”说：</p>
+<ul>
+<li>1981年 黑龙江（人民银行清库/阿城一带）发现一两半多枚，有说4枚；</li>
+<li>1985年 哈尔滨阿城一两半1枚；</li>
+<li>1986年 辽宁清库杂银发现一两2枚；</li>
+<li>1987年 内蒙古兴和/和县一两半1枚；</li>
+<li>1994年 黑龙江宾县洪水冲出7枚（一两半为主），后追缴回；</li>
+<li>此外黑龙江省博、省考古所、钱币学会分别藏有收集品。</li>
+</ul>
+<p>重点：已出土可确认的主要只“一两”“一两半”两种；二两半、五两、十两五等中的大值，文献有而实物极稀或存争议。所以谈“承安宝货全系列”要区分“法令五等”和“现存实物两等”。</p>
+<h2 id="六为什么只流通约三年"><a class="header" href="#六为什么只流通约三年">六、为什么只流通约三年</a></h2>
+<p>承安二年末开铸，承安五年（1200）十二月罢停，实际约3年。原因：</p>
+<ol>
+<li>私铸掺假：民间在银里掺铜、锡，成色下降，优币被劣币挤掉；</li>
+<li>官方信用受挫：标重标值但市价随成色走，商民不愿按“每两二贯”收；</li>
+<li>交钞问题没解决：宝货本想给钞做本，但财政军需不断印钞，银货又回去做临时筹款工具；</li>
+<li>可熔可改：银铤能被销重铸大铤或其他器货，官铸存世更难保留。</li>
+</ol>
+<p>《金史》里废止奏对大致说：因军储支用、交钞支出大，暂铸宝货与钱并用代替钞本，但“非经久法”，故罢。</p>
+<h2 id="七钱币史意义"><a class="header" href="#七钱币史意义">七、钱币史意义</a></h2>
+<ul>
+<li>由“称量银”（五十两大铤、剪着用）走向“纪值官铸小银铤”的尝试，算白银货币化的重要节点；</li>
+<li>以政府名义定五等、定折钱率、定库部押记，具备法币管理雏形；</li>
+<li>对元以后“元宝/银锭+官批”体系、明清银两制度有先期经验；</li>
+<li>因为短命、稀出，现存真品多为国家一级/馆藏品，市场所谓“承安宝货圆钱”基本要按赝品或臆造品警惕。</li>
+</ul>
+<h2 id="承安宝货和承安元宝"><a class="header" href="#承安宝货和承安元宝">承安宝货和承安元宝</a></h2>
+<p>“承安宝货”和所谓“承安元宝”不是同一类东西，而且后者在钱币学界很可疑。</p>
+<h3 id="一承安宝货金章宗官方银铤"><a class="header" href="#一承安宝货金章宗官方银铤">一、承安宝货：金章宗官方银铤</a></h3>
+<ul>
+<li>年号：金章宗承安二年—五年（1197—1200）</li>
+<li>材质：白银，成色多95%以上</li>
+<li>形制：束腰小银铤/“马鞍形”，不是方孔圆钱；首横“承安”，腰竖“宝货壹两/壹两半”等，配“库□”“部□”押记，背有蜂窝气孔</li>
+<li>面值：史载一两、一两半、二两半、五两、十两五等，每两折铜钱二贯，公私同用</li>
+<li>性质：法定记值银币/官铸银铤，解决五十两大铤零用不便、交钞贬值问题；1981年后黑龙江阿城、辽宁、内蒙古等有出土，一两/一两半实物较确，大值极稀</li>
+<li>结局：因私铸掺铜锡、成色乱，1200年罢</li>
+</ul>
+<h3 id="二承安元宝基本按可疑非官铸处理"><a class="header" href="#二承安元宝基本按可疑非官铸处理">二、“承安元宝”：基本按可疑/非官铸处理</a></h3>
+<p>金章宗三个年号明昌、承安、泰和。正规年号钱情况是：</p>
+<ul>
+<li>明昌钱：所见多判伪</li>
+<li>承安：文献与出土主力是“承安宝货”银铤，不铸“承安元宝/通宝”方孔铜钱是主流看法</li>
+<li>泰和：才铸泰和通宝（楷，小平/折二/折三/折十）、泰和重宝（篆，折三/折十）</li>
+</ul>
+<p>所以“承安元宝”如果指方孔铜钱：</p>
+<ul>
+<li>无《金史》依据（食货志只讲改铸银名“承安宝货”）</li>
+<li>无可靠出土报告支撑</li>
+<li>旧谱偶有“承安宝货”折五铜钱拓本，戴葆庭、彭信威一系及多数现代泉家判为伪；人民网曾登个人文章主张有铜品，但自己也说明“史书无记载、无出土佐证”，属少数争议，不能当定论</li>
+<li>市场若见到“承安元宝”铜钱，先按臆造、改刻、拼凑或后世戏铸对待，送拍/入藏前必须让钱币机构看实物。</li>
+</ul>
+<h3 id="三一句话区别"><a class="header" href="#三一句话区别">三、一句话区别</a></h3>
+<ul>
+<li>承安宝货＝金代承安年号、官铸、银质、束腰铤、纪重纪值，真有实物和史证；</li>
+<li>承安元宝＝方孔“元宝”命名、铜质、在金承安年号下缺乏史籍与出土支持，通常视为疑品/伪品，不要和承安宝货混为一个体系。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/mian-zhi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/monetary-argument-in-history.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/mian-zhi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/monetary-argument-in-history.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

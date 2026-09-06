@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>布币形制的历史沿革 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/history-of-spade-coins.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="布币形制的历史沿革"><a class="header" href="#布币形制的历史沿革">布币形制的历史沿革</a></h1>
+<p>布币是先秦中原“铲形钱”的总称，核心脉络是：青铜农具钱/镈 → 原始布 → 空首布 → 平首布 → 秦圜钱取代。整体趋势是越铸越小、越轻、越标准化，铭文从吉语/干支走向地名+币值。</p>
+<h2 id="一源头钱镈与原始布"><a class="header" href="#一源头钱镈与原始布">一、源头：钱、镈与“原始布”</a></h2>
+<ul>
+<li>文献依据：《诗经·周颂·臣工》“庤乃钱镈”，《说文》“钱，铫也，古田器”“镈，锄也”。钱近似锹/铲，镈近似锄，“布”一般认为是“镈”的同音假借。</li>
+<li>商周黄河流域农业区用青铜铲、锄作交换媒介；完整钱镈约通长160、宽100毫米、重约200克，太大不便流通。</li>
+<li>西周出现“半镈”（约通长90、宽55、重112克），再演进为原始空首布（通长100多、足宽70多、重约110克），实质是减重、把装柄銎(qióng)缩短到币身上部、开始加简单符号（上、山、六等）。</li>
+<li>这一阶段仍带农具痕迹：厚、有銎、可装柄；但已不完全当农具用，算“金属铸币雏形”。</li>
+</ul>
+<h2 id="二空首布保留装柄銎的春秋主币"><a class="header" href="#二空首布保留装柄銎的春秋主币">二、空首布：保留装柄銎的春秋主币</a></h2>
+<p>东周空首布首部中空（銎），像缩小铲；按肩、足分三型，主要行于周王畿、晋/韩魏、郑卫宋一带。</p>
+<ol>
+<li>平肩弧足空首布
+<ul>
+<li>春秋中期周王室先铸，后行王畿；平肩、弧裆、弧足，首部空銎（方或六棱），面背多三竖线，有郭。</li>
+<li>分特大型→小型：特大型通长140–150、肩宽60–70、足宽70–80毫米、重50–80克；小型通长63–81、肩宽35–39、足宽37–43毫米、重约15克。</li>
+<li>铭文最丰富，单字为主：干支、数字、方位、天干、祭祀名物、吉语、少数地名；“釿”“市南小化”等出现，说明由宗教/行政符号转向经贸记名。</li>
+</ul>
+</li>
+<li>斜肩弧足空首布
+<ul>
+<li>周王畿及晋之韩魏系；斜肩，面背两侧各两斜线。</li>
+<li>大者通长78–88、肩宽约43、足宽约49毫米、重22–32克；另有小等，整体比同期平肩中型轻。</li>
+</ul>
+</li>
+<li>耸肩尖足空首布
+<ul>
+<li>晋国/后继赵系特征强；耸肩、尖足，常面背三竖纹，部分无文，部分有“中一”类标记。山西侯马铸铜遗址材料可证晋地铸造。</li>
+<li>体形从大减重到小：大型可30–50克级，晚期更小，过渡到战国平首尖足。</li>
+</ul>
+</li>
+</ol>
+<p>空首布总规律：大型早、重型早；小型晚、轻型晚；铭文由无文/符号→单字→地名/币值。</p>
+<h2 id="三平首布战国主流彻底脱离农具"><a class="header" href="#三平首布战国主流彻底脱离农具">三、平首布：战国主流，彻底脱离农具</a></h2>
+<p>战国把空銎去掉，首部改扁平实片，整体成薄铜铲；分肩、裆、足更细，便于批量铸、成串带。赵魏韩周及燕部分地铸，秦晚期以圜钱为主、楚有独立布形。</p>
+<ol>
+<li>尖足布（赵系为主）</li>
+</ol>
+<ul>
+<li>耸肩、方裆、尖足；由耸肩尖足空首布蜕出。大布如“甘丹（邯郸）”“晋阳”“大阴”，通长80+毫米、重10–12克级；小布如“离石”“武安”“兹氏”，通长45–55、足宽23–28、重5–6克。</li>
+<li>面铸城名，背常数字；大布偏高值，小布日常零售。后期尖足磨损/折断多，部分演类方足、类圆足。</li>
+</ul>
+<ol start="2">
+<li>方足布（战国最普及）</li>
+</ol>
+<ul>
+<li>平/方肩、方裆、方足；赵韩魏燕均铸，小布为主。通长多39–48、足宽24–27毫米，重约4.8–13.5克因型而异。</li>
+<li>铭文几乎全地名：“安阳”“平阳”“宅阳”“皮氏”“戈邑”“梁邑”等；燕方足常束腰深、背左/右类作坊标记。</li>
+<li>优点是正方面不易伤手、叠放省空间，战国中晚取代尖足成为北方主流通。</li>
+</ul>
+<ol start="3">
+<li>桥足/釿(jīn)布（魏系纪重）</li>
+</ol>
+<ul>
+<li>圆肩或平肩、桥形弧裆、方足；称“釿布”因面文带“釿”。代表“安邑二釿/一釿/半釿”“梁重釿百当寽”“梁正尚百当寽”等。</li>
+<li>分二釿、一釿、半釿三等：二釿最重（安邑二釿通长可65毫米级），一釿次之，半釿轻小；以“釿”为重量/价值单位，是战国最早系统化子母相权之一。</li>
+<li>另有“寽”制大梁布（如“梁正尚金当寽”“梁半尚二金当寽”），偏魏都贸易与高值支付。</li>
+</ul>
+<ol start="4">
+<li>锐角布（韩系异形）</li>
+</ol>
+<ul>
+<li>平首顶端两角外突如小尖耳，方/弧裆；分大、小两等。存世少于方足，主要韩地及邻近。</li>
+</ul>
+<ol start="5">
+<li>圆足布与三孔布（赵系晚型）</li>
+</ol>
+<ul>
+<li>圆首、圆肩、圆裆、圆足；面地名（“晋阳”“兹氏”“离石”“大阴”），背常两斜线。受圜钱圆化审美影响，赵晚期。</li>
+<li>三孔布：圆足基础上首+双足各一圆孔，面地名、背记重“两”或“十二朱”；大者背“两”、小者“十二朱”，兼地名+铢两，极稀，属先秦纪重纪地高峰。</li>
+</ul>
+<ol start="6">
+<li>长布、异形、楚燕尾</li>
+</ol>
+<ul>
+<li>长布如“长布黄千”类观念可放到新莽再说；战国北方另有小异形布。</li>
+<li>楚布独立：狭长束腰、两端外撇似燕尾，面“比埒/四比埒当釿”等，与小蚁鼻钱形成兑换，不纳入三晋平首主类。</li>
+</ul>
+<h2 id="四减重与形制演化的内在逻辑"><a class="header" href="#四减重与形制演化的内在逻辑">四、减重与形制演化的内在逻辑</a></h2>
+<ul>
+<li>农具→货币：去掉实用铲深銎，先留空首象征，再改实首薄片。</li>
+<li>大型→小型：原始布百克级→空首特大型50–80克→空首小型约15克→平首尖/方小布4–12克。</li>
+<li>尖→方→圆：尖足利但易折，方足规整，圆足/三孔更便穿系；同时肩从耸/平转向圆，整体“去棱角化”。</li>
+<li>无文→地名→地名+币值：空首单符号，平首大量城名，魏用“釿/寽”、赵三孔用“两/朱”，为秦铢两制铺路。</li>
+</ul>
+<h2 id="五秦统一与布币退场"><a class="header" href="#五秦统一与布币退场">五、秦统一与布币退场</a></h2>
+<ul>
+<li>战国秦用圜钱/半两体系；惠文王初行钱后，秦地不以布币为主。前221统一“半两”方孔圆钱，北方布、齐燕刀、楚贝形均被整合或废止。</li>
+<li>秦简《金布律》“钱十一当一布”的“布”指布帛实物，不是铲形布币；别把二者混同。</li>
+<li>汉承半两/五铢，布形不再流通；新莽复古铸“小布一百…大布黄千”“货布”，纯法古象征，不属于春秋战国实用布币沿革。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/monetaria-moneta.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/hammered-coins.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/monetaria-moneta.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/hammered-coins.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

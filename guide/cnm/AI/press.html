@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>锻压和冲压 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/press.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="锻压和冲压"><a class="header" href="#锻压和冲压">锻压和冲压</a></h1>
+<p>机制货币的技术谱系：锻压与冲压、技术方案及历史沿革</p>
+<p>先厘清一个概念——在工业术语里，锻压 = 锻造 + 冲压，两者同属"金属塑性加工（压力加工）"，是一对并列的大类。而机制币（硬币）的成型，本质上属于冲压这个分支（更精确地说是"压印/压花"）。</p>
+<h2 id="一锻压-vs-冲压技术异同"><a class="header" href="#一锻压-vs-冲压技术异同">一、锻压 vs 冲压：技术异同</a></h2>
+<h3 id="核心区别一句话"><a class="header" href="#核心区别一句话">核心区别一句话</a></h3>
+<ul>
+<li>锻造：对整体坯料施压，金属发生大距离塑性流动，靠"揉面式"的晶粒重组强化力学性能</li>
+<li>冲压：对板/带材施压，坯料主要靠改变各部位的空间位置成形，内部不发生大距离流动</li>
+</ul>
+<h2 id="维度--锻造锻压--冲压含造币压印"><a class="header" href="#维度--锻造锻压--冲压含造币压印">维度 | 锻造（锻压） | 冲压（含造币压印）</a></h2>
+<p>坯料 | 块状/棒状整体坯料 | 板料、带材、型材
+变形 | 整体大塑性流动，晶粒重组 | 局部变形/分离，无大距离流动
+温度 | 热锻/温锻/冷锻均可 | 多为常温冷冲压
+典型产品 | 曲轴、齿轮毛坯（承重复部件） | 易拉罐、车身、硬币</p>
+<h3 id="两者的共同点"><a class="header" href="#两者的共同点">两者的共同点</a></h3>
+<ul>
+<li>都属固态塑性加工，不把金属熔化（区别于铸造）</li>
+<li>都靠模具 + 压力机使金属变形，能获得致密组织与精确形状</li>
+</ul>
+<h3 id="为什么造币属于冲压而非锻造"><a class="header" href="#为什么造币属于冲压而非锻造">为什么造币属于"冲压"而非"锻造"</a></h3>
+<p>硬币是用金属薄片（坯饼）放在上下模之间，靠冷态瞬时压力挤出图案与边齿，厚度方向变化、金属充塞模具纹路，这正是典型的冷冲压中的"压印/压花"工序。硬币甚至不需要加热冲压，全程常温操作。</p>
+<h2 id="二机制货币的完整技术方案工艺流程"><a class="header" href="#二机制货币的完整技术方案工艺流程">二、机制货币的完整技术方案（工艺流程）</a></h2>
+<p>现代造币是一套流水线，核心环节如下：</p>
+<ol>
+<li>
+<p>熔铸 → 按配比称量贵金属，熔化成流体浇铸成条锭（温度控制很关键：过高损耗大，过低后续易裂）</p>
+</li>
+<li>
+<p>轧片（辊轧） → 锭块经粗轧+精轧十余道，碾至标准厚度。早期用马力/水力的轧机，现代用电动机驱动</p>
+</li>
+<li>
+<p>冲饼（落料） → 条片经冲床冲出圆形坯饼，边屑回收重熔</p>
+</li>
+<li>
+<p>光边（轧边） → 光边机把坯饼边缘滚压凸出，形成凸缘（币边）。作用是：图案耐磨、可叠放、减少压印所需压力、延长模具寿命</p>
+</li>
+<li>
+<p>烘洗（退火+酸洗） → 冷轧后坯饼变硬脆，需700℃退火软化 → 酸洗去氧化层 → 滚光烘干</p>
+</li>
+<li>
+<p>压印（Striking） → 坯饼送入印花机，由上模 + 下模 + 模圈三件组合，正、背面及边道（丝齿/光边）一次成型</p>
+</li>
+</ol>
+<p>模具体系是核心技术：</p>
+<ul>
+<li>设计师画稿 → 油土/石膏做立体浮雕 → 电镀铜型（母模）→ 雕刻机缩刻成原模 → 淬火后在大吨位压机上反复冲压翻制工作模</li>
+<li>一个原模可翻制无数工作模，故同一图案可常年量产</li>
+<li>模圈技术：光边/丝齿用整体式模圈；若币边需阳纹文字（如西班牙250比塞塔），要用 Droz 发明的分离式（多瓣）模圈，压印瞬间闭合、脱模时张开——这是顶级防伪手段，几乎无法仿制</li>
+</ul>
+<ol start="7">
+<li>检选 → 剔除瑕疵品，成品计数封装</li>
+</ol>
+<h2 id="三其他机制货币技术方案不同技术路线"><a class="header" href="#三其他机制货币技术方案不同技术路线">三、其他机制货币技术方案（不同技术路线）</a></h2>
+<p>除主流"冷冲压压印"外，历史上还有几种方案：</p>
+<h2 id="方案--原理--特点"><a class="header" href="#方案--原理--特点">方案 | 原理 | 特点</a></h2>
+<p>螺旋压床（Screw press） | 螺纹主轴旋转下压，靠持续、均匀的压力压印 | 16世纪起主导近400年，压力可控、图案锐利，但速度慢
+辗轮轧机（Rolling mill） | 两辊轴上刻正反面图案，边辊轧边压印 | 1550年起用于造币，兼顾轧片与印花
+肘杆式压床（Knuckle-joint / Uhlhorn press） | 1816年德国 Uhlhorn 发明，曲柄-肘节机构 | 更易电动化，配移动进料台实现高速自动
+蒸汽/水力驱动 | 动力源升级（马力→水力→蒸汽→电力） | 伯明翰 Boulton 1797年"车轮"便士，单机60枚/分
+液压机 | 一战后普及，超大吨位 | 用于大型纪念币、工作模翻制
+现代电动压印 | 150吨压力、750枚/分 | 集压印+自动传送一体</p>
+<h2 id="四技术渊源与历史沿革"><a class="header" href="#四技术渊源与历史沿革">四、技术渊源与历史沿革</a></h2>
+<ol>
+<li>远古：打制币（Hammered coins）——一切的起点</li>
+</ol>
+<ul>
+<li>公元前6世纪中期，吕底亚王国（今土耳其西部）在克罗伊斯王治下，将金银合金（琥珀金）制成标准重量、计数使用的硬币，这是现代"coin"的起源</li>
+<li>西方最早是加热熔化成粒、趁热用锤敲打印上图像，即打制币：下模（pile）钉入木砧，放上坯饼，上模（trussel）受大锤击打</li>
+<li>手工打制形状不规则、边缘参差不齐，极易被"剪边"（clipping）盗银，故反面常刻十字线以防伪</li>
+</ul>
+<ol start="2">
+<li>16世纪：机制币的诞生（文艺复兴机械革命）</li>
+</ol>
+<ul>
+<li>螺旋压床 + 轧机两大发明问世，解决打制"模裂、效率低"的痛点</li>
+<li>1506年意大利率先用机械替代锤制；1550年前后德国奥格斯堡的金匠 Schwab 用轧机配合螺旋压机，并引入 collar（模圈）——膨胀的金属填满模圈形成边齿，防伪能力飞跃</li>
+<li>法国（1551）、英国（1561）相继引进，但因造币行会抵制，打制币在法国1662年、英国1641年才彻底退出</li>
+</ul>
+<ol start="3">
+<li>18世纪末—19世纪：工业化（蒸汽动力）</li>
+</ol>
+<ul>
+<li>Matthew Boulton（伯明翰）将蒸汽机引入造币，配优质坩埚钢模具，1797年"车轮便士"成为法定货币；1810年皇家造币厂装备8台蒸汽压床，60枚/分</li>
+<li>Droz 分离式模圈（1803年巴黎学院报告）实现正、背、边三位一体同压，成顶级防伪标准</li>
+</ul>
+<ol start="4">
+<li>19世纪末—20世纪：电气化与高速化</li>
+</ol>
+<ul>
+<li>1890年后螺旋压床被电动肘杆压机取代；雕刻机/缩刻机（reducing machine）普及，艺术家做石膏浮雕即可扫描缩刻到钢模，效率大增</li>
+<li>现代150吨电动压机，750枚/分</li>
+</ul>
+<ol start="5">
+<li>中国：从翻砂到机制的被动转型</li>
+</ol>
+<ul>
+<li>中国传统翻砂浇铸在高温下施工，难以机械化、自动化</li>
+<li>19世纪中叶，墨西哥鹰洋、日本龙洋凭标准化（含银90%、重库平七钱二分）大量涌入，套取中国高成色纹银，白银外流</li>
+<li>1884年吉林机器局试铸"吉林厂平"（本土机制币雏形）；1886年天津宝津局试铸机制方孔钱；1889年张之洞在广东钱局引进英国伯明翰全套设备，首铸"光绪元宝"龙洋，开启中国近代机制币规模化</li>
+<li>1900年广东首铸无孔铜元（仿香港铜仙），取代亏损严重的方孔机制钱</li>
+<li>民国：1914年"袁大头"统一银元；1933年废两改元；1935年法币改革→ 金属铸币转向信用货币，机制银铜元退出流通</li>
+<li>1949年后机制币转入收藏领域，1980年代起重受关注</li>
+</ul>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>锻压与冲压是压力加工的两大门类，机制币属于冷冲压（压印）；其技术内核是"熔铸→轧片→冲饼→光边→退火酸洗→压印→检选"的标准化流水线，核心在模具体系与模圈技术。</p>
+<p>历史脉络：吕底亚打制币（前6世纪）→ 螺旋压床+轧机（16世纪文艺复兴）→ 蒸汽动力（18世纪末 Boulton）→ 分离式模圈防伪（Droz）→ 电动高速压机（20世纪）；中国则是清末为挽回货币主权，从广东钱局起步，完成从翻砂到机制的近代化转型。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/the-hall-of-supreme-harmony-1918-11.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/monetary-policy-of-the-red-army.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/the-hall-of-supreme-harmony-1918-11.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/monetary-policy-of-the-red-army.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

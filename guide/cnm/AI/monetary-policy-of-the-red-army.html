@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>红军根据地和长征时期的货币政策 - 中国钱币博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国钱币博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/AI/monetary-policy-of-the-red-army.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="红军根据地和长征时期的货币政策"><a class="header" href="#红军根据地和长征时期的货币政策">红军根据地和长征时期的货币政策</a></h1>
+<p>红军时期（土地革命各苏区）和长征途中的货币政策，核心不是“随便印票子”，而是一套硬准备＋物资吞吐＋政治信用的战时金融：平时在苏区建立统一银行券、银本位、现金/物资料准备、通过税收/存款/公营商业回笼；行军到白区或新区则尽量少发、临时发、用盐布银元作保、走前全数兑回。下面按“苏区常态—长征流动—稳值机制—局限”讲。</p>
+<h2 id="一苏区常态先统一币制再建发钞回笼"><a class="header" href="#一苏区常态先统一币制再建发钞回笼">一、苏区常态：先统一币制，再建发钞回笼</a></h2>
+<ol>
+<li>机构与法定货币</li>
+</ol>
+<ul>
+<li>1932年2月中华苏维埃共和国国家银行在瑞金成立，毛泽民任行长，性质近似中央银行，统一发行“苏维埃国币/银币券”，兼管金库、公债、税收代收、低利农贷。</li>
+<li>此前各苏区已有地方银行：闽西工农银行（1930，龙岩）、江西工农银行、湘鄂西农民银行、鄂豫皖特区银行等；后来逐步收掉县、社分散发钞权，改由中央或特区银行统一发。</li>
+<li>政策上“驱劣币、禁外币、收杂币”：国民党中中交农等纸币在苏区禁用或折价，私行钱庄不许发钞，外来商人带银元/法币来贸易先换苏币；旧银元按成色收兑，部分加盖“苏维埃”戳流通。</li>
+</ul>
+<ol start="2">
+<li>发行原则与准备</li>
+</ol>
+<ul>
+<li>银本位：1元纸券＝1元现洋，承诺随兑随换；同时铸银元（含自铸苏维埃银元，以及为对白区贸易仿铸袁大头、孙小头、鹰洋）、银角、铜分币，纸+硬配合。</li>
+<li>准备制度：《国家银行暂行章程》要求纸币现金准备不少于30%，可用现洋、金银、外币；其余用“易于变售之货物或短期汇票、证券”作保证准备。1932年底中央及福建分行现金准备占已发纸币约59%；初始发行基金号称百万级。</li>
+<li>发行边界：1934年毛在二苏大报告明确“根据国民经济发展需要发行，财政需要放次要”，反对超市场需要滥发导致跌价；但反“围剿”后期军费压力仍倒逼扩发，长征前国币累计约800万元。</li>
+</ul>
+<ol start="3">
+<li>投放渠道（怎么把钱发出去）</li>
+</ol>
+<ul>
+<li>军政采购：银行/财政向群众、合作社、白区商人买粮盐布药，付苏币；</li>
+<li>低利贷款：向农民、手工业、消费合作社放农贷、生产贷，活跃商品流通；</li>
+<li>工资与公营支出：机关、红军供给、工程开支以苏币发放；</li>
+<li>公债与募捐：三期革命战争公债等，既筹款也回笼；没收土豪、军阀、官僚资本财物交金库作准备。</li>
+<li>白区贸易：苏区外贸机构用苏币收土产出口，换回盐布药；白区客商入境须换苏币才能买卖。</li>
+</ul>
+<ol start="4">
+<li>回笼渠道（怎么把钱收回来）</li>
+</ol>
+<ul>
+<li>税收与罚没：一切交易、纳税按国币计；没收款、罚款、捐款进银行作财政存款。</li>
+<li>公营商业/合作社“只收国币”：消费合作社、粮食调剂局、贸工部卖盐布油等紧缺物资只收苏币。兴国消费合作社1933—34年每月约3万元商品经合作社系统，仅此一项年回笼数十万；政府规定合作社售货“只收国票不收现洋”。</li>
+<li>存款：国家银行、信用合作社吸存机关团体暂存款和民间闲钱；闽西、中央行均有暂时存款科目。</li>
+<li>贷款归还与公债兑付/认购：还贷、新债换旧流动性。</li>
+<li>兑换回笼：设兑换处、代兑处，群众拿纸券换现洋；若市场纸券偏多、物价涨，就用金银/物资抛售收券。</li>
+</ul>
+<ol start="5">
+<li>多苏区例子</li>
+</ol>
+<ul>
+<li>闽西工农银行：收信用社纸券、禁黄金白银外流，附设熔银厂+贸易部，用木材纸矿换盐药，银金储备+物资后盾，曾出现102块银元换100元闽西苏币（苏币溢价，说明紧俏）。</li>
+<li>湘鄂西：联县政府农民银行统一发，禁各县滥发，旧银元烙“苏维埃”，白区来人必须换苏币，信用券背面写“随时十足兑现”。</li>
+<li>鄂豫皖：苏币为唯一法币，旧币比价收兑，军费/党政经费/农贷投放，存款税收回笼，控总量防物价波动。</li>
+</ul>
+<h2 id="二长征流动扁担银行少量临时发走前全兑"><a class="header" href="#二长征流动扁担银行少量临时发走前全兑">二、长征流动：扁担银行、少量临时发、走前全兑</a></h2>
+<p>1934年10月国家银行编入中央纵队第十五大队（“扁担银行/马背银行”），挑黄金、银元、苏币、印钞纸墨；后期因战争和精简，很多印版纸料销毁，主要变“带金银+少量纸券+兑换”。</p>
+<ol>
+<li>总体纪律：白区少发、新区按需、撤离必兑</li>
+</ol>
+<ul>
+<li>长征初期明令途中一般不对群众新发苏币，采购尽量用银元；指战员自带苏币在白区不好用，就设临时兑换处把苏币换银元/法币给群众和商铺。</li>
+<li>只有在占领较稳定城镇、需要集中采购且掌握硬物资时，才临时发“红军票/苏币”，并配套物资处、兑换处。</li>
+</ul>
+<ol start="2">
+<li>遵义是最完整样本（1935年1月）</li>
+</ol>
+<ul>
+<li>背景：遵义城原在王家烈治下，盐被军阀囤积、市面甚至以鸦片兼作交换媒介；红军没收王家烈盐约千担，作为信用资产。</li>
+<li>发钞：1月12日国家银行在杨柳街开业，发壹元、伍角、贰角、壹角、伍分银币券，毛泽民签批防伪；以布匹、银元、食盐作保证，成立临时物资供应处+货币兑换处。</li>
+<li>投放：红军用苏币向商户买粮布鞋袜；群众要买盐必须用苏币——盐是硬刚需，等于用战略物资为纸券定价。</li>
+<li>回笼：平价/低价抛盐、布、米，只收苏币；同时兑换处按1:1用现洋兑苏币。1月18日接转移令后贴布告收兑，撤前一天在丁字口、万寿桥、狮子桥摆银元+盐布粮，通宵兑回；部分按白区纸2元或银1.2元收苏币1元（处理白区比价），主力仍是现洋+实物兑回。</li>
+<li>效果：短期形成“发券—买货—卖盐回券—撤前兑银”闭环，群众没被套，后续二进遵义时愿意再来兑、甚至主动慰劳。</li>
+</ul>
+<ol start="3">
+<li>其他节点</li>
+</ol>
+<ul>
+<li>湖南宜章/白石渡、贵州黎平、黄平旧州、桐梓、川西冕宁等：多设临时兑换处，回收指战员采购流出的苏币、用银元换给群众；旧州类节点以兑换和筹粮为主，不追求发新钞。</li>
+<li>土城战后：为防止苏区纸券散落被敌利用，烧毁大批国家银行钞券、埋掉部分银毫；此后更依赖金银硬通货采购，发钞进一步收缩。</li>
+<li>二、六军团/红二方面军西进、红四方面军转战另有地方发兑，但中央主力长征主线以“遵义发、沿途兑、后期少发”为主；史料常提国家银行在长征沿线重要城镇做四次数发兑闭环。</li>
+</ul>
+<h2 id="三稳币值的三根支柱"><a class="header" href="#三稳币值的三根支柱">三、稳币值的三根支柱</a></h2>
+<ol>
+<li>硬通货准备：银元本位+金库金银+外币/银锭；章程30%现金准备、实际更高；随时兑现有法律命令（十四号、十七号、十三号训令），代兑处进县政府、红军经理机关。</li>
+<li>战略物资本位：盐、布、粮、煤、药等紧缺品由银行/政府/合作社掌握，公开售只收苏币；市场缺什么就用什么回笼。中央苏区靠打土豪缴获盐布油，长征遵义靠没收军阀盐，本质都是“票子背后有东西买”。</li>
+<li>行政+政治信用：法定法偿、禁外币劣币、税收强制收苏币；对抑价拒用、造谣破坏者处罚；红军纪律“不白拿、走前兑”，用不坑百姓换长期信誉。黔北、旧州、遵义群众愿收红军票，主要靠“能兑银、能买盐、撤了还兑”三件事。</li>
+</ol>
+<p>补充一点：苏区后期并非纯自由兑换。战争封锁下现洋流出受限，发钞逐步从“银币券兑现”转向“经济发展+物资保证”并重；但相对国民党法币/军阀杂钞，红军仍靠有限兑现+物资抛售避免恶性通胀。</p>
+<h2 id="四局限与变形"><a class="header" href="#四局限与变形">四、局限与变形</a></h2>
+<ul>
+<li>被封锁时铜料、印钞纸、造币设备都缺，中央造币厂早期石碓人工冲压，成色和产能受限；</li>
+<li>反“围剿”后期军费刚性，发钞超过商业回笼能力，会出现贬价压力，靠收存款、卖物资、禁现洋外流压住；</li>
+<li>长征是移动战，发钞只在休整城做，不能建常设回笼网；所以策略是“宁可少发、走前全收”，避免留下废纸损民心。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../AI/press.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../AI/monetary-policy-1932-1934.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../AI/press.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../AI/monetary-policy-1932-1934.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
