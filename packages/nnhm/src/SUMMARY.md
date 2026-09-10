@@ -2,6 +2,8 @@
 
 - [概况简介](./README.md)
 - [讲解提纲](./note/README.md)
+    - [户外](./note/courtyard.md)
+    - [脊椎动物的崛起](./note/the-Rise-of-the-Vertebrates.md)
 - [展馆入口]()
     - [霸王龙](./entrance/Tyrannosaurus.md)
     - [异特龙]()

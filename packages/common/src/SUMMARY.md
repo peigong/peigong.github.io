@@ -27,6 +27,7 @@
     - [艾叶青](./geology/ai-ye-qing.md)
 - [古代天文]()
     - [日晷](./ancient-astronomy/sundial.md)
+    - [月晷](./ancient-astronomy/moondial.md)
     - [浑天仪](./ancient-astronomy/hun-tian-yi.md)
     - [正方案](./ancient-astronomy/zheng-fang-an.md)
     - [简仪](./ancient-astronomy/jian-yi.md)
