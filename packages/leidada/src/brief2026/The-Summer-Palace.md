@@ -40,7 +40,7 @@ Ok. Let's keep walking with me and I will show you the next place.
 
 The Hall of Jade Ripples was built along the bank of Kunming Lake behind the Hall of Benevolence and Longevity by Qing Emperor Qianlong.
 
-During Emperor Guangxu reign, it was Emperor Guangxu's private living quarters. But after the failure of the Reform Movement, Emperor Guangxu was under house arrest here.
+During Emperor Guangxu's reign, it was Emperor Guangxu's private living quarters. But after the failure of the Reform Movement in 1898, Emperor Guangxu was under house arrest here.
 
 There are two annex chambers, Xiafenshi to the east and Ouxiangxie to the west. The two chambers were sealed by brick walls. The brick walls reached to the ceiling.
 

@@ -4,7 +4,7 @@ Ladies and gentlemen, my friends, I will be your guide today.
 
 And it's my great honor to show you around the Forbidden City.
 
-We are now in front of the Meridian Gate, And I'd like to give you a brief introduction of the Forbidden City.
+We are now in front of the Meridian Gate, and I'd like to give you a brief introduction of the Forbidden City.
 
 The Forbidden City was located in the center of Beijing. It was built in 1420 during the reign of the Emperor Yongle of the Ming Dynasty. The Emperor Yongle made up his mind to move the capital from Nanjing to Beijing.
 
@@ -12,7 +12,7 @@ In 1987, the Forbidden City was listed as the World Culture Heritage.
 
 The Forbidden City is the largest man-made palace in the world today. It is 961 meters long from south to North, and 753 meters wide from east to west. The Forbidden City is surrounded by 10 meters high city walls, and 52 meters wide river running around it.
 
-The Forbidden City was called the purple Forbidden City. Why is That?
+The Forbidden City was called the purple Forbidden City. Why is that?
 
 The Chinese emperor believed that he was the son of the god, and the place where he lived should be decorated in purple as well.
 
@@ -48,13 +48,13 @@ I'd like to give a brief introduction of the Hall of Supreme Harmony.
 
 The Hall of Supreme Harmony is the largest、tallest and most important structure with the highest level in the Forbidden City.
 
-It was first built in 1420 called the Hall of Heavenly Worship, And was renamed as the Hall of Imperial Supremacy in the Ming Jiajing's period, and the present one was rebuilt in 1695 named as the Hall of Supreme Harmony.
+It was first built in 1420 called the Hall of Heavenly Worship. During the reign of Emperor Jiajing of the Ming Dynasty, it was renamed as the Hall of Imperial Supremacy. The present one was rebuilt in Qing Dynasty named as the Hall of Supreme Harmony.
 
 The Hall of Supreme Harmony is 11 rooms in width and 5 rooms in depth.
 
 Once we walk along the staircase of the marble terrace, you will see 18 incense burners, and they symbolized 18 provinces of the Qing Dynasty.
 
-Now please follow me to take a look inside the Hall of Supreme Harmony. You will see the gilded throne with 13 dragons, placed on the platform in the middle of hall.
+Now, please follow me to take a look inside the Hall of Supreme Harmony. You will see the gilded throne with 13 dragons, placed on the platform in the middle of hall.
 
 Beside those, no one will miss the 6 gilded columns painted with coiling dragons on both sides of the throne.
 

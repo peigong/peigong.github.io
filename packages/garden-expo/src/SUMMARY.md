@@ -1,6 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
+- [讲解提纲](./note.md)
 - [北京园博园](./BeijingGardenExpo/README.md)
     - [园博湖（永定河）]()
     - [锦绣谷]()
