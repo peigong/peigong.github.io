@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基本陈列：第一单元 江河道渠 水运初兴 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/basic/basic-1.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第一单元-江河道渠-水运初兴"><a class="header" href="#第一单元-江河道渠-水运初兴">第一单元 江河道渠 水运初兴</a></h1>
+<ul>
+<li>宫廷乐舞人物画像石，曹操</li>
+</ul>
+<h2 id="作册奂鼎"><a class="header" href="#作册奂鼎">作册奂鼎</a></h2>
+<ul>
+<li>"太保墉燕"铭文，意为"太保召公来到燕地建设都城"。</li>
+<li>作册奂可能是当时的史官或书记员，太保召公筑城后，在燕侯宫举行祭礼，赏赐贝币给作册奂，作册奂用这些贝币铸造了礼器。</li>
+<li>作册奂器作为西周燕国的宫廷礼器，其艺术风格也体现了周文化与地方特色的融合。</li>
+<li>掌握准确的合金配比、高温熔炼技术和精密的浇铸工艺。</li>
+<li>在青铜器上铸出清晰规整的长篇铭文，需要在陶范上精细刻写文字，并控制好浇铸时的温度和速度。</li>
+</ul>
+<h2 id="吴邗hán沟"><a class="header" href="#吴邗hán沟">吴，邗（hán）沟</a></h2>
+<ul>
+<li>邗沟南起扬州以南的长江，北至淮安以北的淮河，是最早有明确记载的运河。</li>
+<li>春秋末期（公元前486年），吴王夫差为了北上伐齐，开凿邗沟。</li>
+<li>邗沟，邗城，扬州，广陵。</li>
+<li>扬州、淮安两座历史文化名城因邗沟的开凿而诞生。</li>
+</ul>
+<h2 id="魏鸿沟"><a class="header" href="#魏鸿沟">魏，鸿沟</a></h2>
+<ul>
+<li>战国时魏惠王十年（前361年），为了战争需要，曾两次兴工，开挖了鸿沟。</li>
+<li>鸿沟是中国古代最早沟通黄河和淮河的人工运河，以魏都大梁为中心。</li>
+<li>鸿沟西自荥阳以下引黄河水为源，向东流经中牟、开封，折而南下，入颍河通淮河，把黄河与淮河之间的济、濮、汴、睢、颍、涡、汝、泗、菏等主要河道连接起来，构成鸿沟水系。</li>
+<li>《史记·项羽本纪》：项王乃与汉约，中分天下，割鸿沟以西者为汉，鸿沟而东者为楚。</li>
+</ul>
+<h2 id="秦灵渠"><a class="header" href="#秦灵渠">秦，灵渠</a></h2>
+<ul>
+<li>灵渠联接了长江和珠江两大水系，构成了遍布华东华南的水运网。</li>
+<li>灵渠流向由东向西，将兴安县东面的海洋河（湘江源头，流向由南向北）和兴安县西面的大溶江（漓江源头，流向由北向南）相连。</li>
+<li>湘江水在分水塘经铧嘴分流和大小天坪坝引流后，约7分水流入北渠，在高塘村与湘江故道相会，约3分水流入南渠入漓江。</li>
+<li>灵渠的凿通，沟通了湘江、漓江，打通了南北水上通道，为秦王朝统一岭南提供了重要的保证，大批粮草经水路运往岭南，有了充足的物资供应。</li>
+<li>公元前214年，即灵渠凿成通航的当年，秦兵就攻克岭南，随即设立桂林、象郡、南海3郡，将岭南正式纳入秦王朝的版图。</li>
+</ul>
+<h2 id="汉漕渠"><a class="header" href="#汉漕渠">汉，漕渠</a></h2>
+<ul>
+<li>汉漕渠，是汉武帝于元光六年(公元前129年)采纳大司农郑当时的建议，渭河之南开凿一条从长安至黄河专门运输粮食的漕渠，命齐人水工徐伯率领万人历时三年修筑而成。</li>
+</ul>
+<h2 id="三国曹操白沟"><a class="header" href="#三国曹操白沟">三国，曹操，白沟</a></h2>
+<ul>
+<li>曹操开白沟，兴建了沟通黄河和海河的第一条区间运河。</li>
+<li>《三国志·武帝纪》载：“九年春正月，济河，遏淇水入白沟以通粮道。”</li>
+<li>白沟开凿于东汉建安九年（204年），在淇水入黄河处下大枋木使成堰，遏淇水入春秋战国时期的黄河古道以成渠，以淇水、荡水、洹水为上源，利用纵贯河北平原的清河故道至今青县附近，注入滹沱河。</li>
+<li>《三国志·武帝纪》中：“公将征之，凿渠，自呼沲入泒水，名平虏渠。又从泃河口凿，入潞河，名泉州渠，以通海。”</li>
+<li>平虏渠开凿于建安十一年（206年），从今青县东北引滹沱河水北入泒(gū)水。</li>
+<li>泉州渠也开凿于建安十一年，南起泉州县（今天津市武清西南），上承潞河，下入鲍丘水，还从沟河口向东凿渠入濡水，称为新河。</li>
+<li>在曹操得胜回师，途经碣石山时，写下了充满宏伟抱负和浪漫主义情怀的不朽诗篇《观沧海》。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../note/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../note/basic/basic-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../note/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../note/basic/basic-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

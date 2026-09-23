@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>独乐园 - 恭王府 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">恭王府 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/du-le-yuan.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="独乐园"><a class="header" href="#独乐园">独乐园</a></h1>
+<p>独乐园为北宋政治家司马光约熙宁六年（1073年）在洛阳尊贤坊北修建的私人园林，位于今河南省洛阳市东南伊洛河间诸葛镇司马村（原古建村）。园林占地二十亩，以水景为核心，环列读书堂、钓鱼庵、采药圃、种竹斋、弄水轩、见山台、浇花亭七景，李格非《洛阳名园记》评其“洛中诸园最简素”。</p>
+<p>司马光退居洛阳期间在此隐居，于读书堂地下“凉洞”中主持编纂完成《资治通鉴》，苏轼曾作《司马君实独乐园》诗描述园中“花竹秀而野”的景致。园内种植药材、花卉并悬挂植物名牌，设有茶饮供游人休憩，仆人吕直曾用赏钱自建井亭。明代仇英据《独乐园记》绘制《独乐园图》，再现园景与司马光著书场景。</p>
+<p>现存“司马光独乐园遗址”提示碑，当地计划重建司马光文化园。琴之界古琴谱库收录同名琴曲，歌词描绘园内隐居生活。</p>
+<h2 id="文献记载"><a class="header" href="#文献记载">文献记载</a></h2>
+<p>《洛阳名园记》载《独乐园》云：司马温公在洛阳，自号“迂叟”，谓其园曰：“独乐园”，园卑小，不可与它园班。其日：“读书堂”者，数十椽屋;“浇花亭”者，益小;“弄水”、 “种竹”轩者，尤小。日：“见山台”者，高不逾寻丈;日：“钓鱼庵”、日“采药圃”者，又特结竹杪落蕃蔓草为之尔。温公自为之序，诸亭、台诗，颇行于世。所以为人欣慕者，不在于园耳。</p>
+<h2 id="园林解析"><a class="header" href="#园林解析">园林解析</a></h2>
+<h3 id="地点"><a class="header" href="#地点">地点</a></h3>
+<p>明嘉靖《河南郡志》载：“独乐园在洛阳城南天门街东，去城五里。”清嘉庆《洛阳县志》载：“独乐园遗址在洛阳城东南伊洛河间司马街村。”该村清《重修关帝庙并金妆神像碑记》：“今洛阳城东南常安村(即司马街)，乃司马温公独乐园故址也。”《园记》中所说：“在尊贤坊北关。”村人传说：古时村南有“尊贤坊”石牌坊，以此印证。1935年出版之李健人《洛阳古今谈》，亦云独乐园故址在此，明时毕亨曾于遗址上筑园，称毕中丞园。</p>
+<h3 id="面积"><a class="header" href="#面积">面积</a></h3>
+<p>“二十亩”(合1.3公顷)，包括宅居。苏轼诗说的“中有五亩园”，言其小，非仅“五亩”。根据他的声望地位园可再大，但“不可与他园班”。</p>
+<h2 id="使用功能"><a class="header" href="#使用功能">使用功能</a></h2>
+<p>园居，有“读书堂”是写《资治通鉴》的地方;有“采药圃”是种中草药的地方;有“钓鱼庵”是供休憩之所;有“种竹斋”是夏日纳凉之所;有“浇花亭”、“弄水轩”是闲适娱目之地;有“见山台”是登高远眺，借南山之景入园的远望高台;有药圃、花圃以供游赏。</p>
+<h2 id="景物结构"><a class="header" href="#景物结构">景物结构</a></h2>
+<p>以水池为中心，建筑南北布置，堂北又有水池，中有岛，岛上植竹。其他景物环列，周边配置花圃、林木。是一个以水景为构图中心，大量花木环列，并在岛上植竹，突出竹林景观，突出植物景观的水景园林。</p>
+<h2 id="流传琴曲"><a class="header" href="#流传琴曲">流传琴曲</a></h2>
+<p>《新传理性元雅》中记载：司马温公居洛，於国子监之侧故营地，创独乐园而赋此。</p>
+<h3 id="琴曲歌词内容"><a class="header" href="#琴曲歌词内容">琴曲歌词内容</a></h3>
+<p>第一段靑山在屋上，流水在屋下。中有五畆园，花竹秀而野。花香袭杖履，竹色侵盏斚。樽酒乐馀春，棋局消长夏。</p>
+<p>第二段洛阳古多士，风俗犹尔雅。先生卧不出，冠盖倾洛社。虽云与众乐，中有独乐者。才全德不形，所贵知我寡。</p>
+<p>第三段先生独何事，四海望陶冶。儿童诵君实，走卒知司马。持此将安归，造物我不舍。名声逐我辈，此病天所赭。抚掌笑先生，年来效暗哑。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="note/qing-shi-gao.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="he-shen.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="note/qing-shi-gao.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="he-shen.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

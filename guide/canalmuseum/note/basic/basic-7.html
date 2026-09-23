@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基本陈列： - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/basic/basic-7.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第七单元-运河新生-造福京城"><a class="header" href="#第七单元-运河新生-造福京城">第七单元 运河新生 造福京城</a></h1>
+<ul>
+<li>综合施治：灌溉、输水、排水、防洪、排涝、观光、航运</li>
+<li>十八勇士突击队</li>
+<li>永定河引水渠</li>
+<li>京密引水渠</li>
+<li>南水北调中线工程</li>
+<li>一定要根治海河</li>
+</ul>
+<h2 id="十三陵水库"><a class="header" href="#十三陵水库">十三陵水库</a></h2>
+<ul>
+<li>十三陵水库的设想和修建规划。工程原定在第三个五年计划期间，由国家投资一千九百万元建设。</li>
+<li>1957年农村社会主义改造任务基本完成，广大农民建设社会主义的积极性普遍高涨。昌平区委根据群众呼声，提出了修建十三陵水库的计划。</li>
+<li>1958年1月21日，十三陵水库修建工程破土动工，最初参加建设的人员有昌平民工8000余人和义务劳动大军约2000人。虽然人们劳动热情高涨，但施工进度缓慢。</li>
+<li>为赶在汛期到来之前完成筑坝任务，1958年4月，水利电力部和北京市委决定再次增加施工力量，动员全市工、农、商、学、兵各行各业参加义务劳动，施工劳动力增至5万人。</li>
+<li>4月28日，国务院副总理贺龙、聂荣臻和北京军区司令员杨成武亲自到工地视察后提出，动员驻京部队和院校力量支持水库建设。</li>
+<li>1958年5月8日，北京市委批准水库党委由市委直接领导，指挥部按部队形式组织，从此施工人数猛增至10万。</li>
+<li>1958年5月25日下午，毛泽东、刘少奇、周恩来、朱德等中央领导人，到十三陵水库工地参加义务劳动。</li>
+<li>1958年6月30日，经过160天的修建，十三陵水库竣工。</li>
+</ul>
+<h2 id="郭沫若十三陵水库诗词"><a class="header" href="#郭沫若十三陵水库诗词">郭沫若十三陵水库诗词</a></h2>
+<p>郭沫若写“十三陵水库”的诗词，主要集中在一九五八年建库前后，可分成三类：西江月词、七一落成书怀组诗、纪念碑/其他短章。下面按可核对出处列。</p>
+<h3 id="一西江月颂十三陵水库二首"><a class="header" href="#一西江月颂十三陵水库二首">一、《西江月·颂十三陵水库》二首</a></h3>
+<p>最早见一九五八年《红旗》第3期，后入《沫若诗词选》；纪念碑基座亦刻。</p>
+<h4 id="其一通行本"><a class="header" href="#其一通行本">其一（通行本）</a></h4>
+<p>改变自然面貌，造成湖水山腰。高堤大坝锁长蛟，不准龙王乱跑。
+勇士堂堂十八，光荣榜上名标。英雄人物看今朝，十万大军欢笑。</p>
+<h4 id="其二"><a class="header" href="#其二">其二</a></h4>
+<p>领袖带头挖土，人民不亦乐乎！三山五岭齐欢呼，苦战何能算苦？
+要与洞庭比美，昆明湖水不孤。煌煌五字垂千古，曰“十三陵水库”。</p>
+<p>异文注意：部分手迹释文、转载把其一写成“改造/改变自然面貌”“勇士三千八百万”等，其二偶有“领袖带头挖坑”“土人民不亦乐乎”之类OCR错字； 正式引用以《红旗》/《沫若诗词选》或纪念碑刻本为准。</p>
+<h3 id="二七一落成典礼书怀组诗"><a class="header" href="#二七一落成典礼书怀组诗">二、七一落成典礼书怀组诗</a></h3>
+<p>1958年7月1日落成，郭沫若写组诗，常见题名：</p>
+<ul>
+<li>《雄师百万挽狂澜——“七一”参加十三陵水库落成典礼书怀》（八首，七言）</li>
+<li>人民日报1958年7月2日第1版刊其赴典礼并载诗，末首可核：</li>
+</ul>
+<p>科技文工大有人，洪炉炼罢换金身。精神生产将逾昔，创造终当日日新。</p>
+<p>首首示例（流传本）：</p>
+<p>雄师百万挽狂澜，五载工程五月完。从此十三陵畔路，四山环水水环山。</p>
+<p>其余六首多写筑坝、植树、养鱼、发电、献礼等；若要做文献校勘，建议查《郭沫若全集》文学编相关卷或人民日报1958-07-02全版，网络转摘常有缺句。</p>
+<h3 id="三纪念碑颂词其他"><a class="header" href="#三纪念碑颂词其他">三、纪念碑颂词/其他</a></h3>
+<ul>
+<li>十三陵水库纪念碑碑座（基座）据多处资料刻郭沫若《西江月·颂十三陵水库》，即上面二首； 也有资料泛称“碑座刻郭沫若颂词”。</li>
+<li>另有低权重资料称基座北侧刻四言《十三陵水库颂》长诗六十行，但未见《郭沫若全集》可靠印证，暂不列入“确证作品”，只作“待核碑刻”处理。</li>
+<li>1978年《忆江南·北京游七首》有“十三陵水库”一注，提“水库颂诗传千古”，但该组是北京综游词，不是专门水库诗。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../note/basic/basic-6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../note/basic/basic-8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../note/basic/basic-6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../note/basic/basic-8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Q&amp;A: The temple of heaven - Engilsh Guide - VET.PG(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Engilsh Guide - VET.PG(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/2025/QA-The-Temple-of-Heaven.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="qa-the-temple-of-heaven"><a class="header" href="#qa-the-temple-of-heaven">Q&amp;A: The temple of heaven</a></h1>
+<ol start="121">
+<li>When did the Ming Dynasty change the joint worship of heaven and earth to separate worship?</li>
+</ol>
+<p>[Reference Answer] In the 9th year of the Jiajing reign of the Ming Dynasty(1530 AD)</p>
+<ol start="122">
+<li>The function of the Huangqian Hall in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] To store the divine tablets used in the grand sacrificial ceremonies(enshrining the Supreme Emperor of Heaven and the accompany ancestral spirit tablets).</p>
+<ol start="123">
+<li>The function of the Long Corridor in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] The Long Corridor served as a passage for transporting sacrificial offerings to prevent them from being contaminated by rain, snow, wind or sand.</p>
+<ol start="124">
+<li>Three concentric circles of columns inside the Hall of Prayer for Good Harvest, Temple of Heaven.</li>
+</ol>
+<p>Ref.:
+Outer 12 eave-columns = 12 double-hours
+Middle 12 "gold" columns = 12 months
+Inner 4  dragon-well columns = the four seasons</p>
+<ol start="125">
+<li>The origin of the western corner gate in the courtyard of the Huangqian Hall in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] Emperor Qianlong was a long-lived emperor in Chinese history. However, due to his old age, he found it difficult to perform the sacrificial rituals. Eventually, he came up with a solution: opening a small gate on the west side of the Altar of Prayer for Grain, significantly shortening the distance. It was stipulated that only those over 70 years old could use this gate, hence it was called the "Gate of Antiquity"</p>
+<ol start="126">
+<li>The four acoustic phenomena in the Temple of Heaven'</li>
+</ol>
+<p>[Reference Answer] Echo Wall, Triple-Sound Stones, Conversation Stone, And Heaven's Center Stone.</p>
+<ol start="127">
+<li>How many emperors from the Ming and Qing Dynasties performed sacrificial ceremonies at the Temple of Heaven, and how many times in total?</li>
+</ol>
+<p>[Reference Answer]22 emperors, 654 times.</p>
+<ol start="128">
+<li>The numbers and their meanings contained in the three tiers of the Circular Mound Altar in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] All centered around the number "nine", The number of each tier's surface, steps, and railings are all nine or multiples of nine(e.g., the upper tier has a diameter of nine zhang, the middle tier 15 zhang, and the lower tier 21 zhang; the differences between these numbers are all six, corresponding to the "numbers of heaven and earth"), symbolizing the "supreme dignity of the emperor".</p>
+<ol start="129">
+<li>The date of the first grand sacrificial ceremony held at the Temple of Heaven in history.</li>
+</ol>
+<p>[Reference Answer] On the Jiaxu day of the first month of the 19th years of the Yongle reign(the 11th day of the first lunar month January 24, 1421), The Youngle emperor led civil and military officials to perform the grande sacrifice to heaven and earth at the Beijing Altar of Heaven and Earth, officially moving the capital to Beijing.</p>
+<ol start="130">
+<li>The height of the Hall of Prayer for Good Harvests in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] The hall itself is 31.8 meters high(99 chi, Nine cun, and Nine fen), approximately 32 meters. The three tiered base adds another 6.3 meters, making the total height 38.1 meters.</p>
+<ol start="131">
+<li>The content of the plaque inside the Ningxi Hall of the Divine Music Administration in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] Jade Vibrations and Golden Sounds</p>
+<ol start="132">
+<li>The Seven-Star Stones in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] To the southeast of the Long Corridor, there are eight large bluestones with artificially carved mountain patterns, known as the "Seven Star-Stones". They represent the seven peaks of Mount Tai. The small blue-stone to the northeast of the Seven-Star stones was added during the Qianlong reign after the Kangxi Emperor sent officials to investigate the origins of Mount Tai's veins and determined that Mount Tai originated from the Changbai Mountains in the northeast. This was used to express the idea of Manchu and Han unity and to signify that the Manchus were also part of China.</p>
+<ol start="133">
+<li>The year the Temple of Heaven was inscribed on the UNESCO World Heritage list.</li>
+</ol>
+<p>[Reference Answer]1998.</p>
+<ol start="134">
+<li>The furnishings on the moon platform of the main hall of the Palace of Abstinence in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] To the south: The Time Stele Pavilion; to the north: the Abstinence Bronze Man Pavilion.</p>
+<ol start="135">
+<li>The orientation of the main building of the Palace of Abstinence in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] Facing east.</p>
+<ol start="136">
+<li>The spirit tablets enshrined in the main hall of the Imperial Vault of Heaven in the Temple of Heaven.</li>
+</ol>
+<p>[Reference Answer] The spirit tablet of the Supreme Emperor of Heaven;(and during the Qing dynasty, the spirit tablets of eight ancestral emperors).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../2025/The-Temple-of-Heaven.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../2025/The-Temple-of-Heaven.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

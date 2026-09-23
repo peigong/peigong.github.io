@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>成都园 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/cheng-du.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="成都园"><a class="header" href="#成都园">成都园</a></h1>
+<p>北京园博园的成都园属于第九届中国（北京）国际园林博览会（2013年，丰台永定河片区）的城市展园，落在5号门东侧展园群，整体不走“杜甫草堂/锦官城”那种文人线，而是以“熊猫之乡”为核心，参照成都大熊猫繁育研究基地做山林—湖区—展室小园子。</p>
+<h2 id="一基本盘"><a class="header" href="#一基本盘">一、基本盘</a></h2>
+<ul>
+<li>届次/园区：第九届北京园博，城市/现代类展园（5号门东侧一组，与南宁、海口、株洲、湘潭、长沙、常德、西宁、兰州等邻近）。</li>
+<li>位置：毗邻园区河堤路B36地块，靠近园博湖/永定河一侧。</li>
+<li>面积：展园约2000㎡，建筑约200㎡，总投资约500万元。</li>
+<li>建设：成都市园林建设处筹建，2012年4月开工、10月中下旬基本竣工，完成总工程量约96％后补植地被灌木；主体含地形整理、土方回填、熊猫展览馆。</li>
+<li>主题：熊猫之乡／大熊猫文化创意，展现成都熊猫文化、自然山水、山林与城市和谐共生。</li>
+</ul>
+<h2 id="二总体格局造型门区湖区展示区"><a class="header" href="#二总体格局造型门区湖区展示区">二、总体格局：造型门区＋湖区＋展示区</a></h2>
+<p>不按中轴礼制，也不按江南围合，分三块、相对独立又串成环：</p>
+<ul>
+<li>造型门区：入口以熊猫基地建筑语汇做造型门，不建重檐古建，用圆润、仿生、轻构的“熊猫馆式”门面先给主题；</li>
+<li>湖区：人工小水景＋缓坡绿地，承担“山林—溪流—湖面”的野趣，配合熊猫栖息地湿润感；</li>
+<li>展示区/熊猫展览馆：约200㎡建筑主体，展会期作熊猫展养和科普，后期作为永久展园建筑可看结构、看场景。</li>
+</ul>
+<p>整体逻辑是“把成都熊猫基地缩微搬进北京”：进门像进保护研究中心，再走湖区模拟原生竹林溪谷，最后到展馆看/回望熊猫。</p>
+<h2 id="三主要景点"><a class="header" href="#三主要景点">三、主要景点</a></h2>
+<p>1）造型门与熊猫符号</p>
+<p>入口不写“锦官城”大牌坊，而用熊猫元素做门区造型——圆拱、竹木、仿岩壁都可能出现，资料口径是“各种造型和元素源于熊猫基地建筑造型与生态环境”。 全园小品、铺装、坐具都可嵌入熊猫剪影，和西安汉阙、鄂州铜镜、海口钟楼那种“城市地标型”入口形成反差。</p>
+<p>2）湖区与山林缓坡</p>
+<p>湖区不大，功能是把“岷山—都江堰—熊猫栖息地”的湿润感转译出来：缓坡植绿、叠小水、配滩石，不走北方硬驳岸。展会期以自然生态为主，后期常设园则以观赏水面＋周边林地呈现“山林与城市和谐”。</p>
+<p>3）熊猫展览馆（主建筑）</p>
+<p>约200㎡，建设期称“主景观熊猫展览馆”。2013会期实际进驻两只大熊猫“琪琪”“枝枝”，从四川空运进京，成为当时成都园最吸流的点；馆内/周边按基地场馆思路做观察、科普、遮荫。 现在作为永久园博园，是否仍有活体以园方当日公告为准，通常只看建筑、景观和外场熊猫雕塑。</p>
+<p>4）竹与川西植物群</p>
+<p>虽然最终方案偏熊猫而非草堂，但植物仍走“四川意向”：竹林、芙蓉（成都市花）、本土乔木做遮荫，湖区湿生植物补南向感。北京露天过冬会用可替代/保护养护，冬季未必全量呈现真竹芙蓉，以现场为准。</p>
+<p>5）生态科普氛围</p>
+<p>相比传统展园讲历史，成都园更讲“人与自然和谐”：熊猫食谱、栖息地保护、成都“公园城市/熊猫之都”形象用展板或小品带出，不靠大量文字碑刻。</p>
+<h2 id="四文化主线怎么读"><a class="header" href="#四文化主线怎么读">四、文化主线怎么读</a></h2>
+<ul>
+<li>主线索：大熊猫＝成都最国际化的城市名片，比“锦官城/草堂/武侯”更直接面向园博游客；</li>
+<li>自然线：岷山栖地、竹林、溪湖，对应熊猫基地“人工繁育＋半野放展示”；</li>
+<li>城市线：用“熊猫之乡”带成都生态城市、公园城市形象，而不是只做旅游符号；</li>
+<li>补充：早期北京园博成都方案曾有过“天府谐园/蜀巷/华西钟楼/金沙太阳神鸟/芙蓉”的川派文人版 ，但2013竣工落地改成熊猫基地版，游园时别按“杜甫草堂还原”预期走。</li>
+</ul>
+<h2 id="五植物与材质"><a class="header" href="#五植物与材质">五、植物与材质</a></h2>
+<ul>
+<li>乔木：以北京可越冬乡土树打底，局部配芙蓉、竹类、银杏等成都意向（冬季/会展期养护不同）；</li>
+<li>水面：小湖＋滩石＋湿生植物，弱硬化、强生态；</li>
+<li>建筑：熊猫馆式轻构/仿岩、造型门用圆润几何，不仿古宫室；</li>
+<li>小品：熊猫雕塑、竹篱、栖架意向，整体低龄友好、拍照向。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="hai-kou.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="zun-yi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="hai-kou.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="zun-yi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

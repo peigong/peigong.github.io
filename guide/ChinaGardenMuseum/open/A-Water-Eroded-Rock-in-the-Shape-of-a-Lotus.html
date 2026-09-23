@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>青莲朵 - 中国园林博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国园林博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/open/A-Water-Eroded-Rock-in-the-Shape-of-a-Lotus.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="青莲朵"><a class="header" href="#青莲朵">青莲朵</a></h1>
+<p>青莲朵是圆明园长春园茜园旧物，现存于中国园林博物馆。该石为南宋时期遗存太湖石，高约1.45至1.7米，表面刻有乾隆御题"青莲朵"三字，原为杭州德寿宫"芙蓉石"，因形似莲花得名。南宋高宗赵构曾于德寿宫向孝宗介绍此石，明代画家孙杕、蓝瑛合作绘制《梅石图》并刻碑立于石旁。</p>
+<p>该石于乾隆十六年（1751年）被南巡途中的乾隆帝发现，次年运至北京长春园茜园内并更名，后于乾隆三十二年在石侧重刻梅石碑。原明代梅石碑与摹刻碑分置杭州、圆明园两地。民国时期，青莲朵石从圆明园迁至中山公园，2013年转移至中国园林博物馆保存，其原配《梅石图》石碑现存于北京大学校园。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>青莲朵现存于中国园林博物馆，是一块800多年历史的太湖石，高约1.45至1.7米，石上沟壑遍布，质地细密，上刻乾隆御笔"青莲朵"三字。石表风化严重，原题诗已漫漶，但“青莲朵”题名仍清晰可见。此石下垫荷叶形汉白玉石座。据考证，这座太湖石原系南宋临安（今杭州）德寿宫中故物，原名“芙蓉”。该石历经南宋德寿宫、清代圆明园长春园茜园、民国时期的中央公园（今中山公园），最终于2013年入藏中国园林博物馆。乾隆十六年（1751年）奉皇太后第一次南巡时，在杭州吴山的宗阳宫游览，发现此奇石，十分喜爱，并与此石结缘，传为佳话。</p>
+<p>与此石渊源深厚的明代《梅石图》石碑（梅石碑），曾一同置于圆明园茜园，后移至燕京大学（今北京大学）校园保存。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<p>青莲朵，原名芙蓉石，其历史可追溯至南宋时期，原为宋高宗赵构德寿宫后苑旧物。历经宋、明、清、民国至今，其地点、名称与相伴之物几经变迁。</p>
+<p>南宋时期（约12世纪），青莲朵原名芙蓉石，置于宋高宗赵构退位后颐养天年的德寿宫后苑中，与一株古老的苔梅相伴，深得高宗喜爱。</p>
+<p>明代，德寿宫逐渐荒废，古梅枯死，惟余芙蓉石。明末画家蓝瑛与孙杕合作绘制《梅石图》（蓝瑛画石，孙杕绘梅），后刻碑立于石旁，世称“梅石碑”。</p>
+<p>清乾隆十六年（1751年），乾隆帝首次南巡至杭州德寿宫旧址，抚摩芙蓉石并题诗。浙江地方官于次年（1752年）将石运抵北京。乾隆帝将其安置于圆明园长春园茜园内，并赐名“青莲朵”，御笔题字刻于石上。</p>
+<p>清乾隆三十年（1765年），乾隆帝第四次南巡时，发现杭州原梅石碑已断裂模糊，且考证出《梅石图》实为蓝瑛、孙杕合作，遂命人依据旧迹重摹新碑，置于杭州原址。乾隆三十二年（1767年），为在京城延续梅石之缘，又命人再摹刻一块梅石碑，置于圆明园茜园“青莲朵”石侧相伴。</p>
+<p>清咸丰十年（1860年），英法联军火烧圆明园，“青莲朵”与园内的梅石碑幸免于难。</p>
+<p>民国时期（约1915年至1927年间），“青莲朵”被移至新建立的中央公园（后改名中山公园）陈列。原置于圆明园的梅石碑则被移至燕京大学（今北京大学）校园。</p>
+<p>2013年5月12日，“青莲朵”从中山公园移藏至新落成的中国园林博物馆，成为该馆的重要馆藏。</p>
+<p>与之相关的梅石碑，杭州原碑已于20世纪六七十年代被毁，现存于杭州孔庙（碑林）的为清代重摹碑；北京大学的梅石碑则为圆明园旧物。</p>
+<h2 id="文物特征"><a class="header" href="#文物特征">文物特征</a></h2>
+<p>青莲朵为太湖石，主要成分为石灰岩，经自然风化水蚀形成，石表风化严重，有苍拙劲朴之感。该石玲珑坳坎，孔洞穿插，褶皱横陈，无峰峦之形，而有团云涌雪之势，其形似莲花（芙蓉），是“瘦、皱、漏、透”文人赏石标准的体现。</p>
+<p>石高约1.45至1.7米，长约2.28米，厚最大值约1.23米，周长最大值约5.72米。台座为房山青白石海棠式束腰台座，长约222.5厘米，宽140厘米，高81.5厘米。</p>
+<p>石左侧刻有乾隆御笔“青莲朵”三字，清晰可见。原石上另有乾隆御题诗及大臣汪由敦、梁诗正的赋诗刻字，现已漫漶难辨。</p>
+<h2 id="相关文物"><a class="header" href="#相关文物">相关文物</a></h2>
+<p>梅石碑是明代蓝瑛、孙杕合绘《梅石图》的刻石，原立于杭州德寿宫芙蓉石旁。乾隆十六年（1751年）南巡时发现此碑。乾隆三十年（1765年）因原碑残损，命人重摹两块，一块送回杭州原址（后毁，现存杭州孔庙的为清代重摹碑），另一块置于圆明园青莲朵旁。圆明园罹劫后，北京梅石碑（碑身）幸存，现存于北京大学未名湖畔。梅石碑成为后人怀念南宋文化的重要标志，并用于探寻梅石故事。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../open/sui-han-san-you.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ancient/Populus-euphratica-Oliv.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../open/sui-han-san-you.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ancient/Populus-euphratica-Oliv.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

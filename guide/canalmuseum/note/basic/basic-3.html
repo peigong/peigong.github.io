@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基本陈列：第三单元 辽金建都 漕运通济 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/basic/basic-3.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第三单元-辽金建都-漕运通济"><a class="header" href="#第三单元-辽金建都-漕运通济">第三单元 辽金建都 漕运通济</a></h1>
+<ul>
+<li>938年，辽太宗升幽州为南京。改革官制，划分南北二面，实行胡汉分治。北面官以契丹旧制治契丹人，南面官以汉制治汉人。</li>
+<li>萧太后运粮河，通州张家湾汇入北运河</li>
+<li>㶟(lěi)，上游即今桑干河，中游即今永定河，下游即今海河。</li>
+<li>战国蓟城到唐幽州，辽南京到金中都。永定河及其故道形成的莲花池水系，作为主要水源。</li>
+<li>中都园林：琼岛春阴，金山行宫</li>
+<li>卢沟桥，广利桥</li>
+<li>石宗璧墓。以大定十七年四月四日，葬于通州潞县台头村之新茔。第一次在北京地区发现“通州”字样的实物。</li>
+<li>马蹬壶</li>
+<li>通过运河茶风北传</li>
+<li>耀州窑，磁州窑</li>
+<li>北方瓷器，运河运输南方瓷器</li>
+<li>黄釉马蹬壶</li>
+<li>大梁，汴梁，汴河之梁</li>
+<li>北宋御河，隋唐永济渠故道。</li>
+<li>塘泺（luò）防线。深不可以舟行，浅不可以徒步。</li>
+<li>南宋建炎二年（1128年），东京守将杜充决黄河阻金兵。黄河改道，经泗水入淮河。</li>
+<li>坐龙。蹲龙。金都城、皇陵、行宫。</li>
+</ul>
+<h2 id="海陵王完颜亮"><a class="header" href="#海陵王完颜亮">海陵王完颜亮</a></h2>
+<ul>
+<li>升潞县为通州。南通州北通州。利用北宋御河。</li>
+<li>贞元元年（1153年），将都城从上京会宁府迁至燕京，改称中都。</li>
+<li>正隆元年（1156年），迁葬始祖以下诸帝至大房山。</li>
+<li>正隆二年（1157年），毁上京旧宫殿和贵族府第及储庆寺。</li>
+</ul>
+<h2 id="湖州石家铜镜和湖州真石家铜镜"><a class="header" href="#湖州石家铜镜和湖州真石家铜镜">湖州石家铜镜和湖州真石家铜镜</a></h2>
+<ul>
+<li>
+<p>宋代因避宋太祖祖父赵敬的名讳，将“镜”字改为“照”或“鉴”，故称铜镜为“照子”或“铜鉴”。</p>
+</li>
+<li>
+<p>宋代铸镜业由于受到政府连年用兵，推行铜禁制度，以及多种手工业新发展的冲击，铜镜大都质地轻薄，更注重实用。</p>
+</li>
+<li>
+<p>湖州镜是宋代最具特点的铜镜类型，始铸于北宋，兴盛于南宋，元代中衰，明代复兴。</p>
+</li>
+<li>
+<p>湖州镜制品大多专注实用，不尚花纹，多为素背，镜背铸有长方形印章式的商标性质铭记，标明铸镜作坊字号或工匠名，形制多作葵花形，亦有圆形和方形亚字形、桃型。</p>
+</li>
+<li>
+<p>湖州镜铭文详细记录产地、商号、铸造者，兼具广告与防伪功能。其铸造分官铸和私铸两大类，私铸工坊中以石家影响最大。</p>
+</li>
+<li>
+<p>石家是宋代著名的铸镜世家，以其世代相承、家族经营的特色闻名。</p>
+</li>
+<li>
+<p>铭文牌记常位于镜钮左侧或右侧，阳文楷书。</p>
+</li>
+<li>
+<p>铭文的内容主要是铜镜的生产地点、生产商、材质等，这是宋代宣传广告的方式在铜镜上的一种体现。</p>
+</li>
+<li>
+<p>类似的牌记在宋代瓷器、刻本等文物中都有出现，可以看出宋代各行各业都有私家作坊，生产品种单一，专业性很强。</p>
+</li>
+<li>
+<p>自主产权意识高，自己生产的东西要打上自家名号，为防止伪冒，甚至打上“真”、“真正”等字样。</p>
+</li>
+<li>
+<p>牌记在铜镜上的出现，改变了铜镜铭文的性质，也成为湖州镜的特征之一。</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../note/basic/basic-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../note/basic/basic-4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../note/basic/basic-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../note/basic/basic-4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

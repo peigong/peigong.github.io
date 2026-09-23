@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基本陈列：第二单元 渠通幽州 多元融合 - 北京大运河博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京大运河博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/basic/basic-2.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第二单元-渠通幽州-多元融合"><a class="header" href="#第二单元-渠通幽州-多元融合">第二单元 渠通幽州 多元融合</a></h1>
+<ul>
+<li>
+<p>含嘉仓：位于洛河中下游的隋唐洛阳城，是唐朝时期国家大型皇家粮仓，是用作盛纳京都以东州县所交租米的皇家粮仓。</p>
+</li>
+<li>
+<p>回洛仓、黎阳仓和瓦岗山，凭险设关，沿河建仓。</p>
+</li>
+<li>
+<p>韦坚，刘晏</p>
+</li>
+<li>
+<p>周世宗柴荣平淮南，疏通运河</p>
+</li>
+<li>
+<p>盐粮所系，后唐幽州刺史赵德均，开凿东南河</p>
+</li>
+<li>
+<p>白釉侍从甬</p>
+</li>
+<li>
+<p>民族竞汇，关陇贵族和拓拔皇后</p>
+</li>
+<li>
+<p>民族竞汇，晋王李克用</p>
+</li>
+</ul>
+<h2 id="隋唐大运河"><a class="header" href="#隋唐大运河">隋唐大运河</a></h2>
+<ul>
+<li>汴河怀古（唐，皮日休）尽道隋亡为此河，至今千里赖通波。若无水殿龙舟事，共禹论功不较多。</li>
+<li>隋唐大运河以洛阳为中心，北至涿郡（今北京），南至余杭（今杭州）。</li>
+<li>隋炀帝要到扬州看琼花，为什么运河要修的北至涿郡，南至余杭？</li>
+<li>隋朝大运河，其工程分为四个部分：通济渠、邗沟、永济渠、江南运河。</li>
+<li>大业元年（605年），隋炀帝征发“河南、淮北诸郡民前后百余万”开通济渠。</li>
+<li>邗沟沟通了长江、淮河两大河流，成为隋唐大运河最早修建的一段。</li>
+<li>大业四年（608年），隋炀帝诏发河北诸郡男女百余万开永济渠，引沁水，南达于河，北通涿郡。</li>
+<li>大业六年（610年），隋炀帝下令开江南运河（即江南河），从京口（今江苏镇江）至余杭（今浙江杭州）</li>
+</ul>
+<h2 id="开元通宝"><a class="header" href="#开元通宝">开元通宝</a></h2>
+<ul>
+<li>唐初沿用隋五铢</li>
+<li>唐高宗武德四年（621年），废隋钱，开铸开完通宝。</li>
+<li>钱文由欧阳询书写。</li>
+<li>唐代始有通宝。开元通宝，开通元宝。</li>
+</ul>
+<h2 id="高句gōu丽lí"><a class="header" href="#高句gōu丽lí">高句(gōu)丽(lí)</a></h2>
+<ul>
+<li>高句丽（公元前37年－公元668年），是汉唐时期活跃于东北亚地区的重要民族政权，国祚七世纪有余。</li>
+<li>高句丽灭国前的常备军队在60万人左右，军事装备相当精良，兵器与中国略同。</li>
+<li>开皇十八年（598年），隋文帝命汉王杨谅、上柱国王世积为行军元帅，周罗喉为水军总管，率大军30万，分水陆两路进攻高句丽。粮草匮乏、疫病、海难，水陆两军死亡十之八九，隋军撤退。婴阳王高元上表称“辽东粪土臣元”，隋文帝罢兵，待之如初。</li>
+<li>高句丽王高元不遵籓礼，隋炀帝决定征讨高句丽。大业八年正月（612年），出征的隋朝士兵全部集中于涿郡，有军人一百一十三万三千八百，此外为其运输物资的民夫是军人数量的两倍。第一次攻高句丽之战遂以惨败而告终。</li>
+<li>大业九年（613年），二次亲征高句丽时，杨玄感造反。隋炀帝密召诸将，密令撤军。</li>
+<li>大业十年（614年），三次亲征高句丽，国内已经大乱。高句丽也困弊，遣使请降。</li>
+<li>贞观十八年（644年），唐太宗以张亮为平壤道行军大总管，率兵四万走海路。以李世勣（李勣）为辽东道行军大总管，率军六万向辽东。获胜后从容班师。以后，唐军采取了对高句丽发动骚扰性攻击的策略。</li>
+<li>唐高宗总章元年（668年），高句丽被唐朝攻灭，其遗民主要融入汉族及朝鲜半岛民族。</li>
+</ul>
+<h2 id="铁细腰"><a class="header" href="#铁细腰">铁细腰</a></h2>
+<ul>
+<li>（唐）河堤石、铁细腰</li>
+<li>（清）钦工铭文铁细腰</li>
+<li>尾燕铁，就是腰铁，因形状象两个对着的燕子尾巴，故叫燕尾铁，也称铁细腰，铁锭榫，燕尾榫、铁锁。</li>
+<li>形状是中间细，两头粗大呈三角，用白矾粘于石间，起加固作用。</li>
+<li>传说是鲁班发明的，是万榫之母。</li>
+<li>最早使用这种技术的，是隋朝的赵州桥。</li>
+</ul>
+<h2 id="裴耀卿"><a class="header" href="#裴耀卿">裴耀卿</a></h2>
+<ul>
+<li>开元二十一年（733年），裴耀卿擢黄门侍郎、同平章事，充江淮、河南转运使。</li>
+<li>关中地狭民稠，自江淮运送粮食物资困难，裴耀卿改进漕运，沿河置仓，逐级运粮，傍河凿山，开车道数十里，以避三门之险。</li>
+<li>改革漕运的成功，使得关东和江淮地区的粮食大量运抵关中，保障了关中的粮食需要，充实了关中仓储，对京城稳定，乃至全国的经济繁荣与政治稳定起到了重要作用。</li>
+</ul>
+<h2 id="苏州宝带桥"><a class="header" href="#苏州宝带桥">苏州宝带桥</a></h2>
+<ul>
+<li>宝带桥别名长桥，南北横卧于大运河和澹（dàn）台湖之间的玳玳河口，与古运河平行，是中国古代十大名桥之一，也是中国现存的古代桥梁中，最长的一座多孔石桥，是中国现存最长、保存最完整的一座大型古代连拱石桥。</li>
+<li>起于大运河，上跨玳玳河水道，终至澹台湖，桥梁全长316.8米，宽4.1米，桥孔53孔。</li>
+<li>唐元和十一年（公元816年），宝带桥由刺史王仲舒主持建造，筹措建桥资金，王仲舒带头将自己身上的宝带捐出来，宝带桥之名由此而来，又有说因桥似宝带浮于水上而得名。</li>
+<li>清同治二年（公元1863年），英军戈登驾舰攻打苏州，拆去宝带桥桥中间大孔，酿成南面26孔连续倒塌之惨状。抗战时期，南端6孔被日军炸毁。</li>
+<li>1956年，宝带桥修葺恢复旧观，桥拱照原式样用花岗石砌成，桥面和两端桥堍也照原式样进行了修缮，并把坠入河中的4只石狮打捞出来，安装就位。</li>
+</ul>
+<h2 id="法源寺"><a class="header" href="#法源寺">法源寺</a></h2>
+<ul>
+<li>悯忠寺，法源寺。事实上，唐太宗只提了个动议，直到武则天时期才真正完成。</li>
+<li>唐太宗贞观十九年（645）及高宗上元二年（675）东征还，深悯忠义之士殁于戎事，卜斯地将建寺为之荐福。（武）则天万岁通天元年（696），追感二帝先志，起是道场，以‘悯忠’为额。《元一统志》</li>
+<li>法源寺悯忠阁。悯忠高阁，去天一握。</li>
+</ul>
+<h2 id="唐无垢净光宝塔颂史思明"><a class="header" href="#唐无垢净光宝塔颂史思明">唐《无垢净光宝塔颂》，史思明</a></h2>
+<ul>
+<li>文字虽竖排，但从左至右，而非常见的从右至左。明末清初的著名学者顾炎武认为，这可能是安禄山临时定的规矩。</li>
+<li>《无垢净光宝塔颂》仅七百六十六字，涂改的字至少达四十九字之多，有些字磨掉后，想不出新字填补，干脆留白，多达十八处。</li>
+<li>《无垢净光宝塔颂》本是用来讨好安禄山的，因安禄山初期屡战屡胜，史思明不得不表忠心。没想到安禄山死得太快，史思明只好在碑上乱涂乱改，将所有僭越的词都删去，转而吹捧唐朝。只是活儿干得太糙，一块好碑，生生被弄成千疮百孔的“百衲衣”。</li>
+</ul>
+<h2 id="茶"><a class="header" href="#茶">茶</a></h2>
+<ul>
+<li>荼和茶，陆羽之前的时代，茶写作荼，有着药的属性。</li>
+<li>斗茶、煎茶、点茶</li>
+<li>渣斗，执壶，盏，鍑(fù)，则，碾</li>
+<li>陆羽，茶风北渐，铜则，渣斗，产业文化一条龙</li>
+<li>唐代宗，竟陵积公和尚（智积和尚）</li>
+<li>唐上元初年（760年），陆羽隐居苕溪（今浙江湖州），撰《茶经》三卷，对茶的性状、品质、产地、种植、采制、烹饮、器具等皆有论述，并首次提出了“精行俭德”的茶道精神，使饮茶从物质层面升华到精神层面，该书为世界上第一部茶叶专著。</li>
+<li>陆羽以著《茶经》而闻名于世，对世界茶业发展作出了卓越贡献，被誉为“茶仙”，尊为“茶圣”，祀为“茶神”。</li>
+<li>州刺史李季卿在扬子江畔，遇见了在此考察茶事的陆羽，便相邀同船而行。李季卿闻说附近扬子江中心的南零水煮茶极佳，即令士卒驾小舟前去汲水。不料士卒于半路上将一瓶水泼洒过半，偷偷舀了岸边的江水充兑。陆羽舀尝一口，立即指出“此为近岸江中之水，非南零水。”李季卿令士卒再去取水，陆羽品尝后，才微笑道：“此乃江中心南零水也。”</li>
+</ul>
+<h2 id="幽州刺史赵德均"><a class="header" href="#幽州刺史赵德均">幽州刺史赵德均</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../note/basic/basic-1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../note/basic/basic-3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../note/basic/basic-1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../note/basic/basic-3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

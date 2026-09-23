@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>爱新觉罗·奕䜣 - 恭王府 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">恭王府 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/Prince-Gong.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="爱新觉罗奕䜣"><a class="header" href="#爱新觉罗奕䜣">爱新觉罗·奕䜣</a></h1>
+<p>爱新觉罗·奕䜣，号乐道堂主人，清末政治家、宗室，清朝十二家铁帽子王之一。</p>
+<h2 id="人物生平"><a class="header" href="#人物生平">人物生平</a></h2>
+<h3 id="兄弟构隙"><a class="header" href="#兄弟构隙">兄弟构隙</a></h3>
+<ul>
+<li>咸丰三年（1853年）正月，奕䜣奉旨管理中正殿、武英殿事务。九月，署领侍卫内大臣，办理巡防，奉旨仍佩先帝生前所赐白虹刀，以示隆崇。十月初七日，奉旨在军机处行走，从此打破清代皇子不得干预政务的祖制。</li>
+<li>咸丰五年（1855年），责其“办理皇太后丧仪疏略”，降旨撤销其军机大臣和宗人府宗令等职，令回上书房读书，仍令内廷行走，管理中正殿等处事务，以示惩罚。</li>
+</ul>
+<h3 id="临危受命"><a class="header" href="#临危受命">临危受命</a></h3>
+<ul>
+<li>奕䜣主持议和以及进行的大量的善后事宜赢得了西方对他的好感，为他以后外交活动创造了条件。</li>
+<li>在议和期间，奕䜣笼络瓜尔佳·文祥（户部侍郎）、桂良（文华殿大学士）、索绰络·宝鋆（jūn）（总管内务府大臣）、苏完瓜尔佳·胜保（副都统），形成了一个新的政治集团。</li>
+</ul>
+<h3 id="兴办洋务"><a class="header" href="#兴办洋务">兴办洋务</a></h3>
+<p>咸丰十年（1860年）十二月，他与桂良、文祥上《通筹夷务全局酌拟章程六条折》疏奏陈：</p>
+<p>臣等就今日之势论之：发捻交乘，心腹之害也；俄国壤地相接，有蚕食上国之志，肘腋之患也；英国志在通商，暴虐无人理，不为限制，则无以自立，肢体之患也。故灭发、捻为先，治俄次之，治英又次之。</p>
+<p>咸丰十一年（1861年）正月命奕䜣、桂良、文祥等人为总理各国事务衙门大臣，办理对外交涉事宜。</p>
+<p>查治国之道，在乎自强，而审时度势，则自强以练兵为要，练兵又以制器为先。</p>
+<h3 id="亲王议政"><a class="header" href="#亲王议政">亲王议政</a></h3>
+<p>咸丰十一年（1861年）七月，咸丰帝在热河病死，皇太子爱新觉罗·载淳继位，改年号为“祺祥”，即同治帝。</p>
+<p>咸丰十一年（1861年）十一月初一日，以议政王的名义任领班军机大臣兼摄首席总理衙门大臣，复授宗人府宗令、总管内务府大臣，赏食亲王双俸，王爵世袭罔替；并领神机营事务等要职，免去召对时的叩拜之礼，免去奏事时书名。</p>
+<h3 id="妥协与御侮"><a class="header" href="#妥协与御侮">妥协与御侮</a></h3>
+<p>同治三年（1864年）七月，清廷因剿灭太平天国农民起义，论功行赏。奕䜣以主持枢廷，居首功，赏加三级军功，其子辅国公载澂破例加授贝勒衔，其子载濬被封为辅国公，载滢被封为不入八分辅国公。</p>
+<h3 id="几度起落"><a class="header" href="#几度起落">几度起落</a></h3>
+<p>同治四年（1865年）三月初五，编修蔡寿祺首先发难，弹劾奕䜣，说他揽权纳贿，徇私骄盈。两日后两宫太后就以同治帝名义颁诏，以其目无君上，免去他议政王和其他一切职务。朝中大臣求情，慈禧太后才允许他在内廷行走，并管理总理各国事务衙门，但免去了议政王职务。</p>
+<p>同治十三年（1874年）七月十八日，奕䜣会同十重臣当面劝谏同治帝，请求停止修治圆明园，戒除“微服冶游”的行为。</p>
+<p>二十九日，奕䜣再力谏同治帝，同治帝发朱谕革其亲王世袭罔替，降为郡王，仍在军机大臣上行走，次日发布。</p>
+<p>八月初一日（9月11日），经过两宫太后干预，同治帝赏还亲王世袭罔替及载澂的封爵。</p>
+<p>光绪六年（1880年），慈禧太后偏听太监污陷守门护军的一面之词，想要治护军的死罪。奕䜣带领全体“枢臣力争不奉诏”，顶回原旨，次日懿旨将护军死罪免除，但仍从重定罪。这时奕䜣不便再顶，但当张之洞和陈宝琛相继上疏直谏，终使护军获得从轻处理、肇事太监受到薄惩。</p>
+<h3 id="甲申易枢"><a class="header" href="#甲申易枢">甲申易枢</a></h3>
+<ul>
+<li>慈禧太后以因循委靡的罪名，在光绪十年（1884年）三月十三日罢黜奕䜣及其全班军机大臣（武英殿大学士宝鋆、吏部尚书李鸿藻、兵部尚书颜扎·景廉、工部尚书翁同龢），趁机另组军机处。</li>
+<li>恭亲王奕䜣、大学士宝鋆，入直最久，责备宜严，姑念年老，特录前劳，全其末路。</li>
+<li>光绪十二年（1886年）十月，朝廷赏还奕䜣亲王双俸。</li>
+<li>光绪十七年（1891年）十一月，奕䜣在恭王府中庆祝六十寿辰。</li>
+</ul>
+<h3 id="收拾残局"><a class="header" href="#收拾残局">收拾残局</a></h3>
+<ul>
+<li>光绪二十年（1894年）九月一日（9月29日），懿旨说：恭亲王“病体虽未痊愈，精神尚未见衰”，令其“在内廷行走”，管理总理衙门事务，并添派总理海军，会同办理军务。</li>
+<li>十月初五日（11月2日）的上谕中，明令：“著派恭亲王督办军务，各路统兵大员，均归节制，如有不遵号令者，即以军法从事 ”</li>
+</ul>
+<h3 id="新旧之间"><a class="header" href="#新旧之间">新旧之间</a></h3>
+<ul>
+<li>终清一代，宗室中只有奕䜣与和硕睿亲王爱新觉罗·多尔衮得单谥“忠”</li>
+<li>入祀贤良祠，并配享太庙（位列东庑怡贤亲王爱新觉罗·胤祥之次，超勇襄亲王博尔济吉特·策棱之上）</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/he-shen.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../note/qing-shi-gao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/he-shen.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../note/qing-shi-gao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

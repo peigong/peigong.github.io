@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>郴州园 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/chen-zhou.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="郴州园"><a class="header" href="#郴州园">郴州园</a></h1>
+<p>北京园博园的郴州园在第九届中国（北京）国际园林博览会（2013年，丰台永定河片区）里归现代展园区，主题“福山、福水、福泽乾坤；民宅、民风、地方风情”，面积1060㎡。它把郴州“天下第十八福地”的福文化、湘南民居、太极方圆、第十八福泉，和中国女排“五连冠”精神揉在一起，是湖南组里最“福气＋体育红”的一座小园，和长沙书院、湘潭莲城、常德桃源、株洲神农都不重样。</p>
+<h2 id="一基本盘"><a class="header" href="#一基本盘">一、基本盘</a></h2>
+<ul>
+<li>届次/片区：第九届北京园博，现代展园；整体园博“一轴、两景区、三地标、五展园”，现代展园是五园之一。</li>
+<li>面积：约1060㎡，属小型城市展园。</li>
+<li>位置：现代展园片，与长沙、株洲、湘潭、常德等湖南展园同组；具体从几号门最近以当日园博园导览为准（低权重游记常写4/5号门，但官方未固定）。</li>
+<li>主题立意：以“福山、福水、福泽乾坤，民宅、民风、地方风情”为总纲，人口用湘南民居门楼＋标志墙，深处用福字假山＋福泉，中心用方圆太极，另设女排雕塑。</li>
+<li>城市符号：郴州别称“福城”，南岭、湘南、环郴皆山；“天下第十八福地”苏仙岭语境入园；中国女排长期在郴州集训，园里单设女排景观。</li>
+</ul>
+<h2 id="二总体格局门楼福墙方圆广场福山福泉女排雕塑"><a class="header" href="#二总体格局门楼福墙方圆广场福山福泉女排雕塑">二、总体格局：门楼福墙—方圆广场—福山福泉—女排雕塑</a></h2>
+<p>不按中轴大殿，也不按江南曲水，走“福文化递进＋体育点睛”：</p>
+<ul>
+<li>入口湘南民居门楼＋标志墙，先给湖南民居民风，不建城楼不建景区大门；</li>
+<li>进园方圆广场，取“天圆地方”，圆心太极，把“一方天地、和谐生活”先点出来；</li>
+<li>向里借原地形落差做十八福字石方假山，下接第十八福泉，形成“福山—福水—福泽人间”主景；</li>
+<li>另设女排“五连冠/女排英姿”拉膜球雕，作为体育红色副线，不占中轴、放在园区中心休憩空间。</li>
+</ul>
+<h2 id="三主要景点"><a class="header" href="#三主要景点">三、主要景点</a></h2>
+<p>1）湘南民居门楼＋标志墙（入口）</p>
+<p>入口用湘南民居基本建筑形态做门楼和标志墙，体现湖南民居特色；有资料称门楼正中用篆体“郴”字，整体不追求官式牌坊，而取村落民宅的白墙、木石、小门楼意向。标志墙配合福文化，进园第一眼是“民宅民风”而不是城市LOGO堆字。</p>
+<p>2）方圆广场／太极图</p>
+<p>园中广场以“方、圆”为主要布园元素，取天圆地方，暗喻郴州一方天地；圆形中间做太极图，意在展现和谐生活、阴阳有序。这个节点承担全园聚集、讲解、转场功能，比纯水院更适合小面积现代园。</p>
+<p>3）十八福字石方假山＋第十八福泉（核心）</p>
+<p>全园最“郴州”的部分。借地势原有落差，用十八块刻不同“福”字的石方叠成现代假山，山下/周边环第十八福泉，合“天下第十八福地”的典故意向。设计不堆真山真洞，而用石方、叠错、泉水做抽象福山：福字地雕＋蝙蝠图案＋叠石泉流，形成“福山、福水、福泽人间”三福闭环。</p>
+<p>苏仙岭“天下第十八福地”是郴州经典文化IP；北京园里不建苏仙观，只把“十八/福”转成石方与泉名。
+4）镂空园艺／福蝠地雕</p>
+<p>园里大量用镂空雕刻技法做隔断、墙景、地雕，福字、蝙蝠（“福”谐音）反复出现，营造“隔而不隔”的园林意境；官方红色路线材料还提到墙面“一品清廉”荷图，几片荷叶翻卷不同，呼应周敦颐在桂阳（今汝城一带）任令、写《爱莲说》的廉洁意象。 但郴州园主体仍是福山福水，爱莲只作文化补充，不按“莲池大院”做。</p>
+<p>5）女排“五连冠／女排英姿”雕塑（体育红核心）</p>
+<p>园区中心休憩构筑：简化排球艺术雕塑，球面上“镶嵌”女子打排球英姿，顶端白色拉膜顶；内部可坐可憩。灵感来自中国女排在郴州基地多次集训、1981—1986年世界杯/世锦赛/奥运会五连冠；筹建资料称郴州基地曾先后7次接待女排集训，被誉为“中国女排起飞之地”“冠军摇篮”，会期还曾计划请老将助阵。</p>
+<p>这组雕塑是郴州园和同届其他城市园最不同的点：不靠古建靠运动，不靠山水靠拼搏。</p>
+<h2 id="四文化主线怎么读"><a class="header" href="#四文化主线怎么读">四、文化主线怎么读</a></h2>
+<ul>
+<li>福地福文化线：第十八福地→十八福字石→第十八福泉→蝙蝠/福字地雕，整体吉祥、祈福、不沉重；</li>
+<li>湘南民居民风线：门楼、标志墙、镂空墙、方圆院，对应郴州村落、南岭民居，而不是长沙岳麓、凤凰古城那种“名山大儒”线；</li>
+<li>太极和谐线：方圆广场＋太极，把“福”从字面和祥瑞再提一层到生活和谐、城市宜居；</li>
+<li>爱莲廉洁线（辅）：周敦颐桂阳令、《爱莲说》、一品清廉荷图，补士大夫品格，但不抢福山主位；</li>
+<li>女排精神线（辅而醒目）：五连冠雕塑把“郴州＝女排娘家”做成可坐可拍的当代红色体育符号，和湘潭伟人、长沙书院、遵义红色形成不同类型。</li>
+</ul>
+<p>别按“东江湖/莽山/高椅岭”预期走：北京这版不修大水库、不堆丹霞峰林，只把“福山福水”抽象成石方泉池；想看东江雾、莽山原始林得去郴州本地。</p>
+<h2 id="五植物与材质按小现代园泛写"><a class="header" href="#五植物与材质按小现代园泛写">五、植物与材质（按小现代园泛写）</a></h2>
+<p>公开筹建/展馆资料未给完整植物名录，按现代展园＋福山泉水可推：</p>
+<ul>
+<li>硬景：湘南意向门楼/标志墙、方圆石材铺装、太极地雕、十八福字石方、福泉叠水、镂空福蝠墙、白色拉膜排球雕塑；</li>
+<li>水景：第十八福泉以小型环流/跌水为主，不放大湖，配合石方假山；</li>
+<li>植物：以北京可露地越冬乔灌打底，院落周边可配湖南意向的竹、桂、荷（爱莲节点）、常规庭院花灌木；南岭原生珍稀种不会全搬，现场以导览和实际养护为准；</li>
+<li>整体色调：青灰石＋白墙＋福字红/金地雕＋拉膜白，福气感强于水墨感。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chang-sha.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="zhu-zhou.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chang-sha.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="zhu-zhou.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
