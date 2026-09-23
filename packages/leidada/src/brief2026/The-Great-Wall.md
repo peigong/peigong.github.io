@@ -12,7 +12,7 @@ In 1987, it was listed as the World  Cultural Heritage.
 
 Construction of the Great Wall first began in the 7th  century BC. At that time, it was called the Spring and Autumn Period. The first section of wall, which appeared in China was built by the Kingdom Qi and the Kingdom Chu. They had a high wall which was called 'square wall' or 'square city', so it was also known as the Qi Wall and the Chu Wall.
 
-In Spring and Autumn Period and Warring State Period, seven states become the most powerful states( namely: Qi, Chu, Yan, Han, Zhao, Wei and Qin States), they are called 'Seven Powers'. In order to defend themselves, all kingdoms followed the example of State Qi and State Chu, and had sections of high walls constructed around their on territories for self protection.
+In Spring and Autumn Period and Warring State Period, seven states become the most powerful states(namely: Qi, Chu, Yan, Han, Zhao, Wei and Qin States), they are called 'Seven Powers'. In order to defend themselves, all kingdoms followed the example of State Qi and State Chu, and had sections of high walls constructed around their own territories for self-protection.
 
 And after that, Large-scale construction of the Great Wall started and the construction of that was  concentrated in the Qin, Han and Ming dynasties.
 

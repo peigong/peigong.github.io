@@ -30,7 +30,9 @@ The Hall of Eminent Favor is also called 'Sacrificial Hall' where the sacrificia
 
 It is one of the largest wooden buildings in China, and it is supported by 60 wooden columns made of precious Nanmu. Nanmu is a special kind of wood coming from the mountains in the southern  part of our country. This kind of valuable timber comes from Sichuan, Hubei, Hunan and Jiangxi provinces.
 
-Dinglin is the tomb of Emperor Zhu Yijun, whose reign title is Wang Li, the 13th Emperor of the Ming Dynasty.
+Ok, ladies and gentlemen, now let's make our way into the Dingling.
+
+Dingling is the tomb of Emperor Zhu Yijun, whose reign title is Wang Li, the 13th Emperor of the Ming Dynasty.
 
 The construction of his tomb started when Emperor Wang Li was only 22 years old.
 
@@ -38,7 +40,7 @@ When he was 6 years old, he was chosen and named Crown Prince and ascended the t
 
 We now entering the gate of Dingling, you can see two sketch maps.
 
-Since the Gate of Eminent Faver and the Hall of Eminent Faver were destroyed, only the marble terraces are left today. The Soul Tower  stands and the end of the axis with two exhibition rooms on both sides.
+Since the Gate of Eminent Faver and the Hall of Eminent Faver were destroyed, only the marble terraces are left today. The Soul Tower stands at the end of the axis with two exhibition rooms on both sides.
 
 I'd like to give you some information about the excavation of Dingling. It started in May 1956 and it took two years and was completed in 1958.
 
@@ -46,7 +48,7 @@ In 1955, a decision was made by the Chinese government to open up the Ming Tombs
 
 In May 1956,  an archaeological team found some decayed bricks at the southwest side of the surrounding wall outside the Soul Tower showing that there had been a archway. It was believed that the exposed arch was the tomb tunnel to the underground palace. Later, traces of words like, 'the gate of leading tunnel' were found on the wall. This offered a very important clue for the tomb's excavation.
 
-And in the following months, two tunnels were dug consecutively, till a stone tablet was uncovered with an inscription on which written ' from this stone, 160 feet further and 35 deep to the Diamond Wall' which indicated the sealing wall of the underground palace.
+And in the following months, two tunnels were dug consecutively, till a stone tablet was uncovered with an inscription on which written 'from this stone, 160 feet further and 35 feet deep to the Diamond Wall' which indicated the sealing wall of the underground palace.
 
 So, the archaeologists got a very important clue from this stone for the further excavation of the underground tomb. Then they dug up a 3rd tunnel and finally found the Diamond Wall, the entrance of the underground palace.
 
@@ -54,7 +56,7 @@ The underground palace consists of five chambers: the Front Chamber, the Middle 
 
 In front of the Front Chamber is the Diamond Wall, the sealing wall to the Underground Tomb.
 
-Among all five chambers, he Middle Chamber and Rear Chamber are important. There are three marble thrones place here for the emperor and his two wives.
+Among all five chambers, the Middle Chamber and Rear Chamber are important. There are three marble thrones place here for the emperor and his two wives.
 
 And the Rear Chamber is the main one and the largest one in the palace. There are three coffins, The middle one is for the emperor, and his two wives. There are 26 wooden boxes, containing the precious funeral objects. More than 3000 pieces of precious objects were unearthed form.
 

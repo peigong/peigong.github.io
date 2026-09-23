@@ -8,7 +8,7 @@ We are now at the center of the Square, and I'd like to give you a brief introdu
 
 Tian'anmen and Tian'anmen Square are located in the center of Beijing. Tian'anmen was first built in 1420 during the Ming Dynasty. At that time, it was served as the main entrance to the Imperial City, and the Tian'anmen Square was a 'T' shaped square.
 
-Today, Tian'anmen and Tian'anmen Square have been completely turned into a new look. Especially since Chairman Mao proclaimed to the whole world the founding of the People's Republic of China. On October 1st 1949, Tian'anmen has been the symbol of new China.
+Today, Tian'anmen and Tian'anmen Square have been completely turned into a new look. Especially since Chairman Mao proclaimed to the whole world the founding of the People's Republic of China on October 1st 1949, Tian'anmen has been the symbol of new China.
 
 Now, the Square is the largest city center square in the world, and it attracts millions of people from all over the world every year.
 
@@ -52,7 +52,7 @@ Chairman Mao's Mausoleum is located to the south of the Monument to the People's
 
 Chairman Mao, the founder of the People's Republic of China and chairman of the Communist Party of China.
 
-The whole construction took 6 months and was officially open to the public on September 9, 1977, just one year after his death.
+The whole construction took 6 months and was officially open to the public on September 9th, 1977, just one year after his death.
 
 There are three main halls inside the mausoleum. They are the North Hall, the Central Hall and the South Hall.
 
