@@ -42,7 +42,7 @@ And if you look straight ahead, you will see the triple marble terrace in distan
 
 Forbidden City is mainly divided into two major parts, the outer-court and the inner-court.
 
-The outer-court are composed of three main big halls on the middle axis, the Hall of Supreme Harmony, the Hall of Middle Harmony, the hall of Preserving Harmony.
+The outer-court are composed of three main big halls on the middle axis, the Hall of Supreme Harmony, the Hall of Middle Harmony, the Hall of Preserving Harmony.
 
 I'd like to give a brief introduction of the Hall of Supreme Harmony.
 
@@ -72,7 +72,7 @@ It was the place for the Ming and early Qing emperors to live.
 
 Moreover, it was the place for the famous banquet of thousand aged people twice in the Qing Dynasty.
 
-Now please follow me to take a look inside the Palace of Heavenly Purity. You will see a plague above the throne. This plague has something to do with the famous inheritance rule in the Qing Dynasty.
+Now please follow me to take a look inside the Palace of Heavenly Purity. You will see a plaque above the throne. This plaque has something to do with the famous inheritance rule in the Qing Dynasty.
 
 If you keep going all the way north ward, you will enter the Imperial Garden.
 

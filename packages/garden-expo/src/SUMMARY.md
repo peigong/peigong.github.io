@@ -11,7 +11,7 @@
     - [太湖石](./Taihu-Lake-stone.md)
     - [岫岩玉](./xiu-yan-yu.md)
     - [永定塔]()
-    - [佛塔](./BeijingGardenExpo/pagoda.md)
+    - [佛塔](./pagoda.md)
 - [北京园](./beijing/README.md)
     - [京西引水石槽]()
     - [雕漆]()

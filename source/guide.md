@@ -47,6 +47,8 @@ title: 导游笔记
 - [中国人民抗日战争纪念馆](./guide/1937china)
 - [北京鲁迅博物馆](./guide/beijing-luxun-museum)
 - [中国科学技术馆](./guide/cstm)
+- [北京天文馆](./guide/bjp)
+- [北京市规划展览馆](./guide/bjghzlg)
 - [‌中国工艺美术馆](./guide/gmfyg)
 - [保利艺术博物馆](./guide/polyartmuseum)
 - [中国农业博物馆](./guide/ciae)

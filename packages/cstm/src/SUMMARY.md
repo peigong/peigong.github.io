@@ -1,6 +1,10 @@
 # 目录
 
 - [概况简介](./README.md)
+- [讲解提纲](./note/README.md)
+    - [公共区域](./note/open.md)
+    - [华夏之光](./note/glory-of-china.md)
+    - [二层](./note/f2.md)
 - [一层 公共区域]()
     - [天宫空间站核心舱](./open/Tianhe-Core-Module.md)
     - [杰出科学家](./open/celebrities.md)
