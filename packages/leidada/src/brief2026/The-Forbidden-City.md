@@ -10,7 +10,7 @@ The Forbidden City was located in the center of Beijing. It was built in 1420 du
 
 In 1987, the Forbidden City was listed as the World Culture Heritage.
 
-The Forbidden City is the largest man-made palace in the world today. It is 961 meters long from south to North, and 753 meters wide from east to west. The Forbidden City is surrounded by 10 meters high city walls, and 52 meters wide river running around it.
+The Forbidden City is the largest man-made palace in the world today. It is 961 meters long from south to north, and 753 meters wide from east to west. The Forbidden City is surrounded by 10 meters high city walls, and 52 meters wide river running around it.
 
 The Forbidden City was called the purple Forbidden City. Why is that?
 
@@ -59,6 +59,8 @@ Now, please follow me to take a look inside the Hall of Supreme Harmony. You wil
 Beside those, no one will miss the 6 gilded columns painted with coiling dragons on both sides of the throne.
 
 Please, everyone. Look up. Can you see the gilded caisson ceiling just above the throne? There is a curling dragon with a huge pearl in its mouth, it is the 'Xuanyuan Jing'.
+
+Ok. Let's keep walking with me and I will show you the next place.
 
 While the inner-court, which also highlights the three main halls on the middle axis, known as the Palace of Heavenly Purity, the Hall of Union and the Palace of Earthly Tranquility.
 
