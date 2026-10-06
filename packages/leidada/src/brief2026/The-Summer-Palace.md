@@ -62,7 +62,7 @@ The Long Corridor actually is a long covered walkway. It is 728 meters long with
 
 It lies in front of Longevity Hill with the Gate of Dispelling Clouds in the center, and four pavilions along the Long Corridor, symbolizing the four seasons of the year.
 
-They are totally over 14000 paintings and pictures, including both large and small paintings and pictures. Of the 14000 paintings, there are more than 8000 large paintings.
+There are totally over 14000 paintings and pictures, including both large and small paintings and pictures. Of the 14000 paintings, there are more than 8000 large paintings.
 
 Ladies and gentlemen, here is the halfway of the Long Corridor. And this area is called the Gate of Dispelling Clouds.
 

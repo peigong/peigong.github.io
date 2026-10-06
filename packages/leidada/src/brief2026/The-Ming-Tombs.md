@@ -46,7 +46,7 @@ I'd like to give you some information about the excavation of Dingling. It start
 
 In 1955, a decision was made by the Chinese government to open up the Ming Tombs. According to the original plan, Changling should be  excavated first. However, because of the lack of experience, a decision was made to open up a smaller one first.
 
-In May 1956,  an archaeological team found some decayed bricks at the southwest side of the surrounding wall outside the Soul Tower showing that there had been a archway. It was believed that the exposed arch was the tomb tunnel to the underground palace. Later, traces of words like, 'the gate of leading tunnel' were found on the wall. This offered a very important clue for the tomb's excavation.
+In May 1956,  an archaeological team found some decayed bricks at the southwest side of the surrounding wall outside the Soul Tower showing that there had been an archway. It was believed that the exposed arch was the tomb tunnel to the underground palace. Later, traces of words like, 'the gate of leading tunnel' were found on the wall. This offered a very important clue for the tomb's excavation.
 
 And in the following months, two tunnels were dug consecutively, till a stone tablet was uncovered with an inscription on which written 'from this stone, 160 feet further and 35 feet deep to the Diamond Wall' which indicated the sealing wall of the underground palace.
 
