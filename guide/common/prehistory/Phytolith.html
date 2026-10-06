@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>植硅体分析 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/Phytolith.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="植硅体分析"><a class="header" href="#植硅体分析">植硅体分析</a></h1>
+<p>植硅体分析是一种通过研究植物体内形成的二氧化硅颗粒（植硅体，亦称植物硅酸体或植硅石）来获取古环境、古植被及人类活动信息的分析技术。该技术主要应用于考古学与古环境重建，尤其适用于古代农业起源研究，能提供作物栽培的直接证据，并常与孢粉分析等技术互补使用。</p>
+<p>植硅体是高等植物吸收土壤中的可溶性二氧化硅后，在细胞壁内沉积形成的非晶质含水二氧化硅颗粒，具有抗风化能力强、原地埋藏等特性，其形态因植物种类和细胞类型而异。通过对考古遗址土壤或沉积物中植硅体的提取和形态鉴定，可以推断历史上的植物种类，并揭示气温、降水量等气候信息。</p>
+<p>植硅体研究在中国是近二、三十年才开展起来的一门新兴边缘学科，国外开展较早。其最早的译名“植物硅酸体”来自日本。自20世纪70年代以来，这一方法在考古学诸多领域，尤其是农业考古和环境考古领域得到广泛应用。</p>
+<h2 id="定义"><a class="header" href="#定义">定义</a></h2>
+<p>植硅体（Phytolith），又称植物硅酸体、植物蛋白石、植硅石，是指某些高等植物从地下水中吸取可溶性二氧化硅而后沉淀于植物细胞内或细胞外部位置，由此形成的含水非晶态二氧化硅颗粒。其主要成分为二氧化硅（SiO2·nH2O）。植硅体耐化学分解和物理风化，可在土壤中保存数千年至数万年。不同植物及不同细胞产生的植硅体在形状、大小上具有特异性，可用于植物种类鉴别。</p>
+<h2 id="形成与特性"><a class="header" href="#形成与特性">形成与特性</a></h2>
+<p>植物硅酸体，简称植硅体，是指植物体内的硅通过根系从土壤中吸收，经维管束传输，在细胞内腔或细胞之间以水合硅(SiO2·nH2O)的形式出现，在植物体内形成的难溶的硅酸形态。其形成不仅受基因控制，而且受降水、湿度、温度、CO2浓度、土壤pH值及营养状况等环境因子影响。植硅体形态多样，常见有鞍型、帽型、扇型、棒型、尖型、哑铃型等。其中鞍型植硅体代表湿热的气候条件，帽型植硅体代表较寒冷的气候；扇型植硅体是暖湿气候的代表；棒型、尖型代表寒冷干旱的气候。哑铃型植硅体主要产自黍亚科C4植物，其含量变化可指示季节性干旱事件。</p>
+<p>植硅体的主要成分为二氧化硅，耐化学分解、物理风化，比其它植物遗存更稳定，一般可以在土壤中残留几千年到几万年。具有抗风化能力强、原地埋藏特征明显等优势。</p>
+<p>与孢粉相比，植硅体对单子叶草本植物（特别是禾本科）鉴定更具特异性；重量较大，传播距离短，更能反映当地植被；抗风化、抗腐蚀能力强；能直接反映人类农业活动证据。其局限性在于，研究方法、分类术语和应用解释的系统化问题尚待完善。</p>
+<h2 id="分析方法"><a class="header" href="#分析方法">分析方法</a></h2>
+<p>完整的实验流程包括样品采集、预处理、化学处理、浮选分离、制片观察和鉴定统计。样品采集需根据考古研究或古环境研究目的进行针对性选择。预处理步骤包括低温风干、去除杂质等。实验室化学处理常用稀盐酸和双氧水去除碳酸盐和有机质。提取方法主要包括干灰化法和湿氧化法（湿式灰化法）。鉴定统计通常在显微镜下进行，压点法可用于粟黍稃片植硅体的量化统计。</p>
+<p>干灰化法（如500℃加热）在保留大尺寸植硅体（如粟黍稃片植硅体）方面更具优势，而湿氧化法则适用于其他情况。提取时，将样品放入试管中低温烘干，加入稀盐酸振荡分散，再经硝酸去除有机质，最后使用重液进行浮选分离。</p>
+<p>现代过程研究（如建立现代植物植硅体形态数据库、研究环境因子影响）是准确解释植硅体数据的基础，有助于提高古环境重建的精度。</p>
+<h2 id="发展历史"><a class="header" href="#发展历史">发展历史</a></h2>
+<p>植硅体研究在国外开展较早，20世纪70年代以来在考古学领域得到广泛应用，国际上已有如Pearsall (1982)的《Phytolith analysis: applications of a new paleoethnobotanical technique in archeology》和Piperno (1988)的《Phytolith analysis — an archaeological and geographical perspective》等早期系统性著作。</p>
+<p>植硅体研究在我国是近二、三十年才开展起来的新兴边缘学科，最早的译名‘植物硅酸体’来自日本。21世纪初，国内从事植物考古的学者中，顾海滨、郑云飞曾赴日留学进修，赵志军在美国学习期间的导师也主攻植硅体，早期研究多集中于此领域。</p>
+<p>中国科学家利用植硅体分析在农业起源方面取得系列重要成果，如浙江上山文化水稻起源研究相关成果于2024年在《科学》期刊发表，并证实5600年前海南已种植水稻；在青铜时代铸铜技术如陶范中植物掺和料研究、古环境重建等领域也广泛应用。</p>
+<p>近年来，植硅体分析与浮选法、淀粉粒分析、同位素分析、古DNA分析等多种科技手段共同推动了植物考古学的发展，在方法学上学者们持续改进提取与量化方法如比较干灰化法与湿氧化法。未来，建立现代植物植硅体形态数据库、开发自动化鉴定系统、加强定量化古环境重建模型等是重要发展方向。</p>
+<h2 id="应用领域"><a class="header" href="#应用领域">应用领域</a></h2>
+<p>植硅体分析在农业考古中发挥着核心作用，例如利用扇形植硅体鱼鳞纹数量判定水稻驯化程度，以及鉴别陶范等人工制品中的植物掺和料（如稻壳灰），并可用于评估古代农业结构、作物比例与技术策略。</p>
+<p>作为关键的古环境与古气候重建代用指标，植硅体分析通过禾本科、哑铃型、鞍型、帽型等形态组合重建古植被、古温度与古降水序列，揭示千年至轨道尺度的气候演变过程，相关案例包括鄱阳湖、东营港、湖光岩玛珥湖等研究；其具有原地埋藏、抗风化、对草本植物特异性高等优势，常与孢粉分析互补。</p>
+<p>该技术可用于鉴定严重降解的有机遗存，如芦苇席，并分析器物残留物以推测古人类食物结构与植物利用情况；植硅体分析亦应用于古动物食性分析，如恐龙胃容物研究。</p>
+<p>在古生态与植被带研究中，植硅体分析用于评估植硅体组合对地表植被的代表性及影响因素（如土壤pH值、电导率），重建山地植被垂直带演变，并追踪绿洲-湿地等生态系统的变化。</p>
+<p>植硅体分析在地球科学中有所拓展，尝试利用其示踪河流入海沉积物来源及通量变化，应用于海岸环境演变与源-汇过程研究。</p>
+<p>实践中，植硅体分析常与孢粉分析、粒度分析、地球化学指标、土壤微形态、炭屑分析等多种技术结合，形成多指标证据链以提高古环境重建和考古解释的精度与可靠性。</p>
+<h2 id="研究展望"><a class="header" href="#研究展望">研究展望</a></h2>
+<p>植硅体分析在研究方法、分类术语和应用解释方面尚需完善，系统化问题是其应用与发展的瓶颈。未来需建立更完善的现代植物植硅体形态数据库和分类系统，开发自动化鉴定与统计系统以提高研究效率，并加强植硅体形成、运移、埋藏效应的现代过程研究以建立更精确的定量化古环境重建模型。此外，需拓展在考古学、古生物学等领域的应用范围，深化植硅体碳、氧等同位素分析在古环境重建中的应用，并探索植硅体分析在海洋沉积物示踪等新领域的应用潜力与挑战。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/Palynology.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/fei-zhou-qi-yuan-shuo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/Palynology.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/fei-zhou-qi-yuan-shuo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

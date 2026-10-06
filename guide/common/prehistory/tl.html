@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>热释光测年法 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/tl.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="热释光测年法"><a class="header" href="#热释光测年法">热释光测年法</a></h1>
+<p>热释光测年法，又称热萤光定年法，是一种利用热释光效应测定含有结晶体的矿物或烧制文物年代的技术。其原理基于晶体受热时释放储存的辐射能量，通过测量释放光子的能量推算样本自最后一次受热后经历的时间。</p>
+<p>热释光效应是一种冷发光现象，晶体材料受高能辐射后产生电子捕陷态位，加热时电子衰减至低能态并释放光子。该方法可应用于烧制陶瓷器物的年代检测，需在暗室红光下钻取约100毫克样品，通常取自器底或器足内壁的无釉处，密封后送至英国牛津检测中心测试。可推断烧制年代。</p>
+<p>热释光现象于三百多年前被发现，20世纪60年代发展为考古测年技术。牛津鉴证公司是该领域主要商业化检测机构，其报告被国际拍卖行和博物馆采用。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>热释光测年法，或称热萤光定年法，是利用热释光效应（thermoluminescence）测量含有结晶体的矿物或烧制文物，自加热或烧制后经过时间的一种方法。利用热释光效应，可以根据样本所释放光子的能量判断出样本自从上一次被加热后至今所接受的环境背景辐射能量之和，因而估算自加热时间点至今经过的时间。</p>
+<h2 id="热释光效应"><a class="header" href="#热释光效应">热释光效应</a></h2>
+<p>热释光(英语：Thermoluminescence, TL)效应，有时也被译作热致光、热发光，是一种冷发光现象：一些晶体（例如矿物质）在被加热时，原来吸收并储存在晶格缺陷中的电磁辐射或其他电离辐射会以光子的形式释放出来。该现象不可与黑体辐射（也可称为热发光）混淆。</p>
+<p>高能辐射会使晶体材料内产生电子激发态。 在一些材料，这些电子透过晶格的局部缺陷或不完整，被捕获而长期保存下来。量子力学上，这些量子态是与时间无关的定态，但他们并不稳定。 加热材料将使捕陷态位（trap states）能够与声子相互作用，即晶格振动，在迅速衰减至较低能态的过程中发射光子。</p>
+<h2 id="应用"><a class="header" href="#应用">应用</a></h2>
+<h3 id="陶瓷检测"><a class="header" href="#陶瓷检测">陶瓷检测</a></h3>
+<p>热释光测试可用于烧制的陶器，瓷器，以及附在青铜器里面的陶范残留部份。任何经过摄氏500度或更高火候烧制的18世纪或更早的陶瓷器，若含有足够之石英，长石与放射性杂质如铀、钍、钾等，不论其文化渊源，均可进行热释光测试。</p>
+<p>长期而又微弱的外来辐射与极短时间的强辐射，对陶瓷器物的物质微结构影响是不同的，因此经过辐射处理的仿品和真品的热释光实验曲线性态也是不完全相同的。因为这问题涉及到一些现代物理概念，就不进一步解析了。</p>
+<p>器件的胎、釉成分，埋在地下的深度和环境，会影响检测结果吗？应该说有影响的，但都处在正常的误差范围之内。如一件北宋的瓷器，检测结果可能会给出：一千年加减五十年。这加减五十年就是误差，它就是由其它因素引起的。</p>
+<p>再通过器物本身的釉、风格、造型、大小等目测鉴定基本上是可以肯定检测结果的。热释光现象三百多年前就已发现了，在上个世纪六十年代它被发展成为一项考古、测年的新技术。目前进行商业化鉴定并有良好声誉的机构只有英国的牛津鉴证公司，佳士得和苏富比等国际大拍卖公司和许多博物馆及收藏机构都请他们进行鉴定，同时检测报告具有法律效应。</p>
+<p>以陶器为例，钻取约100毫克的少许样品粉末即足够进行测试。为了保持测试高度准确，取样需要在暗室红光下进行。取样部位及数量取决于器物的大小及完整与否。瓷器要用涂有金刚砂、直径4毫米之空心钻，在冷水冲洗下取样。样品通常取自无釉处，如器底或器足内壁。所有样品密封后送至英国牛津检测中心数据库之化验室进行测试。</p>
+<p>热释光测试所得年代结果，准确幅度有百分之八十上下。绝大多数情况下，此结果足以推断一件器物之烧造年代，从而确定其真伪。测试完毕后，每一件陶瓷器均获发一份Doreen Stoneham 夫人签发的单页证明书，列明推断所得的烧制年代、取样部位及化验过程中的其他发现。部分证明书也会列明修复所用的物料。如果取样多于一个，证明书也会列明各个样品的一致性。</p>
+<h3 id="放射测年法"><a class="header" href="#放射测年法">放射测年法</a></h3>
+<p>释义，放射测年法是利用测定被测定物中某些放射性元素与其衰变产物的比率，之后应用这种放射性元素半衰期计算年代的方法，亦被称为绝对测年法。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/ren-zi-dong.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/Palynology.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/ren-zi-dong.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/Palynology.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>王府井旧石器晚期遗址 - 导游通识 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">导游通识 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/prehistory/wang-fu-jing-site.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="王府井旧石器晚期遗址"><a class="header" href="#王府井旧石器晚期遗址">王府井旧石器晚期遗址</a></h1>
+<p>王府井旧石器晚期遗址位于北京市东城区王府井东方广场。1996年12月，该遗址在东方广场施工中被北京大学在读博士生岳升阳发现。随后，中国科学院古脊椎动物与古人类研究所、北京市文物研究所等单位对其进行了抢救性发掘。这是一处旧石器时代晚期遗址，距今约2.4—2.5万年，遗址面积约2000平方米，出土石制品、骨制品、用火遗迹等文化遗物2000余件。</p>
+<p>遗址包含上、下两层文化层，地质时代属晚更新世。研究表明，当时古人类活动于古冲积扇面的砂岛上，此处为一处季节性临时营地，反映狩猎采集生活。该遗址是世界范围内首次在国际大都市中心发现的古人类文化遗存，也是继周口店之后北京地区远古人类遗存的又一重大发现。</p>
+<p>为保护遗址，在发现地建立了王府井古人类文化遗址博物馆，于2001年12月28日正式开馆。</p>
+<h2 id="遗址概况"><a class="header" href="#遗址概况">遗址概况</a></h2>
+<p>王府井旧石器晚期遗址位于北京市东城区王府井大街东方广场地下三层，距地表约12米。该遗址于1996年12月在东方广场施工过程中被偶然发现，随后由中国科学院古脊椎动物与古人类研究所、北京市文物研究所等单位进行了抢救性考古发掘。</p>
+<p>遗址地理坐标大致为北纬39°55′26″，东经116°25′28″。遗址面积约2000平方米，考古工作者对文化分布密集区进行了重点发掘，总发掘清理面积约892平方米。遗址包含上、下两个文化层，相距约1米。</p>
+<p>经碳十四（14C）测定，上文化层的绝对年龄约为距今24240±300年，下文化层约为距今24890±350年。热释光测年结果也支持这一年代判断。遗址的地质时代为晚更新世，考古学年代为旧石器时代晚期。</p>
+<p>古环境研究表明，距今约2.2万年前，遗址所在地为古永定河冲积扇面上的砂岛环境，属河漫滩地形。当时气候干冷，植被以草原为主，间有云杉、松等乔木。</p>
+<p>综合考古发现与研究，该遗址是一处古人类进行狩猎、捕捞和采集活动的季节性临时营地。遗址文化内涵丰富，出土了包括石制品、骨制品、用火遗迹（炭屑、烧石、烧骨）和赤铁矿碎块等在内的文化遗物2000余件。研究表明，王府井文化与周口店北京猿人文化、山顶洞文化关系密切。</p>
+<p>为保护这一重要考古发现，北京东城区政府与东方广场有限公司共同投资，在遗址原址地下建立了王府井古人类文化遗址博物馆，于2001年12月28日正式对外开放。博物馆核心展品为一块约50平方米的原址保护地块，直观展示了古人类的活动遗迹。</p>
+<h2 id="发现与发掘"><a class="header" href="#发现与发掘">发现与发掘</a></h2>
+<p>1996年12月，北京大学研究生岳生阳在东方广场施工过程中偶然发现炭屑、碎骨化石和人工石片。1996年12月30日至1997年8月，中国科学院古脊椎动物与古人类研究所、北京市文物研究所和东城区文物管理所等单位对该遗址进行了抢救性发掘，发掘工作总计清理面积892平方米，出土编号标本1514件，文化遗物总计2000余件。</p>
+<p>1997年1月起，国家文物局、北京市文物局、中国科学院等多位领导、专家（如贾兰坡、刘东生、侯仁之、张森水、吕遵谔等）多次到现场考察指导。1997年4月18日，贾兰坡、刘东生、侯仁之三位院士亲临遗址考察。</p>
+<h2 id="文化内涵与遗物"><a class="header" href="#文化内涵与遗物">文化内涵与遗物</a></h2>
+<p>王府井东方广场遗址是一处文化内涵丰富的旧石器时代晚期遗址，距今约2.4万至2.5万年。遗址出土了丰富的文化遗物，总计2000余件，包括石制品、骨制品、用火遗迹和赤铁矿碎块等，文化遗物分别来自上、下两个文化层，相距约1米。</p>
+<p>石制品类型包括石砧、石锤、石核、石片等；骨制品包括骨铲、骨片等。用火遗迹包括炭灰坑、炭屑层、烧石和烧骨，表明古人类已掌握保存火种的技能。</p>
+<p>遗址出土的脊椎动物化石有原始牛、斑鹿、蒙古草兔、安氏鸵鸟、雉和鱼等。遗址内发现97件标本可拼合成33组，通过分析研究探讨古人类的行为活动。</p>
+<p>综合研究表明，该遗址是一处季节性的临时营地，反映了古人类在此进行狩猎、捕捞、采集、制作工具、用火及可能进行原始宗教活动的生活场景。从石制品和骨制品的加工技术和类型看，它与北京人文化和山顶洞文化关系密切，表明北京地区从数十万年前到2万年前在文化上可能是一脉相承的。</p>
+<h2 id="学术研究"><a class="header" href="#学术研究">学术研究</a></h2>
+<p>王府井东方广场遗址是一处重要的旧石器时代晚期遗址。研究表明，王府井文化与周口店北京猿人文化、山顶洞文化关系密切，表明北京地区古文化可能存在传承。同时，它与我国北方的峙峪、小孤山、阎家岗等旧石器时代晚期遗址也有密切关系。遗址被认为是一处季节性的临时营地，反映出古人类狩猎、捕捞和采集的生活模式。</p>
+<p>中国科学院古脊椎动物与古人类研究所李超荣等人的相关研究成果，已发表在《考古》《人类学学报》《法国人类学报》（L‘anthropologie）及《北京文博》《化石》等国内外学术期刊上。</p>
+<p>研究手段多样，包括对出土文化遗物的统计分析、拼合研究、微痕观察，运用计算机处理野外与室内数据，并结合实验考古学与民族考古学等方法，以探讨古人类石器、骨器的打制技术以及狩猎、用火和原始的宗教等活动。</p>
+<p>通过对遗址地层沉积相与古地貌的研究，恢复了距今约2.2万年前人类在此活动的古环境面貌。研究表明，当时古人类曾活动于古冲积扇面的砂岛上，属于末次冰期间较温暖的间冰阶时期，水流相对稳定。研究还指出，该遗址是一个人类活动的临时营地，且在同一时期，人类可能来自周围的古冲积扇高地或平原西部较早形成的高地貌面。</p>
+<h2 id="保护与展示"><a class="header" href="#保护与展示">保护与展示</a></h2>
+<p>1996年12月遗址被发现后，为保护遗址，东方广场施工暂停数月，随后，中国科学院古脊椎动物与古人类研究所、北京市文物研究所和东城区文物管理所等单位于1996年12月30日至1997年8月间，对该地点进行了抢救性发掘。</p>
+<p>遗址发现后受到广泛关注，1997年初，张立源等32位北京市政协委员提案建议在遗址现场建立古人类博物馆，同年4月，中国科学院院士贾兰坡、刘东生、侯仁之等专家亲临遗址考察指导。</p>
+<p>为永久保护与展示这一重要发现，由东城区人民政府与东方广场有限公司（李嘉诚投资）共同投资，在遗址原址兴建了“王府井古人类文化遗址博物馆”。</p>
+<p>博物馆于2001年12月28日正式开馆，位于东方广场地下三层。</p>
+<p>馆内核心展品是一块约50平方米的遗址原址地块，保持出土原貌，陈列有石制品、骨制品、动物化石等，同时，通过人造沙盘、壁画、雕塑等展示了2.5万年前古人类在王府井地区狩猎、做饭、休息、制造工具的生活场景。</p>
+<p>2016年，博物馆进行了布局改造，运用了现代化展出技术，并于2017年重新开馆。</p>
+<h2 id="参观信息"><a class="header" href="#参观信息">参观信息</a></h2>
+<p>王府井古人类文化遗址博物馆位于北京市东城区王府井大街东方广场地下三层（距地表约12米深处）。该博物馆由东城区人民政府与东方广场有限公司共同投资兴建，于2001年12月28日正式对公众开放，并在2016年至2017年间进行了布局改造和技术升级后重新开馆。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../prehistory/Dong-Hu-Lin-people.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../prehistory/long-gu-po.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../prehistory/Dong-Hu-Lin-people.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../prehistory/long-gu-po.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
