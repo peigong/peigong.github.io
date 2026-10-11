@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>内联升 - 车讲北京 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">车讲北京 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/qianmen-street/nei-lian-sheng.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="内联升"><a class="header" href="#内联升">内联升</a></h1>
+<p>前门大栅栏街34号的内联升，是北京“头顶马聚源、脚踩内联升、身穿八大祥”里专管脚的那一家。它的历史可以分成“朝靴店—布鞋店—国营老字号—非遗国潮”四个阶段，中间几次被烧、被抢、搬迁，最后才落到大栅栏。</p>
+<h2 id="一咸丰创号1853年东江米巷做朝靴"><a class="header" href="#一咸丰创号1853年东江米巷做朝靴">一、咸丰创号：1853年，东江米巷做朝靴</a></h2>
+<ul>
+<li>创始人赵廷，天津武清人（也有资料写“天津人”），早年在东四牌楼鞋铺学徒，懂制靴也懂经营。清咸丰三年（1853）创业，店名“内联升”：“内”指大内宫廷，“联升”取“穿上朝靴官运连升三级”的彩头。</li>
+<li>初址在东江米巷，即后来的东交民巷/台基厂一带。那时还没成使馆区，附近有礼部、鸿胪寺、会同馆，官员往来多，赵廷专门做朝靴，瞄准“坐轿人”。</li>
+<li>民间店史常提“丁大将军资助万两白银”创号，丁某有附会丁宝桢的说法，属口传，不必当硬史；但“借官宦人脉起步”这个经营逻辑是可信的。</li>
+<li>核心创新是《履中备载》：把官员姓名、职衔、住址、脚码、靴样、特殊偏好登记成册，下次不用重量就能做。它被视为中国商业早期顾客档案/CRM雏形，也是内联升区别于普通鞋铺的招牌。</li>
+<li>产品定位高端：朝靴厚而不笨、走路无声，光绪年间一双朝靴值几十两银子；民初缎面鞋也要现洋三块多，而当时一袋洋面才一块多大洋。</li>
+</ul>
+<h2 id="二庚子与辛亥两次毁店从北城转向前门"><a class="header" href="#二庚子与辛亥两次毁店从北城转向前门">二、庚子与辛亥：两次毁店，从北城转向前门</a></h2>
+<ul>
+<li>1900年义和团、八国联军进京，东交民巷一带被波及，内联升初址焚毁。赵廷筹款迁灯市口西/奶子府（乃兹府）重开。</li>
+<li>1912年清帝退位前后，袁世凯北洋军在北京兵变，前门、东城多处被劫；内联升奶子府/灯市口再遭抢。赵廷受打击去世（资料有“忧愤而死”说法），次子赵云书/云飞接手。</li>
+<li>赵云书把店搬到前门外廊房头条、劝业场外侧，制鞋作坊另设北火扇胡同，打破“前店后厂”一体模式。这一步很关键：从官员聚居的北城朝靴圈，转到前门商业圈做大众高端鞋。</li>
+<li>清亡后朝靴市场塌了，内联升改做礼服呢、缎子面千层底；客群从王公转向遗老、新军阀、政客、文人、富商。小牛皮底礼服呢圆口、缎面小圆口、轿夫洒鞋、老头乐、纳帮靸鞋都上产品线。</li>
+</ul>
+<h2 id="三民国到1949从官靴变名流布鞋"><a class="header" href="#三民国到1949从官靴变名流布鞋">三、民国到1949：从“官靴”变“名流布鞋”</a></h2>
+<ul>
+<li>民国内联升的卖点不再是“升官”，而是“体面+合脚”：礼服呢用进口呢料，缎面用南京/上贡缎，麻绳多用温州麻，打袼褙用新白布而非旧布，标准和朝靴时期一脉相承。</li>
+<li>服务对象分层：军政新贵穿礼服呢圆口，长衫文人穿缎面小圆口，轿夫/车夫穿洒鞋，老人穿棉布“老头乐”。这阶段它和天成斋、步瀛斋在前门一带竞争，但定位仍偏中高。</li>
+<li>1949年前因通胀、兵乱、原料紧，老号接近破产边缘；部分资料说解放前夕已难以为继。</li>
+</ul>
+<h2 id="四新中国公私合营落大栅栏从作坊到企业"><a class="header" href="#四新中国公私合营落大栅栏从作坊到企业">四、新中国：公私合营、落大栅栏、从作坊到企业</a></h2>
+<ul>
+<li>1955年前后内联升与天成斋联营，1956年公私合营；多家鞋店并入，企业性质由私方转国营/公私合营。</li>
+<li>迁址有两套常见口径：
+<ul>
+<li>1956年合营后迁大栅栏街（部分资料写先到今天福茶庄一带再调整）；</li>
+<li>1958年与马聚源、步瀛斋等集中迁大栅栏大街营业，最终稳定在34号路南。实际可按“1956启动、1958定型”理解，避免年份打架。</li>
+</ul>
+</li>
+<li>产品扩展：增加女鞋、绣花鞋、解放鞋；文革中曾改名“东方红鞋店”“长风鞋店”，并卖/产皮鞋，非自产鞋也上柜。</li>
+<li>1970年前后建自有生产车间，结束纯前店后厂小作坊；1976—77年恢复“内联升”老名，重新主打千层底。</li>
+<li>1980年代扩大厂房（资料提占地约十三亩），1988年大栅栏店由小门面扩成多层中式楼（资料有“三层/四层”不同描述，现营业以一至三层为主）。</li>
+<li>商标：1979年前后用郭沫若手书“内联升”作注册商标，1962年有郭沫若题匾赋诗的说法，店史常引。</li>
+</ul>
+<h2 id="五非遗与千层底工艺老号的核心资产"><a class="header" href="#五非遗与千层底工艺老号的核心资产">五、非遗与千层底工艺：老号的核心资产</a></h2>
+<ul>
+<li>2006年首批中华老字号；2008年“内联升千层底布鞋制作技艺”入第二批国家级非遗，编号Ⅷ-115，保护单位北京内联升鞋业有限公司。</li>
+<li>2011年成为首批国家级非遗生产性保护示范基地。</li>
+<li>工艺要点：
+<ul>
+<li>“一高四多”：工艺要求高；工序多、纳底花样多、绱鞋方法多、品种多。</li>
+<li>一双完整布鞋90余道工序、近40种工具，纯棉/纯麻/礼服呢/缎面等天然料；打袼褙、切底、包签、圈边、纳底、绱鞋、捶整、烘干各自有标准。</li>
+<li>纳底“麻绳粗、针眼细、刹手紧”，常规每平方寸约81针；普通平针千层底全鞋2100多针，十字底约4200针，熟练工纳底两三天、整鞋四五天。</li>
+<li>绱鞋分正绱、反绱、明绱，反绱为千层底精髓；学徒传统“三年零一节”出师。</li>
+</ul>
+</li>
+<li>传承谱系：公开资料提何凯英（1956年生）为国家级代表性传承人，后带徒；近年徐文浩等“85后”为第五代、西城区级传承代表。</li>
+</ul>
+<h2 id="六现在的大栅栏34号老店博物馆国潮"><a class="header" href="#六现在的大栅栏34号老店博物馆国潮">六、现在的大栅栏34号：老店+博物馆+国潮</a></h2>
+<ul>
+<li>总店定位“中国布鞋第一家”，一层经典千层底/礼服呢/小圆口，潮鞋区做故宫、迪士尼、大鱼海棠、王者荣耀、如懿传等联名；二层国潮体验+“大内·宫保”咖啡，露台看大栅栏人流；三层/馆区有《履中备载》复本、朝靴、制鞋工具、非遗工作室。</li>
+<li>企业侧：北京内联升鞋业有限公司，注册大栅栏34号，股份制（工会+金座投资等），仍做手工千层底也做时装布鞋、皮鞋、童鞋、拖鞋，花色资料称3000种上下、传统品种1500余种。</li>
+<li>创新方向：与ESMOD、北服、央美等合作；Gore-Tex、EVA中底与传统纳底结合；电商+线下定制；海外商标注册、国际赛会定制。</li>
+<li>游览建议：大栅栏中段路南34号，和瑞蚨祥（5号）、同仁堂（中段）、马聚源（邻近）、步瀛斋形成“前门鞋帽绸药”小环线；看非遗重点看纳底针距、反绱接口、礼服呢老样和《履中备载》复刻，别只买黑布鞋就走。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../qianmen-street/liu-bi-ju.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../qianmen-street/tian-fu-hao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../qianmen-street/liu-bi-ju.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../qianmen-street/tian-fu-hao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

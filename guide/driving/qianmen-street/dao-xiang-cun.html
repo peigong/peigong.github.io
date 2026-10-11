@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>稻香村糕点铺 - 车讲北京 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">车讲北京 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/qianmen-street/dao-xiang-cun.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="稻香村糕点铺"><a class="header" href="#稻香村糕点铺">稻香村糕点铺</a></h1>
+<p>前门“稻香村”要分两段讲才不会乱：一段是1895年郭玉生在前门观音寺开的“稻香村南货店”，算北京稻香村品牌源头；一段是1980年代刘振英复号、后来开到前门大街59号的现代北京稻香村门店。两者有历史叙事上的承接，但是否“直接师徒传承”在学界有争议。</p>
+<h2 id="一1895创号前门观音寺南店北开"><a class="header" href="#一1895创号前门观音寺南店北开">一、1895创号：前门观音寺，南店北开</a></h2>
+<ul>
+<li>清光绪二十一年（1895），金陵（今南京）人郭玉生带几位懂南味制作的伙计进京，在前门外观音寺（今大栅栏西街东口路北一带，也有资料写“观音寺外大街”）挂“稻香村南货店”黑漆金字匾。</li>
+<li>选址逻辑：前门外商圈、戏园会馆、客栈密集，离宣南士人、南方旅居者近；采取“南店北开、前店后厂”，自产自销，不靠外来批发。</li>
+<li>产品以南方茶食为主：冬瓜饼、姑苏椒盐饼、猪油夹沙蒸蛋糕、杏仁酥、南腿饼、肉松饼、枣泥麻饼、寸金糖、熏鱼、樟茶鸭等；重油重糖、存放不易干，和老北京“大饽饽”铺的提浆/翻毛路数不同。</li>
+<li>口碑：民国前资料称其压迫本地饽饽铺“失了半壁江山”；《鲁迅日记》1913—1915年有约15次到稻香村购买记录，鲁迅当时住南半截胡同绍兴会馆，离观音寺店两三公里；冰心、马约翰、谭富英等也常购。</li>
+</ul>
+<h2 id="二民国歇业约1926年前后关张"><a class="header" href="#二民国歇业约1926年前后关张">二、民国歇业：约1926年前后关张</a></h2>
+<ul>
+<li>清末到民初生意最盛，但一战、军阀、通胀、同业竞争都压利润；学界有“1923年前已歇”或“最晚1926年关张”两种说法，旅游口径常写“1926年因战乱歇业”。</li>
+<li>关张后“稻香村”字号在北京沉寂数十年；此间前门其他熟肉/糕点老号（天福号、正明斋、稻香春等）各走各路，不并入郭店。</li>
+</ul>
+<h2 id="三19831984复号刘振英东四起步不是直接续郭店"><a class="header" href="#三19831984复号刘振英东四起步不是直接续郭店">三、1983—1984复号：刘振英、东四起步，不是直接续郭店</a></h2>
+<ul>
+<li>1983年民建、工商联开传统食品座谈会，东城工商联副主委刘振英牵头恢复“稻香村”；其早年学徒出身于东安市场稻香春，并非郭玉生门下直传。部分学者据此认为：现代北京稻香村与1895观音寺南货店无明确承继关系，企业口径则把1895作为品牌溯源。</li>
+<li>1983年发照“北京市东城区稻香村南味食品店”，初期代销苏州稻香村等产品，属“南味北传”；后自建设厂。</li>
+<li>1984年1月22日第一门市部在东四北大街开张；随后建生产楼，与东城粮食局联合，恢复牛舌饼、槽子糕、状元饼及后来京八件、自来红白、翻毛、提浆等。</li>
+<li>1993年国内贸易部中华老字号；2006年商务部重新认定“北京稻香村”中华老字号；后期注册“三禾”标识，与“苏州稻香村”区分。</li>
+</ul>
+<h2 id="四从东四到全城生产基地与产品体系"><a class="header" href="#四从东四到全城生产基地与产品体系">四、从东四到全城：生产基地与产品体系</a></h2>
+<ul>
+<li>早期北新桥/东四小厂，后小营食品厂（1991奠基），再建昌平北七家基地（资料写占地约200亩、建筑面积约15万㎡），糕点、肉食、速冻、元宵、粽子、月饼共15类600多种。</li>
+<li>节令体系：“四时三节”——上元元宵、端午粽子、中秋提浆/翻毛/自来红白、重阳花糕、春节京八件/年糕坨；京八件分大八件、小八件，复原古籍造型与馅料。</li>
+<li>选料讲究：核桃用山西汾阳、玫瑰用妙峰山半开带露、龙眼用福建莆田、火腿用金华等，属于现代北京稻香村“京味化”后的标准，不全是1895南货原样。</li>
+</ul>
+<h2 id="五前门大街59号现代旗舰不是观音寺原址"><a class="header" href="#五前门大街59号现代旗舰不是观音寺原址">五、前门大街59号：现代旗舰，不是观音寺原址</a></h2>
+<ul>
+<li>地址：东城前门大街59号，8:30—21:00，北京稻香村前门旗舰/营业部；2023年重装，2025年9月二层开“京式糕点制作技艺微展厅”，属东城非遗焕新项目，看京式月饼、自来红白现烤、京韵中轴礼盒。</li>
+<li>产品定位：旅游客买“北京特产”为主——点心匣子、京八件、三禾月饼、元宵；也保留南味残余（南糖、肉松、熏鱼），但整体已偏“京式+南味复原”，和1895纯南货店不同。</li>
+<li>与老观音寺店距离：观音寺在大栅栏西街东口，前门大街59号在步行街北段靠近大栅栏北口/正阳桥方向，两者同属“前门商圈”但非同一门牌；讲“前门稻香村沿革”要把“源头观音寺”和“今旗舰前门大街”分开。</li>
+</ul>
+<h2 id="六别和苏州稻香村搞混"><a class="header" href="#六别和苏州稻香村搞混">六、别和“苏州稻香村”搞混</a></h2>
+<ul>
+<li>苏州稻香村：1773年观前街，苏式糕点、观前老店，扇形/“禾”字、写“始于1773”；中华老字号1999/2006口径不一。</li>
+<li>北京稻香村：企业叙事从1895前门观音寺溯源、1984东四复业算实体；门店认“北京稻香村”字样或“三禾”标，黑匾金字；前门、王府井、旅游区常有其他“稻香村”混名，买点心看产地和商标最稳。</li>
+<li>商标史：北稻与苏稻曾互有许可（2003、2008等），后长期诉讼；普通消费者只需记住“买北京特产认北京/三禾，买苏式认苏州/禾字”。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../qianmen-street/tian-fu-hao.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../qianmen-street/guang-de-lou.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../qianmen-street/tian-fu-hao.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../qianmen-street/guang-de-lou.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

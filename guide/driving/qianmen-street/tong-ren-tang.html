@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>同仁堂 - 车讲北京 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">车讲北京 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/qianmen-street/tong-ren-tang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="同仁堂"><a class="header" href="#同仁堂">同仁堂</a></h1>
+<p>前门大栅栏同仁堂，严格说要分两条线看：一条是“同仁堂”品牌从药室到集团的整体史，一条是“大栅栏老铺”这家门店从1702年至今的店址史。两条线在清代基本重合，但1669创号时并不在大栅栏。</p>
+<h2 id="一创号1669年药室不在大栅栏"><a class="header" href="#一创号1669年药室不在大栅栏">一、创号：1669年药室，不在大栅栏</a></h2>
+<ul>
+<li>创始人乐显扬（号尊育，1630—1668说法见部分资料），浙江宁波慈溪/慈水乐氏后裔，先祖明永乐间来京，以铃医走方起家；他本人入清宫太医院任吏目。</li>
+<li>康熙八年（1669）在北京创办“同仁堂药室”。“同仁”取“同人/公而雅”“仁者爱人”之意，侧重制药、配药，不完全是临街零售。</li>
+<li>乐显扬之后，四子乐凤鸣接续家业。康熙四十五年（1706）编《同仁堂药目叙》《乐氏世代祖传丸散膏丹下料配方》，定下“炮制虽繁必不敢省人工，品味虽贵必不敢减物力”的制药古训。</li>
+</ul>
+<p>补充：部分旅游资料把1669药室地址说成“西打磨厂乐家老宅/46号”，但官方与权威资料通常只说“在北京创办”，大栅栏店才是明确的对外药铺起点，别把两处混成同一门牌。</p>
+<h2 id="二落子大栅栏1702年药铺设店"><a class="header" href="#二落子大栅栏1702年药铺设店">二、落子大栅栏：1702年药铺设店</a></h2>
+<ul>
+<li>康熙四十一年（1702），乐凤鸣在前门外大栅栏开设“同仁堂药铺”，即后来大栅栏老店前身；央视藏馆展出的同治八年布匾写“京师正阳门外路南大栅栏”，可证最晚晚清已稳定在该址。</li>
+<li>老店格局是“前店后坊”：临街问诊抓药，后院炮制丸散膏丹。大栅栏当时外城商业密集、离戏园会馆旅客近，药铺与瑞蚨祥、内联升、马聚源形成“穿戴吃药”一条街。</li>
+<li>常见门址写作“大栅栏街中段路南/24号”，现以门店现场门牌和导览为准；老辈描述有“下洼子门”、台阶低于街面等特征，属于老铺空间记忆。</li>
+</ul>
+<h2 id="三御药时期17231911共188年"><a class="header" href="#三御药时期17231911共188年">三、御药时期：1723—1911，共188年</a></h2>
+<ul>
+<li>雍正元年（1723）起，钦定同仁堂供奉御药、独办宫廷官药，到1911年清亡，跨康熙以后八朝，共约188年。</li>
+<li>供御内容不是只送成药：包括拣选地道药材、按宫廷方配丸散膏丹、遇差事领官银采药；清宫御药房档案里有同治八年开“开郁六郁膏”“神效暖脐膏”等交由同仁堂拣选上品交进的例子。</li>
+<li>御药身份带来两点长期影响：
+<ol>
+<li>质量制度变严——“另室存放、按方投料、净料炮制”，形成“处方独特、选料上乘、工艺精湛”的配本体系；</li>
+<li>品牌信用变高——民间认“乐家老铺”，但家族也因官药垫银、合股、打假产生复杂经营关系。</li>
+</ol>
+</li>
+</ul>
+<h2 id="四清代中后期的股权波折与中兴"><a class="header" href="#四清代中后期的股权波折与中兴">四、清代中后期的股权波折与“中兴”</a></h2>
+<ul>
+<li>乾隆十八年（1753）前后起，同仁堂多次因资金、债务发生典让、租赁、引入外股，不再是纯乐氏独资。</li>
+<li>道光间乐氏第十代乐平泉（亦称乐印川）逐步收回外股、清偿债务，把铺务拉回乐家独资；其妻许氏在乐平泉死后主持店务，维持供御与零售。</li>
+<li>许氏1907年去世后，乐氏四房（孟繁、仲繁、叔繁、季繁）共管。四房可另开“乐家老铺”分号，但核心“同仁堂”大栅栏老号由四房共同利益维系；这也衍生出达仁堂、乐仁堂、宏济堂、永仁堂等乐家支系字号。</li>
+</ul>
+<h2 id="五庚子与民国火灾联军通胀"><a class="header" href="#五庚子与民国火灾联军通胀">五、庚子与民国：火灾、联军、通胀</a></h2>
+<ul>
+<li>1900年义和团烧前门卖洋药的老德记，火借风势延入大栅栏，前门一带“延烧铺户千余家”；同仁堂铺面前庭被殃及，后由乐家修缮恢复。随后八国联军驻前门，药铺另有被骚扰、索扰的损失。</li>
+<li>1902年前后前门商铺复业，大栅栏重回繁盛；同仁堂在民国继续以老号经营，但四房共管后期内部分润、各房外开分号，老店本身扩张有限。</li>
+<li>抗战时期北平沦陷，药铺受物资管制、日商入股压力；胜利后金圆券通胀，库存贵细药材贬值、工资与进货困难。到1949年前，大栅栏老号虽招牌仍在，但生产规模、现金流都受压。</li>
+</ul>
+<h2 id="六新中国公私合营制药分离集团化"><a class="header" href="#六新中国公私合营制药分离集团化">六、新中国：公私合营、制药分离、集团化</a></h2>
+<ul>
+<li>1950年前后乐松生主持号务，带头买公债；1954年代表资方签公私合营协议，同仁堂从家族老铺转入公私合营，再逐步国营。这是老号现代转制的关键节点。</li>
+<li>合营后把“店”和“厂”进一步分开：前门大栅栏保留零售、坐诊、部分传统制剂展示；生产端并入北京药材/同仁堂制药体系。1957年前后流感、2003年非典期间，同仁堂系统都承担保供应任务。</li>
+<li>1992年以药材公司下属制药厂、药店、科研院所等组建“中国北京同仁堂集团公司”；1997年股份公司在上交所上市（600085），后分拆科技、国药在香港上市。</li>
+<li>2001年前后改制为国有独资集团；2006年“同仁堂中医药文化”入首批国家级非遗，其后“传统中药材炮制技艺”“安宫牛黄丸制作技艺”也列为国家级非遗。</li>
+</ul>
+<h2 id="七前门大栅栏店现在是什么形态"><a class="header" href="#七前门大栅栏店现在是什么形态">七、前门大栅栏店现在是什么形态</a></h2>
+<ul>
+<li>大栅栏药店/老铺：定位“标志性零售老店”，卖饮片、丸散、保健品、礼盒，设中医坐诊/医馆，门店本身也是中轴线商业文化点位。</li>
+<li>与“同仁堂集团”关系：老店是商业零售终端之一，不是全部生产线；安宫牛黄、六味、乌鸡白凤、牛黄清心等主要由股份/科技/各厂按国标和老配本生产，老店承担终端与品牌展示。</li>
+<li>游览看点：老门面与“乐家老铺”记忆、药目/配本文化、非遗炮制展示、御药档案故事；若看生产，要去大兴/亦庄等厂区，大栅栏主要看“店史+零售+坐诊”。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../qianmen-street/da-zha-lan.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../qianmen-street/rui-fu-xiang.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../qianmen-street/da-zha-lan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../qianmen-street/rui-fu-xiang.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
