@@ -1,6 +1,7 @@
 # 目录
 
 - [一般介绍](./overview/README.md)
+- [讲解提纲](./note.md)
 - [北京的历史](./overview/history.md)
 - [北京的山川形势](./overview/geography.md)
 - [北京的饮食文化]()
@@ -11,4 +12,14 @@
 - [互动游戏](./games/README.md)
     - [十二个氛围小游戏](./games/game12-49637280378.md)
     - [七十三个团体小游戏](./games/game73-740647641.md)
+- [前门大街]()
+    - [老字号](./qianmen-street/brands.md)
+    - [大栅栏](./qianmen-street/da-zha-lan.md)
+    - [同仁堂](./qianmen-street/tong-ren-tang.md)
+    - [瑞蚨祥](./qianmen-street/rui-fu-xiang.md)
+    - [六必居](./qianmen-street/liu-bi-ju.md)
+    - [内联升](./qianmen-street/nei-lian-sheng.md)
+    - [天福号酱肉铺](./qianmen-street/tian-fu-hao.md)
+    - [稻香村糕点铺](./qianmen-street/dao-xiang-cun.md)
+    - [广德楼戏院](./qianmen-street/guang-de-lou.md)
     - []()
