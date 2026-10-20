@@ -1,0 +1,12 @@
+{
+  "name": "milupark",
+  "version": "1.0.0",
+  "description": "南海子麋鹿苑",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}

@@ -53,3 +53,6 @@
     - [傅科](./referrence/Foucault.md)
     - [科里奥利力](./referrence/Coriolis-force.md)
     - [行星](./referrence/planet.md)
+    - [磁层]()
+    - [电离层]()
+    - [等离子层]()
