@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>大礼议 - 天坛 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">天坛 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Great-Ritual-Controversy.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="大礼议"><a class="header" href="#大礼议">大礼议</a></h1>
+<p>明朝嘉靖初年的"大礼议"之争（Great Ritual Controversy）——核心是嘉靖帝以藩王入继皇位后，要不要过继给伯父孝宗、如何追尊生父兴献王的名分问题，本质是"继统"（继承皇位）与"继嗣"（过继为大宗之子）是否必须绑定的宗法与政治博弈。</p>
+<h2 id="一背景"><a class="header" href="#一背景">一、背景</a></h2>
+<ul>
+<li>武宗无后：明武宗朱厚照（正德帝）1521年驾崩，无子无兄弟。</li>
+<li>迎立藩王：内阁首辅杨廷和依 《皇明祖训》"兄终弟及"，迎武宗堂弟——兴献王朱祐杬之子朱厚熜（15岁）入京继位，即嘉靖帝。</li>
+<li>矛盾起点：杨廷和认为旁支入继大宗，须"为人后者为之子"，应过继给武宗之父明孝宗朱祐樘为子，尊孝宗为"皇考"，生父兴献王只能称"皇叔考"；嘉靖坚决不肯认伯父为父、认生父为叔。</li>
+</ul>
+<h2 id="二两派观点"><a class="header" href="#二两派观点">二、两派观点</a></h2>
+<p>🔵 护礼派／继嗣派（杨廷和、毛澄、毛纪、礼部及多数翰林、言官）</p>
+<ul>
+<li>主张：援引汉定陶王、宋濮王故事及程颐"为人后者为之子"，嘉靖应继统兼继嗣，以孝宗为皇考（父亲），称生父兴献王为皇叔考兴献大王、母为皇叔母，另立宗室继兴王祀。</li>
+<li>理由：维护宗法"大宗不可绝"，确保皇统在孝宗—武宗一脉延续，防止小宗压大宗。</li>
+</ul>
+<p>🔴 议礼派／继统派（嘉靖帝本人、张璁⟨后改名孚敬⟩、桂萼、方献夫、霍韬）</p>
+<ul>
+<li>主张：提出"继统不继嗣"——嘉靖是依祖训直接继承大明皇统，并非被孝宗收养，不必过继给孝宗。应尊生父兴献王为皇考（恭穆献皇帝），尊孝宗为皇伯考，并在京师别立兴献帝庙。</li>
+<li>理由：引 《礼记》"礼缘人情"，若强令尊伯为父则悖逆父子天性；汉宋旧例是先立为太子养于宫中才继位，与嘉靖以外藩入继情形不同。</li>
+</ul>
+<h2 id="三演进过程关键节点"><a class="header" href="#三演进过程关键节点">三、演进过程（关键节点）</a></h2>
+<h2 id="时间--事件"><a class="header" href="#时间--事件">时间 | 事件</a></h2>
+<p>1521年四月 | 嘉靖即位第六天命议尊号，杨廷和坚持"继嗣"，嘉靖拒从
+1521年七月 | 新科进士张璁上《正典礼疏》倡"继统不继嗣"，遭群臣排挤外放
+1521年十月 | 妥协：尊孝宗为皇考，兴献王、妃加"本生"二字称本生父、本生母（仍认孝宗为宗法父）
+1524年二月 | 杨廷和致仕
+1524年七月 | 嘉靖下诏去"本生"二字，尊生父为皇考恭穆献皇帝，孝宗降称皇伯考 → 杨慎、何孟春率229名官员跪哭左顺门抗议
+1524年七月 | 嘉靖震怒，逮下狱、廷杖——杖死16人（一说17人），134人下狱，84人待罪，杨慎永久充军
+1538年（嘉靖十七年） | 追尊生父为睿宗恭穆献皇帝，神主祔入太庙，位次武宗之上，"大礼议"彻底终结</p>
+<h2 id="四争议结论与影响"><a class="header" href="#四争议结论与影响">四、争议结论与影响</a></h2>
+<ul>
+<li>结果：嘉靖帝完全胜利——生父称皇考、入太庙为睿宗，孝宗降为皇伯考；杨廷和集团清洗，张璁、桂萼等新贵入阁掌权。</li>
+<li>性质：表面是宗法礼仪之争，实为皇权与文官集团首辅专权的较量，也是"天理（宗法）"与"人情（父子天性/心学倾向）"的思想交锋。</li>
+<li>影响：
+<ul>
+<li>嘉靖皇权空前强化，阁臣依附皇帝方能上位，开明代"议礼新贵"先例。</li>
+<li>文官集团严重分裂，旧"护礼派"遭打压，言官势力受挫，间接为后来严嵩专权铺路。</li>
+<li>程朱理学在庙堂的垄断受冲击，王阳明心学在士大夫中影响力上升。</li>
+</ul>
+</li>
+</ul>
+<p>简言之：大礼议 = 嘉靖帝以"继统不继嗣"击败杨廷和"继统必继嗣"主张，成功追尊生父为皇考并祔庙，借礼制之争确立个人绝对皇权、清洗旧阁臣集团。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="Juniperus-chinensis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="Juniperus-chinensis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

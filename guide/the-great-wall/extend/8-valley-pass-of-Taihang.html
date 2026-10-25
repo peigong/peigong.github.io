@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>太行八陉 - 长城 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">长城 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/extend/8-valley-pass-of-Taihang.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="太行八陉"><a class="header" href="#太行八陉">太行八陉</a></h1>
+<p>太行八陉，陉，音xíng，即山脉中断的地方。太行山中多东西向横谷（陉），著名的有军都陉、蒲阴陉、飞狐陉、井陉、滏口陉、白陉、太行陉、轵关陉等，古称太行八陉，即古代晋冀豫三省穿越太行山相互往来的8条咽喉通道，是三省边界的重要军事关隘所在之地。</p>
+<p>太行山延袤千里，百岭互连，千峰耸立，万壑沟深。山西的许多条河流切穿太行山。自南而北有：沁河、丹河、漳河、滹沱河、唐河、桑干河等等，于是形成几条穿越太行山的峡谷。</p>
+<p>东晋末年郭缘生在《述征记》中载：太行山首始于河内，自河内北至幽州，凡有八陉：第一曰轵关陉，今属河南府济源县，在县理西十一里；第二太行陉，第三白陉，此两陉今在河内；第四滏口陉，对邺西；第五井陉；第六飞狐陉，一名望都关；第七蒲阴陉，此三陉在中山；第八军都陉，在幽州。太行陉，阔三步，长四十里。</p>
+<h2 id="各陉简介"><a class="header" href="#各陉简介">各陉简介</a></h2>
+<h3 id="轵zhǐ关陉"><a class="header" href="#轵zhǐ关陉">轵（zhǐ）关陉</a></h3>
+<p>第一陉为轵关陉。主要为春秋战国时期，三晋等诸侯国连通都城洛阳的要道。轵，战国时魏城，故址在今河南省济源市东的轵城镇。轵关陉的起始在济源县西十一华里处，关当孔道，因曰轵关。轵关陉的最后一关为现侯马市南的铁铃关，形势险峻，自古为用兵之地。</p>
+<h3 id="太行陉"><a class="header" href="#太行陉">太行陉</a></h3>
+<p>第二陉是太行陉。在今河南省沁阳市西北三十五华里处，陉阔三步，长四十华里。沿陉北上太行，在山西省晋城之南的太行山上，有关名曰“太行关”。又称天井关、雄定关。形势雄峻，素称天险。由此陉南下可直抵虎牢关，是逐鹿中原的要陉之一。</p>
+<h3 id="白陉"><a class="header" href="#白陉">白陉</a></h3>
+<p>第三陉是白陉。在山西省陵川县东约三十公里处。是太行八陉中保存距离最长、最完整的茶马古道。如今栈道上还留存着多处马蹄印，古道总长五公里，宽2米，由七十二拐和古栈道两部分组成。据此陉可南渡黄河攻开封，东可向大名进击，北可窥安阳、邯郸，是个可攻可退可守的军事要地。</p>
+<h3 id="滏口陉"><a class="header" href="#滏口陉">滏口陉</a></h3>
+<p>第四陉为滏口陉。在今河北省武安市之南和磁县之间的滏山。是沟通豫北安阳和河北邯郸与晋的孔道。古人云：“由此陉东出磁、邢，可以援赵、魏。”</p>
+<h3 id="井陉"><a class="header" href="#井陉">井陉</a></h3>
+<p>第五陉是井陉。井陉为古关名，又称土门关。故址在今河北省井陉县的井陉山上。井陉是连通晋冀鲁的要冲，其军事地位十分重要。</p>
+<h3 id="飞狐陉"><a class="header" href="#飞狐陉">飞狐陉</a></h3>
+<p>第六陉是飞狐陉，也称飞狐口。该陉位于今河北省涞源县北和蔚县之南。两崖峭立，一线微通，蜿蜒百余华里。古人云：踞飞狐，扼吭拊背，进逼幽、燕，最胜之地也。</p>
+<h3 id="蒲阴陉"><a class="header" href="#蒲阴陉">蒲阴陉</a></h3>
+<p>第七陉是蒲阴陉。在今河北省易县西紫荆岭上。山岭有紫荆关，也称子庄关。宋时称为金陂关，元、明以来始称紫荆关。其地峰峦峭峙，仄陉内通，是达山西大同的军事要隘。</p>
+<h3 id="军都陉"><a class="header" href="#军都陉">军都陉</a></h3>
+<p>第八陉即为军都陉。在今北京市昌平县西北之居庸山。古名军都山，军都陉有关曰居庸关，因其在居庸山中而得名。又称军都关。北齐称纳款关，唐曰蓟门关。其地层峦叠嶂，形势雄伟，悬崖夹峙，巨涧中流，奇险天开，古称要隘。此陉是古代出燕入晋北去内蒙塞外的咽喉之路。</p>
+<h2 id="现状"><a class="header" href="#现状">现状</a></h2>
+<p>东汉末年，曹操讨伐袁绍余部，行进太行陉入上党（今晋东南），路经羊肠坂道，写下气魄雄伟,慷慨悲凉的《苦寒行》，诗中写道“北上太行山，艰哉何巍巍！羊肠坂诘屈，车轮为之摧”。古道之艰险难行，可见一斑。</p>
+<p>唐代大诗人白居易在他的诗中写道：“太行之路能摧车。”明王世贞《适晋记行》中说：“车行太行道，如浮沧海、帆长江，身居危险之境。”</p>
+<p>随着时间的推移，现今的“太行八陉”已被公路、铁路变成了通途，昔日的军事关隘已成为经济建设的大动脉。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../the-great-wall-2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../the-great-wall-2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

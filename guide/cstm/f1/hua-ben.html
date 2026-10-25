@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>花本 - 中国科学技术馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国科学技术馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/f1/hua-ben.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="花本"><a class="header" href="#花本">花本</a></h1>
+<p>花本，汉语词语，指将纸面设计的纹样通过经纬线编结工艺转化为织物的模本，其作用原理与现代提花机的纹板相似。
+花本通过“挑花结本”技法制作，是连接纹样图纸与织物的桥梁，可分为花样花本和花楼花本。</p>
+<p>在苗族织锦中，储存纹样信息的载体被称为“母花本”。</p>
+<p>明代宋应星《天工开物》记载了工匠结花本需精密计算丝线分寸。</p>
+<h2 id="基本含义"><a class="header" href="#基本含义">基本含义</a></h2>
+<p>拼音：huā běn，注音：ㄏㄨㄚㄅㄣˇ。花本指织造花色织物时所绘制的织花样稿，即纹样。</p>
+<p>古籍记载，凡工匠结花本者，心计最精巧。画师先画何等花色于纸上，结本者以丝线随画量度，算计分寸秒忽而结成之。</p>
+<p>花本是将纸面上设计的纹样，过渡到织物上去，再现设计纹稿的“模本”。</p>
+<h2 id="工艺原理"><a class="header" href="#工艺原理">工艺原理</a></h2>
+<p>花本是将纸面设计的纹样过渡到织物的“模本”。“挑花结本”工序是制作花本的核心，可视为中国最早的“程序控制系统”。</p>
+<p>“挑花结本”是以线为材料，把花纹图案色彩转变成程序语言进行储存的创作设计过程。常先绘制意匠图，再根据图样挑花。</p>
+<p>其信息编码原理为：经线对应纵格，纬线对应横格；经线在纬线上为有花（类似1），在纬线下为无花（类似0），如同二进制。花本是连接设计与织造的桥梁，织工按花本信息提经织纬即可显花。该原理与现代电力提花机的“纹板”或穿孔纹板相同，是后者的前身。</p>
+<p>花本主要分为花样花本和花楼花本两种。花样花本的编结方法是：在一块经纬数量相同的方布上画出准备织造的纹样。花楼花本的编结方法是：把花样花本的经线和花楼上垂下的同量通丝接在一起，将花样过到花楼之上。</p>
+<p>该工艺难度极大，对龙袍等高级别妆花织物的挑花结本工艺要求极高，经线密度需达到1800根，工程浩大。</p>
+<h2 id="工艺分类"><a class="header" href="#工艺分类">工艺分类</a></h2>
+<p>云锦挑花结本包含挑花、倒花、拼花三种工艺，其中挑花是基本工艺，倒花和拼花是辅助工艺。挑花工艺是先将图案纹样绘制成意匠图，再根据意匠图进行挑花，使其更直观精确。倒花是根据已有的花本复制出另一个花本。拼花是把挑花或倒花制成的不完整花本合并成一个完整花本，使之具备上机织造的要求。采用“四方连续、八面接章”的图案构成方法可以节省挑花结本的工序，挑花时只需挑成半个单位的花本，再用倒花复制相同的半个花本，并用筒花将两个半本花本合并成一个完整花本。</p>
+<h2 id="主要类型"><a class="header" href="#主要类型">主要类型</a></h2>
+<p>传统分类包括花样花本和花楼花本。花样花本的编结方法是“在一块经纬数量相同的方布上画出纹样，用新经线、纬线按花纹位置置换原布经纬线”；花楼花本的编结方法是“把花样花本的经线和花楼上垂下的通丝连接，将花样过渡到花楼上”。少数民族地区特有的母花本（又称老母花）是贵州施洞苗族用于储存纹样信息的载体，同时提供纹样‘形’和‘织法’信息；母花本有彩色和素色之分，尺寸与用途不同，彩色母花本用于衣领等小纹样，素色母花本用于围腰等大纹样；其纹样构成特点包括以‘路’为限的秩序、不完整图形的构图智慧、几何纹样的复合构成。</p>
+<h2 id="应用"><a class="header" href="#应用">应用</a></h2>
+<p>花本是传统提花织造的核心技术，广泛应用于南京云锦、蜀锦、傣族织锦等多种织锦的织造过程。其本质是将设计好的纹样转化为可被织机执行的程序语言，是连接纹样设计与成品织物的关键桥梁。</p>
+<p>在蜀锦织造中，花本（挑花结本）是关键的纹样转换工序。蜀锦传承人刘晨曦对古蜀锦纹样进行整理研究和恢复设计，完成了“苏武牧羊”“刘海戏蟾”“天女散花”等经典纹样的挑花结本设计工作。</p>
+<p>在云锦，尤其是最高级别的“妆花”织物如龙袍的织造中，挑花结本为不可或缺的关键工艺，必须严格遵循传统手工完成。其工艺难度极高，例如龙袍织造对挑花密度的要求达到1800根，远高于普通织物的100根标准。由于龙袍花本工程浩大，纹样复杂，常需综合运用挑花、倒花、拼花等工艺，并配合倒花、顺花等方法来编结完整的花本。</p>
+<p>花本技艺也见于其他民族织锦。例如，云南孟连的傣族织锦非遗传承人安勐，便完整掌握了包括“制花本”在内的一整套傣锦制作工艺。</p>
+<h2 id="历史记载"><a class="header" href="#历史记载">历史记载</a></h2>
+<p>明代宋应星《天工开物·花本》中记载：“凡工匠结花本者，心计最精巧。画师先画何等花色于纸上，结本者以丝线随画量度，算计分寸秒忽而结成之，张悬花楼之上。”</p>
+<p>花本也是古代纺织工匠的一项重要贡献，其作用原理与现代电力提花机上的“纹板”完全相同，被视为中国最早的“程序控制系统”之一。</p>
+<p>花本技艺在蜀锦、云锦、苗族织锦、傣族织锦等不同地区和工艺中得到传承与应用。</p>
+<h2 id="现代意义"><a class="header" href="#现代意义">现代意义</a></h2>
+<p>花本工艺，特别是其核心工序“挑花结本”，被认为是中国最早的“程序控制系统”，它利用“结绳记事”原理，将花纹图案的色彩和结构信息转化为由经纬线构成的“模本”。在这一系统中，经线浮于纬线之上记为“有花”，沉于纬线之下记为“无花”，其原理类似于二进制中的0和1，实现了信息的数字化编码与存储。从技术原理上看，花本的作用与现代电力提花机上的“纹板”完全相同，是现代提花技术中程序控制装置的前身。这种通过线性材料记录和传递复杂图案信息的思想对后世纺织机械产生了影响，后来出现的法国雅卡尔提花机及现在世界各国通用的龙头机，其基本构造与中国传统花机相同，虽将实体花本改进为穿孔纹版，但其核心的控制原理依然未变。</p>
+<h2 id="相关研究"><a class="header" href="#相关研究">相关研究</a></h2>
+<p>根据谭晓宁2023年的研究，贵州施洞苗族母花本是储存纹样信息、指导织造的载体，并作为一种集体记忆图式，是区分族群边界与规范族群秩序的符号，其纹样构成以“路”为界形成秩序，包含不完整图形和几何纹样的复合构成，与苗族历史、身份认同及社会秩序紧密相关。</p>
+<p>2024年的研究探讨了施洞苗绣图案母花本在国潮服饰设计中的应用，认为母花本是苗绣图案的“灵魂源泉”，并提出了应用价值、设计原则与转化方法，通过“绣源”系列国潮服饰等案例进行了验证。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../open/Hall-Thruster.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../f1/Flowers-floor-machine.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../open/Hall-Thruster.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../f1/Flowers-floor-machine.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

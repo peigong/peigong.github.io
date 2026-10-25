@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概况简介 - 中国电影博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国电影博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="中国电影博物馆"><a class="header" href="#中国电影博物馆">中国电影博物馆</a></h1>
+<p>中国电影博物馆（China National Film Museum），位于北京市朝阳区南影路9号，是经国务院批准，原国家广播电影电视总局和北京市人民政府共同建设的大型公共文化设施，是目前世界上最大的国家级电影专业博物馆，是纪念中国电影诞生100周年的标志性建筑。2007年2月10日正式对公众开放，占地52亩，建筑面积近38000平方米，展线长度2970米，其中涉及电影1500余部、图片4300余张、介绍电影工作者450多位，有藏品4万余件，其中国家一级藏品8件。馆内设有21个展厅和6个影厅，包含北京最大IMAX银幕的巨幕厅，可同时容纳1000多人观影。</p>
+<p>2005年12月主体工程落成，2008年3月28日实现免费开放。2010年5月24日调整为北京市政府直属事业单位。2018年被评为北京市中小学生社会大课堂资源单位，2020年入选第四批国家一级博物馆名单。2021年被命名为全国爱国主义教育示范基地和北京首批市级党员教育培训现场教学点。2023年电影史研究所成立，同年收藏展示北京冬奥会开幕式大屏幕。2024年社会教育部获“全国民族团结进步模范集体”称号，2025年获第七届全国文明单位称号并举办《为人民抒怀 为时代放歌——新时代中国电影发展成就展》。</p>
+<h2 id="历史沿革"><a class="header" href="#历史沿革">历史沿革</a></h2>
+<ul>
+<li>2002年11月，中国电影博物馆开始投入建设。</li>
+<li>2005年12月，中国电影博物馆主体工程落成。</li>
+<li>2007年2月10日，中国电影博物馆正式对公众开放。</li>
+<li>2007年，中国电影博物馆影院以签约的方式加入北京新影联院线。</li>
+<li>2008年3月28日，中国电影博物馆正式对公众免费开放。同年7月26日，中国电影博物馆蜡像厅竣工揭幕。</li>
+<li>2009年5月25日，中国电影博物馆工程通过北京市建筑业新技术应用示范工程验收。</li>
+<li>2010年5月24日，中国电影博物馆由北京市广电局所属事业单位调整为北京市政府直属事业单位。</li>
+<li>2018年2月11日，中国电影博物馆闭馆，对设备设施进行改造。</li>
+<li>2019年9月29日，中国电影博物馆正式重新开馆，并且在周末增加安排晚场电影放映，每周五、周六将闭馆时间由16：30延长至20：30，并探索在工作日增加晚场电影服务。</li>
+<li>2020年8月24日，中国电影博物馆巨幕影厅停映，开始进行全面升级改造。</li>
+<li>2020年10月31日，中国电影博物馆完成了IMAX GT激光放映系统升级，IMAX巨幕影厅正式开幕，并成为北京最大IMAX银幕。</li>
+<li>中国电影博物馆在2022年北京冬奥会期间推出主题展览、影片展映、文化演出、赛事直播等多项活动，让市民在电影艺术与体育文化交融的氛围中，感受冬奥魅力。</li>
+<li>2023年12月29日，中国电影博物馆电影史研究所成立。</li>
+<li>2026年7月20日，中国电影博物馆迎来自开馆以来第1000万名入馆观众。另有5组家庭作为幸运观众代表，在中国电影博物馆IP形象“影妮”“博仔”的陪伴下，见证了这一里程碑时刻的到来。这一年暑期，中国电影博物馆整合展览、研学、观影、餐饮、文创等多重服务，打造一站式光影文化体验空间。馆内两处展厅完成改造升级，二层第4展厅优化露天放映展区光影与场景细节，完整还原早期农村露天观影的历史风貌；四层第15数字电影技术展厅全面迭代，升级绿幕合成、动作捕捉等数字互动设备，操作流畅度提升。此外，还针对8至12岁青少年，推出《电影探秘之旅》研学专线。</li>
+</ul>
+<h2 id="建筑格局"><a class="header" href="#建筑格局">建筑格局</a></h2>
+<h3 id="概述"><a class="header" href="#概述">概述</a></h3>
+<p>中国电影博物馆占地52亩，建筑面积近38000平方米，展线长度2970米，其中涉及电影1500余部、图片4300余张、介绍电影工作者450多位。博物馆设有21个展厅和对外公共活动及展示区域，展览展示总面积约为13000平方米。一层为《光影抒华章 奋斗新时代》庆祝中华人民共和国成立70周年大型主题展览，充分展示新中国成立70年来中国电影的光辉历程和走进新时代的辉煌成就。二层至四层为《百年历程世纪辉煌》展览，展示了中国电影百年发展历程，展出了不同时期、各个阶段电影的发展和广大电影工作者的重要艺术成就，揭示了电影制作的奥秘。馆内还设有6个影厅，其中包括一个巨幕厅，可同时容纳1000多人观影</p>
+<p>中国电影博物馆内部采用黑、白、灰三色作为基调，在主体建筑的前方，银幕与广场上一道断续的斜墙构成了形如咔打板的平面组合。建筑采用黑色作为基础色，并使用镂空图案的金属板作为外层装饰。在黑色背景上，四个立面根据建筑的内部公共空间的位置分别开辟一片大型彩色玻璃面。红、绿、蓝、黄分别代表的展览、博览、影院、综合服务四个功能区域。</p>
+<h3 id="电影艺术展览厅"><a class="header" href="#电影艺术展览厅">电影艺术展览厅</a></h3>
+<p>电影艺术展览厅包含序厅和1至10展厅，位于中国电影博物馆的二层和三层，以展示中国电影百年历程和电影艺术家的艺术成就为主。展览区由“电影的发明”、“中国电影的诞生和早期发展”、“革命战争时期的中国电影”、“新中国电影的创建与发展”、“改革开放新时期的中国电影”、“美术电影”、“儿童电影”、“科学教育电影”、“译制电影”、“新闻纪录电影”、“香港、澳门地区电影”、“台湾地区电影”10个展厅组成。。</p>
+<h3 id="电影技术博览区"><a class="header" href="#电影技术博览区">电影技术博览区</a></h3>
+<p>电影技术博览区包含11-20展厅，位于中国电影博物馆的四层，由“电影拍摄”、“电影美术”、“电影特殊摄影”、“传统电影特技”、“数字特技”、“电影录音”、“电影剪辑”、“电影洗印”、“电影动画”、“形形色色的电影”10个展厅组成，以展示电影制作技术和电影知识，揭示电影制作的奥秘为主要内容。观众参与性和互动性是博览区突出的特色，有77项互动项目，为观众提供了丰富的电影文化体验。参观者可以亲自动手做录音、拍短片，体验电影制作的乐趣，从拍摄、剪辑、美术、配音、配乐到特技、洗印等整个电影制作过程都有充分展示。</p>
+<h3 id="电影放映厅"><a class="header" href="#电影放映厅">电影放映厅</a></h3>
+<p>中国电影博物馆还拥有6个电影放映厅，同步放映最新电影作品，其中包括一个巨幕厅，可同时容纳1000多人观影。还开辟专门影厅公益放映优秀国产影片并按月举办主题展映活动。</p>
+<h2 id="展出内容"><a class="header" href="#展出内容">展出内容</a></h2>
+<p>中国电影博物馆有藏品4万余件，其中国家一级藏品8件。</p>
+<h3 id="郑正秋的书房"><a class="header" href="#郑正秋的书房">郑正秋的书房</a></h3>
+<ul>
+<li>年代：二十世纪30年代末</li>
+<li>质地：木、金属</li>
+<li>数量：5件</li>
+<li>内容：写字台、书柜、卡片柜、笔筒、铜盒</li>
+</ul>
+<p>郑正秋是公认的中国电影的先驱者之一，他的创作活动集中于中国电影的创作初期（二十世纪三十年代之前）。这些书房用具是当年郑正秋从事电影创作时使用的，具有唯一性。</p>
+<p>此展品在中国电影博物馆2厅展览。</p>
+<h3 id="德国产35毫米手摇无声电影放映机"><a class="header" href="#德国产35毫米手摇无声电影放映机">德国产35毫米手摇无声电影放映机</a></h3>
+<ul>
+<li>年代：二十世纪二十年代</li>
+<li>质地：金属</li>
+<li>数量：1件</li>
+</ul>
+<p>该机年代久远，具有无声片时期的时代特征。是电影早期发展的见证，具有一定的历史价值，在中国国内是罕见品。</p>
+<p>此展品在中国电影博物馆2厅展览。</p>
+<h3 id="任庆泰70岁时拍摄的照片的金属底版和用这张底板洗印的照片"><a class="header" href="#任庆泰70岁时拍摄的照片的金属底版和用这张底板洗印的照片">任庆泰70岁时拍摄的照片的金属底版和用这张底板洗印的照片</a></h3>
+<ul>
+<li>年代：1920年</li>
+<li>质地：金属</li>
+<li>数量：1件</li>
+</ul>
+<p>任庆泰是史载第一部中国电影的制作人，该藏品是该人物实物载体中仅存的一件，同时所使用的铜质材料也属稀有且具有不可复制性。</p>
+<p>此藏品由任庆泰亲属任佩时捐赠，在中国电影博物馆2厅展览。</p>
+<h3 id="韩尚义设计的影片林则徐设计图"><a class="header" href="#韩尚义设计的影片林则徐设计图">韩尚义设计的影片《林则徐》设计图</a></h3>
+<ul>
+<li>年代：1959</li>
+<li>类别：设计图</li>
+<li>质地：纸</li>
+<li>实际数量：1件</li>
+</ul>
+<p>影片《林则徐》在中国电影史上占有重要地位，设计图作者韩尚义在当时电影美术设计领域具有较高的威望。此设计图为原件，且设计图内场景被影片所采用。具有重要的历史意义和研究价值。</p>
+<p>此展品在中国电影博物馆12厅展览。</p>
+<h2 id="文化活动"><a class="header" href="#文化活动">文化活动</a></h2>
+<ul>
+<li>2009年9月13日，中国电影博物馆2009学术年会在中国电影博物馆举行。</li>
+<li>2010年10月30日，以“受众需求与当下中国电影叙事能力”为主题的“中国电影博物馆2010学术年会”在中国电影博物馆举办。</li>
+<li>2011年11月26日，以“全媒体传播视野下的电影生态”为主题的2011中国（北京）电影学术年会在中国电影博物馆举办。</li>
+<li>2015年10月24日，中国电影博物馆举办主题为“电影的历史与未来——纪念中国电影诞生110周年”的2015年学术活动。</li>
+<li>2015年12月20日，2015“中国电影博物馆之夜‘向中国电影诞生110周年致敬’经典电影交响音乐会”在中国电影博物馆中央圆厅举办。</li>
+<li>2016年2月11日，中国电影博物馆举办“阖家欢庆新春”2016年新春嘉年华活动。</li>
+<li>2016年12月16日，中国电影博物馆举办“中国电影博物馆之夜”——经典电影交响音乐会。</li>
+<li>2021年12月21日至12月28日，中国电影博物馆举办国际电影展映——意大利电影展。</li>
+<li>2022年2月4日，中国电影博物馆与北京广播电视台及北京移动等多方机构合作，实现了5G/8K冬奥开幕式直播。</li>
+<li>2023年2月4日，中国电影博物馆举办“第24届冬季奥林匹克运动会开幕式大屏幕及影视技术系统”捐赠、收藏与展示仪式。</li>
+<li>2023年10月15日，中国电影博物馆推出“我在影博等你”主题活动，为2023年第1000000至1000009名入馆的10位观众送上精美礼品及一次免费观影机会。</li>
+<li>2025年10月下旬至11月初，中国电影博物馆先后在法国巴黎、里昂，以及西班牙马德里，举办了“2025国际电影文化交流”系列活动。</li>
+<li>2026年6月30日，中国电影博物馆《光影映征程 奋进谱华章——庆祝中国共产党成立105周年电影海报展》正式启幕。</li>
+</ul>
+<h2 id="所获荣誉"><a class="header" href="#所获荣誉">所获荣誉</a></h2>
+<ul>
+<li>2018年，中国电影博物馆被评为北京市中小学生社会大课堂资源单位。</li>
+<li>2020年11月，入选首届北京网红打卡地上榜名单（共100家）。</li>
+<li>2020年，中国电影博物馆入选“第四批国家一级博物馆名单”。</li>
+<li>2021年6月19日，中国电影博物馆被中央宣传部命名为“全国爱国主义教育示范基地”。</li>
+<li>2022年2月，中国电影博物馆入选2022年北京市科普基地拟命名名单。</li>
+<li>2022年3月30日，中国电影博物馆被命名为2021—2025年度第一批全国科普教育基地。</li>
+<li>2024年9月27日，中国电影博物馆社会教育部被授予“全国民族团结进步模范集体”称号。</li>
+<li>2025年3月17日，入选文化和旅游部、国家文物局发布的国有公益性收藏单位名单（第一批）。</li>
+<li>2025年5月，被授予第七届全国文明单位称号。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="note.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="note.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

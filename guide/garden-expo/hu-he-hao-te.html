@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>呼和浩特园 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/hu-he-hao-te.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="呼和浩特园"><a class="header" href="#呼和浩特园">呼和浩特园</a></h1>
+<p>北京园博园的呼和浩特园在第九届中国（北京）国际园林博览会（2013年，丰台永定河片区）里归现代展园区，主题“母亲的恩泽”，整体用抽象蒙古包穹顶凉亭＋勒勒车＋自然式草原植物，把呼和浩特“草原都城、蒙古风情、游牧人家”压缩成一个开阔、疏朗、少硬建筑的小院，和西安汉风、鄂州铜镜、晋中大院反差很强。</p>
+<h2 id="一基本盘"><a class="header" href="#一基本盘">一、基本盘</a></h2>
+<ul>
+<li>届次/片区：第九届北京园博，现代展园；园博园整体“一轴两点五园”，现代展园是五园之一。</li>
+<li>主题：母亲的恩泽——侧重草原人对母亲（自然、家园、草原）的感恩，以及游牧生活、自由、宽广的空间感。</li>
+<li>位置：丰台射击场路15号北京园博园内现代展园片；具体从几号门进以当日导览为准，通常可结合3号门/园博轴再转现代展园群。</li>
+<li>布局口号：“一环、一带、四区、多点”——用地形堆坡＋绿化围合把园区和邻园隔开，不建高墙，营造“空灵、纯净、宽广”的草原感。</li>
+<li>体量：公开简介未强调具体平方米数，按现代小展园处理；重点是草地比例高、建筑轻、视线开。</li>
+</ul>
+<h2 id="二总体格局地形围合蒙古包群落草带环线"><a class="header" href="#二总体格局地形围合蒙古包群落草带环线">二、总体格局：地形围合＋蒙古包群落＋草带环线</a></h2>
+<p>不按中轴礼制，也不按江南水池，而是“先围出一片草原，再放几组包”：</p>
+<ul>
+<li>外圈用微地形＋乔灌草自然式种植做软隔离，进园先降噪、把永定河园博的其他风格挡掉；</li>
+<li>核心放一组抽象蒙古包穹顶凉亭作主景；</li>
+<li>周围硬化场地和草地上再散点大小不一的装饰凉亭，形成“蒙古包群落”；</li>
+<li>西、北两侧放勒勒车车轮小品，点“逐水草而居”；</li>
+<li>园路/草带按“一环一带”走柔和曲线，不硬切几何，整体像缩小版敕勒川草场。</li>
+</ul>
+<h2 id="三主要景点"><a class="header" href="#三主要景点">三、主要景点</a></h2>
+<p>1）蒙古包穹顶主凉亭（核心）</p>
+<p>全园主建筑，不是真蒙古包、而是“穹顶式凉亭”的抽象转译：保留圆顶、收口、哈那式格栅意向，但用园林亭架材料做轻构，既能坐歇也能远看天穹。设计用意是“天似穹庐”的视觉缩写——不堆牛羊肉、不堆会盟帐，只取草原人居最符号化的圆顶。</p>
+<p>2）散点装饰凉亭／蒙古包群落</p>
+<p>主亭周边再放若干小亭、不同直径，硬地区放小穹顶、草地区放更低矮的装饰包，模拟牧户聚落。功能是拍照、遮阳、分组休息；视觉上避免“只有一个大包”的孤立感，做成“几家草原人家”的群像。</p>
+<p>3）勒勒车车轮小品</p>
+<p>西、北两组车轮雕塑/装置，复刻蒙古族游牧搬迁用的勒勒车大木轮。它不强调运输功能，而是用“车＋草场”讲逐水草：北京本不会跑勒勒车，园里把它当游牧时间线——从主包定居感，到车轮移动感，再回到草地静态美。</p>
+<p>4）草原微地形与开敞草地</p>
+<p>全园不挖大湖、不堆假山，用缓坡草面＋自然式花灌木带表现“天苍苍野茫茫”。“一环一带”里带是草带、环是步行环，夏天看绿、秋看疏黄；相比南宁/成都水园、西安/晋中硬建筑园，这里最“空”。</p>
+<p>5）软隔离绿墙／地形边界</p>
+<p>边界不砌墙，用土坡＋种植围合，既隔音也把“草原内部”和园博其他展园切开。官方简介特别提“通过地形营建及绿化植物围合等方式将展园与周边园区分隔”，这是它现代展园手法的关键，不是靠门楼牌坊。</p>
+<h2 id="四植物自然式草原不用江南花境"><a class="header" href="#四植物自然式草原不用江南花境">四、植物：自然式草原，不用江南花境</a></h2>
+<p>公开配置列地域物种：红柳、红丁香、暴马丁香、蒙古栎为主，自然式混交，力求舒展宽阔的草原形象。</p>
+<ul>
+<li>红柳：耐旱、带沙地/西北意向，呼应呼和浩特周边荒漠草原与治沙背景；</li>
+<li>红丁香、暴马丁香：北方芳香灌木，夏季开花，北京露地可养，补“草原但不荒”；</li>
+<li>蒙古栎：北方/东北—内蒙古阔叶乔木，秋色硬朗，和草原疏林感匹配；</li>
+<li>草带/地被：以耐踩、耐旱、自然式草坪和乡土草本为主，不追求规则模纹。整体色调春夏绿白香、秋季黄褐，冬季靠穹顶亭和车轮出结构，不靠繁花。</li>
+</ul>
+<h2 id="五文化主线怎么读"><a class="header" href="#五文化主线怎么读">五、文化主线怎么读</a></h2>
+<ul>
+<li>母亲/草原恩泽：园名不叫“青城胜景”而叫“母亲的恩泽”，把自然、故土、养育关系拟人化，比“昭君出塞”更泛、也更适小园；</li>
+<li>游牧生活：勒勒车＋散点包＝逐水草、搬家、聚落，不建王帐不建城郭；</li>
+<li>蒙古居住符号：穹顶＝天穹/蒙古包，哈那意向＝可拆装民居，轻构＝现代转译；</li>
+<li>呼和浩特城市属性：用草原而非大召寺/五塔寺/昭君墓做硬复原；想看昭君、大召、绥远城得去内蒙古本地，北京这版只取“草原首府”的疏朗面。</li>
+<li>和同届其他民族园区别：鄂尔多斯园偏游牧环屏/宣传影像、乌鲁木齐串丝路、拉萨藏式建筑；呼和浩特这版最“草”、最轻建筑。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="jin-zhong.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="chang-de.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="jin-zhong.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="chang-de.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

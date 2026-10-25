@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>天问系列 - 北京天文馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京天文馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/solar-system-family/Tianwen.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="天问系列"><a class="header" href="#天问系列">天问系列</a></h1>
+<p>天问系列（Tianwen）是中国行星探测任务名称。</p>
+<p>2020年4月24日是第五个中国航天日，国家航天局宣布，将我国行星探测任务正式命名为“天问”，将我国首次火星探测任务命名为“天问一号”，作为我国行星探测的第一步，同时公布了首次火星探测任务标识“揽星九天”。2020年7月23日12时41分，长征五号遥四运载火箭托举着我国首次火星探测任务“天问一号”探测器，在中国文昌航天发射场点火升空。2021年5月15日07时18分，天问一号着陆器顺利降落在火星乌托邦平原。2024年6月27日，据新华社消息：我国计划2025年前后发射天问二号，开展小行星探测任务；2030年前后发射天问三号和天问四号，分别开展火星采样返回任务和木星系探测任务。9月5日，天问三号任务总设计师刘继忠介绍，天问三号任务计划在2028年前后实施两次发射任务。</p>
+<p>2025年5月29日1时31分，天问二号探测器发射升空，发射任务取得圆满成功。2026年9月3日，天问三号预计年底确定最终着陆区，计划2028年底完成1:500万全火星地质图。</p>
+<h2 id="发展历史"><a class="header" href="#发展历史">发展历史</a></h2>
+<p>2016年8月23日开始，中国火星探测工程名称和图形标识面向全球征集，海内外各界踊跃参加，共收到提交工程名称及图形标识作品35912个。经过网络投票共收获各地有效投票3278962张。</p>
+<p>2020年4月24日，中国行星探测任务被命名为“天问系列”，首次火星探测任务被命名为“天问一号”，后续行星任务依次编号。</p>
+<p>2020年我国通过长征五号发射火星探测器，并通过一次发射实现火星环绕、着陆和巡视探测。在太阳系的八大行星中，火星与地球距离较近。火星跟地球有着相似的自转周期，为24小时37分。除此之外，在火星上还有春夏秋冬四季的更迭。正因为这些相似点，通过发射探测器了解火星的状况，获得更多信息，以此能够帮助人类更好地研究地球的演变与未来发展。探测器发射后，大约需要经过7个月左右的飞行抵达火星。2021年5月15日07时18分，天问一号着陆器顺利降落在火星乌托邦平原。</p>
+<p>2022年4月24日，中国首次火星探测任务工程总设计师张荣桥表示：经过两年多的研制，天问二号已经进入到初样的研制，电性产品已经在进行综合测试，后续将按照既定的节奏往前推动，预期在2025年实施发射。天问二号是从小行星取样返回，天问三号是从火星取样返回，天问四号是去木星系，所以叫行星探测工程。</p>
+<p>2024年6月27日，据新华社消息：我国计划2025年前后发射天问二号，开展小行星探测任务；2030年前后发射天问三号和天问四号，分别开展火星采样返回任务和木星系探测任务。</p>
+<p>2024年9月5日，在安徽黄山召开的第二届深空探测（天都）国际会议主论坛上，天问三号任务总设计师刘继忠介绍，我国天问三号任务计划在2028年前后实施两次发射任务，实现火星样品返回地球。天问三号任务将开展国际载荷合作、样品和数据共享、未来规划共同研究等三方面的国际合作。</p>
+<p>2025年5月29日凌晨1时31分，中国在西昌卫星发射中心用长征三号乙运载火箭，成功将行星探测工程天问二号探测器发射升空。火箭飞行约18分钟后，将探测器送入地球至小行星2016HO3转移轨道。探测器太阳翼正常展开，发射任务取得圆满成功。</p>
+<p>2025年6月22日，香港大学天体生物学家李一良教授负责天问三号着陆点选址，撰写天问三号任务目标，从火星取回的样本进行深入分析，以揭示火星上是否曾经存在生命，相关研究成果在《Nature Astronomy》发表。</p>
+<p>2026年4月，香港大学李一良教授领导的地球与行星科学系研究团队参与行星探测工程天问三号任务。香港大学研制的火星地物高光谱成像仪，搭载于天问三号承担关键探测任务，包括探寻火星生命痕迹、含水矿物及资源普查等。</p>
+<p>2026年9月3日，天问三号预计年底确定最终着陆区，计划2028年底完成1:500万全火星地质图。</p>
+<h2 id="名称来源"><a class="header" href="#名称来源">名称来源</a></h2>
+<p>“天问”源于屈原长诗《天问》，表达了中华民族对真理追求的坚韧与执着，体现了对自然和宇宙空间探索的文化传承，寓意探求科学真理征途漫漫，追求科技创新永无止境。</p>
+<h2 id="形象标识"><a class="header" href="#形象标识">形象标识</a></h2>
+<p>“天问系列” 以“揽星九天”作为工程的图形标识，“揽星九天”太阳系八大行星依次排开，表达了宇宙的五彩缤纷，呈现科学发现的丰富多彩，饱含动感 气韵流动，开放的椭圆轨道整体倾斜向上，展示了独特字母“C”的形象，代表了中国行星探测-China，体现着国际合作精神-Cooperation，标志着深空探测进入太空能力-C3。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../solar-system-family/Kuiper-belt.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../solar-system-family/ZhuRong.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../solar-system-family/Kuiper-belt.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../solar-system-family/ZhuRong.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

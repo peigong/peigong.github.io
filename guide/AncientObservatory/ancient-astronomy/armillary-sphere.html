@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>浑仪 - 古观象台 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">古观象台 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/ancient-astronomy/armillary-sphere.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="浑仪"><a class="header" href="#浑仪">浑仪</a></h1>
+<p>浑仪的制造始于战国时期，是以浑天说为理论基础制造的，中国现存最早的浑天仪制造于明朝，现陈列在南京紫金山天文台。浑仪的最基本构件是四游仪和赤道环。四游仪由窥管和一个双重的圆环组成。窥管是一根中空的管子，类似于近代的天文望远镜，只是没有镜头。双重圆环叫四游环，也叫赤经环，环面上刻有周天度数，可以绕着极轴旋转，窥管夹在四游环上，可以在双环里滑动。转动四游环，并移动窥管的位置，就可以观测任何的天区。赤道环在四游环外，上亦刻有周天度数，固定在与天球赤道平行的平面上。这样，就可以通过窥管观测到待测量的天区或星座，并得出该天体与北极间的距离，称“去极度”，以及该天体与二十八宿距星的距离，称“入宿度”。去极度和入宿度是表示天体位置的最主要数据。</p>
+<p>浑仪，是中国古代的一种天文观测仪器，是以浑天说为理论基础制造的、由相应天球坐标系各基本圈的环规及瞄准器构成的古代天文测量天体的仪器。浑仪的制造始于汉落下闳，落下闳以他制造的浑仪观测天象，测定了二十八宿的距度、五大行星的运动情况等，为制定《太初历》取得了第一手资料。到了唐代，由天文学家李淳风设计了一架比较精密完善的浑天黄道仪。元代的天文学家郭守敬将其简化，创制了简仪。</p>
+<p>中国现存最早的浑天仪制造于明朝，陈列在南京紫金山天文台。北京古观象台建于明正统七年（1442年），是世界上连续使用时间最长的天文台之一，台上陈列的青铜天文仪器包括浑仪等，至今仍在发挥作用。</p>
+<p>浑仪是望远镜发明前世界上最先进的天文观测工具。</p>
+<h2 id="历史发展"><a class="header" href="#历史发展">历史发展</a></h2>
+<p>中国浑仪的发明大约是在公元前四世纪至公元前一世纪之间（即战国中期至秦汉时期）。</p>
+<p>史籍记载浑仪的制造始于汉落下闳。他是蜀郡人，汉武帝时应召到京师长安参与制订《太初历》。落下闳以他制造的浑仪观测天象，测定了二十八宿的距度、五大行星的运动情况等等，为制定《太初历》取得了第一手资料。浑仪并不是落下闳最先发明的，他说：年轻的时候就能做这种仪器，那时只根据尺寸制作而已。用这架只有赤道坐标的仪器来度量太阳月亮的运动，发现两者的运动都不均匀，这同西汉天文学家们的想法不同，于是大家都在找原因，后来发现，日月的运动都是沿黄道的，还是西汉的天文学家司马迁描述更准确。《史记·天官书》:“月行中道,安宁和平。东汉班固给出了更详细的描述《汉书·天文志》:“日有中道,月有九行。中道者,黄道,一曰光道。”这也就是后来所说的月行九道的来源。</p>
+<p>公元104年，东汉和帝下令贾逵另制一架仪器，用来测量日月的运动，他在浑仪上增设了黄道环，以黄道来测量日月运动，这就是中国历史上第一架黄道铜仪。</p>
+<p>贾逵用他的黄道铜仪来测量日月的运动，发现太阳的运动显得均匀了（其实也应该是不均匀的，因他的仪器精度不够，当时也没有这样的认识），而月亮的运动仍是不均匀的。贾逵根据自己的实际观测，得出结论：月亮的运动是不均匀的。这一发现是改进仪器得到的第一个结果，它导致了历法的进步，也丰富了人们对天体运动的知识，为以后太阳运动不均匀的发现打下了思想基础。</p>
+<p>唐代，由天文学家李淳风设计了一架比较精密完善的浑天黄道仪。</p>
+<p>由于浑仪的圈环过于复杂、遮掩天区，影响观测，沈括取消白道环并改变一些环的位置。</p>
+<p>元代郭守敬取消了黄道环，并把浑仪分为两个独立的仪器：简仪和立运仪。</p>
+<p>明代，北京古观象台于1442年建立，台上陈列浑仪等天文仪器。清代康熙年间，比利时传教士南怀仁监造了包括浑仪在内的多件青铜仪器，融合了中西天文技术与工艺精髓。这些仪器至今仍作为科学遗产在古观象台展示并发挥作用。</p>
+<h2 id="理论背景"><a class="header" href="#理论背景">理论背景</a></h2>
+<p>浑天说是中国古代的一种重要宇宙理论，认为"浑天如鸡子，天体圆如蛋丸，地如鸡中黄"，天内充满了水，天靠气支撑着，地则浮在水面上。天的大圆分为365.25度，浑天旋轴两端分别称为南极、北极，赤道垂直于天极，黄道斜交着天的大圆，黄赤道交角为23.25度。</p>
+<h2 id="命名简介"><a class="header" href="#命名简介">命名简介</a></h2>
+<p>浑仪是以浑天说为理论基础制造的。在古代，“浑”字含有圆球的意义。古人认为天是圆的，形状像蛋壳，出现在天上的星星是镶嵌在蛋壳上的弹丸，地球则是蛋黄，人们在这个蛋黄上测量日月星辰的位置。因此，把这种观测天体位置的仪器叫做“浑仪”。</p>
+<h2 id="组成构成"><a class="header" href="#组成构成">组成构成</a></h2>
+<h3 id="基本构造"><a class="header" href="#基本构造">基本构造</a></h3>
+<p>浑仪是中国古代用于测量天体球面坐标的观测仪器。它是由一重重的同心圆环构成，整体看起来就像一个圆球。有资料表明，在公元前4世纪中叶，中国就已经使用浑仪观测天象了，比古希腊早约60年。</p>
+<p>浑仪的最基本构件是四游仪和赤道环。四游仪由窥管和一个双重的圆环组成。窥管是一根中空的管子，类似于近代的天文望远镜，只是没有镜头。</p>
+<p>双重圆环叫四游环，也叫赤经环，环面上刻有周天度数，可以绕着极轴旋转，窥管夹在四游环上，可以在双环里滑动。转动四游环，并移动窥管的位置，就可以观测任何的天区。赤道环在四游环外，上亦刻有周天度数，固定在与天球赤道平行的平面上。这样，就可以通过窥管观测到待测量的天区或星座，并得出该天体与北极间的距离，称“去极度”，以及该天体与二十八宿距星的距离，称“入宿度”。去极度和入宿度是表示天体位置的最主要数据。</p>
+<h3 id="改进完善"><a class="header" href="#改进完善">改进完善</a></h3>
+<h4 id="一多重环结构"><a class="header" href="#一多重环结构">一、多重环结构</a></h4>
+<p>浑仪的改进和完善，经历了一个由简而繁，而又由繁而简的历程。从汉代到北宋，浑仪的环数不断增加。首先增加的是黄道环，用以观测太阳的位置。接着又增加了地平环和子午环，地平环固定在地平方向，子午环固定在天体的极轴方向。这样，浑仪便形成了二重结构。唐代起，浑仪又发展成三重结构。最外面的一层叫六合仪，由固定在一起的地平环、子午环和外赤道环组成，因东西、南北、上下6个方向叫六合，故名。第二重叫三辰仪，由黄道环、白道环和内赤道环组成，可以绕极轴旋转。其中白道环用以观测月亮的位置。最里层是四游仪。北宋时，又增加有二分环和二至环，即过二分（春分、秋分）点和二至（夏至、冬至）点的赤经环。</p>
+<h4 id="二简化分立"><a class="header" href="#二简化分立">二、简化、分立</a></h4>
+<p>多重环结构的浑仪虽是一杰出的创造，在天文学史上也起过重要的作用，但其自身也存在着两大缺陷。一是要把这么多的圆环组装得中心都相重合，十分困难，因而易产生中心差，造成观测的偏差。一是每个环都会遮蔽一定的天区，环数越多，遮蔽的天区也越大，这就妨碍观测，降低使用效率。</p>
+<p>为解决这两个缺陷，从北宋起即开始探索浑仪的简化途径。这个浑仪改革的途径由北宋的沈括开辟，元代的郭守敬完成。沈括由两个方面进行改革，一是取消白道环，借助数学方法来推算月亮的位置；一是改变一些环的位置，使遮蔽的天区尽量减少。</p>
+<p>郭守敬取消了黄道环，并把原有的浑仪分为两个独立的仪器，即简仪和立运仪。</p>
+<p>1、简仪</p>
+<p>简仪由四游仪、赤道环和百刻环组成。赤道环的位置移至旋转轴的南端，这一方式，在各国的天文台上安装望远镜时，还广泛地被采用。百刻环的安装是一创新，环上等分成100刻，分为12个时辰，每刻又分作36分。</p>
+<p>它固定在赤道环内，既可承托赤道环，又可得到真太阳时的读数。四游仪窥管两端各设有十字线，这是后世望远镜中十字丝的肇始。</p>
+<p>2、立运仪</p>
+<p>立运仪与简仪装于同一底座上，由两个圆环组成。一个是平铺的“经纬环”，代表地平环，环面上刻有方位。一个是“立运双环”，中夹有窥管，可测量天体的地平经度和纬度。</p>
+<p>简仪和立运仪的设计和制造，在世界上领先300多年。近代天文台的赤道装置，测量仪器经纬仪等，都可从中找到其原始形态。</p>
+<p>中国古代浑仪采用的是赤道坐标系统，比西方采用的黄道坐标系统要先进得多，已为各国天文台所广泛采用。</p>
+<p>人们还可以在南京紫金山天文台，看到明代正统二年到七年（1437～1442）间制造的浑仪和简仪。</p>
+<h2 id="典籍记载"><a class="header" href="#典籍记载">典籍记载</a></h2>
+<p>《梦溪笔谈·极星测量》：天文家有浑仪，测天之器，设于崇台，以候垂象者，则古机衡是也。浑象，象天之器，以水激之，或以水银转之，置于密室，与天行相符，张衡、陆绩所为，及开元中置于武成殿者，皆此器也。皇祐中，礼部试《机衡正天文之器赋》，举人皆杂用浑象事，试官亦自不晓，第为高等。汉以前皆以北辰居天中，故谓之“极星”。自祖亘以机衡考验天极不动处，乃在极星之末犹一度有余。熙宁中，余受诏典领历官，杂考星历，以机衡求极星。初夜在窥管中，少时复出，以此知窥管小，不能容极星游转，乃稍稍展窥管候之。凡历三月，极星方游于窥管之内，常见不隐，然后知天极不动处，远极星犹三度有余。每极星入窥管，别画为一图。图为一圆规，乃画极星于规中。具初夜、中夜、后夜所见各图之，凡为二百余图，极星方常循圆规之内，夜夜不差。余于《熙宁历奏议》中叙之甚详。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ancient-astronomy/moondial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ancient-astronomy/hun-tian-yi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ancient-astronomy/moondial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ancient-astronomy/hun-tian-yi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

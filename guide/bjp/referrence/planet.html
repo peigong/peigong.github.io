@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>行星 - 北京天文馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京天文馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/referrence/planet.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="行星"><a class="header" href="#行星">行星</a></h1>
+<p>行星是自身不发光、围绕恒星公转的天体，其核心特征包括自引力足以形成球状、能清空轨道附近小天体，且内部不发生恒星级核聚变。2006年国际天文学联合会（IAU）明确了行星的三大认定标准：围绕恒星运行、呈近似球形、清空自身轨道周围区域。</p>
+<p>基本特征：行星轨道多为椭圆形，运行速度随与主恒星距离变化，近日点加快、远日点减慢。太阳系行星公转方向多与太阳自转一致，但金星逆行自转，天王星自转轴近乎“躺倒”。自转轴倾角差异形成了不同行星的季节特征。</p>
+<p>形成演化：行星的形成源于星云坍缩，在原恒星周围的吸积盘中，星子通过碰撞吸积逐渐增长。当原行星质量足够大时，会积累大气层并最终形成类地行星或气态巨行星。恒星金属丰度越高，拥有行星系统的可能性越大。</p>
+<p>相关星体：太阳系八大行星按轨道由近到远为水星、金星、地球、火星、木星、土星、天王星、海王星。截至2025年，已认证的系外行星突破6000颗，分布于约4460个行星系统中，银河系行星总数预计达千亿颗量级。</p>
+<h2 id="历史由来"><a class="header" href="#历史由来">历史由来</a></h2>
+<h3 id="中文名"><a class="header" href="#中文名">中文名</a></h3>
+<p>根据西汉《史记·历书》记载：“黄帝考定星历，建立五行，起消息（修正历法，订出正月起始）。”《尚书·舜典》中：“在璇玑玉衡以齐七政。”孔颖达疏：“七政，其政有七，于玑衡察之，必在天者，知七政谓日月与五星也。木曰岁星，火曰荧惑星，土曰镇星，金曰太白星，水曰辰星。”因此中国古代早有比较系统的行星观测记录，可目测的五大行星（对应金木水火土）在天文历法中发挥着重要的作用。</p>
+<p>而英文行星一词“planet”源于古希腊文“πλανήται（planētēs）”，意为“漫游者”。1792年日本学者本木良永在翻译哥白尼的日心说时将“行星”译作“惑星”，取其位置游移不定让人迷惑之意。明治时代亦有京都大学的学者使用“游星”一词来指“行星”。1859年伟烈亚力与李善兰合作翻译的《谈天》是中文文献中第一次介绍哥白尼的地动说，也是中文“行星”一词第一次出现。</p>
+<p>从古典时代的神圣的游星演化到科学时代的实在的实体，人们对行星的认识是随着历史在不停地进化的，行星的概念已经不仅延伸到太阳系，而且还到达了其他太阳系外系统。曾经对行星定义的内在的模糊性已经导致了不少科学争论。</p>
+<h3 id="观测历史"><a class="header" href="#观测历史">观测历史</a></h3>
+<p>古人观察星空，发现天体分作两类：一类固定在天球上，组成各个星座，形成一幅永恒的天空背景，称之为恒星；另一类天体在黄道附近运行，不断穿过黄道上的十二个星座，称之为行星。古典概念的行星包括七颗，分别是阴阳五行——太阳、太阴(月球)，以及金星、木星、水星、火星和土星。</p>
+<p>古典概念的“七颗行星”在天空中极为特殊：它们不断地在星座中运行穿过，且极为明亮，“七颗行星”在天球上的亮度排行分别是第1,2,3,4,5,6,9。因此“七颗行星”对神学、宗教宇宙学和古代天文学都有重要的影响。在古代希腊、中国、巴比伦和实际上所有前现代文明中，人们几乎普遍的相信地球是宇宙的中心，并且所有的“行星”都围绕着地球旋转，造成这种认识的原因是，人们每天都看到星星围绕着地球旋转，且常识地认为地球是坚实且稳定的，因此它理应静止于中心。现代观点下则认为以上“常识”是错误的，地球只是不断运动的普通行星之一。</p>
+<p>各个文明对星座的划分方法与行星轨迹密切相关：太阳在黄道上一年运行一圈，太阴（月球）在黄道上一个月运行一圈。西方文明中，太阳的轨迹把黄道分作十二段，每月一段，每段一个星座组成黄道十二宫；中国文明中，太阳的轨迹把黄道分作四段，每个季度一段，即天空四象“青龙、白虎、朱雀、玄武”，而太阴（月球）的轨迹把黄道分作28段，每天一段，对应天空的28个星宿，随后结合太阳太阴的划分，四象含二十八宿，每一象被分作七宿，这七宿最终分别对应于阴阳金木水火土“七大行星”。</p>
+<p>行星概念的清晰化始于日心说的提出，日心说确立了太阳在天空中心的地位，太阳不动而地球在运行，因此地球就取代了太阳的地位成为行星，太阳则被归入恒星。卫星的概念也随着进入望远镜时代，在伽利略卫星的发现后被逐渐接受，很快行星被限定于直接围绕太阳运行的天体，因此月球被排除在行星行列之外。最终古典的“七大行星”演变为地球、水星、金星、火星、木星和土星六大行星。</p>
+<p>1781年，第七颗行星天王星被发现。</p>
+<p>1801年，谷神星被发现，有长达49年的时间被称为“第8颗行星”；1850年谷神星因尺寸太小，且发现一系列更小的同类型星体（即小行星），其行星地位被免除，同时行星定义出现一条不成文的概念：并非所有直接绕太阳公转的天体都是行星，行星必须足够大且卓尔不群。</p>
+<p>1846年，第八颗行星海王星被发现；</p>
+<p>1930年，冥王星被发现，有长达76年的时间被称为“第9颗行星”；2006年冥王星被降格为矮行星，也因尺寸太小，且发现一系列更小的同类型星体，行星被重新定义成：绕恒星公转、流体静力平衡（自身引力球形）且能清空其轨道的天体。</p>
+<p>系外行星的第一个可能证据是在1917年被发现的，但当时没有得到认可。1992年才首次确认了系外行星的发现。另一颗在1988年首次发现的系外行星，于2003年得到证实。迄今为止已经通过Kepler、TESS等巡天项目认证了共计5736颗系外行星以及约11000颗候选体。</p>
+<p>2025年3月20日，科技媒体Space发布博文，报道称天文学家通过分析NASA已退役的开普勒太空望远镜数据，发现小型与大型系外行星的形成环境存在显著差异。</p>
+<p>2026年4月1日消息，美国康奈尔大学的天文学家从6000多颗已知系外行星中，筛选出45颗可能宜居的岩石行星。研究已筛选出两颗适合近期重点研究的优质目标：特拉普派-1e和TOI-715 b。</p>
+<h2 id="定义及分类"><a class="header" href="#定义及分类">定义及分类</a></h2>
+<p>根据国际天文学联合会（IAU）在2006年提出的行星定义，一个天体要被认定为行星，必须满足以下三个条件：</p>
+<ul>
+<li>围绕恒星运行：行星必须是围绕恒星运行的天体，这将其与其他不围绕恒星运行的天体区分开来；</li>
+<li>流体静力平衡：拥有足够的质量，通过自引力形成近似球形的形状，这一标准将行星与小行星等不规则形状的天体区分开；</li>
+<li>清空自身轨道周围区域，保证轨道内不存在其他行星：根据这一标准，行星必须有足够的引力来清除或吸引其轨道区域内的大多数其他天体，例如小行星或彗星。而冥王星由于其轨道附近存在大量柯伊伯带小天体，未能符合这一标准，因此被重新归类为“矮行星”。</li>
+</ul>
+<p>以上标准更倾向于行星质量下限的划分，针对系外行星，IAU还提出了质量上限的定义：行星质量低于氘核聚变的临界值，约为13倍木星质量或4100倍地球质量。超过这一质量的天体将能够通过核聚变反应点燃氘，进而被认为是褐矮星。此外，IAU对于一些漂浮在星际空间、不绕任何恒星运行的孤立天体，通常将其分类为“流浪行星”。这些天体由于未绕恒星运行，不符合传统的行星定义，但它们在宇宙中仍广泛存在。</p>
+<p>通过这些定义的细化，天文学家得以在太阳系内外识别并分类各种行星及类似天体。不过，关于行星定义的争议仍未完全消除，特别是围绕如何处理像冥王星这样位于边缘区域的天体，天文学界仍在不断讨论中。</p>
+<p>结合行星的质地和温度，大致可分为熔岩行星（Lava Planets）、岩质行星（Rockey Planets）、热气态巨星（Hot Gas Giant）、气态巨行星（Gas Giant）。按照质量划分，则可以分为迷你地球（Mini Terran）、亚地球（Sub-Terran）、类地行星（Terran）、超级地球（SuperTerran）、类海王星（Neptunian）、类木星（Jovian），有时也有超级木星（Super Jovian）的划分。</p>
+<p>但IAU的行星定义并未被普遍采用或接受。在行星地质学中，天体是根据地质特征定义为行星的。当一个天体的质量足够大，使其地幔在自身重力作用下变得具有可塑性时，该天体就会获得动态（行星的）地质状态。这将导致一个处于静水平衡的状态，天体获得一个稳定的圆形外观，这被地质定义认为是行星的标志，例如：一个亚恒星质量的天体从未发生过核聚变，并且由于流体静力平衡，它因自身引力足够大而其呈现球形，无论其轨道参数如何。</p>
+<p>在太阳系中，以上定义的质量下限通常低于清空轨道所需的质量，因此一些被地质学认为是“行星”的天体，在IAU定义下并不被视为行星，例如谷神星和冥王星。这种定义的支持者通常认为行星的轨道性质不应成为判断标准，而应该由天体的固有特性来决定。</p>
+<h2 id="形成假说"><a class="header" href="#形成假说">形成假说</a></h2>
+<p>行星的形成方式尚未完全确定。主流理论为星云假说，其认为行星诞生于星云坍缩，在一个由气体尘埃组成的薄盘中吸积形成。原恒星位于吸积盘中央，周围环绕着多个原行星盘，盘中的星子（即行星的前身核心）通过吸积逐渐积累质量，当行星盘的大小达到临界质量或密度，将会因自身重力而塌缩，随后密度将变得更高，原本在云气中随机运动的分子，也因而呈现出星云平均的净角动量运动方向，角动量守恒导致星云缩小的同时，自转速度亦增加。在自转过程中，汇聚形成的新天体会吸引其轨道附近的其他分子云和尘埃，从而变得越来越大，直到其轨道附近再无物质可以供其成长，从而造成行星定义中的“清空其轨道附近区域”。</p>
+<p>当原行星的质量略大于火星质量时，它开始积累一个扩展的大气层，从而通过大气阻力增加吸积效率，最终根据固态和气态物质的吸积情况以及行星的轨道位置，形成气态巨行星或类地行星。</p>
+<p>当原恒星点燃核聚变进入主序星阶段时，剩余的盘物质会通过光蒸发、太阳风、彭宁-罗伯逊效应等作用，从内向外逐渐被清除。此后可能仍有许多原行星绕恒星或彼此轨道运行，但随着时间推移，许多原行星将发生碰撞和合并，或形成更大的原行星，或裂解并物质到星际空间。质量较小且避免碰撞的原行星，可能被大行星引力捕获成为天然卫星，或者留在其他区域成为矮行星或小天体。</p>
+<p>小行星的高速撞击以及行星自身的放射性衰变，会产生大量热量以加热行星，导致它处于熔融状态，于是行星内部开始按密度分化，密度较高的物质会下沉到核心。而由于气体逃逸，较小的行星会逐渐失去大部分大气层，但丢失的气体也可以通过地幔的气体释放作用以及彗星的后续撞击得到补充。随着系外行星的发现和观察，越来越有可能对星云假说理论进行补充、修订甚至替代，恒星金属丰度似乎决定了恒星拥有行星的可能性。因此，富金属的第一星族恒星比贫金属的第二星族恒星，更有可能拥有一个庞大的行星系统。</p>
+<h2 id="天体性质"><a class="header" href="#天体性质">天体性质</a></h2>
+<h3 id="轨道"><a class="header" href="#轨道">轨道</a></h3>
+<p>在太阳系中，所有行星绕太阳的公转方向与太阳自转的方向一致：从太阳北极上方看为逆时针方向。然而至少有一颗系外行星，WASP-17b，被发现其公转方向与恒星自转方向相反。行星公转一周的周期称为其恒星年或年，而年周期取决于行星与恒星的距离；行星离恒星越远，它必须行进的距离越长，速度也越慢，因为此时恒星的引力对其影响较小。</p>
+<p>没有任何行星的轨道是完美的圆形，因此它们与主恒星之间的距离在一年中会有所变化。距离恒星最近的点称为近日点，在太阳系中称为近日点，而距离恒星最远的点称为远日点（在太阳系中称为远日点）。当行星接近近日点时，其速度会加快，因为它将引力势能转化为动能，就像地球上物体下落时加速一样；当行星接近远日点时，其速度减慢，就像抛向空中的物体在到达最高点时逐渐减速一样。</p>
+<p>每个行星的轨道由一组轨道要素来描述：</p>
+<ul>
+<li>轨道偏心率：描述了行星椭圆轨道的拉长程度，偏心率低的行星轨道更接近圆形，而偏心率高的行星轨道则更椭圆化。太阳系中的行星和大型卫星的偏心率相对较低，因此轨道几乎是圆形的。彗星、许多柯伊伯带天体以及一些系外行星的偏心率都非常高，因此它们的轨道极为椭圆。</li>
+<li>半长轴：给出轨道的大小，它是从椭圆轨道的中点到其最长直径的距离。这个距离并不等于远日点，因为没有行星的轨道恒星恰好位于中心。</li>
+<li>轨道倾角：描述了行星轨道相对于参考平面（在太阳系中为地球轨道平面，即黄道面）的倾斜角度，而对于系外行星，参考平面被称为天平面，是垂直于观测者从地球视线的平面。太阳系八大行星的轨道都非常接近黄道平面；然而一些较小的天体，如智神星和冥王星等，其轨道与黄道面的夹角非常大，彗星的轨道也经常如此。大型卫星的轨道倾角通常与其寄主行星的赤道相差不大，但海卫一在大型卫星中独具一格，它的轨道是逆行的，即其公转方向与母行星的自转方向相反。</li>
+</ul>
+<h3 id="自转轴"><a class="header" href="#自转轴">自转轴</a></h3>
+<p>地球的自转轴倾角约为23.4°，它在41000年的周期内在22.1~24.5°之间摆动，幅度正在逐渐减小。</p>
+<p>行星的自转轴倾角各不相同；它们以一定角度相对于恒星赤道平面旋转，这导致每个半球的辐照通量有所变化，从而造成季节现象。当每个半球最远离或最接近恒星时，被称为至日，因此在每颗行星的轨道中各有两个至日：当一个半球经历夏至时，白昼最长；另一半球则经历冬至，白昼最短。例如木星的自转轴倾角非常小，因此其季节变化也极小；而天王星的自转轴倾角极其倾斜，几乎是横躺的，这意味着在其至日时，两个半球要么持续处于白昼，要么持续处于黑夜。</p>
+<p>对于系外行星，由于观测技术限制，其自转轴倾角大都尚不确定，不过大多数热木星被认为由于靠近恒星，其自转轴倾角可以忽略不计。</p>
+<p>行星的自转周期被称为恒星日。太阳系中的大多数行星的自转方向与它们绕太阳公转的方向一致，即从太阳北极上方看为逆时针方向。但也有例外，金星和天王星的自转方向为顺时针，不过由于天王星自转轴倾角几乎“躺平”，关于其哪个极点为“北极”存在不同的定义，因此关于它是顺时针还是逆时针自转也有不同的说法。但无论使用哪种定义，天王星的自转相对于其轨道都是逆行自转。</p>
+<p>行星的自转在形成过程中可由多个因素引发，来自吸积形成过程的角动量贡献决定了初始状态，而气态巨行星通过吸积气体也会增加角动量。最后在行星形成的最后阶段，原行星的随机吸积过程也会随机改变行星的自转轴。</p>
+<p>不同行星的自转周期差异很大，金星自转一周需要243天，而气态巨行星的自转周期仅为几个小时。由于观测技术的限制，系外行星的自转周期大都也尚不清楚，但对于热木星而言，由于它们靠近恒星，因此它们呈现潮汐锁定状态，这意味着它们始终以一面朝向恒星，一侧永远处于白昼，而另一侧则永远处于黑夜。此外，系外行星宝瓶座τb与其寄主恒星也呈现潮汐锁定状态。</p>
+<h3 id="质量范围"><a class="header" href="#质量范围">质量范围</a></h3>
+<p>行星的定义物理特征是其质量足够大，通过自身引力进入流体静力平衡状态，呈现球形或椭球形。在达到一定质量之前，物体可能具有不规则形状，但一旦超过这个临界点（这个临界点因物体的化学成分而异），引力就会将物体向其质心拉拢，直到该物体塌陷成一个球体。</p>
+<p>质量是将行星与恒星区分开的主要属性之一，在太阳系中，没有介于太阳和木星质量之间的天体，但有些系外行星达到了这个范围。恒星质量的下限估计为75~80倍木星质量，因此有些学者主张将这个值作为行星质量的上限，理由是从土星质量（开始出现显著的自压缩）开始，到点燃氢核聚变的临街质量之前，天体内部的物理状态并没有发生显著变化。但对于超过13倍木星质量（约4100倍地球质量）的天体，它们的质量条件适合点燃氘核聚变，因此后来被认为是行星和褐矮星的分界线，尽管其氘燃烧时间非常短，且大多数褐矮星早已完成了其氘燃烧。</p>
+<p>但以上界定仍存在争议，例如系外行星探测器则将质量上限设定为24倍木星质量。</p>
+<p>已知质量最小的系外行星是PSR B1257+12A，它是1992年在围绕脉冲星的轨道上发现的第一批系外行星之一。其质量约为水星质量的一半，约为0.02倍地球质量。已知绕主序星运行的最小行星是开普勒37b，其质量和半径可能稍大于月球，因此认为行星的质量下限大约在0.01倍地球质量附近。</p>
+<h2 id="系内行星"><a class="header" href="#系内行星">系内行星</a></h2>
+<p>太阳系共有八大行星，按轨道半长轴由近到远分别是：水星、金星、地球、火星、木星、土星、天王星和海王星。其中木星是最大的行星，质量为地球的318倍；而水星是最小的行星，质量为地球的0.055倍。</p>
+<p>根据组成成分，太阳系的行星可以分为类地行星、气态巨行星。类地行星与地球相似，主要由岩石和金属组成，其中有水星、金星、地球和火星，而地球是太阳系中最大的类地行星。气态巨行星的质量远大于类地行星，包含木星、土星、天王星和海王星，它们主要由浓密的氢氦大气和低沸点物质（如甲烷和氨等）组成。土星质量约为地球的95倍，天王星和海王星的质量分别为地球的14倍和17倍，显著低于经典的气态巨行星质量，因此也有“冰巨行星”或“类海王星”的分类。（注：在体积上天王星比海王星更大，但质量上则相反）</p>
+<p>矮行星虽然由于自引力呈现为球形，但它们的轨道周围并未被清空，IAU认证的矮行星包括：谷神星、冥王星、妊神星、创神星、鸟神星、阋神星等。谷神星位于火星和木星轨道间的小行星带，是其中最大的天体。而其他矮行星则位于柯伊伯带以及更远的散布盘中，不同于柯伊伯带的是，散布盘与海王星的相互作用使其不稳定。矮行星与类地行星相似，拥有固体表面，但它们由冰和岩石组成，而非金属和岩石。矮行星都比水星小，其中冥王星是已知体积最大的矮行星，阋神星则是已知质量最大的矮行星。</p>
+<p>目前至少有19颗质量足够大的卫星能够呈现球形，其中包含：</p>
+<ul>
+<li>1颗地球的卫星：月球；</li>
+<li>4颗木星的卫星：木卫一、木卫二、木卫三和木卫四；</li>
+<li>7颗土星的卫星：土卫一、土卫二、土卫三、土卫四、土卫五、土卫六和土卫七；</li>
+<li>5颗天王星的卫星：天卫一、天卫二、天卫三、天卫四和天卫五；</li>
+<li>1颗海王星的卫星：海卫一；</li>
+<li>1颗冥王星的卫星：卡戎；</li>
+</ul>
+<p>月球、木卫一和木卫二的组成与类地行星相似；其他卫星则像矮行星一样由冰和岩石组成，其中土卫三几乎是由纯冰构成的。木卫二通常被认为是冰卫星，因为其全球性的表面冰层使得研究其内部变得困难。木卫三和土卫六的半径甚至大于水星，而木卫四几乎与水星相等，但它们的质量远低于水星。土卫一是被认为是质量最小的球形天体，质量约为地球的600万分之一。</p>
+<h2 id="系外行星"><a class="header" href="#系外行星">系外行星</a></h2>
+<p>系外行星是指位于太阳系外的行星，截至2024年7月24日，NASA系外行星数据库已认证的系外行星有5736颗，而候选体行星大约有11000颗。根据为引力透镜分析，银河系平均每个恒星系至少有1.6颗系外行星。</p>
+<p>1992年初，射电天文学家亚历山大·沃尔什赞（AleksanderWolszczan）和戴尔·弗雷尔（DaleFrail）宣布发现了两颗围绕脉冲星PSR1257+12运行的行星，被认为首次系外行星认证天体的发现——研究人员怀疑它们是由形成脉冲星的超新星遗迹的残留盘演化而来。</p>
+<p>1995年，认证了首颗绕主序星公转的系外行星飞马座51b（51 Pegasi b），由日内瓦大学的米歇尔·马约尔（Michel Mayor）和迪迪埃·奎洛兹（Didier Queloz）宣布发现。从那时起直到开普勒空间望远镜任务为止，大多数已知的系外行星是与木星质量相当或更大的气态巨行星，因为它们更容易被探测到。而开普勒望远镜打破了这种观测偏差，其行星候选体名录中存在大量类海王星及类地行星，甚至有小于水星的行星。</p>
+<p>2011年，开普勒空间望远镜团队报告发现了首批围绕类太阳恒星运行的地球大小的系外行星：Kepler-20e和Kepler-20f。研究表明，每5颗类太阳恒星中就有一颗可能拥有位于宜居带内的地球大小的行星，这种宜居行星的发生频率是Drake方程中的参数之一，该方程用于估算银河系中存在的智能、可通信文明的数量。</p>
+<p>系外行星中存在一类称作“超级地球”的行星类型，它们不存在于太阳系内，质量介于地球和海王星之间。质量不到2倍地球质量的天体预计由岩石构成，而超过这个质量的天体则可能像海王星一样由挥发性物质和气体混合组成。质量超过木星的行星也已被发现，它们与褐矮星的质量范围无缝衔接。</p>
+<p>系外行星的轨道有些比太阳系中的任何行星都要更接近寄主恒星。水星是距离太阳最近的行星，轨道半径为0.4天文单位，公转周期为88天，而超短周期系外行星的公转周期可能少于一天。Kepler-11系统中的五颗行星的轨道周期都比水星短，但它们的质量远远超过水星。而海王星距离太阳30天文单位，公转周期为165年，而一些系外行星距离其寄主恒星非常遥远，可达到数千天文单位，公转周期超过百万年。</p>
+<p>另外截至2024年9月，根据PHL维护的宜居世界名录，潜在宜居行星数量为70颗。</p>
+<h2 id="搜寻方法"><a class="header" href="#搜寻方法">搜寻方法</a></h2>
+<h3 id="直接成像与自适应光学"><a class="header" href="#直接成像与自适应光学">直接成像与自适应光学</a></h3>
+<p>利用高对比度成像技术，通过大口径望远镜对恒星进行持续跟踪观测，从而发现并拍摄到系外行星的照片。这种方法适用于年轻、大质量且亮度较高的行星。而通过自适应光学系统（AO），即计算机控制的高灵敏透镜组抵消地球大气扰动效应，纠正由地球大气层引起的光学波前误差，提高成像精度，能够科学家能够更清晰地观测到太阳系以外的行星图像。自适应光学系统技术已经在世界上最大的望远镜上得到应用，例如NIRPS项目就采用了高阶自适应光学系统来提高对M型恒星周围低质量行星的检测精度。</p>
+<h3 id="凌日法"><a class="header" href="#凌日法">凌日法</a></h3>
+<p>凌日法观测即当行星经过其寄主恒星圆面时，会遮挡一部分光，导致恒星的光变曲线发生微小变化，通过分析这种光度变化，可以推断出行星的存在及其大小。凌日法是目前观测系外行星使用最多的方法，以此认证了4000多颗系外行星，其优点是对恒星近距行星敏感，利于大规模搜寻系外行星。但局限是存在轨道倾角限制，凌日法只能探测到行星轨道与视线方向近乎对齐的行星，如果行星轨道平面与观测方向存在较大倾斜角，则凌日现象不会发生，导致行星无法被检测到。另外其他天体或因素也可能导致恒星亮度的微小变化，造成虚假的凌日信号。</p>
+<h3 id="视向速度法"><a class="header" href="#视向速度法">视向速度法</a></h3>
+<p>这是通过测量恒星因行星引力作用而产生的微小周期运动来探测系外行星的方法。当行星绕其母星运行时，会引起母星沿着我们的视线方向轻微移动，这种移动可以通过精确测量恒星的速度变化来检测出来。这种方法可以揭示行星的质量和轨道周期。根据恒星的运动幅度，可以估算出行星对恒星的引力作用，从而推断行星的质量。由于方法只能测量恒星向我们运动的视向速度，行星质量只能估算为一个最小值，除非能够确定行星的轨道倾角。</p>
+<p>视向速度法对大质量行星非常敏感，尤其是那些靠近恒星的气态巨行星。这样的行星会对恒星施加较大的引力作用，导致更明显的恒星运动。与凌日法不同，视向速度法并不依赖行星轨道与地球观测方向的精确对齐，因此可以探测更多类型的行星系统。视向速度法也受到轨道倾角的限制，由于视向速度法只能测量恒星沿视线方向的运动，因此行星的质量只能估算出一个最小值，若行星的轨道与观测方向不对齐，实际质量可能远大于估算值。</p>
+<h3 id="微引力透镜法"><a class="header" href="#微引力透镜法">微引力透镜法</a></h3>
+<p>利用恒星或行星对光线的引力偏折效应来探测系外行星，这种方法适用于那些非常靠近母星的行星，因为只有当行星足够接近母星时，其引力才能显著影响光线路径。微引力透镜法可以探测到非常远距离的行星，而其他方法（如凌日法和视向速度法）则主要局限于探测距离较近的恒星系统。该方法对小质量行星（如类地行星）也非常敏感，因为微引力透镜效应与天体的质量成比例，因此即使是质量较小的行星也能够产生可观测到的信号。</p>
+<p>但微引力透镜法无法主动寻找系外行星，因为微引力透镜事件的发生是随机且不可预测的。天文学家只能通过监测大量恒星等待这样的事件发生。并且微引力透镜事件是瞬时的，通常只能观测到一次。这是因为该现象取决于恒星和行星的精确对齐，一旦它们不再对齐现象就立刻消失。因此它无法通过持续观测来进一步验证或深入研究已经发现的行星。</p>
+<h3 id="脉冲星计时法"><a class="header" href="#脉冲星计时法">脉冲星计时法</a></h3>
+<p>理论上可以通过脉冲星计时阵列（PTA）来探测可能存在的系外行星引起的引力波扰动，这种方法依赖于极精确的时间测量技术。当行星围绕脉冲星运行时，行星的引力会使脉冲星以微小的幅度围绕系统的质心做周期性运动，这种运动会改变脉冲星辐射信号的到达时间，导致脉冲的时间出现周期性提前或延迟。通过分析这种精确的脉冲时间变化，科学家可以推测出行星的存在。从而导致脉冲信号的到达时间发生极为微小的变化。</p>
+<h2 id="行星宜居理论"><a class="header" href="#行星宜居理论">行星宜居理论</a></h2>
+<h3 id="恒星宜居带"><a class="header" href="#恒星宜居带">恒星宜居带</a></h3>
+<p>环恒星宜居带（CHZ）简称宜居带，通常指温度宜居带，最早由Kasting在1993年提出，而目前天文学界也有恒星磁活动宜居带的提出。宜居带内的行星温度和化学成分有利于生命的发展，并且有可能像地球般出现高等生命，在适合的区域内的行星或天然卫星是潜在的宜居对象，可能会形成类似于地球的环境。</p>
+<p>在一个行星系统内，被相信行星必须在宜居带内才能让生命产生。恒星宜居带在概念上是包围在恒星四周围的球壳状空间，所有在范围内的行星表面温度都应该能使水维持液态，因为液态水被认为对生命是至关重要的，它的是作为生物化学反应所需要的溶剂。</p>
+<p>如图7所示的沃尔夫1061行星系统，深绿色范围是最佳宜居带，浅绿色为宽泛的宜居带，图中演示了沃尔夫1061系统中从内到外b、c、d三颗行星的轨道分布关系，其中沃尔夫1061b离寄主恒星很近，沃尔夫1061c位于宜居带中，而沃尔夫1061d处于高离心率轨道。</p>
+<p>一般认为太阳系的宜居带范围为0.99~1.688天文单位，根据温度和温室效应划分为近期金星区域、失控温室效应区域、湿润温室效应区域、极大温室效应区域和早期火星区域。而大部分说法均指出一个行星的大气层厚度会影响其宜居带位置，因此一个距离恒星比地球更远的类地行星需比地球质量大，才能在其表面保留液态水。</p>
+<h3 id="地球相似指数esi"><a class="header" href="#地球相似指数esi">地球相似指数（ESI）</a></h3>
+<h3 id="初级生产者宜居度sph"><a class="header" href="#初级生产者宜居度sph">初级生产者宜居度（SPH）</a></h3>
+<h3 id="银河系宜居带ghz"><a class="header" href="#银河系宜居带ghz">银河系宜居带（GHZ）</a></h3>
+<p>行星在星系内的位置也是决定生命能否发展的因素，这就导出了银河系宜居带的观念。要产生生命，一个恒星系必须要足够接近星系的核心，才能有足够的重元素，让行星在形成时能够成为岩石构成的行星。重元素必须存在，因为它们是组成复杂的生命分子所必须的，例如铁是构成血红素，碘是组成甲状腺激素的基础（假设铁是所有生物都需要的物质）。</p>
+<p>另一方面，恒星距离星系中心也必须够远，以免除过多的恒星近距辐射和超新星爆炸的射线辐照。据推测，来自星系核心的大量辐射会使构造复杂的分子更难以形成。同样地，在许多较大的螺旋星系和椭圆星系的中心区域，星际气体和尘埃都已经耗尽，那些区域已经不是恒星诞生的主要场所，恒星的诞生率远较周围其他的区域为低。</p>
+<p>研究显示在金属丰度方面也有影响，金属丰度越高的区域似乎越可能出现大的行星，这样的行星引发的重力潮汐力会导致任何类地行星改变轨道和表面形状，并在生命产生之前就被摧毁。基于这些原因，银河系宜居带有许多不确定的因素而难以被确认。而且行星大气也不能太厚或太薄，太厚会形成金星般的极高表面温度，而太薄则会使行星变成火星般的沙漠行星。</p>
+<p>在我们的银河系，银河系宜居带被认为正缓慢的扩展至距离银心9 kpc（约3万光年）处，包括那些年龄在40~80亿的恒星。而其他的星系因为构造上的不同，星系宜居带可能更大也可能更小，甚至根本没有。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../referrence/Coriolis-force.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../referrence/Coriolis-force.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

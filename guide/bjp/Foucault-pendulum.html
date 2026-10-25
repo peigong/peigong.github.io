@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>傅科摆 - 北京天文馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京天文馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/Foucault-pendulum.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="傅科摆"><a class="header" href="#傅科摆">傅科摆</a></h1>
+<p>傅科摆是一个单摆，底板有一个量角器。单摆振动时，振动面依理应保持不变，但因地球在自转，在地面上的观察者，不能发觉地球在转，但在相当长的时期内，却发现摆的振动面不断偏转。从力学的观点来看，这也是由于受到了科里奥利力影响的缘故。这项显示地球自转的装置，是1851年傅科在巴黎首先制成的，傅科在巴黎先贤祠进行了实验，使用摆长67米、摆锤重28公斤的单摆，并通过万向节等特殊设计减少摩擦。摆动平面偏转方向与纬度有关，在北半球顺时针转动，南半球逆时针转动，赤道上几乎不转，两极旋转周期约24小时。虽然早在1650年，已有人观察到摆的振动面在缓慢地旋转，但却未能对此现象作出正确的解释。所以我们现在把用来显示地球自转的这种装置叫傅科摆。北京天文馆设有傅科摆展示，北京天文馆推出“博士讲解天团”为观众讲解傅科摆等展品，并提及在北京傅科摆摆动平面转动一周约37小时。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>为了证明地球在自转，法国物理学家傅科（1819—1868）于1851年做了一次成功的摆动实验，傅科摆由此而得名。实验在法国巴黎先贤祠最高的圆顶下方进行，摆长67米，摆锤重28公斤，悬挂点经过特殊设计使摩擦减少到最低限度。这种摆惯性和动量大，因而基本不受地球自转影响而自行摆动，并且摆动时间很长。在傅科摆试验中，人们看到，摆动过程中摆动平面沿顺时针方向缓缓转动，摆动方向不断变化。分析这种现象，摆在摆动平面方向上并没有受到外力作用，按照惯性定律，摆动的空间方向不会改变，因而可知，这种摆动方向的变化，是由于观察者所在的地球沿着逆时针方向转动的结果，地球上的观察者看到相对运动现象，从而有力地证明了地球是在自转。</p>
+<p>傅科摆放置的位置不同，摆动情况也不同。在北半球时，摆动平面顺时针转动；在南半球时，摆动平面逆时针转动。而且纬度越高，转动速度越快，在赤道上的摆几乎不转动，在两极极点旋转一周的周期则为一恒星日（23小时56分4秒），简单计算中可视为24小时。傅科摆摆动平面偏转的角度可用公式θ°=15°tsinφ来求，单位是度。式中φ代表当地地理纬度，t为偏转所用的时间，用小时作单位，因为地球自转角速度1小时等于15°，所以，为了换算，公式中乘以15°。</p>
+<h2 id="证明自转"><a class="header" href="#证明自转">证明自转</a></h2>
+<p>据记载，300多年以前伽利略受到罗马教廷的审判，当他被迫承认地心说的时候,伽利略喃喃自语道：“可是地球仍然在动啊!”伽利略是否说过这句话已经不可考证。很难想像有人听见了伽利略低声说出的“异端”言论，并且把它记录了下来，更何况当时伽利略已经神志不太清醒。圣经说大地是不动的；而现在，即使是小学三年级的学生也知道地球存在自转。</p>
+<h2 id="历史实验"><a class="header" href="#历史实验">历史实验</a></h2>
+<p>时间回溯到1851年的巴黎。在国葬院（法兰西共和国的先贤祠）的大厅里，让·傅科（Jean Foucault）正在进行一项有趣的实验。傅科在大厅的穹顶上悬挂了一条67米长的绳索，绳索的下面是一个重达28千克的摆锤。摆锤的下方是巨大的沙盘。每当摆锤经过沙盘上方的时候，摆锤上的指针就会在沙盘上面留下运动的轨迹。按照日常生活的经验，这个硕大无比的摆应该在沙盘上面画出唯一一条轨迹。该实验被评为“物理最美实验”之一。</p>
+<p>实验开始了，人们惊奇的发现，傅科设置的摆每经过一个周期的震荡，在沙盘上画出的轨迹都会偏离原来的轨迹（准确地说，在这个直径6米的沙盘边缘，两个轨迹之间相差大约3毫米）。</p>
+<h2 id="悬挂方法"><a class="header" href="#悬挂方法">悬挂方法</a></h2>
+<p>摆的运动可以超然于地球的自转，但悬挂摆的支架一般却要带动它参与地球的自转。为解决这一问题，傅科采取了一种简单而巧妙的装置－万向节，从而使摆动平面超然于地球的自转。</p>
+<h2 id="自转惯性"><a class="header" href="#自转惯性">自转惯性</a></h2>
+<p>傅科的这个摆是一个演示地球自转的实验。这种摆也因此被命名为“傅科摆”。傅科摆为什么能够演示出地球自转呢？简单的说，因为惯性。</p>
+<p>通常，我们说“地球具有自转”的时候，我们并没有明确出它到底相对于什么自转。这是一个非常重要的问题，如果没有参照物，谈论运动是不可想象的。还没有办法在空间中打上一根钉子作为绝对的参照物，因此，我们只能依靠较远的、看起来似乎是静止的天体作为参照物。事实上，那些天体也绝不是“空间中的钉子”，只不过因为它们实在太遥远了，我们不妨——事实上恐怕也是唯一的选择——把它们作为参照物。以遥远的恒星作为参照物，一个物体不受外力作用的时候，将一直保持它的运动状态。这也是牛顿第一定律的内容。</p>
+<p>摆是一种很有趣的装置。给摆一个恰当的起始作用，它就会一直沿着某一方向，或者说某一平面运动。如果摆的摆角小于5度的话，(高中物理书允许在10°之内)摆锤甚至可以视为做一维运动的谐振子。</p>
+<p>考虑一种简单的情况，假如把傅科摆放置在北极点上，那么会发生什么情况呢？很显然，地球在自转——相对于遥远的恒星自转。同样，由于惯性，傅科摆的摆锤相对于遥远恒星的运动方向（平面）是不变的。（你可以想象，有三颗遥远的恒星确定了一个平面，而傅科摆恰好在这个平面内运动。由于惯性，当地球以及用来吊起摆锤的架子转动的时候，摆锤仍然在那个平面内运动）那么什么情况发生了呢？你站在傅科摆附近的地球表面上，显然会发现摆动的平面正在缓缓的转动，它转动的速度大约是钟表时针转动速度的一半，也就是说，每小时傅科摆都会顺时针转过15度。摆在同一平面内运动，这里所说的平面是由远方的恒星确定的。</p>
+<p>如果把傅科摆放置赤道上呢？那样的话，我们将观察不到任何转动。把摆锤的运动看做一维谐振（单摆），由于它的运动方向与地轴平行，而地轴相对遥远的恒星是静止的，所以我们观测不到傅科摆相对地面的转动。</p>
+<p>在把傅科摆移回巴黎。摆锤的运动可以分解为沿地轴方向的和与之垂直方向上的两个分运动。后者会产生相对地面的旋转（正如北极的傅科摆）。这两个分运动合成的结果是，从地面上的人看来，傅科摆以某种角速度缓慢的旋转——介于傅科摆在北极和赤道的角速度之间。（也可以从科里奥利力的角度解释，得出的结论是一样的）如果在北极的观测到傅科摆旋转一周的时间是A（A=24h），那么在任意纬度γ上，傅科摆旋转一周所需的时间是A/sinγ。对于巴黎，这个数字是31.8小时。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="note/cosmic-shuttle.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="lunar-treasures/CLEP.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="note/cosmic-shuttle.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="lunar-treasures/CLEP.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

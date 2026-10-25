@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>梓 - 先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">先农坛（北京古代建筑博物馆） - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xiannong-altar/Catalpa-ovata.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="梓"><a class="header" href="#梓">梓</a></h1>
+<p>梓（学名：Catalpa ovata G. Don）是紫葳科梓属乔木。在中国长江流域及以北地区广泛栽培，是重要的用材、药用及观赏树种。</p>
+<p>形态特征：树冠伞形，主干通直；嫩枝具稀疏柔毛；叶对生或近于对生，有时轮生，阔卵形；花为淡黄色，有紫色斑点；蒴果线形，下垂；种子为椭圆形，两端具长毛；花期5-6月，果期10-11月。</p>
+<p>生长习性：生于低山河谷，湿润土壤，野生者已不可见，多栽培于村庄附近及公路两旁；喜光，幼苗较耐阴，喜温暖湿润气候，不耐严寒，喜通透性好的沙壤土，能耐轻度盐碱土。</p>
+<p>分布范围：梓分布于中国长江流域及以北地区，日本也有引种栽培。</p>
+<p>主要价值：梓抗污染能力较强，有杀虫能力，常栽种作庭荫树及行道树，也常做工矿区及农村四旁绿化树种。《神农本草经》《肘后方》中均有介绍梓种子可入药，能解毒利尿、止吐、治肾脏病、急性肾炎、霍乱不吐不泻；果可供药用，有利尿之效，可治小儿热疮、身头热烦、头痛壮热、皮肤瘙痒等。</p>
+<h2 id="植物学史"><a class="header" href="#植物学史">植物学史</a></h2>
+<p>梓树是人们的习惯叫法，在《中国植物志》中被确定为正式中文名。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>乔木，高达15米；树冠伞形，主干通直，嫩枝具稀疏柔毛。</p>
+<p>叶对生或近于对生，有时轮生，阔卵形，长宽近相等，长约25厘米，顶端渐尖，基部心形，全缘或浅波状，常3浅裂，叶片上面及下面均粗糙，微被柔毛或近于无毛，侧脉4-6对，基部掌状脉5-7条；叶柄长6-18厘米。</p>
+<p>顶生圆锥花序；花序梗微被疏毛，长12-28厘米。花萼蕾时圆球形，2唇开裂，长6-8毫米。花冠钟状，淡黄色，内面具2黄色条纹及紫色斑点，长约2.5厘米，直径约2厘米。能育雄蕊2，花丝插生于花冠筒上，花药叉开；退化雄蕊3。子房上位，棒状。花柱丝形，柱头2裂。</p>
+<p>蒴果线形，下垂，长20-30厘米，粗5-7毫米。种子长椭圆形，长6-8毫米，宽约3毫米，两端具有平展的长毛。</p>
+<h2 id="生长环境"><a class="header" href="#生长环境">生长环境</a></h2>
+<p>梓树为阳性树种，喜欢光照，稍耐半荫，比较耐严寒，适应性强，微酸性、中性以及稍有钙质化的土壤上都能正常生长。梓树为深根性树种，适合温带地区生长，不适宜暖热气候区；喜欢深厚肥沃并且湿润的沙质土壤，可以耐轻度盐碱土质，不耐干旱和瘠薄土壤；抵抗污染的能力很强，对生活和工业烟尘及二氧化硫等有毒有害气体抗性较强。梓树多生长于海拔500-2500米的低洼山沟或河谷，野生梓树少见。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>梓树分布广，比楸树和灰楸分布更靠北，黑龙江、吉林、辽宁较普遍，河南、山东、河北、北京、天津、江苏、安徽、湖北、四川、云南、贵州等省海拔1000米左右有野生和栽培。西北地区分布于陕西秦巴山地，陕北黄土高原和丘陵海拔800-1600米之间的山麓、沟谷、塬面等处；甘肃的天水、陇南（文县、舟曲）、庆阳、兰州等地。青海西宁、新疆乌鲁木齐、石河子、玛纳斯、喀什、和田等地有栽培。日本也有分布。</p>
+<h2 id="繁殖方法"><a class="header" href="#繁殖方法">繁殖方法</a></h2>
+<p>繁殖方式普遍采用分株繁殖。梓树主要采用种子繁殖，育苗移栽；生产上有时也可以采用嫩枝扦插技术和分蘖繁殖技术。</p>
+<ul>
+<li>种子采集：大同地区梓树果实在立秋后的9月底-11月成熟。应选择生长优良、干形通直优美、树冠开张、果实很饱满的母树进行采种。</li>
+<li>果实处理：把采集到的果实放在干净、向阳的地方摊平晾晒，或者摊开阴干。蒴果开裂以后敲打去掉外壳，挑拣出合格的种子干藏备用。</li>
+<li>种子催芽：第二年3月，把种子与3倍湿润沙子混合分层堆放或混合堆放在一起，堆高30-45厘米。堆放过程中，要防止种子过湿、发热和霉烂，室温控制在4-12℃。研究表明，常温干燥器贮藏种子平均发芽率最高可达76.68%，如果种子储藏在常温常湿、4-20℃的冰箱条件下，平均发芽率仅50%左右。</li>
+<li>播种：大田育苗，温暖向阳、土层深厚的湿润土壤为最佳，同时要将畦整平、整细，条播或者撒播。春季播种，最好在上年秋冬季节将播种地翻耕1-2遍，达到平整、精细的要求。条播，要将行距控制在20厘米左右，把种子与草木灰均匀混合后撒在沟内；撒播，要确保种子撒得均匀。播种移栽的密度以每平方米19-20株为宜，即每亩种子用量为1千克左右。播种后，上面覆盖枯草或其他材料保持温度和湿度。</li>
+</ul>
+<h2 id="栽培技术"><a class="header" href="#栽培技术">栽培技术</a></h2>
+<h3 id="整地移栽"><a class="header" href="#整地移栽">整地移栽</a></h3>
+<p>梓树为深根性树种，要经过多次移植才能形成良好的根系。梓树移栽时间，一般选择在冬季落叶后至春季发芽前。按行距2-3厘米、株距2-3米在地上挖穴，将梓树根部加以修剪，每洞栽植1株，用土盖实、压紧，浇足底水，成活后封土。采种时间一般在9月底至11月进行，日晒开裂后，取出种子干藏，翌年3月将种子和湿沙混合进行催芽，约有1/3种子发芽即可进行条播，覆土厚度控制在2-3厘米，发芽率为40-50%，当年苗木高度可以达到1米。</p>
+<h3 id="整形修剪"><a class="header" href="#整形修剪">整形修剪</a></h3>
+<p>梓树的整形修剪，在实际生产上一般采用自然开心形混合式整形修剪。首先，在梓树苗木定植后的第二年春天，从地面剪除其地上部分的干茎，使其重新萌发出新的枝条，选留一个生长健壮并且直立的枝条作为主干来培养，这样可以培养出主干通体笔直的梓树幼苗。其次，在苗木定干以后，选留其顶部3个长势饱满的侧芽，把它们作为自然开心形的主枝培养，其余的枝条全部剪掉或抹掉。</p>
+<h3 id="养护管理"><a class="header" href="#养护管理">养护管理</a></h3>
+<p>养护管理是绿化工程苗木成活的关键技术。养护不到位，苗木可能会因栽植时的机械损伤造成幼苗枯死或者发育不良，给绿化建设带来严重的损失，所以在梓树苗木栽植后，需要派专人进行精心养护管理。要根据苗木的不同生长习性和立地的实际情况，进行除草、施肥、打药、疏枝，尽可能地提高苗木成活率。</p>
+<p>浇水：及时浇水，保持土壤湿润中国夏季多数地区气温普遍偏高，地表水分蒸发快，土壤很容易缺水干旱。梓树苗木的生长需要一个土壤湿润的条件，养护过程中应对其幼苗及时灌溉。每次灌溉的水量要适中，泡根或者干旱都会不同程度地影响移植苗木的成活。浇水时必须见干见湿，浇一次浇透。浇水次数、间隔天数等，应当根据当地的实际情况来确定。</p>
+<p>松土除草：梓树种植要求土壤条件湿润、肥沃、深厚。降水或灌溉后应当及时中耕松土、除草，尤其需要注意的是机械松土、除草不适用于梓树种植，可以采用人工清除苗间杂草，再在土层表面散盖细土或细沙用来防止露根透风。中耕松土时须小心谨慎，不要伤苗和压苗，除草时尽量避免碰伤苗木根须，推荐方法为逐次加深。另外，松土、除草的最佳时间为阴天的早、晚或者降水以后。</p>
+<p>施肥：梓树喜肥，施肥方法有很多种，如放射状开沟施、环状沟施、条沟施、穴施、水施、撒施，等等。给梓树施肥，要求在操作规程上施肥量不要过多，施肥浓度不要过高，做到少量多次，有机肥和无机肥搭配使用，肥料种类要丰富齐全。如有需要，在松土、除草后可以施水肥，施水肥的时间以早晚为宜，不能在苗行间进行大面积撒施化肥和复合肥。</p>
+<p>适度遮阳：适度遮阳有利于梓树幼苗生长。适度遮阳后使地表温度保持在10℃左右，这样有利于梓树幼苗的快速生长。冬季幼苗落叶后至春季发芽前新栽的苗木，生长初期一般都可以正常生长。但是部分植株幼苗一旦遇到气温升高、水分亏损等，可能会发生萎蔫甚至脱水死亡的现象。因此，新栽梓树是否成活在短时间内无法看出，一般需要经过1-2年的高温干旱后才能确定其是否真正的成活。</p>
+<h2 id="病虫防治"><a class="header" href="#病虫防治">病虫防治</a></h2>
+<p>梓树皮、叶具有杀虫功效，因而病虫害较少。常见病虫害主要为金龟子、蝼蛄等地下害虫，病虫害以预防为主。种植前先挖15-20厘米深，在树木根系25厘米周围环状沟槽，埋120克根动力2号配合根腐灵15克，进行回填埋土，再进行浇水，一次完成或在该病发生时用菊酯类农药、氧化乐果喷洒，或者人工进行捕捉杀死该害虫。其次，梓树在夏季高温高湿的环境下容易发生立枯病、根腐病，喷洒甲霜恶霉灵或铜制剂进行防治；一旦发病，应立即采用甲霜恶霉灵或铜制剂对其进行灌根处理。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<h3 id="生态"><a class="header" href="#生态">生态</a></h3>
+<p>梓树树姿优美，叶片浓密，宜作行道树、庭荫树。它花繁果茂，成簇状长条形果实挂满树枝，果期长达半年以上。它还有较强的消声、滞尘、忍受大气污染能力，能抗二氧化硫、氯气、烟尘等，是良好的环保树种，可营建生态风景林。</p>
+<h3 id="经济"><a class="header" href="#经济">经济</a></h3>
+<p>木材宜作枕木、桥梁、电杆、车辆、船舶、坑木和建筑、高级地板，家具（箱、柜、桌、椅等）、水车、木桶等用材。还宜作细木工、美工、玩具和乐器用材。古人珍爱梓木，用桐木（泡桐）为琴面板，用梓木作琴底，叫做“桐天梓地”，视为琴中上品，古人爱植桑梓，且以桑梓代表家乡。因其播种繁殖育苗容易，可用梓树做砧木快速繁殖楸树。</p>
+<h3 id="药用"><a class="header" href="#药用">药用</a></h3>
+<p>树皮、叶可作药用、农药和饲料。《群芳谱》记载：“梓以白皮者入药，味苦寒无毒、治毒热、去三虫，疗目疾、吐逆及一切温病。”树皮和叶煎汁可治稻螟、稻飞虱等农作物害虫。叶能治猪疮。种子、果实均人药，有利尿、治胃病、肾脏病、湿性腹膜炎和浮肿等症的功效。《神农本草经》《肘后方》中均有介绍梓种子可入药，能解毒利尿、止吐、治肾脏病、急性肾炎、霍乱不吐不泻；果可供药用，有利尿之效，可治小儿热疮、身头热烦、头痛壮热、皮肤瘙痒等。</p>
+<h2 id="植物文化"><a class="header" href="#植物文化">植物文化</a></h2>
+<p>所谓“桐天梓地”者是也。古来以为木莫良于梓，书以“梓材”名篇，礼以“梓人”名匠，宅旁喜植桑与梓，以为养生送死之具，故迄今又以桑梓名故乡也。帷古所谓梓者，往往兼楸而言也。</p>
+<p>在古代，采桑养蚕是妇女的职业，故桑代表母亲；伐梓作器则是由男子来完成，梓又成了父亲的代称。“桑梓之地”是父母劳作生活养儿育女的地方，也代指每个人出生的地方。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../xiannong-altar/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../xiannong-altar/xian-nong.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../xiannong-altar/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../xiannong-altar/xian-nong.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

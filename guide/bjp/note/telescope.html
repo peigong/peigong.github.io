@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>巨眼观天 - 北京天文馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京天文馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/telescope.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="巨眼观天"><a class="header" href="#巨眼观天">巨眼观天</a></h1>
+<ul>
+<li>折射望远镜</li>
+<li>反射望远镜</li>
+<li>牛顿式</li>
+<li>卡塞格林式</li>
+<li>折反射望远镜</li>
+<li>施密特望远镜</li>
+<li>施密特-卡塞格林式</li>
+<li>马克苏托夫-卡塞格林式</li>
+<li>双筒望远镜</li>
+<li>伽利略望远镜</li>
+<li>牛顿望远镜</li>
+<li>凯克望远镜</li>
+</ul>
+<h2 id="赫歇尔望远镜"><a class="header" href="#赫歇尔望远镜">赫歇尔望远镜</a></h2>
+<ul>
+<li>赫歇尔大炮</li>
+<li>赫歇尔一生中制作的最大的望远镜，需要四个人同时操作</li>
+</ul>
+<h2 id="叶凯士望远镜"><a class="header" href="#叶凯士望远镜">叶凯士望远镜</a></h2>
+<ul>
+<li>口径1.01米，迄今世界上最大的折射望远镜</li>
+<li>大口径折射望远镜镜片磨制困难，支撑结构有缺陷</li>
+</ul>
+<h2 id="海尔望远镜"><a class="header" href="#海尔望远镜">海尔望远镜</a></h2>
+<ul>
+<li>乔治-海尔，美国大口径折射望远镜之父</li>
+<li>1.5米、2.5米、5米口径反射望远镜，反射望远镜三步曲</li>
+<li>1.5米口径，发现天狼星的伴星，白矮星</li>
+<li>2.3米径，哈勃，观测到河外星系的存在</li>
+</ul>
+<h2 id="凯克望远镜"><a class="header" href="#凯克望远镜">凯克望远镜</a></h2>
+<ul>
+<li>镜面拼接技术</li>
+</ul>
+<h2 id="甚大望远镜"><a class="header" href="#甚大望远镜">甚大望远镜</a></h2>
+<ul>
+<li>欧洲南方天文台在智利</li>
+<li>4 个8.2米反射望远镜组成，可以组合工作，也可以单独工作</li>
+<li>2011年12月，一个国际研究小组利用欧洲南方天文台的“甚大望远镜”（VLT），发现一个星云正在靠近位于银河系中央的黑洞并将被其吞噬。这是天文学家首次观测到黑洞“捕捉”星云的过程。观测显示，这个星云的质量约是地球的3倍，它的位置逐渐靠近“人马座A*”黑洞。这个黑洞的质量约是太阳的400万倍，是距离我们最近的大型黑洞。研究人员分析认为，到2013年，这个星云将离黑洞非常近，有可能被黑洞逐渐吞噬。</li>
+</ul>
+<h2 id="lbt大型双筒望远镜"><a class="header" href="#lbt大型双筒望远镜">LBT大型双筒望远镜</a></h2>
+<ul>
+<li>双筒，单口径8.4米，迄今最大口径反射望远镜</li>
+</ul>
+<h2 id="在建的望远镜"><a class="header" href="#在建的望远镜">在建的望远镜</a></h2>
+<ul>
+<li>欧洲特大望远镜</li>
+<li>三十米望远镜，中国参与研制</li>
+</ul>
+<h2 id="郭守敬望远镜"><a class="header" href="#郭守敬望远镜">郭守敬望远镜</a></h2>
+<ul>
+<li>光谱巡天，同时观测4000个天体</li>
+<li>LAMOST(Large sky Area Multi-Object fiber Spectroscopic Telescope)</li>
+<li>大天区面积、多目标、光纤光谱天文望远镜</li>
+<li>河北兴隆县</li>
+<li>我国自主创新研制的大型主动反射施密特望远镜</li>
+</ul>
+<h2 id="500米口径球面射电望远镜"><a class="header" href="#500米口径球面射电望远镜">500米口径球面射电望远镜</a></h2>
+<ul>
+<li>射电望远镜可以全天观测，不依赖白天光线</li>
+<li>FAST(Five-hundred-meter Aperture Spherical radio Telescope)</li>
+<li>世界最大的单口径射电望远镜</li>
+<li>贵州省平塘县克度镇大窝凼(dàng)</li>
+<li>喀斯特地貌，水向下渗，不破坏设备</li>
+<li>5000米范围内，没有村庄城市，不通信号干扰</li>
+</ul>
+<h2 id="开普勒望远镜"><a class="header" href="#开普勒望远镜">开普勒望远镜</a></h2>
+<ul>
+<li>开普勒望远镜是美国国家航天局（NASA）设计的专门用来探测系外行星的太空望远镜，于2009年3月6日发射。</li>
+<li>开普勒望远镜用凌星法搜寻银河系内太阳附近的系外行星。</li>
+<li>搜索范围固定在天鹅座和天琴座方向上105平方度的范围内，持续观测14.5万颗恒星的亮度，每30分钟拍一张照片，能很好的观察到凌星现象。</li>
+<li>2013年5月，开普勒望远镜出现重大故障，修复后继续执行搜寻系外行星的任务（称为K2任务）。</li>
+</ul>
+<h2 id="中国空间站工程巡天望远镜"><a class="header" href="#中国空间站工程巡天望远镜">中国空间站工程巡天望远镜</a></h2>
+<p>中国空间站工程巡天望远镜（China Space StationTelescope，简称“CSST”），是中国空间站工程最重要的空间科学设施，是中国迄今为止规模最大、指标最先进的空间天文望远镜，也将是未来十年世界上最重要的空间天文观测仪器之一。中国首个大型巡天空间望远镜计划于2023年发射，开展广域巡天观测，将在宇宙结构形成和演化、暗物质和暗能量、系外行星与太阳系天体等方面开展前沿科学研究。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/looking-for-another-earth.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../note/the-sun.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/looking-for-another-earth.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../note/the-sun.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

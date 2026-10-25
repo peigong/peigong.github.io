@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>海里 - 古观象台 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">古观象台 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/lexicon/nautical-mile.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="海里"><a class="header" href="#海里">海里</a></h1>
+<p>“海里”（nautical mile，符号 n mile）是航海、航空常用的距离单位，来历核心就一句话：它最早按地球纬度“1分”的弧长来定，后来为了统一，国际定为1852米。</p>
+<h2 id="一为什么用纬度1分而不是公里"><a class="header" href="#一为什么用纬度1分而不是公里">一、为什么用“纬度1分”而不是公里</a></h2>
+<p>大航海以后，海图按经纬度画（尤其墨卡托投影），水手用六分仪测太阳/星辰高度求纬度最方便。于是大家把“纬度每差1分（1′，即1/60度）在地面上的弧长”当作一段标准距离：</p>
+<ul>
+<li>地球可先近似当正球：子午线/经线圈一圈分360°，1°=60′，1′弧长≈周长÷360÷60。</li>
+<li>子午线全周长约4万千米，算下来1′≈1.852千米。</li>
+<li>实际海图上直接量：从A到B纬度差30′，就近似30海里，不用再转公制，和定位、绘图标度天然配套。</li>
+</ul>
+<p>这个概念早期不统一叫“nautical mile”，但思路从17世纪前后（埃德蒙·冈特等人提倡按1分弧长定距）就成型了。</p>
+<h2 id="二为什么不同地方数值不一样"><a class="header" href="#二为什么不同地方数值不一样">二、为什么不同地方数值不一样</a></h2>
+<p>地球不是正圆，是赤道略鼓、两极略扁的椭球，子午线上1′弧长随纬度变：</p>
+<ul>
+<li>赤道附近最短，约1843米；</li>
+<li>中纬度（约44°14′）约1852米；</li>
+<li>两极附近最长，约1861—1862米（不同资料取1861或1862）。</li>
+</ul>
+<p>所以各国旧标准各取所好：</p>
+<ul>
+<li>美国旧制：6080.2英尺≈1853.25米，1954年改国际制；</li>
+<li>英国旧制“海军里/Admiralty mile”：6080英尺≈1853.18米，1970年改国际制；</li>
+<li>法国旧制：按45°子午线1′或米制折算，约1851.85米，后取1852；</li>
+<li>俄国等也有各自近似值。</li>
+</ul>
+<h2 id="三1929年统一成1852米"><a class="header" href="#三1929年统一成1852米">三、1929年统一成1852米</a></h2>
+<ul>
+<li>1929年，第一届国际航道测量大会/国际水文地理会议在摩纳哥召开，决议把1海里统一为1852米（也常写1.852公里，合6076.12英尺左右）。这个数值大致对应中纬子午线1′弧长，作为全球平均标准。</li>
+<li>1948年国际海上人命安全会议（SOLAS相关）再确认1852米/约6080英尺为海里标准；之后大多数国家、海图、公约采用。</li>
+<li>中国现行标准：1海里=1852米，仅用于航程等专用场合；旧时曾用“浬”“哩”等字，现在规范写“海里”。</li>
+</ul>
+<h2 id="四配套为什么船速叫节"><a class="header" href="#四配套为什么船速叫节">四、配套：为什么船速叫“节”</a></h2>
+<p>“节”（knot，符号kn）是速度，不是距离：</p>
+<ul>
+<li>16世纪测速用拖绳+浮木，绳上等距打结，用沙漏计单位时间拉出几个结，就估出船速；一个结≈1海里/小时，后来“节”成航速单位。</li>
+<li>现代定义：1节=1海里/小时=1852米/小时≈0.514米/秒。</li>
+<li>别混：海里是长度（像公里），节是速度（像公里/小时）；海图还说“链”cable，1链常取1/10海里≈185米，用于锚地、港区距离。</li>
+</ul>
+<h2 id="五一句话记忆"><a class="header" href="#五一句话记忆">五、一句话记忆</a></h2>
+<p>海里=“纬度1分弧长”演变来的航海距离单位；因地球椭球各地略有差异，1929年国际定标1852米，配“节”表示航速。陆上用公里，海上用海里，好处是直接和经纬度海图对齐，少一道换算。</p>
+<h2 id="经纬度分"><a class="header" href="#经纬度分">经纬度分</a></h2>
+<p>在地理坐标（经纬度）和角度度量中，1度 = 60分。</p>
+<p>补充完整的话：</p>
+<ul>
+<li>1度 = 60分（写作 1° = 60′）</li>
+<li>1分 = 60秒（写作 1′ = 60″）</li>
+<li>所以 1度 = 3600秒</li>
+</ul>
+<p>这个六十进制的规则，无论是经度还是纬度都是通用的。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../lexicon/equator-ecliptic-moonspath.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ancient-astronomy/di-ping-jing-wei-yi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../lexicon/equator-ecliptic-moonspath.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ancient-astronomy/di-ping-jing-wei-yi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

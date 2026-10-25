@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>为什么长征火箭商业发射里更容易露出问题？ - 中国科学技术馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中国科学技术馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/AI/cz-bussiness.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="为什么长征火箭商业发射里更容易露出问题"><a class="header" href="#为什么长征火箭商业发射里更容易露出问题">为什么长征火箭商业发射里更容易露出问题？</a></h1>
+<p>长征火箭早期（1992—1996）集中摔过几次，加上商业任务对失败特别敏感（客户、保险、舆论都会放大），所以记忆点很深。近 20 年长征系列整体成功率已经很高，2020 年前曾连续 296 次成功 。</p>
+<p>下面把“为什么商业发射里更容易露出问题”拆开讲。</p>
+<h2 id="一先分清是统计错觉还是真问题"><a class="header" href="#一先分清是统计错觉还是真问题">一、先分清：是“统计错觉”还是“真问题”</a></h2>
+<ul>
+<li>商业发射的失败能见度远高于国内任务：一颗星几亿美金，保险公司、外媒、客户都在盯，一次失利等于公开处刑。</li>
+<li>长征商业任务多集中在高轨通信卫星（GTO），正好用长三乙/长三丙这种复杂三级火箭，而三级火箭的“上面级/三级点火”本来就是全箭最易出事的环节。</li>
+<li>公开可查的商业失利，故障点高度集中：三级二次点火、惯性平台、伺服机构、焊点/多余物——不是动力系统大面积翻车，而是“精密小环节失守”。</li>
+</ul>
+<h2 id="二技术层面失败基本出在最后那点精度上"><a class="header" href="#二技术层面失败基本出在最后那点精度上">二、技术层面：失败基本出在“最后那点精度”上</a></h2>
+<p>几次典型商业失利的真实原因（均有公开调查结论）：</p>
+<ul>
+<li>1992 长二捆发射澳星：程序配电器里 0.15 毫克铝屑短路，导致紧急关机</li>
+<li>1996 长三乙首飞（国际 708 星）：焊点虚接，头发丝几十分之一粗细，点火振动后断开，惯性平台给出错误姿态信号，火箭自毁</li>
+<li>2009 Palapa-D / 2020 Palapa-N1 / 2026 年长三乙失利：都指向三级发动机工作异常</li>
+</ul>
+<p>共性规律：</p>
+<ol>
+<li>不是大设计错误，是微工艺缺陷——虚焊、多余物、导线疲劳、传感器漂移。</li>
+<li>火箭涉及百万级零件，极端振动/低温/真空下，“差不多”的工艺裕度会被放大成归零事件。</li>
+<li>高轨任务三级要滑行后再点火，对热控、姿态、推进剂沉底、二次启动要求极苛刻，任何单点失效都直接任务失败。</li>
+</ol>
+<h2 id="三管理层面早期商业化步子比体系快"><a class="header" href="#三管理层面早期商业化步子比体系快">三、管理层面：早期商业化“步子比体系快”</a></h2>
+<p>90 年代中国航天撞上的真实矛盾（这部分很少被明说）：</p>
+<ul>
+<li>型号抢市场，质量体系没同步：长三乙是为抢国际商业订单快速派生出来的，首飞即商业首秀，没有“国家队任务”那种充分练兵缓冲 。</li>
+<li>计划经济质量习惯 vs 市场合同压力：当时质量部门没资源、没抓手，工人待遇下滑，外协链条松，多余物/人为装配问题反复出现 。</li>
+<li>“保成功”文化下，试错空间小：不像 SpaceX 可以“快速失败快速迭代”，长征每次失败代价是星箭全损+国际信誉崩盘，反而让早期问题集中爆发后才倒逼改革。</li>
+</ul>
+<p>1996 年之后形成的“双五条归零”（定位准确、机理清楚、问题复现、措施有效、举一反三 + 过程清楚、责任明确、措施落实、严肃处理、完善规章），就是把这批学费固化成了制度 。</p>
+<h2 id="四商业发射特有的放大机制"><a class="header" href="#四商业发射特有的放大机制">四、商业发射特有的“放大机制”</a></h2>
+<p>同样是失败，商业场景更脆弱：</p>
+<ul>
+<li>保险成本：一次失利后国际保费直接翻倍，客户跑单，1996 后多家外企取消订单、数亿美元损失</li>
+<li>客户容忍度低：政府任务可以复盘再飞；商业通信卫星客户要的是“按合同入轨”，容错为零</li>
+<li>出口管制与政治因素：即便技术恢复，市场信任重建也要很多年</li>
+</ul>
+<h2 id="五现在到底是什么水平"><a class="header" href="#五现在到底是什么水平">五、现在到底是什么水平</a></h2>
+<ul>
+<li>长征系列历史成功率约 96%，近十年国内任务成功率 95%+</li>
+<li>1996—2011 曾连续 102 发无失败</li>
+<li>2020 后偶发失利（长三乙三级、长二丙上面级部分成功、长七甲首飞），属于新型号爬坡+高频发射下的边际风险，不是系统性退步</li>
+<li>真正还在“失败率偏高”的是民营商业火箭（力箭、双曲线、星河动力早期型号），那才处在 SpaceX 式试错期，和长征国家队要分开看</li>
+</ul>
+<h2 id="一句话总结"><a class="header" href="#一句话总结">一句话总结</a></h2>
+<p>长征商业发射“失败多”的印象，主要是 90 年代市场化初期技术未熟+质量体系断层+高轨任务天然娇气 三段叠加留下的历史记忆；根因不是“火箭不行”，而是微小工艺缺陷在极端系统工程里被放大，以及商业场景对失败零容忍。</p>
+<p>现在的短板已经变成另一件事：高频发射下怎么让供应链一致性、上面级可靠性、归零闭环速度追上发射节奏。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../f4/lift-reentry.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../f4/lift-reentry.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

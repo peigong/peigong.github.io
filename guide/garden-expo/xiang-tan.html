@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>湘潭园 - 园博园 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">园博园 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/xiang-tan.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="湘潭园"><a class="header" href="#湘潭园">湘潭园</a></h1>
+<p>北京园博园的湘潭园在第九届中国（北京）国际园林博览会（2013年，丰台永定河片区）里归现代园林展示区，是“湖南组”里最小巧的一座，主题“莲城乡情”，副线“弘扬湖湘文化正脉、展示伟人故里风采”。全园仅1000㎡（东西约40米、南北约25米），不堆大山大水，而是用“莲”串起红色伟人、碧泉书院、湘莲小景三件事。</p>
+<h2 id="一基本盘"><a class="header" href="#一基本盘">一、基本盘</a></h2>
+<ul>
+<li>届次/片区：第九届北京园博，现代园林展示区（永定河西岸）；邻长沙、株洲、郴州、常德等湖南展园。</li>
+<li>面积：1000㎡，是当年国内城市展园规定的最小单位；2013年首次进园博，2012年6月进场，11月完成约90%，后续做植物与细部修整。</li>
+<li>设计：湘潭市园林局首席设计师刘安德主持（孟兆祯弟子一脉），小中见大、借景、院落式微缩。</li>
+<li>主题词：莲城乡情；三景区＝红色“莲韵”、湖湘“碧泉”、湘莲“香远/爱莲”。</li>
+</ul>
+<h2 id="二总体格局一坊一照壁三区绕小院"><a class="header" href="#二总体格局一坊一照壁三区绕小院">二、总体格局：一坊一照壁，三区绕小院</a></h2>
+<p>不按中轴大殿，也不按江南曲水，进园是“莲坊”门→乡情照壁→分三团转：</p>
+<ul>
+<li>南主入口/莲坊：门区点“莲”，进园先见“乡情”浮雕照壁，取毛主席1959年6月25日回韶山与乡亲相聚的东方红广场浮雕缩版；</li>
+<li>红色文化区（莲韵）：照壁后/潭边布置7人壁雕＋8块莲韵石雕，集中讲伟人与文化名人；</li>
+<li>湖湘文化区（碧泉）：以碧泉书院为主体，紧邻碧泉潭，讲胡安国、张栻、湖湘学派；</li>
+<li>湘莲文化区（香远/爱莲/莲池）：爱莲桥、香远亭、莲池、莲坊、马头墙漏景，全园“莲”元素收束。</li>
+</ul>
+<p>整体走“书院小院＋莲池＋人物碑雕”，比长沙园岳麓书院线更“伟人+莲”，比常德桃源线更“人物质”。</p>
+<h2 id="三主要景点"><a class="header" href="#三主要景点">三、主要景点</a></h2>
+<p>1）莲坊与乡情照壁（入口）</p>
+<p>主入口名“莲坊”，南主入口一面“乡情”浮雕照壁，刻毛主席回韶山场景——1959年6月25日回故里、与家乡人民相逢，是湘潭园红色第一眼。 坊不取牌楼大屋顶，而用南方民居/马头意向轻处理，和后面书院同调。</p>
+<p>2）莲韵组雕／七人壁雕</p>
+<p>全园红色+人文核心。资料有两套口径：</p>
+<ul>
+<li>壁雕7组：毛泽东、彭德怀、王闿运、释敬安、杨度、黎锦熙、齐白石，各刻头像＋简介＋四字评语（如一代伟人、开国元戎、世界名人等）；</li>
+<li>莲韵石雕8块：刻湘潭名人真迹，其中多块为青石，齐白石一块用白石卧于绿草花丛，突出“画翁”气质。整体把“伟人故里+文人画家”并置：毛、彭走红色；王闿运、杨度、黎锦熙走学术政论；释敬安走诗僧；齐白石走艺术。小园不建纪念馆，用壁雕+石雕做“露天名人谱”。</li>
+</ul>
+<p>3）碧泉书院（主建筑）</p>
+<p>湖湘线主体。以湘潭碧泉书院为原型做“概念性重构”，不按真实古建1:1：</p>
+<ul>
+<li>蓝本用南方传统民居，马头形屋顶、小尺度三开间，集门廊、厅堂、两厢、半亭、后院；</li>
+<li>内设“湘潭名人谱”“湖湘学派溯源”、书法名家匾联；从公元957年前后碧泉文脉一直串到宋明湖湘学；</li>
+<li>胡安国父子避乱居碧泉、建文定书堂，传理学，启张栻一脉，后影响岳麓等书院，园里把它定位“湖湘学最早学术基地之一”；</li>
+<li>匾联用湘潭香樟木，进厅有淡香，是全园很细的辨识点。</li>
+</ul>
+<p>4）碧泉潭</p>
+<p>书院旁小水景，拟湘潭碧泉潭名泉。不引大江，用清潭＋叠石＋近书院倒影，承担“湖湘文化有源有水”的意象；夏季看绿、冬季看石与书院马头墙。</p>
+<p>5）香远亭／益清亭＋爱莲桥</p>
+<p>湘莲线主休憩点：</p>
+<ul>
+<li>跨爱莲桥入小亭，一亭题“湘远”，两侧对联用马英九父亲（湘潭籍）在乡所写联；</li>
+<li>另一处/另一侧题“益清”，用左宗棠题联，明显扣《爱莲说》“香远益清”；</li>
+<li>亭周莲池、莲坊、马头漏墙共同构成“莲”的收束区，不种大荷塘，而用池莲+小桥+亭对景。</li>
+</ul>
+<p>6）马头组墙／“这里是湘潭”</p>
+<p>白墙青瓦马头墙，高约7米（现场以实际为准），一垛书“这里是湘潭”，用毛泽东题写字迹；另一垛白墙刻莲花图案，镂空莲叶框景把院内书院、莲池收进一幅“漏窗”。 这组墙既分隔湖南组噪声，也把徽派/湘中民居的马头语汇转成标识。</p>
+<p>7）莲元素全园渗透</p>
+<p>景石“莲韵”二字、莲坊、爱莲桥、香远/益清、莲池、马头墙莲叶镂空、8块莲韵石雕真迹——湘莲是“园魂”而不是单个景点。湘潭“莲城”别称、湘莲产地属性全靠这套符号落地，不另建荷花博物馆。</p>
+<h2 id="四文化主线怎么读"><a class="header" href="#四文化主线怎么读">四、文化主线怎么读</a></h2>
+<ul>
+<li>红色伟人线：乡情照壁（毛回韶山）+莲韵（毛、彭）+“这里是湘潭”毛字马头墙，主打伟人故里，不建韶山冲实物、不建故居原貌；</li>
+<li>湖湘学统线：碧泉书院+碧泉潭+胡安国/张栻+名人谱，把“先于岳麓、启于碧泉”的湖湘理学讲小园化；</li>
+<li>莲文化线：莲坊、爱莲、香远益清、莲韵石，串“湘莲产地+君子人格+《爱莲说》广义湖湘”；</li>
+<li>名人艺术线：齐白石单独白雕、王闿运/杨度/黎锦熙/释敬安补“不只打仗、还会书画经世文字”。整体比纯“红色园”有书卷气，比纯“书院园”有政治重量。</li>
+</ul>
+<h2 id="五植物与材质"><a class="header" href="#五植物与材质">五、植物与材质</a></h2>
+<ul>
+<li>建筑：南方民居/马头墙、青瓦白墙、香樟木匾、石壁雕、莲坊轻构；不重彩、不琉璃；</li>
+<li>水景：碧泉潭小水面＋莲池＋爱莲桥，静水为主，不放大喷泉；</li>
+<li>莲荷：池莲/盆莲按季节，配合“香远益清”；北京露天越冬以现场养护替换为准；</li>
+<li>配植：以北京可露地养护的乔灌打底，书院周边可配香樟意象（现场若北方越冬难会用替代芳香木）、竹、常规庭院花灌木；整体南方书院感但不硬种棕榈热带；</li>
+<li>雕刻：青石7人壁雕、白石齐白石、8块莲韵名人真迹石，是该园“软文化”的主要硬质载体。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chang-de.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="chang-sha.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chang-de.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="chang-sha.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
