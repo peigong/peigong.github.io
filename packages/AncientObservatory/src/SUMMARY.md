@@ -8,6 +8,7 @@
     - [晷景堂]()
 - [相关概念]()
     - [赤道、黄道和白道](./lexicon/equator-ecliptic-moonspath.md)
+    - [海里](./lexicon/nautical-mile.md)
 - [文物遗存]()
     - [地平经纬仪](./ancient-astronomy/di-ping-jing-wei-yi.md)
     - [赤道经纬仪](./ancient-astronomy/chi-dao-jing-wei-yi.md)
@@ -75,3 +76,5 @@
     - [西方古典天文学](./reference/AI/Classical-Astronomy.md)
     - [圆周360度的渊源](./reference/AI/degree-360.md)
     - [简仪上应该是正方案，还是地平式日晷？](./reference/AI/zheng-fang-an-or-sundial.md)
+    - [航海天文历和航海钟](./reference/AI/Nautical-Almanac-and-Marine-Chronometer.md)
+    - [六分仪](./reference/AI/sextant.md)

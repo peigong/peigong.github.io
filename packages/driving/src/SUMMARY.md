@@ -22,4 +22,4 @@
     - [天福号酱肉铺](./qianmen-street/tian-fu-hao.md)
     - [稻香村糕点铺](./qianmen-street/dao-xiang-cun.md)
     - [广德楼戏院](./qianmen-street/guang-de-lou.md)
-    - []()
+    - [鲜鱼口](./qianmen-street/xian-yu-kou.md)
