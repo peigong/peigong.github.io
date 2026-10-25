@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>麋鹿 - 南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/milupark/Elaphurus-davidianus.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="麋鹿"><a class="header" href="#麋鹿">麋鹿</a></h1>
+<p>麋鹿（学名：Elaphurus davidianus），是偶蹄目鹿科麋鹿属的哺乳动物，因脸似马、角似鹿、蹄似牛、尾似驴，俗称"四不像"。</p>
+<p>形态特征：麋鹿为大型鹿类，体长170—217厘米，成年雄性体重可达250千克。吻部狭长，鼻端裸露部分宽大；四肢粗壮，主蹄宽大而多肉，悬蹄发达；尾长而多毛，为鹿科动物中最长。雄性具角，雌性无角，鹿角无眉杈，主干分为前后两枝。夏毛红棕色，冬毛灰棕色。</p>
+<ul>
+<li>生活习性：麋鹿栖息于温暖湿润的沼泽、湿地，性好合群，善游泳；宽大的蹄和蹄间皮腱膜便于沼泽活动，长尾能驱赶昆虫。它以青草和水草为主食。</li>
+<li>生长繁殖：麋鹿6月底至8月发情，雄鹿以角斗争夺配偶；雌兽怀孕期约270天，为鹿类中最长，一般翌年4-5月产仔，初生幼仔体重约12千克。</li>
+<li>保护现状：麋鹿曾广布于中国长江、黄河流域的平原沼泽，因气候变化和人类猎杀于19世纪末本土灭绝。1985-1987年，中国与英国合作重引进麋鹿77只，目前全国种群已达1.4万余只，并重建6个野外种群。麋鹿现为国家一级保护野生动物，世界自然保护联盟（IUCN）将其评为野外灭绝（EW）。</li>
+</ul>
+<h2 id="动物学史"><a class="header" href="#动物学史">动物学史</a></h2>
+<h3 id="历史分布"><a class="header" href="#历史分布">历史分布</a></h3>
+<p>麋鹿起源于中国，是我国特有物种。据科学家考证，早在3千多年前，中国黄河、长江中下游地区就有麋鹿，它们曾在中国生活了数百万年，已出土的野生麋鹿化石表明，麋鹿起源于距今200多万年前，距今约1万年前到距今约3000年时最为昌盛，数量达到上亿头，中国境内无论是麋鹿化石点的数目或某个化石点的标本数量都极为丰富，但在距今约3000年的商周时期以后却迅速衰落，直到清朝初年野生麋鹿最后绝迹。</p>
+<p>野生麋鹿的最后栖息地是长江口附近沿海地区。尽管麋鹿曾广泛分布于中国东部及中部地区的长江南北，但主要分布中心仍在长江三角洲的沿海地区。它们十分喜爱温暖湿润的沼泽水域，甚至喜欢接触海水，衔食海藻。从1967年至1998年先后出土麋鹿化石12处。考古发现，1万年至4000年前人类遗址中出土的麋鹿骨骼数量，大致与家猪骨骼数量相当。</p>
+<p>麋鹿是一种仅限于第四纪中后期的动物，从已知的190多个麋鹿化石出土地点确认，历史上麋鹿的分布区西至山西的汾河流域，北至辽宁的康平，南到浙江余姚，东到沿海平原及岛屿。到了晚更新世，麋鹿种群迅速发展，到全更新世中期达到鼎盛，但商周以后麋鹿迅速衰落。原始人类由于人口密度低、生产力水平低，不构成对麋鹿的威胁。而商周以后，由于自然变迁、麋鹿自身的原因和人为干扰等因素，造成了麋鹿的不断减少。</p>
+<p>从自然因素看，由于麋鹿是一种喜爱温暖湿润的动物，而中国近5千年来的气温是在逐渐变冷，沼泽和水域也明显减少，自然环境的变化对麋鹿有较大的影响。从自身因素看，麋鹿主要采食水生和陆生的禾本科及豆科植物，食性狭窄也是麋鹿生存受到威胁的自身因素。</p>
+<p>人口增长和农业的发展，侵占了麋鹿的生活地域。人类的捕杀，严重影响了麋鹿的生存。考古学发现，1万年至4千年前人类遗址中出土的麋鹿骨骼的数量，与家猪骨骼的数量相当。可见当时麋鹿是被人类当作食物而遭到大量猎杀的。甲古文中记载，古代一次猎获麋鹿的数量达348只。另外麋鹿还被制成治病和强身的各种药品，《本草纲目》中记载，“麋茸功力胜鹿茸……麋之茸角补阴，主治一切血症，筋骨腰膝酸痛，滋阴益肾……”《彭祖服食经》、《家藏经验方》及现代的《中医方剂大辞典》中，用麋鹿茸、角、骨等做配方的方剂就有几十项。麋鹿由此也就成为人类为治病而追杀的对象。</p>
+<p>自然因素、麋鹿自身的因素是麋鹿分布区逐渐缩小、数量减少的原因，而人类活动的干扰是麋鹿走向野外灭绝的决定因素。</p>
+<h3 id="史料记录"><a class="header" href="#史料记录">史料记录</a></h3>
+<p>殷商甲骨文中就有“麋”字。在殷墟前15次发掘的6000多件动物骨骼中，有1000多件是麋鹿骨骼，数量比猪、狗、牛、羊之和还多。从春秋战国时期至清朝，古人对麋鹿的记述不绝于书。它不仅是先人狩猎的对象，也是宗教仪式中的重要祭物。《孟子》中记述，“孟子见梁惠王，王立于沼上，顾鸿雁麋鹿曰：‘贤者亦乐此乎’”，这证明至少在周朝，皇家的园囿中已有了驯养的麋鹿。“人与麋鹿相处，耕而食，织而衣，无有相害之心(《庄子·春秋》)。”“麋何食兮庭中，蛟何为兮水裔”《屈原·战国》、“不贪夜识金银气，远害朝看麋鹿群”(杜甫·唐)、“麋鹿逢人随未惯，猿猱闻鼓不须呼”(苏轼·北宋)、“有时掏米引麋鹿，到处入林寻野花”(陆游·南宋)，北宋苏洵“泰山崩于前而色不变，麋鹿兴于左而目不瞬”，清朝乾隆在《麋角解说》里，亲自证实了《礼记·月令》中记载的麋鹿是在冬至卸角不同于其他鹿科动物时间这一事实，还有“真叫见猎心犹喜，黄羊麋鹿满平郊”、“南苑双柳树，厥名亦已久……岁月与俱深，麋鹿相为友”等。</p>
+<p>汉朝以后，野生麋鹿数量日益减少。元朝建立以后，善骑射的皇族把野生麋鹿从黄海滩涂捕运到大都（北京），供皇族子孙们骑马射杀。野生麋鹿逐渐走向灭绝。到清朝初年，中国已只有一群约二三百只的麋鹿圈养在210平方公里的北京南海子皇家猎苑。</p>
+<h3 id="物种命名"><a class="header" href="#物种命名">物种命名</a></h3>
+<p>1865年秋季，法国动植物学家兼传教士阿尔芒·戴维德(Fr Jean Pierre Armand David)，亦称“大卫神父”，在北京南郊进行动植物考察，无意中发现了南海子皇家猎苑中的麋鹿。他立即意识到，这是一群陌生的、可能是动物分类学上尚无记录的鹿。戴维德以20两纹银为代价，买通猎苑守卒弄到了两只麋鹿，制作成标本。1866年，他将标本寄到巴黎自然历史博物馆，被确认为从未发现的新种，而且是鹿科动物中独立的一个属。为了纪念大卫神父，阿尔方斯·米尔恩·爱德华兹(Alphonse Milne-Edwards)将麋鹿命名为“大卫神父鹿”（Père David's deer）（学名：Elaphurus davidianus）。</p>
+<h3 id="绝迹中原"><a class="header" href="#绝迹中原">绝迹中原</a></h3>
+<p>1866年之后，英、法、德、比等国的驻清公使及教会人士通过明索暗购等手段，从北京南海子猎苑弄走几十头麋鹿，饲养在各国动物园中。</p>
+<p>1894年，北京永定河泛滥，洪水冲垮了皇家猎苑的围墙，许多麋鹿逃散出去，成了饥民的果腹之物。1900年，八国联军攻入北京，南海子麋鹿被西方列强劫杀一空，麋鹿在中国本土灭绝。</p>
+<p>随着时间的流逝，圈养于欧洲一些动物园中的麋鹿纷纷死去，种群规模逐渐缩小。从1898年起，英国十一世贝福特公爵出重金将原饲养在巴黎、柏林、科隆、安特卫普等地动物园中的18头麋鹿悉数买下，放养在伦敦以北占地3000英亩的乌邦寺庄园内。这18头麋鹿成为地球上所有麋鹿的祖先。二战时，这个种群达到255头，乌邦寺庄园因害怕战火，开始向世界一些大动物园转让麋鹿。到1983年底，全世界麋鹿达到1320头。</p>
+<h3 id="重新引进"><a class="header" href="#重新引进">重新引进</a></h3>
+<p>麋鹿的故乡中国希望麋鹿能重返家园。1956年和1973年，北京动物园分别得到了一对和两对麋鹿，但因繁殖障碍和环境不适，一直未能复兴种群。</p>
+<p>1985年，中英两国签订《麋鹿重引进中国协议》。在世界野生动物基金会（WWF，现已改名世界自然基金会）的努力下，英国政府决定，伦敦5家动物园向中国无偿提供麋鹿。1985年8月，22头麋鹿被用飞机从英国运抵北京，当晚运至南海子原皇家猎苑，奇兽重新回到了它在中国最后消失的地方。1986年8月，39头麋鹿从英国经上海运抵江苏省盐城大丰市（现盐城大丰区），麋鹿重新回到它的野生祖先最后栖息的沿海滩涂。</p>
+<p>1985年11月15日下午，国务院副总理、国务院环境保护委员会主任李鹏，在人民大会堂会见了应邀来中国访问的英国乌邦寺公园主人塔维斯托克侯爵。宾主进行了亲切友好的交谈。李鹏副总理感谢塔维斯托克侯爵将二十二头麋鹿赠送给中国人民，称赞侯爵为保护珍稀动物进行的不懈努力和做出的贡献，并就共同关心的自然保护问题同侯爵交换了看法。</p>
+<p>中国已在北京、江苏省盐城大丰市（现盐城大丰区）、湖北省石首市等地实施麋鹿散养计划，形成种群，全国已有麋鹿8000多头。其中江苏大丰国家级麋鹿自然保护区至2020年底时，共有麋鹿5681头，其中野生个体1820只。2003年3月，世界第一头纯野生的麋鹿在大丰麋鹿保护区内出生。</p>
+<p>2024年8月24日，是麋鹿回归第39周年纪念日。截至2023年底，全国麋鹿数量达到1.3万只，麋鹿重引进项目圆满顺利完成。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>麋鹿是一种大型食草动物，体长150-200厘米，尾长60-75厘米。 雄性肩高122-137厘米，雌性70-75厘米，体形比雄性略小。一般体重120-180千克，成年雄性体重可达250千克，初生仔12千克左右。夏季体毛为赤锈色，颈背上有一条黑色的纵纹，腹部和臀部为棕白色。9月以后体毛被较长而厚的灰色冬毛所取代。</p>
+<p>麋鹿颈和背比较粗壮，头大，吻部狭长，鼻端裸露部分宽大，眼小，眶下腺显著。四肢粗大，主蹄宽大能分开，多肉，并且两个主蹄之间有皮腱膜相连，避免在沼泽中下陷；此外悬蹄也很发达。和驯鹿、白唇鹿一样，麋鹿在行走时，蹄部关节也会发出响亮的磕碰声。夏毛红棕色，冬季脱毛后为棕黄色；初生幼仔毛色橘红，并有白斑。麋鹿是尾巴最长的鹿类之一；尾上有绒毛，呈灰黑色，腹面为黄白色，末端为黑褐色；长尾巴的主要功能是用来驱赶蚊蝇以适应沼泽环境。</p>
+<p>雌麋鹿没有角，体型也较小。雄鹿有角，最长的角可达80厘米，倒置时能够三足鼎立，在鹿科动物中非常独特；且形状特殊，外形与一般的鹿角正好相反——前杈再分小杈，前杈分出的每小杈上再长出一些更小的杈；而后杈则平直向后伸展，几乎不分杈。这其实是由于麋鹿角的角干并不是向斜后方生长，而是竖直向上生长，而且没有眉枝，角干离头部一小段之后就分为前后二枝，前枝是主枝，不分叉但非常长的后枝被称为次枝；前面的主枝随后再分枝，形成一前一后的二长枝。麋鹿角一般每年11月-12月脱落，新角随即开始生长，至翌年5-6月时长成。奇特的是，也有的个体一年脱角两次：11月前后脱去大角，随即长出小角，至翌年1-2月时长成，几周后再脱去；但在长出第二副小角的阶段，雄鹿并不发情。雄性小鹿在两岁时长角分叉，6岁叉角才发育完全。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>从麋鹿宽大的蹄及蹄间有皮腱膜分析，适于在沼泽地活动；长而多毛的尾，利于驱赶飞扰的昆虫；从饲养麋鹿喜泡水和泥浴的习性判断，它们过去生活于温暖潮湿泽地。喜平原、沼泽和水域，长江三角洲平原湿地显然是它栖息的理想生境。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<p>麋鹿是鹿类动物中较温顺的一种。据人工多年的饲养、观察，麋鹿的奔跑速度不及梅花鹿和狍，发情期的公鹿也不像梅花鹿、马鹿、白唇鹿那样攻击人，而且占群公鹿见到人接近即逃跑。在哺乳期，人给幼仔打耳号、测量时，幼仔的叫声只能吸引母鹿在远处观望，而不像其他鹿那样，母鹿为了保护幼仔而攻击人。雄性麋鹿之间为争夺配偶的角斗也相对温和，没有激烈的冲撞和大范围的移动，角斗的时间一般不超过10分钟，失败者只是掉头走开，胜利者不再追斗，很少发生鹿之间的伤残现象。公鹿占群后，其他公鹿窥视母鹿时、占群公鹿仅用吼叫和追逐等方式赶走对方。以上这些特点决定了它们逃避敌害的能力差，较易被天敌和人类捕杀。</p>
+<p>麋鹿性好合群，善游泳，主要以禾本科、苔类及其它多种嫩草和树叶为食。人工饲养其饲料种类由三部分组成： “细粮”包括小麦麸、大麦、玉米、豆饼；大豆秸秆纤维化程度较高是“粗粮”。将“细粮”、“粗粮”分别粉碎，并按照一定的比例混合加水搅拌、发酵，与此同时，还用鲜嫩、可口的胡萝卜、麦青等“水果蔬菜”来补充维生素。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>麋鹿原产于中国长江中下游沼泽地带，为中国特有种。该物种已从濒临灭绝的边缘恢复，并已成为拯救高度濒危物种的经典例子(Ebenehard 1995)。1980年代中期，麋鹿被重新引入中国进行圈养，种群饲养地首先在北京，然后在大丰、石首等地建立。麋鹿在西方的动物园也有圈养，并在美国等地的猎场有散养种群。</p>
+<h2 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h2>
+<p>大多数鹿科都在秋季发情，而麋鹿的发情期却在夏季，从5月底至8月。交配期间，雄兽之间发生对峙或角斗的现象，性情突然变得暴躁，发出阵阵叫声，以角挑地，眶下腺分泌液体，涂抹于树干之上。虽然麋鹿发情交配期比其它鹿早于一个季度，但雌麋鹿的怀孕期270天-300天，是鹿类中怀孕期最长的，因此产仔时间和其它鹿类似，都是翌年4-5月产仔。裹着灰白色胎衣的小鹿刚落地就能抬起头，大鹿迅速转身为孩子舔舐并吃掉胎衣。初生的幼仔体重大约为12千克，毛色桔红并有白斑，6-8周后白斑消失，出生3个月后，体重将达到70千克。2岁时性成熟，雄性小鹿2岁长角分叉，6岁叉角发育完全，理论寿命为25岁。</p>
+<h2 id="亚种分化"><a class="header" href="#亚种分化">亚种分化</a></h2>
+<p>麋鹿原产于中国长江中下游沼泽地带，距今约有二三百万年的历史，动物分类学家将它归类为鹿科，麋鹿属，达氏种。历史上麋鹿共有5个物种，即双叉种、蓝田种、台湾种、晋南种、达氏种，现存者为达氏种。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<h3 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h3>
+<ul>
+<li>列入《世界自然保护联盟濒危物种红色名录》（IUCN）2016年ver3.1——野外灭绝（EW）。</li>
+<li>列入中国《国家重点保护野生动物名录》（2021年2月5日）一级。</li>
+</ul>
+<h3 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h3>
+<p>麋鹿作为野生种群早已绝迹多年。1985和1987年，英国乌邦寺分两次共赠送38只麋鹿至北京南海子。1986年8月14日，在世界自然基金会（WWF）和中国林业部的共同努力下，来自英国七家动物园的39头麋鹿返回故乡——江苏大丰，放养在大丰麋鹿保护区。从1993年开始，湖北石首从北京南海子共引进94只麋鹿。从1998年开始，江苏大丰分5次在黄海滩涂开展野放试验；同年春、夏两季，湖北石首因保护区围栏被洪水等冲垮，部分麋鹿随着洪水等自然扩散到保护区周边形成了5个自然种群。截止至2022年，中国麋鹿主要分布在三大保护区内，即江苏大丰麋鹿国家自然保护区、北京南海子麋鹿苑、湖北石首麋鹿国家级自然保护区。其中，面积达117万亩的江苏大丰麋鹿保护区，是世界上面积最大的一处麋鹿保护区；经过繁衍扩大，截至2021年5月底，保护区野生麋鹿个体已达2658只。截至2021年，我国共建立84个麋鹿迁地保护种群，麋鹿总数近万只；其中石首麋鹿国家级自然保护区及荆江故道一带麋鹿野生个体约2300只。</p>
+<p>2022年9月9日，在江西省都昌县南峰镇余晃村以南2公里鄱阳湖都昌湖区珍珠湖段发现4大4小8只麋鹿。</p>
+<p>2025年10月24日消息，麋鹿回归中国40年来，数量由最初77只扩展到1.5万只，种群通过北京南海子麋鹿苑和江苏大丰麋鹿国家级自然保护区向全国扩散，全国已建立100多个麋鹿繁殖种群，分布在27个省、自治区、直辖市的95个地区。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../milupark/Elaphurus.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../milupark/mi-lu-jiao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../milupark/Elaphurus.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../milupark/mi-lu-jiao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

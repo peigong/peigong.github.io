@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>紫叶李 - 南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/plant/Prunus-cerasifera.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="紫叶李"><a class="header" href="#紫叶李">紫叶李</a></h1>
+<p>紫叶李（学名：Prunus cerasifera 'Atropurpurea'），别名红叶李，为蔷薇科李属落叶小乔木，是樱桃李的栽培观赏变型，叶常年紫红色，在中国园林中广泛栽培，主要作观叶树种。</p>
+<p>形态特征：株高可达8米，多分枝，枝条细长开展，小枝暗红色，冬芽卵圆形、鳞片紫红色；叶片椭圆形、卵形或倒卵形，长3-6厘米，先端急尖，边缘具圆钝锯齿，全株叶片紫红色；花单生或稀2朵，花瓣白色，直径约2-2.5厘米；核果近球形或椭圆形，红色，微被蜡粉，花期4月，果期8月。</p>
+<p>生长习性：喜光，稍耐阴，在阴蔽环境下叶色不鲜艳；喜温暖湿润气候，耐寒力不强，较耐水湿，亦具一定抗旱能力；对土壤适应性强，以排水良好的砂砾土为佳，黏质土亦能生长，根系较浅，萌生力较强，耐修剪。</p>
+<p>分布范围：原产亚洲西南部，野生樱桃李种群见于中国新疆及中亚、天山、伊朗、小亚细亚至巴尔干半岛一带；紫叶李作为观赏树种在华北及中国各地庭园中广泛栽培。</p>
+<p>主要价值：叶常年紫红色，为名贵观叶树种，终年叶色紫红、引人注目，在华北及中国各地庭园中广泛栽植，为园林绿化常用树种。</p>
+<h2 id="植物学史"><a class="header" href="#植物学史">植物学史</a></h2>
+<p>所有紫叶李品种都是由绿叶李芽变产生的，变异后的绿叶中出现大量的色素，致使叶片呈现红色至紫色，所以称紫叶李。春季开花后，树体开始着生紫色或红色的叶片，可以持续到深秋，具有很高的观赏价值。紫叶李野生种（Prunus divaricata Ledb.）是一种结黄色果实的带刺小灌木。最早的栽培种可能来源樱桃李（Prunus cerasifera Ehrh. ），与P. divaricata相比，其树体比较大，刺少，枝条微垂；果实较大，着红色或黄色；叶片宽大。可以说樱桃李是P. divaricata驯化后的产物，一些植物学家把这两个种（P. divaricata，P. divaricata）视为一个种，一个是野生的，一个是栽培的。</p>
+<p>17世纪英国有栽植绿叶樱桃李的文献记载。19世纪紫叶李开始在英国栽植，最早的记载是一个法国人莫瑟尔·皮萨尔（Monsieur Pissard）于1888年从伊朗将紫叶李引入法国，并以他的名字命名了第一个紫叶李品系（Prunus cerasifera pissardii 即Prunus cerasifera 'Atropurpurea' ）。以后的几年，皮萨尔的紫叶李就逐渐在欧洲和北美洲栽植起来。最初的紫叶李克隆体花朵为白色，而不是粉红色的，它的叶子也不像现代紫叶李叶子那样为深紫色。1996年，学者雅各布森（Jacobson）指出，播种方式、运输方式和后来从波斯进口的幼苗都导致了原始紫叶李克隆体特征的不确定性。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>紫叶李为灌木或小乔木，高可达8米。</p>
+<h3 id="茎"><a class="header" href="#茎">茎</a></h3>
+<p>多分枝，枝条细长，开展，暗灰色，有时有棘刺；小枝暗红色，无毛；冬芽卵圆形，先端急尖，有数枚覆瓦状排列鳞片，紫红色，有时鳞片边缘有稀疏缘毛。</p>
+<h3 id="叶"><a class="header" href="#叶">叶</a></h3>
+<p>叶片椭圆形、卵形或倒卵形，极稀椭圆状披针形，长（2）3-6厘米，宽2-3（2）厘米，先端急尖，基部楔形或近圆形，边缘有圆钝锯齿，有时混有重锯齿，紫色；托叶膜质，披针形，先端渐尖，边有带腺细锯齿，早落。</p>
+<h3 id="花"><a class="header" href="#花">花</a></h3>
+<p>花1朵，稀2朵；花梗长1-2.2厘米；无毛或微被短柔毛；花直径2-2.5厘米；萼筒钟状，萼片长卵形，先端圆钝，边有疏浅锯齿，与萼片近等长，萼筒和萼片外面无毛，萼筒内面有疏生短柔毛；花瓣白色，长圆形或匙形，边缘波状，基部楔形，着生在萼筒边缘；雄蕊25-30枚，花丝长短不等，紧密地排成不规则2轮，比花瓣稍短；雌蕊1枚，心皮被长柔毛，柱头盘状，花柱比雄蕊稍长，基部被稀长柔毛。</p>
+<h3 id="果实"><a class="header" href="#果实">果实</a></h3>
+<p>核果近球形或椭圆形，长宽几相等，直径1-3厘米，黄色、红色或黑色，微被蜡粉，具有浅侧沟，粘核；核椭圆形或卵球形，先端急尖，浅褐带白色，表面平滑或粗糙或有时呈蜂窝状，背缝具沟，腹缝有时扩大具2侧沟。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<p>紫叶李原产于亚洲西南部，在中国华东、华中、华北、西北、西南地区均有分布，华北及其以南地区种植较广泛。</p>
+<h2 id="生长习性"><a class="header" href="#生长习性">生长习性</a></h2>
+<p>紫叶李喜光，不耐阴，不耐寒，喜温暖湿润气候，在肥沃深厚、排水良好的中性、酸性土壤中生长良好，抗性较强。花期4月，果期8月。</p>
+<p>枝条纤细，成枝力和萌芽力均强；花芽在上一年形成，第二年春季开放；春季萌芽后叶片及幼枝均为紫红色，7月中旬以后渐转为灰紫色，至8月上旬秋梢开始生长，其后抽生的新枝又为紫红色，颜色较春梢淡。叶芽具有早熟性，生长季中可以分生1-2次副梢，副梢进行花芽分化的能力较低，花芽稀疏且质量差，花期短，易早落。</p>
+<h2 id="繁殖方式"><a class="header" href="#繁殖方式">繁殖方式</a></h2>
+<h3 id="自然繁殖"><a class="header" href="#自然繁殖">自然繁殖</a></h3>
+<p>紫叶李的花期在4月，一般较早，且其具有自花不孕特性，早春低温会严重影响其授粉受精，出现结实率低或不结实的情况。</p>
+<h3 id="人工繁殖"><a class="header" href="#人工繁殖">人工繁殖</a></h3>
+<h4 id="芽接繁殖"><a class="header" href="#芽接繁殖">芽接繁殖</a></h4>
+<p>芽接法砧木可用桃、李、梅、杏、山桃、山杏、毛桃和紫叶李的实生苗，相比较而言，桃砧生长势旺，叶色紫绿，但怕涝。6月中下旬，选用饱满、肥实，无干尖和病虫害的接芽进行嫁接。嫁接成活后1-2年就可出圃定植。</p>
+<h4 id="枝接繁殖"><a class="header" href="#枝接繁殖">枝接繁殖</a></h4>
+<p>秋季落叶后选择树体健壮、无病虫害的优良母树，剪取生长充实、接芽饱满的1年生枝条进行沙藏处理待用。春季树体开始萌动后至尚未展叶前嫁接，采用劈接方式。</p>
+<h4 id="高空压条繁殖"><a class="header" href="#高空压条繁殖">高空压条繁殖</a></h4>
+<p>选择树势较强，无病虫害的植株。在春季4月中旬到5月中旬进行压条操作，秋末落叶后，将压条在泥球下部剪断，剪开塑料袋后进行移栽。</p>
+<h4 id="扦插繁殖"><a class="header" href="#扦插繁殖">扦插繁殖</a></h4>
+<p>一般在11月下旬到12月中旬，以当年生健壮枝条的插穗扦插，可浸一定的生根剂，晾干后即可扦插。</p>
+<h2 id="栽培方式"><a class="header" href="#栽培方式">栽培方式</a></h2>
+<h3 id="整形修剪"><a class="header" href="#整形修剪">整形修剪</a></h3>
+<h4 id="幼苗修剪"><a class="header" href="#幼苗修剪">幼苗修剪</a></h4>
+<p>需及时除去砧芽，使营养集中于主干生长，对于树干上萌发的小萌枝，不必过急剪除，借助小萌枝的叶片来扩大叶面积，以增强光合作用，这对加粗树干，增强抗倒伏能力大有好处。但对主干上出现较粗壮的竞争枝，必须及时剪除，以免分散养分影响主干的生长。</p>
+<h4 id="培大苗整形"><a class="header" href="#培大苗整形">培大苗整形</a></h4>
+<p>一年生紫叶李嫁接苗定植后，当年冬季进行短截定干，剪去上部枝干。翌年春季发芽抽枝后，选留4-5个粗壮枝条作为主枝培养，对一级主枝进行短截，剪去枝长的1/3-1/2，强枝重剪，长势一般的枝条轻剪，剪后各主枝长短大致平行，主枝上的小侧枝可适当删剪部分留作辅养树体。</p>
+<p>第三年春季，在一级主枝上选留二级主枝预备枝培养，冬季从预备的二级主枝中，选择不同方位、生长较一致的2个枝条作为二级主枝，并行短截，对二级主枝上的小侧枝适当疏剪，使新留的小侧枝既能辅养树体、丰满树冠又能开花。</p>
+<h4 id="移植与出圃修剪"><a class="header" href="#移植与出圃修剪">移植与出圃修剪</a></h4>
+<p>3-4年生的紫叶李，出圃或移植均应带土球，在休眠期间移植成活率较高。在正常情况下，适当疏剪过密枝，对各级主枝上的长侧枝适当短截，使树冠通透，树形不变，修剪不宜过重。</p>
+<h3 id="水肥管理"><a class="header" href="#水肥管理">水肥管理</a></h3>
+<p>紫叶李喜湿润环境，浇水要浇透，雨季也要注意水大烂根。紫叶李喜肥，栽植时在坑底施入适量腐熟发酵的圈肥作为基肥。紫叶李虽喜肥，但每年只需要在秋末施1次复合肥，而且要适量，否则会使叶片颜色发暗。</p>
+<h3 id="病虫防治"><a class="header" href="#病虫防治">病虫防治</a></h3>
+<p>紫叶李病虫害主要有红蜘蛛、刺蛾和布袋蛾等。红蜘蛛发生时用乐果防治。刺蛾和布袋蛾用敌百虫晶体800倍液喷雾防治。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<p>紫叶李为色叶树种，是优良的观花观叶植物。可孤植、丛植、片植于公园、庭园、道路旁等绿地，其具有抗较高浓度氯气的功能，可作为抗大气污染的绿化植物栽植。紫叶李果实甜美，可鲜食，也可加工后食用。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../plant/Forsythia-suspensa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../plant/Prunus-persica.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../plant/Forsythia-suspensa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../plant/Prunus-persica.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

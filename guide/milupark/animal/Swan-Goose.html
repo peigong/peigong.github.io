@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>鸿雁 - 南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/animal/Swan-Goose.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="鸿雁"><a class="header" href="#鸿雁">鸿雁</a></h1>
+<p>鸿雁（学名：Anser cygnoides）是鸭科雁属鸟类，别名大雁、黑嘴雁，鸿雁在中国繁殖于东北、内蒙古等地，越冬于长江中下游及东南沿海省份，偶见于中国台湾地区，境外繁殖区分布在西伯利亚南部、中亚。</p>
+<p>形态特征：鸿雁是大型水禽，体长90厘米左右，体重2.8~5千克，雌雄羽色相似，但雌鸟略小于雄鸟，嘴基部疣突不明显。鸿雁的成体额、头顶、后颈呈暗褐色，额基部与嘴间有一条标志性白色细纹将嘴和额分开。嘴黑色。背部、翼上覆羽铅灰色，前颈和颈两侧几乎白色，前胸、腹部浅黄褐色，自前向后逐渐变淡。下腹、尾上覆羽白色，翼下覆羽、腋羽暗灰色。跗、脚橙色。</p>
+<p>生活习性：鸿雁主要栖息于宽阔草原的湖泊、河流、沼泽及其近岸草地中，特别是水生植物茂密的地区。鸿雁性喜结群，常成群活动。以各种草本植物的叶、芽，包括陆生植物和水生植物、芦苇、藻类等植物性食物为食，也吃少量甲壳类和软体动物等动物性食物。善游泳，飞行力亦强，但飞行时显得有些笨重。警惕性强，行动极为谨慎小心。平均寿命通常为20年。</p>
+<p>保护现状：20世纪60年代其全球种群数量曾超10万只，目前已降至6~9万只，先后被列入中国《有重要生态、科学、社会价值的陆生野生动物名录》、中国国家二级保护野生动物名录，2023年被《世界自然保护联盟濒危物种红色名录》评定为濒危（EN）物种，目前中国已通过建设自然保护区、打击盗猎、开展跨国候鸟保护合作等方式推进其种群及栖息地保护。</p>
+<p>中国古代常以鸿雁代指书信，“雁帛”“雁足”等称谓均出自苏武牧羊雁足传书的典故；它也是古典诗词常见意象，常被用来寄托思乡怀亲、感念故国的情感，2014年中国邮政还与中国台湾地区邮政部门联合发行《鸿雁传书》主题特种邮票，呼应其文化寓意。</p>
+<h2 id="形态特征"><a class="header" href="#形态特征">形态特征</a></h2>
+<p>鸿雁雌雄相似。雄鸟上嘴基部有一疣状突，但雌鸟体型略小，两翅较短，嘴基疣状突亦不明显。成鸟从额基、头顶到后颈正中央暗棕褐色，额基与嘴之间有一条棕白色细纹，将嘴和额截然分开。头侧、颏和喉淡棕褐色，嘴裂基部有两条棕褐色颚纹。背、肩、腰、翅上覆羽和三级飞羽暗灰褐色，羽缘较淡或较白，形成明显的白色斑纹或横纹。尾上覆羽暗灰褐色，但最长的尾上覆羽纯白色，尾羽灰褐色。前颈和颈侧白色，前颈下部和胸肉桂色，向后逐渐变淡，到下腹则全为白色。尾下覆羽亦为白色，两胁暗褐色，具棕白色羽端；翼下覆羽及腋羽暗灰色。嘴黑色，虹膜红褐色或金黄色，跗蹠橙黄色或肉红色。</p>
+<p>幼鸟全身被以绒羽，额和两颊淡黄；眼周及眼先灰褐；额基无白色狭纹围绕着；上体灰褐，羽轴黄色；下体亦黄色，向后渐淡。嘴黑色，上、下嘴尖端淡黄色，上嘴基部无白纹。虹膜淡黄色。</p>
+<h2 id="栖息环境"><a class="header" href="#栖息环境">栖息环境</a></h2>
+<p>鸿雁主要栖息于开阔平原和平原草地上的湖泊、水塘、河流、沼泽及其附近地区，特别是平原上湖泊附近水生植物茂密的地方，有时亦出现在山地平原和河谷地区。冬季则多栖息在大的湖泊、水库、海滨、河口和海湾及其附近草地和农田。在换羽或幼鸟没有飞行能力时，多在河、湖、水库的水域或芦苇丛中活动，遇惊扰时向深水或芦苇中游去。</p>
+<h2 id="分布范围"><a class="header" href="#分布范围">分布范围</a></h2>
+<h3 id="世界"><a class="header" href="#世界">世界</a></h3>
+<p>在国外，主要繁殖于西伯利亚南部及萨哈林岛（库页岛）；越冬在朝鲜和日本。</p>
+<h3 id="中国"><a class="header" href="#中国">中国</a></h3>
+<p>在中国主要繁殖在东北西北部呼伦贝尔盟、北部齐齐哈尔；迁徙经东北南部，内蒙古中部包头；新疆北部阿尔泰山山脉、西部天山，青海柴达木盆地，河北，河南，山东青岛；越冬在长江中、下游，南至福建及广东东南沿海一带；偶见于台湾。</p>
+<h2 id="生活习性"><a class="header" href="#生活习性">生活习性</a></h2>
+<h3 id="食性"><a class="header" href="#食性">食性</a></h3>
+<p>鸿雁主要以各种草本植物的叶、芽、包括陆生植物和水生植物、芦苇、藻类等植物性食物为食，也吃少量甲壳类和软体动物等动物性食物，特别是繁殖季节。冬季也常到偏远的农田、麦地、豆地觅食农作物。觅食多在傍晚和夜间。通常天一黑即成群飞往觅食地，清晨才返回湖泊或江河中休息和游泳，有时也在岸边草地上或沙滩上休息。</p>
+<h3 id="迁徙"><a class="header" href="#迁徙">迁徙</a></h3>
+<p>鸿雁每年9月下旬至10月末即开始大量从繁殖地迁往越冬地，有的早在9月初至9月中旬即开始迁徙。迁徙时常集成数十、数百、甚至上千只的大群。1993年10月末至11月初，曾在吉林省白城地区见到一群多达500多只的鸿雁迁徙群。迁徙是逐步分批进行的，从9月下旬一直持续到10月末至11月初。据在吉林省西部草原的观察，常常是迁走一批再来一批，每批的迁离与迁来，常与气候的突然变冷有关。每当寒潮来临，停留的鸿雁突然迁走，不久另一批又迁来。春季迁徙出现在3月中旬至4月末，持续约一个多月。但春季迁徙群明显较秋季小，通常十几只至几十只，截止到1983年4月最多一次是在珲春见到110只。</p>
+<h3 id="活动"><a class="header" href="#活动">活动</a></h3>
+<p>鸿雁性喜结群，常成群活动，多为30-50只的小群。在繁殖地喜欢在积水洼地旁及路边采食和体息，会逐渐分散成6-8只的小群进行活动，飞行时颈前伸，脚贴于腹下，常排成“一”字或“人”字型，速度较缓慢。</p>
+<h3 id="防御"><a class="header" href="#防御">防御</a></h3>
+<p>鸿雁警惕性强，行动极为谨慎小心，休息时群中常有几只“哨鸟”站在较高的地方引颈观望，如有人走近，则一声高叫，随即而飞，其他鸟也立刻起飞。飞行时颈向前伸直，脚贴在腹下，一个接着一个，排列极整齐，成“一”字或“人”字形，速度缓慢，徐徐向前。边飞边叫，声音洪亮、清晰、单声，但拖得较长，似“嗯-嗯-”声，数里外亦可听见。</p>
+<h3 id="换羽"><a class="header" href="#换羽">换羽</a></h3>
+<p>鸿雁的换羽期是每年的6、7月份，持续将近一个月左右时间。对于鸿雁来说，换羽期是它们最危险的时期。因为换羽时它们的羽毛几乎同时全部脱下，在这段时间里它们丧失了飞翔能力，人兽很容易就能捕捉到它们。所以换羽时本来警惕性极高的雁群大多集中在人兽难以靠近的地方，以确保本身的安全。</p>
+<h2 id="生长繁殖"><a class="header" href="#生长繁殖">生长繁殖</a></h2>
+<h3 id="交配"><a class="header" href="#交配">交配</a></h3>
+<p>鸿雁4月中旬开始发情交配，先是雄雁头颈伸缩呈S型运动并不断左右摇摆，渐渐走近雌雁，同时伴有鸣叫声。当雌雁对此产生反应后，雄雁即将头颈伸宜，张开双翅追逐雌雁，赶上后用嘴啄住雌雁枕部羽毛，爬上其背进行交配，时间在1分钟左右。交配时雄鸟开始张开，雌鸟开始鸣叫同时雌雄鸟都伸长脖子，两翅半张交配后开始营巢。</p>
+<h3 id="筑巢"><a class="header" href="#筑巢">筑巢</a></h3>
+<p>鸿雁常成对营巢繁殖。巢多筑在草原湖泊岸边沼泽地上或芦苇丛中，亦有在靠近山地的河流岸边营巢的。营巢地方通常植物茂密，环境偏僻，难以进入，很少在开阔而又裸露的荒漠平原上营巢。巢材为干芦苇和干草，巢中心呈凹陷状，内垫以细软的禾本科植物、干草和绒羽。巢较松散，隐蔽性一般。在人为干扰小的地区,有沿用旧巢的习性。</p>
+<h3 id="繁殖"><a class="header" href="#繁殖">繁殖</a></h3>
+<p>鸿雁繁殖在西伯利亚和中国东北。繁殖期4-6月。3月末4月初迁入中国东北繁殖地。繁殖对的形成多在迁徙途中和进入繁殖地后，也有部分在越冬地即已形成。</p>
+<h3 id="产卵"><a class="header" href="#产卵">产卵</a></h3>
+<p>营巢完毕后产卵，每日1枚，窝卵数4-9枚，以6-7枚者居多。卵平均重131克，大小约为77-89毫米×51-60毫米，初产卵白色，椭圆型、孵化后逐渐变成棕色。卵数量产满后孵卵，白天全部由雌性负责，不离巢，不换孵，而雄性多集成数只一群在河边或洼地处采食，在巢边很难发现。孵卵过程中，雌雁时常翻卵和更换方向，也常将嘴插入巢中休息，但非常警觉，稍有动静便抬头四处张望，孵化期28-30天。</p>
+<h3 id="育雏"><a class="header" href="#育雏">育雏</a></h3>
+<p>雏鸟孵出后，由双亲带领着游水，或在湖边沙滩和草地上休息和觅食。发现危险，双亲中一只发出惊叫，同时护送小鸟隐蔽于附近草丛中或游至远处。换羽期开始后成鸟离开幼鸟，集中在湖泊、海滨、河岸等人迹罕至之处换羽。时间在6月中下旬至7月中旬，换羽时飞羽几乎同时脱下，在一定时间内丧失飞翔能力。幼鸟2-3年性成熟。</p>
+<h2 id="人工养殖"><a class="header" href="#人工养殖">人工养殖</a></h2>
+<h3 id="引种"><a class="header" href="#引种">引种</a></h3>
+<p>在野生动物管理部门准许的条件下，野外收集种蛋、活捕雏雁或成雁都能组建种群。</p>
+<p>收集种蛋组群法：根据季节， 巢中卵的数量、温度和巢中成雁惊飞时的状态可初步确定卵的生物期状态。通过照蛋和收集到种卵的日期推算， 基本上可以确定孵化状态， 然后采用孵鹅法继续孵化即可孵化出雁雏。育雏温度、湿度、光照、饲料、饮水等条件要求同育鹅条件一致。</p>
+<p>捕捉幼雁引种法：在集中出雏的6月上旬, 可以捕获到雏雁, 根据毛色和个体大小, 基本确定日龄后采用不同对待方式驯养。活捕成雁组群法。利用每年7月中旬至8月中旬鸿雁换羽季节, 在适宜地域, 可捕获引种。</p>
+<h3 id="场地"><a class="header" href="#场地">场地</a></h3>
+<p>根据野生鸿雁生物学特性，其饲养场选建在农田排水沟边，排水沟为其自然水上运动场。在沟岸干燥、平坦的陆地部分建造背风、向阳的半开方式雁舍和具向排水沟—侧倾斜的缓坡陆地运动场。种用雁采取放养与地面平养舍饲相结合，即夏季主要利用水草丰盛的自然条件，以放牧为主，适当补饲；冬天，气候寒冷，牧草枯竭，故除游水外，主要由人工提供适宜环境条件舍饲。</p>
+<h3 id="繁殖-1"><a class="header" href="#繁殖-1">繁殖</a></h3>
+<p>鸿雁性成熟晚。种雁平均开产日龄为266天，具有明显的繁殖季节性和极强抱性。母雁产蛋期一般在每年秋末至次年春末，以每年4~5月份为产蛋高峰期。每间隔2-3天产1枚蛋，每产4~6枚卵便开始做窝。鸿雁在圈养条件下，平均寿命通常为20年，截止2014年，人工饲养的鸿雁寿命最长可达40年。为适应鸿雁水中交配陆上产蛋的繁殖习性，人工养殖时设有一定面积和深度的水域，是确保发挥其生产性能的必要条件之一。集约养殖鸿雁，在其繁殖季节还应采取有效的醒抱措施，以提高产蛋性能。</p>
+<h3 id="培育"><a class="header" href="#培育">培育</a></h3>
+<p>鸿雁机孵温度37.2-38℃，湿度为58%-68%，孵化期约30天。刚出壳的鸿雁为身着灰色绒羽的早成鸟。一般出壳6-12个小时即可开食，先喂给清洁的饮水，24小时后教其觅食，将切碎的青菜叶撒在雏雁身上，让其他雏雁觅食。几只会觅食的会带动群体觅食。2-3天后将菜叶放在盆中，再加少量的玉米粉或粉料，粉料中适当拌有矿物质和维生素。</p>
+<h3 id="防疫"><a class="header" href="#防疫">防疫</a></h3>
+<p>雏雁出生7天左右注射小鹅瘟疫苗，0.4mL/只，3周左右可根据情况在饲料中拌入适量土霉素、痢特灵以及磺胶类、氟哌酸等药物，用以预防禽霍乱等疾病的发生，每隔10-15天将大蒜切碎放入饮水中，连喂5天，停10-30天。每周定期对养殖场地、用具等用百毒杀、高锰酸钾等进行喷雾消毒。在管理上，要严防外来病原的带入，不让市场上的禽类、疫区或带病的动物进入养殖场，杜绝对外开放参观，必要进入时需严格消毒后方可进入，防止传染病发生。</p>
+<h2 id="保护现状"><a class="header" href="#保护现状">保护现状</a></h2>
+<h3 id="保护级别"><a class="header" href="#保护级别">保护级别</a></h3>
+<ul>
+<li>2023年7月18日，鸿雁被列入《世界自然保护联盟濒危物种红色名录》(IUCN)——濒危(EN)物种。</li>
+<li>2021年，鸿雁被列入《国家重点保护野生动物名录》，为二级保护动物。</li>
+<li>2020年，鸿雁被列入中国《有重要生态、科学、社会价值的陆生野生动物名录》。</li>
+<li>2025年3月，该物种已被调出《浙江省重点保护陆生野生动物名录》。</li>
+</ul>
+<h3 id="种群现状"><a class="header" href="#种群现状">种群现状</a></h3>
+<p>鸿雁曾经拥有很大的种群数量，60年代以前估计种群数量在10万只以上，但近20多年来种群数量明显下降，已成为濒危(EN)物种。根据世界自然保护联盟红色名录显示，鸿雁的全球种群数量约为6-9万只。</p>
+<h3 id="濒危原因"><a class="header" href="#濒危原因">濒危原因</a></h3>
+<h4 id="滥捕滥猎"><a class="header" href="#滥捕滥猎">滥捕滥猎</a></h4>
+<p>鸿雁体型大，且肉嫩味美，是中国20世纪50年代重要的狩猎鸟类。鸿雁羽绒又是十分理想的填充材料，可用于羽绒服加工等。飞羽可作为装饰品或制成工艺品，具有一定的经济意义，所以对鸿雁的捕猎一直屡禁不止。</p>
+<h4 id="食物来源减少"><a class="header" href="#食物来源减少">食物来源减少</a></h4>
+<p>湿地附近工业生产、矿业开发和旅游开发产生的工业和生活垃圾在没有得到恰当处理的情况下排放到湿地中，导致水域污染日益严重，也直接影响了渔业生产能力，更是长期威胁到当地有限的淡水资源，使鸿雁食物来源减少，觅食困难。</p>
+<h4 id="栖息地破坏"><a class="header" href="#栖息地破坏">栖息地破坏</a></h4>
+<p>不合理的水利工程修建，使湿地水源遭到破坏而使湿地萎缩，或者改变湖泊原有的水位线使原本适宜鸿雁生存的湿地被淹没。</p>
+<h4 id="地区性干旱"><a class="header" href="#地区性干旱">地区性干旱</a></h4>
+<p>由于受气候暖干化的影响，鸿雁主要繁殖分布区域降雨量减少，造成部分湿地呈萎缩状态，不少湖泊由于水位过浅，周边芦苇沼泽干枯，直接影响鸿雁的繁殖种群。</p>
+<h3 id="保护措施"><a class="header" href="#保护措施">保护措施</a></h3>
+<p>2020年，国家林草局发布了《关于规范禁食野生动物分类管理范围的通知》，对鸿雁禁止以食用为目的的养殖活动，除适量保留种源等特殊情形外，引导养殖户停止养殖。</p>
+<p>在各省建立的自然保护区中，有鸿雁分布的自然保护区共计68个，其中37个国家级自然保护区，28个省级自然保护区，3个市级自然保护区。</p>
+<p>中国已经加入了《生物多样性公约》(CBD)、《濒危野生动植物种国际贸易公约》(CITES)和《关于特别是作为水禽栖息地的国际重要湿地公约》，并先后与日本、澳大利亚、韩国、俄罗斯和新西兰签署了双边候鸟保护协定，加入了东亚——澳洲迁徙水鸟保护合作伙伴关系(EAAFP)，并通过建设自然保护区、加强栖息地维护巡护与野外救护、打击盗猎及非法贸易、积极开展跨国保护合作等措施，扎实推进野生动物迁徙物种的种群及其栖息地保护工作。</p>
+<h2 id="主要价值"><a class="header" href="#主要价值">主要价值</a></h2>
+<h3 id="生态价值"><a class="header" href="#生态价值">生态价值</a></h3>
+<p>鸿雁在觅食过程中，喜欢在浅水中或松软的泥滩上挖掘食物，会将一些直立茎植物连根拔起，不仅为新的草籽发芽和生长提供了空气、水分和空间，也为浅水生草类增加了阳光照射。</p>
+<h3 id="经济价值"><a class="header" href="#经济价值">经济价值</a></h3>
+<p>鸿雁已被列为中国二级保护动物，但由其驯化而来的家鹅，则作为重要的经济动物被广泛饲养。中国鹅各地方品种中，除伊犁鹅外，其他品种均由鸿雁驯化后，经漫长的选育历程进化而来。</p>
+<h3 id="科学价值"><a class="header" href="#科学价值">科学价值</a></h3>
+<p>为了降低无人机集群控制的复杂度，高效解决大规模无人机集群控制和长距离飞行时集群变拓扑问题，设计了一种仿鸿雁群编队的无人机集群自主协同控制方法，借鉴自然界中的鸿雁编队行为机制，开发了面向无人机平台的分布式仿生集群控制系统。鸿雁是一种常见的集群鸟类，其在迁徙途中表现的自组网和编队变拓扑行为与无人机集群飞行有极高的相似性。仿鸿雁编队行为机制的无人机集群飞行验证系统采用了低成本四旋翼无人机，利用无线局域网进行组网通信.外场飞行试验结果表明，自然界中的鸿雁编队行为机制有助于无人机集群的快速精准编队控制，实现了无人机的位置实时变拓扑，提高了无人机集群飞行的鲁棒性。</p>
+<h3 id="药用价值"><a class="header" href="#药用价值">药用价值</a></h3>
+<p>鸿雁为中国保护二级动物，需合法合规，禁止滥捕。鸿雁肉及脂肪具有药用价值，在《千金·食治》《日华子》《本草求真》等书中都有与药性及功能主治相关的记载，鸿雁肉及脂肪药性为味甘，性平。其中鸿雁肉具有祛风，舒筋壮骨的功能，主治诸风麻木不仁，筋脉拘挛，半身不遂。鸿雁脂肪具有益气补虚，活血舒筋的功能，主治中风偏枯，手足拘挛，腰脚痿弱，耳聋，脱发，结热胸痞，疮痈肿毒。</p>
+<h2 id="其他内容"><a class="header" href="#其他内容">其他内容</a></h2>
+<h3 id="发现记录"><a class="header" href="#发现记录">发现记录</a></h3>
+<p>2022年8月，青海省林草局在全省鸟类保护管理新闻发布会上公布，国家二级重点保护野生动物鸿雁为青海有记录但无影像记录的鸟种。</p>
+<p>2025年11月，鸿雁现身湖南衡山萱洲国家湿地公园。</p>
+<h3 id="相关文化"><a class="header" href="#相关文化">相关文化</a></h3>
+<h4 id="书信"><a class="header" href="#书信">书信</a></h4>
+<p>古人以鸿雁代书信，有所谓“雁帛”“雁书”“雁足”等。史载，汉武帝时苏武出使匈奴，被拘禁后威武不屈，徙居北海牧羊十九年。后以雁足系帛书，告知汉室自己的处境，终于得归故国。由此，人们就将书信与来去有时的鸿雁联系了起来。唐王勃《采莲曲》诗有云：“不惜西津交配解，还羞北海雁书还。”元王实甫《西厢记》亦云：“自别颜范，鸿稀鳞绝，悲怆不胜。”便是借鸿雁代书信。</p>
+<h4 id="诗词"><a class="header" href="#诗词">诗词</a></h4>
+<p>在中国古代诗词中，鸿雁具有丰富的象征意义，如借鸿雁表达思乡怀亲之情，谢榛的《秋日怀弟》中就有“遥想故园挥涕泪，况闻寒雁下江湖”的句子，除此之外，鸿雁还有怀念故国的意思，例如庾信的《重别周尚书》中也有“阳关万里道，不见一人归。唯有河边雁，秋来南向飞”的句子。</p>
+<h4 id="邮票"><a class="header" href="#邮票">邮票</a></h4>
+<p>中国邮政的徽志就是一只鸿雁。“鸿雁”是书信的代称，有时亦代指邮递员。为加强海峡两岸邮政、集邮合作与交流，2014年5月中国邮政和台湾邮政部门特别各以《鸿雁传书》为主题发行特种邮票1枚。</p>
+<h4 id="声乐"><a class="header" href="#声乐">声乐</a></h4>
+<p>声乐作品《鸿雁》是音乐家吕燕卫先生在2009年创作并收录的一首声乐作品，该作品采用了五声调式作为歌曲的旋律调性，以其独特的艺术魅力，成为深受人们喜爱的一首经典歌曲。作品发表后，受到了广大音乐爱好者的追捧。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../milupark/han-lu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../animal/Peafowl.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../milupark/han-lu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../animal/Peafowl.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

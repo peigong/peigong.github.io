@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>清代，乾隆御笔《鹿角记》图卷 - 南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">南海子麋鹿苑 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/lu-jiao-ji-tu-juan.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="清代乾隆御笔鹿角记图卷"><a class="header" href="#清代乾隆御笔鹿角记图卷">清代，乾隆御笔《鹿角记》图卷</a></h1>
+<blockquote>
+<p>参考：<a href="https://weibo.com/ttarticle/p/show?id=2309404375042560544460">清代，乾隆御笔《鹿角记》图卷</a></p>
+</blockquote>
+<p>​​在南海子麋鹿苑的展室中，有一只特殊的鹿角放在玻璃罩中向游人展示。走近前仔细观看，在麋角主干上刻有密密麻麻的小字。这就是刻有乾隆皇帝御笔《麋角解说》的那只弥足珍贵的麋鹿角。</p>
+<p>发现这只麋鹿角的是我国著名的环保社会活动家、环保作家，曾任原国家环保总局特聘环境使者，《大自然》杂志创办者唐锡阳先生。唐先生当时还在自然博物馆工作。有一年，他在整理一批原为清代故宫收藏的形形色色的各种鹿角时，发现了这只与众不同的鹿角。它不像珊瑚般的驯鹿角，也不像手掌似的驼鹿角，又不像树枝般的马鹿角，还不像矛戟般的梅花鹿角，更不像鸡爪似的白唇鹿角。唐先生注意到，这只鹿角，没有一般鹿额前用来角斗的眉叉，而呈多回二叉分岐状，角的主干分前后一样高的两只。唐先生将这只鹿角尖朝下，柄朝上，倒置在平地上，果真屹立不倒。这是我国民间用角来鉴定麋鹿的最简单的方法。也就在这时，唐先生才发现麋角主干的腹面，隐现着一片蝇头汉字。拂拭掉上面的封尘，就露出了嵌涂着石绿的楷书，是一篇题为《麋角解说》的手记，下款署的是：“乾隆三十二年岁在丁亥仲冬日上浣御制”。</p>
+<p>乾隆三十二年(1767)的冬天，天气已经很冷。乾隆皇帝结束了塞外木兰围场的巡狩围猎，返驾回到北京皇宫。刚过冬至开始数九，御花园已是冰封雪盖，天寒地冻。乾隆穿上御寒长袍，披上獭领裘皮斗篷，在御花园的甬路上踏雪散步，脚下发出扑哧扑哧的响声。乾隆喜欢这种有节奏的声响，认为这样有利于思考问题。在康熙、雍正、乾隆三位清代帝王中，后人曾对他们作过这样的评价：康熙善管理、雍正善革新、乾隆善学习。这不无道理。乾隆一生博览群书、勤于思考，是个求知欲甚强的皇帝。他读书善解，从不死背硬记。他曾说，死读书，读死书，读书读死不如不读书，并善于在读书的过程中发现问题。比如当他看到《养吉斋丛录》中称“南苑亦称南海子，在京师二十里”时，感觉不对，就差人进行了实际丈量，结果得出：永定门距南海子北红门为十二里，即在《御制入北红门小猎即事诗》中作了勘正：“出城十里到红门”。又如，乾隆发现明代书籍中均称南海子围墙为“一百六十里”，他又表示怀疑。即派人进行实际丈量，结果海子围墙实际长度为“一万九千二百九十二丈九尺”，折合约一百二十里。立即给予纠正。再有就是乾隆对《日下旧闻考》中所称南海子“水泉七十二处”之说表示质疑，就又派专人进行详细勘查，结果又得出了不同的结论：“则团河之泉指数者九十有四，一亩泉亦也有二十三泉，较旧数殆赢其半，稗野无微大率类是。”也就是说，南海子水泉当时共有一百一十七处，几乎多出一倍。这些都表明，乾隆皇帝对读书、求知、求真是多么严谨。</p>
+<p>乾隆在御花园继续边踏雪边思考着，他突然想起在南海子鹿圈放养的被称为“麈”的麋鹿会不会就是仲冬月解角呢？想到这儿，他立即传御前侍卫王福，让他速骑马至南海子鹿圈，看看那里放养的麋鹿是不是在解角。不久，王福从南海子回来了，手里还拿着一只刚刚脱落的麋鹿角，向乾隆禀报道：“回皇上，南海子那里的麋鹿正在解角，有的麋鹿两只角都掉了，有的还刚脱落一只，正歪着头乱蹦呢。”说完，把捡回的一只麋鹿角双手奉上。乾隆接过麋鹿角，看罢“乃爽然自失”，不禁感叹道：“唉，世人把麈当麋，而朕呢？则更错误，竟然不知道还有冬天解角的鹿，事物就是这样不容易摸透啊！”。于是立即铺纸挥毫，写了这篇《麋角解说》，以纠正自己的过错。文中写道：“壬午为鹿角记，既辨明鹿与麋皆解角于夏不于冬。然月令既有其言而未究其故，常耿耿焉。昨过冬至，陡忆南苑有谓麈者或解角于冬，亦未可知。遣人视之，则正值其候，有已　　落地者，有尚在脑骨或双落其一者，持其已解者以归。乃爽然自失曰：‘天下之理不易穷，而物不易格，有如是乎？使不悉麈之解角于冬，将谓月令遂误而不知吾之误，更有甚月令者矣……”</p>
+<p>乾隆写完《麋角解说》一文，便命人将此文镌刻在刚检回的那只麋鹿角上，才有了我们今天在南海子麋鹿苑展览室所见到的这只弥足珍贵的麋鹿角。</p>
+<p>冬季脱角是麋鹿的一种独特现象。早已引起古人的注意和联想，他们用阴阳二气进行解释，如《尔雅翼》载：“……麋是阴兽，情淫而游泽，冬至得阳气而解角，从阴退象。”这种描述虽有些玄奥，但确含有深刻的道理。古人知道夏至节气后，昼短夜长的日子开始，意味着日温逐渐减少，古称“阳退”之象。冬至节气后，又开始了昼长夜短的日子，意味着日温逐渐增加，故称“阴退”之象。而麋鹿恰好在冬至节气解角，成了象征这个时令转折点的指示动物。</p>
+<p>麋鹿是中国特有的鹿种，由于它角似鹿非鹿、头似马非马、蹄似牛非牛、尾似驴非驴，故被民间俗称为“四不像”。世界上鹿的种类众多，麋鹿古代也称麈，常被世人与驼鹿、驯鹿、马鹿相混淆。这一点，就连自称鹿之乡的“北人”乾隆也未完全搞清楚，幸好他知错即改，有自知之明，才未乱下御旨。这虽是一件小事儿，但足以证明乾隆皇帝确实是一位治学严谨的君王。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/story-of-qianlong-lu-jiao.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../reference/dong-zhi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/story-of-qianlong-lu-jiao.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../reference/dong-zhi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
