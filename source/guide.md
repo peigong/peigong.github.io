@@ -40,6 +40,7 @@ title: 导游笔记
 - [中国科学技术馆](./guide/cstm)
 - [北京天文馆](./guide/bjp) - [古观象台](./guide/AncientObservatory)
 - [‌中国工艺美术馆](./guide/gmfyg)
+- [北京未来科技馆](./guide/bjfstm)
 - [保利艺术博物馆](./guide/polyartmuseum)
 - [中国电影博物馆](./guide/cnfm)
 - [中国农业博物馆](./guide/ciae)
