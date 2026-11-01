@@ -2,7 +2,7 @@
 
 - [概况简介](./README.md)
 - [讲解提纲](./note.md)
-- [宋庆龄故居]()
+- [宋庆龄故居](./Former-Residence-Of-Song-Qingling.md)
 - [醇亲王府]()
 - [梅兰芳故居]()
 - [郭沫若故居]()
@@ -11,3 +11,5 @@
 - [关岳庙]()
 - [烟袋斜街]()
 - [银锭桥]()
+- [相关人物]()
+    - [宋庆龄](./celebrities/Song-Qingling.md)

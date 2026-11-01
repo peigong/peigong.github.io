@@ -78,3 +78,6 @@
     - [简仪上应该是正方案，还是地平式日晷？](./reference/AI/zheng-fang-an-or-sundial.md)
     - [航海天文历和航海钟](./reference/AI/Nautical-Almanac-and-Marine-Chronometer.md)
     - [六分仪](./reference/AI/sextant.md)
+    - [数学符号的历史](./reference/AI/symbol.md)
+    - [欧几里德范式](./reference/AI/Euclid.md)
+    - [数学公理化](./reference/AI/axiomatization.md)
