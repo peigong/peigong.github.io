@@ -1,0 +1,12 @@
+{
+  "name": "bjsc",
+  "version": "1.0.0",
+  "description": "北京科学中心",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdbook clean & mdbook build"
+  }
+}
