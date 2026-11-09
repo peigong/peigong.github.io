@@ -18,6 +18,7 @@
     - [花本](./f1/hua-ben.md)
     - [花楼机](./f1/Flowers-floor-machine.md)
     - [雅卡尔提花机](./f1/Jacquard-machine.md)
+    - [九章算术]()
     - [日晷]()
     - [圭表]()
     - [观星台]()
