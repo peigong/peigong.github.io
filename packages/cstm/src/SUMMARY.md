@@ -33,4 +33,5 @@
     - [升力式再入](./f4/lift-reentry.md)
     - [卡门线](./f4/Kármán-line.md)
 - [参考资料]()
+    - [蔡伦古法造纸](./reference/cai-lun-zao-zhi.md)
     - [为什么长征火箭商业发射里更容易露出问题？](./reference/AI/cz-bussiness.md)
