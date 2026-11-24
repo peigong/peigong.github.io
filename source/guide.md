@@ -41,6 +41,7 @@ title: 导游笔记
 - [北京天文馆](./guide/bjp) - [古观象台](./guide/AncientObservatory)
 - [‌中国工艺美术馆](./guide/gmfyg)
 - [保利艺术博物馆](./guide/polyartmuseum)
+- [北京汽车博物馆](./guide/automuseum)
 - [中国电影博物馆](./guide/cnfm)
 - [中国农业博物馆](./guide/ciae)
 - [中国钱币博物馆](./guide/cnm)
