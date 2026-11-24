@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>电报的历史 - 北京未来科技馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京未来科技馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/referrence/AI/history-of-telegraph.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="电报的历史"><a class="header" href="#电报的历史">电报的历史</a></h1>
+<p>电报的历史，不只是“发明了一台机器”的故事，而是人类第一次把信息从交通工具上剥离出来——消息不再跟着马、船、火车走，而是跟着电流走。它同时是世界史里“全球化基础设施”的起点，也是中国近代史里“被动开国—主动自强”的缩影。下面按世界与中国两条线，系统梳理其渊源与沿革。</p>
+<h2 id="一概念先厘清什么是电报"><a class="header" href="#一概念先厘清什么是电报">一、概念先厘清：什么是“电报”</a></h2>
+<p>“telegraph”源自希腊语 tele（远）+ graphein（书写），字面即“远距离书写”。</p>
+<p>广义：任何把信息编码后远距离传递的系统，包括18世纪法国的光学信号塔；</p>
+<p>狭义（通常所指）：19世纪以后利用电流通断（有线）或电磁波（无线）传递编码信息的电通信。</p>
+<p>核心三要素始终没变：</p>
+<p>编码（文字→点划/数字/电码）</p>
+<p>传输（导线/电缆/空中电波）</p>
+<p>解码（接收端还原为文字）</p>
+<p>这套“编码—传输—解码”范式，是今天所有数字通信的祖先。</p>
+<h2 id="二世界电报史从光学塔到全球神经网"><a class="header" href="#二世界电报史从光学塔到全球神经网">二、世界电报史：从光学塔到全球神经网</a></h2>
+<ol>
+<li>前奏：光学电报（18世纪末—19世纪初）</li>
+</ol>
+<p>在电之前，人类先试过“用眼睛传信”：</p>
+<p>1790年代，法国查普兄弟（Chappe）发明光学信号塔系统，用机械臂摆出不同角度代表字符；</p>
+<p>1793年起在法国本土铺开，鼎盛时约556座站点，拿破仑时代用于军情调度；</p>
+<p>瓶颈明显：夜间、雾天、远距离都失效，且要沿途建塔。</p>
+<p>光学电报证明了“信息可以比人跑得快”，但真正突破要靠电。</p>
+<ol start="2">
+<li>电磁学突破与电报诞生（1820—1844）</li>
+</ol>
+<p>理论铺垫：</p>
+<p>1820年 奥斯特发现电流产生磁场；</p>
+<p>1820s—1830s 安培、法拉第等人建立电磁学基础；</p>
+<p>1800年 伏打电堆让稳定电流可得。</p>
+<p>两条并行发明线：</p>
+<p>① 英国线：库克 + 惠斯通（1837）</p>
+<p>1837年获专利的五针式电报机，靠指针偏转指向字母表；</p>
+<p>首先用在铁路（大西方铁路，13英里），解决列车调度；</p>
+<p>优势是直观，劣势是设备复杂、耗线多。</p>
+<p>② 美国线：莫尔斯 + 维尔（1832—1844）</p>
+<p>画家莫尔斯受旅途中电学讨论启发，1837年做出单线电报机原型；</p>
+<p>助手阿尔弗雷德·维尔设计莫尔斯电码：点（·）划（−）组合表示字母数字，变长编码，高频字母最短（E=·，T=−）；</p>
+<p>1843年美国国会拨3万美元，建华盛顿—巴尔的摩64公里线路；</p>
+<p>1844年5月24日，莫尔斯发出首封电报：“What hath God wrought”（上帝创造了何等的奇迹）。</p>
+<p>💡 莫尔斯方案最后胜出，不是因为“更正确”，而是因为更简单、更省线、更易扩展——单线、单键、单码。</p>
+<ol start="3">
+<li>有线电报狂飙（1840s—1860s）</li>
+</ol>
+<p>1845年英国用电报抓逃犯托维尔，第一次展示“信息速度&gt;逃犯速度”；</p>
+<p>美国1861年建成横贯大陆电报线，驿马快信（Pony Express）仅跑18个月就失业；</p>
+<p>1850年首条英吉利海峡海底电缆；</p>
+<p>1858年首条跨大西洋电缆勉强通了几条电文即报废；</p>
+<p>1866年“大东方号”铺成稳定跨大西洋电缆，欧美进入“小时级通信”时代；</p>
+<p>到1902年环太平洋电缆连通，地球被电流“缠”了一圈。</p>
+<p>配套技术同步进化：</p>
+<p>继电器（中途放大信号）→ 今天光纤放大器、基站中继的祖先；</p>
+<p>双工/多工：同一条线双向同时发；</p>
+<p>博多码（Baudot）：5单位定长码，比莫尔斯更适合机器自动收发。</p>
+<ol start="4">
+<li>无线电报：把“线”剪掉（1890s—1910s）</li>
+</ol>
+<p>麦克斯韦预言电磁波，赫兹实验证实；</p>
+<p>特斯拉1893年公开展示无线通信用；</p>
+<p>马可尼1896年成功收发无线电报，1899跨英吉利海峡，1901跨大西洋；</p>
+<p>电报从此能上船、上岛、上战场。</p>
+<p>标志性事件：1912年泰坦尼克号用无线电报呼救，SOS（···———···）成为国际遇险码。莫尔斯电码从此带上了“生命线”属性。</p>
+<ol start="5">
+<li>20世纪：专业化、自动化、边缘化</li>
+</ol>
+<p>一战二战：电报是军队指挥、外交密电、情报战的核心（恩尼格玛机等密码机由此而生）；</p>
+<p>1920s起电话分流民用；</p>
+<p>电传（Telex）、用户电报、自动转报系统让报务员逐渐被机器替代；</p>
+<p>1960s—1980s：电报网数字化，变成数据通信的一种应用；</p>
+<p>传真、Email、手机短信依次接管文字通信；</p>
+<p>各国陆续停办：美国西部联盟2006停公众电报，印度2013停，德国2022停。</p>
+<ol start="6">
+<li>电报留下的“技术基因”</li>
+</ol>
+<p>编码思想：变长码、定长码、纠错码 → 今天ASCII、Unicode、5G极化码的精神祖先；</p>
+<p>中继思想：信号衰减就“半路重生” → 光纤放大器、移动基站；</p>
+<p>协议思想：1865年《国际电报公约》成立国际电报联盟（今ITU），定下互联、资费、差错重传规则；</p>
+<p>职业基因：报务员是最早的“通信运维工程师”。</p>
+<h2 id="三中国电报史从奇技到自强工程"><a class="header" href="#三中国电报史从奇技到自强工程">三、中国电报史：从“奇技”到“自强工程”</a></h2>
+<p>中国的情况比西方复杂：不是自然生长，而是先被外商线网刺穿，再被迫自建，最后用汉字编码反攻。</p>
+<ol>
+<li>传入前：驿传体系的极限</li>
+</ol>
+<p>清代通信靠驿站、塘汛、急递铺，信息速度=马速。</p>
+<p>北京到广州公文往返常以月计；</p>
+<p>1860年代第二次鸦片战争、1866年伊犁交涉中，曾纪泽从彼得堡发电报到上海只要片刻，上海到北京快马还要10天——这种“最后一公里”的尴尬，倒逼朝廷接受电报。</p>
+<p>最早把电报概念带回中国的是福州人林鍼（1849年《西海纪游草》），当时叫“巧驿”“急邮”。</p>
+<ol start="2">
+<li>外商强行登陆（1871）</li>
+</ol>
+<p>1865年国际电报联盟成立，全球线网向东方延伸；</p>
+<p>1871年4月，丹麦大北电报公司（Great Northern Telegraph Co.）把香港—上海、长崎—上海海缆引到长江口，擅自沿黄浦江引入上海租界，在南京路12号设报房，6月3日营业；</p>
+<p>清政府曾禁止“登陆”，但大北公司打擦边球从海上引线，租界治外法权保护下既成事实；</p>
+<p>随后大东（英）、太平洋（美）等公司加入，上海形成以外商为主的国际电报枢纽，中国通信主权受损。</p>
+<p>⚠️ 中国近代电信的起点，是“被连线”，不是“主动发明”。</p>
+<ol start="3">
+<li>自主尝试与第一条自建线（1870s）</li>
+</ol>
+<p>1873年 华侨王承荣、王斌研制出中国第一台国产电报机，未被清政府采纳；</p>
+<p>1875年 丁日昌在福建船政学堂附设电报学堂（中国第一所电报学校）；</p>
+<p>1877年10月 丁日昌在台湾建成台南—旗后（高雄）线，约95华里，是中国人自己修、自己管的第一条电报线；</p>
+<p>1879年 李鸿章在天津—大沽—北塘架军用电线，用于防务，中国大陆自主电报由此起步。</p>
+<ol start="4">
+<li>电报总局与全国干线（1880—1890s）</li>
+</ol>
+<p>1880年 李鸿章奏设津沪电报总局，盛宣怀任总办；</p>
+<p>1881年建成津沪线，全长3075华里，设紫竹林、大沽、清江浦、济宁、镇江、苏州、上海等分局；</p>
+<p>1881年12月28日正式开放公众电报，中国自主公众电信事业开局；</p>
+<p>1884年总局迁上海，改称“中国电报总局”；</p>
+<p>随后向苏浙闽粤、鄂川延伸，清末全国线路达数万公里，1911年约5万公里；</p>
+<p>1887年刘铭传主持敷设福州—淡水闽台海缆（433里），中国第一条自建海底电缆；</p>
+<p>1888年再建川石—淡水、安平—澎湖水线。</p>
+<p>这段建设伴随强烈战略动机：中俄交涉、中法战争、甲午前后，“军报神速”被李鸿章视为“自古用兵未有之利”。</p>
+<ol start="5">
+<li>关键创新：四码电报（汉字上链的解决方案）</li>
+</ol>
+<p>莫尔斯码只覆盖拉丁字母，几千汉字没法直接拍发。这是中国近代通信最漂亮的“协议层创新”：</p>
+<p>1873年 大北公司法国人威基杰（S.A. Viguer）参照《康熙字典》部首，选6800余汉字，用四位数字代表一个汉字，编《电报新书》；</p>
+<p>后来郑观应改编为《中国电报新编》，形成通用“四码电报”；</p>
+<p>“中”=0022，“国”=0948，报务员背码本抄收，相当于最早的汉字输入法，比电脑汉字编码早近百年。</p>
+<p>意义有三层：</p>
+<p>在别人的物理线路上，中国人自己定义了“汉字编码层”；</p>
+<p>把表意文字塞进数字系统，绕开拼音前提；</p>
+<p>电码本至今在港澳证件姓名转写中残留使用。</p>
+<ol start="6">
+<li>民国到新中国：从电报到数据网</li>
+</ol>
+<p>民国时期电报网继续扩展，但战乱中干线屡毁屡建；</p>
+<p>1928年中共在上海建秘密电台，苏区/解放区用无线电报组网；</p>
+<p>1950年代建北京电报大楼，全国长途电报网恢复；</p>
+<p>1960—90年代：从人工撕纸条转发 → 电传机 → 程控自动转报；</p>
+<p>1980上海64路自动转报；</p>
+<p>1984年256路；</p>
+<p>1990年省会城市全部自动转报；</p>
+<p>1980年代后，电话、传真、寻呼、手机依次分流；</p>
+<p>2017年北京电报大楼营业厅停业；2025年杭州停办，大陆仅余北京个别窗口保留仪式性服务。</p>
+<h2 id="四电报如何改变两个维度"><a class="header" href="#四电报如何改变两个维度">四、电报如何改变两个维度</a></h2>
+<ol>
+<li>时间观的重构</li>
+</ol>
+<p>前电报时代：消息有“地理时差”，北京知道广州的事要以旬计；</p>
+<p>电报时代：“瞬时性”出现，新闻、行情、军令同步化；</p>
+<p>克里米亚战争（1850s）是首场“有战地电稿”的战争；路透社靠电报起家。</p>
+<ol start="2">
+<li>国家与主权的新边界</li>
+</ol>
+<p>中国感受特别深：海缆是“看不见的租界”；</p>
+<p>盛宣怀、李鸿章办电报总局，本质是用技术回收主权；</p>
+<p>电报线延伸到哪里，中央政权对边疆（台湾、新疆、东北）的控制就延伸到哪里。</p>
+<ol start="3">
+<li>语言与制度的适配</li>
+</ol>
+<p>西方：字母→点划，天然低熵；</p>
+<p>中国：汉字→四码，多一层映射，却保住了表意系统不被拼音化；</p>
+<p>这背后是“标准制定权”的争夺。</p>
+<h2 id="五沿革总脉络一图式时间轴"><a class="header" href="#五沿革总脉络一图式时间轴">五、沿革总脉络（一图式时间轴）</a></h2>
+<h3 id="世界"><a class="header" href="#世界">世界</a></h3>
+<p>光学电报(1790s) → 电磁电报 库克/惠斯通·莫尔斯(1837-1844) → 大陆网+跨洋海缆(1850-1902) → 无线电报 马可尼(1896-1901) → 电传/自动转报(1920s-1970s) → 数字化与被替代(1980s后)</p>
+<h3 id="中国"><a class="header" href="#中国">中国</a></h3>
+<p>驿传(传统) → 外商海缆强行登陆(1871) → 台湾自建线(1877)·津沪军线(1879) → 电报总局+津沪公众线(1880-1881) → 全国干线+四码电报(1880s-清末) → 电传自动化(1950s-1990s) → 退场(2017后)</p>
+<h2 id="六为什么电报死了却没消失"><a class="header" href="#六为什么电报死了却没消失">六、为什么电报“死”了，却没“消失”</a></h2>
+<p>电报作为业务消失了，但它的方法论全在：</p>
+<p>你手机里的每个字，都是“莫尔斯变长码 → ASCII/Unicode”这条谱系的子孙；</p>
+<p>每根光纤里的放大器，都是“继电器”的徒子徒孙；</p>
+<p>每次跨国视频通话遵守的频谱与协议规则，源头是1865年那纸《国际电报公约》。</p>
+<p>它把人类训练成一种新物种：相信看不见的电流能替我们说话。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../celebrities/Charles-Kuen-Kao.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../referrence/AI/Photosynthesis-in-the-Nobel-prize.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../celebrities/Charles-Kuen-Kao.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../referrence/AI/Photosynthesis-in-the-Nobel-prize.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

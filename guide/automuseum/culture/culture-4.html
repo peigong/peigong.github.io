@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第二汽车制造厂建设记忆 - 北京汽车博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京汽车博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/culture/culture-4.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第二汽车制造厂建设记忆"><a class="header" href="#第二汽车制造厂建设记忆">第二汽车制造厂建设记忆</a></h1>
+<p>在中国汽车工业的发展历程中，第二汽车制造厂（以下简称“二汽”）是我国第一座完全依靠自己的力量，设计制造的现代化大型汽车厂。十堰这座城市也刻下了汽车工业的历史烙印，数十座不同代号的专业厂成为二汽发展的独特印记。二汽与共和国共同成长，回顾二汽成长的年轮，犹如翻阅我国工业、经济、社会发展的历史，今天让我们一起打开这段尘封的记忆。</p>
+<h2 id="选址几上几下最终落户十堰"><a class="header" href="#选址几上几下最终落户十堰">选址几上几下，最终落户十堰</a></h2>
+<p>1952年底，在一汽建设方案确定之后，毛泽东同志就作出了“要建设第二汽车厂”的构想。1953年，第一机械工业部（以下简称“一机部”）在武汉成立了第二汽车制造厂筹备处。然而，从构想变成现实，却历经十多年的艰难抉择。20世纪60年代中期，由于国际形势变化和国防需要，中央决定在中西部实施“三线建设”，开展大规模的工业、交通、国防基础设施建设。1964年，国家的经济形势略有好转，建设“二汽”又一次提上中央议事日程。在制定第三个五年计划时，毛泽东同志再次提出建设第二汽车制造厂。一机部又正式向中央打报告，建设一个能生产1至8吨载重汽车的生产基地，并决定由饶斌、齐抗主持筹建工作。7月，一机部向中央和周恩来同志报告了《第二汽车厂建设方案》。</p>
+<p>作为筹建二汽五人领导小组成员之一的陈祖涛说“为了二汽的物资运输，我们必须跟铁路和水路。川汉铁路曾有5大方案，每个又有许多小方案，各有优缺点。今年二汽一直跟他们跑，跟得紧、盯住快，铁路走哪里，我们便跟，甚至比铁路选线人马还要早去。”1964年冬，一机部基建局组织人员从湖南的沅江经吉首到四川的秀山一路踏勘，随后饶斌又带队到湖南重点踏勘了湘西地区。1965年7月，齐杭带队三下湖南，调查了沅陵、泸溪、辰溪三县。11月，一机部部长段君毅得知中央决定将原计划经湖南的川汉线改在湖北境内建襄渝线，建议把二汽厂址改至鄂西北武当山一带，并向正在四川考察的邓小平同志汇报，随后得到中央认可。</p>
+<p>1965年12月21日，原中国汽车工业公司成立二汽筹备处，饶斌、齐抗、李子政、张庆梓、陈祖涛五人组成领导小组。1966年10月10日，中共湖北省省委正式任命五人小组组成“第二汽车制造厂筹备处”领导小组。随后，筹建工作在工厂建设和产品开发两条战线上全面展开。</p>
+<p>1966年10月7日，一机部在老营召开了设计方案审查现场会(简称“老营会议”)。老营方案报经党中央和国务院批准，二汽厂址最终确定在十堰。老营会议提出适应我国情况，生产世界上一流的中国式汽车产品，创造中国式的汽车工业发展道路。</p>
+<p>1968年11月19日，周恩来总理批示：“二汽厂址可以确定在湖北郧县十堰地区进行建设。”同年12月4日，国家计委、国家建委批准二汽建设方案，生产纲领10万辆。1969年1月9日，根据国务院指示，一机部、武汉军区在十堰地区召开了二汽建设现场会议，全国106个单位的代表参加会议。会议宣布，经武汉军区批准成立二汽建设总指挥部，确定了总体布置方案，安排了建设总进度。下半年，十万建设大军陆续进入十堰。9月，二汽大规模施工建设的序幕正式拉开。</p>
+<h2 id="筚路蓝缕拓荒者山沟建车城"><a class="header" href="#筚路蓝缕拓荒者山沟建车城">筚路蓝缕，拓荒者山沟建车城</a></h2>
+<p>在二汽开始建设前，十堰就只有这一条街，人家不足百户，小商铺几家，现代工业一片空白。国家建设二汽的动员发出后，来自全国各地的建设大军，怀抱着振兴中国汽车工业的梦想，肩负着祖国人民的希望，汇集到十堰。马灯、扁担、草鞋、芦席棚等成为拓荒者艰难创业的真实写照。</p>
+<p>国务院原副总理李岚清同志回忆起二汽建设的岁月，“记得第一次来到十堰时，除了长途汽车站以外，几乎看不到像样的房子，那些绵延不断的山沟里，只有一些星星点点的破旧土墙茅屋，根本没有硬面道路，下雨后更是泥泞难行。生活在山沟里的农民，使用古老的农具在一小块地上耕作，用辛苦和汗水换取他们赖以生存的口粮。有一次我看到山沟里的农民，光着身体用大木锤一锤一锤地榨取桐油，桐油像眼泪样一滴一滴地滴进陶罐里。这些原始农耕和深度贫困的景象，至今仍记忆犹新。这说明当年建设二汽是何等艰辛。”原二汽第二任厂长黄正夏在《艰难的历程》中回忆了当时的生活条件：“没有蔬菜吃，只有靠外面运，但对十几万建设大军来说，运输来的菜只是杯水车薪，大多数人都没有菜吃，只能以红薯叶、秆为菜。”</p>
+<p>参加二汽通用铸锻厂筹建的孙家炳回忆“1969年1月，二汽建设指挥部将通用铸锻厂列为先上马的重点，要求提前建成投产，以便为二汽全面开工建设提供条件。”“在那时，有条件要上，没有条件创造条件也要上。芦席棚、干打垒、马灯，那些让我们饱受创业艰辛的时刻，也让我们变得更加坚强，更有力量。那时的我们不只有青春、有热情、有热血，也有很多智慧，用各种土办法战胜了很多难以想象的困难。”他们只是众多奋战者的缩影之一。</p>
+<p>1969年，二汽大规模建设开始。同年，十堰市成立，由郧阳专署领导。二汽创业之初，十堰镇还未通电，建设者们便在夜晚挂上一盏盏马灯，没有宿舍就搭芦席棚。就是在这样的环境中，建设者们挥洒血汗，开天辟地。一条山沟一个厂，当时为了保密，27个工厂都以代号命名，厂区分布在东西长32千米，南北宽8.5千米的20多条山沟里。后来在工厂设计和建设过程中，二汽的厂区范围、厂区总体布置和工厂组成几经调整，直到70年代后期形成24个专业厂（其中6个后方厂）布置在二汽基地，3个专业厂分别布置在襄樊、均县的格局。</p>
+<h2 id="包建聚宝自力更生搞建设"><a class="header" href="#包建聚宝自力更生搞建设">包建、聚宝，自力更生搞建设</a></h2>
+<p>二汽筹办初，五人领导小组在广泛听取各方面意见和实地调研后，针对当时的国情和生产水平，制定了《第二汽车制造厂建厂方针十四条》，1967年被一机部批准。“十四条”主要归纳为三个方面：一是从国情出发，瞄准国际先进技术，自力更生，立足国内，使二汽达到现代化企业水平；二是产品要实现多品种、系列化；三是按专业化分工要求，替代综合性“大而全”建厂模式。在建厂策略上，创造性地提出“包建”和“聚宝”的办法。</p>
+<p>饶斌结合国内经济建设“全国一盘棋”的总体思考，提出了按照汽车的总成分工，由国内的汽车厂家分别“包建”。每一个负责包建的单位“依样画葫芦”，基本照着原样再建设一个厂。要求包建单位实行包设计、包生产准备、包人员培训、包生产调试。在包建任务中，一汽包建了主机厂、总装厂、发动机厂等11个分厂，上海包建了标准件厂、钢板弹簧厂等6个分厂，北京包建了化油机厂，武汉包建了轴瓦厂。靠这个做法，二汽在十堰的21条山沟里建设了包括发动机、车架、车桥、传动轴、底盘、车厢、铸造、锻造等在内的27个专业厂。据统计，各包建厂为二汽设计制造非标设备820台，第一套工装21000多套。全国140余家企业、研究院所、大专院校为二汽提供40多项科技成果。600多个企业、科研单位和大专院校为二汽生产2万多台设备。各包建厂还为二汽输送了技术干部、管理干部和技术工人一万多人，培训新工人2万余人，这支队伍构成了二汽的基本力量。</p>
+<p>1982年出版的《聚宝——二汽采用全国“四新”技术概况》中记载：二汽在建设中一个突出的特点是用“聚宝”的方法，广泛采用了新工艺、新技术、新设备、新材料，取百家之长，把一汽以及全国机械行业和科研单位的先进技术和科研成果，经过试验，移植到二汽生产建设上来。全厂先后共采用新工艺53项，新材料14项，共有设备2万余台，其中新设备1000多种共4000余台。全厂500多条生产线中有117自动化生产线，包括冷加工自动线57条，热加工和特种工艺自动线60条……为了补充我国机械行业不足，也实事求是地适当引进一些国际先进装备，约占设备总数的百分之一，如1.2万吨锻压自动线等。</p>
+<p>在二汽建设过程中，“包建”与“聚宝”互相结合、共同作用，使我国的机械制造水平向前跨了一大步。</p>
+<h2 id="全力以赴把失去的时间抢回来"><a class="header" href="#全力以赴把失去的时间抢回来">全力以赴，把失去的时间抢回来</a></h2>
+<p>在特定的历史时期，二汽在建设过程中受到严重干扰，靠二汽自身已经难以扭转。1973年国务院原副总理李先念同志多次召集有关部委与二汽代表商讨。7月主持召开“二汽质量问题座谈会”。8月3日，李先念同志再次听汇报，国家计委、一机部，以及相关部委也直接参与解决问题，这次会议授予饶斌同志“尚方宝剑”，明确了饶斌为二汽现场建设的主要负责人，全权领导二汽建设，成为二汽历史上一次具有转折意义的会议。</p>
+<p>饶斌主持工作后，立即按照工厂的生产管理体系组建了二汽生产指挥管理系统。在“扩大初步设计”的基础上，开展了“产品、设备、工程质量”三攻关。为了把失去的时间抢回来，饶斌创造性地组织了“大会战”，二汽干部职工意气风发、艰苦奋斗，集中力量突击完成了“设备攻关调试大会战”“工程质量返修大会战”“饮水工程大会战”等，集中解决了二汽生产建设中的卡脖子问题。</p>
+<p>1975年4月，在离二汽预期建成投产日期只有两个多月，二汽最后的一个车间——发动机厂取力箱车间尚未开工建设。国务院原副总理李岚清同志在回忆二汽建成投产的最后一次“会战”：“当时为了把车间抢上去，土建、安装和我们三家在一起制定了联合作战的日进度计划……会战开始后，工地上立即出现一派火红的景象。5月5日开始吊装，机运公司只用了一天时间就将两个24米的厂房柱子立起来了，土建部门只用了45天的时间就完成了厂房的主体工程和地坪。安装部门为了配合抢打地坪，只用了一天的时间就铺好了地管线。这里雨水较多，群众豪迈地提出了三个‘当’：即黑天当白天，雨天当晴天，一天当两天，并且确确实实实现了他们的保证。有时大雨倾盆，还是坚持施工。有一天午夜，我们到工地，职工同志们仍冒着大雨在继续施工。工人同志们豪情满怀地说‘大雨倾盆算个啥，只当汗水湿衣衫，提前建成‘两吨半’（当时越野车的俚称），顶风冒雨也心甘’。那种奋不顾身的冲天干劲，常使我们非常感动。”</p>
+<h2 id="历尽艰难完成二汽产品开发"><a class="header" href="#历尽艰难完成二汽产品开发">历尽艰难，完成二汽产品开发</a></h2>
+<p>从1965年至1967年，二汽先后试制出2吨军用越野汽车和3.5吨民用载货汽车，但都基于部队需求进行了调整。1968年，一机部通知二汽成立临时产品组。1968年国家计委、建委批准二汽产品两个系列，一是2.5吨越野汽车及同系列5吨载货汽车，二是3.5吨越野车。1969年3月，一机部发文，调整二汽产品品种和生产纲领为年产EQ240型2.5吨越野车25000辆，EQ140型5吨载货车55000辆，EQ245型3.5吨越野车20000辆。</p>
+<p>从1968年至1975年，二汽的第一个车型EQ240越野汽车的开发历经8年，先后试制5轮24辆样车，道路试验累计40余万公里，产品性能不断提高。1975年6月15日，EQ240定型并投入生产。在饶斌、黄正夏等同志的领导下，1975年7月1日，二汽一期工程建成，举行“庆祝2.5吨越野车生产能力投产大会”,基本建成东风牌EQ240型2.5吨越野车批量生产能力。</p>
+<p>在1968-1978年这个特定的历史时期，在一汽的支援下，二汽产品设计、试制、试验人员，克服重重困难，经过11年的反复设计、试制、试验，终于完成了3个基本车型的开发，达到最后定型和批量投产的目标。</p>
+<h2 id="军民结合走改革之路"><a class="header" href="#军民结合走改革之路">军民结合，走改革之路</a></h2>
+<p>上个世纪70年代后期，虽然二汽建成投产，但依然连年亏损。二汽建设的首要任务是生产军用越野车,EQ240型2.5吨军用越野车订货量每年不足1000辆，导致军车产能闲置，而5吨民用车生产能力还未建成。当时，每年都需要向国家申请“计划亏损”补贴。1978年，国家核定二汽“计划亏损”3200万元，成为“湖北省和一机部系统最大的亏损户”。</p>
+<p>如何闯过难关，实现扭亏为盈？黄正夏带领二汽走向“军品转民品”的道路。当时在EQ240的基础上研发民用产品EQ140型5吨民用载重卡车在1977年基本研制成功，汽车专家孟少农于1977年底调到二汽任副厂长、总工程师。孟少农带着技术队伍对产品进行摸底，从1969年到1977年共进行5轮强化道路试验，最终还剩64项小质量问题。1978年1月，黄正夏领导二汽“背水一战”，边改进、边进行生产准备。根据试验中暴露的问题，他们制订了64项质量攻关计划，进行质量大会战。</p>
+<p>1978年3月，二汽党委作出“力争在本年内结束吃基建饭，扭亏为盈”的决策，提出“保质量、上能力、争超产、扭亏损”的口号，并开展了“大打提高产品质量的翻身仗、大打建设5吨民用载重车生产能力的翻身仗、大打全年生产5000辆5吨载重车的翻身仗、大打甩掉亏损帽子的翻身仗”等活动。1978年7月15日，东风EQ140型5吨民用载重车建成部分生产能力，全厂上下十分振奋。在大家的艰辛努力下，1978年二汽实现了扭亏为盈。至此，二汽开始大批量生产，从1979年到1985年，每年均以1万辆左右的速度持续增长。</p>
+<p>1978年底，在对越自卫反击战中，1000辆EQ240型越野汽车和1000辆EQ140型载货汽车开赴前线，深得部队好评，被誉为“英雄车”“功臣车”。</p>
+<h2 id="解放思想自筹续建再辉煌"><a class="header" href="#解放思想自筹续建再辉煌">解放思想，自筹续建再辉煌</a></h2>
+<p>1979年下半年由于财政困难，国民经济开始调整。国务院将二汽列为“停建、缓建项目”。在这一严峻形势面前，二汽向国务院提出了“量入为出，自筹资金，续建二汽”的报告，1980年3月22日，国务院“关于批准二汽续建”的文件正式下发。从1980年至1985年，二汽在确保上缴国家全部利润的前提下，自筹资金3.3亿元，用于完善5吨车能力、建设电厂、三吨半越野车，扩建铸造厂、技术中心等项目，完成了续建和更新。</p>
+<p>1981年4月，二汽以“东风”系列产品为纽带，组建了跨部门、跨省区的“东风汽车工业联营公司”，打破了我国汽车“品种单一”“各自为战”“小而全”的格局，发展了“东风”系列产品。1980年7月22日，邓小平同志视察二汽时说：“你们组建跨省区的联合公司，这是保护竞争，促进联合，应当这样搞。不这样搞，不能打破‘小而全’。二汽这样的大厂应当作为中心，带动几个省搞专业厂协作，把专业公司组织起来。办什么事都要从全局考虑，才对国家有利。机械工业要进入市场，就要竞争、比较，落后的机器就应淘汰。淘汰落后的就是节约。”</p>
+<p>1982年底，东风汽车联营公司已生产出各种专用车13类50余种。1986年，二汽建成了年产10万辆汽车的生产能力。二汽生产的东风牌汽车红遍大江南北。</p>
+<h2 id="改革创新东风汽车快速发展"><a class="header" href="#改革创新东风汽车快速发展">改革创新，东风汽车快速发展</a></h2>
+<p>1992年二汽更名为东风汽车公司。进入90年代，随着我国由计划经济向市场经济的过渡和转型，二汽也面临着新的考验，进行了体制改革，初步建立起了适应社会主义市场经济的现代企业制度。进入新世纪，东风汽车步入发展快车道。今天的东风汽车集团已成为了世界五百强企业，也成为了一家具有全球影响力的大型国有汽车集团。</p>
+<p>二汽作为当时国内规模最大的汽车生产基地，是中国人民依靠自己力量，以举国之力发展汽车工业的成功实践。“二汽的建设是中国人民特有的艰苦奋斗、自力更生和光荣传统的精神——完全依靠自己的双手亲自创造出来的伟大成果。”走得再远都不能忘记历史的路，回眸二汽建设历史，其背后折射出的精神品格引人深思。</p>
+<h2 id="参考文献"><a class="header" href="#参考文献">参考文献</a></h2>
+<ol>
+<li>《中国汽车工业史》编委会.中国汽车工业史[M].北京：人民交通出版社，1996.7</li>
+<li>李学诗.二汽选址历时十四年[J].武汉文史资料，2010年第4期</li>
+<li>十堰市档案馆.第二汽车制造厂十堰发展始末[J].档案故事，2016.4.14</li>
+<li>支德瑜.二汽筹建史料片段[J].汽车商业评论，2013.3</li>
+<li>陈光祖.中国汽车工业的泰斗饶斌——二汽年代[J].汽车与配件，2003</li>
+<li>徐秉金、欧阳敏.中国汽车史话[M].北京：机械工业出版社，2017.8</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../culture/culture-3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../culture/culture-5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../culture/culture-3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../culture/culture-5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

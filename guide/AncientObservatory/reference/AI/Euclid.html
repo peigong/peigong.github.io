@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>欧几里德范式 - 古观象台 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">古观象台 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/AI/Euclid.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="欧几里德范式"><a class="header" href="#欧几里德范式">欧几里德范式</a></h1>
+<p>“欧几里得范式”不是一句“用公理推定理”能概括的。它其实包含两个层次：一是《几何原本》那套具体的几何体系；二是更深层的方法论原型——从少量不证自明的起点出发，用纯逻辑搭起整座知识大厦。下面按“渊源—定型—危机—重构—遗产”五段，把它的来龙去脉系统讲清楚。</p>
+<h2 id="一渊源希腊理性主义的必然产物前6世纪前3世纪"><a class="header" href="#一渊源希腊理性主义的必然产物前6世纪前3世纪">一、渊源：希腊理性主义的必然产物（前6世纪—前3世纪）</a></h2>
+<p>欧几里得不是凭空冒出来的。在他之前，希腊人用三个世纪把数学从“测算技艺”改造成“演绎科学”。</p>
+<ol>
+<li>泰勒斯：把“证明”引入数学</li>
+</ol>
+<p>约前600年，泰勒斯第一次不再满足于“量出来是这样”，而是去证“为什么一定是这样”——对顶角相等、半圆上的圆周角是直角，都开始有论证。数学从此有了“可靠性”的追求。</p>
+<ol start="2">
+<li>毕达哥拉斯学派：从实物到抽象</li>
+</ol>
+<p>把数从计数对象提升为宇宙本原，发现不可公度量（√2 这类无理数）后，迫使希腊数学面对“直观会骗人”的问题，也催生了严格的比例理论需求。</p>
+<ol start="3">
+<li>智人学派与尺规传统</li>
+</ol>
+<p>化圆为方、倍立方、三等分角三大作图问题，把“只允许直尺圆规”变成几何金律——这其实是把规则前置，已经带有公理化味道。</p>
+<ol start="4">
+<li>柏拉图学派：抽象与训练理性</li>
+</ol>
+<p>柏拉图主张“不懂几何者不得入内”，把几何看成培养逻辑思维的路径而非实用工具。其弟子欧多克索斯用公理法建立比例论（解决不可公度量难题），《原本》第5卷基本直接继承他的工作；他还改进“穷竭法”，成为《原本》里处理面积体积的核心论证工具。</p>
+<ol start="5">
+<li>亚里士多德：给演绎装上逻辑引擎</li>
+</ol>
+<p>《分析篇》里系统化了三段论，提出“从最普遍、自明的真理出发推出结论”的知识理想。这是公理化方法的逻辑骨架——欧几里得后来做的，就是把这套逻辑骨架套到几何内容上。</p>
+<p>💡 一句话：到公元前4世纪末，材料（几何命题）齐了、逻辑工具（三段论）齐了、哲学动机（追求确定知识）也齐了，只差一个人来盖楼。</p>
+<h2 id="二定型几何原本把范式焊死约前300年"><a class="header" href="#二定型几何原本把范式焊死约前300年">二、定型：《几何原本》把范式焊死（约前300年）</a></h2>
+<p>欧几里得在亚历山大城完成《几何原本》，13卷、从23个定义、5条公设、5条公理出发，演绎出460余条命题，覆盖平面几何、立体几何、数论、比例论。</p>
+<p>《原本》的结构逻辑：</p>
+<p>层级 内容 作用
+定义 点、线、面、角… 给直观概念命名
+公设（5条） 仅限几何，如“过两点可作一直线” 几何专用起点
+公理（5条） 通用逻辑，如“等量加等量仍相等” 跨领域推理规则
+命题 逐层推导的定理与作图 知识体系本体</p>
+<p>欧几里得范式的四个内核特征：</p>
+<ol>
+<li>起点极少：少数不证自明的命题撑起全部。</li>
+<li>纯演绎：不靠测量，不靠权威，只靠逻辑。</li>
+<li>实体赋义：“点”“线”有具体直观含义，公理被认为描述真实空间的自明真理——这叫实质（实体）公理化。</li>
+<li>自明性假设：公理之所以是公理，是因为“理性一眼就能看见”。</li>
+</ol>
+<p>这套范式此后统治数学两千年，也成为牛顿力学、斯宾诺莎伦理学、近代科学理论建构的模板——先立公理，再推世界。</p>
+<p>但内部早有裂缝：</p>
+<ul>
+<li>定义依赖未定义词（用“长度”定义“线”之类）；</li>
+<li>证明中偷偷用图形直觉（两圆必相交、线必穿过图形，公理并没保证）；</li>
+<li>第五公设特别拗口，不像“自明真理”。</li>
+</ul>
+<h2 id="三危机第五公设撬动自明性神话前3世纪19世纪中"><a class="header" href="#三危机第五公设撬动自明性神话前3世纪19世纪中">三、危机：第五公设撬动“自明性”神话（前3世纪—19世纪中）</a></h2>
+<p>对第五公设（平行公设）的质疑，是欧几里得范式历史上最长的一次慢性危机。</p>
+<p>千年尝试（托勒密→普罗克洛斯→图西→萨凯里…）</p>
+<p>所有试图“用其他公理推出第五公设”的努力全部失败。失败本身在释放信号：它可能独立于其他公理。</p>
+<p>关键转折——从“证明它”到“替换它”：</p>
+<ul>
+<li>罗巴切夫斯基（1829起）、鲍耶（1830前后）、高斯（生前未发表）：保留前四条公设，把第五公设换成“过直线外一点可作多条平行线”，推出一套完全自洽的双曲几何，三角形内角和小于180°。</li>
+<li>黎曼（1854）：更彻底，连“直线可无限延伸”都弱化，得到椭圆几何——没有平行线，所有直线终会相交，三角形内角和大于180°。</li>
+</ul>
+<p>哲学冲击是颠覆性的：</p>
+<p>三套几何互相矛盾，却各自无矛盾。那“公理是自明真理”就不成立了——公理只是可选择的假设。
+非欧几何把欧几里得范式从“描述唯一真实空间”降级为“约定一套规则，看能长出什么结构”。这是范式第一次被从内部动摇。</p>
+<p>📌 补充：非欧几何直到贝尔特拉米（1868）、克莱因（1871）、庞加莱构造出具体模型后才被普遍接受——逻辑自洽还得“看得见的解释”背书。</p>
+<h2 id="四重构希尔伯特把范式彻底形式化1899"><a class="header" href="#四重构希尔伯特把范式彻底形式化1899">四、重构：希尔伯特把范式彻底形式化（1899）</a></h2>
+<p>1899年希尔伯特《几何基础》出版，是欧几里得范式的第二次诞生。</p>
+<p>他对《原本》做了三处根本手术：</p>
+<ol>
+<li>原始概念不再定义</li>
+</ol>
+<p>“点、线、面”不做自然语言定义，只作为未解释符号。希尔伯特那句名言：“可以用桌子、椅子、啤酒杯代替点线面。”它们的意义完全由公理隐含规定——这叫隐定义。</p>
+<ol start="2">
+<li>公理分组、补齐隐藏假设</li>
+</ol>
+<p>五组共约20条公理：</p>
+<ul>
+<li>关联公理（点线面如何结合）</li>
+<li>顺序公理（“在…之间”，含帕施公理）</li>
+<li>合同公理（线段、角相等）</li>
+<li>连续公理（阿基米德+完备性）</li>
+<li>平行公理</li>
+</ul>
+<p>原来欧几里得“看图默认”的步骤（两圆必交、线必穿出图形），现在都有公理兜底。</p>
+<ol start="3">
+<li>提出元数学三标准</li>
+</ol>
+<p>一个公理系统要接受三个外部审视：</p>
+<ul>
+<li>相容性（无矛盾）</li>
+<li>独立性（每条不能从其他推出，比如平行公理独立）</li>
+<li>完备性（所有命题可判定）</li>
+</ul>
+<p>这标志着实质公理化 → 形式公理化的跃迁：</p>
+<p>维度 欧几里得 希尔伯特
+概念来源 先定义，再谈公理 公理定义概念（逆向）
+公理身份 自明真理 形式假设
+对象绑定 物理空间 可多模型解释
+系统自省 无 有（元理论）</p>
+<p>形式化之后，欧氏几何、罗氏几何、黎曼几何可以共享同一套“框架”，只是选不同平行公理——欧几里得范式反而被救回来，从“唯一真理”变成“可替换规则族中的一个”。</p>
+<h2 id="五遗产范式如何渗透进整个现代数学"><a class="header" href="#五遗产范式如何渗透进整个现代数学">五、遗产：范式如何渗透进整个现代数学</a></h2>
+<p>希尔伯特之后，欧几里得范式（已升级为形式公理化）扩散到全部数学分支：</p>
+<ul>
+<li>算术：皮亚诺公理（1889）</li>
+<li>集合论：ZFC（策梅洛—弗兰克尔+选择公理），成为现代数学事实底座</li>
+<li>分析：柯西、魏尔斯特拉斯用 ε-δ 把微积分严格化；柯尔莫哥洛夫用三条公理奠定概率论</li>
+<li>代数与拓扑：群、环、域、拓扑空间全用公理定义</li>
+<li>结构主义：布尔巴基学派（1939起）把数学统一为“代数/序/拓扑”三种母结构的组合</li>
+<li>机器时代：Coq、Lean 等证明助手把公理系统写成机器可校验的形式语言，欧几里得“纯演绎”理想以代码形态复活</li>
+</ul>
+<p>范式留下的三层深层遗产：</p>
+<ol>
+<li>知识组织方式：任何成熟学科都追求“公理—定义—定理”的清晰层级。</li>
+<li>真理观的转变：从“公理是真”到“公理是约定，系统只求无矛盾”。</li>
+<li>跨学科模板：物理学（相对论公设）、经济学（理性人假设）、逻辑学、甚至法学体系，都在借这个骨架。</li>
+</ol>
+<p>六、一条精简脉络</p>
+<p>泰勒斯（证明）
+→ 柏拉图/欧多克索斯（抽象+比例）
+→ 亚里士多德（三段论逻辑）
+→ 欧几里得《原本》（实质公理化定型）
+→ 千年第五公设危机
+→ 罗巴切夫斯基/黎曼（非欧几何，打破自明性）
+→ 希尔伯特《几何基础》（形式公理化）
+→ ZFC/证明论/结构主义/机器验证（现代范式）</p>
+<p>欧几里得范式的真正历史意义，不在于“点线面那套几何对不对”，而在于它第一次证明：人类可以把一整块知识，建立在可检查、可追问、可替换的底层约定之上。两千年里它经历过失真、危机、重构，但“从公理出发”这件事，再也没有被动摇过。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../reference/AI/symbol.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../reference/AI/axiomatization.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../reference/AI/symbol.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../reference/AI/axiomatization.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

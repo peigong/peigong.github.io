@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>凤凰涅槃：上海牌轿车的发展历程 - 北京汽车博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京汽车博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/collection/collection-7.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="凤凰涅槃上海牌轿车的发展历程"><a class="header" href="#凤凰涅槃上海牌轿车的发展历程">凤凰涅槃：上海牌轿车的发展历程</a></h1>
+<p>编者按：时光荏苒，陈列在博物馆的一辆辆老车，仿佛是时光的见证者，散发着独特的光芒，诉说着身后的故事。时代的印记，社会的变迁，幸福的记忆……都藏在那曾不停转动的车轮里。滚滚车轮记录了历史的轨迹，一辆辆老车承载了岁月的印记！</p>
+<p>让我们一起走进藏品，透过汽车看中国，看历史，看未来……一起重温那老车背后的峥嵘岁月，在时光穿越中感悟初心力量。</p>
+<p>“我至今都忘不了上世纪60年代，上海弄堂里每每有新娘子嫁过来的时候，一辆婚车——‘上海’牌轿车引起的轰动和羡慕……”这是上海作家殷慧芬在长篇小说《汽车城》中的文字，字里行间透出的是那个时代人们对于“老上海”的温馨记忆。很多老照片中，也记录了人们热衷于在不同年代的上海牌轿车前留影的画面。上海牌轿车在很长一段时间里是唯一量产化的国产轿车，也是距离人们生活最近的轿车。“北红旗、南上海”，这是人们曾对红旗和上海汽车的描述，展现了那个时代“老上海”在人们心中与众不同的位置。</p>
+<p>20世纪初，汽车在国内还属于舶来品，上海的街道上奔跑着各式各样的小汽车，被称为“万国汽车博览会”。上海汽车厂的前身是1915年开设于上海法租界的德商宝昌公司，1918归属英商利鯸汽车公司。至40年代末，上海市有20余家企业生产汽车配件。1949年新中国成立后，随着国民经济的恢复发展以及支援抗美援朝的需要，上海的汽车零部件行业迅速发展。上海解放后利鯸汽车公司由市军管会接管，改称军管利鯸汽车公司。后经数次重组，从官僚资本企业改造成全民所有制国营企业，并更名为上海交电站汽车装修厂（简称“上海汽车装修厂”），从此上海汽车工人有了自己的造车基地。1958年4月，划归上海市机电局动力机械制造公司，并由上海汽车装修厂更名上海汽车装配厂。</p>
+<p>1957年9月，上海汽车装修厂试制出上海第一辆越野车。同年12月，该厂与上海内燃机配件厂、上海汽车底盘厂共同协作，试制出上海第一辆三轮汽车，缓解了新中国当时对汽车的迫切需求，拉开了上海汽车工业从零配件制造发展到整车制造的序幕。</p>
+<p>北京汽车博物馆展示的上海58-Ⅰ型三轮汽车，这款车在上世纪六七十年代曾遍及全国各地，对缓解短途运输做出了贡献。</p>
+<h2 id="凤凰牌轿车诞生"><a class="header" href="#凤凰牌轿车诞生">“凤凰牌”轿车诞生</a></h2>
+<p>1958年，位于长春的第一汽车制造厂研制成功了第一辆国产轿车——东风牌小轿车，这一消息激发了全国人民的造车热情。当时的上海汽车装配厂决定设计试制轿车。同年5月，上海汽车装配厂成立了由厂长、工程技术人员和老工人组成的试制工作小组，开始试制轿车。第一辆轿车的试制，仿照上世纪五十年代欧美轿车的款式，采用承载式车身设计，发动机采用南京汽车厂的M-20型4缸50马力汽油机，后桥采用跃进-230型加以改制，车身依靠手工敲制而成。在试制车身的过程中，钣金师傅根据多年修理进口车的经验，自制了许多拷胎模。</p>
+<p>在协作厂的密切配合下，1958年9月28日，上海汽车装配厂第一辆轿车试制成功，人们为它取了一个响亮的名字——凤凰。车头立标为展翅欲飞的凤凰造型，与当时东风牌轿车车头的“金龙”立标遥相呼应，寓意“龙凤呈祥”。一位工人还写了一首题为《凤凰轿车出世了》的诗，刊登在当年10月8日的《新民晚报》上。凤凰牌轿车的诞生实现了上海轿车制造零的突破。这款凤凰牌小轿车便是上海牌轿车的前身。</p>
+<p>1959年2月15日，凤凰牌小轿车样车被送到了北京接受检阅，周恩来同志乘坐凤凰轿车后高兴地说：“中国人有志气，不容易，把中国的车造出来了！”但也指出了该车存在的品质问题。面对问题，上海汽车人没有气馁，而是展开了新一轮攻坚。</p>
+<h2 id="从模仿到自主设计"><a class="header" href="#从模仿到自主设计">从模仿到自主设计</a></h2>
+<p>1959年上半年，上海市动力机械制造公司应第一机械工业部汽车局要求开展新一轮轿车试制。上海市动力机械制造公司（上海汽车工业总公司前身）召集有关协作厂的领导和技术负责人员开会，进行选型论证。会议决定以当时国际先进车型为样车，进行第二轮试制。由上海内燃机配件厂试制发动机，上海郑兴泰汽车机件厂试制变速箱总成，上海汽车底盘厂试制底盘总成，上海汽车装配厂试制车身并总装，其他零部件分别由有关专业厂试制。通过生产大协作，第二轮试制的5辆样车于同年9月30日完成。</p>
+<p>新凤凰采用四轮独立悬挂结构，发动机由四缸改为六缸，功率提高到90马力。新一轮试制成功后，各厂用技术革新的办法，自力更生制造专用设备和工艺装备。1959年12月至1960年1月，第二轮试制的3辆轿车在杭州、无锡等地进行6000公里的道路试验，暴露了分电器、传动齿轮、凸轮及摇臂易磨损，前后悬挂螺旋弹簧变形，转向器游隙偏大等问题。</p>
+<p>1960年8月，上海汽车装配厂更名上海汽车制造厂，经过各方改进，又小批量生产凤凰牌轿车12辆，生产方式从手工操作发展到初步实现敲模和总装生产流水线。1965年，进行25000公里的长途试验。在此之后，由于经费问题，在总共生产了18辆后停产。</p>
+<p>1963年国民经济好转，经整顿技术工艺，补充装备，凤凰牌轿车恢复生产。1964年2月，上海市政府批准上海汽车制造厂轿车设计任务书，当年生产50辆。同时，“凤凰牌”更名为“上海牌”，该车型命名为上海牌SH760。</p>
+<p>1965年12月，第一机械工业部在北京召开上海牌和东方红牌轿车技术鉴定会。经检查，与会者一致认为上海牌轿车启动顺利、加速有力、操作灵活、高速稳定、乘坐舒适、外型完整，主要零部件基本可靠。至此，上海SH760轿车顺利通过了鉴定，该型轿车投入批量生产。</p>
+<p>作为上海牌的第一款车型，SH760的外形大方简洁，颜色明朗，车身主要以白色、黑色和淡蓝色为主，前脸运用了大量镀铬件进行装饰，采用颇为流行的圆筒式大灯，集合了当时的时尚元素。汽车内饰设计简洁为主，中控台设计简洁、规整，前三角窗可从内部用手柄控制开闭，将空气引入车内，宽厚的整体式座椅及高高的车顶后排可并排乘坐3人。SH760搭载一款型号为680的发动机，直列6缸，排量为2.2升，最大输出功率90马力，最高时速130公里/小时，百公里油耗约13升，采用后轮驱动、四轮独立悬挂。</p>
+<p>此外，“上海牌”轿车的标志极富特色，“在标志的文字中用图形和车轮相呼应，上海两个字中用一条横线贯穿,如同笔直的马路，整个文字看上去如同一辆优雅而随时待发的小轿车”。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collection/collection-6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../collection/collection-8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collection/collection-6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../collection/collection-8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

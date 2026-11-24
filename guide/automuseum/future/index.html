@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>未来馆 Hall of Futrue - 北京汽车博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京汽车博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/future/README.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="未来馆-hall-of-futrue"><a class="header" href="#未来馆-hall-of-futrue">未来馆 Hall of Futrue</a></h1>
+<h2 id="汽车之梦-automobile-dreams"><a class="header" href="#汽车之梦-automobile-dreams">汽车之梦 Automobile Dreams</a></h2>
+<p>未来源于创造，未来要靠我们的双手缔造。
+悬挂在你面前的这些小小方块，专门用来展示本馆举行的设计比赛的优秀作品。每一个车模都是一个美丽的未来汽车之梦，都是一道眺望未来的目光。如果人类没有梦想，世界就会黯然失色，生活就会停滞不前。亲爱的朋友，跟我们一起踏上汽车的梦想之旅吧！期待你的作品早日展示在这里，秀出你的精彩！分享你的成功！</p>
+<h2 id="汽车生活--auto-life"><a class="header" href="#汽车生活--auto-life">汽车生活  Auto Life</a></h2>
+<p>有人仅将汽车当做一种空间位移的工具，有人把汽车作为家的延伸，还有人将汽车视为家庭成员。汽车这种由诸多零部件结合而成的高价值耐用消费品，已经成为彰显品味和生活态度的动态载体，成为“第三生活空间”，被不同的人赋予不同的生命力。</p>
+<p>汽车生活方式带有社会和个人烙印。品味主义、尊贵主义、先锋主义、完美主义、进取主义、实用主义、激情主义、驾驭主义、商务主义和浪漫主义都是不同的汽车生活方式，代表着拥有不同生活态度的人群。</p>
+<p>汽车生活展区设有“汽车魅力”、“电影中的汽车”、“个性化汽车”三个主题。从汽车广告、汽车音乐、汽车电影和个性汽车等多方面诠释了汽车对我们生活的影响和改变。</p>
+<h3 id="汽车魅力"><a class="header" href="#汽车魅力">汽车魅力</a></h3>
+<p>汽车，使人类超越自身体能实现了自由移动的梦想；汽车，为人类文明发展装上了一日千里的轮子。它的点滴进步都给人类生活带来品质和体验的改变；它引发的现象渗透到生活的每个角落。</p>
+<p>汽车广告，调动了人们的购买欲望，激发了人们对未来的无限期待；汽车海报、书刊、展会传递了海量信息；汽车音乐，增添了生活的激情与浪漫。</p>
+<p>通信技术、智能技术等现代高新科技更是打破了人们对汽车的原有认知，赋予人们无限的想象和创造空间。汽车已不仅仅是一个代步工具，它还是一个娱乐终端，一个信息中心，一个多功能的私人移动空间。未来它还会给我们带来怎样的惊喜？让我们共同期待吧。</p>
+<h3 id="电影中的汽车"><a class="header" href="#电影中的汽车">电影中的汽车</a></h3>
+<p>汽车是电影中的名角，世界电影史上许多经典场面都离不开汽车。汽车成为很多著名电影的卖点，电影也提升了汽车品牌。蝙蝠车随着《蝙蝠侠》系列电影不断升级，《蝙蝠侠6》的海报就是蝙蝠车单轮冲天的神武形象；《007》系列等侦探或探险影片中，那些经特殊装备的汽车，与主人公一起出生入死、创造传奇；《疯狂TAXI》的热映使标致车销量猛增！在这里，多媒体和机械传动装置将为你模拟电影场景的真实气氛，快来尽情感受吧！</p>
+<h3 id="个性化汽车"><a class="header" href="#个性化汽车">个性化汽车</a></h3>
+<p>伴随着汽车需求的高速增长，城市道路上流动的汽车越来越多。个性化汽车需求让汽车不再是代步工具，人们希望通过自己的双手去改变爱车的外衣、内饰，动力，以期获得更为舒适、个性的驾乘感受。</p>
+<p>大众甲壳虫以“卡通可爱、小巧玲珑、与众不同以及不经意间无处不在”的形象深入人心；舒适实用的房车满足着人们户外活动中的衣食住行。在世界很多国家，改装是汽车个性文化的重要组成部分。那些改装后的房车、跑车特立独行，成为都市中炫目的风景。当然，如果一时无法大动干戈地改装你的爱车，也可以在车贴和饰品上动动脑筋，让爱车与众不同。</p>
+<h2 id="资源环境-resource--environment"><a class="header" href="#资源环境-resource--environment">资源环境 Resource &amp; Environment</a></h2>
+<p>与汽车文明相伴而生的是能源消耗、空气污染、交通拥堵、安全事故。有人预测，地球上的石油仅能用50年。长期以来，消耗石油的汽车一直在主动寻求改变；替代燃料、混合动力、电动车、氢动力，都有可能成为未来汽车的动力。排放二氧化碳和硫化物，使气候变暖、引发呼吸道疾病，汽车产业应承担起降低排放的责任。重金属、有机化合物、塑料等数百种材料制造的汽车，要积极寻求报废后循环再利用的渠道。交通拥堵吞噬时间，交通事故吞噬生命，寻求改变既依靠智能交通技术的发展，也依靠驾驶者良好的行车习惯。</p>
+<p>资源环境展区设有“能源消耗”、“污染排放”、“车辆报废”、“交通拥堵”、“安全事故”五个主题，展示汽车对人类生活及环境的负面影响，引发人们探索人与车、社会、自然和谐发展的途径。</p>
+<h2 id="创新未来-future-prospect"><a class="header" href="#创新未来-future-prospect">创新未来 Future Prospect</a></h2>
+<p>汽车技术的不断发展，给人们的生活带来了前所未有的舒适享受；同时，环保、能源、安全、交通等困境，也在前所未有地影响着人们的生活。怎样将这些不利影响降到最低限度或尽可能消解？时代的课题迫在眉睫。</p>
+<p>汽车源于创新，创新也将破解制约人类幸福和汽车发展的难题。开发新能源技术，改造配套环境，发展智能交通网络，增强安全意识，改变行为习惯，朝着更加安全、舒适的和谐汽车社会发展。</p>
+<p>创新未来展区设有“智能化交通”、“儿童驾驶学校”、“汽车回收再利用”、“新能源工作站”、“新材料实验室”、“未来汽车”六个主题，倡导人、车、社会、自然和谐发展的理念。</p>
+<h3 id="智能化交通"><a class="header" href="#智能化交通">智能化交通</a></h3>
+<p>“亲爱的听众朋友，你们好……”交通台主持人甜美的声音伴随着我们的日常生活。快来我们的“智能化交通”区客串主持人吧，你将体验到智能交通的神通。</p>
+<p>当前，汽车产业正在发生动力和信息的变革。电子信息技术的发展，使越来越多的车辆加装了车载信息系统，物联网的发展使车与车、车与道路、单车与指挥中心之间实现实时沟通指日可待，这将构成未来城市的智能化交通体系。指挥中心可随时了解各路面情况，你所驾驶的汽车说不定也会成为一个信息和娱乐的中心！</p>
+<h3 id="儿童驾驶学校"><a class="header" href="#儿童驾驶学校">儿童驾驶学校</a></h3>
+<p>不良的驾驶习惯给人们的生命财产造成了巨大的伤害，也成为一个社会痼疾。改变人们的不良行为习惯，增强公民的社会责任意识是当务之急。</p>
+<p>寓教于乐，提高人们特别是小朋友们的交通安全意识是我们的目标之一。“儿童驾驶学校”将枯燥的交通安全知识转化为生动有趣的小游戏，帮助小朋友熟悉交通标识、学习自我保护，培养小朋友从小养成良好的行为习惯以及作为地球公民的责任意识，这比学会驾驶汽车更为重要。</p>
+<h3 id="汽车回收再利用"><a class="header" href="#汽车回收再利用">汽车回收再利用	</a></h3>
+<p>汽车超高的产量和消费量，使报废汽车与日俱增，挤占着人类的生存空间。其实，汽车上的钢铁、有色材料类零部件90％以上可以回收利用，玻璃、塑料等回收利用率也可达50％以上；经处理后，这些零部件仍有很高的使用价值。目前，德国汽车回收率已接近100％；法国、美国等国家报废汽车的再利用率也已达到95％，日本汽车报废回收业分工细致，职责明晰。随着对环保认识的不断深入，我国的汽车回收再利用问题也提上了日程。</p>
+<p>关注汽车的回收再利用，通过技术和制度创新、产业转型、新能源开发等多种手段，发展低碳经济，达到经济社会发展与生态环境保护双赢的经济发展形态，是我们的必由之路。</p>
+<h3 id="新能源工作站"><a class="header" href="#新能源工作站">新能源工作站</a></h3>
+<p>世界汽车发展了百年，燃烧的是油，排放的是废气。但是，人类对替代燃料和新的动力系统的寻找和探索其实早已经开始了。</p>
+<p>未来的汽车燃料是什么？排放的又是什么？会不会幡然换一个新天地？请触键查看，哪种能源能让未来之车启动？新能源的发展路径多种多样，到底是氢燃料汽车主宰未来，还是太阳能将成为终极解决方案？新能源工作站为你开启一个全新的世界。</p>
+<h3 id="新材料实验室"><a class="header" href="#新材料实验室">新材料实验室</a></h3>
+<p>从车身到零部件，人们对汽车的节能、环保要求体现在每个细节。在这辆解剖开来的汽车中，你将看到，只有应用方便回收、可循环使用的材料，才能降低汽车对自然资源的依赖程度，实现汽车产业的可持续发展；这也是各大汽车公司竞技的焦点。</p>
+<p>未来的汽车将由哪些新材料构成？请一起来看一看吧！</p>
+<h3 id="未来汽车"><a class="header" href="#未来汽车">未来汽车</a></h3>
+<p>石油取代了畜力，驱动车辆飞跃到21世纪。在过去的一百多年中，汽车从无到有，经千锤百炼而成为高科技与艺术时尚的结晶。如今，汽车产业已步入绿色革命的时代。未来的汽车，从燃料到发动机到车身造型到性能等等，都将发生改变。
+请看天幕上旋转的未来之车，在人类不断探索与发展的过程中，相信人、车、社会、自然一定有更加和谐美好的未来。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/innovation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../development/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/innovation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../development/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

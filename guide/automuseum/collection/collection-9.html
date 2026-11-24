@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>时代记忆——中国木炭汽车 - 北京汽车博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京汽车博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/collection/collection-9.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="时代记忆中国木炭汽车"><a class="header" href="#时代记忆中国木炭汽车">时代记忆——中国木炭汽车</a></h1>
+<p>在北京汽车博物馆藏品库房里，一辆“仲明国产木炭汽车”模型无声却鲜活地记录着20世纪30、40年代木炭车盛行的那段历史。该藏品是以20世纪30年代爱国工程师汤仲明发明的“仲明国产燃炭汽车”为原型制作的，2017年由汤仲明之子汤晓明捐赠。</p>
+<h2 id="资源匮乏-研究代用燃料"><a class="header" href="#资源匮乏-研究代用燃料">资源匮乏 研究代用燃料</a></h2>
+<p>20世纪初开始有汽车进入中国。各方有识之士萌生制造汽车，建立民族汽车工业的愿望。20世纪30年代，中国的石油资源尚未开发，汽油几乎全部依赖进口。为摆脱资源受限的困境，一些工程技术人员开始研制使用代用燃料，例如以木炭为原料的煤气发生炉，或使用酒精、植物油作燃料。</p>
+<p>仲明国产燃炭汽车便诞生于这一时期，后被人们亲切地称为“木炭车”。所谓“木炭车”，也叫煤气车，就是在普通汽车上加装各种设备，其中最主要设备是煤气发生炉，使木炭产生煤气，以代替汽油参与燃烧推动发动机运转。</p>
+<h2 id="国人首创-研制煤气发生炉"><a class="header" href="#国人首创-研制煤气发生炉">国人首创 研制煤气发生炉</a></h2>
+<p>在进步思潮影响下，汤仲明怀着“科学救国”的壮志，1919年赴法勤工俭学。到法国后他曾在南特汽车修理厂、雷诺汽车制造厂勤工俭学，进入法国南特工业学校、法国国立昂诺高等工艺学校学习，获机械工程师学位。毕业后他回到雷诺汽车制造厂担任实习工程师，积累了丰富的实践经验。1926年，为实现报国理想，他毅然归国，到陇海铁路徐州铜山机车厂工作。面对我国当时完全依赖进口“洋油”的局面，汤仲明暗下决心攻克难题。从1928年起，他在工作之余自费开展研究，租了一间民房做实验室，买了一台旧汽车发动机，开始了研制代燃炉(木炭代油炉)的试验。</p>
+<p>经过无数次地试验，1931年汤仲明试制成功一台“木炭代油炉”。并于当年3月将一辆改装的煤气发生炉汽车开到郑州西郊碧沙岗进行试车，这次公开试验引发轰动。随后，他又分赴西安、上海、杭州、武汉、南宁、柳州、广州等地进行表演，南京政府为表彰其成功开辟了代用汽油的途径，还发给他1000元作为发明奖赏。</p>
+<p>1931年9月，汤仲明发明的木炭代油炉被认定为具有重大意义，远胜于国外的木炭汽车，具有实用价值，且造价低廉、易于制造。这辆木炭汽车无需汽油媒介即可发动，加一次木炭可行驶100多公里。</p>
+<h2 id="第一辆国产燃炭汽车"><a class="header" href="#第一辆国产燃炭汽车">第一辆国产燃炭汽车</a></h2>
+<p>汤仲明与范争波、汤允青等人于1936年试制出一辆煤气汽车，这是中国设计、试制的第一辆煤气汽车。其总质量4910公斤，底盘全长5436毫米，轴距3912毫米。搭载水冷立式直列4缸4冲程煤气机，最大功率45千瓦，最高车速约52公里/小时，使用1937年仲明式代油炉。该车用大中华橡胶厂双钱牌轮胎，后轴半浮式，变速器有4前进挡和1倒档。</p>
+<h2 id="木炭汽车走入公共交通"><a class="header" href="#木炭汽车走入公共交通">木炭汽车走入公共交通</a></h2>
+<p>木炭汽车一度广泛应用于公共交通及货物运输等领域。1935年，全国各长途汽车公司、各运输公司在可能范围内采用木炭代油炉。1941年，全国出现各种型号煤气发生炉15种。西南、西北各省煤气车约占行驶车辆的35%，东北、华北、华东等地区也广泛使用煤气车。</p>
+<p>当时街上的大型煤气运输车多了一节车厢，专门安放炉子，而小型货车的车厢与驾驶室之间多了一节烟囱，下面是炉子。公交车驾驶室的侧面，紧挨售票员的位置也安放炉子，售票员既负责卖票又负责捅炉子、清理炉灰。私家车的炉子较小，有的装在后备箱，有的装在副驾驶或车顶。</p>
+<p>当然木炭汽车也存在一定缺陷。“开木炭汽车比开汽油车辛苦得多，司机和助理要在出车前，一秤一秤地领木炭，一筐一筐地装上车。中途要多次给代燃炉添加木炭。到了终点，司机、助理还要立即清理炉灰、养护车辆。它时速不高，行驶中司机要不时地停车添加木炭，中途抛锚现象也时常发生”。后来汽油充足之后，木炭汽车逐渐被淘汰。</p>
+<p>在汽油匮乏、交通困难的年代，木炭汽车缓解了运输需求与能源匮乏的矛盾，发挥了重要的作用。20世纪60年代以后木炭汽车逐渐淡出人们的视野，但木炭汽车记录了早期汽车行业艰辛创业的历史，展现了中国人不畏困难、勇于创新的精神，也承载了那个特殊年代人们的记忆。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../collection/collection-8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../collection/collection-10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../collection/collection-8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../collection/collection-10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

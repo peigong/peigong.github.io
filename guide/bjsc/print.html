@@ -1,0 +1,942 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>北京科学中心 - VET.周培公(https://pg.js.cn)</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京科学中心 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="北京科学中心"><a class="header" href="#北京科学中心">北京科学中心</a></h1>
+<p>北京科学中心是北京市科学技术协会所属的公益性社会科普教育基地，前身为中国科技馆旧馆，2013年启动改建后于2018年正式开放，地址位于西城区北辰路9号院。该中心以服务青少年为核心，设有“生命乐章”“生存对话”“生活追梦”三大主题展区，覆盖1.9万平方米展览面积，配套教育专区、儿童乐园及特效影院等科普空间，运用互动技术引导公众探索科技与生活的关系。</p>
+<p>其前身场馆于2002年确定为科普服务场所，2009年获北京市发改委批准建设，2013年9月23日市科协驻会主席办公会议通过《北京科学中心建设方案》。该中心自2020年起先后入选全国青少年人工智能活动特色单位，2022年3月入选全国科普教育基地，2023年5月30日获评科学家精神教育基地。2024年科普志愿服务队获评“首都最佳志愿服务组织”。中心年均开展500余场科普活动，涵盖科学课程、夏令营及流动科技馆巡展，2024年接待公众超67.8万人次，青少年参与量突破10万人次。</p>
+<h2 id="发展历程"><a class="header" href="#发展历程">发展历程</a></h2>
+<ul>
+<li>2002年6月12日，中国科协周光召主席、党组书记张玉台与北京市主要领导会面，商定“科技馆置换给北京市政府后，使用方向不能改变，要继续为科普服务，为青少年科技教育服务”。</li>
+<li>2009年4月，北京市发改委将“原则同意市科协在原中国科技馆用地建设北京科学中心”的意见上报市政府并获批准。</li>
+<li>2010年3月，中共北京市委办公厅北京市人民政府办公厅关于印发“科技北京行动计划2010年度折子工程”通知，将北京科学中心建设工程纳入科技北京行动计划，提出了加快北京科学中心建设的要求。</li>
+<li>2010年，《北京市国民经济和社会发展第十二个五年规划纲要》，将北京科学中心建设列为“提升公共文化服务”的“加快重大功能性文化设施建设”部分，明确为“十二五”期间需建成的“标志性文化设施” 。</li>
+<li>2013年2月18日，北京市政府召开会议安排2013年北京重点建设工程，北京科学中心建设项目（即：中国科技馆旧馆改扩建工程）调整为装修项目。</li>
+<li>2013年7月 20日，王安顺市长就北京科学中心建设工作进行实地调研。按照王安顺市长调研指示精神，市科协向市政府提交了《关于北京科学中心建设有关事项的请示》。</li>
+<li>2013 年 9 月 23 日，市科协驻会主席办公会议通过《北京科学中心建设方案》，同意充分利用、保留中国科技馆旧馆原有建筑进行北京科学中心建设，整体重新装修、消除隐患，进行必要的安全加固和改造。</li>
+<li>2025年9月，北京科学中心“科学圆环”青少年科学教育户外展示区对外开放，主展馆四层“求索——科学、技术、社会与生存环境”主题展厅焕新开放；同月，中心科学教育志愿者服务队正式成立。</li>
+<li>2025年10月15日消息，北京科学中心重新规划的园区亮相，经过改造提升，中心初步形成了草本植物、灌木、乔木错落有致的自然景观。</li>
+<li>2025年12月20日，北京青少年科技教育协会在北京科学中心举办2025年年会暨八届三次会员代表大会，会议共有180位会员代表参加，审议了协会年度工作，听取了各专业委员会汇报，表彰了优秀科技教师及先进集体，并举办了人工智能讲座和科学教育成果展。</li>
+<li>2026年1月24日至3月1日，北京科学中心以“寒假不宅家，科海趣无涯”为主题，将推出700余场科学教育活动，涵盖科学实验、表演、课程、志愿讲解等，陪伴青少年及家庭度过充满探索与成长的超长假期。2026年农历春节期间，北京科学中心推出300余场活动，接待近5万人次。</li>
+</ul>
+<h2 id="功能特点"><a class="header" href="#功能特点">功能特点</a></h2>
+<p>充分发挥科学中心在科学普及教育、展示宣传北京科技成就以及服务北京地方经济社会发展方面等的作用是建设的主要目标，尤其需要突出体现以下几个方面功能特点：</p>
+<p>着眼点：首都北京</p>
+<p>北京科学中心围绕“前沿科技”这一主线，从基础科学中的前沿问题、应用技术中的高新技术以及社会发展中的科技事件三个方面展示科技发展与科研探索，选取对科技发展有重要作用、对公众生活有较大影响、公众感兴趣的主题。</p>
+<p>方式：探索体验</p>
+<p>探索体验是北京科学中心深化教育的方式之一。</p>
+<p>中心通过“沉浸式科学探究活动”以及“AI探秘”双师课堂系列课程，由科技辅导员与学校教师协同授课，引导学生理解人工智能等前沿科技的基本原理和应用场景。</p>
+<p>对象：青少年为主</p>
+<p>公众特别是青少年群体是科学中心的服务主体，北京科学中心以公众需求为导向。</p>
+<p>2025年以来，中心持续深化与中小学的“馆校合作”机制，通过提供定制化课程、互动展览和科学实践活动，丰富了学校的科学课程内容，有助于激发学生的科学兴趣和创新意识。全年累计服务师生25万余人次，馆校合作已覆盖五百余所学校。</p>
+<p>属性：公益科普</p>
+<p>公益性科普教育是科学中心最根本的属性。</p>
+<p>中心通过馆校合作将科教资源向远郊区延伸，并创新课程形态与服务体系，馆校合作由参观体验为主拓展为课程共建、资源共享、师资协同的系统化实践，为构建开放的科学教育环境提供支持。</p>
+<h2 id="展教功能"><a class="header" href="#展教功能">展教功能</a></h2>
+<h3 id="三生主展"><a class="header" href="#三生主展">三生主展</a></h3>
+<p>三生主展是北京科学中心教育传播功能的主要载体，展区贯彻主题化设计思路，以生命乐章、生存对话、生活追梦为一级脉络，从公众视角和人文情怀出发，拓展丰富科技内容，用先进的展陈技术手段体现参与性、互动性。</p>
+<h4 id="1生命乐章"><a class="header" href="#1生命乐章">1．生命乐章</a></h4>
+<p>展区描述：</p>
+<p>生命展区力求使公众对与生命相关的研究领域和研究前沿有直观、宏观的了解；引导公众科学地思考生命的价值，从而能够尊重生命、有尊严地直面疾病和死亡；启发公众思考人类在地球生物圈中的合适定位，搭建出和谐共存的生态环境。</p>
+<p>展区特点：</p>
+<ol>
+<li>权威展示生命科学中的前沿问题</li>
+<li>贴近百姓反映生命与健康等社会热点</li>
+<li>倡导科学精神、鼓励与激发思考</li>
+</ol>
+<h4 id="2生存对话"><a class="header" href="#2生存对话">2．生存对话</a></h4>
+<p>展区描述：</p>
+<p>生存对话围绕人与自然、资源和环境的关系，讲述生存现状，探索人与自然之间的相互影响、相互作用，强化生存环境改善的紧迫感，探讨社会、经济、生态协调可持续性发展的有效途径。</p>
+<p>展区特点：</p>
+<ol>
+<li>围绕人类生存的资源和环境，展示国人科学探索征程上的足迹。</li>
+<li>探讨人类生存面临的环境污染、资源紧缺的挑战，倡导生态文明建设。</li>
+<li>突出北京特色，展示“北京”生存状态，号召市民践行北京行动。</li>
+</ol>
+<h4 id="3生活追梦"><a class="header" href="#3生活追梦">3．生活追梦</a></h4>
+<p>展区描述：</p>
+<p>“生活追梦”展区围绕衣食住行、城市建设、工作学习、娱乐休闲等百姓关注的内容，传播“科学改善生活，科技引领未来”的理念，使观众感受到科技创新带给生活的精彩。</p>
+<p>展区特点：</p>
+<ol>
+<li>前沿科技服务于百姓生活的鲜活案例</li>
+<li>聚焦大众生活中的科学热点与科技进步</li>
+</ol>
+<p>体现科技为生活提供便利、引领未来生活方式</p>
+<h3 id="教育专区"><a class="header" href="#教育专区">教育专区</a></h3>
+<p>专区概况：</p>
+<p>以探索实验与过程体验为主的教育培训专区。注重双重素质教育，既培养科学素质，更侧重开发工程技术素质。以青少年为主要服务对象，兼顾社会需求的多元化。</p>
+<p>设计思路：</p>
+<ol>
+<li>感受实验过程的奥秘与乐趣，提升工程技术素质</li>
+<li>建设多元化的实验培训体系，满足公众多种需求</li>
+<li>与权威机构合作，体现专业性和共建共享的优势</li>
+</ol>
+<p>例如，中心设计开发了“千年不倒的古建之谜：赵州桥”双师课堂，采用“科学+语文”跨学科教学模式和问题驱动式教学，引导学生在探究中经历科学思维过程。</p>
+<p>中心还与学校共建了“3DMaker”科学社团，采用项目式学习教学法，学生借助三维建模工具3D One进行设计，并通过FDM型3D打印机实现设计成果的实体化转化，在作品创作过程中磨砺工程设计能力和数字素养。</p>
+<h3 id="儿童乐园"><a class="header" href="#儿童乐园">儿童乐园</a></h3>
+<p>儿童展区主要面对3-8岁儿童，从满足儿童认知世界、学习科学的需求出发，为儿童提供能够令他们挥洒童真与快乐体验的设施与场地，通过真实体验，为孩子们创造感知科学世界的舞台；通过激发联想，促进孩子养成勇于提问、勤于探索的习惯；通过联系生活，鼓励孩子对自我及周围环境的关注。</p>
+<h3 id="特效影院"><a class="header" href="#特效影院">特效影院</a></h3>
+<p>概况介绍：</p>
+<p>北京科学中心特效影院将在原馆建筑结构基础上因地制宜，采用国际先进技术，让观众在科技影视营造的震撼与愉悦的环境中，学习科技知识，探索科技奥秘，领略自然之美。</p>
+<p>综合考虑原馆建筑条件及功能需求，将特效影院分为如下两个功能区：</p>
+<ol>
+<li>球幕影院</li>
+<li>数字艺术基地</li>
+</ol>
+<p>特点介绍：</p>
+<p>“立体视觉产业技术”成果的集中展现；定位为角色体验的新型模式；不断推出“寓教于乐”的“科学艺术产品”。</p>
+<h3 id="科学广场"><a class="header" href="#科学广场">科学广场</a></h3>
+<p>概况介绍：</p>
+<p>北京科学中心科学广场作为科技与艺术的共享空间，集集散引导、展览展示、户外活动、公共服务为一体，融合科技、人文、绿色北京的创意理念，紧扣“我·在·未来”设计理念，发掘人们心理深层对知识的探索诉求。</p>
+<p>北京科学中心科学广场采用一轴、三区、多点的空间布局</p>
+<p>一轴：时间轴——从过去到未来</p>
+<p>三区：轴两侧区域和B馆南门区域</p>
+<p>多点：科技公共设施散落在广场各个角落</p>
+<h2 id="中心简介"><a class="header" href="#中心简介">中心简介</a></h2>
+<p>通过现实与虚拟结合的展示方式和技术，让公众接触前沿科技，体验科研探索活动的过程，直观感受科学对人类进步的意义，发掘现代科学技术实现人类愿望的可能性，激发公众运用科学智慧应对挑战的联想。</p>
+<h2 id="荣誉称号"><a class="header" href="#荣誉称号">荣誉称号</a></h2>
+<ul>
+<li>2020年4月，入选北京市首批新时代文明实践基地名单。</li>
+<li>2020年6月17日，获得2020年度“全国青少年人工智能活动特色单位”称号。</li>
+<li>2021年9月，入选2021年度“全国青少年人工智能活动特色单位”名单。</li>
+<li>2022年3月，入选2021-2025年第一批全国科普教育基地。</li>
+<li>2022年2月11日，入选2022年北京市科普基地拟命名名单。</li>
+<li>2023年5月30日，入选2023年度科学家精神教育基地。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="讲解提纲"><a class="header" href="#讲解提纲">讲解提纲</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="一层大厅"><a class="header" href="#一层大厅">一层大厅</a></h1>
+<ul>
+<li>汽车转向器。为什么方向盘转好多，轮子只转一点儿？</li>
+<li>旋转双曲面</li>
+<li>圆的周长</li>
+<li>穿针引线</li>
+<li>六分仪模型</li>
+<li>勾股定理演示</li>
+<li>毕达哥拉斯证明</li>
+<li>阳马与鳖臑</li>
+<li>阿基米德墓碑</li>
+<li>钟摆波</li>
+<li>克莱因瓶</li>
+<li>欧拉线</li>
+<li>哥尼斯堡七桥。1836年，瑞士，欧拉，证明。</li>
+<li>奋斗者号。钛合金载人球舱，关节机械手，先进定位系统。</li>
+<li>光纤传声</li>
+<li>静电乒乓球</li>
+<li>展开立方体</li>
+<li>锥体上滚</li>
+<li>三等分角、化圆为方、倍立方问题并列古代数学三大难题。</li>
+<li>抛物线焦点</li>
+<li>紧急迫降</li>
+<li>健康误区</li>
+<li>繁花曲线</li>
+<li>气体内能</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生命展厅"><a class="header" href="#生命展厅">生命展厅</a></h1>
+<h2 id="萌动的旋律---生命的从无到有"><a class="header" href="#萌动的旋律---生命的从无到有">萌动的旋律 - 生命的从无到有</a></h2>
+<h3 id="生命起源的猜想"><a class="header" href="#生命起源的猜想">生命起源的猜想</a></h3>
+<ul>
+<li>原始汤常说。米勒实验。</li>
+<li>深海烟囱说。</li>
+<li>宇生论。地球生命来自宇宙空间的其他星球。</li>
+<li>自然发生说。牛顿、拉马克、达尔文支持。缺少科学依据。</li>
+<li>生源说。巴斯德，法国。提出生源说否定自然发生说。</li>
+<li>化学说。奥巴林，苏联。1924年《生命起源》。1936年《地球上生命的起源》。</li>
+</ul>
+<h3 id="寒武纪"><a class="header" href="#寒武纪">寒武纪</a></h3>
+<ul>
+<li>澳大利亚，埃迪卡拉生物群。云南澄江生物群。</li>
+<li>昆虫远祖，抚仙湖虫。</li>
+<li>地球上第一条鱼，昆明鱼。已知最古老的脊椎动物，属于无颌鱼类。寒武纪中国云南澄江县帽天山。</li>
+<li>九眼精灵，微网虫。</li>
+<li>神奇的腔肠动物，栉(zhi)水母。海胡桃，最原始的多细胞动物，辐射状对称。</li>
+</ul>
+<h4 id="奇虾"><a class="header" href="#奇虾">奇虾</a></h4>
+<ul>
+<li>寒武纪顶级猎食者，奇虾，体长可达2米。</li>
+<li>奇虾最初在加拿大发现，当时只发现一只前爪的化石，被误认为是虾的尾巴。</li>
+<li>科学家还想像了一个虾头，由于它不是虾，所以命名为奇虾。</li>
+<li>1994年，我国科学家在帽天山发现完整的奇虾化石，纠正了从前的错误，所谓的“尾巴”其实是它的爪子。</li>
+</ul>
+<h4 id="海口鱼和昆明鱼"><a class="header" href="#海口鱼和昆明鱼">海口鱼和昆明鱼</a></h4>
+<ul>
+<li>昆明鱼与海口鱼、钟健鱼并称“天下第一鱼”</li>
+<li>脊索与大脑，成为无脊椎动物与脊椎动物的最大区别，而海口鱼兼具这两种构造。</li>
+<li>海口鱼是一种原始的似鱼类生物，只有拇指般的大小，但却是生命进化史上的巨人，虽然没有坚实的外壳，但身体非常独特，拥有一根原始脊椎。</li>
+<li>1997年8月，在昆明海口地区发现海口鱼化石。1998年12月，又在昆明海口地区发现了第二块脊椎动物化石，被命名为"昆明鱼"。</li>
+</ul>
+<h3 id="奇妙的无性繁殖"><a class="header" href="#奇妙的无性繁殖">奇妙的无性繁殖</a></h3>
+<ul>
+<li>分裂生殖</li>
+<li>出芽生殖</li>
+<li>孢子生殖</li>
+<li>营养器官生殖</li>
+<li>断裂生殖</li>
+<li>孤雌生殖，又称单性生殖，特殊的无性繁殖。</li>
+<li>克隆（无性繁殖技术）</li>
+<li>最早的无性繁殖，扦插。有心种花花不活，无心插柳柳成荫。</li>
+</ul>
+<h3 id="趋同进化的食蚁动物"><a class="header" href="#趋同进化的食蚁动物">趋同进化的食蚁动物</a></h3>
+<ul>
+<li>趋同演化。趋异演化</li>
+<li>蟹化</li>
+</ul>
+<h3 id="生物进化历程"><a class="header" href="#生物进化历程">生物进化历程</a></h3>
+<h2 id="神秘的交响---生命的复杂和谐"><a class="header" href="#神秘的交响---生命的复杂和谐">神秘的交响 - 生命的复杂和谐</a></h2>
+<h3 id="心理与大脑的奥秘"><a class="header" href="#心理与大脑的奥秘">心理与大脑的奥秘</a></h3>
+<ul>
+<li>胎宝宝的感官发育大事记</li>
+<li>试管婴儿的诞生</li>
+<li>脑电波与脑机技术。生物电信号，脑电图。脑机接口技术分为侵入式和非侵入式。</li>
+<li>大脑的一生，大脑的发育与质量变化。</li>
+<li>纳什。囚徒困境</li>
+<li>人的心理</li>
+<li>睡眠不是浪费时间。睡的太多，睡的太少。</li>
+</ul>
+<h3 id="细胞与基因世界"><a class="header" href="#细胞与基因世界">细胞与基因世界</a></h3>
+<ul>
+<li>细胞类型与功能</li>
+<li>细胞学说与物质运输</li>
+<li>形形色色的干细胞。自我更新。特异化，未分化，具体转化为任何类型细胞的潜能。</li>
+<li>基因遗传秘密。基因成对出现，有显性和隐性之分，控制生物性状。</li>
+<li>孟德尔。《植物杂交试验》提出了基因显性性状和隐性性状的概念。</li>
+<li>摩尔根和果蝇。20世纪20年代，创立了基因学说。</li>
+<li>DNA的双螺旋结构。1953年4月，美国沃森，英国克里克，《自然》。1962年，诺贝尔奖。</li>
+<li>遗传密码记录了生命及其历史演化的规律</li>
+</ul>
+<h3 id="生态与微生物关联"><a class="header" href="#生态与微生物关联">生态与微生物关联</a></h3>
+<ul>
+<li>人体内微生物生态</li>
+<li>生物入侵危机</li>
+<li>生态系统相互依存</li>
+<li>把物种存进银行</li>
+<li>小麦增产的秘密。解放初亩产40公斤，现在400公斤。</li>
+<li>李振声，中国杂交小麦之父。</li>
+</ul>
+<h3 id="动物的视觉"><a class="header" href="#动物的视觉">动物的视觉</a></h3>
+<ul>
+<li>虎豹，两眼视野部分重叠，具有较好的立体视觉。</li>
+<li>牛羊，两眼视野不重叠，视野较宽阔。</li>
+<li>河马，眼睛有一层透明膜。泳镜。</li>
+<li>变色龙，两只眼睛可以相对独立的向任意方向转动。</li>
+<li>壁虎，夜中辨色。夜视能力是人类的350倍。</li>
+<li>乌贼，无法识别颜色，但能看到偏振光。眼睛的进化程度在动物世界居于前列，可以看到前后的物体。</li>
+<li>鹦鹉，四色视觉，红（长波）、绿（中波）、蓝（短波）和紫外UV（人眼看不见的更短波段，约近紫外区），可以看到更丰富的颜色。人类只有红绿蓝三色。</li>
+</ul>
+<h2 id="奇妙的变奏---生命的疾命攻防"><a class="header" href="#奇妙的变奏---生命的疾命攻防">奇妙的变奏 - 生命的疾命攻防</a></h2>
+<h3 id="癌症探秘与重大疫情"><a class="header" href="#癌症探秘与重大疫情">癌症探秘与重大疫情</a></h3>
+<ul>
+<li>癌细胞出现之迷。来源于正常细胞，癌变。</li>
+</ul>
+<h3 id="疾病致病因素多样"><a class="header" href="#疾病致病因素多样">疾病致病因素多样</a></h3>
+<h3 id="病毒肆虐与健康守护"><a class="header" href="#病毒肆虐与健康守护">病毒肆虐与健康守护</a></h3>
+<ul>
+<li>病毒，纳米级类生命体</li>
+<li>冠状病毒。</li>
+<li>埃博拉病毒，在埃博拉河地区发现。1976年，沿河55个村庄。死亡率53%、88%。</li>
+</ul>
+<h3 id="重要器官健康维护"><a class="header" href="#重要器官健康维护">重要器官健康维护</a></h3>
+<h3 id="慢性疾病的防控要点"><a class="header" href="#慢性疾病的防控要点">慢性疾病的防控要点</a></h3>
+<h3 id="医疗科技前沿进展"><a class="header" href="#医疗科技前沿进展">医疗科技前沿进展</a></h3>
+<ul>
+<li>干细胞与器官再造。3D器官打印。</li>
+<li>纳米技术抗癌。</li>
+<li>纳米，千分之一微米。头发直径20~50微米。细菌直径5微米。1纳米相当于4个原子直径。DNA链直径，1纳米左右。</li>
+<li>远程医疗与个体检测</li>
+<li>家庭急救箱</li>
+</ul>
+<h3 id="免疫系统与疾病防御"><a class="header" href="#免疫系统与疾病防御">免疫系统与疾病防御</a></h3>
+<ul>
+<li>结核病的耐药性检测。原发性耐药，获得性耐药。</li>
+</ul>
+<h2 id="辉煌的咏吧---生命的终结回归"><a class="header" href="#辉煌的咏吧---生命的终结回归">辉煌的咏吧 - 生命的终结回归</a></h2>
+<h3 id="器官功能与健康检测"><a class="header" href="#器官功能与健康检测">器官功能与健康检测</a></h3>
+<ul>
+<li>挑战记忆极限</li>
+<li>挑战重力速度极限</li>
+<li>器官能力</li>
+</ul>
+<h3 id="不良生活习惯的危害"><a class="header" href="#不良生活习惯的危害">不良生活习惯的危害</a></h3>
+<h3 id="临终关怀与生命延续"><a class="header" href="#临终关怀与生命延续">临终关怀与生命延续</a></h3>
+<ul>
+<li>避免非正常死亡</li>
+<li>十大死亡原因</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生活展厅"><a class="header" href="#生活展厅">生活展厅</a></h1>
+<h2 id="创意作品"><a class="header" href="#创意作品">创意作品</a></h2>
+<ul>
+<li>生活垃圾处理的主要方法。生化处理、卫生填埋、焚烧发电。</li>
+<li>减量化（控制废物等的量）、再利用、资源化、热回收、无害化处理。</li>
+</ul>
+<h2 id="低碳生活"><a class="header" href="#低碳生活">低碳生活</a></h2>
+<ul>
+<li>低碳答题</li>
+<li>古代垃圾和现代垃圾</li>
+<li>垃圾的危害</li>
+<li>雨水利用</li>
+<li>垃圾的资源化。资源属性、垃圾分类。能减尽减、能用尽用、能分尽分。</li>
+<li>迷你农场。土培、基质培、管道水培、鱼缸。微灌、虹吸、水培。</li>
+<li>精准农业。全球定位系统（GPS）、地理信息系统（GIS）、遥感技术（RS）</li>
+</ul>
+<h2 id="科学健身房"><a class="header" href="#科学健身房">科学健身房</a></h2>
+<ul>
+<li>一起来跑步</li>
+<li>喊出压力</li>
+<li>虚拟拳击手</li>
+<li>运动捕快</li>
+</ul>
+<h2 id="科学讲堂"><a class="header" href="#科学讲堂">科学讲堂</a></h2>
+<ul>
+<li>工业机器人</li>
+<li>气动元件与自动化</li>
+<li>机器宠物</li>
+<li>下棋机器人</li>
+<li>3D打印机</li>
+<li>通关秘码。指纹、虹膜、声纹、人脸识别</li>
+<li>力学空间</li>
+<li>光纤</li>
+<li>记忆材料</li>
+<li>新奇酷品</li>
+<li>眼动打靶</li>
+<li>磁流变液</li>
+<li>三维照相馆</li>
+<li>核电反应堆</li>
+<li>科技魔轮</li>
+<li>科技魔链</li>
+<li>飞机仪表盘</li>
+<li>地效飞机</li>
+<li>无人机</li>
+<li>汽车的构造</li>
+<li>天鲲号</li>
+<li>地铁的脉动</li>
+<li>汽车颜色与安全</li>
+</ul>
+<h3 id="挑战多维码"><a class="header" href="#挑战多维码">挑战多维码</a></h3>
+<ul>
+<li>射频识别（RFID），是一种通信技术。射频标签不需要处在识别器视线之内，也可以嵌入被识别物体之内。</li>
+<li>条形码</li>
+<li>二维码</li>
+</ul>
+<h3 id="多姿多彩的玻璃"><a class="header" href="#多姿多彩的玻璃">多姿多彩的玻璃</a></h3>
+<ul>
+<li>变色玻璃</li>
+<li>防弹玻璃</li>
+<li>钢化玻璃</li>
+<li>通电玻璃，又名液晶玻璃</li>
+<li>半透半反玻璃，镀膜。</li>
+<li>彩色玻璃</li>
+</ul>
+<h3 id="石墨烯"><a class="header" href="#石墨烯">石墨烯</a></h3>
+<ul>
+<li>石墨烯是目前强度最高、韧性最好、重量最轻、透光最高、导电最佳的一种新型碳材料。</li>
+<li>比钢铁坚硬200倍。保鲜膜厚，需要大象站铅笔上，才能刺穿。</li>
+<li>超级电容，充电8分种，行驶1000公里。</li>
+</ul>
+<h2 id="抽象物理实验室"><a class="header" href="#抽象物理实验室">抽象物理实验室</a></h2>
+<ul>
+<li>测量 - 物理实验的基础</li>
+<li>莫氏硬度</li>
+</ul>
+<h3 id="物理时空隧道"><a class="header" href="#物理时空隧道">物理时空隧道</a></h3>
+<h3 id="反光材料的应用"><a class="header" href="#反光材料的应用">反光材料的应用</a></h3>
+<ul>
+<li>回归反光材料</li>
+<li>微棱镜反射原理</li>
+<li>反光材料，也称逆反射材料，回复反射材料</li>
+</ul>
+<h3 id="力学岛"><a class="header" href="#力学岛">力学岛</a></h3>
+<ul>
+<li>生活中有哪些性质的力是物理中的力呢？</li>
+<li>傅科摆</li>
+<li>科里奥利力</li>
+<li>伽利略理想斜面实验</li>
+<li>伽利略的加速度实验（理想斜面实验的另一个表述）</li>
+<li>降速曲线和最速降线</li>
+<li>伽利略温度计</li>
+<li>卡文迪许的万有引力实验</li>
+<li>伯努利原理</li>
+<li>定宽曲线</li>
+<li>勒洛三角形和勒洛五边形</li>
+<li>非圆车轮</li>
+</ul>
+<h4 id="伽利略的自由落体实验"><a class="header" href="#伽利略的自由落体实验">伽利略的自由落体实验</a></h4>
+<ul>
+<li>世界上最有名的物理实验</li>
+<li>见证逻辑思维的威力，开启思想实验先河。</li>
+<li>人类进入科学质疑时间</li>
+<li>观察、分析、质疑、总结规律、实验证实，这是一种物理学习的科学方法。</li>
+</ul>
+<h3 id="能量岛"><a class="header" href="#能量岛">能量岛</a></h3>
+<ul>
+<li>永动机</li>
+<li>驻波和声驻波</li>
+<li>横波和纵波</li>
+<li>麦克斯韦滚摆</li>
+</ul>
+<h3 id="电磁岛"><a class="header" href="#电磁岛">电磁岛</a></h3>
+<ul>
+<li>形形色色的传感器</li>
+</ul>
+<h3 id="光学岛"><a class="header" href="#光学岛">光学岛</a></h3>
+<ul>
+<li>光电效应</li>
+<li>双缝干涉实验</li>
+<li>单缝衍射实验</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生存展厅"><a class="header" href="#生存展厅">生存展厅</a></h1>
+<h2 id="彩虹"><a class="header" href="#彩虹">彩虹</a></h2>
+<ul>
+<li>虹字</li>
+<li>不经历风雨怎么见彩虹</li>
+<li>色散现象</li>
+<li>彩虹的形状</li>
+</ul>
+<h2 id="时间螺旋和宇宙年"><a class="header" href="#时间螺旋和宇宙年">时间螺旋和宇宙年</a></h2>
+<ul>
+<li>大爆炸始于1月1日零点</li>
+<li>现在的时间是12月31日的零点</li>
+<li>9月初地球形成</li>
+<li>12月25日恐龙出现</li>
+<li>百年人生仅点0.23宇宙秒</li>
+</ul>
+<h2 id="天空的颜色"><a class="header" href="#天空的颜色">天空的颜色</a></h2>
+<ul>
+<li>瑞利散射</li>
+</ul>
+<h2 id="极光"><a class="header" href="#极光">极光</a></h2>
+<ul>
+<li>极光产生的条件：大气、磁场、高能带电粒子</li>
+</ul>
+<h2 id="清洁能源发电"><a class="header" href="#清洁能源发电">清洁能源发电</a></h2>
+<ul>
+<li>风能、水能、太阳能、生物能、地热能、海潮能</li>
+<li>生物质能发电</li>
+<li>核能发电</li>
+<li>水利发电</li>
+<li>太阳能发电。光伏发电、光化学发电、光感应发电和光生物发电</li>
+<li>风力发电。</li>
+</ul>
+<h2 id="雪崩"><a class="header" href="#雪崩">雪崩</a></h2>
+<ul>
+<li>地球引力</li>
+<li>积雪内聚力</li>
+</ul>
+<h2 id="湍流"><a class="header" href="#湍流">湍流</a></h2>
+<ul>
+<li>层流机翼</li>
+<li>高尔夫球面凹坑</li>
+<li>层流：流体分层运动，流线清晰且相互平行</li>
+<li>过渡流：流体的分层运动变得不稳定，流线出现波浪状摆动</li>
+<li>湍流：流体不规则运动，流线模糊，相邻层流相互混合</li>
+</ul>
+<h2 id="漩涡"><a class="header" href="#漩涡">漩涡</a></h2>
+<ul>
+<li>龙卷风、台风、飓风</li>
+<li>海洋漩涡</li>
+<li>漩涡状星系</li>
+</ul>
+<h2 id="无声的世界"><a class="header" href="#无声的世界">无声的世界</a></h2>
+<ul>
+<li>真空中，声音不能传播</li>
+</ul>
+<h2 id="烟圏"><a class="header" href="#烟圏">烟圏</a></h2>
+<h2 id="云海"><a class="header" href="#云海">云海</a></h2>
+<h2 id="能量飞轮"><a class="header" href="#能量飞轮">能量飞轮</a></h2>
+<h2 id="冰晶世界"><a class="header" href="#冰晶世界">冰晶世界</a></h2>
+<ul>
+<li>偏光镜</li>
+<li>冻结核</li>
+</ul>
+<h2 id="地球系统"><a class="header" href="#地球系统">地球系统</a></h2>
+<ul>
+<li>内部构造：地壳、地墁、地核</li>
+<li>莫霍界面</li>
+<li>古登堡界面</li>
+<li>外部构造：大气圈、水圈、生物圈</li>
+</ul>
+<h2 id="破冰利刃"><a class="header" href="#破冰利刃">破冰利刃</a></h2>
+<ul>
+<li>雪龙2</li>
+</ul>
+<h2 id="蛟龙号"><a class="header" href="#蛟龙号">蛟龙号</a></h2>
+<ul>
+<li>声波绘海</li>
+<li>最大下潜深度7000米，是目前世界上下潜能力最强的潜水器，工作区域可覆盖全球海洋区域的99.8%</li>
+<li>稳定的悬停定位能力</li>
+<li>具有先进的水声通信和海底微地形地貌探测能力</li>
+<li>配备多种高性能作业工具</li>
+<li>压舱铁</li>
+<li>充油银锌蓄电池</li>
+<li>声纳通信，高速水声通信技术</li>
+</ul>
+<h2 id="长征十号"><a class="header" href="#长征十号">长征十号</a></h2>
+<ul>
+<li>月球试验场</li>
+<li>选址大挑战</li>
+<li>广寒越野赛</li>
+</ul>
+<h2 id="隔热材料"><a class="header" href="#隔热材料">隔热材料</a></h2>
+<ul>
+<li>气凝胶隔热材料，目前大气环境下导热系数最低的固体材料</li>
+<li>聚氨酯泡沫</li>
+<li>酚酫树脂复合材料</li>
+</ul>
+<h2 id="星际着陆"><a class="header" href="#星际着陆">星际着陆</a></h2>
+<ul>
+<li>落火神器</li>
+<li>祝融滑沙</li>
+<li>蚂蚁拉大象</li>
+</ul>
+<h2 id="银河寻亲路"><a class="header" href="#银河寻亲路">银河寻亲路</a></h2>
+<h2 id="拉黑那颗星"><a class="header" href="#拉黑那颗星">拉黑那颗星</a></h2>
+<h2 id="螳臂来挡车"><a class="header" href="#螳臂来挡车">螳臂来挡车</a></h2>
+<ul>
+<li>凌星法</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="科技中轴"><a class="header" href="#科技中轴">科技中轴</a></h1>
+<ul>
+<li>社稷时节</li>
+<li>安檐滴翠，最速降线</li>
+<li>拱跃金水</li>
+<li>箭楼千斤</li>
+<li>皇穹光至</li>
+<li>回音跃声</li>
+<li>斗拱之力</li>
+<li>水遗南路</li>
+<li>御苑梳流</li>
+<li>圆中方韵</li>
+<li>彩画端美</li>
+<li>万宁海通</li>
+<li>钟鼓传声</li>
+</ul>
+<h2 id="南郊祭祀路线"><a class="header" href="#南郊祭祀路线">南郊祭祀路线</a></h2>
+<ul>
+<li>永定门</li>
+<li>中轴线南段道路遗存</li>
+<li>先农坛</li>
+<li>天坛</li>
+</ul>
+<h2 id="天安丽日路线"><a class="header" href="#天安丽日路线">天安丽日路线</a></h2>
+<ul>
+<li>正阳门</li>
+<li>天安门广场及建筑群</li>
+<li>外金水桥</li>
+<li>天安门</li>
+</ul>
+<h2 id="宫苑礼乐左祖右社路线"><a class="header" href="#宫苑礼乐左祖右社路线">宫苑礼乐&amp;左祖右社路线</a></h2>
+<ul>
+<li>社稷坛</li>
+<li>太庙</li>
+<li>端门</li>
+<li>故宫</li>
+<li>景山</li>
+</ul>
+<h2 id="市井民俗路线"><a class="header" href="#市井民俗路线">市井民俗路线</a></h2>
+<ul>
+<li>万宁桥</li>
+<li>钟鼓楼</li>
+</ul>
+<h2 id="景春永固"><a class="header" href="#景春永固">景春永固</a></h2>
+<ul>
+<li>景山自东向西，周赏亭、观妙亭、万春亭、辑芳亭、富览亭</li>
+<li>一麻五灰</li>
+<li>五次灰浆，石灰水加入面粉、猪血、桐油等。防裂、防潮、防渗、防虫、防腐</li>
+</ul>
+<h2 id="雨燕永定"><a class="header" href="#雨燕永定">雨燕永定</a></h2>
+<ul>
+<li>北京雨燕是全世界唯一以北京命名的野生候鸟。</li>
+<li>永不落地的无脚鸟</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="科学再发现"><a class="header" href="#科学再发现">科学再发现</a></h1>
+<h2 id="科学发现与问题链"><a class="header" href="#科学发现与问题链">科学发现与问题链</a></h2>
+<p>科学始于问题，科学研究就是解决一个接一个的问题。</p>
+<h3 id="千年追光遇到折射定律"><a class="header" href="#千年追光遇到折射定律">千年追光遇到折射定律</a></h3>
+<ul>
+<li>光折射的规律是什么？</li>
+<li>圆盘测角，希腊，托勒密，最早的光折射定量测量实验。第一次把测量记录、制表归纳的科学方法应用于早期科学研究。</li>
+<li>水镜之迷</li>
+<li>德国，开普勒，破解望远镜成像缺陷。提出全反射的概念。</li>
+<li>荷兰，斯涅耳，1621年。光学从经验观察向精确数学定律的转折。</li>
+<li>寻踪幻影</li>
+</ul>
+<h3 id="折射定律的数学预言"><a class="header" href="#折射定律的数学预言">折射定律的数学预言</a></h3>
+<ul>
+<li>光为什么这样折射？</li>
+<li>介质变奏曲</li>
+<li>理论能够解释现象，但未必是正确的。</li>
+<li>笛卡尔假设，光在玻璃或水里比在空气中跑得更快。</li>
+<li>1661年，费马，最短时间原理。光怎么知道哪条路时间最短？</li>
+<li>从不同的假设出发，却意外地得到了同一个正确的结论。</li>
+</ul>
+<h3 id="光为何物"><a class="header" href="#光为何物">光为何物</a></h3>
+<ul>
+<li>光的本质是什么？</li>
+<li>偏振光</li>
+<li>双像分身术。冰洲石。</li>
+<li>彩虹靶心</li>
+</ul>
+<h2 id="靠实验摆平争论"><a class="header" href="#靠实验摆平争论">靠实验摆平争论</a></h2>
+<p>回答问题靠猜想。猜想对不对靠实验。靠一个实验很难判决一个猜想的对错。</p>
+<h3 id="真空与不可见的气压"><a class="header" href="#真空与不可见的气压">真空与不可见的气压</a></h3>
+<ul>
+<li>真空是否存在？</li>
+<li>1643年，托里拆利实验，760mm汞柱。</li>
+<li>气压之巅。帕斯卡高山实验。</li>
+<li>力合千钧。马德堡半球实验。1654年，格里克。</li>
+</ul>
+<h3 id="能量的转移与守恒"><a class="header" href="#能量的转移与守恒">能量的转移与守恒</a></h3>
+<ul>
+<li>热是什么？</li>
+<li>热质说</li>
+<li>热功之变</li>
+</ul>
+<h2 id="超越观察实验的推理"><a class="header" href="#超越观察实验的推理">超越观察实验的推理</a></h2>
+<p>实验设计靠思想。观察和实验的解释靠思想。</p>
+<h3 id="从逻辑起点出发"><a class="header" href="#从逻辑起点出发">从逻辑起点出发</a></h3>
+<ul>
+<li>欧几里得与《几何原本》</li>
+<li>公理化方法</li>
+<li>公理寻源</li>
+<li>曲面三角的秘密</li>
+<li>尺规妙绘</li>
+</ul>
+<h3 id="当几何遇上代数"><a class="header" href="#当几何遇上代数">当几何遇上代数</a></h3>
+<ul>
+<li>数形结合</li>
+<li>笛卡尔坐标系</li>
+<li>数与形的对话</li>
+<li>千变万化的图形</li>
+</ul>
+<h3 id="无限接近而不达"><a class="header" href="#无限接近而不达">无限接近而不达</a></h3>
+<ul>
+<li>极限思想</li>
+<li>芝诺悖论</li>
+<li>希尔伯特旅馆</li>
+<li>百变之圆</li>
+<li>墨卡托投影</li>
+</ul>
+<h2 id="现象背后找规律"><a class="header" href="#现象背后找规律">现象背后找规律</a></h2>
+<p>规律把现象联系起来，发现规律需要洞察力。</p>
+<h3 id="给宇宙一粒千年定心丸"><a class="header" href="#给宇宙一粒千年定心丸">给宇宙一粒千年定心丸</a></h3>
+<ul>
+<li>地心说的思想演进</li>
+<li>旋转的天球</li>
+<li>表影测日</li>
+<li>行星漫步者</li>
+</ul>
+<h3 id="宇宙中心的转移"><a class="header" href="#宇宙中心的转移">宇宙中心的转移</a></h3>
+<ul>
+<li>哥白尼日心说思想</li>
+<li>硕大无朋的天球</li>
+<li>越界的金星</li>
+<li>从封闭世界到无限宇宙</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ai-创想记"><a class="header" href="#ai-创想记">AI 创想记</a></h1>
+<ul>
+<li>差速传动齿轮组</li>
+<li>环面包络蜗轮蜗杆减速器</li>
+<li>行星减速器</li>
+<li>余晖效应，24帧/秒，视觉暂留现象</li>
+<li>机器能不能理解像人</li>
+</ul>
+<h2 id="人工神经网络怎么认出一个数字"><a class="header" href="#人工神经网络怎么认出一个数字">人工神经网络怎么认出一个数字？</a></h2>
+<p>人工神经网络认出数字，本质上是通过大量数据学习数字的“特征模式”，然后把看到的图片转换成概率判断。</p>
+<p>用最通俗的方式拆解一下这个过程：</p>
+<ol>
+<li>把图片变成数字</li>
+</ol>
+<p>计算机看不懂“8”这个形状，它只看得到像素。</p>
+<ul>
+<li>比如一张 28×28 的黑白手写数字图片，会被拉平成一个 784 个数字的列表。</li>
+<li>每个数字代表一个像素点的灰度（0 是纯黑，255 是纯白）。</li>
+</ul>
+<ol start="2">
+<li>神经网络“看”特征（核心机制）</li>
+</ol>
+<p>网络由输入层、隐藏层、输出层组成，层与层之间有无数个带“权重”的连接。</p>
+<ul>
+<li>输入层：接收这 784 个像素值。</li>
+<li>隐藏层（特征提取）：
+<ul>
+<li>第一层可能只认简单的边缘和线段（比如一条竖线、一个小圆弧）。</li>
+<li>更深的一层会把边缘组合成局部形状（比如一个封闭的圆圈、一条横线）。</li>
+<li>再深一层就能认出整体结构（比如“上面一个圈，下面一个圈”）。</li>
+</ul>
+</li>
+<li>输出层：对应 0-9 共 10 个神经元，每个输出一个“得分”或“概率”。</li>
+</ul>
+<ol start="3">
+<li>怎么学会认的？（训练过程）</li>
+</ol>
+<p>网络一开始啥也不会，权重都是随机的，输出全靠猜。训练时：</p>
+<ol>
+<li>
+<p>前向传播：给一张“5”的图片，网络算出一个结果（比如猜成“3”）。</p>
+</li>
+<li>
+<p>算差距：用“损失函数”计算猜错的程度。</p>
+</li>
+<li>
+<p>反向传播：把“错在哪”这个信息从输出层倒推回每一层，用梯度下降微调所有连接的权重。</p>
+</li>
+<li>
+<p>重复几万次：看完几万张标好答案的数字图片后，网络的权重就调整到了能准确提取特征的状态。</p>
+</li>
+<li>
+<p>真正认出来的那一刻（推理）</p>
+</li>
+</ol>
+<p>当你输入一张新的手写数字：</p>
+<ul>
+<li>像素数据从输入层进入，经过层层加权计算（加上激活函数引入非线性），一路向前传播。</li>
+<li>输出层会得到一个类似这样的结果：
+"[0.01, 0.02, 0.01, 0.05, 0.80, 0.03, 0.01, 0.02, 0.04, 0.01]"。</li>
+<li>网络认为这是 “4” 的概率是 80%，其他数字都很低，于是就“认出”了这是 4。</li>
+</ul>
+<p>一句话总结：它并不是像人一样“理解”数字，而是记住了“什么样的像素组合模式最可能对应哪个数字”，然后用这个模式去匹配新图片。</p>
+<h2 id="智能机器狗"><a class="header" href="#智能机器狗">智能机器狗</a></h2>
+<ul>
+<li>感知层靠传感器：激光雷达测障建图、摄像头视别物体、足底压力传感器防打滑、惯性传感器监测倾斜</li>
+<li>决策层凭算法：路径规划算绕障、跳跃最优路线、平衡算法结合姿态数据微调四肢受力以稳身</li>
+<li>执行层借机械：关节伺服电机控角度实现动作、自适应履带/足底遇压收紧增摩擦</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="新时代首都科创人物风采展"><a class="header" href="#新时代首都科创人物风采展">新时代首都科创人物风采展</a></h1>
+<h2 id="陈利军爱家科技董事长"><a class="header" href="#陈利军爱家科技董事长">陈利军，爱家科技董事长</a></h2>
+<ul>
+<li>2022年2月4日，北京冬奥会</li>
+<li>低温环境下大型场馆温暖保障</li>
+<li>低温环境石墨烯智能发热产品及热力保障应用</li>
+<li>电转换效率在90%以上</li>
+</ul>
+<h2 id="李振坤北京交通大学机械与电子控制工程学院副教授"><a class="header" href="#李振坤北京交通大学机械与电子控制工程学院副教授">李振坤，北京交通大学机械与电子控制工程学院副教授</a></h2>
+<ul>
+<li>流变机器人</li>
+<li>形似单细胞生物阿米巴虫的液体机器人</li>
+<li>磁性液体也称磁流体，主要由纳米碰性颗粒、表面活性剂和基载液构成。</li>
+</ul>
+<h2 id="罗敏敏北京脑科学与类脑研究所所长"><a class="header" href="#罗敏敏北京脑科学与类脑研究所所长">罗敏敏，北京脑科学与类脑研究所所长</a></h2>
+<h2 id="程和平中国科学院院士北京大学未来技术学院教授"><a class="header" href="#程和平中国科学院院士北京大学未来技术学院教授">程和平，中国科学院院士，北京大学未来技术学院教授</a></h2>
+<h2 id="刘莉北京服装学院教授"><a class="header" href="#刘莉北京服装学院教授">刘莉，北京服装学院教授</a></h2>
+<h2 id="张红杰中国保利集团有限公司高级专家中国制浆造纸研究院有限公司首席专家包装材料研发中心主任"><a class="header" href="#张红杰中国保利集团有限公司高级专家中国制浆造纸研究院有限公司首席专家包装材料研发中心主任">张红杰，中国保利集团有限公司高级专家，中国制浆造纸研究院有限公司首席专家，包装材料研发中心主任</a></h2>
+<h2 id="王双翌中国科学院自动化研究所研究员"><a class="header" href="#王双翌中国科学院自动化研究所研究员">王双翌，中国科学院自动化研究所研究员</a></h2>
+<h2 id="李久林北京城建集团总工程师"><a class="header" href="#李久林北京城建集团总工程师">李久林，北京城建集团总工程师</a></h2>
+<h2 id="戴政朱雀三号总指挥"><a class="header" href="#戴政朱雀三号总指挥">戴政，朱雀三号总指挥</a></h2>
+<ul>
+<li>液氧甲烷发动机，天鹊</li>
+</ul>
+<h2 id="dro卫星团队"><a class="header" href="#dro卫星团队">DRO卫星团队</a></h2>
+<h2 id="胡森中国科学院地质与地球物理研究所研究员"><a class="header" href="#胡森中国科学院地质与地球物理研究所研究员">胡森，中国科学院地质与地球物理研究所研究员</a></h2>
+<h2 id="郑天亮北京航空航天大学教授"><a class="header" href="#郑天亮北京航空航天大学教授">郑天亮，北京航空航天大学教授</a></h2>
+<h2 id="杨贺唯迈医疗创始人"><a class="header" href="#杨贺唯迈医疗创始人">杨贺，唯迈医疗创始人</a></h2>
+<h2 id="冯林微纳动力创始人董事长"><a class="header" href="#冯林微纳动力创始人董事长">冯林，微纳动力创始人，董事长</a></h2>
+<h2 id="王伟北京生命科学研究所研究员清华大学生物医学交叉研究院研究员"><a class="header" href="#王伟北京生命科学研究所研究员清华大学生物医学交叉研究院研究员">王伟，北京生命科学研究所研究员，清华大学生物医学交叉研究院研究员</a></h2>
+<h2 id="韩德民中国工程院院士"><a class="header" href="#韩德民中国工程院院士">韩德民，中国工程院院士</a></h2>
+<h2 id="刘开辉北京大学物理学院教授"><a class="header" href="#刘开辉北京大学物理学院教授">刘开辉，北京大学物理学院教授</a></h2>
+<ul>
+<li>流体传质-表面生长</li>
+<li>晶格传质-界面生长</li>
+</ul>
+<h2 id="熊盛青中国工程院院士中国自然资源航空物探遥感中心首席科学家"><a class="header" href="#熊盛青中国工程院院士中国自然资源航空物探遥感中心首席科学家">熊盛青，中国工程院院士，中国自然资源航空物探遥感中心首席科学家</a></h2>
+<h2 id="戴琼海中国工程院院士清华大学自动化系教授"><a class="header" href="#戴琼海中国工程院院士清华大学自动化系教授">戴琼海，中国工程院院士，清华大学自动化系教授</a></h2>
+<h2 id="毛二可中国工程院院士北京理工大学教授"><a class="header" href="#毛二可中国工程院院士北京理工大学教授">毛二可，中国工程院院士，北京理工大学教授</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

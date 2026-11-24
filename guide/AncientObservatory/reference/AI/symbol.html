@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>数学符号的历史 - 古观象台 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">古观象台 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/reference/AI/symbol.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="数学符号的历史"><a class="header" href="#数学符号的历史">数学符号的历史</a></h1>
+<p>数学符号的演变，本质上是“人类如何把思维外包给纸面”的一部历史。它不是线性进步，而是一场持续数百年的“符号创新—竞争—淘汰—标准化”运动：同一个概念往往同时出现好几套写法，最后靠实用性、可扩展性和印刷传播胜出。下面按阶段系统梳理。</p>
+<h2 id="一远古到中世纪从修辞数学到缩记数学"><a class="header" href="#一远古到中世纪从修辞数学到缩记数学">一、远古到中世纪：从“修辞数学”到“缩记数学”</a></h2>
+<ol>
+<li>文字裹挟期（公元前3000—公元5世纪）</li>
+</ol>
+<p>早期数学没有“符号”，只有句子。</p>
+<ul>
+<li>古埃及《莱因德纸草书》：用“一堆，它的三分之二、它的一半……”描述一次方程；</li>
+<li>古巴比伦泥板：六十进制楔形记数，用
+"A-DU" 表乘、
+"IGI-GAL" 表除，但没有零占位符；</li>
+<li>古希腊欧几里得：用字母标点（A、B、AB），比例面积全靠文字推演，无运算符号；</li>
+<li>罗马数字、希腊数字：加法式堆叠，大数运算极笨重。</li>
+</ul>
+<p>这一阶段的核心是记数符号，不是运算符号。瓶颈在于：自然语言扛不住抽象推理。</p>
+<ol start="2">
+<li>第一次大改革：印度-阿拉伯数字与“零”</li>
+</ol>
+<ul>
+<li>古印度（5—6世纪）发明位值十进制与零符号（先作小点
+"·"，后成
+"0"），梵语称 śūnya（空）；</li>
+<li>花拉子米（9世纪）《印度数字算术》把体系引入伊斯兰世界；</li>
+<li>斐波那契《算盘书》（1202）带入欧洲，到16世纪才彻底取代罗马数字。</li>
+</ul>
+<p>零的发明是符号史上最重要的“空位创新”——它让“没有”变成可参与运算的对象。</p>
+<ol start="3">
+<li>缩记阶段：丢番图与阿拉伯代数</li>
+</ol>
+<ul>
+<li>丢番图（约250年）用缩写符号写方程，但没形成系统；</li>
+<li>花拉子米《代数学》仍全文字叙述（“还原”“对消”）；</li>
+<li>阿拉伯学者用 shay（事物）、māl（财富）代未知数，后来 shay 经西语传成
+"x" 的民间传说。</li>
+</ul>
+<p>💡 从“修辞代数”到“缩记代数”用了近三千年。</p>
+<h2 id="二近代符号大爆炸1517世纪欧洲印刷术与代数革命"><a class="header" href="#二近代符号大爆炸1517世纪欧洲印刷术与代数革命">二、近代符号大爆炸（15—17世纪）：欧洲印刷术与代数革命</a></h2>
+<p>这是符号创新最密集的200年。动力来自三件事：商业记账需求、印刷术复制、代数从“解题术”变成“一般理论”。</p>
+<ol>
+<li>韦达：符号代数的真正起点（1591）</li>
+</ol>
+<p>弗朗索瓦·韦达在《分析术入门》里第一次自觉、系统地用字母表示量：</p>
+<ul>
+<li>元音（A、E…）表未知量，辅音（B、C…）表已知量；</li>
+<li>把代数从“具体数的算术”提升为“类的算术”。</li>
+</ul>
+<p>他虽未定下现代惯例，但打开了“用形式符号做一般推理”的闸门。</p>
+<ol start="2">
+<li>笛卡尔重写规则（1637）</li>
+</ol>
+<p>《几何学》里定下沿用至今的约定：</p>
+<ul>
+<li></li>
+</ul>
+<p>"x, y, z" 表未知，
+"a, b, c" 表已知；</p>
+<ul>
+<li>指数记法
+"x², x³"（取代“x乘x”的啰嗦写法）；</li>
+<li></li>
+</ul>
+<p>"√" 表根号（由拉丁 radix 的 r 变形，上加括线）。</p>
+<p>笛卡尔同时开创解析几何，让代数符号直接描述几何对象。</p>
+<ol start="3">
+<li>四则运算符号的来历</li>
+</ol>
+<p>符号 首创/定型 来源</p>
+<p>"+"
+"-" 魏德曼 1489（商人账本）
+"+" 似拉丁 et（和）连笔；
+"-" 来自 minus 缩写</p>
+<p>"=" 雷科德 1557 “两条等长的平行线”，避免反复写“is equal to”</p>
+<p>"×" 奥特雷德 1631 雷科德也曾用，莱布尼茨嫌它像 x 而反对</p>
+<p>"·" 哈里奥特/莱布尼茨一派主张 避免与字母 x 混淆</p>
+<p>"÷" 拉恩 1659 由分数线加点演化；莱布尼茨更喜用
+":"</p>
+<p>"&gt;"
+"&lt;" 哈里奥特 1631 直观表示“开口朝大”</p>
+<p>"{}"
+"[]" 韦达、奥特雷德一系 分层括号，控制运算优先级</p>
+<p>雷科德当年解释等号：“没有任何两样东西，能比一对等长平行线更相等。”——这是典型的符号学动机：形状本身映射含义。</p>
+<ol start="4">
+<li>竞争与路径依赖</li>
+</ol>
+<ul>
+<li>乘号一度有十几种写法；</li>
+<li>莱布尼茨曾提议用
+"∩" 表乘（后来这个符号去了集合论）；</li>
+<li>小数点：纳皮尔用
+"."，欧陆用
+","，至今未统一（3.14 vs 3,14）。</li>
+</ul>
+<p>⚠️ 符号史不是“谁更对”的胜利，而是“谁更好印、更好教、更好扩展”的胜利。</p>
+<h2 id="三微积分符号战争17世纪末19世纪中"><a class="header" href="#三微积分符号战争17世纪末19世纪中">三、微积分符号战争（17世纪末—19世纪中）</a></h2>
+<p>牛顿与莱布尼茨各自发明微积分，符号体系直接决定后世数学版图。</p>
+<ol>
+<li>牛顿：流数点记号</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<p>"ẋ ẍ" 表对时间的导；</p>
+<ul>
+<li>优点：力学里极简洁；</li>
+<li>缺点：看不出“微商结构”，难扩展到高维、偏导、多重积分。</li>
+</ul>
+<ol start="2">
+<li>莱布尼茨：微分学语言</li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<h2 id="dx-dy-微分"><a class="header" href="#dx-dy-微分">"dx, dy" 微分；</a></h2>
+<h2 id="dydx-把导数写成无穷小之比具启发力"><a class="header" href="#dydx-把导数写成无穷小之比具启发力">"dy/dx" 把导数写成“无穷小之比”，具启发力；</a></h2>
+<p>"∫" 1675年引入，是拉长的小写 s（summa，求和）；</p>
+<ul>
+<li>后续可自然生长出
+"∂"（偏导）、
+"∬"、
+"∮"。</li>
+</ul>
+<p>结果：欧洲大陆全用莱布尼茨，英国因尊牛顿僵持近百年，直到19世纪中叶年轻数学家掌权后才切换。这场“符号改革”让英国数学重新接入大陆分析传统。</p>
+<ol start="3">
+<li>欧拉的标准化收割（18世纪）</li>
+</ol>
+<p>欧拉一人定型了大量现代常数与函数记号：</p>
+<ul>
+<li></li>
+</ul>
+<p>"π"（琼斯1706提，欧拉推广）、
+"e"、
+"i=√-1"；</p>
+<ul>
+<li>函数记号
+"f(x)"；</li>
+<li>三角函数
+"sin cos tan"；</li>
+<li>求和
+"Σ"、连乘
+"Π"；</li>
+<li>无穷符号
+"∞"（沃利斯1655）。</li>
+</ul>
+<p>欧拉的庞大产出本身成了“符号传播机器”：写得多、写得一致，就成了标准。</p>
+<h2 id="四19世纪形式化与抽象符号的扩张"><a class="header" href="#四19世纪形式化与抽象符号的扩张">四、19世纪：形式化与抽象符号的扩张</a></h2>
+<p>数学转向严格性，符号开始服务“逻辑结构”而非仅“计算”。</p>
+<ol>
+<li>逻辑与集合论符号</li>
+</ol>
+<ul>
+<li>布尔（1854）《思维规律》创布尔代数：
+"∧ ∨ ¬"；</li>
+<li>弗雷格、皮亚诺推进谓词逻辑；</li>
+<li>
+<h2 id="皮亚诺18891897集大成"><a class="header" href="#皮亚诺18891897集大成">皮亚诺（1889—1897）集大成：</a></h2>
+</li>
+</ul>
+<h2 id="源于希腊文是-ε-变形表属于"><a class="header" href="#源于希腊文是-ε-变形表属于">"∈"（源于希腊文“是” ε 变形）表属于；</a></h2>
+<h2 id="---"><a class="header" href="#---">"∪ ∩ ⊂ ∅"；</a></h2>
+<p>"∃"（反写E）存在量词；</p>
+<ul>
+<li>根岑（1935）定
+"∀"（倒A）全称量词；</li>
+<li>罗素、怀特海《数学原理》（1910—1913）把符号逻辑写成证明机器。</li>
+</ul>
+<ol start="2">
+<li>集合论与无限</li>
+</ol>
+<ul>
+<li>康托尔创
+"ℵ"（阿列夫）表无穷基数、
+"|A|" 表集合势；</li>
+<li>集合构造器
+"{x | P(x)}" 让“性质定义集合”成为可能。</li>
+</ul>
+<ol start="3">
+<li>向量与场论</li>
+</ol>
+<ul>
+<li>吉布斯、亥维赛从四元数里拆出向量分析；</li>
+<li></li>
+</ul>
+<p>"·" 点乘、
+"×" 叉乘；</p>
+<ul>
+<li>哈密顿创
+"∇"（nabla，倒三角）表梯度/散度/旋度。</li>
+</ul>
+<ol start="4">
+<li>抽象代数萌芽</li>
+</ol>
+<p>群、环、域、同构
+"≅"、直和
+"⊕"、张量积
+"⊗" 等符号随结构数学兴起。</p>
+<h2 id="五20世纪公理化专门化与全球标准化"><a class="header" href="#五20世纪公理化专门化与全球标准化">五、20世纪：公理化、专门化与全球标准化</a></h2>
+<ol>
+<li>布尔巴基与“重构数学语言”</li>
+</ol>
+<p>1935年起，法国“布尔巴基”团体用集合论公理化重写全部数学，强调：</p>
+<ul>
+<li>严格定义优先于直觉；</li>
+<li>统一符号层级（集合→代数→拓扑→分析）。</li>
+</ul>
+<p>他们推广了
+"∅"、映射箭头
+"f: X → Y"、双线黑体数集
+"ℕ ℤ ℚ ℝ ℂ" 等写法。</p>
+<ol start="2">
+<li>新兴领域的符号发明</li>
+</ol>
+<ul>
+<li>泛函分析：
+"‖x‖" 范数、
+"⟨x,y⟩" 内积、函数空间
+"L² C⁰"；</li>
+<li>概率统计：
+"P(A)"、
+"E(X)"、
+"Var"、
+"μ σ ρ"；</li>
+<li>量子力学：狄拉克
+"⟨φ|ψ⟩" 左矢右矢；</li>
+<li>范畴论：交换图、态射箭头（艾伦堡—麦克莱恩，1940s）；</li>
+<li>张量图式：彭罗斯图形符号。</li>
+</ul>
+<ol start="3">
+<li>标准化机构与排版技术</li>
+</ol>
+<ul>
+<li>ISO 80000-2 等标准规定运算、关系、集合符号的推荐用法；</li>
+<li>印刷术早期固定字形，TeX/LaTeX（高德纳，1970s）解决“复杂公式全球一致排版”；</li>
+<li>编程语言（FORTRAN、ALGOL）反过来逼数学符号机器可读：
+"/" 替代
+"÷"，
+"*" 替代
+"×"。</li>
+</ul>
+<h2 id="六符号改革的底层逻辑为什么有的活下来有的消失"><a class="header" href="#六符号改革的底层逻辑为什么有的活下来有的消失">六、符号改革的底层逻辑（为什么有的活下来，有的消失）</a></h2>
+<ol>
+<li>压缩性：把长句压成可操作单元（
+"dy/dx" 比“y 对 x 的变化率”好推演）；</li>
+<li>可扩展性：能自然长出新符号（莱布尼茨记号衍生偏导、线积分）；</li>
+<li>形状隐喻：
+"=" 两条线、
+"&gt;" 开口朝向、
+"∫" 求和的蛇形；</li>
+<li>印刷友好：手写体易认、不易和字母混（
+"×" 败给
+"·" 的部分原因）；</li>
+<li>教学锁定：一旦写进教材，改造成本极高——所以
+"3,14" 和
+"3.14" 至今并存。</li>
+</ol>
+<h2 id="七几个被遗忘的早生一百年的天才"><a class="header" href="#七几个被遗忘的早生一百年的天才">七、几个被遗忘的“早生一百年的天才”</a></h2>
+<ul>
+<li>丘凯（Nicolas Chuquet，1484）已用
+"12²" 式指数和负指数，手稿未印刷，沉没150年；</li>
+<li>朱世杰（元代）用“太字形”摆未知数，美观但难扩展，限制了中国代数符号化路径；</li>
+<li>莱布尼茨曾设想“通用符号语言 characteristica universalis”——今天看就是形式语言与编程的先声。</li>
+</ul>
+<h2 id="八一句话总览沿革脉络"><a class="header" href="#八一句话总览沿革脉络">八、一句话总览沿革脉络</a></h2>
+<p>修辞数学（用话说）→ 缩记数学（用缩写）→ 符号代数（用字母）→ 分析符号（用微分积分）→ 结构符号（用集合逻辑）→ 形式化与机器可读。</p>
+<p>数学符号史不是“发明史”，而是一场持续千年的认知界面优化史：每一次符号改革，都在重新定义“人能想多远”。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../reference/AI/sextant.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../reference/AI/Euclid.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../reference/AI/sextant.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../reference/AI/Euclid.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

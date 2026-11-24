@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>生活展厅 - 北京科学中心 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京科学中心 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/Technology-and-Everyday-Life-Exhibition.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="生活展厅"><a class="header" href="#生活展厅">生活展厅</a></h1>
+<h2 id="创意作品"><a class="header" href="#创意作品">创意作品</a></h2>
+<ul>
+<li>生活垃圾处理的主要方法。生化处理、卫生填埋、焚烧发电。</li>
+<li>减量化（控制废物等的量）、再利用、资源化、热回收、无害化处理。</li>
+</ul>
+<h2 id="低碳生活"><a class="header" href="#低碳生活">低碳生活</a></h2>
+<ul>
+<li>低碳答题</li>
+<li>古代垃圾和现代垃圾</li>
+<li>垃圾的危害</li>
+<li>雨水利用</li>
+<li>垃圾的资源化。资源属性、垃圾分类。能减尽减、能用尽用、能分尽分。</li>
+<li>迷你农场。土培、基质培、管道水培、鱼缸。微灌、虹吸、水培。</li>
+<li>精准农业。全球定位系统（GPS）、地理信息系统（GIS）、遥感技术（RS）</li>
+</ul>
+<h2 id="科学健身房"><a class="header" href="#科学健身房">科学健身房</a></h2>
+<ul>
+<li>一起来跑步</li>
+<li>喊出压力</li>
+<li>虚拟拳击手</li>
+<li>运动捕快</li>
+</ul>
+<h2 id="科学讲堂"><a class="header" href="#科学讲堂">科学讲堂</a></h2>
+<ul>
+<li>工业机器人</li>
+<li>气动元件与自动化</li>
+<li>机器宠物</li>
+<li>下棋机器人</li>
+<li>3D打印机</li>
+<li>通关秘码。指纹、虹膜、声纹、人脸识别</li>
+<li>力学空间</li>
+<li>光纤</li>
+<li>记忆材料</li>
+<li>新奇酷品</li>
+<li>眼动打靶</li>
+<li>磁流变液</li>
+<li>三维照相馆</li>
+<li>核电反应堆</li>
+<li>科技魔轮</li>
+<li>科技魔链</li>
+<li>飞机仪表盘</li>
+<li>地效飞机</li>
+<li>无人机</li>
+<li>汽车的构造</li>
+<li>天鲲号</li>
+<li>地铁的脉动</li>
+<li>汽车颜色与安全</li>
+</ul>
+<h3 id="挑战多维码"><a class="header" href="#挑战多维码">挑战多维码</a></h3>
+<ul>
+<li>射频识别（RFID），是一种通信技术。射频标签不需要处在识别器视线之内，也可以嵌入被识别物体之内。</li>
+<li>条形码</li>
+<li>二维码</li>
+</ul>
+<h3 id="多姿多彩的玻璃"><a class="header" href="#多姿多彩的玻璃">多姿多彩的玻璃</a></h3>
+<ul>
+<li>变色玻璃</li>
+<li>防弹玻璃</li>
+<li>钢化玻璃</li>
+<li>通电玻璃，又名液晶玻璃</li>
+<li>半透半反玻璃，镀膜。</li>
+<li>彩色玻璃</li>
+</ul>
+<h3 id="石墨烯"><a class="header" href="#石墨烯">石墨烯</a></h3>
+<ul>
+<li>石墨烯是目前强度最高、韧性最好、重量最轻、透光最高、导电最佳的一种新型碳材料。</li>
+<li>比钢铁坚硬200倍。保鲜膜厚，需要大象站铅笔上，才能刺穿。</li>
+<li>超级电容，充电8分种，行驶1000公里。</li>
+</ul>
+<h2 id="抽象物理实验室"><a class="header" href="#抽象物理实验室">抽象物理实验室</a></h2>
+<ul>
+<li>测量 - 物理实验的基础</li>
+<li>莫氏硬度</li>
+</ul>
+<h3 id="物理时空隧道"><a class="header" href="#物理时空隧道">物理时空隧道</a></h3>
+<h3 id="反光材料的应用"><a class="header" href="#反光材料的应用">反光材料的应用</a></h3>
+<ul>
+<li>回归反光材料</li>
+<li>微棱镜反射原理</li>
+<li>反光材料，也称逆反射材料，回复反射材料</li>
+</ul>
+<h3 id="力学岛"><a class="header" href="#力学岛">力学岛</a></h3>
+<ul>
+<li>生活中有哪些性质的力是物理中的力呢？</li>
+<li>傅科摆</li>
+<li>科里奥利力</li>
+<li>伽利略理想斜面实验</li>
+<li>伽利略的加速度实验（理想斜面实验的另一个表述）</li>
+<li>降速曲线和最速降线</li>
+<li>伽利略温度计</li>
+<li>卡文迪许的万有引力实验</li>
+<li>伯努利原理</li>
+<li>定宽曲线</li>
+<li>勒洛三角形和勒洛五边形</li>
+<li>非圆车轮</li>
+</ul>
+<h4 id="伽利略的自由落体实验"><a class="header" href="#伽利略的自由落体实验">伽利略的自由落体实验</a></h4>
+<ul>
+<li>世界上最有名的物理实验</li>
+<li>见证逻辑思维的威力，开启思想实验先河。</li>
+<li>人类进入科学质疑时间</li>
+<li>观察、分析、质疑、总结规律、实验证实，这是一种物理学习的科学方法。</li>
+</ul>
+<h3 id="能量岛"><a class="header" href="#能量岛">能量岛</a></h3>
+<ul>
+<li>永动机</li>
+<li>驻波和声驻波</li>
+<li>横波和纵波</li>
+<li>麦克斯韦滚摆</li>
+</ul>
+<h3 id="电磁岛"><a class="header" href="#电磁岛">电磁岛</a></h3>
+<ul>
+<li>形形色色的传感器</li>
+</ul>
+<h3 id="光学岛"><a class="header" href="#光学岛">光学岛</a></h3>
+<ul>
+<li>光电效应</li>
+<li>双缝干涉实验</li>
+<li>单缝衍射实验</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/Secrets-of-Life-Exhibition.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../note/Exhibition-on-Survival-Through-Nature.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/Secrets-of-Life-Exhibition.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../note/Exhibition-on-Survival-Through-Nature.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

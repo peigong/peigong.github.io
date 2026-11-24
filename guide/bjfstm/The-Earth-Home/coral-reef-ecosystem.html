@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>珊瑚生态系统 - 北京未来科技馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京未来科技馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/The-Earth-Home/coral-reef-ecosystem.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="珊瑚生态系统"><a class="header" href="#珊瑚生态系统">珊瑚生态系统</a></h1>
+<p>珊瑚生态系统是以造礁珊瑚遗骸与石灰质藻类共同形成的礁石结构及关联生物群落为核心的热带、亚热带海洋生态系统，被《生态学名词》（2006年）定义为全球初级生产量最高的生态系统类型之一，具有“海洋热带雨林”之称。我国珊瑚礁主要分布于南海及华南沿岸，现存造礁石珊瑚393种，占全球已发现种类的40%。根据2025年调查评估，黄岩岛珊瑚礁生态系统记录造礁石珊瑚134种，活珊瑚平均覆盖度29.8%。</p>
+<p>该生态系统因海洋热浪引发的白化危机导致全球14%珊瑚礁消失，目前面临海水升温、酸化等威胁。中国通过人工礁体投放、珊瑚苗移植等技术修复退化区域，在涠洲岛修复珊瑚礁40公顷，移植珊瑚苗12万株，使珊瑚种类从46种增至62种；蜈支洲岛珊瑚覆盖率从15%提升至37.08%，并建立珊瑚礁长期监测评估系统。2026年，观测团队在深圳大鹏半岛南澳海域记录到粗糙腔星珊瑚与角蜂巢珊瑚的大规模产卵行为。立法方面，徐闻珊瑚礁国家级自然保护区实施司法保护令，设立繁殖期特殊保护条款。全球采取珊瑚礁突破计划、海洋保护区设立等应对措施，但实现生态恢复仍需控制碳排放。</p>
+<h2 id="定义"><a class="header" href="#定义">定义</a></h2>
+<p>热带、亚热带海洋中由造礁珊瑚的石灰质遗骸和石灰质藻类堆积而成的礁石及其生物群落形成的整体。是全球初级生产量最高的生态系统之一。根据2025年调查评估，黄岩岛珊瑚礁生态系统记录造礁石珊瑚14科39属134种，活珊瑚平均覆盖度29.8%，礁栖鱼类24科145种，并包含3种海草。</p>
+<h2 id="出处"><a class="header" href="#出处">出处</a></h2>
+<p>《生态学名词》。</p>
+<h2 id="生态威胁"><a class="header" href="#生态威胁">生态威胁</a></h2>
+<p>该生态系统因海洋热浪引发的白化危机导致全球14%珊瑚礁消失，目前面临海水升温、酸化等威胁。珊瑚礁面临热胁迫压力不断增大，珊瑚礁白化的潜在风险仍不容忽视，尽管当前珊瑚群落对海水温度升高仍表现出较好的抵抗力和耐受性。根据2025年黄岩岛海域生态环境评估报告，需建立白化风险预警机制以应对全球气候变化的加剧影响。长棘海星等敌害生物数量目前保持低位，但需持续动态监测以防止生态平衡破坏。</p>
+<p>在深圳，随着滨海旅游业的快速发展，人类活动产生的干扰等因素，可能影响珊瑚幼体的附着环境。为应对这些局部性威胁，当地保护组织如蓝蹼生态，正积极探索“科学记录＋公众参与＋生境守护”的闭环保护模式，例如在珊瑚产卵观测期间同步组织公众海洋垃圾清理行动。</p>
+<h2 id="保护与研究"><a class="header" href="#保护与研究">保护与研究</a></h2>
+<p>深圳积极探索“科学记录＋公众参与＋生境守护”的闭环保护模式。2026年母亲节前夕，深圳大鹏半岛南澳海域观测到粗糙腔星珊瑚与角蜂巢珊瑚大规模产卵，拉开了2026年深圳珊瑚产卵季水下实时观测的序幕。蓝蹼生态海洋环保机构已连续第五年开展此类规律性观测，团队累计记录了12种珊瑚在深圳海域的产卵行为，填补了深圳本地造礁石珊瑚繁殖规律研究的空白，为保护提供了科学依据。未来，观测团队将持续研究产卵同步性及其对环境变化的响应，并通过科学传播激发公众保护意识。</p>
+<p>2026年9月19日，读特客户端联动深圳市海洋发展促进中心、广东海洋大学深圳研究院、蓝蹼珊瑚生态科技（深圳）有限公司，推出“给珊瑚做‘人口普查’”特别直播。直播以“科普讲解＋水下实景直播”的形式，带大家潜入深圳大鹏半岛南澳海域，邀请深港两地海洋生态专家科普海洋知识、讲解珊瑚普查的奥秘、分享珊瑚保育成果。潜水志愿者在海底进行现场直播，揭秘珊瑚普查的日常，主持人还与潜水志愿者“连麦”互动。</p>
+<p>在国家级层面，生态环境部华南环境科学研究所持续开展南海珊瑚礁的系统性调查与监测。该所对南海大空间尺度珊瑚礁进行了系统调查研究，并联合多家单位，综合运用“天-空-地-海-潜”手段，对黄岩岛海域开展了生态环境状况调查与研究，评估了珊瑚礁生态系统状况及主要生态压力与风险。此外，该所还通过珊瑚礁食物网拼图游戏和模型拼接游戏等科普形式，提升公众对珊瑚礁生态系统重要性的认识，将监测、科研与科普相结合。</p>
+<p>根据自然资源部南海局2026年8月14日发布的《2025年南海区海洋生态预警监测公报》和《2025年南海区海洋生态保护修复公报》，2025年南海区海洋生态状况总体稳定，珊瑚礁生态系统状况以中等为主，各监测区域的活珊瑚覆盖率均有所升高。在保护措施方面，2025年南海区共实施海洋生态修复工程项目66个，总投入资金近50亿元；截至2025年底，共划定海洋生态保护红线面积约266万公顷、海洋自然保护地面积约700万公顷。</p>
+<p>国际合作方面，法国“塔拉”号科考船长期与全球多家科研机构合作，开展涉及珊瑚礁生态系统、海洋微生物组及气候变化响应的综合科考，并与中国海洋科研机构通过公众开放、学术研讨等形式推动科学传播，为珊瑚礁保护提供科学支持。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../The-Earth-Home/hong-shu-lin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../The-Earth-Home/yan-zhao.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../The-Earth-Home/hong-shu-lin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../The-Earth-Home/yan-zhao.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

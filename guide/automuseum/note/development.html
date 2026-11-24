@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>进步馆 Hall of Development - 北京汽车博物馆 - VET.周培公(https://pg.js.cn)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">北京汽车博物馆 - VET.周培公(https://pg.js.cn)</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/peigong/peigong.github.io/edit/master/guide/src/note/development.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="进步馆-hall-of-development"><a class="header" href="#进步馆-hall-of-development">进步馆 Hall of Development</a></h1>
+<h2 id="解构汽车-auto-deconstruction"><a class="header" href="#解构汽车-auto-deconstruction">解构汽车 Auto Deconstruction</a></h2>
+<ul>
+<li>汽车由二万多个零部件构成，每一个零部件都有自己的一部科技进步史。</li>
+</ul>
+<h2 id="工程技术-technology"><a class="header" href="#工程技术-technology">工程技术 Technology</a></h2>
+<ul>
+<li>如今司空见惯的电器零部件倒车灯，是1921年发明出来的，但直到20世纪60年代，美国政府才规定汽车必须安装倒车灯。</li>
+<li>内燃机是在蒸汽机的基础上发展而来，以燃烧煤气为开端，成功研制出了煤气机。在煤气机的基础上研制出了汽油机和柴油机。</li>
+<li>汽车的进化史就是与空气阻力做斗争的历史。空气动力学由此而来，风洞也出现在实验室里。</li>
+<li>1982年，汽车的空气动力学性能成为汽车的重要设计指标。</li>
+<li>1959年问世的“三点式安全带”，在事故中可以完全固定支撑驾驶员和乘客的身体，挽救了数十万人的生命，并协助数百万人避免受伤或减轻事故伤害。德国专利局将这项发明列为汽车诞生百年间，最能有效保护生命的8项重要专利设计之一。</li>
+</ul>
+<h2 id="汽车设计-auto-design"><a class="header" href="#汽车设计-auto-design">汽车设计 Auto Design</a></h2>
+<ul>
+<li>福特T型汽车是最为著名的早期箱型汽车，但箱型车的阻力大，无法满足高速行驶的需求，于是出现了流线型汽车。</li>
+<li>德国甲壳虫就属于流线型汽车，其设计师波尔舍博士最大限度地发挥了甲壳虫外型的特长，使其在同类车中出类拔萃。</li>
+</ul>
+<h2 id="赛车运动-automobile-racing"><a class="header" href="#赛车运动-automobile-racing">赛车运动 Automobile Racing</a></h2>
+<ul>
+<li>F1是英文Formula1的缩写。Formula被译为方程式，其真正含义是“规定”，即用比赛规则来规定赛车的基本概念，按比赛规则制造纯粹的比赛用车。</li>
+<li>F1比赛中换一次轮胎通常只需要2～4秒钟。在争分夺秒的F1赛事中，中途换胎给比赛平添了很多悬念。</li>
+<li>法国小城勒芒因为始自1923年的勒芒24小时耐力赛而闻名于世，这项比赛被称为最辛苦、最乏味的单项赛事。</li>
+<li>创办于1979年的格拉纳达－达喀尔拉力赛是人与自然的真正较量，这是距离最长的比赛，每年一月从西班牙南部的格拉纳达出发，驶向塞内加尔的达喀尔。其间要穿越非洲5个国家，行程达10109千米！</li>
+<li>印第车赛则是在椭圆形场地进行。这项美国一年一度的汽车大赛，于1911年5月追悼战亡者纪念日首次举办。</li>
+<li>与F1齐名的世界拉力锦标赛，是世界级别最高的拉力系列汽车赛事，其第一场比赛在1973年举行。</li>
+</ul>
+<h2 id="生产制造-manufacture"><a class="header" href="#生产制造-manufacture">生产制造 Manufacture</a></h2>
+<ul>
+<li>1896年春天，未来的汽车巨人福特时年30岁，也是在自家后院制成了第一辆实验汽车。</li>
+<li>1913年，福特公司在汽车城底特律建立了世界上第一条汽车装配流水线，并获得巨大成功。</li>
+<li>1914年，德国汽车的年产量为二万辆，而福特在这一年生产了接近31万辆T型车。</li>
+<li>流水线上的操作多半不需要特殊技术和体力，即使是残障人士也能获得就业机会。</li>
+<li>二十世纪七十年代爆发的石油危机使欧美汽车业遭受重创，日本凭借其低油耗的小型车异军突起，1980年汽车产量首次超过美国，稳坐世界汽车王国的第一把交椅，被视为世界汽车工业的第三次变革。</li>
+<li>2009年，中国汽车年产量突破一千万辆，成为全球第一大汽车市场。</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../note/future.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../note/innovation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../note/future.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../note/innovation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
