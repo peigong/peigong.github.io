@@ -1,7 +1,7 @@
 # 目录
 
 - [概况简介](./README.md)
-- [讲解提纲](./note.md)
+- [讲解提纲](./note/README.md)
     - [一层大厅](./note/f1.md)
     - [生命展厅](./note/Secrets-of-Life-Exhibition.md)
     - [生活展厅](./note/Technology-and-Everyday-Life-Exhibition.md)
